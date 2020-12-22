@@ -1,0 +1,150 @@
+---
+title: Tạo và quản lý môi trường
+description: Tìm hiểu cách đăng ký dịch vụ và cách quản lý môi trường.
+ms.date: 11/10/2020
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+ms.reviewer: nimagen
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644159"
+---
+# <a name="manage-environments"></a>Quản lý môi trường
+
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
+Bài viết này giải thích cách tạo một tổ chức mới và cách cung cấp môi trường.
+
+## <a name="sign-up-and-create-an-organization"></a>Đăng ký và tạo một tổ chức
+
+1. Truy cập trang web [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+
+2. Chọn **Bắt đầu**.
+
+3. Chọn kịch bản đăng nhập bạn mong muốn rồi nhấp vào đường liên kết tương ứng.
+
+4. Chấp nhận các điều khoản và điều kiện rồi chọn **Tiếp tục** để bắt đầu tạo tổ chức.
+
+5. Sau khi môi trường được tạo, bạn sẽ được chuyển hướng đến [Customer Insights](https://home.ci.ai.dynamics.com).
+
+6. Sử dụng môi trường demo để khám phá ứng dụng hoặc tạo môi trường mới bằng cách làm theo các bước trong phần tiếp theo.
+
+7. Sau khi xác định các tùy chọn cài đặt cho môi trường, hãy chọn **Tạo**.
+
+8. Bạn sẽ được đăng nhập sau khi tạo thành công môi trường.
+
+## <a name="create-an-environment-in-an-existing-organization"></a>Tạo môi trường trong tổ chức hiện có
+
+Có hai cách để tạo một môi trường mới. Bạn có thể chỉ định một cấu hình hoàn toàn mới hoặc sao chép một số thiết đặt cấu hình từ môi trường hiện có.
+
+Để tạo môi trường:
+
+1. Chọn biểu tượng **Cài đặt** ở đầu ứng dụng này.
+
+1. Chọn **Môi trường mới**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Thiết đặt Môi trường](media/environment-settings-dialog.png)
+
+1. Trong hộp thoại **Tạo môi trường mới**, chọn **Môi trường mới**.
+
+   Nếu bạn muốn [sao chép dữ liệu từ môi trường hiện tại](#additional-considerations-for-copy-configuration-preview), chọn **Sao chép từ môi trường hiện có**. Bạn sẽ nhìn thấy danh sách tất cả các môi trường có sẵn trong tổ chức, nơi bạn có thể sao chép dữ liệu từ đó.
+
+1. Cung cấp các chi tiết sau đây:
+   - **Tên**: Tên cho môi trường này. Trường này đã được điền nếu bạn sao chép một môi trường hiện có, nhưng bạn có thể thay đổi trường này.
+   - **Vùng**: Vùng triển khai và lưu trư dịch vụ.
+   - **Loại**: Chọn xem bạn muốn tạo môi trường sản xuất hay hộp cát.
+
+2. Bạn có thể chọn **Thiết đặt nâng cao**:
+
+   - **Lưu tất cả dữ liệu vào**: Chỉ định nơi bạn muốn lưu trữ dữ liệu đầu ra được tạo từ Customer Insights. Bạn sẽ có hai lựa chọn: **Lưu trữ trong Customer Insights** (Azure Data Lake do đội ngũ Customer Insights quản lý) và **Azure Data Lake Storage thế hệ 2** (Azure Data Lake Storage của chính bạn). Tùy chọn mặc định là lưu trữ trong Customer Insights.
+
+   > [!NOTE]
+   > Bằng việc lưu dữ liệu vào Azure Data Lake Storage, bạn đồng ý rằng dữ liệu sẽ được chuyển sang và lưu trữ tại vị trí địa lý phù hợp cho tài khoản Azure Storage đó. Vị trí này có thể khác với nơi lưu trữ dữ liệu trong Dynamics 365 Customer Insights. [Hãy tìm hiểu thêm tại Trung tâm tin cậy Microsoft.](https://www.microsoft.com/trust-center)
+   >
+   > Hiện tại, các thực thể đã thu nạp sẽ luôn được lưu trữ trong hồ dữ liệu do Customer Insights quản lý.
+   > Chúng tôi chỉ hỗ trợ các tài khoản lưu trữ Azure Data Lake Gen2 từ cùng một vùng Azure mà bạn đã chọn khi tạo môi trường.
+   > Chúng tôi chỉ hỗ trợ Không gian tên theo cấp bậc (HNS) Azure Data Lake thế hệ 2 có hỗ trợ tài khoản lưu trữ.
+
+   - Đối với tùy chọn Azure Data Lake Storage Gen2, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Tên **Vùng chứa** không thể thay đổi và sẽ là "customerinsights".
+   
+   - Nếu bạn muốn sử dụng [dự đoán](predictions.md), nhập URL phiên bản Common Data Service trong trường **Địa chỉ máy chủ** trong **Sử dụng dự đoán**.
+
+   Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân đoạn, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Các tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục con tương ứng dựa trên quy trình bạn chạy.
+
+   Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các thực thể đầu ra từ các môi trường đó trong tài khoản lưu trữ của mình, các thư mục riêng biệt sẽ được tạo cho từng môi trường với ci_<environmentid> trong vùng chứa.
+
+### <a name="additional-considerations-for-copy-configuration-preview"></a>Các cân nhắc bổ sung đối với cấu hình sao chép (bản xem trước)
+
+Các thiết đặt cấu hình sau được sao chép:
+
+- Cấu hình tính năng
+- Nguồn dữ liệu nhập
+- Cấu hình hợp nhất dữ liệu (Bản đồ, kết hợp, hợp nhất)
+- Phân đoạn
+- Biện pháp
+- Mối quan hệ
+- Hoạt động
+- Chỉ mục tìm kiếm & lọc
+- Đích xuất
+- Làm mới theo lịch trình
+- Nội dung làm phong phú
+- Quản lý mô hình
+- Chỉ định vai trò
+
+Các thiết đặt sau *không* được sao chép:
+
+- Hồ sơ khách hàng.
+- Thông tin xác thực nguồn dữ liệu. Bạn sẽ phải cung cấp thông tin đăng nhập cho mỗi nguồn dữ liệu và làm mới các nguồn dữ liệu theo cách thủ công.
+- Nguồn dữ liệu từ thư mục Common Data Model và kho được quản lý Common Data Service. Bạn sẽ phải tạo các nguồn dữ liệu đó theo cách thủ công có cùng tên như trong môi trường nguồn.
+
+Khi bạn sao chép một môi trường, bạn sẽ thấy một thông báo xác nhận rằng môi trường mới đã được tạo. Chọn **Chuyển đến nguồn dữ liệu** để xem danh sách các nguồn dữ liệu.
+
+Tất cả nguồn dữ liệu sẽ hiển thị trạng thái **Đã yêu cầu thông tin đăng nhập**. Chỉnh sửa nguồn dữ liệu và nhập thông tin đăng nhập để làm mới những nguồn dữ liệu đó.
+
+> [!div class="mx-imgBorder"]
+> ![Đã sao chép nguồn dữ liệu](media/data-sources-copied.png)
+
+Sau khi làm mới nguồn dữ liệu, hãy chuyển đến **Dữ liệu** > **Hợp nhất**. Tại đây, bạn sẽ tìm thấy các thiết đặt từ môi trường nguồn. Chỉnh sửa chúng khi cần hoặc chọn **Chạy** để bắt đầu quá trình hợp nhất dữ liệu và tạo ra thực thể khách hàng hợp nhất.
+
+Khi quá trình hợp nhất dữ liệu hoàn tất, hãy chuyển đến **Biện pháp** và **Phân khúc** để đồng thời làm mới những dữ liệu này.
+
+## <a name="edit-an-existing-environment"></a>Chỉnh sửa môi trường hiện có
+
+Bạn có thể chỉnh sửa một số thông tin của các môi trường hiện có.
+
+1. Truy cập **Quản trị viên** > **Hệ thống** > **Giới thiệu**.
+
+2. Chọn **Chỉnh sửa**.
+
+3. Bạn có thể cập nhật **Tên hiển thị** của môi trường nhưng không thể thay đổi **Vùng** hoặc **Loại**.
+
+4. Nếu chọn lưu trữ dữ liệu của môi trường trong Azure Data Lake Storage thế hệ 2 thì bạn có thể thay đổi **Mã tài khoản**. Tuy nhiên, bạn không thể thay đổi **Tên tài khoản** hoặc tên **Vùng chứa** .
+
+5. Theo tùy chọn, bạn có thể cập nhật từ kết nối dựa trên khóa tài khoản thành kết nối dựa trên tài nguyên hoặc dựa trên đăng ký. Sau khi nâng cấp, bạn không thể hoàn nguyên về khóa tài khoản sau khi cập nhật. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
+
+## <a name="reset-an-existing-environment"></a>Đặt lại môi trường hiện có
+
+Bạn có thể đặt lại một môi trường về trạng thái trống nếu bạn muốn xóa tất cả các cấu hình và xóa dữ liệu đã nhập.
+
+1.  Truy cập **Quản trị viên** > **Hệ thống** > **Giới thiệu**.
+
+2.  Chọn **Đặt lại**. 
+
+3.  Để xác nhận việc xóa, hãy nhập tên môi trường và chọn **Đặt lại**.
+
+
+## <a name="delete-an-existing-environment"></a>Xóa môi trường hiện có
+
+1. Truy cập **Quản trị viên** > **Hệ thống** > **Giới thiệu**.
+
+1. Chọn **Xóa**.
+
+1. Để xác nhận thao tác xóa, hãy nhập tên môi trường rồi chọn **Xóa**.
