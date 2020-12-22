@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Khả năng thông tin chi tiết về đối tượng trong Dynamics 365 Customer Insights
+summary: Nhập, hợp nhất và sắp xếp dữ liệu khách hàng từ nhiều nguồn. Tạo và quản lý hồ sơ khách hàng và phân khúc thời gian thực. Tích hợp dữ liệu khách hàng với các hệ thống khác để khiến dữ liệu thậm chí còn khả thi hơn.
+metadata:
+  title: Tài liệu thông tin chi tiết về đối tượng
+  description: Trung tâm trợ giúp có các liên kết chính dành cho thông tin chi tiết về đối tượng.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: vi-VN
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4407325"
+landingContent:
+- title: Giới thiệu thông tin chi tiết về đối tượng
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Tổng quan sản phẩm
+      url: overview.md
+    - text: Tính năng mới và cập nhật
+      url: whats-new-audience-insights.md
+    - text: Trang web cộng đồng
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Thu thập nguồn dữ liệu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Thêm nguồn dữ liệu
+      url: data-sources.md
+    - text: Làm mới gia tăng
+      url: incremental-refresh-data-sources.md
+    - text: Hiểu rõ các thực thể
+      url: entities.md
+- title: Hợp nhất dữ liệu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Bản đồ
+      url: map-entities.md
+    - text: So khớp
+      url: match-entities.md
+    - text: Hợp nhất
+      url: merge-entities.md
+- title: Tinh chỉnh hồ sơ khách hàng
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Đặt cấu hình mối quan hệ
+      url: relationships.md
+    - text: Liệt kê hoạt động dành cho khách hàng
+      url: activities.md
+    - text: Mang theo mô hình học trên máy của riêng bạn
+      url: custom-models.md
+- title: Xuất dữ liệu khách hàng
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Thiết lập đích xuất
+      url: export-destinations.md
+    - text: Thẻ khách hàng trong ứng dụng Dynamics 365
+      url: customer-card-add-in.md
+    - text: Trình kết nối Power BI
+      url: export-power-bi.md
+- title: Quản trị ứng dụng
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Đặt cấu hình hệ thống
+      url: system.md
+    - text: Xác định quyền của người dùng
+      url: permissions.md
+    - text: Quản lý nhiều môi trường
+      url: manage-environments.md
