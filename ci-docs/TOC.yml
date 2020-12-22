@@ -1,0 +1,226 @@
+- name: Dynamics 365 Customer Insights
+  href: index.yml
+- name: Tổng quan sản phẩm
+  href: overview.md
+- name: Truy cập môi trường của bạn
+  href: 'https://home.ci.ai.dynamics.com/'
+- name: Thông tin chuyên sâu về đối tượng
+  items:
+    - name: Trung tâm trợ giúp
+      href: audience-insights/index.yml
+    - name: Tổng quan về khả năng
+      href: audience-insights/overview.md
+    - name: Dùng thử miễn phí
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
+    - name: Tính năng mới và cập nhật
+      href: audience-insights/whats-new-audience-insights.md
+    - name: Bắt đầu
+      items:
+        - name: Tạo môi trường mới
+          href: audience-insights/home.md
+        - name: Nhập dữ liệu
+          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+        - name: Tạo hồ sơ khách hàng hợp nhất
+          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+        - name: Làm việc với ứng dụng
+          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+        - name: Tăng cường dữ liệu và dự đoán
+          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+    - name: Nguồn dữ liệu
+      items:
+        - name: Tổng quan về nguồn dữ liệu
+          href: audience-insights/data-sources.md
+        - name: Thêm nguồn dữ liệu qua trình kết nối Power Query
+          href: audience-insights/connect-power-query.md
+        - name: Thêm thư mục Common Data Model làm nguồn dữ liệu
+          href: audience-insights/connect-common-data-model.md
+        - name: Thêm kho dữ liệu được quản lý Common Data Service
+          href: audience-insights/connect-common-data-service-lake.md
+        - name: Làm mới tăng dần cho các nguồn dữ liệu
+          href: audience-insights/incremental-refresh-data-sources.md
+        - name: Nhập dữ liệu trong thời gian thực
+          href: audience-insights/real-time-data-ingestion.md
+        - name: Hiểu các thực thể và bộ dữ liệu
+          href: audience-insights/entities.md
+    - name: Thống nhất dữ liệu
+      items:
+        - name: Tổng quan về thống nhất
+          href: audience-insights/data-unification.md
+        - name: Ánh xạ thực thể và thuộc tính
+          href: audience-insights/map-entities.md
+        - name: So khớp thực thể
+          href: audience-insights/match-entities.md
+        - name: Hợp nhất thực thể
+          href: audience-insights/merge-entities.md
+        - name: Xem xét hồ sơ khách hàng hợp nhất
+          href: audience-insights/customer-profiles.md
+        - name: Lọc hồ sơ khách hàng hợp nhất
+          href: audience-insights/search-filter-index.md
+        - name: Xây dựng mối quan hệ và các thực thể được kết nối
+          href: audience-insights/relationships.md
+        - name: Liệt kê hoạt động dành cho khách hàng
+          href: audience-insights/activities.md
+    - name: Làm phong phú dữ liệu
+      items:
+        - name: Làm phong phú hồ sơ khách hàng
+          href: audience-insights/enrichment-hub.md
+        - name: Mối quan hệ giữa thương hiệu và sở thích
+          href: audience-insights/enrichment-microsoft-graph.md
+        - name: Tăng cường với HERE Technologies
+          href: audience-insights/enrichment-here.md
+        - name: Làm phong phú với Leadspace
+          href: audience-insights/enrichment-leadspace.md
+        - name: Làm phong phú với Experian
+          href: audience-insights/enrichment-experian.md
+        - name: Tăng cường với nhập tùy chỉnh SFTP
+          href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Phân khúc và phép đo
+      items:
+        - name: Tạo phân khúc và nhóm khách hàng
+          href: audience-insights/segments.md
+        - name: Nhận thông tin chuyên sâu về phân khúc
+          href: audience-insights/segment-insights.md
+        - name: Tìm khách hàng tương tự
+          href: audience-insights/find-similar-customer-segments.md
+        - name: Xác định các biện pháp và KPI
+          href: audience-insights/measures.md
+    - name: Dự đoán
+      items:
+        - name: Dữ liệu hoàn thành sử dụng dự đoán giá trị
+          href: audience-insights/predictions.md
+        - name: Dự đoán rời bỏ đăng ký
+          href: audience-insights/predict-subscription-churn.md
+        - name: Hướng dẫn mẫu cho dự đoán rời bỏ đăng ký
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Dự đoán rời bỏ giao dịch
+          href: audience-insights/predict-transactional-churn.md
+        - name: Hướng dẫn mẫu cho dự đoán rời bỏ giao dịch
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Triển khai các mô hình máy học tùy chỉnh
+          href: audience-insights/custom-models.md
+        - name: Thử nghiệm công cụ máy học Azure
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Thử nghiệm với Azure Machine Learning studio
+          href: audience-insights/machine-learning-studio-experiments.md
+    - name: Xuất tùy chọn
+      items:
+        - name: Khám phá các đích xuất
+          href: audience-insights/export-destinations.md
+        - name: Azure Blob Storage
+          href: audience-insights/export-azure-blob-storage.md
+        - name: DotDigital
+          href: audience-insights/export-dotdigital.md
+        - name: Dynamics 365 Customer Service (Trình bổ sung)
+          href: audience-insights/customer-card-add-in.md
+        - name: Dynamics 365 Marketing
+          href: audience-insights/export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: audience-insights/export-dynamics365-sales.md
+        - name: Trung tâm bán hàng Dynamics 365 (Trình bổ sung)
+          href: audience-insights/customer-card-add-in.md
+        - name: Trình quản lý quảng cáo Facebook
+          href: audience-insights/export-facebook.md
+        - name: Google Ads
+          href: audience-insights/export-google-ads.md
+        - name: LiveRamp
+          href: audience-insights/export-liveramp.md
+        - name: Mailchimp
+          href: audience-insights/export-mailchimp.md
+        - name: Microsoft Teams (bot)
+          href: audience-insights/export-teams-bot.md
+        - name: Marketo
+          href: audience-insights/export-marketo.md
+        - name: Power BI
+          href: audience-insights/export-power-bi.md
+        - name: Power Apps
+          href: audience-insights/export-power-apps.md
+        - name: Power Automate
+          href: audience-insights/export-power-automate.md
+        - name: SFTP
+          href: audience-insights/export-sftp.md
+    - name: Quản trị
+      items:
+        - name: Thiết lập cấu hình hệ thống
+          href: audience-insights/system.md
+        - name: Chỉ định quyền của người dùng
+          href: audience-insights/permissions.md
+        - name: Quản lý nhiều môi trường
+          href: audience-insights/manage-environments.md
+        - name: Kết nối với tài khoản lưu trữ ADLS sử dụng Dịch vụ chính
+          href: audience-insights/connect-service-principal.md
+        - name: Ngôn ngữ được hỗ trợ
+          href: audience-insights/supported-languages.md
+    - name: Khả năng mở rộng
+      items:
+        - name: Xem lại lược đồ thực thể trong Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Làm việc với API
+          href: audience-insights/apis.md
+        - name: Tham chiếu API
+          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Giới hạn dịch vụ
+      href: audience-insights/service-limits.md
+    - name: Yêu cầu DSR theo GDPR
+      href: audience-insights/gdpr.md
+- name: Thông tin chuyên sâu về tương tác (bản xem trước)
+  items:
+    - name: Trung tâm trợ giúp
+      href: engagement-insights/index.yml
+    - name: Tổng quan về khả năng
+      href: engagement-insights/overview.md
+    - name: Dùng thử miễn phí
+      href: 'https://pi.dynamics.com/'
+    - name: Bắt đầu nhanh
+      items:
+        - name: Bắt đầu nhanh cho bản xem trước công khai
+          href: engagement-insights/quickstart.md
+    - name: Bắt đầu
+      items:
+        - name: Bắt đầu
+          href: engagement-insights/get-started.md
+        - name: Tạo không gian làm việc
+          href: engagement-insights/create-workspace.md
+        - name: Cung cấp trang web của bạn
+          href: engagement-insights/instrument-website.md
+        - name: Các khái niệm và thuật ngữ
+          href: engagement-insights/glossary.md
+    - name: Các sự kiện
+      items:
+        - name: Tạo và sửa đổi sự kiện
+          href: engagement-insights/refined-events.md
+        - name: Xuất sự kiện
+          href: engagement-insights/export-events.md
+    - name: Báo cáo
+      items:
+        - name: Xem báo cáo
+          href: engagement-insights/view-reports.md
+        - name: Tạo báo cáo tùy chỉnh
+          href: engagement-insights/custom-reports.md
+        - name: Tạo báo cáo hồ sơ hợp nhất
+          href: engagement-insights/profile-reports.md
+    - name: Tài nguyên cho nhà phát triển
+      items:
+        - name: Tổng quan về tài nguyên dành cho nhà phát triển
+          href: engagement-insights/developer-resources.md
+        - name: Hướng dẫn SDK web
+          href: engagement-insights/advanced-SDK-implementation.md
+        - name: Mẫu SDK web
+          href: engagement-insights/websdk-sample.md
+    - name: Quản trị
+      items:
+        - name: Vai trò và quyền
+          href: engagement-insights/user-roles.md
+        - name: Quản lý môi trường và không gian làm việc
+          href: engagement-insights/manage-environments-workspaces.md
+        - name: Định cấu hình kết nối
+          href: engagement-insights/configure-connections.md
+        - name: Quản lý cookie và sự đồng ý của người dùng
+          href: engagement-insights/user-consent-storage.md
+    - name: GDPR
+      items:
+        - name: Xóa và xuất dữ liệu cá nhân
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Giới hạn dịch vụ
+      href: engagement-insights/quotas.md
+- name: Liên hệ với bộ phận hỗ trợ
+  href: 'https://go.microsoft.com/fwlink/?linkid=2145734'
