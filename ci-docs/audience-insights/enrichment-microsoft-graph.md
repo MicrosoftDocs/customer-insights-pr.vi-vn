@@ -1,26 +1,26 @@
 ---
 title: Tăng cường hồ sơ khách hàng với Microsoft Graph
 description: Sử dụng dữ liệu độc quyền từ Microsoft Graph để làm phong phú dữ liệu khách hàng của bạn với các mối quan hệ thương hiệu và sở thích.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407301"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269356"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Làm phong phú hồ sơ khách hàng với mối quan hệ thương hiệu và sở thích (xem trước)
 
 Sử dụng dữ liệu độc quyền từ Microsoft Graph để làm phong phú dữ liệu khách hàng của bạn với các mối quan hệ thương hiệu và sở thích. Những mối quan hệ này được xác định dựa trên dữ liệu từ những người có nhân khẩu học tương tự với khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và phân khúc khách hàng của bạn dựa trên mối quan hệ của họ với các nhãn hiệu và sở thích cụ thể.
 
-Trong thông tin chi tiết về đối tượng, hãy đi tới **Dữ liệu** > **Tăng cường** để [định cấu hình và xem các chức năng tăng cường](enrichment-hub.md).
+Trong thông tin chi tiết về đối tượng, hãy đi tới **Dữ liệu** > **Làm phong phú** để [định cấu hình và xem các chức năng làm phong phú](enrichment-hub.md).
 
 Để đặt cấu hình nội dung phong phú phụ cho thương hiệu, hãy chuyển đến tab **Khám phá** và chọn **Làm phong phú dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
 
@@ -35,16 +35,21 @@ Chúng tôi sử dụng dữ liệu tìm kiếm trực tuyến từ Microsoft Gr
 
 [Tìm hiểu thêm về Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Điểm mối quan hệ và độ tin cậy
+## <a name="affinity-level-and-score"></a>Mức độ sở thích và điểm số
 
-**Điểm mối quan hệ** được tính theo thang điểm 100, với 100 đại diện cho phân khúc có mối quan hệ cao nhất đối với thương hiệu hoặc sở thích.
+Trên mỗi hồ sơ khách hàng được làm phong phú, chúng tôi cung cấp hai giá trị liên quan - mức độ sở thích và điểm số sở thích. Những giá trị này giúp bạn xác định mức độ quan tâm đối với phân đoạn nhân khẩu học của hồ sơ đó, đối với thương hiệu hoặc sở thích so với các phân đoạn nhân khẩu học khác.
 
-**Độ tin cậy của mối quan hệ** cũng được tính theo thang điểm 100. Chỉ số này cho biết mức độ tin cậy của hệ thống rằng một phân khúc có mối quan hệ với thương hiệu hoặc sở thích. Mức độ tin cậy dựa trên kích thước phân khúc và độ chi tiết của phân khúc. Kích thước phân khúc được xác định bởi lượng dữ liệu chúng tôi có cho một phân khúc nhất định. Độ chi tiết của phân đoạn được xác định bởi số thuộc tính (tuổi, giới tính, vị trí) có sẵn trong một hồ sơ.
+*Mức độ sở thích* bao gồm bốn cấp độ và *điểm sở thích* được tính toán trên thang điểm 100 ánh xạ tới các mức độ sở thích.
 
-Chúng tôi không bình thường hóa điểm số cho tập dữ liệu của bạn. Do đó, bạn có thể không thấy tất cả các giá trị điểm mối quan hệ có thể có cho tập dữ liệu của mình. Ví dụ: có thể không có hồ sơ khách hàng phong phú với điểm số mối quan hệ 100 trong dữ liệu của bạn. Điều đó có thể nếu không có khách hàng tồn tại trong phân đoạn nhân khẩu học đạt 100 điểm cho một thương hiệu hoặc sở thích nhất định.
 
-> [!TIP]
-> Khi [tạo phân khúc](segments.md) sử dụng điểm số mối quan hệ, xem xét phân phối điểm mối quan hệ cho tập dữ liệu của bạn trước khi quyết định ngưỡng điểm thích hợp. Ví dụ: điểm mối quan hệ là 10 có thể được coi là đáng kể trong bộ dữ liệu có điểm mối quan hệ cao nhất chỉ 25 cho một thương hiệu hoặc sở thích nhất định.
+|Mức độ sở thích |Điểm mối quan hệ  |
+|---------|---------|
+|Rất cao     | 85-100       |
+|Cao     | 70-84        |
+|Trung bình     | 35-69        |
+|Thấp     | 1-34        |
+
+Tùy thuộc vào mức độ chi tiết mà bạn muốn đo lường sở thích, bạn có thể sử dụng mức độ hoặc điểm số sở thích. Điểm số sở thích giúp bạn kiểm soát chính xác hơn.
 
 ## <a name="supported-countriesregions"></a>Khu vực/vùng lãnh thổ được hỗ trợ
 
@@ -54,17 +59,13 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia/vùng sau đây: Úc, 
 
 ### <a name="implications-related-to-country-selection"></a>Ý nghĩa liên quan đến chọn quốc gia
 
-- Khi [chọn thương hiệu của riêng bạn](#define-your-brands-or-interests), chúng tôi sẽ đưa ra đề xuất dựa trên quốc gia/vùng lãnh thổ đã chọn.
+- Khi [chọn thương hiệu của riêng bạn](#define-your-brands-or-interests), hệ thống cung cấp các đề xuất dựa trên quốc gia hoặc khu vực đã chọn.
 
-- Khi [chọn ngành](#define-your-brands-or-interests), chúng tôi sẽ xác định các thương hiệu hoặc sở thích có liên quan nhất dựa trên quốc gia/khu vực đã chọn.
+- Khi [chọn một ngành](#define-your-brands-or-interests), bạn sẽ nhận được các thương hiệu hoặc sở thích phù hợp nhất dựa trên quốc gia hoặc khu vực đã chọn.
 
-- Khi [ánh xạ các trường](#map-your-fields), nếu trường Quốc gia/Vùng lãnh thổ không được ánh xạ, chúng tôi sẽ sử dụng dữ liệu Microsoft Graph từ quốc gia/vùng lãnh thổ đã chọn để làm phong phú hồ sơ của khách hàng. Chúng tôi cũng sẽ dùng lựa chọn đó để làm phong phú hồ sơ khách hàng không có sẵn dữ liệu quốc gia/vùng lãnh thổ.
-
-- Khi [làm phong phú hồ sơ](#refresh-enrichment), chúng tôi sẽ làm phong phú hồ sơ khách hàng mà có dữ liệu Microsoft Graph cho các thương hiệu và sở thích đã chọn, bao gồm các hồ sơ không có ở quốc gia/vùng lãnh thổ đã chọn. Ví dụ: nếu bạn đã chọn Đức, chúng tôi sẽ làm phong phú các hồ sơ ở Hoa Kỳ nếu chúng tôi có dữ liệu Microsoft Graph cho thương hiệu và sở thích đã chọn ở Hoa Kỳ.
+- Khi [làm phong phú hồ sơ](#refresh-enrichment), chúng tôi sẽ làm phong phú thêm tất cả các hồ sơ khách hàng mà chúng tôi lấy dữ liệu cho các thương hiệu và sở thích đã chọn. Bao gồm các hồ sơ không thuộc quốc gia hoặc khu vực đã chọn. Ví dụ: nếu bạn đã chọn Đức, chúng tôi sẽ làm phong phú các hồ sơ ở Hoa Kỳ nếu chúng tôi có dữ liệu Microsoft Graph cho thương hiệu và sở thích đã chọn ở Hoa Kỳ.
 
 ## <a name="configure-enrichment"></a>Cấu hình làm phong phú
-
-Quá trình đặt cấu hình nội dung phong phú cho thương hiệu hoặc sở thích bao gồm 2 bước:
 
 ### <a name="define-your-brands-or-interests"></a>Xác định thương hiệu hoặc sở thích của bạn
 
@@ -75,9 +76,19 @@ Chọn một trong các tùy chọn sau:
 
 Để thêm thương hiệu hoặc sở thích, hãy nhập dữ liệu liệu vào khu vực đầu vào để nhận đề xuất dựa trên các điều khoản phù hợp. Nếu chúng tôi không liệt kê một thương hiệu hoặc sở thích mà bạn đang tìm kiếm, hãy gửi cho chúng tôi thông tin phản hồi bằng cách sử dụng liên kết **Đề xuất**.
 
+### <a name="review-enrichment-preferences"></a>Xem xét các tùy chọn làm phong phú
+
+Xem lại các tùy chọn làm phong phú mặc định của bạn và cập nhật chúng nếu cần.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Ảnh chụp màn hình của cửa sổ tùy chọn làm phong phú.":::
+
+### <a name="select-entity-to-enrich"></a>Chọn thực thể để làm phong phú
+
+Chọn **Thực thể làm phong phú** và chọn tập dữ liệu bạn muốn làm phong phú bằng dữ liệu công ty từ Microsoft Graph. Bạn có thể chọn thực thể khách hàng để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+
 ### <a name="map-your-fields"></a>Ánh xạ trường của bạn
 
-Ánh xạ trường từ thực thể khách hàng hợp nhất của bạn đến ít nhất hai thuộc tính để xác định phân đoạn nhân khẩu học mà bạn muốn chúng tôi sử dụng để làm phong phú dữ liệu khách hàng của bạn. Chọn **Chỉnh sửa** để xác định ánh xạ của các trường và chọn **Áp dụng** khi bạn hoàn thành. Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
+Ánh xạ các trường từ thực thể khách hàng hợp nhất để xác định phân đoạn nhân khẩu học mà bạn muốn hệ thống sử dụng để làm phong phú dữ liệu khách hàng của bạn. Ánh xạ Quốc gia/Khu vực và tối thiểu là thuộc tính Ngày sinh hoặc Giới tính. Ngoài ra, bạn phải ánh xạ tối thiểu là Thành phố (và Tiểu bang/Tỉnh) hoặc Mã bưu chính. Chọn **Chỉnh sửa** để xác định ánh xạ của các trường và chọn **Áp dụng** khi bạn hoàn thành. Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
 
 Các định dạng và giá trị sau được hỗ trợ, giá trị không phân biệt chữ hoa chữ thường:
 
@@ -120,3 +131,6 @@ Các mối quan hệ thương hiệu và lợi ích cũng có thể được xem
 ## <a name="next-steps"></a>Bước tiếp theo
 
 Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [Phân khúc](segments.md), [Biện pháp](measures.md) và [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm cá nhân cho khách hàng của bạn.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

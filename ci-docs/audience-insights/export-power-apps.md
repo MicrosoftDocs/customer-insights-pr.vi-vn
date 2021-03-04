@@ -1,20 +1,20 @@
 ---
 title: Trình kết nối Power Apps
 description: Kết nối với Power Apps và Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407291"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268942"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Trình kết nối Microsoft Power Apps (xem trước)
 
@@ -31,7 +31,7 @@ Tham khảo tài liệu Power Apps để tìm hiểu cách [thêm kết nối d�
 Sau khi thêm Customer Insights làm kết nối dữ liệu, bạn có thể chọn các thực thể sau trong Power Apps:
 
 - Khách hàng: để sử dụng dữ liệu từ [hồ sơ khách hàng hợp nhất](customer-profiles.md).
-- Hoạt động khách hàng hợp nhất: để hiển thị [dòng thời gian hoạt động](activities.md) trong ứng dụng.
+- UnifiedActivity: để hiển thị [dòng thời gian hoạt động](activities.md) trên ứng dụng.
 
 ## <a name="limitations"></a>Giới hạn
 
@@ -72,3 +72,6 @@ Ví dụ: bạn thêm hồ sơ khách hàng vào [kiểm soát thư viện](http
 1. Để hiển thị dòng thời gian hợp nhất cho khách hàng, hãy thêm phần tử Thư viện và thuộc tính Items: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Ví dụ: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

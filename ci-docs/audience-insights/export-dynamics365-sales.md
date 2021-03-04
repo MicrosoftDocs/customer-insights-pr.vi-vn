@@ -1,20 +1,20 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Dynamics 365 Sales
 description: Tìm hiểu cách đặt cấu hình kết nối với Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643844"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269034"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Tác nhân kết nối dành cho Dynamics 365 Sales (xem trước)
 
@@ -24,7 +24,10 @@ Sử dụng dữ liệu khách hàng của bạn để tạo danh sách khách h
 
 ## <a name="prerequisite"></a>Điều kiện tiên quyết
 
-Bản ghi liên hệ [từ Dynamics 365 Sales được nhập bằng Common Data Service](connect-power-query.md).
+1. Hồ sơ liên hệ phải có trong Dynamics 365 Sales trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Sales. Đọc thêm về cách nhập liên hệ vào [Dynamics 365 Sales bằng Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Việc xuất các phân đoạn từ thông tin chi tiết về đối tượng sang Sales sẽ không tạo hồ sơ liên hệ mới trong các phiên bản Sales. Các bản ghi liên hệ từ Sales phải được nhập vào thông tin chi tiết về đối tượng và được sử dụng làm nguồn dữ liệu. Chúng cũng cần được đưa vào thực thể Khách hàng hợp nhất để ánh xạ ID khách hàng với ID liên hệ trước khi có thể xuất phân đoạn.
 
 ## <a name="configure-the-connector-for-sales"></a>Đặt cấu hình tác nhân kết nối dành cho Sales
 
@@ -49,3 +52,6 @@ Bản ghi liên hệ [từ Dynamics 365 Sales được nhập bằng Common Data
 ## <a name="export-the-data"></a>Xuất dữ liệu
 
 Bạn có thể [xuất dữ liệu theo nhu cầu](export-destinations.md). Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

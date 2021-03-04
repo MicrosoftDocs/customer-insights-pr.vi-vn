@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643979"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269724"
 ---
-# <a name="overview-about-data-sources"></a>Tổng quan về nguồn dữ liệu
+# <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Bạn sẽ thấy tên của mỗi nguồn dữ liệu đã nhập, trạng thá
 |Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
 |Không thành công     |Phiên nhập dữ liệu gặp lỗi.         |
 
-Chọn **Làm mới trạng thái** để xem xét thêm chi tiết về trạng thái làm mới, bao gồm chi tiết lỗi và cập nhật quy trình xuôi dòng.
+Chọn giá trị trong cột **Trạng thái** của bất kỳ nguồn dữ liệu nào để xem xét thêm chi tiết. Trong ngăn **Chi tiết tiến độ**, hãy mở rộng **Nguồn dữ liệu**. Chọn **Xem chi tiết** để xem thêm thông tin về trạng thái làm mới, bao gồm chi tiết lỗi và cập nhật quy trình xuôi dòng.
 
 Việc tải dữ liệu có thể mất chút thời gian. Sau khi làm mới thành công, dữ liệu đã nhập có thể được xem xét từ trang **Các thực thể**. Để biết thêm thông tin, hãy xem [Các thực thể](entities.md).
 
@@ -76,3 +76,6 @@ Nguồn dữ liệu có thể được làm mới theo lịch trình tự độn
 2. Chọn dấu chấm lửng dọc bên cạnh nguồn dữ liệu bạn muốn xóa và chọn **Xóa** từ menu thả xuống.
 
 3. Xác nhận tác vụ xóa của bạn.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

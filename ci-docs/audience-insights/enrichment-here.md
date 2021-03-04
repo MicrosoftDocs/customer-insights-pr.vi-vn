@@ -1,20 +1,20 @@
 ---
 title: Tăng cường với HERE Technologies tăng cường của bên thứ ba
 description: Thông tin chung về tăng cường của bên thứ ba HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668704"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269540"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Tăng cường hồ sơ khách hàng với HERE Technologies (bản xem trước)
 
@@ -43,7 +43,11 @@ HERE Technologies là một công ty nền tảng vị trí cung cấp dữ li�
 
 1. Xác nhận cả hai đầu vào bằng cách chọn **Kết nối với HERE**.
 
-1. Chọn **Thêm dữ liệu** và chọn xem bạn có muốn ánh xạ các trường với địa chỉ chính và/hoặc phụ không. Bạn có thể chỉ định ánh xạ trường cho cả hai địa chỉ (ví dụ: địa chỉ nhà riêng và địa chỉ doanh nghiệp) và tăng cường hồ sơ cho cả hai địa chỉ một cách riêng biệt. Chọn **Tiếp theo**.
+1.  Chọn **Thêm dữ liệu** và chọn **Tập dữ liệu khách hàng** bạn muốn làm phong phú bằng dữ liệu vị trí từ HERE Technologies. Bạn có thể chọn thực thể **khách hàng** để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Ảnh chụp màn hình khi chọn tập dữ liệu khách hàng.":::
+
+1. Chọn xem bạn có muốn ánh xạ các trường với địa chỉ chính và/hoặc phụ không. Bạn có thể chỉ định ánh xạ trường cho cả hai địa chỉ (ví dụ: địa chỉ nhà riêng và địa chỉ doanh nghiệp) và tăng cường hồ sơ cho cả hai địa chỉ một cách riêng biệt. Chọn **Tiếp theo**.
 
 1. Xác định trường nào từ hồ sơ hợp nhất của bạn sẽ được sử dụng để tìm kiếm dữ liệu vị trí phù hợp từ HERE Technologies. Các trường **Đường 1** và **Mã zip/bưu chính** là bắt buộc cho địa chỉ chính và/hoặc phụ đã chọn. Để có độ chính xác so khớp cao hơn, có thể thêm nhiều trường khác.
 
@@ -68,3 +72,6 @@ Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới HERE Technologies, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng HERE Technologies đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tính năng tăng cường này bất kỳ lúc nào để ngừng sử dụng chức năng này.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

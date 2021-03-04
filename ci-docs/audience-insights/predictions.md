@@ -4,17 +4,17 @@ description: Sử dụng dự đoán để điền vào dữ liệu khách hàng
 ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: zacook
 manager: shellyha
-ms.openlocfilehash: 66f0b16b5d05741ab98ca5ce2157da8c46b6d9e0
-ms.sourcegitcommit: 5379c2b77d613d071a177f509e6417ebf3c47516
+ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "4648737"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268298"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
 
@@ -160,3 +160,6 @@ Nếu không thể hoàn thành quy trình đính kèm Common Data Service do l�
     1. Chọn người dùng bạn vừa tạo.
     1. Chọn **Quản lý vai trò** trong thanh menu trên cùng.
     1. Chọn **Quản trị viên hệ thống** rồi chọn **OK**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

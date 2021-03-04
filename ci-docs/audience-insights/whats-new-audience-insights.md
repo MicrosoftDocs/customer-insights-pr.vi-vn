@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650030"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270458"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong khả năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
@@ -31,6 +31,77 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="january-2021-updates"></a>Bản cập nhật tháng 1 năm 2021
+
+Bản cập nhật tháng 1 năm 2021 bao gồm một vài tính năng, nâng cấp hiệu suất và sửa lỗi.
+
+#### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Chức năng mở rộng và hiệu suất nâng cao cho chức năng xuất SFTP** Giờ đây, bạn có thể xuất tất cả các thực thể đầu ra từ Customer Insights sang máy chủ SFTP. Trước đây, tính năng xuất được giới hạn trong các thực thể phân đoạn. Ngoài ra, hiệu suất của tính năng xuất SFTP cho phép nhiều dữ liệu hơn trong thời gian ngắn hơn, tùy thuộc vào hiệu suất của máy chủ SFTP của bạn.    
+  Để biết thêm thông tin, hãy xem [Trình kết nối cho SFTP (bản xem trước)](export-sftp.md).  
+
+#### <a name="segments"></a>Phân khúc
+
+- **Các phân đoạn đề xuất dựa trên công nghệ máy học để cải thiện chỉ số** Có một cách mới để khám phá và tạo phân đoạn. Hệ thống sử dụng mô hình trí tuệ nhân tạo để đề xuất các phân đoạn có thể giúp cải thiện KPI (giá trị đo) mà bạn đang theo dõi. Chúng tôi cho biết mức độ ảnh hưởng của các thuộc tính mà bạn chọn đối với giá trị đo hoặc một thuộc tính chính khác. Thông tin này giúp tìm kiếm các phân khúc tiềm năng mang lại cơ hội.    
+  Để biết thêm thông tin, hãy xem [Phân đoạn được đề xuất (bản xem trước)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Thống nhất dữ liệu
+
+- **Nâng cao trải nghiệm so khớp** Trong khu vực hợp nhất dữ liệu, trải nghiệm so khớp đã được cập nhật. Nó cho phép bạn định cấu hình và xem các quy tắc đối sánh, bao gồm số liệu thống kê chi tiết để giải thích thêm về cách đối sánh hoạt động. Có các tùy chọn để tắt quy tắc đối sánh để quy tắc đó không còn hoạt động trong khi vẫn giữ nguyên cấu hình, kéo và thả quy tắc đối sánh, v.v.
+  Để biết thêm thông tin, hãy xem phần [Đối sánh các thực thể](match-entities.md).
+
+- **Đầu ra khử trùng lặp từ quy trình đối sánh có sẵn dưới dạng thực thể** Đầu ra của quy trình khử trùng lặp từ quy trình đối sánh hiện được viết thành một thực thể riêng biệt để phân tích thêm. Thực thể này bao gồm các trường được sử dụng trong quá trình loại bỏ trùng lặp, đồng thời, bản ghi chiến thắng và bản ghi thay thế tương ứng được hợp nhất với bản ghi chiến thắng.
+  Để biết thêm thông tin, hãy xem [Đầu ra khử trùng lặp dưới dạng một thực thể](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Quản trị hệ thống
+
+- **Chia sẻ dữ liệu liền mạch với Microsoft Dataverse** Giờ đây, bạn có thể chia sẻ kết quả Customer Insights với các ứng dụng Microsoft Dataverse bằng Microsoft Dataverse Managed Data Lake. Khi liên kết một môi trường Dataverse với Customer Insights, bạn có tùy chọn để bật chia sẻ dữ liệu.
+  Để biết thêm thông tin, hãy xem [Quản lý môi trường](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Bản cập nhật tháng 12 năm 2020
+
+Các bản cập nhật vào tháng 12 năm 2020 bao gồm một số tính năng, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Các tính năng mới và cập nhật vào tháng 12 năm 2020
+
+#### <a name="data-enrichment"></a>Làm phong phú dữ liệu
+
+- **Cải thiện khả năng làm phong phú đối tượng chung sở thích và Thương hiệu**
+  
+  Chúng tôi đã đơn giản hóa điểm số sở thích để làm cho chúng dễ hiểu và dễ sử dụng hơn. Giờ đây, bạn có thể nhanh chóng xác định khách hàng dựa trên mức độ yêu thích của họ đối với một thương hiệu hoặc mối quan tâm nhất định.
+
+  Ngoài ra, chúng tôi đã thêm các tùy chọn cấu hình mới để kiểm soát tốt hơn cách bạn muốn làm phong phú hồ sơ khách hàng của mình. 
+
+  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft-graph.md).
+
+- **Kiểm soát cấu hình cần làm phong phú**
+
+  Giờ đây, bạn chỉ có thể làm phong phú thêm một tập hợp con hồ sơ khách hàng với tùy chọn để chọn thực thể phân khúc thay vì thực thể khách hàng mặc định. Tạo phân khúc với hồ sơ khách hàng mà bạn muốn làm phong phú và chọn phân khúc đó trong cấu hình làm phong phú cho tập dữ liệu khách hàng của bạn.
+  Tính năng này hiện chỉ khả dụng cho các phần làm phong phú được cung cấp bởi Công nghệ Experian và HERE. Chúng tôi sẽ sớm kích hoạt khả năng này để làm phong phú thêm.
+
+  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng với thông tin nhân khẩu học từ Experian](enrichment-experian.md) hoặc [Làm phong phú hồ sơ khách hàng với Công nghệ HERE](enrichment-here.md).
+
+#### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Kích hoạt các phân khúc của bạn thông qua Autopilot**
+
+  Xuất các phân khúc sang Autopilot và sử dụng chúng cho mục đích tiếp thị. Để biết thêm thông tin, hãy xem [Trình kết nối cho Autopilot (bản xem trước)](export-autopilot.md).
+
+- **Kích hoạt các phân khúc của bạn thông qua SendGrid**
+
+  Xuất các phân khúc sang SendGrid và sử dụng chúng cho mục đích tiếp thị. Để biết thêm thông tin, hãy xem [Trình kết nối cho SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Quản trị hệ thống
+
+- **Cập nhật trải nghiệm quản lý môi trường**
+  
+  Giờ đây, bạn có thể tạo, chỉnh sửa, xóa và đặt lại môi trường trực tiếp từ bộ chọn môi trường trong tiêu đề ứng dụng. 
+  
+  Ngoài ra, môi trường bạn đang sử dụng sẽ được ghim ở đầu bảng điều khiển môi trường, vì vậy bạn không cần phải tìm kiếm nó nữa.
+
+  Để biết thêm thông tin, hãy xem [Quản lý môi trường](manage-environments.md).
+
 ## <a name="november-2020-updates"></a>Bản cập nhật tháng 11 năm 2020
 
 Các bản cập nhật vào tháng 11 năm 2020 bao gồm một số tính năng, nâng cấp hiệu suất và sửa lỗi.
@@ -41,7 +112,7 @@ Các bản cập nhật vào tháng 11 năm 2020 bao gồm một số tính năn
 
 - **Mang dữ liệu tăng cường của riêng bạn thông qua nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP)**
   
-  Nhập tùy chỉnh SFTP cho phép bạn nhập dữ liệu tăng cường mà không phải trải qua quá trình hợp nhất dữ liệu. Tìm hiểu thêm về nhập tùy chỉnh SFTP.
+  Nhập tùy chỉnh SFTP cho phép bạn nhập dữ liệu làm phong phú mà không phải trải qua quá trình hợp nhất dữ liệu. Tìm hiểu thêm về nhập tùy chỉnh SFTP.
 
   Để biết thêm thông tin, hãy xem [Tăng cường hồ sơ khách hàng với dữ liệu tùy chỉnh (bản xem trước)](enrichment-SFTP-custom-import.md).
  
@@ -165,7 +236,7 @@ Chức năng làm phong phú qua dữ liệu nhân khẩu học từ Experian hi
 Ngăn chi tiết tác vụ cho phép bạn xem chi tiết về các tác vụ mà hệ thống chạy. Đây là một cách tiện lợi để xác định các vấn đề với cấu hình và tìm giải pháp.
 Xem lại các thông báo lỗi để tìm hiểu cách thức giải quyết các vấn đề tiềm ẩn.
  
-- **Xử lý thông tin được thêm vào các trang bổ sung**
+- **Xử lý thông tin được thêm vào các trang khác**
 
 Phần cải thiện này bổ sung thông tin về trạng thái của các thực thể của bạn trên trang **Thực thể** và **Khách hàng**.
  
@@ -202,9 +273,9 @@ Bản cập nhật tháng 8 năm 2020 bao gồm một số tính năng, phần n
 
 #### <a name="enrichment"></a>Tăng cường
 
-- **Tùy chọn làm phong phú bằng mối quan hệ sở thích được cung cấp trên các thị trường khác**
+- **Tính năng làm phong phú sở thích có sẵn ở nhiều thị trường hơn**
 
-  Chúng tôi sẽ mở rộng phạm vi cung cấp dịch vụ làm phong phú bằng mối quan hệ sở thích ra ngoài Hoa Kỳ đến năm thị trường khác: Canada, Australia, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú dữ liệu khách hàng của mình bằng các sở thích bổ sung ở những thị trường này. Chúng tôi cũng sẽ làm phong phú hồ sơ khách hàng của bạn ở những thị trường này bằng cách dùng dữ liệu độc quyền tại địa phương từ Microsoft Graph.
+  Chúng tôi đang mở rộng phạm vi cung cấp dịch vụ làm phong phú sở thích từ Hoa Kỳ sang năm thị trường khác: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú thêm dữ liệu khách hàng của mình với nhiều sở thích hơn áp dụng cho các thị trường này. Chúng tôi cũng sẽ làm phong phú hồ sơ khách hàng của bạn ở những thị trường này bằng cách dùng dữ liệu độc quyền tại địa phương từ Microsoft Graph.
   Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng mối quan tâm về sở thích và thương hiệu](enrichment-microsoft-graph.md)
 
 
@@ -221,11 +292,11 @@ Bản cập nhật tháng 7 năm 2020 bao gồm một vài tính năng, nâng c�
   Chúng tôi đã mở rộng bộ kích hoạt cho Power Automate và cho phép bạn tạo thông báo hoặc hành động khi quá trình làm mới quy trình hợp nhất (ánh xạ, ghép nối, hợp nhất) hoàn tất.    
   Để biết thêm thông tin, hãy xem [Trình kết nối Power Automate](export-power-automate.md)
 
-#### <a name="enrichment"></a>Làm phong phú
+#### <a name="enrichment"></a>Tăng cường
 
-- **Nội dung phong phú về sở thích thương hiệu ở các thị trường bổ sung**
+- **Tính năng làm phong phú thương hiệu có sẵn ở nhiều thị trường hơn**
 
-  Chúng tôi mở rộng khả năng sử dụng của nội dung phong phú sở thích thương hiệu ra ngoài Hoa Kỳ tới 5 thị trường bổ sung: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú dữ liệu của khách hàng bằng các thương hiệu địa phương ở những thị trường này. Chúng tôi cũng sẽ làm phong phú hồ sơ khách hàng của bạn ở những thị trường này bằng cách dùng dữ liệu độc quyền tại địa phương từ Microsoft Graph.
+  Chúng tôi đang mở rộng phạm vi cung cấp dịch vụ làm phong phú thương hiệu từ Hoa Kỳ sang năm thị trường khác: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú dữ liệu của khách hàng bằng các thương hiệu địa phương ở những thị trường này. Chúng tôi cũng sẽ làm phong phú hồ sơ khách hàng của bạn ở những thị trường này bằng cách dùng dữ liệu độc quyền tại địa phương từ Microsoft Graph.
   Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng mối quan tâm về sở thích và thương hiệu](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Bản cập nhật tháng 6 năm 2020
@@ -238,7 +309,7 @@ Bản cập nhật tháng 6 năm 2020 bao gồm một vài tính năng, nâng c�
 
 - **Làm phong phú bằng dữ liệu công ty từ Leadspace**
   
-  Xác định các trường trong hồ sơ khách hàng hợp nhất được dùng để tra cứu dữ liệu công ty liên quan từ Leadspace. Sau khi chạy quy trình làm phong phú, hồ sơ B2B được làm phong phú bằng các thuộc tính bổ sung, bao gồm quy mô công ty, vị trí, ngành, v.v.    
+  Xác định các trường trong hồ sơ khách hàng hợp nhất được dùng để tra cứu dữ liệu công ty liên quan từ Leadspace. Sau khi chạy quá trình làm phong phú, hồ sơ B2B được làm phong phú với nhiều thuộc tính hơn bao gồm quy mô công ty, vị trí, ngành, v.v.    
   Sự cộng này cho phép bạn cải thiện chất lượng của dữ liệu bằng đầu vào từ các dịch vụ bên thứ ba. Để sử dụng tùy chọn làm phong phú này, bạn cần có giấy phép từ Leadspace để truy nhập dữ liệu công ty B2B. Hệ thống sẽ sử dụng giấy phép đó để liên tục tăng cường dữ liệu của bạn.    
   Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ công ty bằng Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Bản cập nhật tháng 6 năm 2020 bao gồm một vài tính năng, nâng c�
   Tùy chọn kiểm soát mới trên Phần bổ trợ thẻ Dynamics 365 Customer cho phép bạn hiển thị nội dung phong phú về thương hiệu và sở thích trên danh bạ của mình trong các ứng dụng tương tác với khách hàng trong Dynamics 365.    
   Để biết thêm thông tin, hãy xem [Customer Card Add-in](customer-card-add-in.md).
 
-- **Bộ kích hoạt Power Automate bổ sung**
+- **Nhiều trình kích hoạt Power Automate hơn**
 
   Chúng tôi đã mở rộng bộ kích hoạt cho Power Automate và thêm các bộ kích hoạt sau:
   - Nhận thông báo hoặc thực hiện hành động khi lệnh làm mới đầy đủ tự động (nguồn dữ liệu, hợp nhất, phân khúc, biện pháp, quy trình xuất) hoàn tất
@@ -295,12 +366,12 @@ Bản cập nhật tháng 6 năm 2020 bao gồm một vài tính năng, nâng c�
   
   Tìm khách hàng tương tự trong cơ sở khách hàng của bạn bằng trí tuệ nhân tạo. Mô hình công cụ máy học phân loại nhị phân chỉ định điểm số tương tự cho khách hàng trong phân khúc mở rộng. Điểm số dựa trên sự tương đồng với khách hàng trong phân khúc nguồn. Tùy thuộc vào điểm số tương tự, hồ sơ khách hàng được thêm vào phân khúc mới tạo.
 
-  Đôi khi nói về mô hình tương tự trong tiếp thị số, việc này sử dụng mô hình AI để giúp tìm khách hàng tương tự với một phân khúc khách hàng khác bằng cách lập chỉ số các thuộc tính bổ sung. Điều này không chỉ cho phép bạn chọn các thuộc tính mà còn chỉ định số lượng khách hàng lớn nhất nên có trong phân khúc mới này. Mô hình AI sẽ tính toán điểm số tương tự cho từng khách hàng dựa trên thuộc tính bạn đã chọn và tìm khách hàng có điểm số tương tự trung bình cao hơn. Phân khúc được tạo ra sẽ bao gồm khách hàng tương tự với khách hàng trong phân khúc ban đầu.    
+  Đôi khi được gọi là mô hình tương tự trong tiếp thị kỹ thuật số, nó sử dụng mô hình trí tuệ nhân tạo để giúp tìm kiếm những khách hàng tương tự với một phân khúc khách hàng khác của bạn bằng cách bao gồm nhiều thuộc tính hơn. Điều này không chỉ cho phép bạn chọn các thuộc tính mà còn chỉ định số lượng khách hàng lớn nhất nên có trong phân khúc mới này. Mô hình AI sẽ tính toán điểm số tương tự cho từng khách hàng dựa trên thuộc tính bạn đã chọn và tìm khách hàng có điểm số tương tự trung bình cao hơn. Phân khúc được tạo ra sẽ bao gồm khách hàng tương tự với khách hàng trong phân khúc ban đầu.    
   Để biết thêm thông tin, hãy xem [Khách hàng tương tự](find-similar-customer-segments.md).
 
 - **Trùng lặp phân khúc và các yếu tố phân biệt**
 
-  Trùng lặp phân khúc cho phép bạn xem số lượng và loại khách hàng chung nhau của hai phân khúc trở lên. Ví dụ: mức độ trùng lặp của phân khúc khách hàng chi tiêu nhiều với phân khúc khách hàng hài lòng hoặc mức độ trùng lặp của phân khúc khách hàng rời bỏ với phân khúc khách hàng không hài lòng. Ngoài ra, bạn có thể phân tích sự thay đổi trong mức độ trùng lặp theo thuộc tính bổ sung bạn chọn.
+  Trùng lặp phân khúc cho phép bạn xem số lượng và loại khách hàng chung nhau của hai phân khúc trở lên. Ví dụ: mức độ trùng lặp của phân khúc khách hàng chi tiêu nhiều với phân khúc khách hàng hài lòng hoặc mức độ trùng lặp của phân khúc khách hàng rời bỏ với phân khúc khách hàng không hài lòng. Ngoài ra, bạn có thể phân tích cách sự chồng chéo thay đổi dựa trên một thuộc tính bổ sung mà bạn chọn.
 
   Các yếu tố phân biệt phân khúc cho thấy sự khác biệt của một phân khúc so với số lượng khách hàng còn lại hoặc so với một phân khúc khác. Bạn chỉ cần xác định một phân khúc và hệ thống sẽ xác định các thuộc tính hồ sơ và số liệu phân biệt phân khúc này dưới dạng danh sách các điểm khác biệt theo thứ tự—từ điểm khác biệt lớn nhất đến điểm khác biệt nhỏ nhất.    
   Để biết thêm thông tin, hãy xem [Thông tin chi tiết về phân khúc (xem trước)](segment-insights.md).
@@ -333,7 +404,7 @@ Các bản cập nhật tháng 5 năm 2020 gồm có một số tính năng, nâ
 
 - **Cách dàn trang và dòng thời gian cập nhật trên tiện ích bổ trợ Customer Card**
 
-  Dòng thời gian của giải pháp bổ trợ Thẻ khách hàng khớp với dòng thời gian hoạt động. Cải thiện cách dàn trang của dòng thời gian, hiển thị cùng lúc tới 50 hoạt động. Cách dàn trang mới cũng cho phép tải thêm hoạt động trong dòng thời gian.    
+  Dòng thời gian của giải pháp bổ trợ Thẻ khách hàng khớp với dòng thời gian hoạt động. Cải thiện cách dàn trang của dòng thời gian, hiển thị cùng lúc tới 50 hoạt động. Nó cũng cho phép tải nhiều hoạt động hơn trong dòng thời gian.    
   Để biết thêm thông tin, hãy xem [Customer Card Add-in](customer-card-add-in.md).
 
 - **Tác nhân kích hoạt Power Automate cho các thay đổi của phân khúc**
@@ -412,7 +483,7 @@ Các bản cập nhật tháng 4 năm 2020 bao gồm một số tính năng, nâ
 
 - **Xuất sang LiveRamp**
 
-  Kích hoạt dữ liệu của bạn trong LiveRamp® để kết nối với hơn 500 nền tảng trên hệ sinh thái kỹ thuật số, mạng xã hội và TV. Tận dụng dữ liệu của bạn trong LiveRamp để nhắm mục tiêu, chặn và cá nhân hóa chiến dịch quảng cáo.    
+  Kích hoạt dữ liệu của bạn trong LiveRamp® để kết nối với hơn 500 nền tảng trên hệ sinh thái kỹ thuật số, mạng xã hội và TV. Sử dụng dữ liệu của bạn trong LiveRamp để nhắm mục tiêu, xóa và cá nhân hóa các chiến dịch quảng cáo.    
   Để biết thêm thông tin, hãy xem [Trình kết nối LiveRamp&reg;](export-liveramp.md).
 
 - **Tiện ích bổ trợ Customer Insights trong Teams**
@@ -431,9 +502,9 @@ Các bản cập nhật tháng 4 năm 2020 bao gồm một số tính năng, nâ
   
   Người dùng có thể tạo, chỉnh sửa và xóa các phép đo có mối quan hệ phụ thuộc với phép đo khác. Ví dụ: Một phép đo được xây dựng trên một phép đo khác, phép đo kia lại được xây dựng trên phép đo thứ 3.
 
-#### <a name="segments"></a>Phân đoạn
+#### <a name="segments"></a>Phân khúc
 
-- **Toán tử bổ sung**
+- **Một toán tử khác**
   
   Toán tử theo bộ cho phép phân khúc khách hàng theo một số giá trị chuỗi có thể có. Trước khi toán tử này được thêm vào, bạn phải xây dựng những phân khúc đó với nhiều điều kiện HOẶC. Toán tử theo bộ cho phép bạn làm điều đó chỉ với một điều kiện.    
   Để biết thêm thông tin, hãy xem [Tạo và quản lý phân khúc](segments.md).
@@ -444,3 +515,6 @@ Các bản cập nhật tháng 4 năm 2020 bao gồm một số tính năng, nâ
   
   Sao chép cấu hình của bạn từ môi trường này sang môi trường khác. Trong khi tạo môi trường mới, bạn có thể chọn môi trường hiện tại mà bạn muốn sao chép cấu hình. Chúng tôi hiện hỗ trợ việc sao chép nguồn dữ liệu, quy trình hợp nhất dữ liệu, mối quan hệ, phép đo và phân khúc. Bạn không thể sao chép dữ liệu thực và thông tin đăng nhập nguồn dữ liệu.    
   Để biết thêm thông tin, hãy xem [Quản lý môi trường](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

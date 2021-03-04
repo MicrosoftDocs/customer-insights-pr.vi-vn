@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644429"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268344"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Dự đoán rời bỏ giao dịch (bản xem trước)
 
@@ -96,6 +96,8 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
 1. Theo tùy chọn, chọn **Thêm dữ liệu** cho **Hoạt động của khách hàng**. Chọn thực thể cung cấp thông tin hoạt động của khách hàng như được mô tả trong điều kiện tiên quyết.
 
 1. Ánh xạ các trường ngữ nghĩa với các thuộc tính trong thực thể hoạt động của khách hàng và chọn **Tiếp theo**. Để biết mô tả về các trường, hãy xem [điều kiện tiên quyết](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Ánh xạ các trường của khách hàng cho dữ liệu giao dịch.":::
 
 1. Chọn loại hoạt động phù hợp với loại hoạt động khách hàng mà bạn đang đặt cấu hình. Chọn **Tạo mới** và chọn một loại hoạt động có sẵn hoặc tạo một loại mới.
 
@@ -185,3 +187,6 @@ Xóa dự đoán cũng xóa thực thể đầu ra của nó.
 1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xóa.
 
 1. Chọn **Xóa**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

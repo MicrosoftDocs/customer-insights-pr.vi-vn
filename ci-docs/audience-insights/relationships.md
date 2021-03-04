@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407335"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269907"
 ---
 # <a name="relationships-between-entities"></a>Các mối quan hệ giữa các thực thể
 
@@ -28,8 +28,8 @@ Trong quá trình khớp và hợp nhất, các mối quan hệ hệ thống đ�
 > ![Tạo mối quan hệ](media/relationships-entities-merge.png "Tạo mối quan hệ")
 
 - **Mối quan hệ *CustomerToContact*** được tạo giữa thực thể khách hàng và thực thể Người liên hệ. Thực thể Khách hàng có được trường khóa **Contact_contactId** để liên kết với trường khóa của thực thể Liên hệ **contactId**.
-- **Mối quan hệ _CustomerToAccount_** được tạo giữa thực thể Khách hàng và thực thể Tài khoản. Thực thể Khách hàng có được trường khóa **Account_accountId** để liên kết với trường khóa của thực thể Tài khoản **accountId**.
-- **Mối quan hệ _CustomerToWebAccount_** được tạo giữa thực thể Khách hàng và thực thể WebAccount. Thực thể Khách hàng có được trường khóa **WebAccount_webaccountId** để liên kết với trường khóa của thực thể WebAccount **webaccountId**.
+- **Mối quan hệ *CustomerToAccount*** được tạo giữa thực thể Khách hàng và thực thể Tài khoản. Thực thể Khách hàng có được trường khóa **Account_accountId** để liên kết với trường khóa của thực thể Tài khoản **accountId**.
+- **Mối quan hệ *CustomerToWebAccount*** được tạo giữa thực thể Khách hàng và thực thể WebAccount. Thực thể Khách hàng có được trường khóa **WebAccount_webaccountId** để liên kết với trường khóa của thực thể WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Tạo một mối quan hệ
 
@@ -69,3 +69,6 @@ Xác định các mối quan hệ tùy chỉnh trên trang **Mối quan hệ**. 
 ## <a name="next-step"></a>Bước tiếp theo
 
 Mối quan hệ hệ thống và tùy chỉnh được sử dụng để tạo các phân đoạn dựa trên nhiều nguồn dữ liệu không còn tồn tại. Để biết thêm thông tin, hãy xem [Phân khúc](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Cấu hình hệ thống trong thông tin chi tiết về đối tượng
 description: Tìm hiểu về cài đặt hệ thống trong khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407333"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267366"
 ---
 # <a name="system-configuration"></a>Cấu hình hệ thống
 
-Trang **Hệ thống** bao gồm 4 tab: **Trạng thái**, **Lịch trình**, **Giới thiệu** và **Tổng quát**.
+Trang **Hệ thống** bao gồm các tab sau:
+- [Trạng thái](#status-tab)
+- [Lịch trình](#schedule-tab)
+- [Sử dụng API](#api-usage-tab)
+- [Giới thiệu](#about-tab)
+- [Chung](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Trang hệ thống](media/system-tabs.png "Trang hệ thống")
 
 ## <a name="status-tab"></a>Tab Trạng thái
 
-**Tab Trạng thái** cho phép bạn theo dõi tiến trình nhập dữ liệu, xuất dữ liệu và một vài quy trình sản phẩm quan trọng. Xem lại thông tin trên tab này để đảm bảo tính đầy đủ của các quy trình hiện hoạt.
+**Tab trạng thái** cho phép bạn theo dõi tiến trình nhập dữ liệu, xuất dữ liệu và một số quy trình sản phẩm quan trọng khác. Xem lại thông tin trên tab này để đảm bảo tính đầy đủ của các quy trình hiện hoạt.
 
-Tab này bao gồm cả các bảng trạng thái cho **Nguồn dữ liệu**, **Quy trình hệ thống** và **Chuẩn bị dữ liệu**. Mỗi bảng theo dõi **Tên** của nhiệm vụ và thực thể tương ứng, **Trạng thái** của lần chạy gần đây nhất và thời điểm **Cập nhật gần đây nhất**.
+Tab này bao gồm các bảng với trạng thái và thông tin xử lý cho các quy trình khác nhau. Mỗi bảng theo dõi **Tên** của nhiệm vụ và thực thể tương ứng, **Trạng thái** của lần chạy gần đây nhất và thời điểm **Cập nhật gần đây nhất**.
 
 Xem chi tiết về một vài lần chạy gần đây nhất của nhiệm vụ bằng cách chọn tên nhiệm vụ.
 
@@ -40,7 +45,7 @@ Có 6 loại trạng thái cho các nhiệm vụ. Các loại trạng thái sau 
 - **Bỏ qua:** Nhiệm vụ đã bị bỏ qua. Một hoặc nhiều quá trình xuôi dòng mà nhiệm vụ này phụ thuộc vào bị lỗi hoặc bị bỏ qua.
 - **Lỗi:** Xử lý nhiệm vụ không thành công.
 - **Đã hủy:** Quá trình xử lý đã bị hủy bởi người dùng trước khi hoàn thành.
-- **Xếp hàng:** Quá trình xử lý được xếp hàng và sẽ bắt đầu khi tất cả các nhiệm vụ hạ nguồn được hoàn thành. Để biết thêm thông tin, hãy xem [chính sách Làm mới](#refresh-policies).
+- **Đã xếp hàng:** Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi hoàn thành tất cả các tác vụ ngược dòng. Để biết thêm thông tin, hãy xem [chính sách Làm mới](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Chính sách làm mới
 
@@ -89,4 +94,17 @@ Chọn **Lưu** để xác nhận lựa chọn của bạn.
 
 ## <a name="api-usage-tab"></a>Tab sử dụng API
 
-Tìm chi tiết về mức sử dụng API trong thời gian thực và xem sự kiện nào đã xảy ra trong khoảng thời gian nhất định. Để biết thêm thông tin, hãy xem [Nhập dữ liệu trong thời gian thực](real-time-data-ingestion.md).
+Tìm chi tiết về việc sử dụng API thời gian thực và xem sự kiện nào đã xảy ra trong một khung thời gian nhất định. Bạn chọn khung thời gian trong menu thả xuống **Chọn khung thời gian**. 
+
+**Sử dụng API** chứa ba phần: 
+- **Lệnh gọi API** - biểu đồ hiển thị tổng số cuộc gọi đến API trong khung thời gian đã chọn.
+
+- **Truyền dữ liệu** - biểu đồ hiển thị lượng dữ liệu đã được chuyển qua API trong khung thời gian đã chọn.
+
+-  **Hoạt động** - một bảng với các hàng cho mỗi hoạt động API có sẵn và thông tin chi tiết về việc sử dụng các hoạt động. Bạn có thể chọn một tên hoạt động để truy cập [tham chiếu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Các hoạt động sử dụng tính năng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một nút có biểu tượng ống nhòm để xem việc sử dụng API trong thời gian thực. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.   
+   Sử dụng hộp **Nhóm theo** trong ngăn **Sử dụng API thời gian thực** để chọn cách tốt nhất để trình bày các tương tác trong thời gian thực của bạn. Bạn có thể nhóm dữ liệu theo phương pháp API, tên đủ điều kiện của thực thể (thực thể được nhập), tạo bởi (nguồn sự kiện), kết quả (thành công hay thất bại) hoặc mã lỗi. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Tăng cường với Experian tăng cường của bên thứ ba
 description: Thông tin chung về tăng cường của bên thứ ba Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668839"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269586"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu nhân khẩu học từ Experian (bản xem trước)
 
@@ -41,7 +41,9 @@ Experian là công ty tiên phong toàn cầu về các dịch vụ tiếp thị
 
 ## <a name="map-your-fields"></a>Ánh xạ trường của bạn
 
-1. Chọn **Thêm dữ liệu** rồi chọn mã định danh chính từ **Tên và địa chỉ**, **Email** hoặc **Điện thoại** và gửi đến Experian để thực hiện quá trình nhận dạng danh tính.
+1.  Chọn **Thêm dữ liệu** và chọn **tập dữ liệu khách hàng** bạn muốn làm phong phú bằng dữ liệu nhân khẩu học từ Experian. Bạn có thể chọn thực thể **khách hàng** để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+
+1. Chọn số nhận dạng chính của bạn từ **Tên và địa chỉ**, **Email** hoặc **Điện thoại** để gửi đến Experian để phân giải danh tính.
 
    > [!TIP]
    > Nhiều thuộc tính mã định danh chính được gửi đến Experian có thể cho tỷ lệ khớp cao hơn.
@@ -52,8 +54,8 @@ Experian là công ty tiên phong toàn cầu về các dịch vụ tiếp thị
 
 1.  Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
 
-   > [!div class="mx-imgBorder"]
-   > ![Ánh xạ trường Experian](media/experian-field-mapping.png "Ánh xạ trường Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Ánh xạ trường Experian](media/experian-field-mapping.png "Ánh xạ trường Experian")
 
 ## <a name="enrichment-results"></a>Kết quả làm phong phú
 
@@ -71,3 +73,6 @@ Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Experian, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Experian đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tính năng tăng cường này bất kỳ lúc nào để ngừng sử dụng chức năng này.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

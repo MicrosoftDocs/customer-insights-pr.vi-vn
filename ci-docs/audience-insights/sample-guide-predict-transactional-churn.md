@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643619"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269816"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ giao dịch (bản xem trước)
 
@@ -49,7 +49,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
    [!div class="mx-imgBorder"]
    ![Chuyển đổi DoB thành Ngày](media/ecommerce-dob-date.PNG "chuyển đổi ngày sinh thành ngày")
 
-1. Trong trường "Tên" ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommerceContacts**.
+1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommerceContacts**
 
 1. Lưu nguồn dữ liệu.
 
@@ -66,7 +66,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
    - **PurchasedOn**: Ngày/Giờ
    - **TotalPrice**: Tiền tệ
    
-1. Trong trường "Tên" ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommercePurchases**.
+1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommercePurchases**.
 
 1. Lưu nguồn dữ liệu.
 
@@ -84,7 +84,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
    - **RewardsPoints**: Số nguyên
    - **CreatedOn**: Ngày/Giờ
 
-1. Trong trường "Tên" ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **loyCustomers**.
+1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **loyCustomers**.
 
 1. Lưu nguồn dữ liệu.
 
@@ -166,7 +166,7 @@ Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có t
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Chọn mô hình thúc đẩy khoảng thời gian dự đoán và định nghĩa về tỷ lệ rời đi.":::
 
-1. Chọn **Lịch sử mua hàng (bắt buộc)** và chọn **Thêm dữ liệu** cho lịch sử đăng ký.
+1. Chọn **Lịch sử mua hàng (bắt buộc)** và chọn **Thêm dữ liệu** cho lịch sử mua hàng.
 
 1. Thêm thực thể **eCommercePurchases: eCommerce** và ánh xạ các trường từ thương mại điện tử đến các trường tương ứng theo yêu cầu của mô hình.
 
@@ -204,3 +204,6 @@ Bạn có thể tạo một phân khúc mới dựa trên thực thể được 
 Giờ đây, bạn có một phân khúc được cập nhật động để xác định những khách hàng có nguy cơ rời bỏ cao cho doanh nghiệp đăng ký này.
 
 Để biết thêm thông tin, hãy xem [Tạo và quản lý phân khúc](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Tìm và lọc hồ sơ khách hàng
 description: Nhanh chóng tìm thông tin về hồ sơ khách hàng thống nhất và lọc các thuộc tính được chỉ định.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407336"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270092"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Hồ sơ khách hàng: Chỉ mục tìm kiếm và lọc
 
@@ -28,14 +28,6 @@ Kết quả của việc thống nhất dữ liệu khách hàng của bạn là
 Nếu đó là lần đầu tiên bạn xác định các thuộc tính có thể tìm kiếm với tư cách là quản trị viên, trước tiên, bạn cần xác định các trường được lập chỉ mục. Chúng tôi khuyên bạn nên chọn tất cả các thuộc tính mà người dùng có thể tìm kiếm và lọc trên trang **Khách hàng**. Bạn chỉ có thể chỉ định các thuộc tính tồn tại trong thực thể hồ sơ khách hàng mà bạn đã tạo trong quá trình thống nhất dữ liệu.
 
 1. Mở trang **Khách hàng** rồi chọn **Tìm kiếm & lọc chỉ mục**.
-
-> [!NOTE]
-> Chúng tôi đã tạo cấu hình chỉ mục tìm kiếm mặc định trên các thuộc tính khả dụng trong thực thể Khách hàng từ các loại ngữ nghĩa sau như xác định trên trang Bản đồ.
-> - Tên, Họ, Tên đệm và Tên đầy đủ của một người
-> - Tên tổ chức
-> - Địa chỉ email
-> - Số điện thoại
-> - Thông tin vị trí
 
 2. Chọn **+ Thêm** để chỉ định trường lập chỉ mục.
 
@@ -65,3 +57,10 @@ Menu **Bộ lọc** trên trang **Khách hàng** có thể bao gồm một số 
 2. Chọn **Lưu** để áp dụng thay đổi.
 
 3. Chọn **Chạy** sau khi bạn đã sẵn sàng áp dụng cài đặt của mình.
+
+## <a name="next-steps"></a>Các bước tiếp theo
+
+Đi đến trang **Khách hàng** để tìm kiếm hồ sơ khách hàng hoặc sử dụng các trường được lập chỉ mục để xem một tập hợp con của tất cả hồ sơ khách hàng.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

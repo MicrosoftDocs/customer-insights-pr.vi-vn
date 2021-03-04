@@ -4,17 +4,17 @@ description: Sử dụng các mô hình Machine Learning Studio (cổ điển) t
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669044"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270230"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Sử dụng các mô hình dựa trên Azure Machine Learning Studio (cổ điển)
 
@@ -171,3 +171,6 @@ Toàn bộ [thử nghiệm đề xuất sản phẩm có thể được truy c�
 Để sử dụng những dự đoán này trong Customer Insights, bạn cần **xuất** dự đoán cùng với ID khách hàng. [Xuất chúng sang cùng một vị trí lưu trữ Azure Blob](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) mà bạn xuất dữ liệu nguồn sang. Dịch vụ web dự đoán có thể được lên lịch chạy thường xuyên và cập nhật điểm số.
 
 Dữ liệu do mô hình tùy chỉnh tạo ra có thể được sử dụng để tăng cường thêm dữ liệu khách hàng của bạn. Để biết thêm thông tin, hãy xem [Mô hình máy học tùy chỉnh](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

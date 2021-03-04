@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643709"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270000"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Trình kết nối cho Trình quản lý quảng cáo Facebook (bản xem trước)
 
@@ -62,7 +62,16 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Trình quản lý qu�
 
 Bạn có thể [xuất dữ liệu theo nhu cầu](export-destinations.md). Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.
 
-## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và tuân thủ
+## <a name="known-limitations"></a>Các giới hạn đã biết
+
+- Lên đến 10 triệu hồ sơ khách hàng cho mỗi lần xuất sang Facebook Ads Manager 
+- Xuất sang Facebook Ads Manager bị giới hạn ở các phân đoạn
+- Quá trình xuất phân đoạn với tổng số 10 triệu hồ sơ có thể mất đến 90 phút để hoàn tất
+
+## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Trình quản lý quảng cáo Facebook, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Quảng cáo Facebook đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

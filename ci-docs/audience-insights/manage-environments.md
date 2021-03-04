@@ -1,20 +1,20 @@
 ---
 title: Tạo và quản lý môi trường
 description: Tìm hiểu cách đăng ký dịch vụ và cách quản lý môi trường.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644159"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270138"
 ---
 # <a name="manage-environments"></a>Quản lý môi trường
 
@@ -46,9 +46,9 @@ Có hai cách để tạo một môi trường mới. Bạn có thể chỉ đ�
 
 Để tạo môi trường:
 
-1. Chọn biểu tượng **Cài đặt** ở đầu ứng dụng này.
+1. Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng.
 
-1. Chọn **Môi trường mới**.
+1. Chọn **Mới**.
 
    > [!div class="mx-imgBorder"]
    > ![Thiết đặt Môi trường](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Có hai cách để tạo một môi trường mới. Bạn có thể chỉ đ�
 
    - Đối với tùy chọn Azure Data Lake Storage Gen2, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Tên **Vùng chứa** không thể thay đổi và sẽ là "customerinsights".
    
-   - Nếu bạn muốn sử dụng [dự đoán](predictions.md), nhập URL phiên bản Common Data Service trong trường **Địa chỉ máy chủ** trong **Sử dụng dự đoán**.
+   - Nếu bạn muốn sử dụng [dự đoán](predictions.md) hoặc định cấu hình tính năng chia sẻ dữ liệu với các ứng dụng và giải pháp dựa trên Microsoft Dataverse, hãy cung cấp URL môi trường Microsoft Dataverse trong mục **Định cấu hình chia sẻ dữ liệu với Microsoft Dataverse và kích hoạt các khả năng bổ sung**. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với Microsoft Dataverse Managed Data Lake.
+
+     > [!NOTE]
+     > - Chia sẻ dữ liệu với Microsoft Dataverse Managed Data Lake hiện không được hỗ trợ khi bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của riêng mình.
+     > - [Dự đoán giá trị bị thiếu trong một thực thể](predictions.md) hiện không được hỗ trợ khi bạn bật chia sẻ dữ liệu với Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Tùy chọn cấu hình để cho phép chia sẻ dữ liệu với Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân đoạn, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Các tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục con tương ứng dựa trên quy trình bạn chạy.
 
@@ -86,7 +93,7 @@ Có hai cách để tạo một môi trường mới. Bạn có thể chỉ đ�
 Các thiết đặt cấu hình sau được sao chép:
 
 - Cấu hình tính năng
-- Nguồn dữ liệu nhập
+- Nguồn dữ liệu được nhập/thu nạp
 - Cấu hình hợp nhất dữ liệu (Bản đồ, kết hợp, hợp nhất)
 - Phân đoạn
 - Biện pháp
@@ -120,11 +127,11 @@ Khi quá trình hợp nhất dữ liệu hoàn tất, hãy chuyển đến **Bi�
 
 Bạn có thể chỉnh sửa một số thông tin của các môi trường hiện có.
 
-1. Truy cập **Quản trị viên** > **Hệ thống** > **Giới thiệu**.
+1.  Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng.
 
-2. Chọn **Chỉnh sửa**.
+2.  Chọn biểu tượng **Chỉnh sửa**.
 
-3. Bạn có thể cập nhật **Tên hiển thị** của môi trường nhưng không thể thay đổi **Vùng** hoặc **Loại**.
+3. Trong hộp **Chỉnh sửa môi trường**, bạn có thể cập nhật **Tên hiển thị** của môi trường, nhưng bạn không thể thay đổi **Khu vực** hoặc **Kiểu**.
 
 4. Nếu chọn lưu trữ dữ liệu của môi trường trong Azure Data Lake Storage thế hệ 2 thì bạn có thể thay đổi **Mã tài khoản**. Tuy nhiên, bạn không thể thay đổi **Tên tài khoản** hoặc tên **Vùng chứa** .
 
@@ -132,19 +139,27 @@ Bạn có thể chỉnh sửa một số thông tin của các môi trường hi
 
 ## <a name="reset-an-existing-environment"></a>Đặt lại môi trường hiện có
 
-Bạn có thể đặt lại một môi trường về trạng thái trống nếu bạn muốn xóa tất cả các cấu hình và xóa dữ liệu đã nhập.
+Là quản trị viên, bạn có thể đặt lại một môi trường về trạng thái trống nếu bạn muốn xóa tất cả các cấu hình và xóa dữ liệu đã nhập.
 
-1.  Truy cập **Quản trị viên** > **Hệ thống** > **Giới thiệu**.
+1.  Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng. 
 
-2.  Chọn **Đặt lại**. 
+2.  Chọn môi trường bạn muốn đặt lại và chọn dấu chấm lửng **...**. 
 
-3.  Để xác nhận việc xóa, hãy nhập tên môi trường và chọn **Đặt lại**.
+3. Chọn tùy chọn **Đặt lại**. 
+
+4.  Để xác nhận việc xóa, hãy nhập tên môi trường và chọn **Đặt lại**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Xóa môi trường hiện có (chỉ dành cho quản trị viên)
+
+Với tư cách là quản trị viên, bạn có thể xóa môi trường do mình quản lý.
+
+1.  Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng.
+
+2.  Chọn môi trường bạn muốn đặt lại và chọn dấu chấm lửng **...**. 
+
+3. Chọn tùy chọn **Xóa**. 
+
+4.  Để xác nhận thao tác xóa, hãy nhập tên môi trường rồi chọn **Xóa**.
 
 
-## <a name="delete-an-existing-environment"></a>Xóa môi trường hiện có
-
-1. Truy cập **Quản trị viên** > **Hệ thống** > **Giới thiệu**.
-
-1. Chọn **Xóa**.
-
-1. Để xác nhận thao tác xóa, hãy nhập tên môi trường rồi chọn **Xóa**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

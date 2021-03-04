@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4654006"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269882"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ đăng ký (bản xem trước)
 
@@ -46,10 +46,9 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
    - **DateOfBirth**: Ngày
    - **CreatedOn**: Ngày/Giờ/Vùng
 
-   [!div class="mx-imgBorder"]
-   ![Chuyển đổi DoB thành Ngày](media/ecommerce-dob-date.PNG "chuyển đổi ngày sinh thành ngày")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Chuyển đổi ngày sinh thành ngày.":::
 
-1. Trong trường "Tên" ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommerceContacts**.
+1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommerceContacts**
 
 1. Lưu nguồn dữ liệu.
 
@@ -67,7 +66,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
    - **RewardsPoints**: Số nguyên
    - **CreatedOn**: Ngày/Giờ
 
-1. Trong trường "Tên" ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **loyCustomers**.
+1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **loyCustomers**.
 
 1. Lưu nguồn dữ liệu.
 
@@ -90,7 +89,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
    - **Is_auto_renew**: True/False
    - **RecurringFrequencyInMonths**: Số nguyên
 
-1. Trong trường "Tên" ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **SubscriptionHistory**.
+1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **SubscriptionHistory**.
 
 1. Lưu nguồn dữ liệu.
 
@@ -230,3 +229,6 @@ Bạn có thể tạo một phân khúc mới dựa trên thực thể được 
 Giờ đây, bạn có một phân khúc được cập nhật động để xác định những khách hàng có nguy cơ rời bỏ cao cho doanh nghiệp đăng ký này.
 
 Để biết thêm thông tin, hãy xem [Tạo và quản lý phân khúc](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

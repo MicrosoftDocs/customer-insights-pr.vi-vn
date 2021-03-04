@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407320"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268712"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR
 
@@ -75,3 +75,6 @@ Quản trị viên đối tượng thuê có thể tuân theo các bước sau �
 1. Gửi email tới D365CI@microsoft.com cho biết địa chỉ email của người dùng trong yêu cầu. Nhóm Customer Insights sẽ gửi email đến địa chỉ email quản trị viên đối tượng thuê đã đăng ký, yêu cầu xác nhận để xuất dữ liệu.
 2. Hãy xác minh để xuất dữ liệu cho người dùng yêu cầu.
 3. Nhận dữ liệu được xuất thông qua địa chỉ email quản trị viên đối tượng thuê.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

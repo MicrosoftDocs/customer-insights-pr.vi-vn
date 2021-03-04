@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667255"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267458"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
@@ -44,13 +44,13 @@ Nguồn dữ liệu của bạn bao gồm các thực thể có dữ liệu giao
 
 1. Trong phần **Thiết lập mối quan hệ**, đặt cấu hình chi tiết để kết nối dữ liệu hoạt động của bạn với khách hàng tương ứng.
 
-   > [!div class="mx-imgBorder"]
-   > ![Xác định mối quan hệ của thực thể](media/activities-entities-define.png "Xác định mối quan hệ của thực thể")
-
     - **Trường thực thể hoạt động**: Chọn trường trong thực thể hoạt động của bạn sẽ được sử dụng để thiết lập mối quan hệ với thực thể khác.
     - **Thực thể khách hàng**: Chọn thực thể khách hàng nguồn tương ứng mà thực thể hoạt động của bạn sẽ có mối quan hệ. Bạn chỉ có thể liên quan đến những thực thể khách hàng nguồn được sử dụng trong quy trình hợp nhất dữ liệu.
     - **Trường thực thể khách hàng**: Trường này hiển thị khóa chính của thực thể khách hàng nguồn như được chọn trong quy trình bản đồ. Trường khóa chính này trong thực thể khách hàng nguồn được sử dụng để thiết lập mối quan hệ với thực thể hoạt động.
     - **Tên**: Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn được chọn đã tồn tại, thì tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ như vậy tồn tại, một mối quan hệ mới sẽ được tạo ra với tên được cung cấp ở đây.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Xác định mối quan hệ của thực thể](media/activities-entities-define.png "Xác định mối quan hệ của thực thể")
 
 1. Chọn **Lưu** để áp dụng thay đổi.
 
@@ -82,3 +82,6 @@ Nguồn dữ liệu của bạn bao gồm các thực thể có dữ liệu giao
 3. Chọn biểu tượng **Xóa**.
 
 4. Xác nhận tác vụ xóa của bạn.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,16 +4,16 @@ description: Làm việc với các mô hình tùy chỉnh của Azure Machine L
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668929"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267260"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
 
@@ -46,15 +46,15 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 1. Chọn dịch vụ web Machine Learning Studio (cổ điển) hoặc quy trình Azure Machine Learning trong menu thả xuống **Dịch vụ web chứa mô hình của bạn**. Sau đó, chọn **Tiếp**.
    - Tìm hiểu thêm về [phát hành một dịch vụ web trong Machine Learning Studio (cổ điển)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Tìm hiểu thêm về [phát hành một quy trình trong Azure Machine Learning bằng cách sử dụng trình thiết kế](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) hoặc [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Quy trình của bạn phải được thiết kế theo [điểm cuối quy trình](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Tìm hiểu thêm về [phát hành một quy trình trong Azure Machine Learning bằng cách sử dụng trình thiết kế](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) hoặc [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Quy trình của bạn phải được thiết kế theo [điểm cuối quy trình](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Đối với mỗi **Đầu vào dịch vụ web**, chọn **Thực thể** phù hợp từ thông tin chi tiết về đối tượng và chọn **Tiếp theo**.
+   > [!NOTE]
+   > Quy trình làm việc của mô hình tùy chỉnh sẽ áp dụng phương pháp phỏng đoán để ánh xạ các trường đầu vào của dịch vụ web với các thuộc tính thực thể dựa trên tên và kiểu dữ liệu của trường. Bạn sẽ thấy lỗi nếu không thể ánh xạ trường dịch vụ web tới một thực thể.
 
    > [!div class="mx-imgBorder"]
    > ![Đặt cấu hình cho quy trình](media/intelligence-screen2-updated.png "Đặt cấu hình cho quy trình")
-
+   
 1. Trong bước **Tham số đầu ra mô hình**, đặt các thuộc tính sau:
    - Machine Learning Studio (cổ điển)
       1. Nhập **Tên thực thể** đầu ra mà bạn muốn kết quả đầu ra của dịch vụ web chuyển vào.
@@ -112,3 +112,6 @@ Quy trình làm việc cũng chạy tự động với mỗi lần làm mới th
 1. Chọn **Xóa** rồi xác nhận tác vụ xóa của bạn.
 
 Quy trình của bạn sẽ bị xóa. [Thực thể](entities.md) đã được tạo khi bạn tạo quy trình sẽ vẫn tồn tại, và bạn có thể xem thực thể trên trang **Thực thể**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

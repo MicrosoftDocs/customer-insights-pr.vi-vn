@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407294"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477114"
 ---
 # <a name="connector-for-power-bi-preview"></a>Trình kết nối cho Power BI (xem trước)
 
@@ -31,7 +31,7 @@ Tạo trực quan hóa cho dữ liệu của bạn với Power BI Desktop. Tạo
 
 1. Chọn **Xem thêm** và tìm kiếm **Dynamics 365 Customer Insights**
 
-1. Chọn kết quả và chọn **Kết nối**.
+1. Chọn **Kết nối**.
 
 1. **Đăng nhập** bằng cùng tài khoản tổ chức bạn dùng cho Customer Insights rồi chọn **Kết nối**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Trình kết nối Customer Insights cho Power BI được thiết kế để ho
 ### <a name="work-with-a-subset-of-data"></a>Làm việc với một tập hợp con dữ liệu
 
 Cân nhắc làm việc với một tập hợp con dữ liệu của bạn. Ví dụ: bạn có thể tạo [phân đoạn](segments.md) thay vì xuất tất cả hồ sơ khách hàng sang Power BI.
+
+## <a name="troubleshooting"></a>Khắc phục sự cố
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Môi trường Customer Insights không hiển thị trong Power BI
+
+Môi trường có nhiều hơn một [mối quan hệ](relationships.md) được xác định giữa hai thực thể giống nhau trong thông tin chi tiết về đối tượng sẽ không có sẵn trong trình kết nối Power BI.
+
+Bạn có thể xác định và loại bỏ các mối quan hệ trùng lặp.
+
+1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Các mối quan hệ** trên môi trường bạn đang thiếu trong Power BI.
+2. Xác định các mối quan hệ trùng lặp:
+   - Kiểm tra xem có nhiều hơn một mối quan hệ được xác định giữa hai thực thể giống nhau hay không.
+   - Kiểm tra xem có mối quan hệ nào được tạo ra giữa hai thực thể đều được bao gồm trong quá trình hợp nhất hay không. Có một mối quan hệ ngầm được xác định giữa tất cả các thực thể có trong quá trình hợp nhất.
+3. Loại bỏ bất kỳ mối quan hệ trùng lặp nào được xác định.
+
+Sau khi loại bỏ các mối quan hệ trùng lặp, hãy thử định cấu hình trình kết nối Power BI lần nữa. Môi trường sẽ có sẵn ngay.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

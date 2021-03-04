@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c25cfbf3808fc1534b54d2d834f1c63ff4c9fe0a
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: 6b73aa93ec1a98f2b8d20d02e88bc6304f887078
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667120"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269494"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Làm phong phú hồ sơ khách hàng (Xem trước)
 
@@ -51,3 +51,6 @@ Chọn nội dung phong phú để xem các tùy chọn có sẵn. Ngoài ra, b�
 - **Xóa** nội dung tăng cường.
 
 Bạn có thể chạy hoặc hủy kích hoạt nhiều nội dung tăng cường cùng một lúc bằng cách chọn trong danh sách. Xem và chỉnh sửa các tùy chọn hiện không thực hiện được dưới dạng hành động hàng loạt và tính năng này chỉ hoạt động với một nội dung phong phú mỗi lần.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

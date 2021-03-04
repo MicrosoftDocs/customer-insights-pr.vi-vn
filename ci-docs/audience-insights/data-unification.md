@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407297"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269678"
 ---
-# <a name="data-unification"></a>Thống nhất dữ liệu
+# <a name="data-unification-overview"></a>Tổng quan về hợp nhất dữ liệu
 
 Sau khi [thiết lập các nguồn dữ liệu](data-sources.md), bạn có thể thống nhất dữ liệu. Thống nhất dữ liệu bao gồm ba bước: **Ánh xạ**, **Đối sánh**, và **Hợp nhất**.
 
@@ -31,3 +31,6 @@ Sau khi hoàn thành hợp nhất dữ liệu, bạn có thể tùy chọn
 - [thiết lập mối quan hệ giữa các thực thể](relationships.md) để tạo các phân đoạn phức tạp
 - [làm phong phú dữ liệu của bạn](enrichment-hub.md) để có được nhiều thông tin chi tiết hơn về khách hàng
 - [xác định các hoạt động](activities.md) từ một số thuộc tính đã nhập
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

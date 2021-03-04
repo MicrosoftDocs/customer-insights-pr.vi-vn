@@ -1,30 +1,26 @@
 ---
-title: Khả năng thông tin chi tiết về đối tượng
-description: Tổng quan về khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
+description: Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407323"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477021"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
 
-Trải nghiệm khách hàng là cốt lõi của mọi tham vọng chuyển đổi kỹ thuật số của tổ chức. Để cạnh tranh trong thị trường ngày nay, các tổ chức phải xây dựng mối quan hệ có ý nghĩa với khách hàng của họ trên một mức độ cá nhân. Khả năng cá nhân hóa hiệu quả ở quy mô lớn yêu cầu một cái nhìn toàn diện, thống nhất về khách hàng.
+Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khách hàng của mình. Kết nối dữ liệu từ nhiều nguồn giao dịch, hành vi và quan sát khác nhau để tạo ra một góc nhìn toàn diện về khách hàng. Sử dụng những hiểu biết này để thúc đẩy trải nghiệm và quy trình định hướng khách hàng. Hợp nhất và hiểu dữ liệu khách hàng và khai thác dữ liệu đó để có những hiểu biết và hành động thông minh.
 
-Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khách hàng của mình. Kết nối dữ liệu từ nhiều nguồn giao dịch, hành vi và quan sát khác nhau để tạo ra một góc nhìn toàn diện về khách hàng. Sử dụng những hiểu biết này để thúc đẩy trải nghiệm và quy trình định hướng khách hàng.
-
-**Hợp nhất và hiểu dữ liệu khách hàng và khai thác dữ liệu đó để có những hiểu biết và hành động thông minh.**
-
-Với thông tin chi tiết về đối tượng, tổ chức có thể:  
+## <a name="main-benefits"></a>Lợi ích chính 
 
 - **Loại bỏ các rào cản dữ liệu và thống nhất dữ liệu khách hàng**
 
@@ -33,15 +29,15 @@ Với thông tin chi tiết về đối tượng, tổ chức có thể:
 
 - **Cung cấp thông tin phong phú với thông tin đối tượng chứa trong Microsoft graph**
 
-  - Xây dựng hồ sơ khách hàng phong phú hơn bằng cách kết hợp thông tin đối tượng chứa trong Microsoft Graph.  
+  - Xây dựng hồ sơ khách hàng phong phú hơn bằng cách [kết hợp thông tin đối tượng chứa trong Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Tạo sức mạnh cho quy trình kinh doanh và trải nghiệm khách hàng theo cá nhân**
 
   - Thúc đẩy tương tác cá nhân trên các kênh — trao quyền cho các chuyên gia tiếp thị, bán hàng và dịch vụ với Customer Insights theo ngữ cảnh, sẵn dùng và thẻ hồ sơ khách hàng phù hợp được truyền vào các ứng dụng kinh doanh mà họ đã sử dụng hàng ngày
   - Tự động hóa trải nghiệm và quy trình của khách hàng dựa trên cấu hình tùy chỉnh, các biện pháp kinh doanh và phân đoạn.
-  - Kích hoạt và mở rộng kinh nghiệm theo ngành nghề kinh doanh được xây dựng trên Microsoft Power Platform. Nhanh chóng xây dựng các ứng dụng với thông tin chi tiết được nhúng bằng cách sử dụng phương pháp mã thấp mạnh mẽ từ PowerApps.  
+  - Kích hoạt và mở rộng kinh nghiệm theo ngành nghề kinh doanh được xây dựng trên [Microsoft Power Platform](https://powerplatform.microsoft.com/). Nhanh chóng xây dựng các ứng dụng với thông tin chi tiết được nhúng bằng cách sử dụng phương pháp mã thấp mạnh mẽ từ PowerApps.  
 
-Thông tin chi tiết về đối tượng sẽ bao gồm các khả năng cho người dùng chính sau:
+## <a name="key-audiences"></a>Đối tượng chính
 
 - **Chuyên gia phân tích dữ liệu/quản trị viên:**
 
@@ -58,5 +54,8 @@ Thông tin chi tiết về đối tượng sẽ bao gồm các khả năng cho n
 
 - **Nhà phân tích kinh doanh:**
 
-  - Xây dựng hồ sơ tùy chỉnh, xác định các biện pháp và tạo phân đoạn để có được một cái nhìn 360 độ của khách hàng của bạn, cụ thể cho tổ chức của bạn.  
-  - Sử dụng các trình kết nối có sẵn cho PowerApps hoặc Microsoft Power BI hoặc các API để cung cấp thông tin chi tiết về các ứng dụng kinh doanh của bạn hoặc các giải pháp BI.  
+  - Xây dựng hồ sơ tùy chỉnh, xác định các biện pháp, tạo phân đoạn và hưởng lợi từ phân tích dự đoán để có được một cái nhìn 360 độ về khách hàng của bạn, cụ thể cho tổ chức của bạn.  
+  - Sử dụng các trình kết nối sẵn dùng cho một số ứng dụng hoặc API của Microsoft và bên thứ ba để xử lý thêm thông tin chi tiết.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

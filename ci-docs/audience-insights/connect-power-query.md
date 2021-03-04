@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407313"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267802"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với nguồn dữ liệu Power Query
 
@@ -28,7 +28,10 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
 
 1. Chọn phương thức **Nhập dữ liệu** và chọn **Tiếp theo**.
 
-1. Cung cấp một **Tên** cho nguồn dữ liệu và chọn **Tiếp theo** để tạo nguồn dữ liệu.
+1. Cung cấp một **Tên** cho nguồn dữ liệu và chọn **Tiếp theo** để tạo nguồn dữ liệu. Hướng dẫn về tên: 
+   - Bắt đầu bằng một chữ cái.
+   - Chỉ sử dụng chữ cái và số. Không được phép nhập ký tự đặc biệt và khoảng trống.
+   - Sử dụng từ 3 đến 64 ký tự.
 
 1. Chọn một trong các [trình kết nối có sẵn](#available-power-query-data-sources). Đối với ví dụ này, chúng tôi chọn trình kết nối **Văn bản/CSV**.
 
@@ -77,3 +80,6 @@ Các trình kết nối có dấu kiểm trong cột **Customer Insights (Luồn
 3. Áp dụng các thay đổi và chuyển đổi của bạn trong hộp thoại **Power Query - Chỉnh sửa truy vấn** như được mô tả trong phần [Tạo nguồn dữ liệu mới](#create-a-new-data-source).
 
 4. Chọn **Lưu** trong Power Query sau khi hoàn tất các chỉnh sửa để lưu các thay đổi của bạn.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

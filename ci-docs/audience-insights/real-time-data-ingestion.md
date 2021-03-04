@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689201"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270306"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Nhập dữ liệu trong thời gian thực (xem trước)
 
@@ -83,6 +83,7 @@ Thông tin chi tiết về API này, bao gồm các thông số và phản hồi
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Tìm hiểu cách sử dụng trong thời gian thực với phương pháp đo từ xa
 
-Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập vào phương pháp đo từ xa trong thời gian thực](system.md#api-usage-tab) bằng cách chuyển đến **Quản trị viên** > **Hệ thống** > **Sử dụng API**. Trong bảng **Hoạt động**, các hàng cho các hoạt động API sử dụng các phương thức thời gian thực chứa một nút để xem việc sử dụng API trong thời gian thực. Nút được trực quan hóa bằng biểu tượng ống nhòm. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.
+Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập máy đo từ xa thời gian thực](system.md#api-usage-tab). 
 
-Sử dụng bộ chọn **Nhóm bởi** để chọn cách trình bày tốt nhất các tương tác trong thời gian thực trên dòng thời gian từ 24 giờ qua đến 30 ngày qua. Bạn có thể nhóm dữ liệu theo phương pháp API, tên đủ điều kiện của thực thể (thực thể được nhập), tạo bởi (nguồn sự kiện), kết quả (thành công hay thất bại) hoặc mã lỗi. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

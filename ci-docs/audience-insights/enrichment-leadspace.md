@@ -5,16 +5,16 @@ ms.date: 11/24/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1b5c6e46e8e424df83e855d81fc4dd7ecb394e3c
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 12eed91a7ca4ef7fde0d53cca4a1dfd398b4634f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668749"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269448"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Làm phong phú hồ sơ công ty bằng Leadspace (xem trước)
 
@@ -38,7 +38,11 @@ Leadspace là công ty khoa học dữ liệu cung cấp Nền tảng dữ liệ
 
 1. Chọn **Bắt đầu** và sau đó nhập một **Mã thông báo Leadspace** hiện hoạt (khóa vĩnh viễn). Xem lại và đồng ý với **Quyền riêng tư và tuân thủ dữ liệu** bằng cách đánh dấu ô **Tôi đồng ý**. Xác nhận cả hai đầu vào bằng cách chọn **Kết nối với Leadspace**.
 
-1. Chọn **Dữ liệu bản đồ** và xác định trường nào từ hồ sơ hợp nhất của bạn sẽ được sử dụng để tìm kiếm dữ liệu công ty phù hợp từ Leadspace. Trường **Tên công ty** là bắt buộc. Để có độ chính xác so khớp cao hơn, có thể thêm tối đa 2 trường khác, **Trang web công ty** và **Vị trí công ty**.
+1. Chọn **Ánh xạ dữ liệu** và chọn tập dữ liệu bạn muốn làm phong phú bằng dữ liệu công ty từ Leadspace. Bạn có thể chọn thực thể *khách hàng* để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+
+   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Chọn giữa hồ sơ khách hàng và làm phong phú phân khúc.":::
+
+1. Nhấp vào **Tiếp theo** và xác định trường trong hồ sơ hợp nhất sẽ được dùng để tìm kiếm dữ liệu công ty phù hợp từ Leadspace. Trường **Tên công ty** là bắt buộc. Để có độ chính xác so khớp cao hơn, có thể thêm tối đa 2 trường khác, **Trang web công ty** và **Vị trí công ty**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Ngăn ánh xạ trường Leadspace.":::
    
@@ -62,3 +66,6 @@ Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Leadspace, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Leadspace đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tính năng tăng cường này bất kỳ lúc nào để ngừng sử dụng chức năng này.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

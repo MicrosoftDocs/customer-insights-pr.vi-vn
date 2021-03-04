@@ -4,17 +4,17 @@ description: So khớp các thực thể để tạo hồ sơ khách hàng hợp
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407330"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267504"
 ---
 # <a name="match-entities"></a>So khớp thực thể
 
@@ -22,7 +22,7 @@ Sau khi hoàn thành giai đoạn ánh xạ, bạn đã sẵn sàng để so kh�
 
 ## <a name="specify-the-match-order"></a>Chỉ định thứ tự so khớp
 
-Đi đến **Hợp nhất** > **So khớp** và chọn **Đặt thứ tự** để bắt đầu giai đoạn so khớp.
+Truy cập **Dữ liệu** > **Unify** > **So khớp** rồi chọn **Đặt thứ tự** để bắt đầu giai đoạn so khớp.
 
 Mỗi lần so khớp sẽ hợp nhất hai hoặc nhiều thực thể thành một thực thể, trong khi vẫn duy trì từng hồ sơ khách hàng duy nhất. Trong ví dụ sau, chúng tôi đã chọn 3 thực thể: **ContactCSV: TestData** làm thực thể **Chính**, **WebAccountCSV: TestData** làm **Thực thể 2** và **CallRecordSmall: TestData** làm **Thực thể 3**. Sơ đồ phía trên các lựa chọn minh họa cách thực hiện thứ tự so khớp.
 
@@ -136,7 +136,7 @@ Sau khi xác định được bản ghi chống trùng lặp, bản ghi đó s�
 
 1. Chạy quy trình so khớp hiện sẽ nhóm các bản ghi dựa trên các điều kiện được xác định trong quy tắc chống trùng lặp. Sau khi nhóm các bản ghi, chính sách trộn được áp dụng để xác định bản ghi chiến thắng.
 
-1. Bản ghi người chiến thắng này sau đó được chuyển cho so khớp thực thể chéo.
+1. Sau đó, hồ sơ chiến thắng này được chuyển cho quy trình đối sánh giữa các thực thể, cùng với hồ sơ không chiến thắng (ví dụ: ID thay thế) để cải thiện chất lượng đối sánh.
 
 1. Bất kỳ quy tắc so khớp tùy chỉnh nào được xác định luôn so khớp và không bao giờ so khớp sẽ được ưu tiên hơn quy tắc chống trùng lặp. Nếu quy tắc chống trùng lặp xác định các bản ghi phù hợp và quy tắc so khớp tùy chỉnh được đặt để không bao giờ khớp với các bản ghi đó, thì hai bản ghi này sẽ không được khớp.
 
@@ -157,6 +157,17 @@ Quá trình khớp đầu tiên sẽ tạo ra một thực thể chính hợp nh
 
 > [!TIP]
 > Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
+
+## <a name="deduplication-output-as-an-entity"></a>Đầu ra khử trùng lặp dưới dạng một thực thể
+Ngoài thực thể chính hợp nhất được tạo trong quy trình đối sánh giữa các thực thể, quá trình loại bỏ trùng lặp cũng tạo ra một thực thể mới cho mọi thực thể từ yêu cầu đối sánh để xác định các bản ghi được loại bỏ trùng lặp. Có thể tìm thấy các thực thể này cùng với **ConflationMatchPairs:CustomerInsights** trong mục **Hệ thống** trong trang **Thực thể** với tên **Deduplication_Datasource_Entity**.
+
+Thực thể đầu ra loại bỏ trùng lặp chứa thông tin sau:
+- ID/Khóa
+  - Trường khóa chính và trường ID thay thế của nó. Trường ID thay thế bao gồm tất cả các ID thay thế được xác định cho một bản ghi.
+  - Trường Deduplication_GroupId hiển thị nhóm hoặc cụm được xác định trong một thực thể sẽ nhóm tất cả các bản ghi tương tự dựa trên các trường loại bỏ trùng lặp được chỉ định. Tính năng này được sử dụng cho mục đích xử lý hệ thống. Nếu không có quy tắc khử trùng lặp thủ công nào được chỉ định và áp dụng quy tắc khử trùng lặp do hệ thống xác định, bạn có thể không tìm thấy trường này trong thực thể đầu ra khử trùng lặp.
+  - Deduplication_WinnerId: Trường này chứa ID chiến thắng từ các nhóm hoặc cụm đã xác định. Nếu Deduplication_WinnerId giống với giá trị Khóa chính của một bản ghi, điều đó có nghĩa là bản ghi đó là bản ghi chiến thắng.
+- Các trường được sử dụng để xác định các quy tắc khử trùng lặp.
+- Các trường Quy tắc và Điểm để biểu thị quy tắc khử trùng lặp đã được áp dụng và điểm mà thuật toán đối sánh trả về.
 
 ## <a name="review-and-validate-your-matches"></a>Xem lại và xác thực các so khớp của bạn
 
@@ -200,6 +211,11 @@ Tăng chất lượng bằng cách cấu hình lại một số thông số so k
   > [!div class="mx-imgBorder"]
   > ![Sao chép quy tắc](media/configure-data-duplicate-rule.png "Sao chép quy tắc")
 
+- **Hủy kích hoạt quy tắc** để giữ lại quy tắc đối sánh trong khi loại trừ nó khỏi quá trình đối sánh.
+
+  > [!div class="mx-imgBorder"]
+  > ![Hủy kích hoạt quy tắc](media/configure-data-deactivate-rule.png "Hủy kích hoạt quy tắc")
+
 - **Chỉnh sửa quy tắc của bạn** bằng cách chọn biểu tượng **Chỉnh sửa**. Bạn có thể áp dụng các thay đổi sau:
 
   - Thay đổi thuộc tính cho một điều kiện: Chọn các thuộc tính mới trong hàng điều kiện cụ thể.
@@ -229,6 +245,8 @@ Bạn có thể chỉ định các điều kiện mà hồ sơ phải luôn kh�
     - Entity2Key: 34567
 
    Cùng một tệp mẫu có thể chỉ định các bản ghi so khớp tùy chỉnh từ nhiều thực thể.
+   
+   Nếu bạn muốn chỉ định quá trình đối sánh tùy chỉnh để loại bỏ trùng lặp trên một thực thể, hãy cung cấp cùng một thực thể cho cả Entity1 và Entity2 rồi đặt các giá trị khóa chính khác nhau.
 
 5. Sau khi thêm tất cả các phần ghi đè bạn muốn áp dụng, hãy lưu tệp mẫu.
 
@@ -250,3 +268,6 @@ Bạn có thể chỉ định các điều kiện mà hồ sơ phải luôn kh�
 ## <a name="next-step"></a>Bước tiếp theo
 
 Sau khi hoàn thành quy trình đối sánh cho ít nhất một cặp đối sánh, bạn có thể giải quyết các mâu thuẫn có thể có trong dữ liệu của mình bằng cách tham khảo chủ đề [**Hợp nhất**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

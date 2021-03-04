@@ -1,20 +1,20 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Dynamics 365 Marketing
 description: Tìm hiểu cách đặt cấu hình kết nối với Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643799"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269080"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Tác nhân kết nối dành cho Dynamics 365 Marketing (xem trước)
 
@@ -24,7 +24,10 @@ Dùng [các phân đoạn](segments.md) để tạo chiến dịch và liên h�
 
 ## <a name="prerequisite"></a>Điều kiện tiên quyết
 
-Bản ghi liên hệ [từ Dynamics 365 Marketing được nhập Common Data Service](connect-power-query.md).
+- Hồ sơ liên hệ phải có trong Dynamics 365 Marketing trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Marketing. Đọc thêm về cách nhập liên hệ vào [Dynamics 365 Marketing bằng Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Việc xuất các phân đoạn từ thông tin chi tiết về đối tượng sang Marketing sẽ không tạo hồ sơ liên hệ mới trong các phiên bản Marketing. Các bản ghi liên hệ từ Marketing phải được nhập vào thông tin chi tiết về đối tượng và được sử dụng làm nguồn dữ liệu. Chúng cũng cần được đưa vào thực thể Khách hàng hợp nhất để ánh xạ ID khách hàng với ID liên hệ trước khi có thể xuất phân đoạn.
 
 ## <a name="configure-the-connector-for-marketing"></a>Đặt cấu hình tác nhân kết nối dành cho Marketing
 
@@ -49,3 +52,6 @@ Bản ghi liên hệ [từ Dynamics 365 Marketing được nhập Common Data Se
 ## <a name="export-the-data"></a>Xuất dữ liệu
 
 Bạn có thể [xuất dữ liệu theo nhu cầu](export-destinations.md). Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

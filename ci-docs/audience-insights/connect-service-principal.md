@@ -1,20 +1,20 @@
 ---
 title: Kết nối với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính
-description: sử dụng dịch vụ chính Azure cho thông tin chi tiết về đối tượng để kết nối với kho dữ liệu của riêng bạn khi đính kèm với thông tin chi tiết về đối tượng.
-ms.date: 11/24/2020
+description: Dùng dịch vụ chính Azure cho thông tin chi tiết về đối tượng để kết nối với kho dữ liệu của riêng bạn khi đính kèm với thông tin chi tiết về đối tượng.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644114"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267748"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Kết nối với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure để biết thông tin chi tiết về đối tượng
 
@@ -22,7 +22,9 @@ Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các
 
 Bạn có thể sử dụng dịch vụ chính để [thêm hoặc chỉnh sửa an toàn thư mục Common Data Model dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo mới hoặc cập nhật môi trường hiện có](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Bạn cần quyền quản trị cho đăng ký Azure của mình để tạo dịch vụ chính.
+> [!IMPORTANT]
+> - Tài khoản lưu trữ Azure Data Lake thế hệ 2 dự định sử dụng dịch vụ chính phải [Đã bật Không gian Tên phân cấp (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Bạn cần quyền quản trị cho đăng ký Azure của mình để tạo dịch vụ chính.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Tạo dịch vụ chính Azure để có thông tin chi tiết về đối tượng
 
@@ -83,7 +85,7 @@ Có thể mất đến 15 phút để các thay đổi được thực hiện.
 
 Thực hiện theo các bước dưới đây để cung cấp thông tin cần thiết về phương pháp đã chọn.
 
-### <a name="resounce-based-storage-account-connection"></a>Kết nối tài khoản lưu trữ dựa trên tài nguyên
+### <a name="resource-based-storage-account-connection"></a>Kết nối tài khoản lưu trữ dựa trên tài nguyên
 
 1. Đi tới [Cổng quản trị Azure](https://portal.azure.com), đăng nhập vào gói đăng ký của bạn và mở tài khoản lưu trữ.
 
@@ -108,7 +110,8 @@ Thực hiện theo các bước dưới đây để cung cấp thông tin cần 
 1. Xem lại **Đăng ký**, **Nhóm tài nguyên** và **Tên** của tài khoản lưu trữ để đảm bảo bạn chọn đúng giá trị trong thông tin chi tiết về đối tượng.
 
 1. Trong thông tin chi tiết về đối tượng, hãy chọn giá trị hoặc cho các trường tương ứng khi đính kèm tài khoản lưu trữ.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Nhập thông tin ID tài nguyên tài khoản lưu trữ.":::
    
 1. Tiếp tục với các bước còn lại trong thông tin chi tiết về đối tượng để đính kèm tài khoản lưu trữ.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

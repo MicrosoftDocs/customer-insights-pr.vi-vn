@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643889"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477159"
 ---
-# <a name="export-destinations-preview"></a>Nơi xuất đích (xem trước)
+# <a name="export-destinations-preview-overview"></a>Tổng quan về nơi xuất đích (bản xem trước)
 
 Trang **Đích xuất** cho biết tất cả các vị trí bạn đã thiết lập để xuất dữ liệu sang đó. Bạn cũng có thể thêm điểm đến mới để xuất. Ngoài ra, nó hiển thị các tùy chọn xuất hiện có sẵn. Nhận tổng quan nhanh, mô tả và tìm hiểu những gì bạn có thể làm với mỗi tùy chọn mở rộng. Xuất hồ sơ, số liệu đo lường và phân khúc thống nhất cho các ứng dụng được hỗ trợ phù hợp với doanh nghiệp của bạn.
 
@@ -27,10 +27,13 @@ Chuyển đến **Quản trị** > **Vị trí xuất dữ liệu** để tìm c
 - [Trình kết nối Power Automate](export-power-automate.md)
 - [Trình kết nối Power Apps](export-power-apps.md)
 - [Trình kết nối Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Lưu trữ Azure Blob](export-azure-blob-storage.md)
+- [Azure Data Lake Storage thế hệ 2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Trình kết nối LiveRamp&reg;](export-liveramp.md)
 - [Bot dành cho Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Sau khi đặt cấu hình tác nhân kết nối cho đích xuất, thì mỗi 
 2. Chọn **Xóa** trong menu thả xuống.
 
 3. Xác nhận việc xóa bằng cách chọn **Xóa** trên màn hình xác nhận.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

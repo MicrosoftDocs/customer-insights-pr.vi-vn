@@ -4,17 +4,17 @@ description: Nhập dữ liệu từ một kho dữ liệu Common Data Service �
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643424"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267840"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Kết nối với dữ liệu trong một kho dữ liệu được quản lý Common Data Service
 
@@ -34,7 +34,10 @@ Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lak
 
 3. Chọn **Kết nối với Common Data Service** rồi chọn **Tiếp theo**.
 
-4. Đặt **Tên** cho nguồn dữ liệu rồi chọn **Tiếp**.
+4. Đặt **Tên** cho nguồn dữ liệu rồi chọn **Tiếp**. Hướng dẫn về tên: 
+   - Bắt đầu bằng một chữ cái.
+   - Chỉ sử dụng chữ cái và số. Không được phép nhập ký tự đặc biệt và khoảng trống.
+   - Sử dụng từ 3 đến 64 ký tự.
 
 5. Cung cấp **Địa chỉ máy chủ** cho tổ chức Common Data Service của bạn rồi chọn **Đăng nhập**.
 
@@ -65,3 +68,6 @@ Cách kết nối với Common Data Service khác, [tạo nguồn dữ liệu m�
 3. Nhấp vào tùy chọn **Chỉnh sửa** trong danh sách.
 
 4. Chọn các thực thể bổ sung từ danh sách các thực thể có sẵn rồi chọn **Lưu**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

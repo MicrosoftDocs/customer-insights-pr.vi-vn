@@ -1,7 +1,7 @@
 ---
 title: Cài đặt và đặt cấu hình phần bổ trợ Thẻ khách hàng
 description: Cài đặt và đặt cấu hình Phần bổ trợ Thẻ Khách hàng cho Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644069"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268070"
 ---
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
 
@@ -28,7 +28,7 @@ Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamic
 - Hồ sơ khách hàng [được nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Common Data Service](connect-power-query.md).
 - Người dùng phần bổ trợ Thẻ khách hàng cần được [thêm làm người dùng](permissions.md) trong thông tin chi tiết về đối tượng.
 - [Khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md).
-- Kiểm soát nhân khẩu học: Các trường nhân khẩu học, chẳng hạn như tuổi hoặc giới tính có sẵn trong hồ sơ khách hàng hợp nhất.
+- Kiểm soát nhân khẩu học: Các trường nhân khẩu học (chẳng hạn như tuổi hoặc giới tính) có sẵn trong hồ sơ khách hàng hợp nhất.
 - Điều khiển tăng cường: Yêu cầu dữ liệu [tăng cường](enrichment-hub.md) hiện hoạt áp dụng cho hồ sơ khách hàng.
 - Kiểm soát thông tin: Yêu cầu có dữ liệu được tạo bằng Azure Machine Learning ([Dự đoán](predictions.md) hoặc [Mô hình khách hàng](custom-models.md))
 - Kiểm soát đo lường: Yêu cầu [các biện pháp được đặt cấu hình](measures.md).
@@ -92,10 +92,26 @@ Có thể mất một chút thời gian để cài đặt giải pháp vào môi
 
 1. Trong hộp thoại **Thuộc tính trường**, bỏ chọn hộp **Hiển thị nhãn trên biểu mẫu**.
 
-1. Chọn tùy chọn **Web** cho điều khiển. Đối với điều khiển Tăng cường, hãy chọn loại tăng cường mà bạn muốn hiển thị bằng cách định cấu hình trường **enrichmentType**. Bạn cần thêm một điều khiển tăng cường riêng cho từng loại tăng cường.
+1. Chọn tùy chọn **Web** cho điều khiển. Đối với điều khiển Tăng cường, hãy chọn loại tăng cường mà bạn muốn hiển thị bằng cách định cấu hình trường **enrichmentType**. Thêm điều khiển làm phong phú riêng biệt cho từng loại làm phong phú.
 
 1. Chọn **Lưu** và **Xuất bản** để xuất bản biểu mẫu liên hệ đã cập nhật.
 
 1. Chuyển đến biểu mẫu liên hệ đã phát hành. Bạn sẽ thấy điều khiển mới được thêm vào. Bạn có thể cần phải đăng nhập trong lần đầu tiên bạn sử dụng.
 
 1. Để tùy chỉnh nội dung bạn muốn hiển thị trên điều khiển tùy chỉnh, hãy chọn nút chỉnh sửa ở góc trên bên phải.
+
+## <a name="upgrade-customer-card-add-in"></a>Nâng cấp phần bổ trợ Thẻ Khách hàng
+Phần bổ trợ Thẻ Khách hàng không tự động nâng cấp. Để nâng cấp lên phiên bản mới nhất, hãy làm theo quy trình này trong ứng dụng Dynamics 365 đã cài đặt Phần bổ trợ.
+
+1. Trong ứng dụng Dynamics 365, hãy chuyển đến **Cài đặt** > **Tùy chỉnh** và chọn **Các giải pháp**.
+
+1. Trong bảng phần bổ trợ, hãy tìm **CustomerInsightsCustomerCard** và chọn hàng.
+
+1. Chọn **Áp dụng nâng cấp giải pháp** trong thanh tác vụ.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nâng cấp giải pháp trong khu vực Tùy chỉnh của ứng dụng Dynamics 365":::
+
+1. Sau khi bắt đầu quá trình nâng cấp, bạn sẽ thấy chỉ báo tải cho đến khi quá trình nâng cấp hoàn tất. Nếu không có phiên bản mới hơn, bản nâng cấp sẽ hiển thị thông báo lỗi.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
