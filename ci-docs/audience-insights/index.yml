@@ -6,16 +6,16 @@ metadata:
   description: Trung tâm trợ giúp có các liên kết chính dành cho thông tin chi tiết về đối tượng.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4407325"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745747"
 landingContent:
 - title: Giới thiệu thông tin chi tiết về đối tượng
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Trang web cộng đồng
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Thu thập nguồn dữ liệu
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Thêm nguồn dữ liệu
-      url: data-sources.md
-    - text: Làm mới gia tăng
-      url: incremental-refresh-data-sources.md
-    - text: Hiểu rõ các thực thể
-      url: entities.md
 - title: Hợp nhất dữ liệu
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Bản đồ
-      url: map-entities.md
-    - text: So khớp
-      url: match-entities.md
-    - text: Hợp nhất
-      url: merge-entities.md
-- title: Tinh chỉnh hồ sơ khách hàng
+    - text: Tổng quan về nguồn dữ liệu
+      url: data-sources.md
+    - text: Tổng quan về thống nhất
+      url: data-unification.md
+    - text: Hiểu rõ các thực thể
+      url: entities.md
+- title: Làm phong phú và tinh chỉnh dữ liệu
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Làm phong phú hồ sơ khách hàng
+      url: enrichment-hub.md
     - text: Đặt cấu hình mối quan hệ
       url: relationships.md
     - text: Liệt kê hoạt động dành cho khách hàng
       url: activities.md
-    - text: Mang theo mô hình học trên máy của riêng bạn
-      url: custom-models.md
+- title: Tải thông tin chuyên sâu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Tạo phân khúc
+      url: segments.md
+    - text: Tạo giá trị đo
+      url: measures.md
+    - text: Hoàn thành dữ liệu với các dự đoán
+      url: predictions.md
 - title: Xuất dữ liệu khách hàng
   linkLists:
   - linkListType: how-to-guide
