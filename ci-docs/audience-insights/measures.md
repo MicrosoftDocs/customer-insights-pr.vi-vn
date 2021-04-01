@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269954"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654758"
 ---
 # <a name="define-and-manage-measures"></a>Xác định và quản lý các biện pháp
 
@@ -72,8 +72,8 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
    1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính. Theo mặc định, thứ nguyên *ID khách hàng* được chọn để tạo *giá trị đo cấp khách hàng*. Bạn có thể xóa thứ nguyên mặc định nếu muốn tạo *giá trị đo cấp doanh nghiệp*.
    1. Chọn **Xong** để thêm các thứ nguyên vào giá trị đo.
 
-1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể Khách hàng, bạn phải chọn một trong những [đường dẫn mối quan hệ thực thể](relationships.md) được xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn.
-   1. Chọn **Tùy chọn dữ liệu** và chọn đường dẫn thực thể sẽ được sử dụng để xác định giá trị đo của bạn.
+1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn. 
+   1. Chọn **Tùy chọn dữ liệu** và chọn đường dẫn thực thể sẽ được sử dụng để xác định giá trị đo của bạn. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
    1. Chọn **Xong** để áp dụng lựa chọn của bạn. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Chọn đường dẫn thực thể cho giá trị đo đó.":::

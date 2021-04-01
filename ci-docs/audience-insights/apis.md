@@ -1,20 +1,20 @@
 ---
 title: Làm việc với API
 description: Sử dụng API và hiểu các giới hạn.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267550"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710486"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
@@ -36,7 +36,7 @@ Bài viết này hướng dẫn bạn truy cập vào các API Customer Insights
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Bật API Customer Insights":::
 
-1. Chọn **Khám phá API** để dùng thử các API.
+1. Chọn **Khám phá API** để [dùng thử các API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Chọn một hoạt động API và chọn **Dùng thử**.
 
@@ -47,6 +47,9 @@ Bài viết này hướng dẫn bạn truy cập vào các API Customer Insights
 1. Cuộn xuống cuối ngăn bên và chọn **Gửi**.
 
 Phản hồi HTTP sẽ sớm xuất hiện bên dưới.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Ảnh động gif hiển thị cách chọn thử nghiệm API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Tạo đăng ký ứng dụng mới trong cổng thông tin Azure
 
@@ -61,6 +64,8 @@ Các bước này giúp bạn bắt đầu sử dụng API Customer Insights tro
 
 1. Trên đăng ký ứng dụng mới, hãy đi tới **Quyền API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Ảnh động gif để đặt quyền API trong đăng ký ứng dụng.":::
+
 1. Chọn **Thêm quyền** và chọn **Customer Insights** trong ngăn bên.
 
 1. Đối với **Loại quyền**, hãy chọn **Quyền được ủy quyền** và chọn quyền **user_impersonation**.
@@ -71,9 +76,11 @@ Các bước này giúp bạn bắt đầu sử dụng API Customer Insights tro
 
 Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng dụng này với Microsoft Authentication Library (MSAL) để nhận mã thông báo mang chuyển để gửi kèm theo yêu cầu của bạn đến API.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Ảnh động gif để cấp sự đồng ý của quản trị viên.":::
+
 Để biết thêm thông tin về MSAL, hãy xem [Tổng quan về Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Để biết thêm thông tin về đăng ký ứng dụng trong Azure, hãy xem [Trải nghiệm đăng ký ứng dụng cổng Azure mới](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Để biết thêm thông tin về đăng ký ứng dụng trong Azure, hãy xem [Trải nghiệm đăng ký ứng dụng cổng Azure mới](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Để biết thông tin về cách sử dụng API thư viện máy khách của chúng tôi, hãy xem [Thư viện máy khách Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 1. Chọn **Cấp quyền của quản trị viên cho...** để hoàn thành đăng ký ứng dụng.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Ảnh động gif để cấp sự đồng ý của quản trị viên.":::
+
 1. Để kết thúc, chúng tôi phải thêm tên đăng ký ứng dụng làm người dùng trong Customer Insights.    
    Mở Customer Insights, đi tới **Quản trị viên** > **Quyền** và chọn **Thêm người dùng**.
 
@@ -108,7 +117,7 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 ## <a name="customer-insights-client-libraries"></a>Thư viện máy khách Customer Insights
 
-Phần này giúp bạn bắt đầu sử dụng các thư viện máy khách có sẵn cho các API Customer Insights.
+Phần này giúp bạn bắt đầu sử dụng các thư viện máy khách có sẵn cho các API Customer Insights. Tất cả mã nguồn thư viện và các ứng dụng mẫu có thể được tìm thấy trên [Trang GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 
 #### <a name="use-the-c-client-library"></a>Sử dụng thư viện máy khách C#
 
-1. Sử dụng [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) để nhận `AccessToken` bằng cách sử dụng [đăng ký ứng dụng Azure](#create-a-new-app-registration-in-the-azure-portal).
+1. Sử dụng [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) để nhận `AccessToken` bằng cách sử dụng [đăng ký ứng dụng Azure](#create-a-new-app-registration-in-the-azure-portal).
 
 1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng `HttpClient` hiện tại với **DefaultRequestHeaders "Authorization"** bổ sung được đặt thành **<access token> mang chuyển** và **Ocp-Apim-Subscription-Key** được đặt thành [**khóa đăng ký** từ môi trường Customer Insights của bạn](#get-started-trying-the-customer-insights-apis).    
    Đặt lại tiêu đề **Ủy quyền** khi thích hợp. Ví dụ: khi mã thông báo hết hạn.
@@ -141,5 +150,12 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 1. Phản hồi sẽ có thể thuộc loại `object` vì phương thức này có thể trả về nhiều loại (ví dụ: `IList<InstanceInfo>` và `ApiErrorResult`). Để kiểm tra loại trả về, bạn có thể truyền an toàn các đối tượng vào các loại phản hồi được chỉ định trên [Trang chi tiết API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) cho hoạt động đó.    
    Nếu cần thêm thông tin về yêu cầu, hãy sử dụng **phương thức thông báo http** để truy cập đối tượng phản hồi thô.
 
+### <a name="nodejs-package"></a>Gói NodeJS
+
+Sử dụng các thư viện máy khách NodeJS có sẵn thông qua NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Gói Python
+
+Sử dụng các thư viện máy khách Python có sẵn thông qua PyPi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

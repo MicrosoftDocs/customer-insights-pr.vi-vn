@@ -7,12 +7,12 @@ metadata:
   ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
+  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4407342"
+  ms.lasthandoff: 03/15/2021
+  ms.locfileid: "5598507"
 title: Tài liệu Dynamics 365 Customer Insights
 summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và kiến thức cơ bản của Customer Insights.
 landingContent:
@@ -23,7 +23,7 @@ landingContent:
     - text: Tổng quan về Customer Insights
       url: overview.md
     - text: Kế hoạch phát hành
-      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
     - text: Truy cập môi trường của bạn
       url: https://home.ci.ai.dynamics.com/
 - title: Bắt đầu với thông tin chi tiết về đối tượng
@@ -53,9 +53,9 @@ landingContent:
     - text: Tạo môi trường mới
       url: audience-insights/home.md
     - text: Tạo hồ sơ khách hàng hợp nhất
-      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+      url: /learn/modules/unified-customer-profile/
     - text: Làm việc với ứng dụng
-      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+      url: /learn/modules/working-with-customer-insights/
 - title: Xuất dữ liệu thông tin chi tiết về đối tượng
   linkLists:
   - linkListType: how-to-guide

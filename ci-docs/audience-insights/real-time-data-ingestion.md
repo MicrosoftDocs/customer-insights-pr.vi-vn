@@ -2,19 +2,19 @@
 title: Nhập dữ liệu thời gian thực và các giới hạn
 description: Thông tin chung về khả năng thời gian thực trong thông tin chi tiết về đối tượng.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270306"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598595"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Nhập dữ liệu trong thời gian thực (xem trước)
 
@@ -54,7 +54,7 @@ API thời gian thực cho phép bạn xuất bản một hoạt động mới t
 
 Có hai cách để kết nối với API thời gian thực:
 
-- [gián tiếp](#connect-via-the-dynamics-365-customer-insights-connector), sử dụng [Dynamics 365 Customer Insights trình kết nối](https://docs.microsoft.com/connectors/customerinsights/)
+- [gián tiếp](#connect-via-the-dynamics-365-customer-insights-connector), sử dụng [Dynamics 365 Customer Insights trình kết nối](/connectors/customerinsights/)
 - [trực tiếp](#connect-directly-to-the-real-time-api), có mã
 
 Cả hai cách đều có chung các điều kiện tiên quyết sau:
@@ -66,13 +66,13 @@ Cả hai cách đều có chung các điều kiện tiên quyết sau:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Kết nối thông qua trình kết nối Dynamics 365 Customer Insights
 
-API thời gian thực có thể nhập dữ liệu từ một trình kết nối Power Platform chuyên dụng, trình kết nối [Dynamics 365 Customer Insights ](https://docs.microsoft.com/connectors/customerinsights/) mà không cần phải viết và triển khai bất kỳ mã nào.    
-Trình kết nối có thể thực hiện các hành động tương tự trong thời gian thực như API. Bạn cần có giấy phép hợp lệ cho các kết nối cao cấp. Để biết thêm thông tin, hãy xem Câu hỏi thường gặp về cấp phép [Power Apps và Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+API thời gian thực có thể nhập dữ liệu từ một trình kết nối Power Platform chuyên dụng, trình kết nối [Dynamics 365 Customer Insights ](/connectors/customerinsights/) mà không cần phải viết và triển khai bất kỳ mã nào.    
+Trình kết nối có thể thực hiện các hành động tương tự trong thời gian thực như API. Bạn cần có giấy phép hợp lệ cho các kết nối cao cấp. Để biết thêm thông tin, hãy xem Câu hỏi thường gặp về cấp phép [Power Apps và Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps và/hoặc Power Automate](https://docs.microsoft.com/connectors/)
-- Ứng dụng Logic [Azure](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps và/hoặc Power Automate](/connectors/)
+- Ứng dụng Logic [Azure](/azure/connectors/apis-list)
 
-Để biết chi tiết về việc tạo dòng, hãy xem tài liệu [Power Automate](https://docs.microsoft.com/power-automate/).
+Để biết chi tiết về việc tạo dòng, hãy xem tài liệu [Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Kết nối trực tiếp với API thời gian thực
 

@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270458"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598531"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong khả năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch dài hạn đối với tính năng, hãy xem [kế hoạch phát hành Dynamics 365 và Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch dài hạn đối với tính năng, hãy xem [kế hoạch phát hành Dynamics 365 và Power Platform](/dynamics365/release-plans/).
 
 Bạn cũng có thể xem video sau để tìm hiểu thêm về các khả năng được lên kế hoạch cho sáu tháng qua.
 
@@ -30,6 +30,40 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Bản cập nhật tháng 2 năm 2021
+
+Các bản cập nhật vào tháng 2 năm 2021 bao gồm một số tính năng, nâng cấp hiệu suất và sửa lỗi.
+
+#### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Xuất phân khúc sang AdRoll**
+
+  Chúng tôi đã mở rộng các đích xuất để bao gồm AdRoll. Giờ đây, bạn có thể xuất các phân khúc từ Customer Insights hàng sang đối tượng AdRoll và sử dụng chúng làm cơ sở cho quảng cáo của mình. Để biết thêm thông tin, hãy xem [Trình kết nối cho AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Phân khúc
+ 
+- **Sao chép phân đoạn**
+  
+  Để tạo một phân khúc mới dựa trên một phân khúc hiện có, bạn có thể sao chép một phân khúc và chỉnh sửa phân khúc đã sao chép để tinh chỉnh thêm. 
+
+- **Thêm các thuộc tính bổ sung vào một phân khúc**
+
+  Giờ đây, bạn có thể bao gồm các thuộc tính trong đầu ra phân khúc, ngay cả khi các thuộc tính này không phải là một phần của hồ sơ khách hàng. Ví dụ: bao gồm các ID đăng ký trong một phân khúc mặc dù nó là một phần của thực thể đăng ký có mối quan hệ M: 1 với thực thể khách hàng. Miễn là thuộc tính thuộc về một thực thể có liên quan đến thực thể khách hàng, bây giờ bạn có thể bao gồm các thuộc tính này.  
+
+#### <a name="predictions"></a>Dự đoán
+
+- **Tạo đề xuất dự đoán về sản phẩm**
+
+  Hiểu những gì khách hàng quan tâm khi mua hàng là một trong những bước đầu tiên cần thiết để cải thiện doanh thu kinh doanh và xây dựng lòng trung thành của khách hàng thông qua cá nhân hóa và tương tác. Việc cung cấp các đề xuất cho các sản phẩm không phù hợp với sở thích của khách hàng có thể tạo ra cảm giác mất kết nối giữa khách hàng và doanh nghiệp của bạn và cuối cùng hạn chế doanh thu tiềm năng và trải nghiệm tổng thể cho khách hàng. 
+
+  Sử dụng dữ liệu của riêng bạn, giờ đây bạn có thể tạo dự đoán cho những sản phẩm mà khách hàng của bạn có khả năng mua trong tương lai. Để biết thêm thông tin, hãy xem [Đề xuất sản phẩm dự đoán](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Quản trị hệ thống
+
+- **Môi trường sao chép hỗ trợ nhiều loại nguồn dữ liệu hơn**
+
+  Quản trị viên có thể sao chép cấu hình môi trường sang môi trường mới trong cùng một tổ chức. Tính năng này mở rộng chức năng môi trường sao chép cho các trường hợp trong đó các nguồn dữ liệu dựa trên kho dữ liệu Common Data Service hoặc một thư mục Common Data Model được sử dụng.
 
 ## <a name="january-2021-updates"></a>Bản cập nhật tháng 1 năm 2021
 
