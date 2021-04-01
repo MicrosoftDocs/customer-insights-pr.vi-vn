@@ -19,13 +19,13 @@
     - name: Tìm hiểu các mô-đun
       items:
         - name: Nhập dữ liệu
-          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+          href: /learn/modules/ingest-data-customer-insights/
         - name: Tạo hồ sơ khách hàng hợp nhất
-          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+          href: /learn/modules/unified-customer-profile/
         - name: Làm việc với ứng dụng
-          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+          href: /learn/modules/working-with-customer-insights/
         - name: Tăng cường dữ liệu và dự đoán
-          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+          href: /learn/modules/enrich-data/
     - name: Nguồn dữ liệu
       items:
         - name: Tổng quan về nguồn dữ liệu
@@ -114,6 +114,12 @@
       items:
         - name: Tổng quan về nơi xuất đích
           href: audience-insights/export-destinations.md
+        - name: AdRoll
+          href: audience-insights/export-adroll.md
+        - name: Adobe Campaign Standard
+          href: audience-insights/export-adobe-campaign-standard.md
+        - name: Nền tảng trải nghiệm Adobe
+          href: audience-insights/export-adobe-experience-platform.md
         - name: Autopilot
           href: audience-insights/export-autopilot.md
         - name: Azure Blob Storage
