@@ -1,20 +1,20 @@
 ---
 title: Trình kết nối Power Automate | Microsoft Docs
-description: Tạo dòng trong Microsoft Power Automate từ Dynamics 365 Customer Insights.
+description: Tạo quy trình trong Microsoft Power Automate từ Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268850"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597951"
 ---
 # <a name="power-automate-connector-preview"></a>Trình kết nối Power Automate (xem trước)
 
@@ -34,7 +34,7 @@ Sử dụng trình kích hoạt để tạo luồng đám mây và tự động 
 [Đặt cấu hình trình kích hoạt trong Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Hành động Power Automate
-Trình kết nối Power Automate cung cấp các hành động khác ngoài trình kích hoạt có sẵn. Để biết thêm thông tin, xem [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+Trình kết nối Power Automate cung cấp các hành động khác ngoài trình kích hoạt có sẵn. Để biết thêm thông tin, xem [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Tạo một Dòng Power Automate
 
@@ -44,7 +44,7 @@ Trình kết nối Power Automate cung cấp các hành động khác ngoài tr�
 
 1. Trình kết nối Customer Insights (xem trước) trong Power Automate mở ra. **Đăng nhập** vào Power Automate.
 
-1. Chọn một trong các trình kích hoạt có sẵn và thêm các bước khác vào quy trình mới của bạn. Để biết thêm thông tin, hãy xem [Tạo luồng đám mây trong Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Chọn một trong các trình kích hoạt có sẵn và thêm các bước khác vào quy trình mới của bạn. Để biết thêm thông tin, hãy xem [Tạo luồng đám mây trong Power Automate](/power-automate/get-started-logic-flow).
 
 Ví dụ về cách sử dụng các luồng: 
 - Đăng tin nhắn lên một kênh Microsoft Teams nếu làm mới nguồn dữ liệu không thành công. 

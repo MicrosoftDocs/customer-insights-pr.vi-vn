@@ -2,19 +2,19 @@
 title: Dự đoán giá trị lâu dài của khách hàng (CLV)
 description: Dự đoán doanh thu tiềm năng cho những khách hàng đang hoạt động trong tương lai.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268620"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595835"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Dự đoán giá trị lâu dài của khách hàng (CLV) (Bản xem trước)
 
@@ -194,11 +194,11 @@ Có ba phần dữ liệu chính trong trang kết quả.
   
   - **Tỷ lệ thành công khi dự đoán khách hàng có giá trị cao**
 
-  Xem sự khác biệt trong việc dự đoán khách hàng có giá trị cao bằng cách sử dụng mô hình AI so với mô hình cơ sở. Ví dụ: tỷ lệ thành công 84% có nghĩa là trong số tất cả khách hàng có giá trị cao trong dữ liệu đào tạo, mô hình AI có thể dự đoán chính xác 84%. Sau đó, chúng tôi so sánh tỷ lệ thành công này với tỷ lệ thành công của mô hình cơ sở để báo cáo sự thay đổi tương đối. Giá trị này được sử dụng để gán điểm cho mô hình.
+    Xem sự khác biệt trong việc dự đoán khách hàng có giá trị cao bằng cách sử dụng mô hình AI so với mô hình cơ sở. Ví dụ: tỷ lệ thành công 84% có nghĩa là trong số tất cả khách hàng có giá trị cao trong dữ liệu đào tạo, mô hình AI có thể dự đoán chính xác 84%. Sau đó, chúng tôi so sánh tỷ lệ thành công này với tỷ lệ thành công của mô hình cơ sở để báo cáo sự thay đổi tương đối. Giá trị này được sử dụng để gán điểm cho mô hình.
 
   - **Số liệu lỗi**
     
-  Một chỉ số khác cho phép bạn xem xét hiệu suất tổng thể của mô hình về lỗi dự đoán các giá trị trong tương lai. Chúng tôi sử dụng chỉ số Lỗi trung bình bình phương (RMSE) tổng thể để đánh giá lỗi này. RMSE là một cách tiêu chuẩn để đo lường lỗi dự đoán dữ liệu định lượng của một mô hình. RMSE của mô hình AI được so sánh với RMSE của mô hình cơ sở và báo cáo sự khác biệt tương đối.
+    Một chỉ số khác cho phép bạn xem xét hiệu suất tổng thể của mô hình về lỗi dự đoán các giá trị trong tương lai. Chúng tôi sử dụng chỉ số Lỗi trung bình bình phương (RMSE) tổng thể để đánh giá lỗi này. RMSE là một cách tiêu chuẩn để đo lường lỗi dự đoán dữ liệu định lượng của một mô hình. RMSE của mô hình AI được so sánh với RMSE của mô hình cơ sở và báo cáo sự khác biệt tương đối.
 
   Mô hình AI ưu tiên xếp hạng chính xác khách hàng theo giá trị mà họ mang lại cho doanh nghiệp của bạn. Vì vậy, chỉ tỷ lệ thành công khi dự đoán khách hàng có giá trị cao được dùng để tính điểm cuối cùng của mô hình. Chỉ số RMSE nhạy cảm với các trường hợp ngoại lệ. Trong các tình huống mà bạn có một tỷ lệ nhỏ khách hàng có giá trị mua hàng cực cao, chỉ số RMSE tổng thể có thể không cung cấp bức tranh đầy đủ về hiệu suất của mô hình.   
 

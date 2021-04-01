@@ -1,20 +1,20 @@
 ---
 title: Tạo và quản lý phân đoạn
 description: Tạo phân đoạn khách hàng để nhóm họ lại dựa trên các đặc điểm khác nhau.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270382"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597089"
 ---
 # <a name="create-and-manage-segments"></a>Tạo và quản lý phân đoạn
 
@@ -35,19 +35,19 @@ Các phân khúc được quản lý trên trang **Phân khúc**.
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến trang **Phân khúc**.
 
-2. Chọn **Mới** > **Phân đoạn trống**.
+1. Chọn **Mới** > **Phân đoạn trống**.
 
-3. Trong ngăn **Phân đoạn mới**, chọn loại phân đoạn và cung cấp **Tên**.
+1. Trong ngăn **Phân đoạn mới**, chọn loại phân đoạn và cung cấp **Tên**.
 
    Bạn cũng có thể cung cấp tên hiển thị và mô tả nhằm xác định phân đoạn.
 
-4. Chọn **Tiếp theo** để đi đến trang **Trình tạo phân đoạn** và xác định nhóm. Một nhóm là một tập hợp các khách hàng.
+1. Chọn **Tiếp theo** để đi đến trang **Trình tạo phân đoạn** và xác định nhóm. Một nhóm là một tập hợp các khách hàng.
 
-5. Chọn thực thể bao gồm thuộc tính mà bạn muốn tạo phân đoạn.
+1. Chọn thực thể bao gồm thuộc tính mà bạn muốn tạo phân đoạn.
 
-6. Chọn thuộc tính để tạo phân đoạn. Thuộc tính này có thể có 1 trong số 4 loại giá trị: số, chuỗi, ngày hoặc Boolean.
+1. Chọn thuộc tính để tạo phân đoạn. Thuộc tính này có thể có 1 trong số 4 loại giá trị: số, chuỗi, ngày hoặc Boolean.
 
-7. Chọn một toán tử và một giá trị cho thuộc tính đã chọn.
+1. Chọn một toán tử và một giá trị cho thuộc tính đã chọn.
 
    > [!div class="mx-imgBorder"]
    > ![Bộ lọc nhóm tùy chỉnh](media/customer-group-numbers.png "Bộ lọc nhóm khách hàng")
@@ -64,9 +64,14 @@ Các phân khúc được quản lý trên trang **Phân khúc**.
    > [!div class="mx-imgBorder"]
    > ![Đường dẫn mối quan hệ trong khi tạo phận đoạn](media/segments-multiple-relationships.png "Đường dẫn mối quan hệ trong khi tạo phận đoạn")
 
-9. Chọn **Lưu** để lưu phân đoạn của bạn. Phân đoạn của bạn sẽ được lưu và xử lý nếu tất cả các yêu cầu được xác thực. Nếu không, nó sẽ được lưu dưới dạng bản nháp.
+1. Theo mặc định, các phân khúc tạo một thực thể đầu ra chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân khúc dựa trên các thực thể khác với *Khách hàng*, bạn có thể thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra. Chọn **Thuộc tính dự án** để chọn các thuộc tính sẽ được thêm vào thực thể đầu ra.  
 
-10. Chọn **Quay lại phân khúc** để quay lại trang **Phân khúc**.
+   
+   Ví dụ: Một phân khúc dựa trên một thực thể chứa dữ liệu về hoạt động khách hàng, liên quan đến thực thể *Khách hàng*. Phân đoạn này tìm kiếm tất cả khách hàng đã gọi điện đến bộ phận trợ giúp trong 60 ngày qua. Bạn có thể chọn thêm thời lượng cuộc gọi và số lượng cuộc gọi vào tất cả các bản ghi khách hàng phù hợp trong thực thể đầu ra. Thông tin này có thể hữu ích để gửi một email với các liên kết hữu ích đến các bài báo trợ giúp trực tuyến và Câu hỏi thường gặp cho những khách hàng đã gọi điện thường xuyên.
+
+1. Chọn **Lưu** để lưu phân đoạn của bạn. Phân đoạn của bạn sẽ được lưu và xử lý nếu tất cả các yêu cầu được xác thực. Nếu không, nó sẽ được lưu dưới dạng bản nháp.
+
+1. Chọn **Quay lại phân khúc** để quay lại trang **Phân khúc**.
 
 ## <a name="manage-existing-segments"></a>Quản lý các phân đoạn hiện có
 
@@ -85,6 +90,7 @@ Hành động sau đây khả dụng khi bạn chọn một phân khúc:
 
 - **Xem** chi tiết phân đoạn, bao gồm xu hướng số lượng thành viên của một bản xem trước thành viên phân đoạn.
 - **Chỉnh sửa** phân đoạn để thay đổi các thuộc tính của phân đoạn đó.
+- **Tạo bản sao** của một phân khúc. Bạn có thể chọn chỉnh sửa các thuộc tính của nó ngay lập tức hoặc chỉ cần lưu bản sao.
 - **Làm mới** phân đoạn để bao gồm dữ liệu mới nhất.
 - **Bật** hoặc **tắt** phân đoạn. Các phân khúc có thể có hai trạng thái: hiện hoạt hoặc không hoạt động. Các trạng thái này rất hữu ích khi bạn chỉnh sửa phân khúc. Đối với các phân khúc không hoạt động, định nghĩa phân khúc tồn tại nhưng phân khúc chưa chứa bất kỳ khách hàng nào. Khi bạn kích hoạt một phân khúc, phân khúc sẽ thay đổi trạng thái từ "không hoạt động" thành "hiện hoạt" và bắt đầu tìm kiếm khách hàng phù hợp với định nghĩa phân khúc. Nếu hoạt động [làm mới theo lịch trình](system.md#schedule-tab) được đặt cấu hình, thì các phân khúc không hoạt động sẽ có **Trạng thái** là **Đã bỏ qua**, biểu thị việc làm mới chưa được thực hiện. Khi phân khúc không hoạt động được kích hoạt, mục đó sẽ được làm mới và được đưa vào các lần làm mới theo lịch trình.
   Ngoài ra, bạn cũng có thể dùng chức năng **Lên lịch sau** trong menu thả xuống **Kích hoạt/Hủy kích hoạt** để xác định ngày giờ kích hoạt và hủy kích hoạt trong tương lai của một phân khúc cụ thể.

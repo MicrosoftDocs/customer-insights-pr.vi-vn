@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267932"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597445"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Sử dụng các mô hình dựa trên Azure Machine Learning
 
@@ -29,9 +29,9 @@ Dữ liệu hợp nhất trong Dynamics 365 Customer Insights là nguồn để 
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Thiết lập không gian làm việc Azure Machine Learning
 
-1. Xem [tạo không gian làm việc Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) cho các tùy chọn khác nhau để tạo không gian làm việc. Để có hiệu suất tốt nhất, hãy tạo không gian làm việc trong khu vực Azure gần nhất về mặt địa lý với môi trường Customer Insights của bạn.
+1. Xem [tạo không gian làm việc Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) cho các tùy chọn khác nhau để tạo không gian làm việc. Để có hiệu suất tốt nhất, hãy tạo không gian làm việc trong khu vực Azure gần nhất về mặt địa lý với môi trường Customer Insights của bạn.
 
-1. Truy cập không gian làm việc của bạn thông qua [Azure Machine Learning Studio](https://ml.azure.com/). Có một số [cách để tương tác](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) với không gian làm việc của bạn.
+1. Truy cập không gian làm việc của bạn thông qua [Azure Machine Learning Studio](https://ml.azure.com/). Có một số [cách để tương tác](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) với không gian làm việc của bạn.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Làm việc với trình thiết kế Azure Machine Learning
 
@@ -39,13 +39,13 @@ Trình thiết kế Azure Machine Learning cung cấp bảng tùy biến trực 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Làm việc với SDK Azure Machine Learning
 
-Các nhà khoa học dữ liệu và nhà phát triển AI sử dụng [SDK Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) để xây dựng các quy trình máy học. Hiện tại, các mô hình được đào tạo sử dụng SDK không thể được tích hợp trực tiếp với Customer Insights. Cần có quy trình suy luận hàng loạt sử dụng mô hình đó để tích hợp với Customer Insights.
+Các nhà khoa học dữ liệu và nhà phát triển AI sử dụng [SDK Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) để xây dựng các quy trình máy học. Hiện tại, các mô hình được đào tạo sử dụng SDK không thể được tích hợp trực tiếp với Customer Insights. Cần có quy trình suy luận hàng loạt sử dụng mô hình đó để tích hợp với Customer Insights.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Cần có quy trình hàng loạt để tích hợp với Customer Insights
 
 ### <a name="dataset-configuration"></a>Cấu hình tập dữ liệu
 
-Bạn cần tạo tập dữ liệu để sử dụng dữ liệu thực thể từ Customer Insights vào quy trình suy luận hàng loạt của mình. Các tập dữ liệu này cần được đăng ký trong không gian làm việc. Hiện tại, chúng tôi chỉ hỗ trợ [tập dữ liệu dạng bảng](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) ở định dạng .csv. Các tập dữ liệu tương ứng với dữ liệu thực thể cần được tham số hóa dưới dạng tham số quy trình.
+Bạn cần tạo tập dữ liệu để sử dụng dữ liệu thực thể từ Customer Insights vào quy trình suy luận hàng loạt của mình. Các tập dữ liệu này cần được đăng ký trong không gian làm việc. Hiện tại, chúng tôi chỉ hỗ trợ [tập dữ liệu dạng bảng](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) ở định dạng .csv. Các tập dữ liệu tương ứng với dữ liệu thực thể cần được tham số hóa dưới dạng tham số quy trình.
    
 * Tham số tập dữ liệu trong Trình thiết kế
    
@@ -76,7 +76,7 @@ Bạn cần tạo tập dữ liệu để sử dụng dữ liệu thực thể t
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Nhập dữ liệu quy trình vào Customer Insights
 
-* Trình thiết kế cung cấp [mô-đun Xuất dữ liệu](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) cho phép xuất đầu ra của quy trình đến kho lưu trữ Azure. Hiện tại, mô-đun phải sử dụng loại kho dữ liệu **Bộ nhớ Azure Blob** và tham số hóa **Kho dữ liệu** và **Đường dẫn** liên quan. Customer Insights ghi đè cả hai tham số này trong quá trình thực thi quy trình bằng kho dữ liệu và đường dẫn có thể truy cập đến sản phẩm.
+* Trình thiết kế cung cấp [mô-đun Xuất dữ liệu](/azure/machine-learning/algorithm-module-reference/export-data) cho phép xuất đầu ra của quy trình đến kho lưu trữ Azure. Hiện tại, mô-đun phải sử dụng loại kho dữ liệu **Bộ nhớ Azure Blob** và tham số hóa **Kho dữ liệu** và **Đường dẫn** liên quan. Customer Insights ghi đè cả hai tham số này trong quá trình thực thi quy trình bằng kho dữ liệu và đường dẫn có thể truy cập đến sản phẩm.
    > [!div class="mx-imgBorder"]
    > ![Cấu hình mô-đun xuất dữ liệu](media/intelligence-designer-importdata.png "Cấu hình mô-đun xuất dữ liệu")
    

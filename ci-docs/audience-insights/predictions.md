@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268298"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595927"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
 
@@ -31,7 +31,7 @@ Tính năng Dự đoán cho phép bạn dễ dàng tạo các giá trị dự đ
 
 Trước khi tổ chức của bạn có thể sử dụng tính năng dự đoán, hãy đảm bảo đáp ứng các điều kiện tiên quyết sau đây:
 
-1. Tổ chức của bạn có một phiên bản [được thiết lập trong Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
+1. Tổ chức của bạn có một phiên bản [được thiết lập trong Common Data Service](/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
 
 2. Môi trường của bạn gắn với phiên bản Common Data Service.
 
@@ -120,7 +120,7 @@ Sau khi tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Build
 
 4. Chọn **Tùy chỉnh trong AI Builder**.
 
-5. Cập nhật mô hình của bạn trong AI Builder. [Tìm hiểu thêm về cách quản lý mô hình trong AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Cập nhật mô hình của bạn trong AI Builder. [Tìm hiểu thêm về cách quản lý mô hình trong AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nhật mà bạn đã tạo.
 

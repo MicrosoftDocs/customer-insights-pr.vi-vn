@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270230"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598365"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Sử dụng các mô hình dựa trên Azure Machine Learning Studio (cổ điển)
 
@@ -37,7 +37,7 @@ Trong bước đầu tiên, chúng ta cần tạo không gian làm việc và m�
 
 1. Tìm kiếm **Không gian làm việc Studio máy học** rồi chọn **Tạo**.
 
-1. Nhập các chi tiết cần thiết để [tạo không gian làm việc](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Chọn **Bậc định giá gói dịch vụ web** dựa trên lượng dữ liệu bạn muốn nhập. Để có hiệu suất tốt nhất, hãy chọn **Vị trí** gần nhất về mặt địa lý với bạn.
+1. Nhập các chi tiết cần thiết để [tạo không gian làm việc](/azure/machine-learning/studio/create-workspace). Chọn **Bậc định giá gói dịch vụ web** dựa trên lượng dữ liệu bạn muốn nhập. Để có hiệu suất tốt nhất, hãy chọn **Vị trí** gần nhất về mặt địa lý với bạn.
 
 1. Sau khi tạo nguồn lực, bảng thông tin không gian làm việc Studio máy học sẽ xuất hiện. Chọn **Khởi chạy Studio máy học**.
 
@@ -65,7 +65,7 @@ Giờ đây, bạn có thể tạo một thử nghiệm mới hoặc nhập mộ
 
    ![Thiết lập dịch vụ web dự đoán](media/predictive-webservice-control.png)
 
-1. Sau khi thử nghiệm dịch vụ web dự đoán thành công, bạn có thể triển khai nó để lập lịch tự động. Để dịch vụ web hoạt động với Customer Insights, hãy chọn **Triển khai dịch vụ web** > **Xem trước Triển khai dịch vụ web [Mới]**. [Tìm hiểu thêm về việc triển khai dịch vụ web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
+1. Sau khi thử nghiệm dịch vụ web dự đoán thành công, bạn có thể triển khai nó để lập lịch tự động. Để dịch vụ web hoạt động với Customer Insights, hãy chọn **Triển khai dịch vụ web** > **Xem trước Triển khai dịch vụ web [Mới]**. [Tìm hiểu thêm về việc triển khai dịch vụ web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
    ![Triển khai dịch vụ web dự đoán](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Hình ảnh sau đây cho thấy quy trình đào tạo và đánh giá mô hìn
 
 ![Mô hình rời đi trong Studio máy học của Azure](media/azure-machine-learning-model.png)
 
-Chúng tôi cũng áp dụng một kỹ thuật gọi là **Tầm quan trọng của đặc điểm hoán vị**, một khía cạnh quan trọng của tối ưu hóa mô hình. Các mô hình tích hợp có rất ít hoặc không có thông tin chuyên sâu về tác động của bất kỳ đặc điểm cụ thể nào đối với dự đoán cuối cùng. Máy tính mức độ quan trọng của đặc điểm sử dụng một thuật toán tùy chỉnh để tính toán ảnh hưởng của các đặc điểm riêng lẻ đến kết quả của một mô hình cụ thể. Mức độ quan trọng của đặc điểm được chuẩn hóa từ +1 đến -1. Ảnh hưởng tiêu cực có nghĩa là đặc điểm tương ứng có ảnh hưởng ngược lại trực quan đến kết quả và cần được loại bỏ khỏi mô hình. Ảnh hưởng tích cực cho thấy đặc điểm này đang đóng góp rất nhiều vào dự đoán. Các giá trị này không phải là hệ số tương quan vì chúng là các chỉ số khác nhau. Để biết thêm thông tin, hãy xem [Tầm quan trọng của đặc điểm hoán vị](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Chúng tôi cũng áp dụng một kỹ thuật gọi là **Tầm quan trọng của đặc điểm hoán vị**, một khía cạnh quan trọng của tối ưu hóa mô hình. Các mô hình tích hợp có rất ít hoặc không có thông tin chuyên sâu về tác động của bất kỳ đặc điểm cụ thể nào đối với dự đoán cuối cùng. Máy tính mức độ quan trọng của đặc điểm sử dụng một thuật toán tùy chỉnh để tính toán ảnh hưởng của các đặc điểm riêng lẻ đến kết quả của một mô hình cụ thể. Mức độ quan trọng của đặc điểm được chuẩn hóa từ +1 đến -1. Ảnh hưởng tiêu cực có nghĩa là đặc điểm tương ứng có ảnh hưởng ngược lại trực quan đến kết quả và cần được loại bỏ khỏi mô hình. Ảnh hưởng tích cực cho thấy đặc điểm này đang đóng góp rất nhiều vào dự đoán. Các giá trị này không phải là hệ số tương quan vì chúng là các chỉ số khác nhau. Để biết thêm thông tin, hãy xem [Tầm quan trọng của đặc điểm hoán vị](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Toàn bộ [thử nghiệm rời đi có sẵn trong Thư viện trí tuệ nhân tạo Azure](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Toàn bộ [thử nghiệm đề xuất sản phẩm có thể được truy c�
 
 ## <a name="integrate-custom-models"></a>Tích hợp mô hình tùy chỉnh
 
-Để sử dụng những dự đoán này trong Customer Insights, bạn cần **xuất** dự đoán cùng với ID khách hàng. [Xuất chúng sang cùng một vị trí lưu trữ Azure Blob](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) mà bạn xuất dữ liệu nguồn sang. Dịch vụ web dự đoán có thể được lên lịch chạy thường xuyên và cập nhật điểm số.
+Để sử dụng những dự đoán này trong Customer Insights, bạn cần **xuất** dự đoán cùng với ID khách hàng. [Xuất chúng sang cùng một vị trí lưu trữ Azure Blob](/azure/storage/common/storage-import-export-data-from-blobs) mà bạn xuất dữ liệu nguồn sang. Dịch vụ web dự đoán có thể được lên lịch chạy thường xuyên và cập nhật điểm số.
 
 Dữ liệu do mô hình tùy chỉnh tạo ra có thể được sử dụng để tăng cường thêm dữ liệu khách hàng của bạn. Để biết thêm thông tin, hãy xem [Mô hình máy học tùy chỉnh](custom-models.md).
 

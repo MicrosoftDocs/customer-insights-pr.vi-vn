@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267748"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596525"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Kết nối với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure để biết thông tin chi tiết về đối tượng
 
@@ -23,7 +23,7 @@ Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các
 Bạn có thể sử dụng dịch vụ chính để [thêm hoặc chỉnh sửa an toàn thư mục Common Data Model dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo mới hoặc cập nhật môi trường hiện có](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Tài khoản lưu trữ Azure Data Lake thế hệ 2 dự định sử dụng dịch vụ chính phải [Đã bật Không gian Tên phân cấp (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Tài khoản lưu trữ Azure Data Lake thế hệ 2 dự định sử dụng dịch vụ chính phải [Đã bật Không gian Tên phân cấp (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - Bạn cần quyền quản trị cho đăng ký Azure của mình để tạo dịch vụ chính.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Tạo dịch vụ chính Azure để có thông tin chi tiết về đối tượng
@@ -48,7 +48,7 @@ Trước khi tạo một dịch vụ chính mới để có thông tin chi tiế
 
 ### <a name="create-a-new-service-principal"></a>Tạo dịch vụ chính mới
 
-1. Cài đặt phiên bản mới nhất của **Azure Active Directory PowerShell for Graph**. Để biết thêm thông tin, hãy xem [Cài đặt Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Cài đặt phiên bản mới nhất của **Azure Active Directory PowerShell for Graph**. Để biết thêm thông tin, hãy xem [Cài đặt Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
    - Trên PC, chọn phím Windows trên bàn phím và tìm kiếm **Windows PowerShell** và **Chạy với tư cách quản trị viên**.
    
    - Trong cửa sổ PowerShell mở ra, hãy nhập `Install-Module AzureAD`.

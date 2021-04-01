@@ -2,23 +2,23 @@
 title: Nhập dữ liệu thông qua trình kết nối Power Query
 description: Trình kết nối cho nguồn dữ liệu dựa trên Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267802"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596939"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với nguồn dữ liệu Power Query
 
-Power Query cung cấp một loạt các trình kết nối để nhập dữ liệu. Hầu hết các trình kết nối này được hỗ trợ bởi Dynamics 365 Customer Insights. Việc thêm nguồn dữ liệu dựa trên trình kết nối Power Query thường tuân theo các bước được nêu trong phần tiếp theo. Tuy nhiên, tùy thuộc vào trình kết nối bạn sử dụng, bạn sẽ cần dùng thông tin khác nhau. Để biết thêm thông tin, hãy xem tài liệu về các trình kết nối riêng lẻ trong [tham khảo trình kết nối Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query cung cấp một loạt các trình kết nối để nhập dữ liệu. Hầu hết các trình kết nối này được hỗ trợ bởi Dynamics 365 Customer Insights. Việc thêm nguồn dữ liệu dựa trên trình kết nối Power Query thường tuân theo các bước được nêu trong phần tiếp theo. Tuy nhiên, tùy thuộc vào trình kết nối bạn sử dụng, bạn sẽ cần dùng thông tin khác nhau. Để biết thêm thông tin, hãy xem tài liệu về các trình kết nối riêng lẻ trong [tham khảo trình kết nối Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Tạo một nguồn dữ liệu mới
 
@@ -44,7 +44,7 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại Chỉnh sửa truy vấn](media/data-manager-configure-edit-queries.png "Hộp thoại Chỉnh sửa truy vấn")
 
-1. Bạn cũng có thể chuyển đổi dữ liệu của bạn. Chọn một thực thể để chỉnh sửa hoặc chuyển đổi. Sử dụng các tùy chọn trong cửa sổ Power Query để áp dụng các phép biến đổi. Mỗi chuyển đổi được liệt kê dưới **Các bước đã áp dụng**. Power Query cung cấp nhiều tùy chọn chuyển đổi được tạo sẵn. Xem [Chuyển đổi Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations) để biết thêm thông tin.
+1. Bạn cũng có thể chuyển đổi dữ liệu của bạn. Chọn một thực thể để chỉnh sửa hoặc chuyển đổi. Sử dụng các tùy chọn trong cửa sổ Power Query để áp dụng các phép biến đổi. Mỗi chuyển đổi được liệt kê dưới **Các bước đã áp dụng**. Power Query cung cấp nhiều tùy chọn chuyển đổi được tạo sẵn. Xem [Chuyển đổi Power Query](/power-query/power-query-what-is-power-query#transformations) để biết thêm thông tin.
 
 1. Bạn có thể thêm các thực thể bổ sung vào nguồn dữ liệu của mình bằng cách chọn **Lấy dữ liệu** trong hộp thoại **Chỉnh sửa truy vấn**.
 
@@ -59,7 +59,7 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
 
 ## <a name="available-power-query-data-sources"></a>Nguồn dữ liệu Power Query có sẵn
 
-Xem [tham khảo trình kết nối Power Query](https://docs.microsoft.com/power-query/connectors/) để có danh sách cập nhật các trình kết nối mà bạn có thể chọn để nhập dữ liệu vào Customer Insights. 
+Xem [tham khảo trình kết nối Power Query](/power-query/connectors/) để có danh sách cập nhật các trình kết nối mà bạn có thể chọn để nhập dữ liệu vào Customer Insights. 
 
 Các trình kết nối có dấu kiểm trong cột **Customer Insights (Luồng dữ liệu)** có sẵn để tạo nguồn dữ liệu mới dựa trên Power Query. Xem lại tài liệu về một trình kết nối cụ thể để tìm hiểu thêm về các điều kiện tiên quyết, giới hạn và các chi tiết khác của nó.
 

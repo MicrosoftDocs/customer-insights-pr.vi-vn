@@ -2,19 +2,19 @@
 title: Xuất dữ liệu Customer Insights sang Marketo
 description: Tìm hiểu cách định cấu hình kết nối với Marketo.
 ms.date: 11/12/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e0245f2d01aabc86f43532822c056965ff7ae67a
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 74d19a0448123904210c26f7b8760d00296c9cfd
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267107"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597997"
 ---
 # <a name="connector-for-marketo-preview"></a>Trình kết nối cho Marketo (bản xem trước)
 

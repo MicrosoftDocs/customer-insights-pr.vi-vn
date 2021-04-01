@@ -1,34 +1,34 @@
 ---
 title: Các ngôn ngữ được hỗ trợ cho thông tin chi tiết về đối tượng
 description: Hiểu và định cấu hình hỗ trợ ngôn ngữ.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268206"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595498"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Các ngôn ngữ được hỗ trợ cho khả năng thông tin chi tiết về đối tượng
 
-Khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights hỗ trợ một số ngôn ngữ. Chủ đề này liệt kê các ngôn ngữ có sẵn và cung cấp hỗ trợ để thay đổi giữa chúng, cũng như tổng quan về nội dung được dịch.
+Thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights được dịch sang nhiều ngôn ngữ. Danh sách sau đây chứa các ngôn ngữ có sẵn và thông tin về những gì được dịch. Bạn cũng có thể tìm hiểu thêm về cách thay đổi thiết đặt ngôn ngữ. 
 
 ## <a name="languages"></a>Ngôn ngữ
 
 | Tên ngôn ngữ (tiếng Anh)|  Tên ngôn ngữ (tiếng bản địa) |
 | ------------- | ------------- |
 | Tiếng Basque | euskara |
-| Tiếng Bulgaria | Български |
+| Tiếng Bulgaria | български |
 | Tiếng Catalan | català |
 | Tiếng Trung (Giản thể) | 中文(简体) |
-| Trung Quốc (Phồn thể) | 中文(繁體) |
+| Tiếng Trung (Phồn thể) | 中文(繁體) |
 | Tiếng Croatia | hrvatski |
 | Tiếng Séc | čeština |
 | Tiếng Đan Mạch | dansk |
@@ -39,25 +39,25 @@ Khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Ins
 | Tiếng Pháp | français |
 | Tiếng Galicia | galego |
 | Tiếng Đức | Deutsch |
-| Tiếng Hy Lạp | Ελληνικά |
+| Tiếng Hy Lạp | Ελληνικά |
 | Tiếng Hindi | हिंदी |
-| Tiếng Hung-ga-ri | magyar |
-| Tiếng Indonesia | Bahasa Indonesia |
-| Tiếng I-ta-li-a | italiano |
-| Tiếng Nhật | 日本語 |
-| Tiếng Kazakh | Қазақ |
-| Tiếng Hàn Quốc | 한국어 |
+| Tiếng Hungary | magyar |
+| Tiếng Indonesia | Indonesia |
+| Tiếng Italy | italiano |
+| Tiếng Nhật | 日本語 |
+| Tiếng Kazakh | қазақ тілі |
+| Tiếng Hàn | 한국어 |
 | Tiếng Latvia | latviešu |
-| Tiếng Litva | lietuvių |
-| Tiếng Malay | Bahasa Melayu |
-| Tiếng Na-uy (Bokmål) | norsk (bokmål) |
-| Tiếng Ba Lan | Polski |
-| Tiếng Bồ Đào Nha (Brazil) | português |
+| Tiếng Lithuania | lietuvių |
+| Tiếng Mã Lai | Melayu |
+| Tiếng Na Uy (Bokmål) | norsk bokmål |
+| Tiếng Ba Lan | polski |
+| Tiếng Bồ Đào Nha (Brazil) | português |
 | Tiếng Bồ Đào Nha (Bồ Đào Nha) | português |
-| Tiếng Rumani | română |
-| Tiếng Nga | Русский |
-| Tiếng Serbia (Cyrillic) | српски |
-| Tiếng Serbia (Tiếng La-tinh) | srpski |
+| Tiếng Romania | română |
+| Tiếng Nga | pусский |
+| Tiếng Serbia (Hệ chữ Kirin) | српски |
+| Tiếng Serbia (La-tinh) | srpski |
 | Tiếng Slovak | slovenčina |
 | Tiếng Slovenia | slovenski |
 | Tiếng Tây Ban Nha | español |

@@ -2,19 +2,19 @@
 title: Trình kết nối Power BI
 description: Tìm hiểu về cách dùng trình kết nối Dynamics 365 Customer Insights trong Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477114"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596065"
 ---
 # <a name="connector-for-power-bi-preview"></a>Trình kết nối cho Power BI (xem trước)
 
@@ -23,7 +23,7 @@ Tạo trực quan hóa cho dữ liệu của bạn với Power BI Desktop. Tạo
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Bạn có hồ sơ khách hàng hợp nhất.
-- Phiên bản mới nhất của [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) được cài đặt trên máy tính của bạn. [Tìm hiểu thêm về Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Phiên bản mới nhất của [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) được cài đặt trên máy tính của bạn. [Tìm hiểu thêm về Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Đặt cấu hình trình kết nối cho Power BI
 
@@ -47,7 +47,7 @@ Tạo trực quan hóa cho dữ liệu của bạn với Power BI Desktop. Tạo
 
 ## <a name="large-data-sets"></a>Tập hợp dữ liệu lớn
 
-Trình kết nối Customer Insights cho Power BI được thiết kế để hoạt động cho các tập hợp dữ liệu có chứa tới 1 triệu hồ sơ khách hàng. Việc nhập các tập hợp dữ liệu lớn hơn có thể hiệu quả, nhưng mất nhiều thời gian. Ngoài ra, quá trình này có thể hết thời gian chờ vì những hạn chế của Power BI. Để biết thêm thông tin, hãy xem [Power BI: Đề xuất cho tập hợp dữ liệu lớn](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Trình kết nối Customer Insights cho Power BI được thiết kế để hoạt động cho các tập hợp dữ liệu có chứa tới 1 triệu hồ sơ khách hàng. Việc nhập các tập hợp dữ liệu lớn hơn có thể hiệu quả, nhưng mất nhiều thời gian. Ngoài ra, quá trình này có thể hết thời gian chờ vì những hạn chế của Power BI. Để biết thêm thông tin, hãy xem [Power BI: Đề xuất cho tập hợp dữ liệu lớn](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Làm việc với một tập hợp con dữ liệu
 
@@ -70,4 +70,3 @@ Bạn có thể xác định và loại bỏ các mối quan hệ trùng lặp.
 Sau khi loại bỏ các mối quan hệ trùng lặp, hãy thử định cấu hình trình kết nối Power BI lần nữa. Môi trường sẽ có sẵn ngay.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-
