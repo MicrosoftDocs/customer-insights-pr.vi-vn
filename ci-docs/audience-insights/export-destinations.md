@@ -1,7 +1,7 @@
 ---
-title: Nơi xuất đích
-description: Xuất dữ liệu và quản lý các điểm đến xuất.
-ms.date: 07/21/2020
+title: Xuất dữ liệu từ Customer Insights
+description: Quản lý nội dung xuất để chia sẻ dữ liệu.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596116"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896169"
 ---
-# <a name="export-destinations-preview-overview"></a><span data-ttu-id="bdbfc-103">Tổng quan về nơi xuất đích (bản xem trước)</span><span class="sxs-lookup"><span data-stu-id="bdbfc-103">Export destinations (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="9f580-103">Tổng quan về trang Nội dung xuất (bản xem trước)</span><span class="sxs-lookup"><span data-stu-id="9f580-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="bdbfc-104">Trang **Đích xuất** cho biết tất cả các vị trí bạn đã thiết lập để xuất dữ liệu sang đó.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-104">The **Export destinations** page shows you all locations you've set up to export data to.</span></span> <span data-ttu-id="bdbfc-105">Bạn cũng có thể thêm điểm đến mới để xuất.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-105">You can also add new destinations for export.</span></span> <span data-ttu-id="bdbfc-106">Ngoài ra, nó hiển thị các tùy chọn xuất hiện có sẵn.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-106">Additionally, it shows export currently available options.</span></span> <span data-ttu-id="bdbfc-107">Nhận tổng quan nhanh, mô tả và tìm hiểu những gì bạn có thể làm với mỗi tùy chọn mở rộng.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-107">Get a quick overview, description, and find out what you can do with each extensibility option.</span></span> <span data-ttu-id="bdbfc-108">Xuất hồ sơ, số liệu đo lường và phân khúc thống nhất cho các ứng dụng được hỗ trợ phù hợp với doanh nghiệp của bạn.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-108">Export unified profiles, measures, and segments to supported apps relevant for your business.</span></span>
+<span data-ttu-id="9f580-104">Trang **Nội dung xuất** hiển thị cho bạn tất cả các nội dung xuất đã đặt cấu hình.</span><span class="sxs-lookup"><span data-stu-id="9f580-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="9f580-105">Nội dung xuất chia sẻ dữ liệu cụ thể với các ứng dụng khác nhau.</span><span class="sxs-lookup"><span data-stu-id="9f580-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="9f580-106">Chúng có thể bao gồm các thực thể hoặc hồ sơ khách hàng, lược đồ và thông tin chi tiết ánh xạ.</span><span class="sxs-lookup"><span data-stu-id="9f580-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="9f580-107">Mỗi nội dung xuất yêu cầu một [kết nối, do quản trị viên thiết lập, để quản lý hoạt động xác thực và truy cập](connections.md).</span><span class="sxs-lookup"><span data-stu-id="9f580-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="bdbfc-109">Chuyển đến **Quản trị** > **Vị trí xuất dữ liệu** để tìm các tùy chọn mở rộng sau:</span><span class="sxs-lookup"><span data-stu-id="bdbfc-109">Go to **Admin** > **Export destinations** to find the following extensibility options:</span></span>
+> [!NOTE]
+> <span data-ttu-id="9f580-108">Cho đến tháng 3 năm 2021, các nội dung xuất đã tự động tạo kết nối với dịch vụ tương ứng.</span><span class="sxs-lookup"><span data-stu-id="9f580-108">Until March 2021, exports created a connection to the corresponding service automatically.</span></span> <span data-ttu-id="9f580-109">Hiện tại, cần có một [kết nối, do quản trị viên tạo và chia sẻ](connections.md) thì bạn mới có thể tạo các nội dung xuất.</span><span class="sxs-lookup"><span data-stu-id="9f580-109">Exports now require a [connection, created and shared by an administrator](connections.md) before you can create them.</span></span>
 
-- [<span data-ttu-id="bdbfc-110">Adobe Campaign Standard</span><span class="sxs-lookup"><span data-stu-id="bdbfc-110">Adobe Campaign Standard</span></span>](export-adobe-campaign-standard.md)
-- [<span data-ttu-id="bdbfc-111">Nền tảng trải nghiệm Adobe</span><span class="sxs-lookup"><span data-stu-id="bdbfc-111">Adobe Experience Platform</span></span>](export-adobe-experience-platform.md)
-- [<span data-ttu-id="bdbfc-112">AdRoll</span><span class="sxs-lookup"><span data-stu-id="bdbfc-112">AdRoll</span></span>](export-adroll.md)
-- [<span data-ttu-id="bdbfc-113">Autopilot</span><span class="sxs-lookup"><span data-stu-id="bdbfc-113">Autopilot</span></span>](export-autopilot.md)
-- [<span data-ttu-id="bdbfc-114">Lưu trữ Azure Blob</span><span class="sxs-lookup"><span data-stu-id="bdbfc-114">Azure Blob Storage</span></span>](export-azure-blob-storage.md)
-- [<span data-ttu-id="bdbfc-115">Azure Data Lake Storage thế hệ 2</span><span class="sxs-lookup"><span data-stu-id="bdbfc-115">Azure Data Lake Storage Gen2</span></span>](export-azure-data-lake-storage-gen2.md)
-- [<span data-ttu-id="bdbfc-116">Bot dành cho Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="bdbfc-116">Bot for Microsoft Teams</span></span>](export-teams-bot.md)
-- [<span data-ttu-id="bdbfc-117">API Customer Insights</span><span class="sxs-lookup"><span data-stu-id="bdbfc-117">Customer Insights API</span></span>](apis.md)
-- [<span data-ttu-id="bdbfc-118">DotDigital</span><span class="sxs-lookup"><span data-stu-id="bdbfc-118">DotDigital</span></span>](export-dotdigital.md)
-- [<span data-ttu-id="bdbfc-119">Dynamics 365 Customer Service (Bổ trợ thẻ khách hàng)</span><span class="sxs-lookup"><span data-stu-id="bdbfc-119">Dynamics 365 Customer Service (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="bdbfc-120">Dynamics 365 Marketing</span><span class="sxs-lookup"><span data-stu-id="bdbfc-120">Dynamics 365 Marketing</span></span>](export-dynamics365-marketing.md)
-- [<span data-ttu-id="bdbfc-121">Dynamics 365 Sales</span><span class="sxs-lookup"><span data-stu-id="bdbfc-121">Dynamics 365 Sales</span></span>](export-dynamics365-sales.md)
-- [<span data-ttu-id="bdbfc-122">Trung tâm Dynamics 365 Sales (Bổ trợ thẻ khách hàng)</span><span class="sxs-lookup"><span data-stu-id="bdbfc-122">Dynamics 365 Sales Hub (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="bdbfc-123">Trình quản lý quảng cáo Facebook</span><span class="sxs-lookup"><span data-stu-id="bdbfc-123">Facebook Ads Manager</span></span>](export-facebook.md)
-- [<span data-ttu-id="bdbfc-124">Google Ads</span><span class="sxs-lookup"><span data-stu-id="bdbfc-124">Google Ads</span></span>](export-google-ads.md)
-- [<span data-ttu-id="bdbfc-125">LiveRamp&reg;</span><span class="sxs-lookup"><span data-stu-id="bdbfc-125">LiveRamp&reg;</span></span>](export-liveramp.md)
-- [<span data-ttu-id="bdbfc-126">Mailchimp</span><span class="sxs-lookup"><span data-stu-id="bdbfc-126">Mailchimp</span></span>](export-mailchimp.md)
-- [<span data-ttu-id="bdbfc-127">Marketo</span><span class="sxs-lookup"><span data-stu-id="bdbfc-127">Marketo</span></span>](export-marketo.md)
-- [<span data-ttu-id="bdbfc-128">Power Automate</span><span class="sxs-lookup"><span data-stu-id="bdbfc-128">Power Automate</span></span>](export-power-automate.md)
-- [<span data-ttu-id="bdbfc-129">Power Apps</span><span class="sxs-lookup"><span data-stu-id="bdbfc-129">Power Apps</span></span>](export-power-apps.md)
-- [<span data-ttu-id="bdbfc-130">Power BI</span><span class="sxs-lookup"><span data-stu-id="bdbfc-130">Power BI</span></span>](export-power-bi.md)
-- [<span data-ttu-id="bdbfc-131">SendGrid</span><span class="sxs-lookup"><span data-stu-id="bdbfc-131">SendGrid</span></span>](export-sendgrid.md)
-- [<span data-ttu-id="bdbfc-132">SFTP</span><span class="sxs-lookup"><span data-stu-id="bdbfc-132">SFTP</span></span>](export-sftp.md)
+<span data-ttu-id="9f580-110">Đi đến **Dữ liệu** > **Nội dung xuất** để xem trang nội dung xuất.</span><span class="sxs-lookup"><span data-stu-id="9f580-110">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="9f580-111">Tất cả các vai trò người dùng đều có quyền truy cập để xem các nội dung xuất đã đặt cấu hình.</span><span class="sxs-lookup"><span data-stu-id="9f580-111">All user roles have access to view configured exports.</span></span> <span data-ttu-id="9f580-112">Sử dụng trường tìm kiếm trong thanh lệnh để tìm các nội dung xuất theo tên, tên kết nối hoặc loại kết nối.</span><span class="sxs-lookup"><span data-stu-id="9f580-112">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="add-a-new-export-destination"></a><span data-ttu-id="bdbfc-133">Thêm đích xuất mới</span><span class="sxs-lookup"><span data-stu-id="bdbfc-133">Add a new export destination</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="9f580-113">Thiết lập một nội dung xuất mới</span><span class="sxs-lookup"><span data-stu-id="9f580-113">Set up a new export</span></span>
 
-<span data-ttu-id="bdbfc-134">Để thêm các điểm đến xuất, bạn có [quyền quản trị viên](permissions.md).</span><span class="sxs-lookup"><span data-stu-id="bdbfc-134">To add export destinations, you have [administrator permissions](permissions.md).</span></span> <span data-ttu-id="bdbfc-135">Nếu bạn xuất sang các dịch vụ của Microsoft, chúng tôi sẽ giả định rằng cả hai dịch vụ đều thuộc cùng một tổ chức.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-135">If you export to Microsoft services, we assume both services are in the same organization.</span></span>
+<span data-ttu-id="9f580-114">Để thiết lập hoặc chỉnh sửa một nội dung xuất, bạn cần có sẵn các kết nối.</span><span class="sxs-lookup"><span data-stu-id="9f580-114">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="9f580-115">Kết nối phụ thuộc vào [vai trò người dùng](permissions.md) của bạn:</span><span class="sxs-lookup"><span data-stu-id="9f580-115">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="9f580-116">Quản trị viên có quyền truy cập vào tất cả các kết nối.</span><span class="sxs-lookup"><span data-stu-id="9f580-116">Administrators have access to all connections.</span></span> <span data-ttu-id="9f580-117">Họ cũng có thể tạo kết nối mới khi thiết lập nội dung xuất.</span><span class="sxs-lookup"><span data-stu-id="9f580-117">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="9f580-118">Những người đóng góp có thể có quyền truy cập vào các kết nối cụ thể.</span><span class="sxs-lookup"><span data-stu-id="9f580-118">Contributors can have access to specific connections.</span></span> <span data-ttu-id="9f580-119">Họ có thể đặt cấu hình và chia sẻ kết nối hay không là tùy thuộc vào quản trị viên.</span><span class="sxs-lookup"><span data-stu-id="9f580-119">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="9f580-120">Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="9f580-120">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="9f580-121">Người xem chỉ có thể xem các nội dung xuất hiện có nhưng không thể tạo chúng.</span><span class="sxs-lookup"><span data-stu-id="9f580-121">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="bdbfc-136">Đi tới **Quản trị viên** > **Đích xuất**.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-136">Go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="9f580-122">Đi tới **Dữ liệu** > **Nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="9f580-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="bdbfc-137">Chuyển sang tab **Đích xuất của tôi**.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-137">Switch to the **My export destinations** tab.</span></span>
+1. <span data-ttu-id="9f580-123">Chọn **Thêm nội dung xuất** để tạo một đích xuất mới.</span><span class="sxs-lookup"><span data-stu-id="9f580-123">Select **Add export** to create a new export destination.</span></span>
 
-1. <span data-ttu-id="bdbfc-138">Chọn **Thêm đích** để tạo đích xuất mới.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-138">Select **Add destination** to create a new export destination.</span></span>
+1. <span data-ttu-id="9f580-124">Trong ngăn **Thiết lập nội dung xuất**, hãy chọn kết nối để sử dụng.</span><span class="sxs-lookup"><span data-stu-id="9f580-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="9f580-125">[Kết nối](connections.md) do quản trị viên quản lý.</span><span class="sxs-lookup"><span data-stu-id="9f580-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-1. <span data-ttu-id="bdbfc-139">Trong ngăn **Thêm đích**, chọn **Loại** cho đích xuất trong menu thả xuống.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-139">In the **Add destination** pane, select the **Type** of export destination in the drop-down.</span></span>
+1. <span data-ttu-id="9f580-126">Cung cấp các thông tin chi tiết được yêu cầu rồi chọn **Lưu** để tạo nội dung xuất.</span><span class="sxs-lookup"><span data-stu-id="9f580-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="bdbfc-140">Cung cấp thông tin cần thiết rồi chọn **Tiếp** để tạo đích xuất.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-140">Provide the required details and select **Next** to create the export destination.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="9f580-127">Chỉnh sửa nội dung xuất</span><span class="sxs-lookup"><span data-stu-id="9f580-127">Edit an export</span></span>
 
-<span data-ttu-id="bdbfc-141">Bạn cũng có thể chọn **Thiết lập** trên một lát ở tab **Khám phá**.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-141">You can also select **Set up** on a tile on the **Discover** tab.</span></span>
+1. <span data-ttu-id="9f580-128">Chọn dấu ba chấm dọc cạnh đích xuất bạn muốn chỉnh sửa.</span><span class="sxs-lookup"><span data-stu-id="9f580-128">Select the vertical ellipsis for the export destination you want to edit.</span></span>
 
-## <a name="view-export-destinations"></a><span data-ttu-id="bdbfc-142">Xem các vị trí xuất dữ liệu</span><span class="sxs-lookup"><span data-stu-id="bdbfc-142">View Export destinations</span></span>
+1. <span data-ttu-id="9f580-129">Chọn **Chỉnh sửa** từ menu thả xuống.</span><span class="sxs-lookup"><span data-stu-id="9f580-129">Select **Edit** from the drop-down menu.</span></span>
 
-<span data-ttu-id="bdbfc-143">Sau khi tạo các đích xuất, bạn sẽ nhìn thấy chúng trong bảng ở tab **Đích xuất của tôi**. Bảng này có 3 cột:</span><span class="sxs-lookup"><span data-stu-id="bdbfc-143">After creating export destinations, you'll find them in a table on the **My export destinations** tab. This table has three columns:</span></span>
+1. <span data-ttu-id="9f580-130">Thay đổi các giá trị mà bạn muốn cập nhật rồi chọn **Lưu**.</span><span class="sxs-lookup"><span data-stu-id="9f580-130">Change the values you want to update and select **Save**.</span></span>
 
-- <span data-ttu-id="bdbfc-144">**Tên hiển thị**: Là tên mà bạn đã đặt khi tạo vị trí.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-144">**Display name**: The name you entered when creating the destination.</span></span>
-- <span data-ttu-id="bdbfc-145">**Kiểu**: Kiểu đích xuất bạn mong muốn khi tạo đích.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-145">**Type**: The export destination type you set when creating the destination.</span></span>
-- <span data-ttu-id="bdbfc-146">**Ngày tạo**: Là ngày bạn tạo vị trí.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-146">**Created**: The date you created the destination.</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="9f580-131">Xem Nội dung xuất và thông tin chi tiết về nội dung xuất</span><span class="sxs-lookup"><span data-stu-id="9f580-131">View Exports and export details</span></span>
 
-## <a name="edit-an-export-destination"></a><span data-ttu-id="bdbfc-147">Chỉnh sửa một đích xuất</span><span class="sxs-lookup"><span data-stu-id="bdbfc-147">Edit an export destination</span></span>
+<span data-ttu-id="9f580-132">Sau khi tạo đích xuất, chúng được liệt kê trên **Dữ liệu** > **Nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="9f580-132">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="9f580-133">Tất cả người dùng có thể xem dữ liệu nào được chia sẻ và trạng thái mới nhất của dữ liệu đó.</span><span class="sxs-lookup"><span data-stu-id="9f580-133">All users can see which data is shared and its latest status.</span></span>
 
-1. <span data-ttu-id="bdbfc-148">Chọn dấu chấm lửng dọc cạnh đích xuất bạn muốn chỉnh sửa.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-148">Select the vertical ellipsis for the Export destination you want to edit.</span></span>
+1. <span data-ttu-id="9f580-134">Đi tới **Dữ liệu** > **Nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="9f580-134">Go to **Data** > **Exports**.</span></span>
 
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="bdbfc-149">![Dấu chấm lửng dọc](media/export-destinations-page-ellipsis.png "Dấu chấm lửng dọc")</span><span class="sxs-lookup"><span data-stu-id="bdbfc-149">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+1. <span data-ttu-id="9f580-135">Người dùng không có quyền chỉnh sửa hãy chọn **Xem** thay vì **Chỉnh sửa** để xem thông tin chi tiết về nội dung xuất.</span><span class="sxs-lookup"><span data-stu-id="9f580-135">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="bdbfc-150">Chọn **Chỉnh sửa** từ menu thả xuống.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-150">Select **Edit** from the dropdown menu.</span></span>
+1. <span data-ttu-id="9f580-136">Ngăn bên này hiển thị việc thiết lập nội dung xuất này.</span><span class="sxs-lookup"><span data-stu-id="9f580-136">This side pane shows the set up of this export.</span></span> <span data-ttu-id="9f580-137">Nếu không có quyền chỉnh sửa, bạn không thể thay đổi giá trị.</span><span class="sxs-lookup"><span data-stu-id="9f580-137">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="9f580-138">Chọn **Đóng** để quay lại trang nội dung xuất.</span><span class="sxs-lookup"><span data-stu-id="9f580-138">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="bdbfc-151">Thay đổi các giá trị cần cập nhật rồi chọn **Lưu**.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-151">Change the values that require update and select **Save**.</span></span>
+## <a name="run-exports-on-demand"></a><span data-ttu-id="9f580-139">Chạy nội dung xuất theo yêu cầu</span><span class="sxs-lookup"><span data-stu-id="9f580-139">Run exports on demand</span></span>
 
-## <a name="export-data-on-demand"></a><span data-ttu-id="bdbfc-152">Xuất dữ liệu theo nhu cầu</span><span class="sxs-lookup"><span data-stu-id="bdbfc-152">Export data on demand</span></span>
+<span data-ttu-id="9f580-140">Sau khi đặt cấu hình nội dung xuất, nó sẽ chạy trong mỗi [lần làm mới theo lịch trình](system.md#schedule-tab) miễn là có kết nối đang hoạt động.</span><span class="sxs-lookup"><span data-stu-id="9f580-140">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
 
-<span data-ttu-id="bdbfc-153">Sau khi đặt cấu hình tác nhân kết nối cho đích xuất, thì mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-153">After configuring a connector for an export destination, exports will run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="9f580-141">Để xuất dữ liệu mà không cần đợi làm mới theo lịch trình, hãy đi đến **Dữ liệu** > **Nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="9f580-141">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="9f580-142">Bạn có hai tùy chọn:</span><span class="sxs-lookup"><span data-stu-id="9f580-142">You have two options:</span></span>
 
-<span data-ttu-id="bdbfc-154">Để xuất dữ liệu mà không cần chờ đến lịch làm mới, hãy đi tới tab **Đích xuất của tôi** trên **Quản trị viên** > **Đích xuất**.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-154">To export data without waiting for a scheduled refresh, go the **My export destinations** tab on **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="9f580-143">Để chạy tất cả các nội dung xuất, hãy chọn **Chạy tất cả** trong thanh lệnh.</span><span class="sxs-lookup"><span data-stu-id="9f580-143">To run all exports, select **Run all** in the command bar.</span></span> 
+- <span data-ttu-id="9f580-144">Để chạy một nội dung xuất, hãy chọn dấu chấm lửng (...) trên một mục danh sách rồi chọn **Chạy**.</span><span class="sxs-lookup"><span data-stu-id="9f580-144">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
 
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="bdbfc-155">![Dấu chấm lửng dọc](media/export-destinations-page-ellipsis.png "Dấu chấm lửng dọc")</span><span class="sxs-lookup"><span data-stu-id="bdbfc-155">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+## <a name="remove-an-export"></a><span data-ttu-id="9f580-145">Loại bỏ một nội dung xuất</span><span class="sxs-lookup"><span data-stu-id="9f580-145">Remove an Export</span></span>
 
-- <span data-ttu-id="bdbfc-156">Chọn **Xuất** ở phía trên danh sách để chạy tác vụ xuất đồng thời cho mọi đích xuất.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-156">Select **Export** above the list to run the export to all export destinations simultaneously.</span></span>
-- <span data-ttu-id="bdbfc-157">Chọn dấu chấm lửng (...) cuối mỗi mục trong danh sách rồi chọn tùy chọn **Xuất** để chạy tác vụ xuất cho từng đích xuất.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-157">Select the ellipsis (...) after a list item and then choose the **Export** option to run the export for a single export destination.</span></span>
+1. <span data-ttu-id="9f580-146">Đi tới **Dữ liệu** > **Nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="9f580-146">Go to **Data** > **Exports**.</span></span>
 
-## <a name="remove-an-export-destination"></a><span data-ttu-id="bdbfc-158">Xóa một Vị trí xuất dữ liệu</span><span class="sxs-lookup"><span data-stu-id="bdbfc-158">Remove an Export destination</span></span>
+1. <span data-ttu-id="9f580-147">Chọn dấu ba chấm dọc cho Nội dung xuất mà bạn muốn loại bỏ.</span><span class="sxs-lookup"><span data-stu-id="9f580-147">Select the vertical ellipsis for the Export you want to remove.</span></span>
 
-<span data-ttu-id="bdbfc-159">Để xóa vị trí xuất dữ liệu, hãy bắt đầu từ trang **Vị trí xuất dữ liệu**.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-159">To remove an Export destination, start from the main **Export destinations** page.</span></span>
+1. <span data-ttu-id="9f580-148">Chọn **Xóa** trong menu thả xuống.</span><span class="sxs-lookup"><span data-stu-id="9f580-148">Select **Remove** from the dropdown menu.</span></span>
 
-1. <span data-ttu-id="bdbfc-160">Chọn dấu chấm lửng dọc cạnh vị trí xuất dữ liệu mà bạn muốn xóa.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-160">Select the vertical ellipsis for the Export destination you want to remove.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="bdbfc-161">![Dấu chấm lửng dọc](media/export-destinations-page-ellipsis.png "Dấu chấm lửng dọc")</span><span class="sxs-lookup"><span data-stu-id="bdbfc-161">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
-
-2. <span data-ttu-id="bdbfc-162">Chọn **Xóa** trong menu thả xuống.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-162">Select **Remove** from the dropdown menu.</span></span>
-
-3. <span data-ttu-id="bdbfc-163">Xác nhận việc xóa bằng cách chọn **Xóa** trên màn hình xác nhận.</span><span class="sxs-lookup"><span data-stu-id="bdbfc-163">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+1. <span data-ttu-id="9f580-149">Xác nhận việc xóa bằng cách chọn **Xóa** trên màn hình xác nhận.</span><span class="sxs-lookup"><span data-stu-id="9f580-149">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

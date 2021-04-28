@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Azure Data Lake Storage thế hệ 2
 description: Tìm hiểu cách định cấu hình kết nối với Azure Data Lake Storage thế hệ 2.
-ms.date: 02/04/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,47 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596670"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760077"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a><span data-ttu-id="e5fe1-103">Trình kết nối cho Azure Data Lake Storage thế hệ 2 (bản xem trước)</span><span class="sxs-lookup"><span data-stu-id="e5fe1-103">Connector for Azure Data Lake Storage Gen2 (preview)</span></span>
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a><span data-ttu-id="686ea-103">Thiết lập kết nối với Azure Data Lake Storage Thế hệ 2 (bản xem trước)</span><span class="sxs-lookup"><span data-stu-id="686ea-103">Set up the connection to Azure Data Lake Storage Gen2 (preview)</span></span>
 
-<span data-ttu-id="e5fe1-104">Lưu trữ dữ liệu Customer Insights của bạn trong Azure Data Lake Storage thế hệ 2 hoặc sử dụng kho lưu trữ đó để chuyển dữ liệu của bạn sang các ứng dụng khác.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-104">Store your Customer Insights data in Azure Data Lake Storage Gen2 or use it to transfer your data to other applications.</span></span>
+1. <span data-ttu-id="686ea-104">Đi đến **Quản trị viên** > **Kết nối**.</span><span class="sxs-lookup"><span data-stu-id="686ea-104">Go to **Admin** > **Connections**.</span></span>
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a><span data-ttu-id="e5fe1-105">Định cấu hình trình kết nối cho Azure Data Lake Storage thế hệ 2</span><span class="sxs-lookup"><span data-stu-id="e5fe1-105">Configure the connector for Azure Data Lake Storage Gen2</span></span>
+1. <span data-ttu-id="686ea-105">Chọn **Thêm kết nối** rồi chọn **Azure Data Lake Thế hệ 2** để đặt cấu hình kết nối.</span><span class="sxs-lookup"><span data-stu-id="686ea-105">Select **Add connection** and choose **Azure Data Lake Gen 2** to configure the connection.</span></span>
 
-1. <span data-ttu-id="e5fe1-106">Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Nơi xuất đích**.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="686ea-106">Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**.</span><span class="sxs-lookup"><span data-stu-id="686ea-106">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="686ea-107">Tên và loại kết nối mô tả kết nối này.</span><span class="sxs-lookup"><span data-stu-id="686ea-107">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="686ea-108">Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.</span><span class="sxs-lookup"><span data-stu-id="686ea-108">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="e5fe1-107">Trong **Azure Data Lake Storage thế hệ 2**, chọn **Thiết lập**.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-107">Under **Azure Data Lake Storage Gen2**, select **Set up**.</span></span>
+1. <span data-ttu-id="686ea-109">Chọn người có thể sử dụng kết nối này.</span><span class="sxs-lookup"><span data-stu-id="686ea-109">Choose who can use this connection.</span></span> <span data-ttu-id="686ea-110">Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên.</span><span class="sxs-lookup"><span data-stu-id="686ea-110">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="686ea-111">Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="686ea-111">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="e5fe1-108">Trong trường **Tên hiển thị**, hãy đặt tên cho vị trí để dễ nhận diện.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-108">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="686ea-112">Nhập **Tên tài khoản**, **Khóa tài khoản** và **Bộ chứa** cho Azure Data Lake Storage Thế hệ 2 của bạn.</span><span class="sxs-lookup"><span data-stu-id="686ea-112">Enter **Account name**, **Account key**, and **Container** for your Azure Data Lake Storage Gen2.</span></span>
+    - <span data-ttu-id="686ea-113">Để tìm hiểu cách tạo tài khoản lưu trữ để sử dụng với Azure Data Lake Storage thế hệ 2, hãy xem [Tạo tài khoản lưu trữ](/azure/storage/blobs/create-data-lake-storage-account).</span><span class="sxs-lookup"><span data-stu-id="686ea-113">To learn how to create a storage account to use with Azure Data Lake Storage Gen2, see [Create storage account](/azure/storage/blobs/create-data-lake-storage-account).</span></span> 
+    - <span data-ttu-id="686ea-114">Để tìm hiểu thêm về tên tài khoản lưu trữ Azure Data Lake Thế hệ 2 và khóa tài khoản, hãy xem [Quản lý các thiết đặt tài khoản lưu trữ trong cổng thông tin Azure](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="686ea-114">To learn more about Azure Data Lake Gen2 storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
 
-1. <span data-ttu-id="e5fe1-109">Nhập **Tên tài khoản**, **Khóa tài khoản** và **Bộ chứa** cho Azure Data Lake Storage Thế hệ 2 của bạn.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-109">Enter **Account name**, **Account key**, and **Container** for your Azure Data Lake Storage Gen2.</span></span>
-    - <span data-ttu-id="e5fe1-110">Để tìm hiểu cách tạo tài khoản lưu trữ để sử dụng với Azure Data Lake Storage thế hệ 2, hãy xem [Tạo tài khoản lưu trữ](/azure/storage/blobs/create-data-lake-storage-account).</span><span class="sxs-lookup"><span data-stu-id="e5fe1-110">To learn how to create a storage account to use with Azure Data Lake Storage Gen2, see [Create storage account](/azure/storage/blobs/create-data-lake-storage-account).</span></span> 
-    - <span data-ttu-id="e5fe1-111">Để tìm hiểu thêm về cách tìm tên tài khoản lưu trữ Azure Data Lake thế hệ 2 và khóa tài khoản, hãy xem [Quản lý cài đặt tài khoản lưu trữ trong cổng Azure](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="e5fe1-111">To learn more about how to find the Azure Data Lake Gen2 storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
+1. <span data-ttu-id="686ea-115">Chọn **Lưu** để hoàn thành kết nối.</span><span class="sxs-lookup"><span data-stu-id="686ea-115">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="e5fe1-112">Chọn **Tiếp theo**.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-112">Select **Next**.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="686ea-116">Đặt cấu hình xuất</span><span class="sxs-lookup"><span data-stu-id="686ea-116">Configure an export</span></span>
 
-1. <span data-ttu-id="e5fe1-113">Chọn ô cạnh mỗi thực thể mà bạn muốn xuất sang vị trí này.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-113">Select the box next to each of the entities you want to export to this destination.</span></span>
+<span data-ttu-id="686ea-117">Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này.</span><span class="sxs-lookup"><span data-stu-id="686ea-117">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="686ea-118">Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="686ea-118">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-1. <span data-ttu-id="e5fe1-114">Chọn **Lưu**.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-114">Select **Save**.</span></span>
+1. <span data-ttu-id="686ea-119">Đi tới **Dữ liệu** > **Nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="686ea-119">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="e5fe1-115">Xuất dữ liệu</span><span class="sxs-lookup"><span data-stu-id="e5fe1-115">Export the data</span></span>
+1. <span data-ttu-id="686ea-120">Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.</span><span class="sxs-lookup"><span data-stu-id="686ea-120">To create a new export, select **Add export**.</span></span>
 
-<span data-ttu-id="e5fe1-116">Bạn có thể [xuất dữ liệu theo nhu cầu](export-destinations.md#export-data-on-demand).</span><span class="sxs-lookup"><span data-stu-id="e5fe1-116">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="e5fe1-117">Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.</span><span class="sxs-lookup"><span data-stu-id="e5fe1-117">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="686ea-121">Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần **Azure Data Lake**.</span><span class="sxs-lookup"><span data-stu-id="686ea-121">In the **Connection for export** field, choose a connection from the **Azure Data Lake** section.</span></span> <span data-ttu-id="686ea-122">Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.</span><span class="sxs-lookup"><span data-stu-id="686ea-122">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="686ea-123">Chọn ô cạnh mỗi thực thể mà bạn muốn xuất sang vị trí này.</span><span class="sxs-lookup"><span data-stu-id="686ea-123">Select the box next to each of the entities you want to export to this destination.</span></span>
+
+1. <span data-ttu-id="686ea-124">Chọn **Lưu**.</span><span class="sxs-lookup"><span data-stu-id="686ea-124">Select **Save**.</span></span>
+
+<span data-ttu-id="686ea-125">Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.</span><span class="sxs-lookup"><span data-stu-id="686ea-125">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="686ea-126">Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="686ea-126">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="686ea-127">Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="686ea-127">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+<span data-ttu-id="686ea-128">Dữ liệu đã xuất được lưu trữ trong bộ lưu trữ Azure Data Lake Thế hệ 2 mà bạn đã đặt cấu hình.</span><span class="sxs-lookup"><span data-stu-id="686ea-128">Exported data is stored in the Azure Data Lake Gen 2 storage container you configured.</span></span> 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

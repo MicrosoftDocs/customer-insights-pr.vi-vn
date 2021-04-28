@@ -65,7 +65,7 @@
         - name: Làm phong phú hồ sơ khách hàng
           href: audience-insights/enrichment-hub.md
         - name: Mối quan hệ giữa thương hiệu và sở thích
-          href: audience-insights/enrichment-microsoft-graph.md
+          href: audience-insights/enrichment-microsoft.md
         - name: Tăng cường với HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Làm phong phú với Leadspace
@@ -104,6 +104,8 @@
           href: audience-insights/predict-product-recommendation.md
         - name: Hướng dẫn mẫu dự đoán đề xuất sản phẩm
           href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Tạo phân khúc dựa trên dự đoán
+          href: audience-insights/prediction-based-segment.md
         - name: Triển khai các mô hình máy học tùy chỉnh
           href: audience-insights/custom-models.md
         - name: Thử nghiệm công cụ máy học Azure
@@ -112,58 +114,72 @@
           href: audience-insights/machine-learning-studio-experiments.md
     - name: Xuất tùy chọn
       items:
-        - name: Tổng quan về nơi xuất đích
-          href: audience-insights/export-destinations.md
-        - name: AdRoll
-          href: audience-insights/export-adroll.md
-        - name: Adobe Campaign Standard
-          href: audience-insights/export-adobe-campaign-standard.md
-        - name: Nền tảng trải nghiệm Adobe
-          href: audience-insights/export-adobe-experience-platform.md
-        - name: Autopilot
-          href: audience-insights/export-autopilot.md
-        - name: Azure Blob Storage
-          href: audience-insights/export-azure-blob-storage.md
-        - name: Azure Data Lake Storage Gen2
-          href: audience-insights/export-azure-data-lake-storage-gen2.md
-        - name: DotDigital
-          href: audience-insights/export-dotdigital.md
-        - name: Dynamics 365 Customer Service (Trình bổ sung)
-          href: audience-insights/customer-card-add-in.md
-        - name: Dynamics 365 Marketing
-          href: audience-insights/export-dynamics365-marketing.md
-        - name: Dynamics 365 Sales
-          href: audience-insights/export-dynamics365-sales.md
-        - name: Trung tâm bán hàng Dynamics 365 (Trình bổ sung)
-          href: audience-insights/customer-card-add-in.md
-        - name: Trình quản lý quảng cáo Facebook
-          href: audience-insights/export-facebook.md
-        - name: Google Ads
-          href: audience-insights/export-google-ads.md
-        - name: LiveRamp
-          href: audience-insights/export-liveramp.md
-        - name: Mailchimp
-          href: audience-insights/export-mailchimp.md
-        - name: Microsoft Teams (bot)
-          href: audience-insights/export-teams-bot.md
-        - name: Marketo
-          href: audience-insights/export-marketo.md
-        - name: Power BI
-          href: audience-insights/export-power-bi.md
-        - name: Power Apps
-          href: audience-insights/export-power-apps.md
-        - name: Power Automate
-          href: audience-insights/export-power-automate.md
-        - name: SendGrid
-          href: audience-insights/export-sendgrid.md
-        - name: SFTP
-          href: audience-insights/export-sftp.md
+        - name: Nội dung xuất
+          items:
+            - name: Tổng quan về trang Nội dung xuất (bản xem trước)
+              href: audience-insights/export-destinations.md
+            - name: AdRoll
+              href: audience-insights/export-adroll.md
+            - name: Autopilot
+              href: audience-insights/export-autopilot.md
+            - name: Azure Blob Storage
+              href: audience-insights/export-azure-blob-storage.md
+            - name: Azure Data Lake Storage Gen2
+              href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Adobe Campaign Standard
+              href: audience-insights/export-adobe-campaign-standard.md
+            - name: Nền tảng trải nghiệm Adobe
+              href: audience-insights/export-adobe-experience-platform.md
+            - name: Campaign Monitor
+              href: audience-insights/export-campaign-monitor.md
+            - name: Constant Contact
+              href: audience-insights/export-constant-contact.md
+            - name: DotDigital
+              href: audience-insights/export-dotdigital.md
+            - name: Dynamics 365 Marketing
+              href: audience-insights/export-dynamics365-marketing.md
+            - name: Dynamics 365 Sales
+              href: audience-insights/export-dynamics365-sales.md
+            - name: Trình quản lý quảng cáo Facebook
+              href: audience-insights/export-facebook.md
+            - name: Google Ads
+              href: audience-insights/export-google-ads.md
+            - name: LiveRamp
+              href: audience-insights/export-liveramp.md
+            - name: Mailchimp
+              href: audience-insights/export-mailchimp.md
+            - name: Marketo
+              href: audience-insights/export-marketo.md
+            - name: RollWorks
+              href: audience-insights/export-rollworks.md
+            - name: SendGrid
+              href: audience-insights/export-sendgrid.md
+            - name: Snapchat
+              href: audience-insights/export-snapchat.md
+            - name: SFTP
+              href: audience-insights/export-sftp.md
+        - name: Cách sử dụng khác
+          items:
+            - name: Dynamics 365 Customer Service (Trình bổ sung)
+              href: audience-insights/customer-card-add-in.md
+            - name: Trung tâm bán hàng Dynamics 365 (Trình bổ sung)
+              href: audience-insights/customer-card-add-in.md
+            - name: Microsoft Teams (bot)
+              href: audience-insights/export-teams-bot.md
+            - name: Power Apps
+              href: audience-insights/export-power-apps.md
+            - name: Power Automate
+              href: audience-insights/export-power-automate.md
+            - name: Power BI
+              href: audience-insights/export-power-bi.md
     - name: Quản trị
       items:
         - name: Thiết lập cấu hình hệ thống
           href: audience-insights/system.md
         - name: Chỉ định quyền của người dùng
           href: audience-insights/permissions.md
+        - name: Tổng quan về kết nối (bản xem trước)
+          href: audience-insights/connections.md
         - name: Quản lý nhiều môi trường
           href: audience-insights/manage-environments.md
         - name: Kết nối với tài khoản lưu trữ ADLS sử dụng Dịch vụ chính
@@ -216,7 +232,11 @@
           href: engagement-insights/custom-reports.md
         - name: Tạo báo cáo hồ sơ hợp nhất
           href: engagement-insights/profile-reports.md
-    - name: Tài nguyên cho nhà phát triển
+    - name: Phân tích hành trình
+      items:
+        - name: Tạo và quản lý báo cáo phễu
+          href: engagement-insights/funnel-reports.md
+    - name: Nguồn lực dành cho nhà phát triển
       items:
         - name: Tổng quan về tài nguyên dành cho nhà phát triển
           href: engagement-insights/developer-resources.md
