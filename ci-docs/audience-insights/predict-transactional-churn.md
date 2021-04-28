@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597215"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906882"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Dự đoán rời bỏ giao dịch (bản xem trước)
 
@@ -46,6 +46,14 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
         - **Dấu thời gian:** Ngày và giờ của sự kiện do khóa chính xác định.
         - **Sự kiện:** Tên của sự kiện bạn muốn sử dụng. Ví dụ: trường có tên "UserAction" trong cửa hàng tạp hóa có thể được khách hàng sử dụng phiếu giảm giá.
         - **Chi tiết:** Thông tin chi tiết về sự kiện. Ví dụ: trường có tên "CouponValue" trong cửa hàng tạp hóa có thể là giá trị tiền tệ của phiếu giảm giá.
+- Đặc điểm dữ liệu được đề xuất:
+    - Đủ dữ liệu lịch sử: Dữ liệu giao dịch cho ít nhất gấp đôi khoảng thời gian đã chọn. Tốt nhất là hai đến ba năm dữ liệu gói đăng ký. 
+    - Nhiều giao dịch mua trên mỗi khách hàng: Lý tưởng là tối thiểu hai giao dịch trở lên trên mỗi khách hàng.
+    - Số lượng khách hàng: Tối thiểu 10 hồ sơ khách hàng, tốt nhất là 1.000 khách hàng. Mô hình sẽ không thành công nếu dưới 10 khách hàng và không đủ dữ liệu lịch sử.
+    - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường dữ liệu của thực thể được cung cấp.
+
+> [!NOTE]
+> Đối với doanh nghiệp có tần suất mua hàng của khách hàng cao (vài tuần một lần), bạn nên chọn khoảng thời gian dự đoán ngắn hơn và xác định rủi ro khách hàng ngừng giao dịch. Đối với tần suất mua hàng thấp (vài tháng một lần hoặc một năm một lần), hãy chọn khoảng thời gian dự đoán dài hơn và xác định rủi ro khách hàng ngừng giao dịch.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Tạo dự đoán rời bỏ giao dịch
 
@@ -129,7 +137,9 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
 1. Chọn dự đoán bạn muốn xem lại.
    - **Tên dự đoán:** Tên của dự đoán được cung cấp khi tạo.
    - **Loại dự đoán:** Loại mô hình được sử dụng cho dự đoán
-   - **Thực thể đầu ra:** Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.
+   - **Thực thể đầu ra:** Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.    
+     Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-new-segment) với ngưỡng bạn muốn.
+     Không phải khách hàng nào cũng nhất thiết phải là khách hàng hiện hoạt. Một số khách hàng có thể không có bất kỳ hoạt động nào trong một thời gian dài và được coi là đã ngừng giao dịch, dựa trên sự xác định của bạn về khách hàng ngừng giao dịch. Việc dự đoán rủi ro khách hàng ngừng giao dịch đối với những khách hàng đã ngừng giao dịch là không hữu ích vì họ không phải là đối tượng cần quan tâm.
    - **Trường dự đoán:** Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán rời đi.
    - **Trạng thái:** Trạng thái chạy dự đoán.
         - **Đã xếp hàng:** Dự đoán đang đợi các quy trình khác chạy.

@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598531"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896261"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong khả năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598531"
 
 Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch dài hạn đối với tính năng, hãy xem [kế hoạch phát hành Dynamics 365 và Power Platform](/dynamics365/release-plans/).
 
-Bạn cũng có thể xem video sau để tìm hiểu thêm về các khả năng được lên kế hoạch cho sáu tháng qua.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng khu vực. Do đó, một số khu vực sẽ thấy các tính năng trước khu vực khác. Trừ khi có lưu ý khác, bạn sẽ không phải thực hiện nào và chúng tôi sẽ tự động cập nhật ứng dụng mà không gây ra thời gian ngừng hoạt động.
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Các bản cập nhật tháng 3 năm 2021
+
+Các bản cập nhật vào tháng 3 năm 2021 bao gồm một số tính năng, bản nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="activities"></a>Hoạt động
+
+- **Trình hướng dẫn hoạt động và các loại ngữ nghĩa** Chúng tôi đã cải thiện và cập nhật trải nghiệm ánh xạ hoạt động để hướng dẫn và đơn giản hóa việc tạo quá trình ánh xạ hoạt động. Trong phiên bản mới này, người dùng nhận được trải nghiệm có hướng dẫn để giúp hoàn thành từng bước của quy trình. Ở bước ánh xạ hoạt động, ngoài việc chọn từ nhiều loại hoạt động, người dùng có thể chọn ánh xạ dữ liệu theo ngữ nghĩa cho *Subscription* và/hoặc *SalesOrderLine* với các lược đồ theo tiêu chuẩn của ngành (có thể được dùng cho trường hợp sử dụng ở hạ nguồn).    
+  Để biết thêm thông tin, hãy xem [Hoạt động của khách hàng](activities.md).
+
+### <a name="data-ingestion"></a>Nhập dữ liệu
+
+- **Kết nối với nguồn dữ liệu tại chỗ bằng cách sử dụng các cổng và luồng dữ liệu Power Platform** Chúng tôi vui mừng công bố bản xem trước của luồng dữ liệu Power Platform và khả năng kết nối tại chỗ thông qua các cổng trong Customer Insights có môi trường Power Platform hoặc Dataverse được liên kết. Mọi nguồn dữ liệu mới tạo trong môi trường Customer Insights có môi trường Dataverse được liên kết sẽ mặc định là luồng dữ liệu Power Platform mang lại khả năng kết nối dữ liệu tại chỗ và một bộ trình kết nối cũng như khả năng chuyển đổi phong phú.
+
+### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Nội dung xuất được sắp xếp theo các kết nối và nội dung xuất** Chúng tôi đã thay đổi tên của trang **Đích xuất** thành **Kết nối** và đã thêm một trang riêng biệt cho **Nội dung xuất**. Là một phần của bản cập nhật này, chúng tôi sẽ chuyển các nội dung xuất hiện có thành các cặp kết nối và nội dung xuất sử dụng kết nối đó. Quản trị viên hiện đã hiểu rõ hơn về dữ liệu gửi đi trên trang **Kết nối**. Tất cả các vai trò người dùng đều có quyền truy cập vào trang **Nội dung xuất** nhưng chỉ có quản trị viên là có thể chọn cho phép người đóng góp chỉnh sửa các nội dung xuất cụ thể bằng các kết nối được chia sẻ.     
+  Để biết thêm thông tin, hãy xem [Tổng quan về kết nối](connections.md) và [Tổng quan về nội dung xuất](export-destinations.md).
+
+- **Xuất phân khúc sang Campaign Monitor** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Campaign Monitor. Giờ đây, bạn có thể xuất các phân khúc từ danh sách trên Customer Insights sang Campaign Monitor và sử dụng chúng làm cơ sở cho các chiến dịch tiếp thị của mình.    
+   Để biết thêm thông tin, hãy xem [Xuất sang Campaign Monitor](export-campaign-monitor.md).
+
+- **Xuất phân khúc sang Constant Contact** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Constant Contact. Giờ đây, bạn có thể xuất các phân khúc từ danh sách trên Customer Insights sang Constant Contact và sử dụng chúng làm cơ sở cho các chiến dịch tiếp thị của mình.   
+   Để biết thêm thông tin, hãy xem [Xuất sang Constant Contact](export-constant-contact.md).
+
+- **Xuất phân khúc sang RollWorks** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả RollWorks. Giờ đây, bạn có thể xuất các phân khúc từ Customer Insights sang RollWorks audiences và sử dụng chúng làm cơ sở cho quảng cáo B2B của bạn.    
+   Để biết thêm thông tin, hãy xem [Xuất sang RollWorks ](export-rollworks.md).
+
+- **Xuất phân khúc sang Snapchat** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Snapchat. Giờ đây, bạn có thể xuất các phân khúc từ Customer Insights sang Snapchat và sử dụng chúng làm cơ sở cho quảng cáo của bạn.     
+   Để biết thêm thông tin, hãy xem [Xuất sang Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Dự đoán
+
+- **Sử dụng bộ lọc sản phẩm trong các đề xuất về sản phẩm dự đoán** Chúng tôi đã thêm tính năng sử dụng bộ lọc sản phẩm trong mô hình đề xuất sản phẩm của mình. Giờ đây, bạn có thể tạo dự đoán chỉ sử dụng một tập hợp con các sản phẩm của bạn.    
+   Để biết thêm thông tin, hãy xem [Đặt cấu hình bộ lọc sản phẩm](predict-product-recommendation.md#configure-product-filters).
+
+- **Tạo phân khúc từ dự đoán mô hình** Chúng tôi đã bổ sung một cách thức nhanh chóng để tạo phân khúc bằng kết quả của mô hình dự đoán. Từ trang kết quả của mô hình, bạn có thể dễ dàng tạo một phân khúc mới bằng cách chọn tùy chọn **Tạo phân khúc**.    
+  Để biết thêm thông tin, hãy xem [Tạo phân khúc dựa trên mô hình dự đoán](prediction-based-segment.md).
+
+- **Giải thích cho các đề xuất về sản phẩm** Chúng tôi đã bổ sung thông tin giải thích các yếu tố chính mà mô hình AI học được để đưa ra các đề xuất về sản phẩm và mức độ mà các yếu tố đó đóng góp vào các đề xuất về sản phẩm. Thông tin này được thêm vào màn hình kết quả của mô hình.    
+   Để biết thêm thông tin, hãy xem [Xem lại dự đoán trạng thái và kết quả](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Bản cập nhật tháng 2 năm 2021
 
@@ -107,7 +144,7 @@ Các bản cập nhật vào tháng 12 năm 2020 bao gồm một số tính năn
 
   Ngoài ra, chúng tôi đã thêm các tùy chọn cấu hình mới để kiểm soát tốt hơn cách bạn muốn làm phong phú hồ sơ khách hàng của mình. 
 
-  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft-graph.md).
+  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft.md).
 
 - **Kiểm soát cấu hình cần làm phong phú**
 
@@ -309,8 +346,8 @@ Bản cập nhật tháng 8 năm 2020 bao gồm một số tính năng, phần n
 
 - **Tính năng làm phong phú sở thích có sẵn ở nhiều thị trường hơn**
 
-  Chúng tôi đang mở rộng phạm vi cung cấp dịch vụ làm phong phú sở thích từ Hoa Kỳ sang năm thị trường khác: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú thêm dữ liệu khách hàng của mình với nhiều sở thích hơn áp dụng cho các thị trường này. Chúng tôi cũng sẽ làm phong phú hồ sơ khách hàng của bạn ở những thị trường này bằng cách dùng dữ liệu độc quyền tại địa phương từ Microsoft Graph.
-  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng mối quan tâm về sở thích và thương hiệu](enrichment-microsoft-graph.md)
+  Chúng tôi đang mở rộng phạm vi cung cấp dịch vụ làm phong phú sở thích từ Hoa Kỳ sang năm thị trường khác: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú thêm dữ liệu khách hàng của mình với nhiều sở thích hơn áp dụng cho các thị trường này. Chúng tôi cũng sẽ làm phong phú thêm hồ sơ khách hàng của bạn tại các thị trường này bằng cách sử dụng dữ liệu độc quyền tại địa phương từ Microsoft.
+  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng mối quan tâm về sở thích và thương hiệu](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Bản cập nhật tháng 7 năm 2020
@@ -330,8 +367,8 @@ Bản cập nhật tháng 7 năm 2020 bao gồm một vài tính năng, nâng c�
 
 - **Tính năng làm phong phú thương hiệu có sẵn ở nhiều thị trường hơn**
 
-  Chúng tôi đang mở rộng phạm vi cung cấp dịch vụ làm phong phú thương hiệu từ Hoa Kỳ sang năm thị trường khác: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú dữ liệu của khách hàng bằng các thương hiệu địa phương ở những thị trường này. Chúng tôi cũng sẽ làm phong phú hồ sơ khách hàng của bạn ở những thị trường này bằng cách dùng dữ liệu độc quyền tại địa phương từ Microsoft Graph.
-  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng mối quan tâm về sở thích và thương hiệu](enrichment-microsoft-graph.md)
+  Chúng tôi đang mở rộng phạm vi cung cấp dịch vụ làm phong phú thương hiệu từ Hoa Kỳ sang năm thị trường khác: Canada, Úc, Vương quốc Anh, Pháp và Đức. Với sự mở rộng này, bạn có thể làm phong phú dữ liệu của khách hàng bằng các thương hiệu địa phương ở những thị trường này. Chúng tôi cũng sẽ làm phong phú thêm hồ sơ khách hàng của bạn tại các thị trường này bằng cách sử dụng dữ liệu độc quyền tại địa phương từ Microsoft.
+  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng mối quan tâm về sở thích và thương hiệu](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Bản cập nhật tháng 6 năm 2020
 
@@ -355,7 +392,7 @@ Bản cập nhật tháng 6 năm 2020 bao gồm một vài tính năng, nâng c�
 - **Nội dung phong phú về sở thích và thương hiệu riêng biệt**
 
   Thương hiệu và sở thích hiện có dưới dạng hai loại nội dung phong phú độc lập. Các nội dung phong phú riêng biệt giúp bạn linh hoạt trong việc cấu hình và quản lý từng nội dung, tùy theo yêu cầu hoặc nhu cầu của doanh nghiệp.    
-  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft-graph.md).
+  Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Khả năng mở rộng
 

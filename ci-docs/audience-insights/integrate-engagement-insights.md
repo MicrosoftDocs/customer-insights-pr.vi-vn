@@ -9,12 +9,12 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 14ebff30d3ec7fc52dca6f86136309a3f454fa27
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597491"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896445"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Tích hợp dữ liệu web từ thông tin chi tiết về mức độ tương tác với thông tin chi tiết về đối tượng
 
@@ -46,7 +46,7 @@ Các cân nhắc khi tạo các sự kiện tinh chỉnh:
     - Signal.Action.Name - cho biết chi tiết về hoạt động
     - Signal.User.Id - được dùng để ánh xạ với ID khách hàng
     - Signal.View.Uri - được sử dụng làm địa chỉ web làm cơ sở cho các phân đoạn hoặc giá trị đo
-    - Signal.Export.Id - để dùng làm khóa chính cho sự kiện <!-- system generated, do we need to list?-->
+    - Signal.Export.Id - để dùng làm khóa chính cho sự kiện
     - Signal.Timestamp - để xác định ngày và giờ cho hoạt động
 
 Chọn bộ lọc để tập trung vào các sự kiện và trang quan trọng cho trường hợp sử dụng của bạn. Trong ví dụ này, chúng tôi sẽ sử dụng tên hành động "Quảng cáo qua email".

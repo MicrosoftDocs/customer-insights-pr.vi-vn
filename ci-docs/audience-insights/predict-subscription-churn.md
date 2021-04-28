@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595682"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906928"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Dự đoán sự rời đi đăng ký (xem trước)
 
@@ -49,6 +49,12 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
         - **Dấu thời gian:** Ngày và giờ của sự kiện do khóa chính xác định.
         - **Sự kiện:** Tên của sự kiện bạn muốn sử dụng. Ví dụ: một trường có tên "UserAction" trong dịch vụ truyền phát video có thể có giá trị là "Đã xem".
         - **Chi tiết:** Thông tin chi tiết về sự kiện. Ví dụ: một trường có tên "ShowTitle" trong dịch vụ truyền phát video có thể có giá trị là video mà khách hàng đã xem.
+- Đặc điểm dữ liệu được đề xuất:
+    - Đủ dữ liệu lịch sử: Dữ liệu gói đăng ký cho ít nhất gấp đôi khoảng thời gian đã chọn. Tốt nhất là hai đến ba năm dữ liệu gói đăng ký.
+    - Trạng thái gói đăng ký: Dữ liệu bao gồm các gói đăng ký hiện hoạt và không hoạt động của từng khách hàng nên có nhiều mục nhập cho mỗi ID khách hàng.
+    - Số lượng khách hàng: Tối thiểu 10 hồ sơ khách hàng, tốt nhất là 1.000 khách hàng. Mô hình sẽ không thành công nếu dưới 10 khách hàng và không đủ dữ liệu lịch sử.
+    - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường dữ liệu của thực thể được cung cấp.
+   
    > [!NOTE]
    > Bạn sẽ cần ít nhất hai bản ghi hoạt động cho 50% khách hàng mà bạn muốn tính toán sự rời bỏ.
 
@@ -67,7 +73,7 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
 ### <a name="define-customer-churn"></a>Xác định khách hàng rời đi
 
 1. Nhập số **Ngày kể từ khi đăng ký kết thúc** mà doanh nghiệp của bạn xem xét một khách hàng là đang ở trong trạng thái rời đi. Giai đoạn này thường giống như các hoạt động kinh doanh như chào hàng hoặc các nỗ lực tiếp thị khác nhằm cố ngăn chặn mất khách hàng.
-1. Nhập số lượng **Ngày xem xét trong tương lai để dự đoán sự rời đi** để đặt cửa sổ dự đoán sự rời bỏ. Ví dụ: để dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro rời bỏ trong khoảng thời gian dài hơn hoặc ngắn hơn có thể khiến việc giải quyết các yếu tố trong hồ sơ rủi ro rời bỏ trở nên khó khăn hơn, nhưng điều này phụ thuộc nhiều vào các yêu cầu kinh doanh cụ thể của bạn. Chọn **Tiếp** tiếp tục
+1. Nhập số lượng **Ngày xem xét trong tương lai để dự đoán sự rời đi** để đặt cửa sổ dự đoán sự rời bỏ. Ví dụ: để dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro khách hàng ngừng sử dụng gói đăng ký trong khoảng thời gian dài hơn hoặc ngắn hơn có thể khiến việc xử lý các yếu tố trong hồ sơ rủi ro khách hàng ngừng sử dụng gói đăng ký của bạn gặp nhiều khó khăn hơn, tùy thuộc vào yêu cầu kinh doanh cụ thể của bạn. Chọn **Tiếp** tiếp tục
    >[!TIP]
    > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
 
@@ -113,7 +119,8 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
 1. Chọn dự đoán bạn muốn xem lại.
    - **Tên dự đoán:** Tên của dự đoán được cung cấp khi tạo.
    - **Loại dự đoán:** Loại mô hình dùng cho dự đoán
-   - **Thực thể đầu ra:** Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.
+   - **Thực thể đầu ra:** Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.    
+     Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-new-segment) với ngưỡng bạn muốn.
    - **Trường dự đoán:** Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán rời bỏ đăng ký.
    - **Trạng thái:** Trạng thái hiện tại của lần chạy dự đoán.
         - **Xếp hàng đợi:"** Dự đoán hiện đang chờ quá trình khác chạy.

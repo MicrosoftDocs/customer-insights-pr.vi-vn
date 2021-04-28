@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Adobe Campaign Standard
 description: Tìm hiểu cách sử dụng phân đoạn thông tin chi tiết về đối tượng trong Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596341"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760307"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Sử dụng phân đoạn Customer Insights trong Adobe Campaign Standard (xem trước)
 
@@ -48,15 +48,21 @@ Email ưu đãi mà bạn muốn gửi sẽ chứa tên, họ, và ngày kết t
 
 ## <a name="export-your-target-audience"></a>Xuất đối tượng mục tiêu của bạn
 
+### <a name="configure-a-connection"></a>Đặt cấu hình kết nối
+
 Với đối tượng mục tiêu đã được xác định, chúng tôi có thể định cấu hình xuất từ thông tin chi tiết về đối tượng sang tài khoản Lưu trữ Azure Blob.
 
-1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Nơi xuất đích**.
+1. Trong thông tin chi tiết về đối tượng, hãy đi đến **Quản trị viên** > **Kết nối**.
 
-1. Trong ngăn xếp **Adobe Campaign**, chọn **Thiết lập**.
+1. Chọn **Thêm kết nối** rồi chọn **Chiến dịch Adobe** để đặt cấu hình kết nối hoặc chọn **Thiết lập** trong ngăn xếp **Chiến dịch Adobe**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Ngăn xếp cấu hình cho Adobe Campaign Standard.":::
 
-1. Cung cấp **Tên hiển thị** cho đích xuất mới này rồi nhập **Tên tài khoản**, **Khóa tài khoản** và **Vùng chứa** của tài khoản Lưu trữ Azure Blob nơi bạn muốn xuất phân khúc.  
+1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
+
+1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+
+1. Nhập **Tên tài khoản**, **Khóa tài khoản** và **Bộ chứa** của tài khoản Azure Blob Storage mà bạn muốn xuất phân khúc sang.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Ảnh chụp màn hình cấu hình tài khoản lưu trữ. "::: 
 
@@ -64,7 +70,17 @@ Với đối tượng mục tiêu đã được xác định, chúng tôi có th
 
    - Để tìm hiểu cách tạo bộ chứa, hãy xem [Tạo bộ chứa](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Chọn **Tiếp theo**.
+1. Chọn **Lưu** để hoàn thành kết nối.
+
+### <a name="configure-an-export"></a>Đặt cấu hình xuất
+
+Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+
+1. Đi tới **Dữ liệu** > **Nội dung xuất**.
+
+1. Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.
+
+1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Adobe Campaign. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
 
 1. Chọn phân khúc mà bạn muốn xuất. Trong ví dụ này, phân khúc đó là **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Với đối tượng mục tiêu đã được xác định, chúng tôi có th
 
 1. Chọn **Lưu**.
 
-Sau khi lưu đích xuất, bạn sẽ tìm thấy trên **Quản trị** > **Xuất** > **Đích xuất**.
+Sau khi lưu đích xuất, bạn sẽ thấy đích này trên **Dữ liệu** > **Nội dung xuất**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Ảnh chụp màn hình với danh sách các mục xuất và phân khúc mẫu được đánh dấu.":::
-
-Bây giờ, bạn có thể [xuất phân khúc theo yêu cầu](export-destinations.md#export-data-on-demand). Mỗi lần [làm mới theo lịch](system.md), tác vụ xuất cũng sẽ chạy.
+Bây giờ, bạn có thể [xuất phân khúc theo yêu cầu](export-destinations.md#run-exports-on-demand). Mỗi lần [làm mới theo lịch](system.md), tác vụ xuất cũng sẽ chạy.
 
 > [!NOTE]
 > Đảm bảo rằng số lượng bản ghi trong phân khúc đã xuất nằm trong giới hạn cho phép của giấy phép Adobe Campaign Standard.

@@ -1,7 +1,7 @@
 ---
 title: Tăng cường với Experian tăng cường của bên thứ ba
 description: Thông tin chung về tăng cường của bên thứ ba Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597813"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896399"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu nhân khẩu học từ Experian (bản xem trước)
 
@@ -25,10 +25,10 @@ Experian là công ty tiên phong toàn cầu về các dịch vụ tiếp thị
 Để đặt cấu hình Experian, các điều kiện tiên quyết sau phải được đáp ứng:
 
 - Bạn có gói đăng ký Experian đang hoạt động. Để đăng ký, hãy [liên hệ trực tiếp với Experian](https://www.experian.com/marketing-services/contact). [Tìm hiểu thêm về Tăng cường dữ liệu bằng Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Bạn có ID người dùng, ID bên và Số mô hình cho tài khoản Secure Transport (ST) hỗ trợ SSH của mình mà Experian đã tạo cho bạn.
-- Bạn có quyền [Quản trị viên](permissions.md#administrator) trong thông tin chi tiết về đối tượng.
 
-## <a name="configuration"></a>Cấu hình
+- Một kết nối Experian đã được quản trị viên đặt cấu hình *hoặc* bạn có quyền của [quản trị viên](permissions.md#administrator). Bạn cũng cần ID người dùng, ID bên và Số mô hình cho tài khoản Truyền tải an toàn (ST) có hỗ trợ SSH mà Experian đã tạo cho bạn.
+
+## <a name="configure-the-enrichment"></a>Đặt cấu hình nội dung bổ sung
 
 1. Đi đến **Dữ liệu** > **Tăng cường** và chọn tab **Khám phá**.
 
@@ -36,26 +36,46 @@ Experian là công ty tiên phong toàn cầu về các dịch vụ tiếp thị
 
    > [!div class="mx-imgBorder"]
    > ![Ngăn xếp Experian](media/experian-tile.png "Ngăn xếp Experian")
+   > 
 
-1. Chọn **Bắt đầu** rồi nhập ID người dùng, ID bên và Số mô hình cho tài khoản Experian Secure Transport của bạn. Xem lại và đồng ý với **Quyền riêng tư và tuân thủ dữ liệu** bằng cách đánh dấu ô **Tôi đồng ý**. Xác nhận tất cả các đầu vào bằng cách chọn **Áp dụng**.
+1. Chọn một [kết nối](connections.md) từ danh sách thả xuống. Liên hệ với quản trị viên nếu không có kết nối. Nếu là quản trị viên, bạn có thể tạo kết nối bằng cách chọn **Thêm kết nối** rồi chọn Experian từ menu thả xuống. 
 
-## <a name="map-your-fields"></a>Ánh xạ trường của bạn
+1. Chọn **Kết nối với Experian** để xác nhận lựa chọn kết nối.
 
-1.  Chọn **Thêm dữ liệu** và chọn **tập dữ liệu khách hàng** bạn muốn làm phong phú bằng dữ liệu nhân khẩu học từ Experian. Bạn có thể chọn thực thể **khách hàng** để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+1.  Chọn **Tiếp** rồi chọn **Tập hợp dữ liệu khách hàng** mà bạn muốn bổ sung thêm dữ liệu nhân khẩu học từ Experian. Bạn có thể chọn thực thể **khách hàng** để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Chọn số nhận dạng chính của bạn từ **Tên và địa chỉ**, **Email** hoặc **Điện thoại** để gửi đến Experian để phân giải danh tính.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Ảnh chụp màn hình khi chọn tập dữ liệu khách hàng.":::
 
-   > [!TIP]
-   > Nhiều thuộc tính mã định danh chính được gửi đến Experian có thể cho tỷ lệ khớp cao hơn.
+1. Chọn **Tiếp** và xác định loại trường nào từ hồ sơ hợp nhất của bạn sẽ được sử dụng để tìm kiếm dữ liệu nhân khẩu học phù hợp từ Experian. Ít nhất một trong các trường **Tên và địa chỉ**, **Điện thoại** hoặc **Email** là bắt buộc. Để có độ chính xác đối sánh cao hơn, có thể thêm tối đa hai trường khác. Lựa chọn này sẽ ảnh hưởng đến các trường ánh xạ mà bạn có quyền truy cập trong bước tiếp theo.
 
-1. Chọn **Tiếp** và ánh xạ các thuộc tính tương ứng từ thực thể khách hàng hợp nhất của bạn cho các trường mã định danh chính đã chọn.
+    > [!TIP]
+    > Nhiều thuộc tính mã định danh chính được gửi đến Experian có thể cho tỷ lệ khớp cao hơn.
 
-1. Chọn **Thêm thuộc tính** để ánh xạ thêm thuộc tính mà bạn muốn gửi đến Experian.
+1. Chọn **Tiếp** để bắt đầu quá trình ánh xạ trường.
 
-1.  Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
+1. Xác định loại trường nào từ hồ sơ hợp nhất của bạn sẽ được sử dụng để tìm kiếm dữ liệu nhân khẩu học phù hợp từ Experian. Các trường bắt buộc đều được đánh dấu.
 
-    > [!div class="mx-imgBorder"]
-    > ![Ánh xạ trường Experian](media/experian-field-mapping.png "Ánh xạ trường Experian")
+1. Đặt tên cho nội dung bổ sung và tên cho thực thể đầu ra.
+
+1. Chọn **Lưu nội dung bổ sung** sau khi xem xét các lựa chọn của bạn.
+
+## <a name="configure-the-connection-for-experian"></a>Đặt cấu hình kết nối cho Experian 
+
+Bạn cần phải là quản trị viên thì mới có thể đặt cấu hình kết nối. Chọn **Thêm kết nối** khi đặt cấu hình nội dung bổ sung *hoặc* đi đến **Quản trị viên** > **Kết nối** rồi chọn **Thiết lập** trên ngăn xếp Experian.
+
+1. Chọn **Bắt đầu**.
+
+1. Nhập tên cho kết nối trong hộp **Tên hiển thị**.
+
+1. Nhập ID người dùng, ID bên và Số mô hình hợp lệ cho tài khoản Truyền tải an toàn Experian của bạn.
+
+1. Xem lại và đồng ý với **Quyền riêng tư về dữ liệu và tuân thủ** bằng cách đánh dấu vào hộp kiểm **Tôi đồng ý**
+
+1. Chọn **Xác minh** để xác thực cấu hình.
+
+1. Sau khi hoàn thành xác minh, hãy chọn **Lưu**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Ngăn cấu hình kết nối Experian.":::
 
 ## <a name="enrichment-results"></a>Kết quả làm phong phú
 

@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598656"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896491"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
 
@@ -27,9 +27,9 @@ Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khá
   - Kết nối và thống nhất dữ liệu dễ dàng — mang lại dữ liệu giao dịch, quan sát và hành vi từ các [nguồn dữ liệu phổ biến bằng cách sử dụng các trình kết nối được xây dựng sẵn](data-sources.md).
   - Chuyển đổi dữ liệu khách hàng thông minh — xây dựng hồ sơ khách hợp nhất tuân thủ [Common Data Model](/common-data-model/). Giải quyết vấn đề danh tính khách hàng với đề xuất hướng AI/ML.
 
-- **Cung cấp thông tin phong phú với thông tin đối tượng chứa trong Microsoft graph**
+- **Bổ sung thông tin về đối tượng**
 
-  - Xây dựng hồ sơ khách hàng phong phú hơn bằng cách [kết hợp thông tin đối tượng chứa trong Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Xây dựng hồ sơ khách hàng phong phú hơn bằng cách [kết hợp dữ liệu được bổ sung](enrichment-hub.md).  
 
 - **Tạo sức mạnh cho quy trình kinh doanh và trải nghiệm khách hàng theo cá nhân**
 
@@ -43,7 +43,7 @@ Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khá
 
   - Truy cập vào một bộ sưu các trình kết nối phong phú để nhập tất cả các dữ liệu khách hàng của bạn.
   - Khả năng thống nhất dữ liệu khách hàng và biến nó thành định dạng [Common Data Model](/common-data-model/).
-  - Làm phong phú thêm thông tin khách hàng với những hiểu biết từ thông tin đối tượng chứa trong Microsoft Graph, chẳng hạn như mối quan hệ thương hiệu và sở thích.
+  - Làm phong phú thông tin về khách hàng bằng thông tin chi tiết từ thông tin về đối tượng, chẳng hạn như mối quan hệ thương hiệu và sở thích.
   - Cấu hình "nhấp chuột-không-mã" và trải nghiệm gỡ lỗi giúp dễ dàng định cấu hình thông tin chi tiết về đối tượng và nhận dạng các sự cố tiềm ẩn.
   - Làm sạch và chuẩn hóa dữ liệu khách hàng qua các nguồn khác nhau với các khuyến nghị theo AI.  
 

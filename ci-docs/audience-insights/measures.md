@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý các giá trị đo
 description: Xác định các giá trị đo để phân tích và phản ánh tình hình hoạt động của doanh nghiệp bạn.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654758"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887966"
 ---
 # <a name="define-and-manage-measures"></a>Xác định và quản lý các biện pháp
 
-Các giá trị đo giúp bạn hiểu rõ hơn về hành vi của khách hàng và hiệu suất kinh doanh bằng cách truy xuất các giá trị có liên quan từ [hồ sơ thống nhất](data-unification.md). Ví dụ: một doanh nghiệp muốn xem *tổng chi tiêu mỗi khách hàng* để hiểu lịch sử mua hàng của từng khách hàng. Hoặc đo lường *tổng doanh số của công ty* để hiểu tổng doanh thu trong toàn bộ doanh nghiệp.  
+Giá trị đo giúp bạn hiểu rõ hơn về hành vi của khách hàng và hiệu quả kinh doanh. Giá trị đo xem xét các giá trị có liên quan từ [hồ sơ hợp nhất](data-unification.md). Ví dụ: một doanh nghiệp muốn xem *tổng số tiền chi tiêu của mỗi khách hàng* để hiểu lịch sử mua hàng của từng khách hàng hoặc đo lường *tổng doanh số của công ty* để hiểu tổng doanh thu trong toàn bộ doanh nghiệp.  
 
 Các giá trị đo được tạo bằng cách sử dụng trình tạo giá trị đo, một nền tảng truy vấn dữ liệu với các toán tử khác nhau và các tùy chọn ánh xạ đơn giản. Nó cho phép bạn lọc dữ liệu, nhóm kết quả, phát hiện [đường dẫn mối quan hệ thực thể](relationships.md) và xem trước đầu ra.
 
 Hãy sử dụng trình tạo giá trị đo để lập kế hoạch hoạt động kinh doanh bằng cách truy vấn dữ liệu khách hàng và trích xuất thông tin chi tiết. Ví dụ: tạo một giá trị đo *tổng chi tiêu mỗi khách hàng* và *tổng lợi nhuận trên mỗi khách hàng* giúp xác định nhóm khách hàng có mức chi tiêu cao nhưng lợi nhuận thu về cao. Bạn có thể [tạo một phân đoạn](segments.md) để thúc đẩy các hành động tốt nhất tiếp theo. 
 
-## <a name="create-a-measure"></a>Tạo giá trị đo
+## <a name="build-your-own-measure-from-scratch"></a>Tạo giá trị đo của riêng bạn từ đầu
 
 Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới từ đầu. Bạn có thể tạo một giá trị đo với các thuộc tính dữ liệu từ các thực thể dữ liệu có mối quan hệ được thiết lập để kết nối với thực thể Khách hàng. 
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Giá trị đo**.
 
-1. Chọn **Mới**.
+1. Chọn **Mới** rồi chọn **Tạo giá trị đo riêng**.
 
 1. Chọn **Chỉnh sửa tên** và cung cấp một **Tên** cho giá trị đo. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
    1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính. Theo mặc định, thứ nguyên *ID khách hàng* được chọn để tạo *giá trị đo cấp khách hàng*. Bạn có thể xóa thứ nguyên mặc định nếu muốn tạo *giá trị đo cấp doanh nghiệp*.
    1. Chọn **Xong** để thêm các thứ nguyên vào giá trị đo.
 
+1. Nếu có các giá trị trong dữ liệu của bạn mà bạn cần thay thế bằng một số nguyên, chẳng hạn như thay thế *null* bằng *0*, hãy chọn **Quy tắc**. Đặt cấu hình quy tắc và đảm bảo rằng bạn chỉ chọn các số nguyên làm giá trị thay thế.
+
 1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn. 
    1. Chọn **Tùy chọn dữ liệu** và chọn đường dẫn thực thể sẽ được sử dụng để xác định giá trị đo của bạn. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
    1. Chọn **Xong** để áp dụng lựa chọn của bạn. 
@@ -88,9 +90,57 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
 
 1. Đi đến **Giá trị đo** để xem số đo mới được tạo trong danh sách.
 
+## <a name="use-a-template-to-build-a-measure"></a>Sử dụng mẫu để tạo giá trị đo
+
+Bạn có thể sử dụng các mẫu định sẵn có chứa các giá trị đo thường dùng để tạo giá trị đo. Mô tả chi tiết về các mẫu và trải nghiệm có hướng dẫn sẽ giúp bạn tạo giá trị đo hiệu quả. Các mẫu xây dựng dựa trên dữ liệu được ánh xạ từ thực thể *Hoạt động được hợp nhất*. Vì vậy, hãy đảm bảo rằng bạn đã đặt cấu hình [hoạt động của khách hàng](activities.md) trước khi tạo giá trị đo từ một mẫu.
+
+Các mẫu giá trị đo sẵn có: 
+- Giá trị giao dịch trung bình (ATV)
+- Tổng giá trị giao dịch
+- Doanh thu trung bình hàng ngày
+- Doanh thu trung bình hàng năm
+- Số lượng giao dịch
+- Điểm khách hàng thân thiết kiếm được
+- Điểm khách hàng thân thiết đã quy đổi
+- Số dư điểm khách hàng thân thiết
+- Quãng thời gian khách hàng hoạt động
+- Thời lượng là thành viên khách hàng thân thiết
+- Thời gian kể từ giao dịch mua gần nhất
+
+Quy trình sau đây phác thảo các bước để tạo giá trị đo mới bằng cách sử dụng một mẫu.
+
+1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Giá trị đo**.
+
+1. Chọn **Mới** rồi chọn **Chọn một mẫu**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Ảnh chụp màn hình của menu thả xuống khi tạo một giá trị đo mới với phần tô sáng trên mẫu.":::
+
+1. Tìm mẫu phù hợp với nhu cầu của bạn rồi chọn **Chọn mẫu**.
+
+1. Xem lại dữ liệu bắt buộc rồi chọn **Bắt đầu** nếu bạn có sẵn tất cả dữ liệu.
+
+1. Trong ngăn **Chỉnh sửa tên**, hãy đặt tên cho giá trị đo của bạn và thực thể đầu ra. 
+
+1. Chọn **Xong**.
+
+1. Trong phần **Đặt khoảng thời gian**, hãy xác định khung thời gian của dữ liệu sẽ sử dụng. Chọn nếu bạn muốn giá trị đo mới bao gồm toàn bộ tập hợp dữ liệu bằng cách chọn **Mọi thời điểm**. Hoặc nếu bạn muốn giá trị đo tập trung vào **Khoảng thời gian cụ thể**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Ảnh chụp màn hình về phần khoảng thời gian khi đặt cấu hình giá trị đo từ một mẫu.":::
+
+1. Trong phần tiếp theo, hãy chọn **Thêm dữ liệu** để chọn các hoạt động rồi ánh xạ dữ liệu tương ứng từ thực thể *Hoạt động được hợp nhất*.
+
+    1. Bước 1/2: Trong mục **Loại hoạt động**, hãy chọn loại thực thể mà bạn muốn sử dụng. Đối với **Hoạt động**, hãy chọn các thực thể mà bạn muốn ánh xạ.
+    1. Bước 2/2: Chọn thuộc tính từ *Hoạt động được hợp nhất* cho thành phần theo yêu cầu của công thức. Ví dụ: đối với giá trị giao dịch Trung bình, đó là thuộc tính đại diện cho Giá trị giao dịch. Đối với **Dấu thời gian hoạt động**, hãy chọn thuộc tính từ thực thể Hoạt động được hợp nhất đại diện cho ngày và giờ của hoạt động.
+   
+1. Khi ánh xạ dữ liệu thành công, bạn có thể thấy trạng thái là **Hoàn thành** cũng như tên của các hoạt động và thuộc tính được ánh xạ.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Ảnh chụp màn hình về cấu hình mẫu giá trị đo đã hoàn thành.":::
+
+1. Bây giờ, bạn có thể chọn **Chạy** để tính toán kết quả của giá trị đo. Để tinh chỉnh giá trị đo về sau, hãy chọn **Lưu bản nháp**.
+
 ## <a name="manage-your-measures"></a>Quản lý các giá trị đo của bạn
 
-Sau khi [tạo một giá trị đo](#create-a-measure), bạn sẽ thấy danh sách các giá trị đo trên trang **Giá trị đo**.
+Bạn có thể tìm thấy danh sách các giá trị đo trên trang **Giá trị đo**.
 
 Bạn sẽ tìm thấy thông tin về loại giá trị đo, người tạo, ngày tạo, trạng thái và tình trạng. Khi bạn chọn một giá trị đo từ danh sách, bạn có thể xem trước kết quả đầu ra và tải xuống tệp .CSV.
 

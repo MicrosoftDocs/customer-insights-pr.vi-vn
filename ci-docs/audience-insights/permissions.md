@@ -1,7 +1,7 @@
 ---
 title: Quản lý quyền của người dùng
 description: Tìm hiểu về quyền và vai trò của người dùng.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595728"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760399"
 ---
 # <a name="user-permissions"></a>Quyền người dùng
 
@@ -31,10 +31,10 @@ Có ba loại vai trò:
 - Xem và khám phá trang **nội dung phong phú**.
 - Khám phá và xuất các thực thể bằng cách sử dụng trang **Các thực thể**.
 - Xem trạng thái của các quy trình hệ thống bằng cách sử dụng trang **Hệ thống**.
-- Xuất phân đoạn từ trang **Phân đoạn**.
+- Xem nội dung xuất trong trang **Nội dung xuất**.
 - Cài đặt và sử dụng bảng thông tin **Power BI Customer Insights**.
 
-## <a name="contributor"></a>Người đóng góp
+## <a name="contributor"></a>Cộng tác viên
 
 - Tất cả các quyền có sẵn cho Người xem.
 - Tải và chuyển đổi dữ liệu bằng cách dùng trang **Nguồn dữ liệu**.
@@ -43,6 +43,7 @@ Có ba loại vai trò:
 - Tạo phân khúc bằng cách sử dụng trang **Phân khúc**.
 - Tạo các giá trị đo sử dụng trang **Giá trị đo**.
 - Quản lý cấu hình và làm phong phú hồ sơ khách hàng từ trang **Làm phong phú** (chỉ dành cho nội dung phong phú của bên thứ nhất).
+- Quản lý và tạo các nội dung xuất dựa trên các kết nối được chia sẻ với người đóng góp. [Tìm hiểu thêm về cách quản trị viên cho phép người đóng góp sử dụng kết nối để xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Quản trị viên
 
@@ -50,8 +51,9 @@ Có ba loại vai trò:
 - Thay đổi cài đặt trên trang **Hệ thống**, bao gồm ngôn ngữ làm việc và lịch trình làm mới cho các quy trình hệ thống của bạn.
 - Xem và thêm quyền bằng cách sử dụng trang **Quyền**.
 - Đặt định nghĩa tìm kiếm và lọc cho trang Khách hàng bằng cách dùng trang **Tìm kiếm và lọc chỉ mục** (có sẵn qua trang **Khách hàng**).
-- Xác định đích đến của phân khúc Dynamics 365 Sales bằng cách dùng trang **Xuất đích đến**.
+- Quản lý và cho phép các kết nối đối với những vai trò người dùng khác trên trang **Kết nối**.
 - Quản lý cấu hình và làm phong phú hồ sơ khách hàng từ trang **Nội dung phong phú** (cho tất cả các nội dung phong phú).
+- Quản lý và tạo nội dung xuất trên trang **Nội dung xuất**.
 - Cài đặt và sử dụng **phần bổ trợ Thẻ khách hàng**.
 - Thêm và sử dụng **Trình kết nối Power Apps**.
 - Cho phép sử dụng [API Customer Insights](apis.md).

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596893"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896353"
 ---
 # <a name="customer-profiles"></a>Hồ sơ khách hàng
 
@@ -59,7 +59,7 @@ Thông tin chi tiết về khách hàng bao gồm:
 
 -   **Lát hồ sơ khách hàng:** Lát này hiển thị các giá trị khác nhau từ thực thể hồ sơ khách hàng hợp nhất. Những chi tiết này có thể bao gồm địa chỉ email, tên, thành phố, v.v. 
 
--   **Sở thích tiềm năng, thương hiệu tiềm năng:** Hiển thị nếu bạn đã định cấu hình phần bổ sung của bên thứ nhất. Nó thể hiện sở thích và mối quan hệ tiềm năng đối với các thương hiệu mà một khách hàng có hồ sơ tương tự như khách hàng này có thể có. Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft-graph.md).
+-   **Sở thích tiềm năng, thương hiệu tiềm năng:** Hiển thị nếu bạn đã định cấu hình phần bổ sung của bên thứ nhất. Nó thể hiện sở thích và mối quan hệ tiềm năng đối với các thương hiệu mà một khách hàng có hồ sơ tương tự như khách hàng này có thể có. Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft.md).
 
 -   **Đo lường:** Hiển thị nếu bạn đã định cấu hình một hoặc nhiều loại biện pháp đo lường cụ thể: đo lường thuộc tính khách hàng. Chúng bao gồm các KPI được tính toán xung quanh khách hàng của bạn ở cấp độ khách hàng cá nhân. Để biết thêm thông tin, hãy xem [Xác định và quản lý các biện pháp](measures.md).
 

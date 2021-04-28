@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597859"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896537"
 ---
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
@@ -83,7 +83,7 @@ Nếu đó không phải là lần đầu tiên bạn thực hiện hợp nhất
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Đặt cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-microsoft-graph.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.
+Đặt cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.
 
 Nếu bạn đã định cấu hình các hoạt động, nội dung phong phú hoặc các mối quan hệ hoặc nếu bạn đã xác định các phân khúc, chúng sẽ được xử lý tự động để sử dụng dữ liệu khách hàng mới nhất.
 
