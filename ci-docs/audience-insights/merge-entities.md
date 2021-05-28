@@ -1,7 +1,7 @@
 ---
 title: Trộn các thực thể trong hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,85 +9,121 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896537"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085602"
 ---
-# <a name="merge-entities"></a><span data-ttu-id="e7a11-103">Hợp nhất thực thể</span><span class="sxs-lookup"><span data-stu-id="e7a11-103">Merge entities</span></span>
+# <a name="merge-entities"></a><span data-ttu-id="e1c2e-103">Hợp nhất thực thể</span><span class="sxs-lookup"><span data-stu-id="e1c2e-103">Merge entities</span></span>
 
-<span data-ttu-id="e7a11-104">Giai đoạn hợp nhất là giai đoạn cuối cùng trong quy trình hợp nhất dữ liệu.</span><span class="sxs-lookup"><span data-stu-id="e7a11-104">The merge phase is the last phase in the data unification process.</span></span> <span data-ttu-id="e7a11-105">Mục đích của nó là đối chiếu dữ liệu xung đột.</span><span class="sxs-lookup"><span data-stu-id="e7a11-105">Its purpose is reconciling conflicting data.</span></span> <span data-ttu-id="e7a11-106">Ví dụ về dữ liệu xung đột có thể bao gồm tên khách hàng được tìm thấy trong hai bộ dữ liệu của bạn nhưng hiển thị hơi khác nhau trong mỗi dữ liệu ("Grant Marshall" so với "Grant Marshal") hoặc số điện thoại khác nhau ở định dạng (617-803-091X so với 617803091X).</span><span class="sxs-lookup"><span data-stu-id="e7a11-106">Examples of conflicting data could include a customer name found in two of your datasets but that shows up a little differently in each ("Grant Marshall" versus "Grant Marshal"), or a phone number that differs in format (617-803-091X versus 617803091X).</span></span> <span data-ttu-id="e7a11-107">Việc hợp nhất các điểm dữ liệu xung đột đó được thực hiện trên cơ sở từng thuộc tính.</span><span class="sxs-lookup"><span data-stu-id="e7a11-107">Merging those conflicting data points is done on an attribute-by-attribute basis.</span></span>
+<span data-ttu-id="e1c2e-104">Giai đoạn hợp nhất là giai đoạn cuối cùng trong quy trình hợp nhất dữ liệu.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-104">The merge phase is the last phase in the data unification process.</span></span> <span data-ttu-id="e1c2e-105">Mục đích của nó là đối chiếu dữ liệu xung đột.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-105">Its purpose is reconciling conflicting data.</span></span> <span data-ttu-id="e1c2e-106">Ví dụ về dữ liệu xung đột có thể bao gồm tên khách hàng được tìm thấy trong hai bộ dữ liệu của bạn nhưng hiển thị hơi khác nhau trong mỗi dữ liệu ("Grant Marshall" so với "Grant Marshal") hoặc số điện thoại khác nhau ở định dạng (617-803-091X so với 617803091X).</span><span class="sxs-lookup"><span data-stu-id="e1c2e-106">Examples of conflicting data could include a customer name found in two of your datasets but that shows up a little differently in each ("Grant Marshall" versus "Grant Marshal"), or a phone number that differs in format (617-803-091X versus 617803091X).</span></span> <span data-ttu-id="e1c2e-107">Việc hợp nhất các điểm dữ liệu xung đột đó được thực hiện trên cơ sở từng thuộc tính.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-107">Merging those conflicting data points is done on an attribute-by-attribute basis.</span></span>
 
-<span data-ttu-id="e7a11-108">Sau khi hoàn thành [giai đoạn so khớp](match-entities.md), bạn có thể bắt đầu giai đoạn hợp nhất bằng cách chọn lát **Hợp nhất** trên trang **Hợp nhất**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-108">After completing the [match phase](match-entities.md), you start the merge phase by selecting the **Merge** tile on the **Unify** page.</span></span>
+:::image type="content" source="media/merge-fields-page.png" alt-text="Khi phối trang trong quá trình hợp nhất dữ liệu, một bảng với các trường đã hợp nhất xác định hồ sơ khách hàng hợp nhất sẽ xuất hiện.":::
 
-## <a name="review-system-recommendations"></a><span data-ttu-id="e7a11-109">Xem lại đề xuất hệ thống</span><span class="sxs-lookup"><span data-stu-id="e7a11-109">Review system recommendations</span></span>
+<span data-ttu-id="e1c2e-109">Sau khi hoàn thành [giai đoạn so khớp](match-entities.md), bạn có thể bắt đầu giai đoạn hợp nhất bằng cách chọn lát **Hợp nhất** trên trang **Hợp nhất**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-109">After completing the [match phase](match-entities.md), you start the merge phase by selecting the **Merge** tile on the **Unify** page.</span></span>
 
-<span data-ttu-id="e7a11-110">Trên trang **Hợp nhất**, bạn có thể chọn và loại trừ các thuộc tính được hợp nhất trong thực thể hồ sơ khách hàng đã hợp nhất của bạn (kết quả của quá trình cấu hình).</span><span class="sxs-lookup"><span data-stu-id="e7a11-110">On the **Merge** page, you choose and exclude attributes to merge within your unified customer profile entity (the result of the configuration process).</span></span> <span data-ttu-id="e7a11-111">Một số thuộc tính được hệ thống tự động hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-111">Some attributes are automatically merged by the system.</span></span>
+## <a name="review-system-recommendations"></a><span data-ttu-id="e1c2e-110">Xem lại đề xuất hệ thống</span><span class="sxs-lookup"><span data-stu-id="e1c2e-110">Review system recommendations</span></span>
 
-### <a name="view-merged-attributes"></a><span data-ttu-id="e7a11-112">Xem thuộc tính đã hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e7a11-112">View merged attributes</span></span>
+<span data-ttu-id="e1c2e-111">Trong mục **Dữ liệu** > **Hợp nhất** > **Hợp nhất**, bạn chọn và loại trừ các thuộc tính để hợp nhất trong thực thể hồ sơ khách hàng hợp nhất của mình.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-111">On **Data** > **Unify** > **Merge**, you choose and exclude attributes to merge within your unified customer profile entity.</span></span> <span data-ttu-id="e1c2e-112">Hồ sơ khách hàng hợp nhất là kết quả của quá trình hợp nhất dữ liệu.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-112">The unified customer profile is the result of the data unification process.</span></span> <span data-ttu-id="e1c2e-113">Một số thuộc tính được hệ thống tự động hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-113">Some attributes are automatically merged by the system.</span></span>
 
-<span data-ttu-id="e7a11-113">Để xem các thuộc tính được bao gồm trong một trong các thuộc tính được hợp nhất tự động của bạn, hãy chọn thuộc tính được hợp nhất đó.</span><span class="sxs-lookup"><span data-stu-id="e7a11-113">To view the attributes that are included in one of your automatically merged attributes, select that merged attribute.</span></span> <span data-ttu-id="e7a11-114">Hai thuộc tính cấu thành thuộc tính được hợp nhất đó sẽ hiển thị trong hai hàng mới bên dưới thuộc tính được hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-114">The two attributes that compose that merged attribute display in two new rows beneath the merged attribute.</span></span>
+<span data-ttu-id="e1c2e-114">Để xem các thuộc tính có trong thuộc tính được hợp nhất tự động của bạn, hãy chọn thuộc tính được hợp nhất đó trong tab **Trường khách hàng** của bảng.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-114">To view the attributes that are included in one of your automatically merged attributes, select that merged attribute in the **Customer fields** tab of the table.</span></span> <span data-ttu-id="e1c2e-115">Thuộc tính cấu thành thuộc tính được hợp nhất đó sẽ hiển thị trong hai hàng mới bên dưới thuộc tính được hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-115">The attributes that compose that merged attribute display in two new rows beneath the merged attribute.</span></span>
+
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a><span data-ttu-id="e1c2e-116">Tách, đổi tên, loại trừ và chỉnh sửa các trường đã hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e1c2e-116">Separate, rename, exclude, and edit merged fields</span></span>
+
+<span data-ttu-id="e1c2e-117">Bạn có thể thay đổi cách hệ thống xử lý các thuộc tính đã hợp nhất để tạo hồ sơ khách hàng hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-117">You can change how the system processes merged attributes to generate the unified customer profile.</span></span> <span data-ttu-id="e1c2e-118">Chọn **Hiển thị thêm** và chọn những phần bạn muốn thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-118">Select **Show more** and choose what you want to change.</span></span>
+
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Các tùy chọn trong menu thả xuống Hiển thị thêm nhằm quản lý các thuộc tính đã hợp nhất.":::
+
+<span data-ttu-id="e1c2e-120">Xem phần sau đây để biết thêm thông tin.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-120">For more information, see the following sections.</span></span>
+
+## <a name="separate-merged-fields"></a><span data-ttu-id="e1c2e-121">Tách trường đã hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e1c2e-121">Separate merged fields</span></span>
+
+<span data-ttu-id="e1c2e-122">Để tách các trường đã hợp nhất, hãy tìm thuộc tính trong bảng.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-122">To separate merged fields, find the attribute in the table.</span></span> <span data-ttu-id="e1c2e-123">Các trường được tách sẽ hiển thị dưới dạng các điểm dữ liệu riêng lẻ trên hồ sơ khách hàng hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-123">Separated fields show as individual data points on the unified customer profile.</span></span> 
+
+1. <span data-ttu-id="e1c2e-124">Chọn trường hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-124">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="e1c2e-125">Chọn **Hiển thị thêm** và chọn **Các trường riêng biệt**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-125">Select **Show more** and choose **Separate fields**.</span></span>
+ 
+1. <span data-ttu-id="e1c2e-126">Xác nhận việc tách trường.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-126">Confirm the separation.</span></span>
+
+1. <span data-ttu-id="e1c2e-127">Chọn **Lưu** và **Chạy** để thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-127">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="rename-merged-fields"></a><span data-ttu-id="e1c2e-128">Đổi tên các trường đã hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e1c2e-128">Rename merged fields</span></span>
+
+<span data-ttu-id="e1c2e-129">Thay đổi tên hiển thị của các thuộc tính đã hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-129">Change the display name of merged attributes.</span></span> <span data-ttu-id="e1c2e-130">Bạn không thể thay đổi tên của thực thể đầu ra.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-130">You can't change the name of the output entity.</span></span>
+
+1. <span data-ttu-id="e1c2e-131">Chọn trường hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-131">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="e1c2e-132">Chọn **Hiển thị thêm** và chọn **Đổi tên**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-132">Select **Show more** and choose **Rename**.</span></span>
+
+1. <span data-ttu-id="e1c2e-133">Xác nhận tên hiển thị đã thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-133">Confirm the changed display name.</span></span> 
+
+1. <span data-ttu-id="e1c2e-134">Chọn **Lưu** và **Chạy** để thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-134">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="exclude-merged-fields"></a><span data-ttu-id="e1c2e-135">Các trường đã hợp nhất bị loại trừ</span><span class="sxs-lookup"><span data-stu-id="e1c2e-135">Exclude merged fields</span></span>
+
+<span data-ttu-id="e1c2e-136">Loại trừ một thuộc tính khỏi hồ sơ khách hàng hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-136">Exclude an attribute from the unified customer profile.</span></span> <span data-ttu-id="e1c2e-137">Nếu trường được sử dụng trong các quy trình khác, ví dụ như trong một phân khúc, hãy xóa trường khỏi các quy trình này trước khi loại trừ trường khỏi hồ sơ khách hàng.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-137">If the field is used in other processes, for example in a segment, remove it from these processes before excluding it from the customer profile.</span></span> 
+
+1. <span data-ttu-id="e1c2e-138">Chọn trường hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-138">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="e1c2e-139">Chọn **Hiển thị thêm** và chọn **Loại trừ**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-139">Select **Show more** and choose **Exclude**.</span></span>
+
+1. <span data-ttu-id="e1c2e-140">Xác nhận việc loại trừ.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-140">Confirm the exclusion.</span></span>
+
+1. <span data-ttu-id="e1c2e-141">Chọn **Lưu** và **Chạy** để thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-141">Select **Save** and **Run** to process the changes.</span></span> 
+
+<span data-ttu-id="e1c2e-142">Trên trang **Hợp nhất**, chọn **Các trường bị loại trừ** để xem danh sách tất cả các trường đã loại trừ.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-142">On the **Merge** page, select **Excluded fields** to see the list of all excluded fields.</span></span> <span data-ttu-id="e1c2e-143">Bạn có thể thêm lại các trường bị loại trừ trong ngăn này.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-143">This pane lets you add excluded fields back.</span></span>
+
+## <a name="manually-combine-fields"></a><span data-ttu-id="e1c2e-144">Các trường kết hợp theo cách thủ công</span><span class="sxs-lookup"><span data-stu-id="e1c2e-144">Manually combine fields</span></span>
+
+<span data-ttu-id="e1c2e-145">Chỉ định một thuộc tính đã hợp nhất theo cách thủ công.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-145">Specify a merged attribute manually.</span></span> 
+
+1. <span data-ttu-id="e1c2e-146">Trên trang **Hợp nhất**, chọn **Kết hợp các trường**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-146">On the **Merge** page, select **Combine fields**.</span></span>
+
+1. <span data-ttu-id="e1c2e-147">Đặt **Tên** và **Tên trường đầu ra**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-147">Provide a **Name** and an **Output field name**.</span></span>
+
+1. <span data-ttu-id="e1c2e-148">Chọn trường để thêm vào.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-148">Choose a field to add.</span></span> <span data-ttu-id="e1c2e-149">Chọn **Thêm trường** để kết hợp nhiều trường.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-149">Select **Add fields** to combine more fields.</span></span>
+
+1. <span data-ttu-id="e1c2e-150">Xác nhận việc loại trừ.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-150">Confirm the exclusion.</span></span>
+
+1. <span data-ttu-id="e1c2e-151">Chọn **Lưu** và **Chạy** để thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-151">Select **Save** and **Run** to process the changes.</span></span> 
+
+## <a name="change-the-order-of-fields"></a><span data-ttu-id="e1c2e-152">Thay đổi thứ tự trường</span><span class="sxs-lookup"><span data-stu-id="e1c2e-152">Change the order of fields</span></span>
+
+<span data-ttu-id="e1c2e-153">Một số thực thể chứa nhiều chi tiết hơn những thực thể khác.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-153">Some entities contain more details than others.</span></span> <span data-ttu-id="e1c2e-154">Nếu một thực thể bao gồm dữ liệu mới nhất về một trường, bạn có thể ưu tiên thực thể này hơn khi hợp nhất các giá trị.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-154">If an entity includes the latest data about a field, you can prioritize it over other entities when merging values.</span></span>
+
+1. <span data-ttu-id="e1c2e-155">Chọn trường hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-155">Select the merged field.</span></span>
+  
+1. <span data-ttu-id="e1c2e-156">Chọn **Hiển thị thêm** và chọn **Chỉnh sửa**.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-156">Select **Show more** and choose **Edit**.</span></span>
+
+1. <span data-ttu-id="e1c2e-157">Trong ngăn **Kết hợp các trường**, chọn **Di chuyển lên/xuống** để đặt thứ tự hoặc kéo và thả các trường vào vị trí mong muốn.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-157">In the **Combine fields** pane, select **Move up/down** to set the order or drag and drop them in the desired position.</span></span>
+
+1. <span data-ttu-id="e1c2e-158">Xác nhận thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-158">Confirm the change.</span></span>
+
+1. <span data-ttu-id="e1c2e-159">Chọn **Lưu** và **Chạy** để thay đổi.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-159">Select **Save** and **Run** to process the changes.</span></span>
+
+## <a name="run-your-merge"></a><span data-ttu-id="e1c2e-160">Chạy hợp nhất của bạn</span><span class="sxs-lookup"><span data-stu-id="e1c2e-160">Run your merge</span></span>
+
+<span data-ttu-id="e1c2e-161">Cho dù bạn hợp nhất thủ công các thuộc tính hay để hệ thống hợp nhất chúng, bạn luôn có thể chạy hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-161">Whether you manually merge attributes or let the system merge them, you can always run your merge.</span></span> <span data-ttu-id="e1c2e-162">Chọn **Chạy** trên trang **Hợp nhất** để bắt đầu quy trình.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-162">Select **Run** on the **Merge** page to start the process.</span></span>
 
 > [!div class="mx-imgBorder"]
-> <span data-ttu-id="e7a11-115">![Chọn thuộc tính đã hợp nhất](media/configure-data-merge-profile-attributes.png "Chọn thuộc tính đã hợp nhất")</span><span class="sxs-lookup"><span data-stu-id="e7a11-115">![Select merged attribute](media/configure-data-merge-profile-attributes.png "Select merged attribute")</span></span>
+> <span data-ttu-id="e1c2e-163">![Lưu và chạy hợp nhất dữ liệu](media/configure-data-merge-save-run.png "Lưu và chạy hợp nhất dữ liệu")</span><span class="sxs-lookup"><span data-stu-id="e1c2e-163">![Data merge Save and Run](media/configure-data-merge-save-run.png "Data merge Save and Run")</span></span>
 
-### <a name="separate-merged-attributes"></a><span data-ttu-id="e7a11-116">Tách thuộc tính đã hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e7a11-116">Separate merged attributes</span></span>
+<span data-ttu-id="e1c2e-164">Chọn **Chỉ chạy Hợp nhất** nếu bạn chỉ muốn xem kết quả đầu ra được phản ánh trong thực thể khách hàng hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-164">Choose **Run only Merge** if you only want to see the output reflected in the unified customer entity.</span></span> <span data-ttu-id="e1c2e-165">Các quy trình xuôi dòng sẽ được làm mới như [đã xác định trong lịch trình làm mới](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="e1c2e-165">Downstream processes will be refreshed as [defined in the refresh schedule](system.md#schedule-tab).</span></span>
 
-<span data-ttu-id="e7a11-117">Để tách hoặc hủy hợp nhất tách bất kỳ thuộc tính được hợp nhất tự động nào, hãy tìm thuộc tính đó trong bảng **Thuộc tính hồ sơ**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-117">To separate or unmerge any of the automatically merged attributes, find the attribute in the **Profile attributes** table.</span></span>
+<span data-ttu-id="e1c2e-166">Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới hệ thống với các thay đổi của bạn.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-166">Choose **Run Merge and downstream processes** to refresh the system with your changes.</span></span> <span data-ttu-id="e1c2e-167">Tất cả các quy trình, bao gồm tăng cường, phân đoạn và đo lường sẽ tự động chạy lại.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-167">All processes, including enrichment, segments, and measures will rerun automatically.</span></span> <span data-ttu-id="e1c2e-168">Sau khi tất cả các quy trình xuôi dòng đã hoàn tất, hồ sơ khách hàng hiển thị mọi thay đổi bạn đã thực hiện.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-168">After all downstream processes have completed, the customer profiles reflect any changes you made.</span></span>
 
-1. <span data-ttu-id="e7a11-118">Chọn nút dấu chấm lửng (...).</span><span class="sxs-lookup"><span data-stu-id="e7a11-118">Select the ellipsis (...) button.</span></span>
-  
-2. <span data-ttu-id="e7a11-119">Trong danh sách thả xuống, chọn **Tách các trường**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-119">In the dropdown list, select **Separate fields**.</span></span>
-
-### <a name="remove-merged-attributes"></a><span data-ttu-id="e7a11-120">Xóa thuộc tính đã hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e7a11-120">Remove merged attributes</span></span>
-
-<span data-ttu-id="e7a11-121">Để loại trừ một thuộc tính khỏi thực thể hồ sơ khách hàng cuối cùng, hãy tìm thuộc tính đó trong bảng **Thuộc tính hồ sơ**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-121">To exclude an attribute from the final customer profile entity, find it in the **Profile attributes** table.</span></span>
-
-1. <span data-ttu-id="e7a11-122">Chọn nút dấu chấm lửng (...).</span><span class="sxs-lookup"><span data-stu-id="e7a11-122">Select the ellipsis (...) button.</span></span>
-  
-2. <span data-ttu-id="e7a11-123">Trong danh sách thả xuống, chọn **Không hợp nhất**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-123">In the dropdown list, select **Don't merge**.</span></span>
-
-   <span data-ttu-id="e7a11-124">Thuộc tính được chuyển đến phần **Xóa khỏi hồ sơ khách hàng**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-124">The attribute is moved to the **Removed from customer record** section.</span></span>
-
-## <a name="manually-add-a-merged-attribute"></a><span data-ttu-id="e7a11-125">Thêm thủ công một thuộc tính hợp nhất</span><span class="sxs-lookup"><span data-stu-id="e7a11-125">Manually add a merged attribute</span></span>
-
-<span data-ttu-id="e7a11-126">Để thêm một thuộc tính được hợp nhất, hãy đi đến trang **Hợp nhất**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-126">To add a merged attribute, go to the **Merge** page.</span></span>
-
-1. <span data-ttu-id="e7a11-127">Chọn **Thêm thuộc tính đã hợp nhất**.</span><span class="sxs-lookup"><span data-stu-id="e7a11-127">Select **Add merged attribute**.</span></span>
-
-2. <span data-ttu-id="e7a11-128">Cung cấp một **Tên** để xác định thuộc tính đó trên trang **Hợp nhất** vào lúc khác.</span><span class="sxs-lookup"><span data-stu-id="e7a11-128">Provide a **Name** to identify it on the **Merge** page later.</span></span>
-
-3. <span data-ttu-id="e7a11-129">Hoặc bạn có thể cung cấp một **Tên hiển thị** để xuất hiện trong thực thể Hồ sơ khách hàng hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-129">Optionally, provide a **Display name** to appear in the unified Customer Profile entity.</span></span>
-
-4. <span data-ttu-id="e7a11-130">Cấu hình **Chọn các thuộc tính trùng lặp** để chọn các thuộc tính mà bạn muốn hợp nhất từ các thực thể phù hợp.</span><span class="sxs-lookup"><span data-stu-id="e7a11-130">Configure **Select duplicate attributes** to select the attributes that you want to merge from the matched entities.</span></span> <span data-ttu-id="e7a11-131">Bạn cũng có thể tìm kiếm các thuộc tính.</span><span class="sxs-lookup"><span data-stu-id="e7a11-131">You can also search for attributes.</span></span>
-
-5. <span data-ttu-id="e7a11-132">Đặt **Xếp hạng theo mức độ quan trọng** để ưu tiên một thuộc tính so với các thuộc tính khác.</span><span class="sxs-lookup"><span data-stu-id="e7a11-132">Set the **Rank by importance** to prioritize one attribute above the others.</span></span> <span data-ttu-id="e7a11-133">Ví dụ: nếu thực thể *WebAccountCSV* bao gồm dữ liệu chính xác nhất về thuộc tín *Tên đầy đủ*, thì bạn có thể ưu tiên thực thể này so với *ContactCSV* bằng việc chọn *WebAccountCSV*.</span><span class="sxs-lookup"><span data-stu-id="e7a11-133">For example, if the *WebAccountCSV* entity includes the most accurate data about the *Full Names* attribute, you could prioritize this entity over *ContactCSV* by selecting *WebAccountCSV*.</span></span> <span data-ttu-id="e7a11-134">Kết quả là *WebAccountCSV* chuyển sang ưu tiên hàng đầu, trong khi *ContactCSV* chuyển sang ưu tiên thứ hai khi kéo các giá trị cho thuộc tính *Họ và tên*.</span><span class="sxs-lookup"><span data-stu-id="e7a11-134">As a result, *WebAccountCSV* moves to first priority, while *ContactCSV* moves to second priority when pulling values for the *Full Name* attribute.</span></span>
-
-## <a name="run-your-merge"></a><span data-ttu-id="e7a11-135">Chạy hợp nhất của bạn</span><span class="sxs-lookup"><span data-stu-id="e7a11-135">Run your merge</span></span>
-
-<span data-ttu-id="e7a11-136">Cho dù bạn hợp nhất thủ công các thuộc tính hay để hệ thống hợp nhất chúng, bạn luôn có thể chạy hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-136">Whether you manually merge attributes or let the system merge them, you can always run your merge.</span></span> <span data-ttu-id="e7a11-137">Chọn **Chạy** trên trang **Hợp nhất** để bắt đầu quy trình.</span><span class="sxs-lookup"><span data-stu-id="e7a11-137">Select **Run** on the **Merge** page to start the process.</span></span>
-
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="e7a11-138">![Lưu và chạy hợp nhất dữ liệu](media/configure-data-merge-save-run.png "Lưu và chạy hợp nhất dữ liệu")</span><span class="sxs-lookup"><span data-stu-id="e7a11-138">![Data merge Save and Run](media/configure-data-merge-save-run.png "Data merge Save and Run")</span></span>
-
-<span data-ttu-id="e7a11-139">Để thực hiện các thay đổi bổ sung và chạy lại bước này, bạn có thể hủy hợp nhất đang thực hiện.</span><span class="sxs-lookup"><span data-stu-id="e7a11-139">To make additional changes and rerun the step, you can cancel an in-progress merge.</span></span> <span data-ttu-id="e7a11-140">Chọn **Đang làm mới ...** rồi chọn **Hủy công việc**  trong ngăn bên xuất hiện.</span><span class="sxs-lookup"><span data-stu-id="e7a11-140">Select **Refreshing ...** and select **Cancel job**  in the side pane that appears.</span></span>
-
-<span data-ttu-id="e7a11-141">Sau khi văn bản **Đang làm mới ...** thay đổi thành **Thành công**, quá trình hợp nhất đã hoàn tất và đã giải quyết mẫu thuẫn trong dữ liệu theo các chính sách bạn đã xác định.</span><span class="sxs-lookup"><span data-stu-id="e7a11-141">After the **Refreshing ...** text changes to **Successful**, merge has completed and resolved contradictions in your data according to the policies you defined.</span></span> <span data-ttu-id="e7a11-142">Các thuộc tính được hợp nhất và chưa được hợp nhất được bao gồm trong thực thể hồ sơ hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-142">Merged and unmerged attributes are included in the unified profile entity.</span></span> <span data-ttu-id="e7a11-143">Các thuộc tính bị loại trừ chưa được bao gồm trong thực thể hồ sơ hợp nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-143">Excluded attributes aren't included in the unified profile entity.</span></span>
-
-<span data-ttu-id="e7a11-144">Nếu đó không phải là lần đầu tiên bạn thực hiện hợp nhất thành công, tất cả các quy trình hạ nguồn, bao gồm làm giàu, phân đoạn và các biện pháp sẽ tự động chạy lại.</span><span class="sxs-lookup"><span data-stu-id="e7a11-144">If it wasn't the first time you ran a merge successfully, all downstream processes, including enrichment, segmentation, and measures will rerun automatically.</span></span> <span data-ttu-id="e7a11-145">Sau khi tất cả các quy trình hạ nguồn đã được chạy lại, hồ sơ khách hàng phản ánh bất kỳ thay đổi nào bạn đã thực hiện.</span><span class="sxs-lookup"><span data-stu-id="e7a11-145">After all downstream processes have been rerun, the customer profiles reflect any changes you made.</span></span>
+<span data-ttu-id="e1c2e-169">Để thực hiện thêm nhiều thay đổi và chạy lại bước, bạn có thể hủy quá trình hợp nhất đang diễn ra.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-169">To make more changes and rerun the step, you can cancel an in-progress merge.</span></span> <span data-ttu-id="e1c2e-170">Chọn **Đang làm mới ...** rồi chọn **Hủy công việc**  trong ngăn bên xuất hiện.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-170">Select **Refreshing ...** and select **Cancel job**  in the side pane that appears.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="e7a11-146">Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình.</span><span class="sxs-lookup"><span data-stu-id="e7a11-146">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="e7a11-147">Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies).</span><span class="sxs-lookup"><span data-stu-id="e7a11-147">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="e7a11-148">Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc.</span><span class="sxs-lookup"><span data-stu-id="e7a11-148">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="e7a11-149">Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.</span><span class="sxs-lookup"><span data-stu-id="e7a11-149">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
+> <span data-ttu-id="e1c2e-171">Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-171">There are [six types of status](system.md#status-types) for tasks/processes.</span></span> <span data-ttu-id="e1c2e-172">Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies).</span><span class="sxs-lookup"><span data-stu-id="e1c2e-172">Additionally, most processes [depend on other downstream processes](system.md#refresh-policies).</span></span> <span data-ttu-id="e1c2e-173">Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-173">You can select the status of a process to see details on the progress of the entire job.</span></span> <span data-ttu-id="e1c2e-174">Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-174">After selecting **See details** for one of the job's tasks, you find additional information: processing time, the last processing date, and all errors and warnings associated with the task.</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="e7a11-150">Bước tiếp theo</span><span class="sxs-lookup"><span data-stu-id="e7a11-150">Next Step</span></span>
+## <a name="next-step"></a><span data-ttu-id="e1c2e-175">Bước tiếp theo</span><span class="sxs-lookup"><span data-stu-id="e1c2e-175">Next Step</span></span>
 
-<span data-ttu-id="e7a11-151">Đặt cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.</span><span class="sxs-lookup"><span data-stu-id="e7a11-151">Configure [activities](activities.md), [enrichment](enrichment-hub.md), or [relationships](relationships.md) to gain more insights about your customers.</span></span>
+<span data-ttu-id="e1c2e-176">Đặt cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-176">Configure [activities](activities.md), [enrichment](enrichment-hub.md), or [relationships](relationships.md) to gain more insights about your customers.</span></span>
 
-<span data-ttu-id="e7a11-152">Nếu bạn đã định cấu hình các hoạt động, nội dung phong phú hoặc các mối quan hệ hoặc nếu bạn đã xác định các phân khúc, chúng sẽ được xử lý tự động để sử dụng dữ liệu khách hàng mới nhất.</span><span class="sxs-lookup"><span data-stu-id="e7a11-152">If you already configured activities, enrichment, or relationships, or if you defined segments, they'll be processed automatically to use the latest customer data.</span></span>
-
-
-
+<span data-ttu-id="e1c2e-177">Nếu bạn đã định cấu hình các hoạt động, quá trình tăng cường hoặc phân đoạn, những phần này sẽ được xử lý tự động để sử dụng dữ liệu khách hàng mới nhất.</span><span class="sxs-lookup"><span data-stu-id="e1c2e-177">If you already configured activities, enrichment, or segments, they'll be processed automatically to use the latest customer data.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
