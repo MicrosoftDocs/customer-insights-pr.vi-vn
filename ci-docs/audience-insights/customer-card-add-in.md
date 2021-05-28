@@ -1,7 +1,7 @@
 ---
-title: Cài đặt và đặt cấu hình phần bổ trợ Thẻ khách hàng
-description: Cài đặt và đặt cấu hình Phần bổ trợ Thẻ Khách hàng cho Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Bổ trợ thẻ khách hàng cho các ứng dụng Dynamics 365
+description: Hiển thị dữ liệu từ thông tin chi tiết về khán giả trong ứng dụng Dynamics 365 với phần bổ trợ này.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597353"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059614"
 ---
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Xem nhân khẩu học, thông tin chi tiết và dòng thời gian hoạt động qua Trình bổ trợ thẻ khách hàng.
+Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Với phần Bổ trợ thẻ khách hàng có trong ứng dụng Dynamics 365 được hỗ trợ, bạn có thể chọn hiển thị dữ liệu nhân khẩu học, thông tin chi tiết và tiến trình hoạt động. Phần bổ trợ sẽ truy xuất dữ liệu từ Customer Insights mà không ảnh hưởng đến dữ liệu trong ứng dụng Dynamics 365 được kết nối. 
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Ứng dụng Dynamics 365 (chẳng hạn như Trung tâm bán hàng hoặc Trung tâm Dịch vụ Khách hàng), phiên bản 9.0 trở lên với Giao diện Hợp nhất được bật.
-- Hồ sơ khách hàng [được nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Common Data Service](connect-power-query.md).
-- Người dùng phần bổ trợ Thẻ khách hàng cần được [thêm làm người dùng](permissions.md) trong thông tin chi tiết về đối tượng.
-- [Khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md).
-- Kiểm soát nhân khẩu học: Các trường nhân khẩu học (chẳng hạn như tuổi hoặc giới tính) có sẵn trong hồ sơ khách hàng hợp nhất.
-- Điều khiển tăng cường: Yêu cầu dữ liệu [tăng cường](enrichment-hub.md) hiện hoạt áp dụng cho hồ sơ khách hàng.
-- Kiểm soát thông tin: Yêu cầu có dữ liệu được tạo bằng Azure Machine Learning ([Dự đoán](predictions.md) hoặc [Mô hình khách hàng](custom-models.md))
-- Kiểm soát đo lường: Yêu cầu [các biện pháp được đặt cấu hình](measures.md).
-- Kiểm soát dòng thời gian: Yêu cầu [các hoạt động được đặt cấu hình](activities.md).
+- Phần bổ trợ này chỉ hoạt động với các ứng dụng dựa trên mô hình Dynamics 365, chẳng hạn như ứng dụng Sales hoặc Customer Service, phiên bản 9.0 trở lên.
+- Để dữ liệu Dynamics 365 của bạn ánh xạ sang hồ sơ khách hàng trong thông tin chuyên sâu về đối tượng bắt buộc [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng trình kết nối Common Data Service](connect-power-query.md).
+- Tất cả người dùng Dynamics 365 của phần Bổ trợ thẻ khách hàng phải [được thêm vào với tư cách là người dùng](permissions.md) trong thông tin chuyên sâu về đối tượng để xem dữ liệu.
+- Cần có [các khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md) trong thông tin chuyên sâu về đối tượng để tra cứu dữ liệu cho công việc.
+- Các tính năng điều khiển bổ trợ đều dựa trên dữ liệu cụ thể trong phần thông tin chuyên sâu về đối tượng:
+  - Kiểm soát đo lường: Yêu cầu [các biện pháp được đặt cấu hình](measures.md).
+  - Điều khiển thông minh: Bạn cần tạo dữ liệu bằng cách sử dụng phương thức [dự đoán](predictions.md) hoặc [mô hình tùy chỉnh](custom-models.md).
+  - Kiểm soát nhân khẩu học: Các trường nhân khẩu học (chẳng hạn như tuổi hoặc giới tính) có sẵn trong hồ sơ khách hàng hợp nhất.
+  - Điều khiển tăng cường: Yêu cầu dữ liệu [tăng cường](enrichment-hub.md) hiện hoạt áp dụng cho hồ sơ khách hàng.
+  - Kiểm soát dòng thời gian: Yêu cầu [các hoạt động được đặt cấu hình](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Cài đặt phần bổ trợ Thẻ khách hàng
 
@@ -56,9 +57,9 @@ Có thể mất một chút thời gian để cài đặt giải pháp vào môi
    > [!NOTE]
    > Kiểm tra để đảm bảo trình chặn cửa sổ bật lên trong trình duyệt không chặn cửa sổ xác thực khi bạn chọn nút **Đăng nhập**.
 
-1. Chọn môi trường bạn muốn lấy dữ liệu từ đó.
+1. Chọn môi trường Customer Insights bạn muốn lấy dữ liệu từ đó.
 
-1. Xác định ánh xạ trường tới các bản ghi trong ứng dụng Dynamics 365.
+1. Xác định ánh xạ trường tới các bản ghi trong ứng dụng Dynamics 365. Tùy thuộc vào dữ liệu của bạn trong Customer Insights, bạn có thể chọn ánh xạ các đối tượng sau:
    - Để ánh xạ với một liên hệ, hãy chọn trường trong thực thể Khách hàng khớp với ID của thực thể liên hệ của bạn.
    - Để ánh xạ với một tài khoản, hãy chọn trường trong thực thể Khách hàng khớp với ID của thực thể tài khoản của bạn.
 

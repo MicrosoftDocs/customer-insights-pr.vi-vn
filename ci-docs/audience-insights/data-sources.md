@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887920"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085556"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -36,11 +36,9 @@ Bạn có thể thêm nguồn dữ liệu theo ba cách chính:
 
 Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong Audience Insights được hỗ trợ dựa trên luồng dữ liệu Power Platform. Bạn có thể bật luồng dữ liệu trong Customer Insights bằng cách [cung cấp URL môi trường Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) khi thiết lập môi trường.
 
-Nguồn dữ liệu được tạo sau khi liên kết một môi trường Dataverse với Customer Insights sẽ sử dụng [luồng dữ liệu Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng các cổng dữ liệu. Loại bỏ và tái tạo các nguồn dữ liệu đã tồn tại trước khi môi trường Dataverse được liên kết để sử dụng cổng dữ liệu tại chỗ.
+Nguồn dữ liệu được tạo sau khi liên kết một môi trường Dataverse với Customer Insights sẽ sử dụng [luồng dữ liệu Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Loại bỏ và tái tạo các nguồn dữ liệu đã tồn tại trước khi môi trường Dataverse được liên kết để [sử dụng cổng dữ liệu tại chỗ](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Cổng dữ liệu từ một môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Customer Insights. Trang nguồn dữ liệu hiển thị các liên kết để chuyển đến môi trường Power Platform nơi bạn có thể xem và đặt cấu hình cổng dữ liệu tại chỗ.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Ảnh chụp màn hình của trang nguồn dữ liệu hiển thị các liên kết trỏ đến môi trường Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Xem lại dữ liệu đã nhập
 

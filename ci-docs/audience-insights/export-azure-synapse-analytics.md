@@ -1,0 +1,92 @@
+---
+title: Xuất dữ liệu Customer Insights sang Azure Synapse Analytics
+description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Azure Synapse Analytics.
+ms.date: 04/12/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: how-to
+author: stefanie-msft
+ms.author: sthe
+manager: shellyha
+ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5977403"
+---
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (Bản xem trước)
+
+Azure Synapse là một dịch vụ phân tích giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn. Bạn có thể nhập và sử dụng dữ liệu Customer Insights của mình trong [Azure Synapse](/azure/synapse-analytics/overview-what-is).
+
+## <a name="prerequisites"></a>Điều kiện tiên quyết
+
+Cần đáp ứng các điều kiện tiên quyết sau để định cấu hình kết nối từ Customer Insights sang Azure Synapse.
+
+> [!NOTE]
+> Đảm bảo bạn đặt tất cả các phép **gán vai trò** giống như mô tả.  
+
+## <a name="prerequisites-in-customer-insights"></a>Các điều kiện tiên quyết trong Customer Insights
+
+* Bạn có vai trò **Quản trị viên** trong thông tin chuyên sâu về đối tượng. Tìm hiểu thêm về [thiết lập quyền của người dùng trong phần thông tin chuyên sâu về đối tượng](permissions.md#assign-roles-and-permissions)
+
+Trong Azure: 
+
+- Đăng ký Azure hiện hoạt.
+
+- Nếu bạn sử dụng một tài khoản Azure Data Lake Storage Thế hệ 2 mới, *tên dịch vụ chính cho thông tin chuyên sâu về đối tượng* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob**. Tìm hiểu thêm về [cách kết nối với tài khoản Azure Data Lake Storage Thế hệ 2 với tên dịch vụ chính Azure để có thông tin chuyên sâu về đối tượng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
+
+- Trên nhóm nguồn lực có đặt không gian làm việc Azure Synapse, *tên dịch vụ chính* và *người dùng thông tin chuyên sâu về đối tượng* cần được gán quyền **Người đọc**. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
+
+- *Người dùng* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob** trên tài khoản Azure Data Lake Storage Thế hệ 2 nơi đặt dữ liệu và liên kết với không gian làm việc Azure Synapse. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+
+- *[Danh tính có quản lý trong không gian làm việc Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob** trên tài khoản Azure Data Lake Storage Thế hệ 2, nơi đặt và liên kết dữ liệu với không gian làm việc Azure Synapse. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+
+- Trên không gian làm việc Azure Synapse, *tên dịch vụ chính cho thông tin chuyên sâu về đối tượng* cần được gán vai trò **Quản trị viên Synapse**. Để biết thêm thông tin, hãy xem [Cách thiết lập trạng thái kiểm soát truy cập cho không gian làm việc Synapse của bạn](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Thiết lập kết nối và xuất sang Azure Synapse
+
+### <a name="configure-a-connection"></a>Đặt cấu hình kết nối
+
+1. Đi đến **Quản trị viên** > **Kết nối**.
+
+1. Chọn **Thêm kết nối** và chọn **Azure Synapse Analytics** hoặc **Thiết lập** trên ngăn xếp **Azure Synapse Analytics** để đặt cấu hình kết nối.
+
+1. Đặt tên dễ nhận biết cho kết nối trong trường Tên hiển thị. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
+
+1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Chọn hoặc tìm kiếm gói đăng ký nơi bạn muốn sử dụng dữ liệu Customer Insights. Ngay sau khi chọn gói đăng ký, bạn cũng có thể chọn **Không gian làm việc**, **Tài khoản lưu trữ** và **Bộ chứa**.
+
+1. Để lưu kết nối, hãy chọn **Lưu**.
+
+### <a name="configure-an-export"></a>Đặt cấu hình xuất
+
+Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+
+1. Đi tới **Dữ liệu** > **Nội dung xuất**.
+
+1. Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.
+
+1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần **Azure Synapse Analytics**. Nếu bạn không thấy tên phần này, tức là không có [kết nối](connections.md) nào thuộc loại này dành cho bạn.
+
+1. Đặt một **Tên hiển thị** dễ nhận biết cho việc xuất dữ liệu và **Tên cơ sở dữ liệu** của bạn.
+
+1. Chọn thực thể bạn muốn xuất dữ liệu sang Azure Synapse Analytics.
+
+1. Chọn **Lưu**.
+
+Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
+
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand).
+
+### <a name="update-an-export"></a>Cập nhật việc xuất dữ liệu
+
+1. Đi tới **Dữ liệu** > **Nội dung xuất**.
+
+1. Chọn **Chỉnh sửa** quá trình xuất bạn muốn cập nhật.
+
+   - **Thêm** hoặc **Xóa** các thực thể đã chọn. Nếu bạn bỏ chọn các thực thể, những thực thể này sẽ không bị xóa khỏi cơ sở dữ liệu Synapse Analytics. Tuy nhiên, các thực thể đã xóa trong cơ sở dữ liệu đó sẽ không được cập nhật trong những lần làm mới dữ liệu tiếp theo.
+
+   - Việc **thay đổi Tên cơ sở dữ liệu** tạo ra cơ sở dữ liệu Synapse Analytics mới. Cơ sở dữ liệu có tên đã được định cấu hình trước đó sẽ không nhận được bất kỳ bản cập nhật nào trong các lần làm mới tiếp theo.

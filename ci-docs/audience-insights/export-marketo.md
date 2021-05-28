@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759847"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059342"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Xuất phân khúc sang Marketo (bản xem trước)
 
@@ -44,7 +44,7 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến
 
 1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Nhập **[ID máy khách Marketo, Mã bí mật máy khách và Tên máy chủ điểm cuối REST](https://developers.marketo.com/rest-api/authentication/)**.
+1. Nhập **[ID máy khách Marketo, Mã bí mật máy khách và Tên máy chủ điểm cuối REST](https://developers.marketo.com/rest-api/authentication/)**. Tên máy chủ điểm cuối REST chỉ là tên máy chủ, không có `https://`. Ví dụ: `xyz-abc-123.mktorest.com`. 
 
 1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ** và chọn **Kết nối** để khởi tạo kết nối với Marketo.
 
@@ -62,7 +62,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Marketo. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
 
-1. Nhập **[ID danh sách Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Nhập **[ID danh sách Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** của bạn. ID danh sách là một giá trị số đơn thuần. Ví dụ: nếu ID danh sách Marketo của bạn là ST12345A7, hãy xóa ký tự đứng trước và sau các chữ số và nhập `12345`. 
 
 1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. 
 
@@ -74,7 +74,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
-Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). Trong Marketo, bạn hiện có thể tìm thấy các phân đoạn của mình trong [Danh sách Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). Trong Marketo, bạn hiện có thể tìm thấy các phân đoạn của mình trong [Danh sách Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ

@@ -1,7 +1,7 @@
 ---
 title: Làm việc với API
 description: Sử dụng API và hiểu các giới hạn.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873688"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016646"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
@@ -90,19 +90,13 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 1. Khi đăng ký ứng dụng của bạn trong cổng Azure, hãy đi tới **Quyền API**.
 
-1. Chọn **Thêm quyền** và chọn **Customer Insights** trong ngăn bên.
+1. Chọn **Thêm quyền**. 
+
+1. Chọn tab **API mà tổ chức của tôi sử dụng** và chọn **Dynamics 365 AI cho Customer Insights** từ danh sách. 
 
 1. Đối với **Loại quyền**, hãy chọn **Quyền của ứng dụng** và chọn quyền **CustomerInsights.Api.All**.
 
 1. Chọn **Thêm quyền**.
-
-1. Để cung cấp sự đồng ý của quản trị viên đối với quyền của ứng dụng này, bạn cần thêm Tên dịch vụ chính.
-
-   1. Cài đặt mô-đun Azure Active Directory (AD) PowerShell: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Kết nối với tài khoản AD: `Connect-AzureAD -TenantId <your tenant id>`. Bạn có thể tìm thấy ID đối tượng thuê của mình trên **Tổng quan** > **Azure Active Directory**.
-   1. Chạy lệnh sau để thêm Tên dịch vụ chính Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Tham số AppId gắn liền với ứng dụng API Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Mẫu tên dịch vụ chính":::
 
 1. Quay lại **Quyền API** cho đăng ký ứng dụng của bạn.
 

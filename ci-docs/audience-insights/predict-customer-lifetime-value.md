@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595835"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954605"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Dự đoán giá trị lâu dài của khách hàng (CLV) (Bản xem trước)
 
@@ -38,11 +38,11 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
 - Mã nhận dạng khách hàng: Mã định danh duy nhất để khớp các giao dịch với một khách hàng cá nhân
 
 - Lịch sử giao dịch: Bản ghi giao dịch lịch sử với giản đồ dữ liệu ngữ nghĩa bên dưới
-    - ID giao dịch: Mã định danh duy nhất của mỗi giao dịch
-    - Ngày giao dịch: Ngày, tốt nhất là dấu thời gian của mỗi giao dịch
-    - Số tiền giao dịch: Giá trị tiền tệ (ví dụ: doanh thu hoặc biên lợi nhuận) của mỗi giao dịch
-    - Nhãn được gán cho hàng trả lại (tùy chọn): Giá trị boolean biểu thị liệu giao dịch có phải là trả lại hàng hay không 
-    - ID sản phẩm (tùy chọn): ID sản phẩm của sản phẩm tham gia vào giao dịch
+    - **ID giao dịch**: Mã định danh duy nhất của mỗi giao dịch
+    - **Ngày giao dịch**: Ngày, tốt nhất là dấu thời gian của mỗi giao dịch
+    - **Số tiền giao dịch**: Giá trị tiền tệ (ví dụ: doanh thu hoặc biên lợi nhuận) của mỗi giao dịch
+    - **Nhãn được gán cho hàng trả lại** (tùy chọn): Giá trị boolean biểu thị liệu giao dịch có phải là trả lại hàng hay không 
+    - **ID sản phẩm** (tùy chọn): ID sản phẩm của sản phẩm tham gia vào giao dịch
 
 - Dữ liệu bổ sung (tùy chọn), ví dụ
     - Hoạt động web: lịch sử truy cập trang web, lịch sử email
@@ -53,10 +53,20 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
     - Mã định danh khách hàng để ánh xạ hoạt động với khách hàng
     - Thông tin về hoạt động chứa tên và ngày của hoạt động
     - Lược đồ dữ liệu ngữ nghĩa cho các hoạt động bao gồm: 
-        - Khóa chính: Mã định danh duy nhất cho một hoạt động
-        - Dấu thời gian: Ngày và giờ của sự kiện do khóa chính xác định
-        - Sự kiện (tên hoạt động): Tên sự kiện bạn muốn sử dụng
-        - Chi tiết (số tiền hoặc giá trị): Chi tiết về hoạt động của khách hàng
+        - **Khóa chính**: Mã định danh duy nhất cho một hoạt động
+        - **Dấu thời gian**: Ngày và giờ của sự kiện do khóa chính xác định
+        - **Sự kiện (tên hoạt động)**: Tên sự kiện bạn muốn sử dụng
+        - **Chi tiết (số tiền hoặc giá trị)**: Chi tiết về hoạt động của khách hàng
+
+- Đặc điểm dữ liệu được đề xuất:
+    - Đủ dữ liệu lịch sử: Ít nhất một năm dữ liệu giao dịch. Tốt nhất là từ hai đến ba năm dữ liệu giao dịch để dự đoán CLV trong một năm.
+    - Nhiều giao dịch mua trên mỗi khách hàng: Lý tưởng là tối thiểu hai đến ba giao dịch trên mỗi ID khách hàng, tốt nhất là trong nhiều ngày.
+    - Số lượng khách hàng: Tối thiểu 100 khách hàng duy nhất, tốt nhất là 10.000 khách hàng. Mô hình sẽ không thành công nếu dưới 100 khách hàng và không đủ dữ liệu lịch sử
+    - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường bắt buộc thuộc dữ liệu đầu vào   
+
+> [!NOTE]
+> - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng/giao dịch, bạn có thể liên kết những thực thể này trong Power Query trước khi nhập dữ liệu.
+> - Tuy nhiên, nhằm có thêm dữ liệu hoạt động của khách hàng (tùy chọn), bạn có thể thêm bao nhiêu thực thể hoạt động của khách hàng tùy thích để mô hình xem xét.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Tạo dự đoán giá trị lâu dài của khách hàng
 
@@ -76,7 +86,7 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
    Theo mặc định, đơn vị được đặt là tháng. Bạn có thể thay đổi thành năm để nhìn xa hơn trong tương lai.
 
    > [!TIP]
-   > Để dự đoán chính xác CLV cho khoảng thời gian bạn đặt, bạn cần một khoảng thời gian dữ liệu lịch sử có thể so sánh được. Ví dụ: nếu bạn muốn dự đoán cho 12 tháng tới, bạn nên có ít nhất 18-24 tháng dữ liệu lịch sử.
+   > Để dự đoán chính xác CLV cho khoảng thời gian bạn đặt, bạn cần một khoảng thời gian dữ liệu lịch sử có thể so sánh được. Ví dụ: nếu bạn muốn dự đoán CLV cho 12 tháng tới, bạn nên có ít nhất 18-24 tháng dữ liệu lịch sử.
 
 1. Chỉ định tầm quan trọng của **Khách hàng đang hoạt động** đối với doanh nghiệp của bạn. Đặt khung thời gian mà khách hàng phải có ít nhất một giao dịch để được coi là đang hoạt động. Mô hình sẽ chỉ dự đoán CLV cho những khách hàng đang hoạt động. 
    - **Để mô hình tính toán khoảng thời gian mua hàng (khuyến nghị)**: Mô hình phân tích dữ liệu của bạn và xác định khoảng thời gian dựa trên các giao dịch mua trước đây.
@@ -181,14 +191,14 @@ Có ba phần dữ liệu chính trong trang kết quả.
   Sử dụng định nghĩa về khách hàng giá trị cao được cung cấp trong khi định cấu hình dự đoán, hệ thống đánh giá hiệu quả dự đoán khách hàng có giá trị cao của mô hình trí tuệ nhân tạo so với mô hình cơ sở.    
 
   Điểm được xác định dựa trên các quy tắc sau:
-  - A khi mô hình dự đoán khách hàng có giá trị cao chính xác hơn mô hình cơ sở tối thiểu 5%.
-  - B khi mô hình dự đoán khách hàng có giá trị cao chính xác hơn mô hình cơ sở từ 0-5%.
-  - C khi mô hình dự đoán khách hàng có giá trị cao ít chính xác hơn mô hình cơ sở.
+  - **A** khi mô hình dự đoán khách hàng có giá trị cao chính xác hơn mô hình cơ sở tối thiểu 5%.
+  - **B** khi mô hình dự đoán khách hàng có giá trị cao chính xác hơn mô hình cơ sở từ 0-5%.
+  - **C** khi mô hình dự đoán khách hàng có giá trị cao ít chính xác hơn mô hình cơ sở.
 
   Ngăn **Xếp hạng mô hình** hiển thị thêm chi tiết về hiệu suất mô hình trí tuệ nhân tạo và mô hình cơ sở. Mô hình cơ sở sử dụng cách tiếp cận không dựa trên AI để tính toán giá trị lâu dài của khách hàng chủ yếu dựa trên các giao dịch mua trước đây của khách hàng.     
   Công thức chuẩn được dùng để tính CLV theo mô hình cơ sở:    
 
-  *CLV cho mỗi khách hàng = Giao dịch mua trung bình hàng tháng của khách hàng trong khoảng thời gian khách hàng đang hoạt động * Số tháng trong khoảng thời gian CLV dự đoán * Tỷ lệ giữ chân tổng thể của tất cả khách hàng*
+  _**CLV cho mỗi khách hàng** = Giao dịch mua trung bình hàng tháng của khách hàng trong khoảng thời gian khách hàng đang hoạt động * Số tháng trong khoảng thời gian CLV dự đoán * Tỷ lệ giữ chân tổng thể của tất cả khách hàng*_
 
   Mô hình AI được so sánh với mô hình cơ sở dựa trên hai chỉ số hiệu suất của mô hình.
   

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887966"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049276"
 ---
 # <a name="define-and-manage-measures"></a>Xác định và quản lý các biện pháp
 
@@ -34,7 +34,7 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
 
 1. Chọn **Chỉnh sửa tên** và cung cấp một **Tên** cho giá trị đo. 
    > [!NOTE]
-   > Nếu cấu hình giá trị đo mới của bạn chỉ có hai trường, ví dụ CustomerID và một phép tính, đầu ra sẽ được thêm dưới dạng một cột mới vào thực thể do hệ thống tạo có tên là Customer_Measure. Và bạn sẽ có thể thấy giá trị của giá trị đo trong hồ sơ khách hàng hợp nhất. Các giá trị đo khác sẽ tạo ra các thực thể của riêng chúng.
+   > Nếu cấu hình giá trị đo mới của bạn chỉ có hai trường, ví dụ: CustomerID và một phép tính, thì kết quả đầu ra sẽ được thêm vào thực thể do hệ thống tạo ra có tên là Customer_Measure dưới dạng một cột mới. Và bạn sẽ có thể thấy giá trị của giá trị đo trong hồ sơ khách hàng hợp nhất. Các giá trị đo khác sẽ tạo ra các thực thể của riêng chúng.
 
 1. Trong vùng cấu hình, hãy chọn hàm tổng hợp từ menu thả xuống **Chọn hàm**. Các hàm tổng hợp bao gồm: 
    - **Sum**

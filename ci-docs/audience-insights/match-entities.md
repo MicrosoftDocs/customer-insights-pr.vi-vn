@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595590"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085648"
 ---
 # <a name="match-entities"></a>So khớp thực thể
 
@@ -103,6 +103,18 @@ Các quy tắc đối sánh đại diện cho các tập hợp các điều ki�
 
 > [!NOTE]
 > Thứ tự của các quy tắc quan trọng. Thuật toán đối sánh cố gắng đối sánh trên cơ sở quy tắc đầu tiên của bạn và chỉ tiếp tục với quy tắc thứ hai nếu không có kết quả phù hợp nào được xác định với quy tắc đầu tiên.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Thay đổi thứ tự thực thể trong quy tắc đối sánh
+
+Bạn có thể sắp xếp lại thứ tự các thực thể cho các quy tắc đối sánh để thay đổi trình tự xử lý. Các quy tắc bị xung đột do thay đổi thứ tự sẽ bị xóa. Bạn phải tạo lại các quy tắc đã xóa với cấu hình được cập nhật.
+
+1. Chuyển tới mục **Dữ liệu** > **Hợp nhất** > **Đối sánh** và chọn **Chỉnh sửa**.
+
+1. Trong ngăn **Chỉnh sửa quy tắc**, chọn bảng điều khiển **Di chuyển lên/xuống** hoặc kéo và thả các thực thể để thay đổi thứ tự.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Trong giai đoạn đối sánh, các thực thể lệnh được thay đổi theo các tùy chọn.":::
+
+1. Chọn **Hoàn tất** để lưu quy tắc.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Xác định quy tắc chống trùng lặp trên một thực thể so khớp
 
