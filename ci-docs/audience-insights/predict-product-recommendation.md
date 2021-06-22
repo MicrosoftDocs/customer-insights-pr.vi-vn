@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906790"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095582"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Dự đoán đề xuất sản phẩm (xem trước)
 
@@ -62,7 +62,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Trong Customer Insights, chuyển đến phần **Thông tin** > **Dự đoán**.
 
-1. Chọn ngăn xếp **Mô hình đề xuất sản phẩm (bản xem trước)** và chọn **Sử dụng mô hình này**.
+1. Chọn ngăn xếp **Mô hình đề xuất sản phẩm (xem trước)** và chọn **Sử dụng mô hình này**.
    > [!div class="mx-imgBorder"]
    > ![Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này](media/product-recommendation-usethismodel.PNG "Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này")
 
@@ -205,33 +205,9 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
        > [!div class="mx-imgBorder"]
        > ![Danh sách hiển thị các đề xuất có độ tin cậy cao cho một nhóm khách hàng cá nhân được chọn](media/product-recommendation-highconfidence.PNG "Danh sách hiển thị các đề xuất có độ tin cậy cao cho một nhóm khách hàng cá nhân được chọn")
 
-## <a name="fix-a-failed-prediction"></a>Khắc phục một dự đoán không thành công
+## <a name="manage-predictions"></a>Quản lý dự đoán
 
-1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
-
-1. Chọn một dự đoán mà bạn muốn xem nhật ký lỗi rồi chọn **Nhật ký**.
-
-1. Xem lại tất cả lỗi. Có một số loại lỗi có thể xảy ra và chúng mô tả nguyên nhân gây ra lỗi. Ví dụ: lỗi không có đủ dữ liệu để dự đoán chính xác thường được giải quyết bằng cách tải thêm dữ liệu vào Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
-
-Các dự đoán tự động làm mới trên cùng một [lịch làm mới dữ liệu của bạn](system.md#schedule-tab) như được định cấu hình trong chế độ cài đặt.
-
-1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
-
-1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn làm mới.
-
-1. Chọn **Làm mới**.
-
-## <a name="delete-a-prediction"></a>Xóa dự đoán
-
-Việc xóa dự đoán cũng xóa thực thể đầu ra của nó.
-
-1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
-
-1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xóa.
-
-1. Chọn **Xóa**.
+Bạn có thể tối ưu hóa, khắc phục sự cố, làm mới hoặc xóa dự đoán. Hãy xem lại báo cáo khả năng sử dụng dữ liệu đầu vào để tìm hiểu cách giúp dự đoán nhanh hơn và đáng tin cậy hơn. Để biết thêm thông tin, hãy xem phần [Quản lý dự đoán](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

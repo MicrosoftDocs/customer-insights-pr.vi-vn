@@ -9,19 +9,19 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906928"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095674"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Dự đoán sự rời đi đăng ký (xem trước)
+# <a name="subscription-churn-prediction-preview"></a>Dự đoán khả năng rời bỏ đăng ký (xem trước)
 
-Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có nguy cơ không sử dụng sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa không. Bạn có thể tạo dự đoán rời đi đăng ký mới trên trang **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
+Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng có nguy cơ không sử dụng sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa không. Bạn có thể tạo dự đoán khả năng rời bỏ đăng ký mới trên trang **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
 
 > [!TIP]
-> Hãy thử hướng dẫn cho dự đoán rời khỏi đăng ký bằng dữ liệu mẫu: [Hướng dẫn mẫu về dự đoán rời khỏi đăng ký](sample-guide-predict-subscription-churn.md).
+> Hãy thử hướng dẫn cho dự đoán khả năng rời bỏ đăng ký bằng dữ liệu mẫu: [Hướng dẫn mẫu về dự đoán rời khỏi đăng ký](sample-guide-predict-subscription-churn.md).
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -58,12 +58,12 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
    > [!NOTE]
    > Bạn sẽ cần ít nhất hai bản ghi hoạt động cho 50% khách hàng mà bạn muốn tính toán sự rời bỏ.
 
-## <a name="create-a-subscription-churn-prediction"></a>Tạo dự đoán rời bỏ đăng ký
+## <a name="create-a-subscription-churn-prediction"></a>Tạo dự đoán khả năng rời bỏ đăng ký
 
-1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán**.
-1. Chọn tiêu đề **Mô hình rời bỏ đăng ký (xem trước)** và chọn **Sử dụng mô hình này**.
+1. Trong thông tin chuyên sâu về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán**.
+1. Chọn tiêu đề **Mô hình khả năng rời bỏ đăng ký (xem trước)** và chọn **Sử dụng mô hình này**.
    > [!div class="mx-imgBorder"]
-   > ![Tiêu đề mô hình rời bỏ đăng ký có nút Sử dụng mô hình này](media/subscription-churn-usethismodel.PNG "Tiêu đề mô hình rời bỏ đăng ký có nút Sử dụng mô hình này")
+   > ![Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này](media/subscription-churn-usethismodel.PNG "Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này")
 
 ### <a name="name-model"></a>Đặt tên mô hình
 
@@ -73,7 +73,7 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
 ### <a name="define-customer-churn"></a>Xác định khách hàng rời đi
 
 1. Nhập số **Ngày kể từ khi đăng ký kết thúc** mà doanh nghiệp của bạn xem xét một khách hàng là đang ở trong trạng thái rời đi. Giai đoạn này thường giống như các hoạt động kinh doanh như chào hàng hoặc các nỗ lực tiếp thị khác nhằm cố ngăn chặn mất khách hàng.
-1. Nhập số lượng **Ngày xem xét trong tương lai để dự đoán sự rời đi** để đặt cửa sổ dự đoán sự rời bỏ. Ví dụ: để dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro khách hàng ngừng sử dụng gói đăng ký trong khoảng thời gian dài hơn hoặc ngắn hơn có thể khiến việc xử lý các yếu tố trong hồ sơ rủi ro khách hàng ngừng sử dụng gói đăng ký của bạn gặp nhiều khó khăn hơn, tùy thuộc vào yêu cầu kinh doanh cụ thể của bạn. Chọn **Tiếp** tiếp tục
+1. Nhập số lượng **Ngày xem xét trong tương lai để dự đoán sự rời đi** để đặt khoảng thời gian dự đoán khả năng rời bỏ. Ví dụ: để dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro khách hàng ngừng sử dụng gói đăng ký trong khoảng thời gian dài hơn hoặc ngắn hơn có thể khiến việc xử lý các yếu tố trong hồ sơ rủi ro khách hàng ngừng sử dụng gói đăng ký của bạn gặp nhiều khó khăn hơn, tùy thuộc vào yêu cầu kinh doanh cụ thể của bạn. Chọn **Tiếp** tiếp tục
    >[!TIP]
    > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
 
@@ -106,7 +106,7 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
 
 ### <a name="set-schedule-and-review-configuration"></a>Đặt lịch và xem xét cấu hình
 
-1. Đặt tần số để đào tạo lại mô hình của bạn. Cài đặt này rất quan trọng để cập nhật độ chính xác của các dự đoán vì dữ liệu mới được nhập vào thông tin chi tiết về đối tượng. Hầu hết các doanh nghiệp đều có thể đào tạo lại một lần mỗi tháng và có dự đoán chính xác cao.
+1. Đặt tần số để đào tạo lại mô hình của bạn. Cài đặt này rất quan trọng để cập nhật độ chính xác của các dự đoán vì dữ liệu mới được nhập vào thông tin chuyên sâu về đối tượng. Hầu hết các doanh nghiệp đều có thể đào tạo lại một lần mỗi tháng và có dự đoán chính xác cao.
 1. Chọn **Tiếp theo**.
 1. Xem lại cấu hình. Bạn có thể quay lại bất kỳ phần nào của cấu hình dự đoán bằng cách chọn **Chỉnh sửa** bên dưới giá trị hiển thị. Hoặc bạn có thể chọn một bước cấu hình từ chỉ báo tiến trình.
 1. Nếu tất cả giá trị được đặt cấu hình chính xác, hãy chọn **Lưu và chạy** để bắt đầu quá trình dự đoán. Trên tab **Dự đoán của tôi**, bạn có thể xem trạng thái dự đoán. Quá trình này có thể mất vài giờ mới hoàn thành, tùy thuộc vào lượng dữ liệu dùng trong dự đoán.
@@ -121,7 +121,7 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
    - **Loại dự đoán:** Loại mô hình dùng cho dự đoán
    - **Thực thể đầu ra:** Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.    
      Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-new-segment) với ngưỡng bạn muốn.
-   - **Trường dự đoán:** Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán rời bỏ đăng ký.
+   - **Trường dự đoán:** Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán khả năng rời bỏ đăng ký.
    - **Trạng thái:** Trạng thái hiện tại của lần chạy dự đoán.
         - **Xếp hàng đợi:"** Dự đoán hiện đang chờ quá trình khác chạy.
         - **Làm mới:** Dự đoán hiện đang chạy giai đoạn "điểm số" của quá trình để tạo ra các kết quả sẽ chuyển đến thực thể đầu ra.
@@ -147,30 +147,9 @@ Dự đoán sự rời đi đăng ký giúp dự đoán xem khách hàng có ngu
        > [!div class="mx-imgBorder"]
        > ![Danh sách cho thấy các yếu tố ảnh hưởng và tầm quan trọng của chúng trong việc dự đoán kết quả rời bỏ](media/subscription-churn-influentialfactors.PNG "Danh sách cho thấy các yếu tố ảnh hưởng và tầm quan trọng của chúng trong việc dự đoán kết quả rời bỏ")
 
-## <a name="fix-a-failed-prediction"></a>Khắc phục một dự đoán không thành công
+## <a name="manage-predictions"></a>Quản lý dự đoán
 
-1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
-1. Chọn một dự đoán mà bạn muốn xem nhật ký lỗi rồi chọn **Nhật ký**.
-   > [!div class="mx-imgBorder"]
-   > ![Xem thanh menu kết quả bao gồm các nút đóng, chỉnh sửa mô hình và nhật ký](media/subscription-churn-logsbutton.PNG "Xem thanh menu kết quả bao gồm các nút đóng, chỉnh sửa mô hình và nhật ký")
-1. Xem lại tất cả lỗi. Có một số loại lỗi có thể xảy ra và chúng mô tả nguyên nhân gây ra lỗi. Ví dụ: lỗi không có đủ dữ liệu để dự đoán chính xác thường được giải quyết bằng cách tải thêm dữ liệu.
-
-## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
-
-Các dự đoán sẽ tự động làm mới trên cùng một [trình làm mới dữ liệu](system.md#schedule-tab) như đặt cấu hình trong thiết đặt.
-
-1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
-1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn làm mới.
-1. Chọn **Làm mới**.
-
-## <a name="delete-a-prediction"></a>Xóa dự đoán
-
-1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
-1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xóa.
-1. Chọn **Xóa**.
-
-> [!NOTE]
-> Khi xóa dự đoán, thực thể đầu ra của dự đoán đó cũng sẽ bị xóa.
+Bạn có thể tối ưu hóa, khắc phục sự cố, làm mới hoặc xóa dự đoán. Hãy xem lại báo cáo khả năng sử dụng dữ liệu đầu vào để tìm hiểu cách giúp dự đoán nhanh hơn và đáng tin cậy hơn. Để biết thêm thông tin, hãy xem phần [Quản lý dự đoán](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: Dự đoán rời bỏ giao dịch
+title: Dự đoán khả năng rời bỏ giao dịch
 description: Dự đoán xem khách hàng có nguy cơ không mua sản phẩm hoặc dịch vụ của bạn nữa không.
 ms.date: 11/12/2020
 ms.reviewer: mhart
@@ -9,19 +9,19 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906882"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095628"
 ---
-# <a name="transactional-churn-prediction-preview"></a>Dự đoán rời bỏ giao dịch (bản xem trước)
+# <a name="transactional-churn-prediction-preview"></a>Dự đoán Khả năng rời bỏ giao dịch (xem trước)
 
-Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua sản phẩm hoặc dịch vụ của bạn trong một khoảng thời gian nhất định hay không. Bạn có thể tạo dự đoán rời bỏ mới trên **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
+Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách hàng sẽ không còn mua sản phẩm hoặc dịch vụ của bạn nữa trong một khoảng thời gian nhất định hay không. Bạn có thể tạo dự đoán rời bỏ mới trên **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
 
 > [!TIP]
-> Hãy thử hướng dẫn cho dự đoán rời bỏ giao dịch bằng dữ liệu mẫu: [Hướng dẫn mẫu về dự đoán rời bỏ giao dịch (bản xem trước)](sample-guide-predict-transactional-churn.md).
+> Hãy thử hướng dẫn cho dự đoán khả năng rời bỏ giao dịch bằng dữ liệu mẫu: [Hướng dẫn mẫu về dự đoán khả năng rời bỏ giao dịch (xem trước)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -55,11 +55,11 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
 > [!NOTE]
 > Đối với doanh nghiệp có tần suất mua hàng của khách hàng cao (vài tuần một lần), bạn nên chọn khoảng thời gian dự đoán ngắn hơn và xác định rủi ro khách hàng ngừng giao dịch. Đối với tần suất mua hàng thấp (vài tháng một lần hoặc một năm một lần), hãy chọn khoảng thời gian dự đoán dài hơn và xác định rủi ro khách hàng ngừng giao dịch.
 
-## <a name="create-a-transactional-churn-prediction"></a>Tạo dự đoán rời bỏ giao dịch
+## <a name="create-a-transactional-churn-prediction"></a>Tạo dự đoán khả năng rời bỏ giao dịch
 
 1. Trong Customer Insights, chuyển đến phần **Thông tin** > **Dự đoán**.
 
-1. Chọn ngăn xếp **Mô hình khách hàng rời đi (bản xem trước)** và chọn **Sử dụng mô hình này**.
+1. Chọn ngăn xếp **Mô hình khách hàng rời đi (xem trước)** và chọn **Sử dụng mô hình này**.
    
 1. Trong ngăn xếp **Mô hình khách hàng rời đi**, chọn **Giao dịch** và chọn **Bắt đầu**.
 
@@ -122,7 +122,7 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
 
 ### <a name="set-schedule-and-review-configuration"></a>Đặt lịch và xem xét cấu hình
 
-1. Đặt tần số để đào tạo lại mô hình của bạn. Cài đặt này rất quan trọng để cập nhật độ chính xác của các dự đoán vì dữ liệu mới được nhập vào thông tin chi tiết về đối tượng. Hầu hết các doanh nghiệp đều có thể đào tạo lại một lần mỗi tháng và có dự đoán chính xác cao.
+1. Đặt tần số để đào tạo lại mô hình của bạn. Cài đặt này rất quan trọng để cập nhật độ chính xác của các dự đoán vì dữ liệu mới được nhập vào thông tin chuyên sâu về đối tượng. Hầu hết các doanh nghiệp đều có thể đào tạo lại một lần mỗi tháng và có dự đoán chính xác cao.
 
 1. Chọn **Tiếp theo**.
 
@@ -144,7 +144,7 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
    - **Trạng thái:** Trạng thái chạy dự đoán.
         - **Đã xếp hàng:** Dự đoán đang đợi các quy trình khác chạy.
         - **Làm mới:** Dự đoán hiện đang chạy để tạo ra kết quả sẽ chuyển vào thực thể đầu ra.
-        - **Thất bại:** Dự đoán chạy không thành công. [Xem lại nhật ký](#troubleshoot-a-failed-prediction) để biết thêm chi tiết.
+        - **Thất bại:** Dự đoán chạy không thành công. [Xem lại nhật ký](manage-predictions.md#troubleshoot-a-failed-prediction) để biết thêm chi tiết.
         - **Đã thành công:** Dự đoán đã thành công. Chọn **Xem** bên dưới các hình elip dọc để xem xét dự đoán
    - **Đã chỉnh sửa:** Ngày thay đổi cấu hình của dự đoán.
    - **Làm mới lần gần đây nhất** Ngày dự đoán làm mới kết quả trong thực thể đầu ra.
@@ -168,35 +168,9 @@ Dự đoán rời bỏ giao dịch giúp dự đoán liệu khách hàng có mua
        
     1. **Các yếu tố có ảnh hưởng nhất:** Có nhiều yếu tố được tính đến khi tạo dự đoán. Mỗi yếu tố có tầm quan trọng được tính toán cho các dự đoán tổng hợp mà một mô hình tạo ra. Bạn có thể sử dụng các yếu tố này để giúp xác nhận kết quả dự đoán. Hoặc bạn có thể sử dụng thông tin này sau để [tạo phân khúc](segments.md) có thể giúp ảnh hưởng đến rủi ro rời bỏ của khách hàng.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Khắc phục sự cố dự đoán không thành công
+## <a name="manage-predictions"></a>Quản lý dự đoán
 
-1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
-
-1. Chọn dấu chấm lửng dọc bên cạnh dự đoán mà bạn muốn xem nhật ký lỗi.
-
-1. Chọn **Nhật ký**.
-
-1. Xem lại tất cả lỗi. Có một số loại lỗi có thể xảy ra và chúng mô tả nguyên nhân gây ra lỗi. Ví dụ: một lỗi không đủ dữ liệu để dự đoán chính xác thường được giải quyết bằng cách tải thêm dữ liệu vào Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
-
-Các dự đoán sẽ tự động làm mới trên cùng một [trình làm mới dữ liệu](system.md#schedule-tab) như đặt cấu hình trong thiết đặt. Bạn cũng có thể làm mới chúng theo cách thủ công.
-
-1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
-
-1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn làm mới.
-
-1. Chọn **Làm mới**.
-
-## <a name="delete-a-prediction"></a>Xóa dự đoán
-
-Xóa dự đoán cũng xóa thực thể đầu ra của nó.
-
-1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
-
-1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xóa.
-
-1. Chọn **Xóa**.
+Bạn có thể tối ưu hóa, khắc phục sự cố, làm mới hoặc xóa dự đoán. Hãy xem lại báo cáo khả năng sử dụng dữ liệu đầu vào để tìm hiểu cách giúp dự đoán nhanh hơn và đáng tin cậy hơn. Để biết thêm thông tin, hãy xem phần [Quản lý dự đoán](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Bổ sung dữ liệu từ Microsoft cho hồ sơ khách hàng
 description: Sử dụng dữ liệu độc quyền từ Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064917"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245733"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Làm phong phú hồ sơ khách hàng với mối quan hệ thương hiệu và sở thích (xem trước)
 
 Sử dụng dữ liệu độc quyền của Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn. Những mối quan hệ này được xác định dựa trên dữ liệu từ những người có nhân khẩu học tương tự với khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và phân khúc khách hàng của bạn dựa trên mối quan hệ của họ với các nhãn hiệu và sở thích cụ thể.
 
-Trong thông tin chi tiết về đối tượng, hãy đi tới **Dữ liệu** > **Làm phong phú** để [định cấu hình và xem các chức năng làm phong phú](enrichment-hub.md).
+Trong thông tin chuyên sâu về đối tượng, hãy đi tới **Dữ liệu** > **Làm phong phú** để [định cấu hình và xem các chức năng làm phong phú](enrichment-hub.md).
 
 Để đặt cấu hình nội dung phong phú phụ cho thương hiệu, hãy chuyển đến tab **Khám phá** và chọn **Làm phong phú dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
 
@@ -35,7 +35,7 @@ Chúng tôi sử dụng dữ liệu tìm kiếm trực tuyến của Microsoft �
 
 ## <a name="affinity-level-and-score"></a>Mức độ sở thích và điểm số
 
-Trên mỗi hồ sơ khách hàng được làm phong phú, chúng tôi cung cấp hai giá trị liên quan - mức độ sở thích và điểm số sở thích. Những giá trị này giúp bạn xác định mức độ quan tâm đối với phân đoạn nhân khẩu học của hồ sơ đó, đối với thương hiệu hoặc sở thích so với các phân đoạn nhân khẩu học khác.
+Trên mỗi hồ sơ khách hàng được làm phong phú, chúng tôi cung cấp hai giá trị liên quan - mức độ sở thích và điểm số sở thích. Những giá trị này giúp bạn xác định mức độ quan tâm đối với phân khúc nhân khẩu học của hồ sơ đó, đối với thương hiệu hoặc sở thích so với các phân khúc nhân khẩu học khác.
 
 *Mức độ sở thích* bao gồm bốn cấp độ và *điểm sở thích* được tính toán trên thang điểm 100 ánh xạ tới các mức độ sở thích.
 
@@ -69,12 +69,10 @@ Trải nghiệm có hướng dẫn sẽ giúp bạn hoàn thành quá trình c�
 
 ### <a name="define-your-brands-or-interests"></a>Xác định thương hiệu hoặc sở thích của bạn
 
-Chọn một trong các tùy chọn sau:
+Chọn tối đa 5 thương hiệu hoặc sở thích bằng cách sử dụng một hoặc cả hai tùy chọn sau:
 
-- **Ngành**: Hệ thống xác định thương hiệu hoặc sở thích hàng đầu liên quan đến ngành của bạn và làm phong phú dữ liệu khách hàng với họ.
-- **Chọn tùy chọn của riêng bạn**: Chọn tối đa 5 mục từ danh sách các thương hiệu hoặc sở thích phù hợp nhất với tổ chức của bạn.
-
-Để thêm thương hiệu hoặc sở thích, hãy nhập dữ liệu liệu vào khu vực đầu vào để nhận đề xuất dựa trên các điều khoản phù hợp. Nếu chúng tôi không liệt kê một thương hiệu hoặc sở thích mà bạn đang tìm kiếm, hãy gửi cho chúng tôi thông tin phản hồi bằng cách sử dụng liên kết **Đề xuất**.
+- **Ngành**: Chọn ngành của bạn từ danh sách thả xuống, rồi chọn trong số các thương hiệu hoặc sở thích hàng đầu cho ngành đó.
+- **Tự chọn**: Nhập thương hiệu hoặc sở thích có liên quan đến tổ chức của bạn, sau đó chọn trong số các đề xuất trùng khớp. Nếu chúng tôi không liệt kê một thương hiệu hoặc sở thích mà bạn đang tìm kiếm, hãy gửi cho chúng tôi thông tin phản hồi bằng cách sử dụng liên kết **Đề xuất**.
 
 ### <a name="review-enrichment-preferences"></a>Xem xét các tùy chọn làm phong phú
 
@@ -88,7 +86,7 @@ Chọn **Thực thể được bổ sung** rồi chọn tập hợp dữ liệu 
 
 ### <a name="map-your-fields"></a>Ánh xạ trường của bạn
 
-Ánh xạ các trường từ thực thể khách hàng hợp nhất để xác định phân đoạn nhân khẩu học mà bạn muốn hệ thống sử dụng để làm phong phú dữ liệu khách hàng của bạn. Ánh xạ Quốc gia/Khu vực và tối thiểu là thuộc tính Ngày sinh hoặc Giới tính. Ngoài ra, bạn phải ánh xạ tối thiểu là Thành phố (và Tiểu bang/Tỉnh) hoặc Mã bưu chính. Chọn **Chỉnh sửa** để xác định ánh xạ của các trường và chọn **Áp dụng** khi bạn hoàn thành. Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
+Ánh xạ các trường từ thực thể khách hàng hợp nhất để xác định phân khúc nhân khẩu học mà bạn muốn hệ thống sử dụng để làm phong phú dữ liệu khách hàng của bạn. Ánh xạ Quốc gia/Khu vực và tối thiểu là thuộc tính Ngày sinh hoặc Giới tính. Ngoài ra, bạn phải ánh xạ tối thiểu là Thành phố (và Tiểu bang/Tỉnh) hoặc Mã bưu chính. Chọn **Chỉnh sửa** để xác định ánh xạ của các trường và chọn **Áp dụng** khi bạn hoàn thành. Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
 
 Các định dạng và giá trị sau được hỗ trợ, giá trị không phân biệt chữ hoa chữ thường:
 

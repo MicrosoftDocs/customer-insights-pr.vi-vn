@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988946"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263277"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong khả năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chuyên sâu về đối tượng của Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -27,7 +27,38 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
-## <a name="april-2021-updates"></a>Các điểm cập nhật tháng 4 năm 2021
+## <a name="may-2021-updates"></a>Bản cập nhật tháng 5 năm 2021
+
+Bản cập nhật tháng 5 năm 2021 bao gồm một số tính năng, bản nâng cấp hiệu suất và bản sửa lỗi.
+
+### <a name="data-ingestion"></a>Nhập dữ liệu
+
+- **Xem và sửa đổi siêu dữ liệu hoặc định nghĩa thực thể khi đính kèm dữ liệu từ Azure Data Lake Storage** Giờ đây, bạn có thể xem và chỉnh sửa siêu dữ liệu hoặc định nghĩa thực thể trong thông tin chuyên sâu về đối tượng khi đính kèm dữ liệu từ thư mục Common Data Model trong Azure Data Lake Storage. Chức năng này cung cấp ý kiến phản hồi theo thời gian thực, tùy chọn xác thực mô hình và kiểm tra lỗi. Chức năng này cho phép bạn chỉnh sửa dễ dàng cả tệp model.json và manifest.json.
+
+### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Cải thiện nội dung xuất phân khúc, lịch trình tùy chỉnh và bản sao** Giờ đây, bạn có thể [xem tất cả nội dung xuất của một phân khúc cụ thể](export-destinations.md#view-exports-and-export-details) trong một danh sách. Dạng xem mới này giúp quản lý cách một phân khúc cụ thể được dùng và điều chỉnh nội dung xuất hiện có hoặc tạo nội dung xuất mới.    
+  Bạn có thể [xác định lịch làm mới tùy chỉnh](export-destinations.md#schedule-and-run-exports) cho từng nội dung xuất hoặc một vài nội dung xuất cùng lúc. Cho đến nay, tất cả các nội dung xuất đều được chạy trong mỗi lần làm mới hệ thống.    
+  Thay vì tạo nội dung xuất mới từ đầu, bạn có thể bắt đầu dựa trên một nội dung xuất hiện có để tiết kiệm thời gian.
+
+- **Xuất phân khúc sang Microsoft Advertising** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Microsoft Advertising. Tạo đối tượng Customer Match trên Microsoft Advertising bằng dữ liệu hồ sơ khách hàng hợp nhất của bạn và sử dụng các đối tượng này cho chiến dịch quảng cáo. Để biết thêm thông tin, hãy xem bài viết [Xuất phân khúc sang Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Xuất phân khúc sang LinkedIn Ads** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả LinkedIn Ads, đồng thời cho phép bạn mở khóa chức năng Nhắm mục tiêu người liên hệ và Nhắm mục tiêu công ty thông qua LinkedIn bằng cách xuất dữ liệu hồ sơ khách hàng hợp nhất của bạn. Để biết thêm thông tin, hãy xem bài viết [Xuất phân khúc sang LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Xuất phân khúc sang Omnisend** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Omnisend. Sử dụng phân khúc đã tạo trong thông tin chuyên sâu về đối tượng để tạo chiến dịch, cung cấp email tiếp thị và tận dụng các nhóm khách hàng cụ thể với Omnisend. Để biết thêm thông tin, hãy xem bài viết [Xuất phân khúc sang Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Dự đoán
+
+- **Báo cáo khả năng sử dụng dữ liệu đầu vào** Báo cáo này cung cấp một dạng xem tổng hợp về các lỗi và cảnh báo mà các dự đoán có sẵn của bạn có thể đang tạo ra. Báo cáo này cũng đưa ra đề xuất về cách cải thiện hiệu suất của mô hình.    
+  Báo cáo này có sẵn sau khi một mô hình đã hoàn tất quá trình đào tạo. Báo cáo được tạo cho từng mô hình riêng biệt, bất kể quá trình có hoàn tất thành công hay không.
+  Hiện tại, tính năng này chỉ hỗ trợ mô hình Khả năng rời bỏ giao dịch. Để biết thêm thông tin, hãy xem phần [Báo cáo khả năng sử dụng dữ liệu đầu vào](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Mối quan hệ
+
+- **Trình hiển thị mối quan hệ** Dạng xem trình hiển thị mối quan hệ cho phép bạn xem tất cả các mối quan hệ hiện có giữa các thực thể và lượng số của chúng. Giờ đây, các mối quan hệ được sắp xếp theo nhóm: do người dùng tạo, hệ thống và kế thừa. Bạn cũng có thể xuất dạng xem dưới dạng hình ảnh. Để biết thêm thông tin, hãy xem phần [Xem mối quan hệ](relationships.md#view-relationships). 
+
+## <a name="april-2021-updates"></a>Bản cập nhật tháng 4 năm 2021
 
 Các bản cập nhật vào tháng 4 năm 2021 bao gồm một số tính năng, bản nâng cấp hiệu suất và sửa lỗi.
 
@@ -63,7 +94,7 @@ Các bản cập nhật vào tháng 4 năm 2021 bao gồm một số tính năng
   
    Để biết thêm thông tin, hãy xem [Nội dung phong phú cho hồ sơ khách hàng](enrichment-hub.md).
 
-## <a name="march-2021-updates"></a>Các bản cập nhật tháng 3 năm 2021
+## <a name="march-2021-updates"></a>Bản cập nhật tháng 3 năm 2021
 
 Các bản cập nhật vào tháng 3 năm 2021 bao gồm một số tính năng, bản nâng cấp hiệu suất và sửa lỗi.
 
@@ -119,7 +150,7 @@ Các bản cập nhật vào tháng 2 năm 2021 bao gồm một số tính năng
 
 #### <a name="segments"></a>Phân khúc
  
-- **Sao chép phân đoạn**
+- **Sao chép phân khúc**
   
   Để tạo một phân khúc mới dựa trên một phân khúc hiện có, bạn có thể sao chép một phân khúc và chỉnh sửa phân khúc đã sao chép để tinh chỉnh thêm. 
 
@@ -147,13 +178,13 @@ Bản cập nhật tháng 1 năm 2021 bao gồm một vài tính năng, nâng c�
 
 #### <a name="extensibility"></a>Khả năng mở rộng
 
-- **Chức năng mở rộng và hiệu suất nâng cao cho chức năng xuất SFTP** Giờ đây, bạn có thể xuất tất cả các thực thể đầu ra từ Customer Insights sang máy chủ SFTP. Trước đây, tính năng xuất được giới hạn trong các thực thể phân đoạn. Ngoài ra, hiệu suất của tính năng xuất SFTP cho phép nhiều dữ liệu hơn trong thời gian ngắn hơn, tùy thuộc vào hiệu suất của máy chủ SFTP của bạn.    
-  Để biết thêm thông tin, hãy xem [Trình kết nối cho SFTP (bản xem trước)](export-sftp.md).  
+- **Chức năng mở rộng và hiệu suất nâng cao cho chức năng xuất SFTP** Giờ đây, bạn có thể xuất tất cả các thực thể đầu ra từ Customer Insights sang máy chủ SFTP. Trước đây, tính năng xuất được giới hạn trong các thực thể phân khúc. Ngoài ra, hiệu suất của tính năng xuất SFTP cho phép nhiều dữ liệu hơn trong thời gian ngắn hơn, tùy thuộc vào hiệu suất của máy chủ SFTP của bạn.    
+  Để biết thêm thông tin, hãy xem [Trình kết nối cho SFTP (xem trước)](export-sftp.md).  
 
 #### <a name="segments"></a>Phân khúc
 
-- **Các phân đoạn đề xuất dựa trên công nghệ máy học để cải thiện chỉ số** Có một cách mới để khám phá và tạo phân đoạn. Hệ thống sử dụng mô hình trí tuệ nhân tạo để đề xuất các phân đoạn có thể giúp cải thiện KPI (giá trị đo) mà bạn đang theo dõi. Chúng tôi cho biết mức độ ảnh hưởng của các thuộc tính mà bạn chọn đối với giá trị đo hoặc một thuộc tính chính khác. Thông tin này giúp tìm kiếm các phân khúc tiềm năng mang lại cơ hội.    
-  Để biết thêm thông tin, hãy xem [Phân đoạn được đề xuất (bản xem trước)](suggested-segments.md).
+- **Các phân khúc đề xuất dựa trên công nghệ máy học để cải thiện chỉ số** Có một cách mới để khám phá và tạo phân khúc. Hệ thống sử dụng mô hình trí tuệ nhân tạo để đề xuất các phân khúc có thể giúp cải thiện KPI (giá trị đo) mà bạn đang theo dõi. Chúng tôi cho biết mức độ ảnh hưởng của các thuộc tính mà bạn chọn đối với giá trị đo hoặc một thuộc tính chính khác. Thông tin này giúp tìm kiếm các phân khúc tiềm năng mang lại cơ hội.    
+  Để biết thêm thông tin, hãy xem bài viết [Phân khúc đề xuất (xem trước)](suggested-segments.md).
 
 #### <a name="data-unification"></a>Thống nhất dữ liệu
 

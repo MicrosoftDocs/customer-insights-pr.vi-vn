@@ -9,29 +9,29 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d08504856e1c673ef32433b83bf491d7f4e8cee4
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 8b0bda638c9bc7bb9cb2fdb01be11489b44f28a5
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976872"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124437"
 ---
-# <a name="export-segment-lists-to-dotdigital-preview"></a>Xuất danh sách phân khúc sang DotDigital (bản xem trước)
+# <a name="export-segments-to-dotdigital-preview"></a>Xuất phân khúc sang DotDigital (xem trước)
 
-Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang sổ địa chỉ DotDigital và sử dụng chúng cho các chiến dịch, tiếp thị qua email và để xây dựng phân khúc khách hàng với DotDigital. 
+Xuất các phân khúc hồ sơ khách hàng hợp nhất sang sổ địa chỉ DotDigital và sử dụng chúng cho các chiến dịch, tiếp thị qua email và để xây dựng phân khúc khách hàng với DotDigital. 
 
 ## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [Tài khoản DotDigital](https://dotdigital.com/) và thông tin đăng nhập quản trị viên tương ứng.
 -   Có sổ địa chỉ hiện có trong DotDigital và các ID tương ứng. Có thể tìm thấy ID trong URL khi bạn chọn và mở sổ địa chỉ. Để biết thêm thông tin, hãy xem [Sổ địa chỉ DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
--   Bạn có [các phân đoạn được định cấu hình](segments.md) trong thông tin chi tiết về đối tượng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Bạn có [các phân khúc được định cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các giới hạn đã biết
 
 - Lên đến 1 triệu hồ sơ mỗi lần xuất sang DotDigital.
-- Việc xuất sang DotDigital bị giới hạn ở các phân đoạn.
-- Việc xuất các phân đoạn với tổng số 1 triệu hồ sơ có thể mất đến 3 giờ vì những hạn chế từ phía nhà cung cấp. 
+- Bạn chỉ xuất được phân khúc sang DotDigital.
+- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ có thể mất đến 3 giờ vì những hạn chế từ phía nhà cung cấp. 
 - Số lượng hồ sơ mà bạn có thể xuất sang DotDigital phụ thuộc và giới hạn vào hợp đồng của bạn với DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Thiết lập kết nối với DotDigital
@@ -77,13 +77,13 @@ Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ng
 
 Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
  
-Trong DotDigital, bây giờ bạn có thể tìm thấy các phân đoạn của mình trong [Sổ địa chỉ DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Trong DotDigital, bây giờ bạn có thể tìm thấy các phân khúc của mình trong [Sổ địa chỉ DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới DotDigital, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng DotDigital đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

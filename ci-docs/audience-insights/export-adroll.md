@@ -9,28 +9,28 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895985"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124391"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Xuất danh sách phân khúc sang AdRoll (bản xem trước)
+# <a name="export-segments-to-adroll-preview"></a>Xuất phân khúc sang AdRoll (xem trước)
 
 Xuất phân khúc hồ sơ khách hàng hợp nhất sang AdRoll và sử dụng các phân khúc đó để quảng cáo. 
 
 ## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [tài khoản AdRoll](https://www.adroll.com/) và thông tin đăng nhập tương ứng của quản trị viên.
--   Bạn có [các phân đoạn được định cấu hình](segments.md) trong thông tin chi tiết về đối tượng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Bạn có [các phân khúc được định cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các giới hạn đã biết
 
 - Bạn có thể xuất tối đa 250.000 hồ sơ cho mỗi lần xuất sang AdRoll.
 - Bạn không thể xuất các phân khúc có ít hơn 100 hồ sơ sang AdRoll. 
-- Việc xuất sang AdRoll bị giới hạn ở các phân khúc.
+- Bạn chỉ xuất được phân khúc sang AdRoll.
 - Có thể mất tới 10 phút để hoàn tất việc xuất tối đa 250.000 hồ sơ sang AdRoll. 
 - Số lượng hồ sơ mà bạn có thể xuất sang AdRoll phụ thuộc và giới hạn vào hợp đồng của bạn với AdRoll.
 
@@ -81,4 +81,4 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu sang AdRoll, bạn cho phép truyền dữ liệu ra ngoài ranh giới tuân thủ của Dynamics 365 Customer Insights, bao gồm cả dữ liệu nhạy cảm như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng AdRoll đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.

@@ -9,28 +9,28 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 35848998e738c7ecc1642f2b75912ff78d85f79e
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976181"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124253"
 ---
-# <a name="export-segment-lists-to-mailchimp-preview"></a>Xuất danh sách phân khúc sang Mailchimp (bản xem trước)
+# <a name="export-segments-to-mailchimp-preview"></a>Xuất phân khúc sang Mailchimp (xem trước)
 
-Xuất phân đoạn hồ sơ khách hàng hợp nhất sang Mailchimp để tạo bản tin và chiến dịch email.
+Xuất phân khúc hồ sơ khách hàng hợp nhất sang Mailchimp để tạo bản tin và chiến dịch email.
 
 ## <a name="prerequisites-for-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [Tài khoản Mailchimp](https://mailchimp.com/) và thông tin đăng nhập quản trị viên tương ứng.
 -   Có đối tượng hiện có trong Mailchimp và các ID tương ứng. Để biết thêm thông tin, hãy xem [Đối tượng Mailchimp](https://mailchimp.com/help/create-audience/).
--   Bạn có [các phân đoạn được định cấu hình](segments.md)
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Bạn có [các phân khúc được định cấu hình](segments.md)
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các giới hạn đã biết
 
 - Lên đến 1 triệu hồ sơ mỗi lần xuất sang Mailchimp.
-- Việc xuất sang Mailchimp bị giới hạn ở các phân đoạn.
+- Bạn chỉ xuất được phân khúc sang Mailchimp.
 - Quá trình xuất phân khúc với 1 triệu hồ sơ có thể mất đến ba giờ. 
 - Số lượng hồ sơ mà bạn có thể xuất sang Mailchimp phụ thuộc và giới hạn vào hợp đồng của bạn với Mailchimp.
 
@@ -81,6 +81,6 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Mailchimp, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Mailchimp đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

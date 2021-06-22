@@ -1,5 +1,5 @@
 ---
-title: Dự đoán giá trị lâu dài của khách hàng (CLV)
+title: Dự đoán giá trị trọn đời của khách hàng (CLV)
 description: Dự đoán doanh thu tiềm năng cho những khách hàng đang hoạt động trong tương lai.
 ms.date: 02/05/2021
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954605"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095536"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Dự đoán giá trị lâu dài của khách hàng (CLV) (Bản xem trước)
+# <a name="customer-lifetime-value-clv-prediction-preview"></a>Dự đoán Giá trị trọn đời của khách hàng (CLV) (Xem trước)
 
 Dự đoán giá trị tiềm năng (doanh thu) mà các khách hàng cá nhân đang hoạt động sẽ mang lại cho doanh nghiệp của bạn trong suốt khoảng thời gian xác định trong tương lai. Tính năng này có thể giúp bạn đạt được nhiều mục tiêu: 
 - Xác định những khách hàng có giá trị cao và xử lý thông tin chi tiết này
@@ -68,13 +68,13 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
 > - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng/giao dịch, bạn có thể liên kết những thực thể này trong Power Query trước khi nhập dữ liệu.
 > - Tuy nhiên, nhằm có thêm dữ liệu hoạt động của khách hàng (tùy chọn), bạn có thể thêm bao nhiêu thực thể hoạt động của khách hàng tùy thích để mô hình xem xét.
 
-## <a name="create-a-customer-lifetime-value-prediction"></a>Tạo dự đoán giá trị lâu dài của khách hàng
+## <a name="create-a-customer-lifetime-value-prediction"></a>Tạo dự đoán Giá trị trọn đời của khách hàng
 
-1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán**.
+1. Trong thông tin chuyên sâu về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán**.
 
-1. Chọn ô **Giá trị lâu dài của khách hàng** và chọn **Sử dụng mô hình**. 
+1. Chọn ô **Giá trị trọn đời của khách hàng** và chọn **Sử dụng mô hình**. 
 
-1. Trong ngăn **Giá trị lâu dài của khách hàng (bản xem trước)**, hãy chọn **Bắt đầu**.
+1. Trong ngăn **Giá trị trọn đời của khách hàng (xem trước)**, hãy chọn **Bắt đầu**.
 
 1. **Đặt tên cho mô hình này** và **Tên thực thể đầu ra** để phân biệt chúng với các mô hình hoặc thực thể khác.
 
@@ -145,10 +145,9 @@ Dữ liệu phản ánh các tương tác chính của khách hàng (như web, d
 
 ### <a name="set-update-schedule"></a>Đặt lịch trình cập nhật
 
-1. Trong bước **Lịch trình cập nhật dữ liệu**, hãy chọn tần suất đào tạo lại mô hình của bạn dựa trên dữ liệu mới nhất. Cài đặt này rất quan trọng để cập nhật độ chính xác của các dự đoán vì dữ liệu mới được nhập vào thông tin chi tiết về đối tượng. Hầu hết các doanh nghiệp đều có thể đào tạo lại một lần mỗi tháng và có dự đoán chính xác cao.
+1. Trong bước **Lịch trình cập nhật dữ liệu**, hãy chọn tần suất đào tạo lại mô hình của bạn dựa trên dữ liệu mới nhất. Cài đặt này rất quan trọng để cập nhật độ chính xác của các dự đoán vì dữ liệu mới được nhập vào thông tin chuyên sâu về đối tượng. Hầu hết các doanh nghiệp đều có thể đào tạo lại một lần mỗi tháng và có dự đoán chính xác cao.
 
 1. Chọn **Tiếp theo**.
-
 
 ### <a name="review-and-run-the-model-configuration"></a>Xem lại và chạy cấu hình mô hình
 
@@ -166,15 +165,14 @@ Dữ liệu phản ánh các tương tác chính của khách hàng (như web, d
 - **Tên dự đoán**: Tên của dự đoán được cung cấp khi tạo.
 - **Loại dự đoán**: Loại mô hình được sử dụng cho dự đoán
 - **Thực thể đầu ra**: Tên của thực thể để lưu trữ đầu ra của dự đoán. Chuyển đến **Dữ liệu** > **Thực thể** để tìm thực thể có tên này.
-- **Trường dự đoán**: Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán giá trị lâu dài của khách hàng.
+- **Trường dự đoán**: Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán giá trị trọn đời của khách hàng.
 - **Trạng thái**: Trạng thái chạy dự đoán.
     - **Đã xếp hàng**: Dự đoán đang đợi các quy trình khác hoàn tất.
     - **Làm mới**: Dự đoán hiện đang chạy để tạo ra kết quả sẽ chuyển vào thực thể đầu ra.
-    - **Thất bại**: Chạy dự đoán không thành công. [Xem lại nhật ký](#troubleshoot-a-failed-prediction) để biết thêm chi tiết.
+    - **Thất bại**: Chạy dự đoán không thành công. [Xem lại nhật ký](manage-predictions.md#troubleshoot-a-failed-prediction) để biết thêm chi tiết.
     - **Đã thành công**: Dự đoán đã thành công. Chọn **Dạng xem** dưới dấu ba chấm dọc để xem lại kết quả dự đoán.
 - **Đã chỉnh sửa**: Ngày thay đổi cấu hình của dự đoán.
 - **Làm mới lần gần đây nhất**: Ngày dự đoán làm mới kết quả trong thực thể đầu ra.
-
 
 ### <a name="review-prediction-results"></a>Xem lại kết quả dự đoán
 
@@ -195,7 +193,7 @@ Có ba phần dữ liệu chính trong trang kết quả.
   - **B** khi mô hình dự đoán khách hàng có giá trị cao chính xác hơn mô hình cơ sở từ 0-5%.
   - **C** khi mô hình dự đoán khách hàng có giá trị cao ít chính xác hơn mô hình cơ sở.
 
-  Ngăn **Xếp hạng mô hình** hiển thị thêm chi tiết về hiệu suất mô hình trí tuệ nhân tạo và mô hình cơ sở. Mô hình cơ sở sử dụng cách tiếp cận không dựa trên AI để tính toán giá trị lâu dài của khách hàng chủ yếu dựa trên các giao dịch mua trước đây của khách hàng.     
+  Ngăn **Xếp hạng mô hình** hiển thị thêm chi tiết về hiệu suất mô hình trí tuệ nhân tạo và mô hình cơ sở. Mô hình cơ sở sử dụng cách tiếp cận không dựa trên AI để tính toán giá trị trọn đời của khách hàng chủ yếu dựa trên các giao dịch mua trước đây của khách hàng.     
   Công thức chuẩn được dùng để tính CLV theo mô hình cơ sở:    
 
   _**CLV cho mỗi khách hàng** = Giao dịch mua trung bình hàng tháng của khách hàng trong khoảng thời gian khách hàng đang hoạt động * Số tháng trong khoảng thời gian CLV dự đoán * Tỷ lệ giữ chân tổng thể của tất cả khách hàng*_
@@ -206,7 +204,7 @@ Có ba phần dữ liệu chính trong trang kết quả.
 
     Xem sự khác biệt trong việc dự đoán khách hàng có giá trị cao bằng cách sử dụng mô hình AI so với mô hình cơ sở. Ví dụ: tỷ lệ thành công 84% có nghĩa là trong số tất cả khách hàng có giá trị cao trong dữ liệu đào tạo, mô hình AI có thể dự đoán chính xác 84%. Sau đó, chúng tôi so sánh tỷ lệ thành công này với tỷ lệ thành công của mô hình cơ sở để báo cáo sự thay đổi tương đối. Giá trị này được sử dụng để gán điểm cho mô hình.
 
-  - **Số liệu lỗi**
+  - **Chỉ số lỗi**
     
     Một chỉ số khác cho phép bạn xem xét hiệu suất tổng thể của mô hình về lỗi dự đoán các giá trị trong tương lai. Chúng tôi sử dụng chỉ số Lỗi trung bình bình phương (RMSE) tổng thể để đánh giá lỗi này. RMSE là một cách tiêu chuẩn để đo lường lỗi dự đoán dữ liệu định lượng của một mô hình. RMSE của mô hình AI được so sánh với RMSE của mô hình cơ sở và báo cáo sự khác biệt tương đối.
 
@@ -216,28 +214,8 @@ Có ba phần dữ liệu chính trong trang kết quả.
 
 - **Các yếu tố ảnh hưởng nhất**: Các yếu tố khác nhau được xem xét khi tạo dự đoán CLV của bạn dựa trên dữ liệu đầu vào được cung cấp cho mô hình AI. Mỗi yếu tố có tầm quan trọng được tính toán cho các dự đoán tổng hợp mà một mô hình tạo ra. Bạn có thể sử dụng các yếu tố này để giúp xác nhận kết quả dự đoán. Những yếu tố này cũng cung cấp thêm thông tin chi tiết về các yếu tố có ảnh hưởng nhất góp phần vào việc dự đoán CLV trên tất cả các khách hàng của bạn.
 
-## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
+## <a name="manage-predictions"></a>Quản lý dự đoán
 
-Các dự đoán tự động làm mới trên cùng một [lịch làm mới dữ liệu của bạn](system.md#schedule-tab) như được định cấu hình trong chế độ cài đặt. Bạn cũng có thể làm mới chúng theo cách thủ công.
-
-1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
-2. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn làm mới.
-3. Chọn **Làm mới**.
-
-## <a name="delete-a-prediction"></a>Xóa dự đoán
-
-Xóa dự đoán cũng xóa thực thể đầu ra của nó.
-
-1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
-2. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xóa.
-3. Chọn **Xóa**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Khắc phục sự cố dự đoán không thành công
-
-1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
-2. Chọn dấu chấm lửng dọc bên cạnh dự đoán mà bạn muốn xem nhật ký lỗi.
-3. Chọn **Nhật ký**.
-4. Xem lại tất cả lỗi. Có một số loại lỗi có thể xảy ra và chúng mô tả nguyên nhân gây ra lỗi. Ví dụ: lỗi không có đủ dữ liệu để dự đoán chính xác thường được giải quyết bằng cách tải thêm dữ liệu vào thông tin chuyên sâu về đối tượng.
-
+Bạn có thể tối ưu hóa, khắc phục sự cố, làm mới hoặc xóa dự đoán. Hãy xem lại báo cáo khả năng sử dụng dữ liệu đầu vào để tìm hiểu cách giúp dự đoán nhanh hơn và đáng tin cậy hơn. Để biết thêm thông tin, hãy xem phần [Quản lý dự đoán](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

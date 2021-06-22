@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý môi trường
 description: Tìm hiểu cách đăng ký dịch vụ và cách quản lý môi trường.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5888012"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259125"
 ---
 # <a name="manage-environments"></a>Quản lý môi trường
 
@@ -76,9 +76,9 @@ Có hai cách để tạo một môi trường mới. Bạn có thể chỉ đ�
    > Chúng tôi chỉ hỗ trợ các tài khoản lưu trữ Azure Data Lake Gen2 từ cùng một vùng Azure mà bạn đã chọn khi tạo môi trường.
    > Chúng tôi chỉ hỗ trợ Không gian tên theo cấp bậc (HNS) Azure Data Lake thế hệ 2 có hỗ trợ tài khoản lưu trữ.
 
-   - Đối với tùy chọn Azure Data Lake Storage Gen2, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Tên **Vùng chứa** không thể thay đổi và sẽ là "customerinsights".
+   - Đối với tùy chọn Azure Data Lake Storage Gen2, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Tên **Vùng chứa** không thể thay đổi và mặc định là `customerinsights`.
    
-   - Nếu bạn muốn sử dụng [dự đoán](predictions.md), hãy đặt cấu hình chia sẻ dữ liệu với các ứng dụng và giải pháp dựa trên Microsoft Dataverse hoặc cho phép nhập dữ liệu từ nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse trong mục **Đặt cấu hình chia sẻ dữ liệu với Microsoft Dataverse và kích hoạt các nguồn lực bổ sung**. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với Microsoft Dataverse Managed Data Lake.
+   - Nếu bạn muốn sử dụng [dự đoán](predictions.md), hãy đặt cấu hình tính năng chia sẻ dữ liệu với Microsoft Dataverse hoặc cho phép nhập dữ liệu từ nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse trong mục **Đặt cấu hình chia sẻ dữ liệu với Microsoft Dataverse và cho phép các nguồn lực bổ sung**. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Chia sẻ dữ liệu với Microsoft Dataverse Managed Data Lake hiện không được hỗ trợ khi bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của riêng mình.
@@ -87,18 +87,18 @@ Có hai cách để tạo một môi trường mới. Bạn có thể chỉ đ�
      > [!div class="mx-imgBorder"]
      > ![Tùy chọn cấu hình để cho phép chia sẻ dữ liệu với Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân đoạn, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Các tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục con tương ứng dựa trên quy trình bạn chạy.
+   Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân khúc, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục dựa trên tên quy trình.
 
    Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các thực thể đầu ra từ các môi trường đó trong tài khoản lưu trữ của mình, các thư mục riêng biệt sẽ được tạo cho từng môi trường với ci_<environmentid> trong vùng chứa.
 
-### <a name="considerations-for-copy-configuration-preview"></a>Những điều cần cân nhắc đối với cấu hình sao chép (bản xem trước)
+### <a name="considerations-for-copy-configuration-preview"></a>Những điều cần cân nhắc đối với cấu hình sao chép (xem trước)
 
 Các thiết đặt cấu hình sau được sao chép:
 
 - Cấu hình tính năng
 - Nguồn dữ liệu được nhập/thu nạp
 - Cấu hình hợp nhất dữ liệu (Bản đồ, kết hợp, hợp nhất)
-- Phân đoạn
+- Phân khúc
 - Biện pháp
 - Mối quan hệ
 - Hoạt động
@@ -140,17 +140,17 @@ Bạn có thể chỉnh sửa một số thông tin của các môi trường hi
 
 5. Theo tùy chọn, bạn có thể cập nhật từ kết nối dựa trên khóa tài khoản thành kết nối dựa trên tài nguyên hoặc dựa trên đăng ký. Sau khi nâng cấp, bạn không thể hoàn nguyên về khóa tài khoản sau khi cập nhật. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
 
-6. Bạn có thể tùy ý cung cấp URL môi trường Microsoft Dataverse trong mục **Đặt cấu hình chia sẻ dữ liệu với Microsoft Dataverse và kích hoạt các nguồn lực bổ sung**. Các nguồn lực này bao gồm chia sẻ dữ liệu với các ứng dụng và giải pháp dựa trên Microsoft Dataverse, nhập dữ liệu từ nguồn dữ liệu tại chỗ hoặc việc sử dụng [dự đoán](predictions.md). Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu được quản lý của Microsoft Dataverse.
+6. Bạn có thể tùy ý cung cấp URL môi trường Microsoft Dataverse trong mục **Đặt cấu hình chia sẻ dữ liệu với Microsoft Dataverse và kích hoạt các nguồn lực bổ sung**. Các nguồn lực này bao gồm việc chia sẻ dữ liệu với các ứng dụng và giải pháp dựa trên Microsoft Dataverse, nhập dữ liệu từ nguồn dữ liệu tại chỗ hoặc sử dụng [dự đoán](predictions.md). Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu được quản lý của Microsoft Dataverse.
 
    > [!NOTE]
    > - Chia sẻ dữ liệu với Microsoft Dataverse Managed Data Lake hiện không được hỗ trợ khi bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của riêng mình.
    > - [Dự đoán giá trị bị thiếu trong một thực thể](predictions.md) hiện không được hỗ trợ khi bạn bật tính năng chia sẻ dữ liệu với dịch vụ Data Lake được quản lý của Microsoft Dataverse.
 
-   Sau khi bạn bật tính năng chia sẻ dữ liệu với Microsoft Dataverse, một lần làm mới hoàn toàn nguồn dữ liệu của bạn và các quy trình khác sẽ được kích hoạt. Nếu các quy trình hiện đang chạy và được đưa vào hàng đợi, bạn sẽ không thấy tùy chọn bật tính năng chia sẻ dữ liệu với Microsoft Dataverse. Bạn có thể đợi các quy trình đó hoàn tất hoặc hủy chúng để bật tính năng chia sẻ dữ liệu. 
+   Sau khi bạn bật tính năng chia sẻ dữ liệu với Microsoft Dataverse, một lần làm mới hoàn toàn nguồn dữ liệu của bạn và các quy trình khác sẽ bắt đầu. Nếu các quy trình hiện đang chạy, bạn sẽ không thấy tùy chọn bật tính năng chia sẻ dữ liệu với Microsoft Dataverse. Hãy đợi các quy trình đó hoàn tất hoặc hủy chúng để bật tính năng chia sẻ dữ liệu. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
    
-   Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân đoạn, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục con tương ứng, tùy thuộc vào quá trình bạn chạy.
+   Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân khúc, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục con tương ứng, tùy thuộc vào quá trình bạn chạy.
 
 ## <a name="reset-an-existing-environment"></a>Đặt lại môi trường hiện có
 

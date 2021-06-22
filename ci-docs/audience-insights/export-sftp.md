@@ -9,14 +9,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3663a48955f0b1db8a96e25403e5f8947bc6a220
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 000b44dc8e5cc419132bd17e359fbdd5879caf1b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976965"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124345"
 ---
-# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang SFTP (bản xem trước)
+# <a name="export-segments-and-other-data-to-sftp-preview"></a>Xuất phân khúc và dữ liệu khác sang SFTP (xem trước)
 
 Sử dụng dữ liệu khách hàng của bạn trong các ứng dụng của bên thứ ba bằng cách xuất chúng sang vị trí Giao thức truyền tệp bảo mật (SFTP).
 
@@ -59,7 +59,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần SFTP. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
 
-1. Chọn các thực thể, ví dụ như phân đoạn, bạn muốn xuất.
+1. Chọn các thực thể, ví dụ như phân khúc, bạn muốn xuất.
 
    > [!NOTE]
    > Mỗi thực thể đã chọn sẽ được chia thành tối đa năm tệp đầu ra khi xuất. 
@@ -73,6 +73,6 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu qua SFTP, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng điểm đến xuất đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

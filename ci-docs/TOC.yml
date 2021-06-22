@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Dự đoán
       items:
-        - name: Dữ liệu hoàn thành sử dụng dự đoán giá trị
-          href: audience-insights/predictions.md
-        - name: Dự đoán rời bỏ đăng ký
-          href: audience-insights/predict-subscription-churn.md
-        - name: Hướng dẫn mẫu cho dự đoán rời bỏ đăng ký
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Dự đoán rời bỏ giao dịch
-          href: audience-insights/predict-transactional-churn.md
-        - name: Hướng dẫn mẫu cho dự đoán rời bỏ giao dịch
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Dự đoán giá trị trọn đời của khách hàng (CLV)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Dự đoán đề xuất sản phẩm
-          href: audience-insights/predict-product-recommendation.md
-        - name: Hướng dẫn mẫu dự đoán đề xuất sản phẩm
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Dự đoán dữ liệu với sự trợ giúp của công nghệ AI
+          items:
+            - name: Tổng quan về các mô hình dự đoán
+              href: audience-insights/predictions-overview.md
+            - name: Dự đoán giá trị trọn đời của khách hàng (CLV)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Dự đoán đề xuất sản phẩm
+              href: audience-insights/predict-product-recommendation.md
+            - name: Dự đoán khả năng rời bỏ đăng ký
+              href: audience-insights/predict-subscription-churn.md
+            - name: Dự đoán khả năng rời bỏ giao dịch
+              href: audience-insights/predict-transactional-churn.md
+            - name: Sử dụng các mô hình tùy chỉnh của Azure Machine Learning
+              href: audience-insights/custom-models.md
+            - name: Hoàn thành dữ liệu chưa hoàn chỉnh
+              href: audience-insights/predictions.md
+        - name: Hướng dẫn mẫu
+          items:
+            - name: Hướng dẫn mẫu cho dự đoán CLV
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Hướng dẫn mẫu cho dự đoán khả năng rời bỏ đăng ký
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Hướng dẫn mẫu cho dự đoán khả năng rời bỏ giao dịch
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Hướng dẫn mẫu dự đoán đề xuất sản phẩm
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Thử nghiệm công cụ máy học Azure
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Thử nghiệm với Azure Machine Learning studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Quản lý dự đoán
+          href: audience-insights/manage-predictions.md
         - name: Tạo phân khúc dựa trên dự đoán
           href: audience-insights/prediction-based-segment.md
-        - name: Triển khai các mô hình máy học tùy chỉnh
-          href: audience-insights/custom-models.md
-        - name: Thử nghiệm công cụ máy học Azure
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Thử nghiệm với Azure Machine Learning studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Xuất tùy chọn
       items:
         - name: Nội dung xuất
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -196,10 +212,12 @@
           href: audience-insights/supported-languages.md
     - name: Khả năng mở rộng
       items:
-        - name: Tích hợp dữ liệu web từ thông tin chi tiết về mức độ tương tác
+        - name: Tích hợp dữ liệu web từ thông tin chuyên sâu về tương tác
           href: audience-insights/integrate-engagement-insights.md
         - name: Xem lại lược đồ thực thể trong Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Dữ liệu Customer Insights trong Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: Làm việc với API
           href: audience-insights/apis.md
         - name: Tham chiếu API
@@ -208,7 +226,7 @@
       href: audience-insights/service-limits.md
     - name: Yêu cầu DSR theo GDPR
       href: audience-insights/gdpr.md
-- name: Thông tin chuyên sâu về tương tác (bản xem trước)
+- name: Thông tin chuyên sâu về tương tác (xem trước)
   items:
     - name: Trung tâm trợ giúp
       href: engagement-insights/index.yml
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Tạo báo cáo hồ sơ hợp nhất
           href: engagement-insights/profile-reports.md
+        - name: Xem và tạo thứ nguyên
+          href: engagement-insights/dimensions.md
+        - name: Xem và tạo chỉ số
+          href: engagement-insights/metrics.md
+        - name: Xem và tạo phân khúc
+          href: engagement-insights/segments.md
     - name: Phân tích hành trình
       items:
         - name: Tạo và quản lý báo cáo phễu

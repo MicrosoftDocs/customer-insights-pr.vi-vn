@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595299"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129925"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán đề xuất sản phẩm (bản xem trước)
+# <a name="product-recommendation-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán đề xuất sản phẩm (xem trước)
 
 Chúng tôi hướng dẫn bạn thông qua một ví dụ toàn diện về dự đoán đề xuất sản phẩm bằng cách sử dụng dữ liệu mẫu được cung cấp bên dưới.
 
 ## <a name="scenario"></a>Kịch bản
 
-Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng cao, họ bán thông qua trang web Contoso Coffee của mình. Mục tiêu là hiểu họ nên giới thiệu sản phẩm nào cho khách hàng định kỳ của họ. Biết khách hàng **có khả năng mua** sản phẩm nào hơn, có thể giúp họ tiết kiệm nỗ lực tiếp thị bằng cách tập trung vào các mặt hàng cụ thể.
+Contoso là một công ty sản xuất cà phê và máy pha cà phê chất lượng cao. Họ bán sản phẩm thông qua trang web Contoso Coffee. Mục tiêu là hiểu họ nên giới thiệu sản phẩm nào cho khách hàng định kỳ của họ. Biết khách hàng **có khả năng mua** sản phẩm nào hơn, có thể giúp họ tiết kiệm nỗ lực tiếp thị bằng cách tập trung vào các mặt hàng cụ thể.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -39,7 +39,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Nhập URL cho các liên hệ Thương mại điện tử https://aka.ms/ciadclasscontacts.
 
-1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** và sau đó **Sử dụng hàng đầu tiên làm tiêu đề**.
+1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** rồi chọn **Dùng hàng đầu tiên làm tiêu đề**.
 
 1. Cập nhật kiểu dữ liệu cho các cột được liệt kê bên dưới:
    - **DateOfBirth**: Ngày
@@ -57,7 +57,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Nhập URL cho dữ liệu **Mua hàng trực tuyến** https://aka.ms/ciadclassonline.
 
-1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** và sau đó **Sử dụng hàng đầu tiên làm tiêu đề**.
+1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** rồi chọn **Dùng hàng đầu tiên làm tiêu đề**.
 
 1. Cập nhật kiểu dữ liệu cho các cột được liệt kê bên dưới:
    - **PurchasedOn**: Ngày/Giờ
@@ -65,7 +65,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Trong trường **Tên** ở ngăn bên, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **eCommercePurchases**.
 
-1. Lưu nguồn dữ liệu.
+1. **Lưu** nguồn dữ liệu.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Nhập dữ liệu khách hàng từ lược đồ khách hàng thân thiết
@@ -74,7 +74,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Nhập URL cho các liên hệ Thương mại điện tử https://aka.ms/ciadclasscustomerloyalty.
 
-1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** và sau đó **Sử dụng hàng đầu tiên làm tiêu đề**.
+1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** rồi chọn **Dùng hàng đầu tiên làm tiêu đề**.
 
 1. Cập nhật kiểu dữ liệu cho các cột được liệt kê bên dưới:
    - **DateOfBirth**: Ngày
@@ -83,11 +83,11 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Trong trường **Tên** ở ngăn bên phải, hãy đổi tên nguồn dữ liệu của bạn từ **Truy vấn** thành **loyCustomers**.
 
-1. Lưu nguồn dữ liệu.
+1. **Lưu** nguồn dữ liệu.
 
 ## <a name="task-2---data-unification"></a>Nhiệm vụ 2 - Hợp nhất dữ liệu
 
-Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh xạ, So khớp, Hợp nhất** để tạo hồ sơ khách hàng hợp nhất. Để biết thêm thông tin, hãy xem [Hợp nhất dữ liệu](data-unification.md).
+Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình hợp nhất dữ liệu để tạo hồ sơ khách hàng hợp nhất. Để biết thêm thông tin, hãy xem [Hợp nhất dữ liệu](data-unification.md).
 
 ### <a name="map"></a>Bản đồ
 
@@ -144,7 +144,7 @@ Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh 
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán đề xuất sản phẩm
 
-Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký.
+Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán khả năng rời bỏ đăng ký.
 
 1. Đi đến **Thông tin** > **Dự đoán**, chọn **Đề xuất sản phẩm**.
 
@@ -156,7 +156,7 @@ Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có t
 
    - **Số lượng sản phẩm**: Đặt giá trị này thành **5**. Cài đặt này xác định số lượng sản phẩm bạn muốn giới thiệu cho khách hàng của mình.
 
-   - **Đề xuất sản phẩm khách hàng đã mua gần đây?**: Chọn **Có** để cho biết rằng bạn muốn đưa sản phẩm vào phần giới thiệu mà khách hàng của bạn đã mua trước đó.
+   - **Lặp lại giao dịch mua dự kiến**: Chọn **Có** để cho biết rằng bạn muốn đưa sản phẩm vào phần đề xuất mà khách hàng của bạn đã mua hàng trước đó.
 
    - **Khoảng thời gian xem lại:** Chọn ít nhất **365 ngày**. Cài đặt này xác định khoảng thời gian mô hình sẽ xem xét hoạt động của khách hàng để dùng làm thông tin đề xuất cho họ.
    
@@ -174,7 +174,7 @@ Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có t
 
    Mô hình cần đào tạo thường xuyên để học các mẫu mới khi có dữ liệu mới được nhập vào. Đối với ví dụ này, hãy chọn **Hàng tháng**.
 
-1. Sau khi xem xét tất cả các chi tiết, hãy chọn **Lưu và chạy**.
+1. Sau khi xem lại tất cả thông tin chi tiết, hãy chọn **Lưu và chạy**.
 
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Nhiệm vụ 4 - Xem xét kết quả và giải thích mô hình
@@ -187,7 +187,7 @@ Việc chạy mô hình sản xuất sẽ tạo ra một thực thể mới mà 
 
 Bạn có thể tạo một phân khúc mới dựa trên thực thể được tạo bởi mô hình.
 
-1. Đi đến **Phân khúc**. Chọn **Mới** và chọn **Tạo từ** > **Thông tin**.
+1. Đi đến **Phân khúc**. Chọn **Mới** rồi chọn **Tạo từ** > **Thông tin**.
 
    ![Tạo một phân khúc với đầu ra mô hình.](media/segment-intelligence.png)
 
@@ -197,7 +197,7 @@ Bạn có thể tạo một phân khúc mới dựa trên thực thể được 
    - Toán tử: Giá trị
    - Giá trị: Chọn ba ID sản phẩm hàng đầu
 
-   :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Tạo một phân đoạn từ kết quả mô hình.":::
+   :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Tạo một phân khúc từ kết quả mô hình.":::
 
 Giờ đây, bạn có một phân khúc được cập nhật tự động, xác định những khách hàng sẵn sàng mua ba sản phẩm được đề xuất nhiều nhất 
 

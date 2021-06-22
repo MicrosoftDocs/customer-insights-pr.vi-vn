@@ -9,27 +9,27 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7fd6af37b40e21d030a1ace0cd5f8fcc7861c3fa
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 091a3197dc0c19ff78f0419fb4e88868e0f78359
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760667"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124207"
 ---
-# <a name="export-segment-lists-to-campaign-monitor-preview"></a>Xuất danh sách phân khúc sang Campaign Monitor (bản xem trước)
+# <a name="export-segments-to-campaign-monitor-preview"></a>Xuất phân khúc sang Campaign Monitor (xem trước)
 
 Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Campaign Monitor và sử dụng chúng cho các hoạt động tiếp thị.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 -   Bạn có một [Tài khoản Campaign Monitor](https://www.campaignmonitor.com/) và thông tin xác thực tương ứng của quản trị viên.
--   Bạn có [các phân đoạn được định cấu hình](segments.md) trong thông tin chi tiết về đối tượng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Bạn có [các phân khúc được định cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các giới hạn đã biết
 
 - Bạn có thể xuất tối đa 1 triệu hồ sơ trong mỗi lần xuất sang Campaign Monitor.
-- Chỉ được xuất các phân khúc sang Campaign Monitor.
+- Bạn chỉ xuất được phân khúc sang Campaign Monitor.
 - Có thể mất tới 20 phút để hoàn thành quá trình xuất tối đa 1 triệu hồ sơ sang Campaign Monitor. 
 - Số lượng hồ sơ mà bạn có thể xuất sang Campaign Monitor phụ thuộc và bị giới hạn theo hợp đồng của bạn với Campaign Monitor.
 
@@ -79,4 +79,4 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu đến Campaign Monitor, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ của Dynamics 365 Customer Insights, bao gồm cả dữ liệu có thể nhạy cảm như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Campaign Monitor đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
