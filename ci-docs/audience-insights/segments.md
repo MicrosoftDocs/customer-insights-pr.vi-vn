@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111413"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306283"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -46,7 +46,7 @@ Hành động sau đây khả dụng khi bạn chọn một phân khúc:
 - **Chỉnh sửa** phân khúc để thay đổi các thuộc tính của phân khúc đó.
 - **Tạo bản sao** của một phân khúc. Bạn có thể chọn chỉnh sửa các thuộc tính của nó ngay lập tức hoặc chỉ cần lưu bản sao.
 - **Làm mới** phân khúc để bao gồm dữ liệu mới nhất.
-- **Kích hoạt** hoặc **Hủy kích hoạt** phân khúc. Các phân khúc có thể có hai trạng thái: hiện hoạt hoặc không hoạt động. Các trạng thái này rất hữu ích khi bạn chỉnh sửa phân khúc. Đối với các phân khúc không hoạt động, định nghĩa phân khúc tồn tại nhưng phân khúc chưa chứa bất kỳ khách hàng nào. Khi bạn kích hoạt một phân khúc, phân khúc sẽ thay đổi trạng thái từ "không hoạt động" thành "hiện hoạt" và bắt đầu tìm kiếm khách hàng phù hợp với định nghĩa phân khúc. Nếu hoạt động [làm mới theo lịch trình](system.md#schedule-tab) được đặt cấu hình, thì các phân khúc không hoạt động sẽ có **Trạng thái** là **Đã bỏ qua**, biểu thị việc làm mới chưa được thực hiện. Khi phân khúc không hoạt động được kích hoạt, mục đó sẽ được làm mới và được đưa vào các lần làm mới theo lịch trình.
+- **Kích hoạt** hoặc **Hủy kích hoạt** phân khúc. Các phân khúc có thể có hai trạng thái: hiện hoạt hoặc không hoạt động. Các trạng thái này rất hữu ích khi bạn chỉnh sửa phân khúc. Đối với các phân khúc không hoạt động, định nghĩa phân khúc tồn tại nhưng phân khúc chưa chứa bất kỳ khách hàng nào. Khi bạn kích hoạt một phân khúc, phân khúc sẽ thay đổi trạng thái từ "không hoạt động" thành "hiện hoạt" và bắt đầu tìm kiếm khách hàng phù hợp với định nghĩa phân khúc. Nếu hoạt động [làm mới theo lịch trình](system.md#schedule-tab) được định cấu hình thì các phân khúc không hoạt động sẽ có **Trạng thái** là **Đã bỏ qua**, biểu thị việc làm mới chưa được thực hiện. Khi phân khúc không hoạt động được kích hoạt, mục đó sẽ được làm mới và được đưa vào các lần làm mới theo lịch trình.
   Ngoài ra, bạn cũng có thể dùng chức năng **Lên lịch sau** trong menu thả xuống **Kích hoạt/Hủy kích hoạt** để xác định ngày giờ kích hoạt và hủy kích hoạt trong tương lai của một phân khúc cụ thể.
 - **Đổi tên** phân khúc.
 - **Tải xuống** danh sách thành viên dưới dạng tệp .CSV.
@@ -55,7 +55,7 @@ Hành động sau đây khả dụng khi bạn chọn một phân khúc:
 
 ## <a name="refresh-segments"></a>Làm mới phân khúc
 
-Bạn có thể làm mới tất cả phân phúc cùng lúc bằng cách chọn **Làm mới tất cả** trên trang **Phân khúc** hoặc bạn có thể làm mới một hoặc nhiều phân khúc khi chọn và chọn **Làm mới** từ các tùy chọn. Hoặc, bạn có thể đặt cấu hình làm mới lặp lại trên **Quản trị viên** > **Hệ thống** > **Lịch trình**.
+Bạn có thể làm mới tất cả phân phúc cùng lúc bằng cách chọn **Làm mới tất cả** trên trang **Phân khúc** hoặc bạn có thể làm mới một hoặc nhiều phân khúc khi chọn và chọn **Làm mới** từ các tùy chọn. Hoặc bạn có thể định cấu hình làm mới lặp lại trên **Quản trị viên** > **Hệ thống** > **Lịch trình**.
 
 > [!TIP]
 > Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
@@ -68,9 +68,9 @@ Bạn có thể xuất một phân khúc từ trang phân khúc hoặc [trang n�
 
 1. Chọn **Hiển thị thêm [...]** cho phân khúc bạn muốn xuất.
 
-1. Chọn **Quản lý nội dung xuất** từ danh sách hành động thả xuống.
+1. Chọn **Quản lý nội dung xuất** từ danh sách thả xuống các hành động.
 
-1. Trang **Nội dung xuất (xem trước) cho phân khúc** sẽ mở ra. Bạn có thể xem tất cả các nội dung xuất đã đặt cấu hình, được nhóm theo nội dung xuất có chứa hoặc không chứa phân khúc hiện tại.
+1. Trang **Nội dung xuất (xem trước) cho phân khúc** sẽ mở ra. Bạn có thể xem tất cả các nội dung xuất đã định cấu hình, được nhóm theo nội dung xuất có chứa hoặc không chứa phân khúc hiện tại.
 
    1. Để thêm phân khúc đã chọn vào một nội dung xuất, hãy chọn nội dung xuất trong danh sách rồi chọn **Thêm phân khúc**.
 

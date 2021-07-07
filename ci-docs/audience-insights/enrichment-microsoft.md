@@ -1,6 +1,6 @@
 ---
-title: Bổ sung dữ liệu từ Microsoft cho hồ sơ khách hàng
-description: Sử dụng dữ liệu độc quyền từ Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn.
+title: Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu từ Microsoft
+description: Sử dụng dữ liệu độc quyền từ Microsoft để bổ sung các mối quan hệ về thương hiệu và sở thích cho dữ liệu khách hàng của bạn.
 ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,51 +9,51 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245733"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305182"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Làm phong phú hồ sơ khách hàng với mối quan hệ thương hiệu và sở thích (xem trước)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng mối quan hệ thương hiệu và sở thích (bản xem trước)
 
-Sử dụng dữ liệu độc quyền của Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn. Những mối quan hệ này được xác định dựa trên dữ liệu từ những người có nhân khẩu học tương tự với khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và phân khúc khách hàng của bạn dựa trên mối quan hệ của họ với các nhãn hiệu và sở thích cụ thể.
+Sử dụng dữ liệu độc quyền của Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn. Các mối quan hệ này dựa trên dữ liệu từ những người thuộc nhóm nhân khẩu học tương tự với khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và chia phân khúc khách hàng của bạn dựa trên mối quan hệ của họ với các thương hiệu và sở thích cụ thể.
 
-Trong thông tin chuyên sâu về đối tượng, hãy đi tới **Dữ liệu** > **Làm phong phú** để [định cấu hình và xem các chức năng làm phong phú](enrichment-hub.md).
+Trong thông tin chuyên sâu về đối tượng, hãy đi tới **Dữ liệu** > **Tăng cường dữ liệu** để [định cấu hình và xem dữ liệu tăng cường](enrichment-hub.md).
 
-Để đặt cấu hình nội dung phong phú phụ cho thương hiệu, hãy chuyển đến tab **Khám phá** và chọn **Làm phong phú dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
+Để định cấu hình dữ liệu tăng cường phụ về mối quan hệ thương hiệu, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
 
-Để đặt cấu hình nội dung phong phú phụ cho sở thích, hãy chuyển đến tab **Khám phá** rồi chọn **Làm phong phú dữ liệu của tôi** trên ngăn xếp **Sở thích**.
+Để định cấu hình dữ liệu tăng cường mối quan hệ về sở thích, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Sở thích**.
 
    > [!div class="mx-imgBorder"]
-   > ![Ngăn xếp Thương hiệu & Sở thích](media/BrandsInterest-tile-Hub.png "Ngăn xếp Thương hiệu & Sở thích")
+   > ![Ngăn xếp Thương hiệu và Sở thích](media/BrandsInterest-tile-Hub.png "Ngăn xếp Thương hiệu và Sở thích")
 
 ## <a name="how-we-determine-affinities"></a>Cách chúng tôi xác định mối quan hệ
 
-Chúng tôi sử dụng dữ liệu tìm kiếm trực tuyến của Microsoft để tìm mối quan hệ cho thương hiệu và sở thích trên các phân khúc nhân khẩu học khác nhau (được xác định theo độ tuổi, giới tính hoặc vị trí). Khối lượng tìm kiếm trực tuyến cho một thương hiệu hoặc sở thích xác định mức độ quan hệ của một phân khúc nhân khẩu học, so với các phân khúc khác, đối với thương hiệu hoặc sở thích đó.
+Chúng tôi sử dụng dữ liệu tìm kiếm trực tuyến của Microsoft để tìm mối quan hệ về thương hiệu và sở thích trên các phân khúc nhân khẩu học khác nhau (được xác định theo độ tuổi, giới tính hoặc vị trí). Khối lượng tìm kiếm trực tuyến cho một thương hiệu hoặc sở thích xác định mức độ quan hệ của một phân khúc nhân khẩu học, so với các phân khúc khác, đối với thương hiệu hoặc sở thích đó.
 
-## <a name="affinity-level-and-score"></a>Mức độ sở thích và điểm số
+## <a name="affinity-level-and-score"></a>Mức độ và điểm số mối quan hệ
 
-Trên mỗi hồ sơ khách hàng được làm phong phú, chúng tôi cung cấp hai giá trị liên quan - mức độ sở thích và điểm số sở thích. Những giá trị này giúp bạn xác định mức độ quan tâm đối với phân khúc nhân khẩu học của hồ sơ đó, đối với thương hiệu hoặc sở thích so với các phân khúc nhân khẩu học khác.
+Trên mỗi hồ sơ khách hàng được tăng cường dữ liệu, chúng tôi cung cấp hai giá trị liên quan: mức độ mối quan hệ và điểm số mối quan hệ. Những giá trị này giúp bạn xác định mức độ quan tâm đối với phân khúc nhân khẩu học của hồ sơ đó, đối với thương hiệu hoặc sở thích so với các phân khúc nhân khẩu học khác.
 
-*Mức độ sở thích* bao gồm bốn cấp độ và *điểm sở thích* được tính toán trên thang điểm 100 ánh xạ tới các mức độ sở thích.
+*Mức độ mối quan hệ* bao gồm 4 cấp độ và *điểm mối quan hệ* được tính toán trên thang điểm 100 ánh xạ tới các mức độ mối quan hệ.
 
 
-|Mức độ sở thích |Điểm mối quan hệ  |
+|Mức độ mối quan hệ |Điểm số mối quan hệ  |
 |---------|---------|
 |Rất cao     | 85-100       |
 |Cao     | 70-84        |
 |Trung bình     | 35-69        |
 |Thấp     | 1-34        |
 
-Tùy thuộc vào mức độ chi tiết mà bạn muốn đo lường sở thích, bạn có thể sử dụng mức độ hoặc điểm số sở thích. Điểm số sở thích giúp bạn kiểm soát chính xác hơn.
+Tùy thuộc vào mức độ chi tiết mà bạn muốn đo lường mối quan hệ, bạn có thể sử dụng mức độ hoặc điểm số mối quan hệ. Điểm số mối quan hệ giúp bạn kiểm soát chính xác hơn.
 
-## <a name="supported-countriesregions"></a>Khu vực/vùng lãnh thổ được hỗ trợ
+## <a name="supported-countriesregions"></a>Quốc gia/khu vực được hỗ trợ
 
 Chúng tôi hiện hỗ trợ các tùy chọn quốc gia/vùng sau đây: Úc, Canada (Tiếng Anh), Pháp, Đức, Vương quốc Anh hoặc Hoa Kỳ (Tiếng Anh).
 
-Để chọn quốc gia, hãy mở trình đơn **Làm phong phú thương hiệu** hoặc **Làm phong phú sở thích** rồi chọn **Thay đổi** bên cạnh **Quốc gia/Vùng lãnh thổ**. Trong ngăn **Thiết đặt quốc gia/vùng lãnh thổ**, chọn một tùy chọn rồi chọn **Áp dụng**.
+Để chọn một quốc gia hoặc khu vực, hãy mở **Dữ liệu tăng cường về thương hiệu** hoặc **Dữ liệu tăng cường về sở thích** rồi chọn **Thay đổi** bên cạnh **Quốc gia/Khu vực**. Trong ngăn **Cài đặt Quốc gia/Khu vực**, chọn một tùy chọn rồi chọn **Áp dụng**.
 
 ### <a name="implications-related-to-country-selection"></a>Ý nghĩa liên quan đến chọn quốc gia
 
@@ -61,80 +61,81 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia/vùng sau đây: Úc, 
 
 - Khi [chọn một ngành](#define-your-brands-or-interests), bạn sẽ nhận được các thương hiệu hoặc sở thích phù hợp nhất dựa trên quốc gia hoặc khu vực đã chọn.
 
-- Khi [làm phong phú hồ sơ](#refresh-enrichment), chúng tôi sẽ làm phong phú thêm tất cả các hồ sơ khách hàng mà chúng tôi lấy dữ liệu cho các thương hiệu và sở thích đã chọn. Bao gồm các hồ sơ không thuộc quốc gia hoặc khu vực đã chọn. Ví dụ: nếu bạn đã chọn Đức, chúng tôi sẽ bổ sung dữ liệu cho hồ sơ ở Hoa Kỳ nếu chúng tôi có sẵn dữ liệu về các thương hiệu và sở thích đã chọn ở Hoa Kỳ.
+- Khi [tăng cường dữ liệu hồ sơ](#refresh-enrichment), chúng tôi sẽ bổ sung thông tin cho tất cả hồ sơ khách hàng mà chúng tôi lấy dữ liệu cho thương hiệu và sở thích đã chọn, bao gồm cả các hồ sơ không thuộc quốc gia hoặc khu vực đã chọn. Ví dụ: nếu bạn đã chọn Đức, chúng tôi sẽ tăng cường dữ liệu cho hồ sơ ở Hoa Kỳ nếu có sẵn dữ liệu về các thương hiệu và sở thích đã chọn ở Hoa Kỳ.
 
-## <a name="configure-enrichment"></a>Cấu hình làm phong phú
+## <a name="configure-enrichment"></a>Định cấu hình dữ liệu tăng cường
 
-Trải nghiệm có hướng dẫn sẽ giúp bạn hoàn thành quá trình cấu hình nội dung bổ sung. 
+Trải nghiệm có hướng dẫn sẽ giúp bạn hoàn thành quá trình cấu hình dữ liệu tăng cường. 
 
 ### <a name="define-your-brands-or-interests"></a>Xác định thương hiệu hoặc sở thích của bạn
 
 Chọn tối đa 5 thương hiệu hoặc sở thích bằng cách sử dụng một hoặc cả hai tùy chọn sau:
 
-- **Ngành**: Chọn ngành của bạn từ danh sách thả xuống, rồi chọn trong số các thương hiệu hoặc sở thích hàng đầu cho ngành đó.
-- **Tự chọn**: Nhập thương hiệu hoặc sở thích có liên quan đến tổ chức của bạn, sau đó chọn trong số các đề xuất trùng khớp. Nếu chúng tôi không liệt kê một thương hiệu hoặc sở thích mà bạn đang tìm kiếm, hãy gửi cho chúng tôi thông tin phản hồi bằng cách sử dụng liên kết **Đề xuất**.
+- **Ngành**: Chọn ngành của bạn từ danh sách thả xuống, sau đó chọn trong số các thương hiệu hoặc sở thích hàng đầu cho ngành đó.
+- **Tự chọn**: Nhập thương hiệu hoặc sở thích có liên quan đến tổ chức của bạn, sau đó chọn trong số các đề xuất phù hợp. Nếu chúng tôi không liệt kê một thương hiệu hoặc sở thích mà bạn đang tìm kiếm, hãy gửi cho chúng tôi thông tin phản hồi bằng cách sử dụng liên kết **Đề xuất**.
 
-### <a name="review-enrichment-preferences"></a>Xem xét các tùy chọn làm phong phú
+### <a name="review-enrichment-preferences"></a>Xem xét các tùy chọn tăng cường dữ liệu
 
-Xem lại các tùy chọn làm phong phú mặc định của bạn và cập nhật chúng nếu cần.
+Xem xét các tùy chọn tăng cường dữ liệu mặc định của bạn và cập nhật chúng nếu cần.
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Ảnh chụp màn hình của cửa sổ tùy chọn làm phong phú.":::
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Ảnh chụp màn hình của cửa sổ tùy chọn tăng cường dữ liệu.":::
 
-### <a name="select-entity-to-enrich"></a>Chọn thực thể để làm phong phú
+### <a name="select-entity-to-enrich"></a>Chọn thực thể để tăng cường
 
-Chọn **Thực thể được bổ sung** rồi chọn tập hợp dữ liệu mà bạn muốn bổ sung thêm dữ liệu công ty từ Microsoft. Bạn có thể chọn thực thể khách hàng để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+Chọn **Thực thể được tăng cường** rồi chọn tập hợp dữ liệu mà bạn muốn bổ sung thêm dữ liệu công ty từ Microsoft. Bạn có thể chọn thực thể khách hàng để tăng cường dữ liệu cho tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ tăng cường dữ liệu cho hồ sơ khách hàng có trong phân khúc đó.
 
 ### <a name="map-your-fields"></a>Ánh xạ trường của bạn
 
-Ánh xạ các trường từ thực thể khách hàng hợp nhất để xác định phân khúc nhân khẩu học mà bạn muốn hệ thống sử dụng để làm phong phú dữ liệu khách hàng của bạn. Ánh xạ Quốc gia/Khu vực và tối thiểu là thuộc tính Ngày sinh hoặc Giới tính. Ngoài ra, bạn phải ánh xạ tối thiểu là Thành phố (và Tiểu bang/Tỉnh) hoặc Mã bưu chính. Chọn **Chỉnh sửa** để xác định ánh xạ của các trường và chọn **Áp dụng** khi bạn hoàn thành. Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
+Ánh xạ các trường từ thực thể khách hàng hợp nhất để xác định phân khúc nhân khẩu học mà bạn muốn hệ thống sử dụng để tăng cường dữ liệu khách hàng của bạn. Ánh xạ Quốc gia/Khu vực và tối thiểu là thuộc tính Ngày sinh hoặc Giới tính. Ngoài ra, bạn phải ánh xạ tối thiểu là Thành phố (và Tiểu bang/Tỉnh) hoặc Mã bưu chính. Chọn **Chỉnh sửa** để xác định ánh xạ của các trường rồi chọn **Áp dụng** khi bạn hoàn thành. Chọn **Lưu** để hoàn tất quá trình ánh xạ trường.
 
-Các định dạng và giá trị sau được hỗ trợ, giá trị không phân biệt chữ hoa chữ thường:
+Các định dạng và giá trị sau được hỗ trợ (giá trị không phân biệt chữ hoa hay chữ thường):
 
-- **Ngày sinh**: Ngày sinh nên chuyển thành loại DateTime trong khi nhập dữ liệu. Ngoài ra, ngày sinh có thể là chuỗi ở định dạng [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) "yyyy-MM-dd" hoặc "yyyy-MM-ddTHH:mm:ssZ".
-- **Giới tính**: Nam, nữ, không rõ
-- **Mã bưu chính**: Mã ZIP năm chữ số cho Hoa Kỳ, mã bưu chính tiêu chuẩn ở mọi nơi khác
-- **Thành phố**: Tên thành phố bằng Tiếng Anh
-- **Bang/Tỉnh**: Từ viết tắt 2 chữ cái của Hoa Kỳ và Canada. Từ viết tắt 2 hoặc 3 chữ cái cho Úc. Không áp dụng với Pháp, Đức hoặc Vương quốc Anh.
-- **Quốc gia/Vùng lãnh thổ**:
+- **Ngày sinh**: Ngày sinh nên chuyển thành loại DateTime trong khi nhập dữ liệu. Ngoài ra, giá trị này có thể là một chuỗi theo định dạng của [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) là "yyyy-MM-dd" or "yyyy-MM-ddTHH:mm:ss".
+- **Giới tính**: Nam, nữ, không xác định.
+- **Mã bưu chính**: Mã ZIP gồm 5 chữ số ở Hoa Kỳ hoặc mã bưu chính tiêu chuẩn ở mọi nơi khác.
+- **Thành phố**: Tên thành phố bằng tiếng Anh.
+- **Bang/Tỉnh**: Từ viết tắt gồm 2 chữ cái cho Hoa Kỳ và Canada. Từ viết tắt gồm 2 hoặc 3 chữ cái cho Úc. Không áp dụng với Pháp, Đức hoặc Vương quốc Anh.
+- **Quốc gia/Khu vực**:
 
   - US: Hợp chủng quốc Hoa Kỳ, Hoa Kỳ, USA, US, Mỹ
   - CA: Canada, CA
   - GB: Vương quốc Anh, UK, Great Britain, GB, Vương quốc Liên hiệp Anh và Bắc Ireland, Vương quốc Liên hiệp Anh
-  - AU: Úc, AU, Liên bang Australia
+  - AU: Úc, AU, Liên bang Úc
   - FR: Pháp, FR, Cộng hòa Pháp
   - DE: Đức, German, Deutschland, Allemagne, DE, Cộng hòa Liên bang Đức, Cộng hòa Đức
 
-## <a name="review-and-name-the-enrichment"></a>Xem lại và đặt tên cho nội dung bổ sung
+## <a name="review-and-name-the-enrichment"></a>Xem xét và đặt tên cho dữ liệu tăng cường
 
-Cuối cùng, bạn phải xem lại thông tin và đặt tên cho nội dung bổ sung.
+Cuối cùng, bạn phải xem xét thông tin và đặt tên cho dữ liệu tăng cường.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Trang xem lại và đặt tên cho sở thích.":::
+:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Trang xem xét và đặt tên cho sở thích.":::
 
-## <a name="refresh-enrichment"></a>Làm mới nội dung phong phú
+## <a name="refresh-enrichment"></a>Làm mới dữ liệu tăng cường
 
-Chạy quá trình cung cấp thông tin phong phú sau khi đặt cấu hình thương hiệu, sở thích và ánh xạ trường cho nhân khẩu học. Để bắt đầu quá trình, chọn **Chạy** trên trang cấu hình thương hiệu hoặc sở thích. Ngoài ra, bạn có thể để hệ thống tự động chạy làm phong phú như một phần của việc làm mới theo lịch trình.
-Tùy thuộc vào kích thước dữ liệu khách hàng của bạn, có thể mất vài phút để quá trình cung cấp thông tin phong phú hoàn tất.
+Chạy quá trình cung cấp dữ liệu tăng cường sau khi định cấu hình thương hiệu, sở thích và ánh xạ trường cho nhân khẩu học. Để bắt đầu quá trình, chọn **Chạy** trên trang cấu hình thương hiệu hoặc sở thích. Ngoài ra, bạn có thể để hệ thống tự động chạy tính năng tăng cường như một phần của việc làm mới theo lịch trình.
+
+Tùy thuộc vào kích thước dữ liệu khách hàng của bạn, có thể mất vài phút để quá trình cung cấp dữ liệu tăng cường hoàn tất.
 
 > [!TIP]
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
+> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quy trình xuôi dòng khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các nhiệm vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung như: thời gian xử lý, ngày xử lý cuối cùng và tất cả các lỗi cũng như cảnh báo liên quan đến nhiệm vụ.
 
-## <a name="enrichment-results"></a>Kết quả làm phong phú
+## <a name="enrichment-results"></a>Kết quả tăng cường
 
-Sau khi chạy quá trình làm phong phú, hãy chuyển đến **Nội dung phong phú của tôi** để xem lại tổng số khách hàng làm phong phú và số liệu phân tích về các thương hiệu hoặc sở thích trong hồ sơ khách hàng được làm phong phú.
+Sau khi chạy quá trình tăng cường, hãy chuyển đến **Dữ liệu tăng cường của tôi** để xem xét tổng số khách hàng được tăng cường dữ liệu và số liệu phân tích về các thương hiệu hoặc sở thích trong hồ sơ khách hàng được tăng cường dữ liệu.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Xem trước kết quả sau khi chạy quy trình làm phong phú":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Xem trước kết quả sau khi chạy quy trình tăng cường":::
 
-Xem lại dữ liệu được làm phong phú bằng cách chọn **Xem dữ liệu phong phú** trong biểu đồ. Dữ liệu phong phú cho các thương hiệu đi đến thực thể **BrandAffinityFromMicrosoft**. Dữ liệu cho sở thích trong thực thể **InterestAffinityFromMicrosoft**. Bạn cũng sẽ tìm thấy các thực thể được liệt kê trong nhóm **Làm phong phú** trong **Dữ liệu** > **Các thực thể**.
+Xem xét dữ liệu tăng cường bằng cách chọn **Xem dữ liệu tăng cường** trong biểu đồ. Dữ liệu tăng cường cho các thương hiệu đi đến thực thể **BrandAffinityFromMicrosoft**. Dữ liệu cho sở thích trong thực thể **InterestAffinityFromMicrosoft**. Bạn cũng sẽ tìm thấy các thực thể được liệt kê trong nhóm **Tăng cường** trong **Dữ liệu** > **Thực thể**.
 
-## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu làm phong phú trên thẻ khách hàng
+## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu tăng cường trên thẻ khách hàng
 
-Các mối quan hệ thương hiệu và lợi ích cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** và chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy biểu đồ cho các thương hiệu hoặc sở thích mà mọi người trong hồ sơ nhân khẩu học của khách hàng có ái lực.
+Các mối quan hệ về thương hiệu và sở thích cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** rồi chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy biểu đồ cho các thương hiệu hoặc sở thích mà mọi người trong hồ sơ nhân khẩu học của khách hàng có mối quan hệ.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Thẻ khách hàng với dữ liệu phong phú":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Thẻ khách hàng với dữ liệu tăng cường":::
 
 ## <a name="next-steps"></a>Bước tiếp theo
 
-Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [Phân khúc](segments.md), [Biện pháp](measures.md) và [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm cá nhân cho khách hàng của bạn.
+Xây dựng dựa trên dữ liệu khách hàng tăng cường của bạn. Tạo [Phân khúc](segments.md) và [Giá trị đo](measures.md), thậm chí [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm được cá nhân hóa cho khách hàng của bạn.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

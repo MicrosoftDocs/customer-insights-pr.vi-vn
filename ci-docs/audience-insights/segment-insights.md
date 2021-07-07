@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595360"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306100"
 ---
 # <a name="segment-insights-preview"></a>Thông tin chuyên sâu về phân khúc (xem trước)
 
@@ -50,7 +50,7 @@ Chọn một thông tin chuyên sâu để xem kết quả phân tích:
 
 - Số lượng thành viên chồng chéo với phân khúc đã chọn cho phép phân tích.
 - Số lượng thành viên có trong một phân khúc nhưng không có trong các phân khúc còn lại.
-- Nếu bạn đã chọn các trường trong khi đặt cấu hình phép phân tích sự chồng chéo, bạn sẽ thấy các trường đó trong tab tương ứng. Bạn có thể dùng menu bộ lọc thả xuống để chọn cấp độ thuộc tính bất kỳ mà mình quan tâm. Bảng ở dưới cùng sẽ hiển thị dữ liệu tương ứng.
+- Nếu bạn đã chọn các trường trong khi định cấu hình phép phân tích sự chồng chéo, bạn sẽ thấy các trường đó trong tab tương ứng. Bạn có thể sử dụng danh sách thả xuống của bộ lọc để chọn bất kỳ mức độ quan tâm thuộc tính nào và bảng ở dưới cùng sẽ hiển thị dữ liệu tương ứng.
 
 ## <a name="segment-differentiators"></a>Điểm khác biệt của phân đoạn
 

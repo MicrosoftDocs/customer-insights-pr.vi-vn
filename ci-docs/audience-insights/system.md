@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595406"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305736"
 ---
 # <a name="system-configuration"></a>Cấu hình hệ thống
 
@@ -51,16 +51,16 @@ Có 6 loại trạng thái cho các nhiệm vụ. Các loại trạng thái sau 
 
 Danh sách này hiển thị các chính sách làm mới cho từng quy trình chính:
 
-- **Nguồn dữ liệu:** Chạy theo [lịch trình đã đặt cấu hình](#schedule-tab). Không phụ thuộc vào bất kỳ quy trình nào khác. So khớp phụ thuộc vào sự hoàn thành thành công của quy trình này.
-- **So khớp:** Chạy theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào việc xử lý các nguồn dữ liệu được sử dụng trong định nghĩa so khớp. Hợp nhất phụ thuộc vào sự hoàn thành thành công của quy trình này.
-- **Hợp nhất**: Chạy theo [lịch trình đã đặt cấu hình](#schedule-tab). phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân đoạn, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.
-- **Phân đoạn**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.
-- **Biện pháp**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Hoạt động**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Làm phong phú**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Tìm kiếm**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Chuẩn bị dữ liệu:**: Chạy theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Thông tin chi tiết**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã đặt cấu hình](#schedule-tab). Phụ thuộc vào Phân đoạn.
+- **Nguồn dữ liệu:** Chạy theo [lịch trình đã định cấu hình](#schedule-tab). Không phụ thuộc vào bất kỳ quy trình nào khác. So khớp phụ thuộc vào sự hoàn thành thành công của quy trình này.
+- **So khớp:** Chạy theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào việc xử lý các nguồn dữ liệu được sử dụng trong định nghĩa so khớp. Hợp nhất phụ thuộc vào sự hoàn thành thành công của quy trình này.
+- **Hợp nhất**: Chạy theo [lịch trình đã định cấu hình](#schedule-tab). phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.
+- **Phân khúc**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.
+- **Biện pháp**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
+- **Hoạt động**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
+- **Làm phong phú**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
+- **Tìm kiếm**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
+- **Chuẩn bị dữ liệu:**: Chạy theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
+- **Thông tin chi tiết**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Phân khúc.
 
 Chọn trạng thái của một nhiệm vụ để xem chi tiết về tiến trình của toàn bộ công việc. Các chính sách làm mới ở trên có thể giúp hiểu những gì bạn có thể làm để giải quyết nhiệm vụ **Bỏ qua** hoặc **Xếp hàng**.
 

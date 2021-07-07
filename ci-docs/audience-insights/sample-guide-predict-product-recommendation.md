@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129925"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306192"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán đề xuất sản phẩm (xem trước)
 
@@ -101,13 +101,13 @@ Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình 
 
    ![Hợp nhất LoyaltyId làm khóa chính.](media/unify-loyaltyid.png)
 
-### <a name="match"></a>So khớp
+### <a name="match"></a>Kết quả khớp
 
 1. Đi đến tab **So khớp** và chọn **Đặt thứ tự**.
 
 2. Trong danh sách thả xuống **Chính**, chọn **eCommerceContacts: eCommerce** là nguồn chính và bao gồm tất cả các bản ghi.
 
-3. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers : LoyaltyScheme** và bao gồm tất cả các bản ghi.
+3. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers: LoyaltyScheme** và bao gồm tất cả các bản ghi.
 
    ![Hợp nhất so khớp thương mại điện tử và khách hàng thân thiết.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình 
 
 5. Thêm điều kiện đầu tiên của bạn bằng FullName.
 
-   - Đối với eCommerceContacts, hãy chọn **FullName** trong danh sách thả xuống.
-   - Đối với loyCustomers, hãy chọn **FullName** trong danh sách thả xuống.
-   - Chọn danh sách thả xuống **Chuẩn hóa** và chọn **Loại (Điện thoại, Tên, Địa chỉ, ...)**.
+   - Đối với eCommerceContacts, chọn **FullName** trong danh sách thả xuống.
+   - Đối với loyCustomers, chọn **FullName** trong danh sách thả xuống.
+   - Chọn danh sách thả xuống **Chuẩn hóa** rồi chọn **Loại (Số điện thoại, Tên, Địa chỉ,...)**.
    - Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
 
 6. Nhập tên **FullName, Email** cho quy tắc mới.
 
    - Thêm điều kiện thứ hai cho địa chỉ email bằng cách chọn **Thêm điều kiện**
-   - Đối với thực thể eCommerceContacts, hãy chọn **Email** trong danh sách thả xuống.
-   - Đối với thực thể loyCustomers, hãy chọn **Email** trong danh sách thả xuống.
+   - Đối với thực thể eCommerceContacts, chọn **EMail** trong danh sách thả xuống.
+   - Đối với thực thể loyCustomers, chọn **EMail** trong danh sách thả xuống.
    - Để trống trường Chuẩn hóa.
    - Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
 

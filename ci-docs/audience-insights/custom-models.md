@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700694"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305688"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
 
@@ -72,7 +72,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
       > [!div class="mx-imgBorder"]
       > ![Ngăn tham số đầu ra của mô hình](media/intelligence-screen3-outputparameters.png "Ngăn tham số đầu ra của mô hình")
 
-1. Chọn thuộc tính kết hợp từ danh sách thả xuống **ID khách hàng trong kết quả** xác định khách hàng và chọn **Lưu**.
+1. Chọn thuộc tính phù hợp từ danh sách thả xuống **ID khách hàng trong kết quả** xác định khách hàng và chọn **Lưu**.
 
    > [!div class="mx-imgBorder"]
    > ![Liên kết kết quả với ngăn Dữ liệu khách hàng](media/intelligence-screen4-relatetocustomer.png "Liên kết kết quả với ngăn Dữ liệu khách hàng")
@@ -100,7 +100,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
       1. Chọn **Tên tham số kho dữ liệu đầu ra** cho quy trình thử nghiệm của bạn.
       1. Chọn **Tên tham số đường dẫn đầu ra** cho quy trình thử nghiệm của bạn.
 
-1. Chọn thuộc tính kết hợp từ danh sách thả xuống **ID khách hàng trong kết quả** xác định khách hàng và chọn **Lưu**.
+1. Chọn thuộc tính phù hợp từ danh sách thả xuống **ID khách hàng trong kết quả** xác định khách hàng và chọn **Lưu**.
    Chọn một thuộc tính từ đầu ra suy luận có giá trị tương tự như cột ID khách hàng của thực thể Khách hàng. Nếu không có cột như vậy trong tập hợp dữ liệu của bạn, hãy chọn một thuộc tính xác định duy nhất hàng.
 
 ## <a name="run-a-workflow"></a>Chạy quy trình

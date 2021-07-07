@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129971"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306375"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Hướng dẫn mẫu về dự đoán Giá trị trọn đời của khách hàng (CLV)
 
@@ -125,7 +125,7 @@ Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình 
 
 1. Trong danh sách thả xuống **Chính**, chọn **eCommerceContacts: eCommerce** là nguồn chính và bao gồm tất cả các bản ghi.
 
-1. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers : LoyaltyScheme** và bao gồm tất cả các bản ghi.
+1. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers: LoyaltyScheme** và bao gồm tất cả các bản ghi.
 
    ![Hợp nhất so khớp thương mại điện tử và khách hàng thân thiết.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình 
 
 1. Thêm điều kiện đầu tiên của bạn bằng FullName.
 
-   - Đối với eCommerceContacts, hãy chọn **FullName** trong danh sách thả xuống.
-   - Đối với loyCustomers, hãy chọn **FullName** trong danh sách thả xuống.
-   - Chọn danh sách thả xuống **Chuẩn hóa** rồi chọn **Loại (Điện thoại, Tên, Địa chỉ, ...)**.
+   - Đối với eCommerceContacts, chọn **FullName** trong danh sách thả xuống.
+   - Đối với loyCustomers, chọn **FullName** trong danh sách thả xuống.
+   - Chọn danh sách thả xuống **Chuẩn hóa** rồi chọn **Loại (Số điện thoại, Tên, Địa chỉ,...)**.
    - Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
 
 1. Nhập tên **FullName, Email** cho quy tắc mới.
 
    - Thêm điều kiện thứ hai cho địa chỉ email bằng cách chọn **Thêm điều kiện**
-   - Đối với thực thể eCommerceContacts, hãy chọn **Email** trong danh sách thả xuống.
-   - Đối với thực thể loyCustomers, hãy chọn **Email** trong danh sách thả xuống.
+   - Đối với thực thể eCommerceContacts, chọn **EMail** trong danh sách thả xuống.
+   - Đối với thực thể loyCustomers, chọn **EMail** trong danh sách thả xuống.
    - Để trống trường Chuẩn hóa.
    - Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
 
@@ -162,7 +162,7 @@ Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình 
 
 1. Chọn **Lưu** và **Chạy quy trình hợp nhất và xuôi dòng**.
 
-## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Nhiệm vụ 3 - Đặt cấu hình dự đoán giá trị trọn đời của khách hàng
+## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán giá trị trọn đời của khách hàng
 
 Sau khi có hồ sơ khách hàng hợp nhất, bây giờ, chúng ta có thể chạy dự đoán giá trị trọn đời của khách hàng. Để biết các bước chi tiết, hãy xem bài viết [Dự đoán Giá trị trọn đời của khách hàng (xem trước)](predict-customer-lifetime-value.md).
 
@@ -200,7 +200,7 @@ Sau khi có hồ sơ khách hàng hợp nhất, bây giờ, chúng ta có thể 
    - Sự kiện (tên hoạt động): Website.Reviews.ActivityTypeDisplay
    - Chi tiết (số lượng hoặc giá trị): Website.Reviews.ReviewRating
 
-1. Chọn **Tiếp theo** rồi đặt cấu hình hoạt động và mối quan hệ giữa dữ liệu giao dịch và dữ liệu khách hàng:  
+1. Chọn **Tiếp theo** rồi định cấu hình hoạt động và mối quan hệ giữa dữ liệu giao dịch và dữ liệu khách hàng:  
    - Loại hoạt động: Chọn mục hiện có
    - Nhãn hoạt động: Đánh giá
    - Nhãn tương ứng: Website.Reviews.UserId

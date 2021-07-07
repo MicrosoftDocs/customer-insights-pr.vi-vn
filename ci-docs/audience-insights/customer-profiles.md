@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896353"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304630"
 ---
 # <a name="customer-profiles"></a>Hồ sơ khách hàng
 
@@ -30,7 +30,7 @@ Tổ chức (Xem trước)
 > ![Hồ sơ khách hàng B2B](media/profile-customers-b2b.png "Hồ sơ khách hàng B2B")
 
 > [!NOTE]
-> Nếu bạn không thể nhìn thấy lát khi bạn chọn **Khách hàng** trong điều hướng, quản trị viên của bạn cần phải [xác định ít nhất một thuộc tính có thể tìm kiếm](search-filter-index.md) trên **Chỉ mục tìm kiếm & lọc**.
+> Nếu bạn không thể nhìn thấy ngăn xếp khi bạn chọn **Khách hàng** trong điều hướng, quản trị viên của bạn cần phải [xác định ít nhất một thuộc tính có thể tìm kiếm](search-filter-index.md) trên **Chỉ mục tìm kiếm & lọc**.
 
 ## <a name="search-for-customers"></a>Tìm kiếm khách hàng
 
@@ -53,17 +53,17 @@ Bạn có thể lọc khách hàng theo các trường thực thể Hồ sơ kh�
 
 ##  <a name="customer-details-page"></a>Trang thông tin chi tiết về khách hàng
 
-Chọn bất kỳ lát khách hàng nào để mở **Trang thông tin chi tiết về khách hàng**. Chế độ xem này chứa thông tin hợp nhất cho khách hàng đã chọn.
+Chọn bất kỳ ngăn xếp khách hàng nào để mở **Trang thông tin chi tiết về khách hàng**. Chế độ xem này chứa thông tin hợp nhất cho khách hàng đã chọn.
 
 Thông tin chi tiết về khách hàng bao gồm:
 
--   **Lát hồ sơ khách hàng:** Lát này hiển thị các giá trị khác nhau từ thực thể hồ sơ khách hàng hợp nhất. Những chi tiết này có thể bao gồm địa chỉ email, tên, thành phố, v.v. 
+-   **Ngăn xếp hồ sơ khách hàng**: Ngăn xếp này hiển thị các giá trị khác nhau từ thực thể hồ sơ khách hàng hợp nhất. Những chi tiết này có thể bao gồm địa chỉ email, tên, thành phố, v.v. 
 
--   **Sở thích tiềm năng, thương hiệu tiềm năng:** Hiển thị nếu bạn đã định cấu hình phần bổ sung của bên thứ nhất. Nó thể hiện sở thích và mối quan hệ tiềm năng đối với các thương hiệu mà một khách hàng có hồ sơ tương tự như khách hàng này có thể có. Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft.md).
+-   **Sở thích tiềm năng, thương hiệu tiềm năng**: Hiển thị nếu bạn đã định cấu hình phần bổ sung của bên thứ nhất. Nó thể hiện sở thích và mối quan hệ tiềm năng đối với các thương hiệu mà một khách hàng có hồ sơ tương tự như khách hàng này có thể có. Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng thương hiệu và sở thích](enrichment-microsoft.md).
 
--   **Đo lường:** Hiển thị nếu bạn đã định cấu hình một hoặc nhiều loại biện pháp đo lường cụ thể: đo lường thuộc tính khách hàng. Chúng bao gồm các KPI được tính toán xung quanh khách hàng của bạn ở cấp độ khách hàng cá nhân. Để biết thêm thông tin, hãy xem [Xác định và quản lý các biện pháp](measures.md).
+-   **Đo lường**: Hiển thị nếu bạn đã định cấu hình một hoặc nhiều loại biện pháp đo lường cụ thể: đo lường thuộc tính khách hàng. Chúng bao gồm các KPI được tính toán xung quanh khách hàng của bạn ở cấp độ khách hàng cá nhân. Để biết thêm thông tin, hãy xem [Xác định và quản lý các biện pháp](measures.md).
 
--   **Tiến trình hoạt động:** Hiển thị nếu bạn đã định cấu hình các hoạt động. Chế độ xem dòng thời gian chứa các hoạt động được sắp xếp theo thứ tự thời gian của khách hàng này, bắt đầu với hoạt động gần đây nhất. Để biết thêm thông tin, hãy xem [Hoạt động của khách hàng](activities.md).
+-   **Tiến trình hoạt động**: Hiển thị nếu bạn đã định cấu hình các hoạt động. Chế độ xem dòng thời gian chứa các hoạt động được sắp xếp theo thứ tự thời gian của khách hàng này, bắt đầu với hoạt động gần đây nhất. Để biết thêm thông tin, hãy xem [Hoạt động của khách hàng](activities.md).
 
 Chọn **Quay lại khách hàng** để quay lại trang tìm kiếm của khách hàng.
 

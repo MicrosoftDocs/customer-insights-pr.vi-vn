@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016646"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304768"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
-Dynamics 365 Customer Insights cung cấp các API để tạo ứng dụng dựa trên dữ liệu của bạn trong Customer Insights.
+Dynamics 365 Customer Insights cung cấp các API để bạn xây dựng ứng dụng dựa trên dữ liệu của mình trong Customer Insights.
 
 > [!IMPORTANT]
 > Thông tin chi tiết về các API này được liệt kê trên [Tham chiếu API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Những thông tin này bao gồm thông tin bổ sung về hoạt động, tham số và phản hồi.
 
-Bài viết này hướng dẫn bạn truy cập vào các API Customer Insights, tạo Đăng ký ứng dụng Azure và giúp bạn bắt đầu với các thư viện ứng dụng khách có sẵn.
+Bài viết này mô tả cách tiếp cận API Customer Insights, tạo Đăng ký ứng dụng Azure và bắt đầu dùng các thư viện máy khách có sẵn.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Bắt đầu dùng thử các API Customer Insights
 
@@ -32,6 +32,7 @@ Bài viết này hướng dẫn bạn truy cập vào các API Customer Insights
 1. Để bật API trên môi trường Customer Insights của bạn, hãy truy cập **Quản trị viên** > **Quyền hạn**. Bạn sẽ cần quyền quản trị viên để làm như vậy.
 
 1. Đi đến **API** và chọn nút **Bật**.    
+ 
    Việc bật API sẽ tạo khóa đăng ký chính và phụ cho phiên bản của bạn, khóa này được sử dụng trong các yêu cầu API. Bạn có thể tạo lại các khóa bằng cách chọn **Tạo lại khóa chính** hoặc **Tạo lại khóa phụ** trên **Quản trị viên** > **Quyền** > **API**.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Bật API Customer Insights":::
@@ -40,7 +41,7 @@ Bài viết này hướng dẫn bạn truy cập vào các API Customer Insights
 
 1. Chọn một hoạt động API và chọn **Dùng thử**.
 
-1. Trong ngăn bên, đặt giá trị trong menu thả xuống **Thẩm quyền** thành **ẩn**. Tiêu đề `Authorization` được thêm mã thông báo mang chuyển. Khóa đăng ký của bạn sẽ được tự động điền.
+1. Trong ngăn bên, đặt giá trị trong menu thả xuống **Thẩm quyền** thành **ẩn**. Tiêu đề `Authorization` được thêm với một mã thông báo mang chuyển. Khóa đăng ký của bạn sẽ được tự động điền.
   
 1. Theo tùy chọn, thêm tất cả các tham số truy vấn cần thiết.
 
@@ -48,27 +49,27 @@ Bài viết này hướng dẫn bạn truy cập vào các API Customer Insights
 
 Phản hồi HTTP sẽ sớm xuất hiện bên dưới.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="Ảnh động gif hiển thị cách chọn thử nghiệm API.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="Cách thử nghiệm API.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Tạo đăng ký ứng dụng mới trong cổng thông tin Azure
 
-Các bước này giúp bạn bắt đầu sử dụng API Customer Insights trong ứng dụng Azure bằng các quyền được ủy quyền. Đảm bảo đã hoàn thành [Phần bắt đầu](#get-started-trying-the-customer-insights-apis) trước tiên.
+Các bước này giúp bạn bắt đầu dùng API Customer Insights trong ứng dụng Azure bằng quyền được ủy thác. Đảm bảo hoàn thành [Phần bắt đầu](#get-started-trying-the-customer-insights-apis) trước tiên.
 
 1. Đăng nhập vào [Cổng thông tin Azure](https://portal.azure.com) bằng tài khoản có thể truy cập dữ liệu Customer Insights.
 
 1. Ở bên trái, hãy chọn **Đăng ký ứng dụng**.
 
-1. Chọn **Đăng ký mới** sẽ cung cấp tên ứng dụng và chọn loại tài khoản.
+1. Chọn **Đăng ký mới** để cung cấp tên ứng dụng và chọn loại tài khoản.
+ 
    Theo tùy chọn, thêm URL chuyển hướng. http://localhost là đủ để phát triển một ứng dụng trên máy tính cục bộ của bạn.
 
 1. Trên đăng ký ứng dụng mới, hãy đi tới **Quyền API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Ảnh động gif để đặt quyền API trong đăng ký ứng dụng.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Cách thiết đặt quyền API trong Đăng ký ứng dụng.":::
 
 1. Chọn **Thêm quyền** và chọn **Customer Insights** trong ngăn bên.
 
-1. Đối với **Loại quyền**, hãy chọn **Quyền được ủy quyền** và chọn quyền **user_impersonation**.
+1. Đối với **Loại quyền**, chọn **Quyền được ủy thác** và sau đó chọn quyền **user_impersonation**.
 
 1. Chọn **Thêm quyền**. Nếu bạn cần truy cập API mà không cần người dùng đăng nhập, hãy xem lại phần [Quyền của ứng dụng giữa các máy chủ](#server-to-server-application-permissions).
 
@@ -76,13 +77,13 @@ Các bước này giúp bạn bắt đầu sử dụng API Customer Insights tro
 
 Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng dụng này với Microsoft Authentication Library (MSAL) để nhận mã thông báo mang chuyển để gửi kèm theo yêu cầu của bạn đến API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Ảnh động gif để cấp sự đồng ý của quản trị viên.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cách cấp phép của quản trị viên.":::
 
 Để biết thêm thông tin về MSAL, hãy xem [Tổng quan về Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Để biết thêm thông tin về đăng ký ứng dụng trong Azure, hãy xem [Trải nghiệm đăng ký ứng dụng cổng Azure mới](/azure/active-directory/develop/app-registration-portal-training-guide).
+Để biết thêm thông tin về đăng ký ứng dụng trong Azure, hãy xem [Đăng ký ứng dụng](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-Để biết thông tin về cách sử dụng API thư viện máy khách của chúng tôi, hãy xem [Thư viện máy khách Customer Insights](#customer-insights-client-libraries).
+Để biết thông tin về cách sử dụng API trong thư viện máy khách của chúng tôi, hãy xem [Thư viện máy khách Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Quyền của ứng dụng giữa các máy chủ
 
@@ -94,7 +95,7 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 1. Chọn tab **API mà tổ chức của tôi sử dụng** và chọn **Dynamics 365 AI cho Customer Insights** từ danh sách. 
 
-1. Đối với **Loại quyền**, hãy chọn **Quyền của ứng dụng** và chọn quyền **CustomerInsights.Api.All**.
+1. Đối với **Loại quyền**, chọn **Quyền ứng dụng** và sau đó chọn quyền **CustomerInsights.Api.All**.
 
 1. Chọn **Thêm quyền**.
 
@@ -102,9 +103,10 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 1. Chọn **Cấp quyền của quản trị viên cho...** để hoàn thành đăng ký ứng dụng.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Ảnh động gif để cấp sự đồng ý của quản trị viên.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cách cấp phép của quản trị viên.":::
 
-1. Để kết thúc, chúng tôi phải thêm tên đăng ký ứng dụng làm người dùng trong Customer Insights.    
+1. Để kết thúc, chúng tôi phải thêm tên đăng ký ứng dụng làm người dùng trong Customer Insights.  
+   
    Mở Customer Insights, đi tới **Quản trị viên** > **Quyền** và chọn **Thêm người dùng**.
 
 1. Tìm kiếm tên đăng ký ứng dụng của bạn, chọn tên đó từ kết quả tìm kiếm và chọn **Lưu**.
@@ -124,6 +126,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 1. Tìm kiếm **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Chọn **Cài đặt** để thêm gói vào dự án.
+ 
    Ngoài ra, hãy chạy lệnh này trong **Bảng điều khiển trình quản lý gói NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Thêm gói NuGet vào dự án Visual Studio":::
@@ -132,7 +135,8 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 
 1. Sử dụng [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) để nhận `AccessToken` bằng cách sử dụng [đăng ký ứng dụng Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng `HttpClient` hiện tại với **DefaultRequestHeaders "Authorization"** bổ sung được đặt thành **<access token> mang chuyển** và **Ocp-Apim-Subscription-Key** được đặt thành [**khóa đăng ký** từ môi trường Customer Insights của bạn](#get-started-trying-the-customer-insights-apis).    
+1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng `HttpClient` hiện tại với **DefaultRequestHeaders "Authorization"** bổ sung được đặt thành **<access token> mang chuyển** và **Ocp-Apim-Subscription-Key** được đặt thành [**khóa đăng ký** từ môi trường Customer Insights của bạn](#get-started-trying-the-customer-insights-apis).   
+ 
    Đặt lại tiêu đề **Ủy quyền** khi thích hợp. Ví dụ: khi mã thông báo hết hạn.
 
 1. Chuyển `HttpClient` này vào việc xây dựng máy khách `CustomerInsights`.
@@ -142,6 +146,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 1. Thực hiện cuộc gọi với máy khách đến "phương pháp mở rộng", ví dụ: `GetAllInstancesAsync`. Nếu truy cập vào `Microsoft.Rest.HttpOperationResponse` cơ sở được ưu tiên, hãy sử dụng "phương thức thông báo http", ví dụ: `GetAllInstancesWithHttpMessagesAsync`.
 
 1. Phản hồi sẽ có thể thuộc loại `object` vì phương thức này có thể trả về nhiều loại (ví dụ: `IList<InstanceInfo>` và `ApiErrorResult`). Để kiểm tra loại trả về, bạn có thể truyền an toàn các đối tượng vào các loại phản hồi được chỉ định trên [Trang chi tiết API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) cho hoạt động đó.    
+   
    Nếu cần thêm thông tin về yêu cầu, hãy sử dụng **phương thức thông báo http** để truy cập đối tượng phản hồi thô.
 
 ### <a name="nodejs-package"></a>Gói NodeJS

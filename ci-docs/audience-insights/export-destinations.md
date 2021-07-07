@@ -9,24 +9,24 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253066"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305504"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
-Trang **Nội dung xuất** hiển thị cho bạn tất cả các nội dung xuất đã đặt cấu hình. Nội dung xuất chia sẻ dữ liệu cụ thể với các ứng dụng khác nhau. Chúng có thể bao gồm các thực thể hoặc hồ sơ khách hàng, lược đồ và thông tin chi tiết ánh xạ. Mỗi nội dung xuất yêu cầu một [kết nối, do quản trị viên thiết lập, để quản lý hoạt động xác thực và truy cập](connections.md).
+Trang **Nội dung xuất** hiển thị cho bạn tất cả các nội dung xuất đã định cấu hình. Nội dung xuất chia sẻ dữ liệu cụ thể với các ứng dụng khác nhau. Chúng có thể bao gồm các thực thể hoặc hồ sơ khách hàng, lược đồ và thông tin chi tiết ánh xạ. Mỗi nội dung xuất yêu cầu một [kết nối, do quản trị viên thiết lập, để quản lý hoạt động xác thực và truy cập](connections.md).
 
-Đi đến **Dữ liệu** > **Nội dung xuất** để xem trang nội dung xuất. Tất cả các vai trò người dùng đều có quyền truy cập để xem các nội dung xuất đã đặt cấu hình. Sử dụng trường tìm kiếm trong thanh lệnh để tìm các nội dung xuất theo tên, tên kết nối hoặc loại kết nối.
+Đi đến **Dữ liệu** > **Nội dung xuất** để xem trang nội dung xuất. Tất cả các vai trò người dùng đều có thể xem nội dung xuất đã định cấu hình. Sử dụng trường tìm kiếm trong thanh lệnh để tìm nội dung xuất theo tên, tên kết nối hoặc kiểu kết nối.
 
 ## <a name="set-up-a-new-export"></a>Thiết lập một nội dung xuất mới
 
 Để thiết lập hoặc chỉnh sửa một nội dung xuất, bạn cần có sẵn các kết nối. Kết nối phụ thuộc vào [vai trò người dùng](permissions.md) của bạn:
 - Quản trị viên có quyền truy cập vào tất cả các kết nối. Họ cũng có thể tạo kết nối mới khi thiết lập nội dung xuất.
-- Những người đóng góp có thể có quyền truy cập vào các kết nối cụ thể. Họ có thể đặt cấu hình và chia sẻ kết nối hay không là tùy thuộc vào quản trị viên. Danh sách nội dung xuất cho người đóng góp biết họ có thể chỉnh sửa hay chỉ được xem nội dung xuất trong cột **Quyền của bạn**. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Những người đóng góp có thể có quyền truy cập vào các kết nối cụ thể. Họ có thể định cấu hình và chia sẻ kết nối hay không là tùy thuộc vào quản trị viên. Danh sách nội dung xuất cho người đóng góp biết họ có thể chỉnh sửa hay chỉ được xem nội dung xuất trong cột **Quyền của bạn**. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 - Người xem chỉ có thể xem các nội dung xuất hiện có nhưng không thể tạo chúng.
 
 ### <a name="define-a-new-export"></a>Xác định nội dung xuất mới
@@ -65,15 +65,15 @@ Sau khi tạo đích xuất, các đích xuất đã tạo sẽ có trong phần
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
-1. Người dùng không có quyền chỉnh sửa hãy chọn **Xem** thay vì **Chỉnh sửa** để xem thông tin chi tiết về nội dung xuất.
+1. Để xem chi tiết xuất, người dùng không có quyền chỉnh sửa chọn **Xem** thay vì **Chỉnh sửa**.
 
 1. Ngăn bên hiển thị cấu hình của nội dung xuất. Nếu không có quyền chỉnh sửa, bạn không thể thay đổi giá trị. Chọn **Đóng** để quay lại trang nội dung xuất.
 
 ## <a name="schedule-and-run-exports"></a>Lên lịch và chạy nội dung xuất
 
-Mỗi nội dung xuất bạn đặt cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](system.md#schedule-tab). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
+Mỗi nội dung xuất bạn định cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](system.md#schedule-tab). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
 
-Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu hệ thống đang cập nhật [các phần phụ thuộc](system.md#refresh-policies) khi quá trình xuất theo lịch bắt đầu, thì trước tiên, hệ thống sẽ hoàn thành các phần phụ thuộc rồi mới chạy nội dung xuất. Bạn có thể biết thời điểm gần đây nhất mà nội dung xuất được làm mới trong cột **Đã làm mới**.
+Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu đang tiến hành cập nhật [yếu tố phụ thuộc](system.md#refresh-policies) khi quy trình xuất theo lịch trình chuẩn bị bắt đầu, trước tiên hệ thống sẽ hoàn thành việc cập nhật đó rồi mới chạy quy trình xuất. Bạn có thể biết thời điểm gần đây nhất mà nội dung xuất được làm mới trong cột **Đã làm mới**.
 
 ### <a name="schedule-exports"></a>Lên lịch nội dung xuất
 

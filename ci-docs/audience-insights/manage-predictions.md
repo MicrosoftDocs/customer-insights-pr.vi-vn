@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095764"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315904"
 ---
 # <a name="manage-predictions"></a>Quản lý dự đoán
 
@@ -35,9 +35,6 @@ Bài viết này thảo luận về một số tác vụ mà hầu hết các k�
 Báo cáo khả năng sử dụng dữ liệu đầu vào cung cấp một dạng xem tổng hợp về các lỗi và cảnh báo mà các dự đoán có sẵn của bạn có thể đang tạo ra. Báo cáo này cũng đưa ra đề xuất về cách cải thiện hiệu suất của mô hình.
 
 Báo cáo này có sẵn sau khi một mô hình đã hoàn tất quá trình đào tạo. Báo cáo được tạo cho từng mô hình riêng biệt, bất kể quá trình có hoàn tất thành công hay không.
-
-> [!NOTE]
-> Hiện tại, tính năng này chỉ hoạt động cho mô hình Khả năng rời bỏ giao dịch.
 
 ### <a name="view-the-input-data-usability-report"></a>Xem báo cáo khả năng sử dụng dữ liệu đầu vào
 
@@ -62,7 +59,7 @@ Các cột sau trong báo cáo chứa thông tin hữu ích để cải thiện 
 
 ## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
 
-Các dự đoán sẽ tự động làm mới trên cùng một [trình làm mới dữ liệu](system.md#schedule-tab) như đặt cấu hình trong thiết đặt. Bạn cũng có thể làm mới chúng theo cách thủ công.
+Các dự đoán sẽ tự động làm mới trên cùng một [trình làm mới dữ liệu](system.md#schedule-tab) như định cấu hình trong thiết đặt. Bạn cũng có thể làm mới chúng theo cách thủ công.
 
 1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085602"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305685"
 ---
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
@@ -34,7 +34,7 @@ Trong mục **Dữ liệu** > **Hợp nhất** > **Hợp nhất**, bạn chọn 
 
 Bạn có thể thay đổi cách hệ thống xử lý các thuộc tính đã hợp nhất để tạo hồ sơ khách hàng hợp nhất. Chọn **Hiển thị thêm** và chọn những phần bạn muốn thay đổi.
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Các tùy chọn trong menu thả xuống Hiển thị thêm nhằm quản lý các thuộc tính đã hợp nhất.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Các tùy chọn trong menu thả xuống Hiển thị thêm để quản lý các thuộc tính đã hợp nhất.":::
 
 Xem phần sau đây để biết thêm thông tin.
 
@@ -122,7 +122,7 @@ Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới 
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Đặt cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.
+Định cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.
 
 Nếu bạn đã định cấu hình các hoạt động, quá trình tăng cường hoặc phân đoạn, những phần này sẽ được xử lý tự động để sử dụng dữ liệu khách hàng mới nhất.
 

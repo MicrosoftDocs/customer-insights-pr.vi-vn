@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596939"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305917"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với nguồn dữ liệu Power Query
 
@@ -72,7 +72,7 @@ Các trình kết nối có dấu kiểm trong cột **Customer Insights (Luồn
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Nguồn dữ liệu**.
 
-2. Chọn dấu chấm lửng dọc bên cạnh nguồn dữ liệu bạn muốn thay đổi và chọn **Chỉnh sửa** từ menu thả xuống.
+2. Chọn dấu 3 chấm dọc bên cạnh nguồn dữ liệu bạn muốn thay đổi và chọn **Chỉnh sửa** từ menu thả xuống.
 
    > [!div class="mx-imgBorder"]
    > ![Tùy chọn chỉnh sửa](media/edit-option-data-sources.png "Tùy chọn chỉnh sửa")

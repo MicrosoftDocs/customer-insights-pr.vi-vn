@@ -1,6 +1,6 @@
 - name: Dynamics 365 Customer Insights
   href: index.yml
-- name: Tổng quan sản phẩm
+- name: Tổng quan về sản phẩm
   href: overview.md
 - name: Truy cập môi trường của bạn
   href: 'https://home.ci.ai.dynamics.com/'
@@ -18,7 +18,7 @@
       href: audience-insights/home.md
     - name: Tìm hiểu các mô-đun
       items:
-        - name: Nhập dữ liệu
+        - name: Thu thập dữ liệu
           href: /learn/modules/ingest-data-customer-insights/
         - name: Tạo hồ sơ khách hàng hợp nhất
           href: /learn/modules/unified-customer-profile/
@@ -38,11 +38,11 @@
           href: audience-insights/connect-common-data-service-lake.md
         - name: Làm mới tăng dần cho các nguồn dữ liệu
           href: audience-insights/incremental-refresh-data-sources.md
-        - name: Nhập dữ liệu trong thời gian thực
+        - name: Thu thập dữ liệu trong thời gian thực
           href: audience-insights/real-time-data-ingestion.md
-        - name: Hiểu các thực thể và bộ dữ liệu
+        - name: Hiểu các thực thể và tập dữ liệu
           href: audience-insights/entities.md
-    - name: Thống nhất dữ liệu
+    - name: Hợp nhất dữ liệu
       items:
         - name: Tổng quan về hợp nhất dữ liệu
           href: audience-insights/data-unification.md
@@ -60,29 +60,29 @@
           href: audience-insights/relationships.md
         - name: Liệt kê hoạt động dành cho khách hàng
           href: audience-insights/activities.md
-    - name: Làm phong phú dữ liệu
+    - name: Tăng cường dữ liệu
       items:
-        - name: Làm phong phú hồ sơ khách hàng
+        - name: Tăng cường thông tin hồ sơ khách hàng
           href: audience-insights/enrichment-hub.md
         - name: Mối quan hệ giữa thương hiệu và sở thích
           href: audience-insights/enrichment-microsoft.md
         - name: Địa chỉ nâng cao
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Tăng cường với HERE Technologies
+        - name: Tăng cường dữ liệu bằng HERE Technologies
           href: audience-insights/enrichment-here.md
-        - name: Làm phong phú với Leadspace
+        - name: Tăng cường dữ liệu bằng Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Làm phong phú với Experian
+        - name: Tăng cường dữ liệu bằng Experian
           href: audience-insights/enrichment-experian.md
-        - name: Tăng cường với nhập tùy chỉnh SFTP
+        - name: Tăng cường dữ liệu bằng tính năng nhập tùy chỉnh SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Phân khúc và phép đo
+    - name: Phân khúc và giá trị đo
       items:
         - name: Tổng quan về phân khúc
           href: audience-insights/segments.md
         - name: Tạo phân khúc và nhóm khách hàng
           href: audience-insights/segment-builder.md
-        - name: Các phân khúc được đề xuất dựa trên phép đo
+        - name: Các phân khúc được đề xuất dựa trên giá trị đo
           href: audience-insights/suggested-segments.md
         - name: Các phân khúc được đề xuất dựa trên hoạt động
           href: audience-insights/suggested-segments-activity.md
@@ -90,9 +90,9 @@
           href: audience-insights/segment-insights.md
         - name: Tìm khách hàng tương tự
           href: audience-insights/find-similar-customer-segments.md
-    - name: Biện pháp
+    - name: Giá trị đo
       items:
-        - name: Xác định các biện pháp và KPI
+        - name: Xác định các giá trị đo và KPI
           href: audience-insights/measures.md
     - name: Dự đoán
       items:
@@ -136,19 +136,21 @@
           items:
             - name: Tổng quan về nội dung xuất
               href: audience-insights/export-destinations.md
+            - name: Chiến dịch hiện hoạt
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
               href: audience-insights/export-autopilot.md
             - name: Azure Blob Storage
               href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
+            - name: Azure Data Lake Storage Thế hệ thứ 2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
             - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Nền tảng trải nghiệm Adobe
+            - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -178,15 +180,19 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
               href: audience-insights/export-sftp.md
         - name: Cách sử dụng khác
           items:
-            - name: Bổ trợ thẻ khách hàng cho Dynamics 365
+            - name: Phần bổ trợ Customer Card cho Dynamics 365
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
@@ -226,7 +232,7 @@
       href: audience-insights/service-limits.md
     - name: Yêu cầu DSR theo GDPR
       href: audience-insights/gdpr.md
-- name: Thông tin chuyên sâu về tương tác (xem trước)
+- name: Thông tin chuyên sâu về tương tác (bản xem trước)
   items:
     - name: Trung tâm trợ giúp
       href: engagement-insights/index.yml
@@ -240,11 +246,11 @@
           href: engagement-insights/get-started.md
         - name: Tạo không gian làm việc
           href: engagement-insights/create-workspace.md
-        - name: Cung cấp trang web của bạn
-          href: engagement-insights/instrument-website.md
+        - name: Thu nạp sự kiện từ trang web và ứng dụng dành cho thiết bị di động
+          href: engagement-insights/developer-resources.md
         - name: Các khái niệm và thuật ngữ
           href: engagement-insights/glossary.md
-    - name: Các sự kiện
+    - name: Sự kiện
       items:
         - name: Tạo và sửa đổi sự kiện
           href: engagement-insights/refined-events.md
@@ -270,13 +276,21 @@
           href: engagement-insights/funnel-reports.md
     - name: Nguồn lực dành cho nhà phát triển
       items:
-        - name: Tổng quan về tài nguyên dành cho nhà phát triển
+        - name: Tổng quan về nguồn lực dành cho nhà phát triển
           href: engagement-insights/developer-resources.md
-        - name: Hướng dẫn SDK web
+        - name: Hướng dẫn về SDK web
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Mẫu SDK web
           href: engagement-insights/websdk-sample.md
-    - name: Quản trị
+        - name: Hướng dẫn về SDK Android
+          href: engagement-insights/get-started-android.md
+        - name: Mẫu SDK Android
+          href: engagement-insights/androidsdk-sample.md
+        - name: Hướng dẫn về SDK iOS
+          href: engagement-insights/get-started-ios.md
+        - name: Mẫu SDK iOS
+          href: engagement-insights/iossdk-sample.md
+    - name: Quản trị
       items:
         - name: Vai trò và quyền
           href: engagement-insights/user-roles.md

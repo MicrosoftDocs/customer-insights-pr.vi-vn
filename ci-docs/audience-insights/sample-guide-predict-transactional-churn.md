@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595452"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306146"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ giao dịch (bản xem trước)
 
-Hướng dẫn này sẽ giải thích cho bạn ví dụ toàn diện về dự đoán rời bỏ giao dịch trong Customer Insights bằng cách sử dụng dữ liệu được cung cấp bên dưới. Tất cả dữ liệu được sử dụng trong hướng dẫn này không phải là dữ liệu khách hàng thực và là một phần của tập dữ liệu Contoso được tìm thấy trong môi trường *Demo* trong Đăng ký Customer Insights của bạn.
+Hướng dẫn này sẽ giải thích cho bạn ví dụ toàn diện về dự đoán rời bỏ giao dịch trong Customer Insights bằng cách sử dụng dữ liệu được cung cấp bên dưới. Tất cả dữ liệu được sử dụng trong hướng dẫn này không phải là dữ liệu khách hàng thực và là một phần của tập dữ liệu Contoso thuộc môi trường *Demo* trong Đăng ký Customer Insights của bạn.
 
 ## <a name="scenario"></a>Kịch bản
 
-Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng cao, họ bán thông qua trang web Contoso Coffee của mình. Mục tiêu là biết những khách hàng nào thường mua sản phẩm của họ một cách thường xuyên, sẽ không còn là khách hàng tích cực trong 60 ngày tới. Biết khách hàng nào **có khả năng rời bỏ**, có thể giúp họ tiết kiệm các nỗ lực tiếp thị bằng cách tập trung vào việc giữ chân họ.
+Contoso là một công ty sản xuất cà phê và máy pha cà phê chất lượng cao. Họ bán sản phẩm thông qua trang web Contoso Coffee. Mục tiêu là biết những khách hàng nào thường mua sản phẩm của họ một cách thường xuyên, sẽ không còn là khách hàng tích cực trong 60 ngày tới. Biết khách hàng nào **có khả năng rời bỏ**, có thể giúp họ tiết kiệm các nỗ lực tiếp thị bằng cách tập trung vào việc giữ chân họ.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -39,7 +39,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Nhập URL cho các liên hệ Thương mại điện tử https://aka.ms/ciadclasscontacts.
 
-1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** và sau đó **Sử dụng hàng đầu tiên làm tiêu đề**.
+1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** rồi chọn **Dùng hàng đầu tiên làm tiêu đề**.
 
 1. Cập nhật kiểu dữ liệu cho các cột được liệt kê bên dưới:
 
@@ -59,7 +59,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Nhập URL cho dữ liệu **Mua hàng trực tuyến** https://aka.ms/ciadclassonline.
 
-1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** và sau đó **Sử dụng hàng đầu tiên làm tiêu đề**.
+1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** rồi chọn **Dùng hàng đầu tiên làm tiêu đề**.
 
 1. Cập nhật kiểu dữ liệu cho các cột được liệt kê bên dưới:
 
@@ -76,7 +76,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 1. Nhập URL cho các liên hệ Thương mại điện tử https://aka.ms/ciadclasscustomerloyalty.
 
-1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** và sau đó **Sử dụng hàng đầu tiên làm tiêu đề**.
+1. Trong khi chỉnh sửa dữ liệu, hãy chọn **Chuyển đổi** rồi chọn **Dùng hàng đầu tiên làm tiêu đề**.
 
 1. Cập nhật kiểu dữ liệu cho các cột được liệt kê bên dưới:
 
@@ -105,13 +105,13 @@ Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh 
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Hợp nhất LoyaltyId làm khóa chính.":::
 
-### <a name="match"></a>So khớp
+### <a name="match"></a>Kết quả khớp
 
 1. Đi đến tab **So khớp** và chọn **Đặt thứ tự**.
 
 1. Trong danh sách thả xuống **Chính**, chọn **eCommerceContacts: eCommerce** là nguồn chính và bao gồm tất cả các bản ghi.
 
-1. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers : LoyaltyScheme** và bao gồm tất cả các bản ghi.
+1. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers: LoyaltyScheme** và bao gồm tất cả các bản ghi.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Hợp nhất so khớp thương mại điện tử và khách hàng thân thiết.":::
 
@@ -119,16 +119,16 @@ Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh 
 
 1. Thêm điều kiện đầu tiên của bạn bằng FullName.
 
-   * Đối với eCommerceContacts, hãy chọn **FullName** trong danh sách thả xuống.
-   * Đối với loyCustomers, hãy chọn **FullName** trong danh sách thả xuống.
-   * Chọn danh sách thả xuống **Chuẩn hóa** và chọn **Loại (Điện thoại, Tên, Địa chỉ, ...)**.
+   * Đối với eCommerceContacts, chọn **FullName** trong danh sách thả xuống.
+   * Đối với loyCustomers, chọn **FullName** trong danh sách thả xuống.
+   * Chọn danh sách thả xuống **Chuẩn hóa** rồi chọn **Loại (Số điện thoại, Tên, Địa chỉ,...)**.
    * Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
 
 1. Nhập tên **FullName, Email** cho quy tắc mới.
 
    * Thêm điều kiện thứ hai cho địa chỉ email bằng cách chọn **Thêm điều kiện**
-   * Đối với thực thể eCommerceContacts, hãy chọn **Email** trong danh sách thả xuống.
-   * Đối với thực thể loyCustomers, hãy chọn **Email** trong danh sách thả xuống. 
+   * Đối với thực thể eCommerceContacts, chọn **EMail** trong danh sách thả xuống.
+   * Đối với thực thể loyCustomers, chọn **EMail** trong danh sách thả xuống. 
    * Để trống trường Chuẩn hóa. 
    * Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
 
@@ -178,7 +178,7 @@ Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có t
 
    Mô hình cần đào tạo thường xuyên để học các mẫu mới khi có dữ liệu mới được nhập vào. Đối với ví dụ này, hãy chọn **Hàng tháng**.
 
-1. Sau khi xem xét tất cả các chi tiết, hãy chọn **Lưu và chạy**.
+1. Sau khi xem lại tất cả thông tin chi tiết, hãy chọn **Lưu và chạy**.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Nhiệm vụ 4 - Xem xét kết quả và giải thích mô hình
 
@@ -197,7 +197,7 @@ Bạn có thể tạo một phân khúc mới dựa trên thực thể được 
 1. Chọn điểm cuối **OOBSubscriptionChurnPrediction** và xác định phân khúc: 
    - Trường: ChurnScore
    - Toán tử: lớn hơn
-   - Giá trị: 0.6
+   - Giá trị: 0,6
    
    :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Thiết lập phân khúc rời bỏ đăng ký.":::
 

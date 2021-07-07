@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866433"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304952"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
@@ -45,7 +45,7 @@ Nguồn dữ liệu của bạn có thể bao gồm các thực thể có dữ l
 
    - **Đầu tiên**: Trường ngoại trong thực thể hoạt động của bạn sẽ được dùng để thiết lập mối quan hệ với một thực thể khác.
    - **Thứ hai**: Thực thể khách hàng nguồn tương ứng mà thực thể hoạt động của bạn sẽ có mối quan hệ. Bạn chỉ có thể liên kết với các thực thể khách hàng nguồn được dùng trong quá trình hợp nhất dữ liệu.
-   - **Thứ ba** : Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn được chọn đã tồn tại, thì tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ nào như vậy tồn tại, thì một mối quan hệ mới sẽ được tạo với tên mà bạn cung cấp trong hộp này.
+   - **Thứ ba** : Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn được chọn đã tồn tại, thì tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ nào như vậy tồn tại, một mối quan hệ mới sẽ được tạo theo tên mà bạn cung cấp trong hộp này.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Xác định mối quan hệ của thực thể.":::
 
@@ -53,23 +53,23 @@ Nguồn dữ liệu của bạn có thể bao gồm các thực thể có dữ l
 
 1. Trong bước **Hợp nhất hoạt động**, hãy chọn sự kiện hoạt động và thời gian bắt đầu hoạt động của bạn. 
    - **Trường bắt buộc**
-      1. **Hoạt động của sự kiện**: Trường về sự kiện cho hoạt động này
-      2. **Dấu thời gian**: Trường đại diện cho thời gian bắt đầu hoạt động của bạn.
+      - **Hoạt động của sự kiện**: Trường về sự kiện cho hoạt động này.
+      - **Dấu thời gian**: Trường đại diện cho thời gian bắt đầu hoạt động của bạn.
 
    - **Trường tùy chọn**
-      1. **Chi tiết bổ sung**: Trường có thông tin liên quan cho hoạt động này.
-      2. **Biểu tượng**: Biểu tượng thể hiện rõ nhất loại hoạt động này.
-      3. **Địa chỉ web**: Trường chứa URL có thông tin về hoạt động này. Ví dụ: hệ thống giao dịch lấy nguồn từ hoạt động này. URL này có thể là bất kỳ trường nào từ nguồn dữ liệu hoặc được xây dựng làm một trường mới bằng cách chuyển đổi Power Query. Dữ liệu URL sẽ được lưu trữ trong thực thể *Hoạt động đã hợp nhất*. Dữ liệu này có thể được dùng ở hạ nguồn bằng cách sử dụng [API](apis.md).
+      - **Chi tiết bổ sung**: Trường có thông tin liên quan cho hoạt động này.
+      - **Biểu tượng**: Biểu tượng thể hiện rõ nhất loại hoạt động này.
+      - **Địa chỉ web**: Trường chứa URL có thông tin về hoạt động này. Ví dụ: hệ thống giao dịch lấy nguồn từ hoạt động này. URL này có thể là bất kỳ trường nào từ nguồn dữ liệu hoặc được xây dựng làm một trường mới bằng cách chuyển đổi Power Query. Dữ liệu URL sẽ được lưu trữ trong thực thể *Hoạt động đã hợp nhất*. Dữ liệu này có thể được dùng ở hạ nguồn bằng cách sử dụng [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Chỉ định dữ liệu hoạt động của khách hàng trong thực thể Hoạt động đã hợp nhất.":::
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. Bạn có thể chọn **Kết thúc và xem xét** để lưu hoạt động ngay bây giờ khi loại hoạt động được đặt thành **Khác**. 
 
-1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, các bạn có thể ánh xạ theo ngữ nghĩa loại hoạt động *Subscription* & *SalesOrderLine* sau khi đồng ý ánh xạ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
+1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, *Đăng ký* và các loại hoạt động *SalesOrderLine* có thể được ánh xạ theo ngữ nghĩa sau khi bạn đồng ý ánh xạ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. 
 
-1. Trong bước **Xem lại**, hãy xác minh lựa chọn của bạn. Bạn hãy quay lại bất kỳ bước nào trước đó và cập nhật thông tin nếu cần.
+1. Trong bước **Xem lại**, hãy xác minh lựa chọn của bạn. Quay lại bất kỳ bước nào trước đó và cập nhật thông tin nếu cần.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Xem lại các trường được chỉ định cho một hoạt động.":::
    
@@ -89,7 +89,7 @@ Các hành động sau đây khả dụng khi bạn chọn một hoạt động.
 
 - **Chỉnh sửa**: Mở hoạt động được thiết lập ở bước đánh giá. Bạn có thể thay đổi bất kỳ hoặc tất cả cấu hình hiện tại từ bước này. Sau khi thay đổi cấu hình, hãy chọn **Lưu hoạt động** rồi chọn **Chạy** để xử lý các thay đổi.
 
-- **Đổi tên**: Mở hộp thoại để nhập tên khác cho hoạt động đã chọn. Chọn **Lưu** để áp dụng thay đổi.
+- **Đổi tên**: Mở hộp thoại nơi bạn có thể nhập tên khác cho hoạt động đã chọn. Chọn **Lưu** để áp dụng thay đổi.
 
 - **Xóa**: Mở hộp thoại để xác nhận việc xóa hoạt động đã chọn. Bạn cũng có thể xóa nhiều hoạt động cùng một lúc bằng cách chọn các hoạt động rồi chọn biểu tượng xóa. Chọn **Xoá** để xác nhận tác vụ xoá của bạn.
 

@@ -1,6 +1,6 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Google Ads
-description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Google Ads.
+description: Tìm hiểu cách định cấu hình kết nối và xuất sang Google Ads.
 ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,40 +9,39 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976344"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305366"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
-Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang danh sách đối tượng Google Ads và sử dụng chúng để quảng cáo trên Google Tìm kiếm, Gmail, YouTube và Mạng hiển thị của Google. 
+Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đối tượng Google Ads và sử dụng chúng để quảng cáo trên Google Tìm kiếm, Gmail, YouTube và Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [Tài khoản Google Ads](https://ads.google.com/) và thông tin đăng nhập quản trị viên tương ứng.
--   Bạn có một [Mã thông báo Nhà phát triển Google Ads được chấp thuận](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Bạn đáp ứng các yêu cầu của [Chính sách đối sánh khách hàng](https://support.google.com/adspolicy/answer/6299717)
--   Bạn đáp ứng các yêu cầu về [kích thước danh sách tiếp thị lại](https://support.google.com/google-ads/answer/7558048) 
-
+-   Bạn có một [Mã thông báo Nhà phát triển Google Ads được chấp thuận](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Bạn đáp ứng các yêu cầu của [Chính sách đối sánh khách hàng](https://support.google.com/adspolicy/answer/6299717).
+-   Bạn đáp ứng các yêu cầu về [kích thước danh sách tiếp thị lại](https://support.google.com/google-ads/answer/7558048).
 -   Có đối tượng hiện có trong Google Ads và các ID tương ứng. Để biết thêm thông tin, hãy xem [Đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Bạn có [các phân đoạn được định cấu hình](segments.md)
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email, tên và họ
+-   Bạn có [các phân khúc được định cấu hình](segments.md).
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email, tên và họ.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
 - Lên đến 1 triệu hồ sơ mỗi lần xuất sang Google Ads.
-- Việc xuất sang Google Ads bị giới hạn ở các phân đoạn.
-- Việc xuất các phân đoạn với tổng số 1 triệu hồ sơ có thể mất đến 5 phút vì những hạn chế từ phía nhà cung cấp. 
+- Việc xuất sang Google Ads bị giới hạn ở các phân khúc.
+- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ có thể mất đến 5 phút vì những hạn chế từ phía nhà cung cấp. 
 - Quá trình so khớp trong Google Ads có thể mất đến 48 giờ.
 
 ## <a name="set-up-connection-to-google-ads"></a>Thiết lập kết nối với Google Ads
 
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
-1. Chọn **Thêm kết nối** rồi chọn **Google Ads** để đặt cấu hình kết nối.
+1. Chọn **Thêm kết nối** rồi chọn **Google Ads** để định cấu hình kết nối.
 
 1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
 
@@ -60,15 +59,15 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang danh sách đ�
 
 1. Chọn **Lưu** để hoàn thành kết nối. 
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
 1. Để tạo một nội dung xuất mới, hãy chọn **Thêm đích**.
 
-1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Google Ads. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
+1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Google Ads. Nếu bạn không thấy tên phần này thì có nghĩa là không có kết nối nào thuộc loại này khả dụng cho bạn.
 
 1. Nhập **[ID đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** và chọn **Kết nối** để khởi tạo kết nối với Google Ads.
 
@@ -78,12 +77,14 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
-Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). 
+
+Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Google Ads, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Google Ads đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896123"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304998"
 ---
 # <a name="connections-preview-overview"></a>Tổng quan về kết nối (bản xem trước)
 
@@ -42,7 +42,7 @@ Chỉ quản trị viên là có thể đặt cấu hình các kết nối mới
 
 1. Đi đến tab **Kết nối**.
 
-1. Chọn **Thêm kết nối** để tạo kết nối mới. Chọn từ menu thả xuống loại kết nối bạn muốn tạo.
+1. Chọn **Thêm kết nối** để tạo kết nối mới. Chọn loại kết nối bạn muốn tạo từ menu thả xuống.
 
 1. Trong ngăn **Thiết lập kết nối**, hãy cung cấp thông tin chi tiết được yêu cầu. 
    1. **Tên hiển thị** và loại kết nối mô tả một kết nối. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối này.
@@ -74,7 +74,9 @@ Khi thiết lập hoặc chỉnh sửa kết nối xuất, bạn hãy chọn ng�
 
 ## <a name="remove-a-connection"></a>Loại bỏ kết nối
 
-Nếu kết nối mà bạn đang loại bỏ được dùng cho các nội dung bổ sung hoặc nội dung xuất, thì trước tiên, bạn cần gỡ bỏ hoặc loại bỏ các nội dung bổ sung hoặc nội dung xuất đó. Hộp thoại loại bỏ sẽ hướng dẫn bạn chuyển đến các nội dung bổ sung hoặc nội dung xuất có liên quan. Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang chế độ không hoạt động. Bạn hãy kích hoạt lại các nội dung bổ sung và nội dung xuất đã gỡ bỏ bằng cách thêm một kết nối khác vào chúng trên trang [Nội dung bổ sung](enrichment-hub.md) hoặc [Nội dung xuất](export-destinations.md).
+Nếu kết nối mà bạn đang loại bỏ được dùng cho các nội dung bổ sung hoặc nội dung xuất, thì trước tiên, bạn cần gỡ bỏ hoặc loại bỏ các nội dung bổ sung hoặc nội dung xuất đó. Hộp thoại loại bỏ sẽ hướng dẫn bạn chuyển đến các nội dung bổ sung hoặc nội dung xuất có liên quan. 
+
+Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang chế độ không hoạt động. Bạn hãy kích hoạt lại các nội dung bổ sung và nội dung xuất đã gỡ bỏ bằng cách thêm một kết nối khác vào chúng trên trang [Nội dung bổ sung](enrichment-hub.md) hoặc [Nội dung xuất](export-destinations.md).
 
 1. Đi đến **Quản trị viên** > **Kết nối (bản xem trước)**.
 
