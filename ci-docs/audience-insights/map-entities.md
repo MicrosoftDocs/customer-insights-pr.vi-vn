@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596019"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555149"
 ---
 # <a name="map-entities-and-attributes"></a>Ánh xạ thực thể và thuộc tính
 
@@ -35,14 +35,14 @@ ms.locfileid: "5596019"
 3. Chọn các thực thể và thuộc tính bạn muốn sử dụng trong giai đoạn *khớp* và *hợp nhất*. Bạn có thể chọn các thuộc tính bắt buộc riêng lẻ từ một thực thể hoặc bao gồm tất cả các thuộc tính từ một thực thể bằng cách chọn hộp kiểm **Bao gồm tất cả các trường** ở cấp thực thể. Chúng tôi khuyên bạn nên chọn ít nhất hai thực thể để hưởng lợi từ quá trình thống nhất dữ liệu.
 
    > [!div class="mx-imgBorder"]
-   > ![Ví dụ về thêm thực thể](media/data-manager-configure-map-add-entities-example.png "Ví dụ về thêm thực thể")
+   > ![Ví dụ về thêm thực thể.](media/data-manager-configure-map-add-entities-example.png "Ví dụ về thêm thực thể")
 
    Trong ví dụ này, chúng tôi đang thêm thực thể **eCommerceContacts** và **loyCustomers**. Bằng cách chọn những thực thể này, bạn có thể có được thông tin chi tiết về khách hàng kinh doanh trực tuyến nào là thành viên của chương trình khách hàng thân thiết.
    
    Bạn có thể tìm kiếm từ khóa trên tất cả các thuộc tính và thực thể để chọn các thuộc tính bắt buộc mà bạn muốn ánh xạ.
    
      > [!div class="mx-imgBorder"]
-   > ![Ví dụ về trường tìm kiếm](media/data-manager-configure-map-search-fields-example.png "Ví dụ về trường tìm kiếm")
+   > ![Ví dụ về trường tìm kiếm.](media/data-manager-configure-map-search-fields-example.png "Ví dụ về trường tìm kiếm")
 
 4. Lựa chọn **Áp dụng** để xác nhận lựa chọn của bạn.
 
@@ -55,7 +55,7 @@ Sau khi chọn các thực thể của bạn, trang **Bản đồ** sẽ liệt 
 - **Loại ngữ nghĩa thuộc tính**: Danh mục các thuộc tính của bạn, chẳng hạn như địa chỉ email hoặc tên. Để sử dụng mô hình trí tuệ nhân tạo cho dự đoán thông minh về ngữ nghĩa, tiết kiệm thời gian và cải thiện độ chính xác, hãy đặt **Ánh xạ thông minh** thành **BẬT**. Ánh xạ thông minh làm nổi bật các đề xuất ngữ nghĩa dựa trên AI trong trường **Loại**. Nếu bạn đặt nó thành **TẮT**, bạn sẽ thấy các đề xuất ánh xạ thông thường của chúng tôi. Bạn có thể chọn bất kỳ kiểu ngữ nghĩa nào từ danh sách tùy chọn có sẵn và ghi đè lựa chọn được gợi ý.
 
 > [!div class="mx-imgBorder"]
-> ![Loại thuộc tính và ngữ nghĩa dự đoán](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Loại thuộc tính và ngữ nghĩa dự đoán")
+> ![Loại thuộc tính và ngữ nghĩa dự đoán.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Loại thuộc tính và ngữ nghĩa dự đoán")
 
 Cũng có thể thêm một loại ngữ nghĩa tùy chỉnh. Chọn trường loại cho thuộc tính đó và nhập tên loại ngữ nghĩa tùy chỉnh của bạn. Như vậy, bạn cũng có thể thay đổi các loại thuộc tính được xác định bởi hệ thống.
 
@@ -64,7 +64,7 @@ Tất cả các thuộc tính mà một loại ngữ nghĩa được nhận dạ
 Các thuộc tính không được ánh xạ tự động đến một loại ngữ nghĩa được nhóm lại trong phần **Xác định dữ liệu trong các trường chưa được ánh xạ**. Chọn trường loại ngữ nghĩa cho các thuộc tính chưa được ánh xạ hoặc nhập tên loại thuộc tính tùy chỉnh của bạn.
 
 > [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính](media/data-manager-configure-map-add-attributes.png "Khóa chính và loại thuộc tính")
+> ![Khóa chính và loại thuộc tính.](media/data-manager-configure-map-add-attributes.png "Khóa chính và loại thuộc tính")
 
 > [!NOTE]
 > Một trường nên ánh xạ đến kiểu ngữ nghĩa Person.FullName để điền tên khách hàng vào thẻ khách hàng. Nếu không, thẻ khách hàng sẽ xuất hiện không tên. 
@@ -76,7 +76,7 @@ Các thuộc tính không được ánh xạ tự động đến một loại ng
 2. Trong ngăn **Chỉnh sửa các trường**, thêm hoặc xóa các thuộc tính và thực thể. Sử dụng tìm kiếm hoặc cuộn để tìm và chọn các thuộc tính và thực thể bạn quan tâm. Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chúng đã được đối sánh.
 
    > [!div class="mx-imgBorder"]
-   > ![Thêm hoặc loại bỏ thuộc tính](media/configure-data-map-edit.png "Thêm hoặc loại bỏ thuộc tính")
+   > ![Thêm hoặc loại bỏ thuộc tính.](media/configure-data-map-edit.png "Thêm hoặc loại bỏ thuộc tính")
 
 3. Chọn **Áp dụng**.
 

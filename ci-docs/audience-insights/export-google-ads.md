@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
+ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305366"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6604303"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
@@ -71,7 +71,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **[ID đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** và chọn **Kết nối** để khởi tạo kết nối với Google Ads.
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Lặp lại các bước tương tự cho các trường **Tên** và **Họ**.
+1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng.
 
 1. Chọn phân khúc mà bạn muốn xuất. Bạn có thể xuất tổng cộng tối đa 1 triệu hồ sơ khách hàng sang Google Ads.
 

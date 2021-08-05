@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095674"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556333"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Dự đoán khả năng rời bỏ đăng ký (xem trước)
 
@@ -63,7 +63,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
 1. Trong thông tin chuyên sâu về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán**.
 1. Chọn tiêu đề **Mô hình khả năng rời bỏ đăng ký (xem trước)** và chọn **Sử dụng mô hình này**.
    > [!div class="mx-imgBorder"]
-   > ![Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này](media/subscription-churn-usethismodel.PNG "Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này")
+   > ![Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này.](media/subscription-churn-usethismodel.PNG "Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này")
 
 ### <a name="name-model"></a>Đặt tên mô hình
 
@@ -86,7 +86,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
     1. Chọn **Thực thể khách hàng** khớp với thực thể khách hàng chính của bạn.
     1. Nhập tên mô tả mối quan hệ.
        > [!div class="mx-imgBorder"]
-       > ![Trang lịch sử đăng ký thể hiện việc tạo mối quan hệ với khách hàng](media/subscription-churn-subscriptionhistoryrelationship.PNG "Trang lịch sử đăng ký thể hiện việc tạo mối quan hệ với khách hàng")
+       > ![Trang lịch sử đăng ký thể hiện việc tạo mối quan hệ với khách hàng.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Trang lịch sử đăng ký thể hiện việc tạo mối quan hệ với khách hàng")
 1. Chọn **Tiếp theo**.
 1. Ánh xạ các trường ngữ nghĩa đến các thuộc tính trong thực thể lịch sử đăng ký rồi chọn **Lưu**. Để biết mô tả về các trường, hãy xem [điều kiện tiên quyết](#prerequisites).
    > [!div class="mx-imgBorder"]
@@ -101,7 +101,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
 1. Ánh xạ các trường ngữ nghĩa đến các thuộc tính trong thực thể hoạt động khách hàng rồi chọn **Lưu**. Để biết mô tả về các trường, hãy xem [điều kiện tiên quyết](#prerequisites).
 1. (Tùy chọn) Nếu bạn có bất kỳ hoạt động nào khác của khách hàng mà bạn muốn đưa vào, hãy lặp lại các bước ở trên.
    > [!div class="mx-imgBorder"]
-   > ![Xác định mối quan hệ của thực thể](media/subscription-churn-customeractivitiesmapping.PNG "Trang hoạt động khách hàng hiển thị các thuộc tính ngữ nghĩa được ánh xạ tới các trường trong thực thể hoạt động khách hàng")
+   > ![Xác định mối quan hệ của thực thể.](media/subscription-churn-customeractivitiesmapping.PNG "Trang hoạt động khách hàng hiển thị các thuộc tính ngữ nghĩa được ánh xạ tới các trường trong thực thể hoạt động khách hàng")
 1. Chọn **Tiếp theo**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Đặt lịch và xem xét cấu hình
@@ -115,7 +115,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
 
 1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
    > [!div class="mx-imgBorder"]
-   > ![Xem trang Dự đoán của tôi](media/subscription-churn-mypredictions.PNG "Xem trang Dự đoán của tôi")
+   > ![Xem trang Dự đoán của tôi.](media/subscription-churn-mypredictions.PNG "Xem trang Dự đoán của tôi")
 1. Chọn dự đoán bạn muốn xem lại.
    - **Tên dự đoán:** Tên của dự đoán được cung cấp khi tạo.
    - **Loại dự đoán:** Loại mô hình dùng cho dự đoán
@@ -131,7 +131,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
    - **Làm mới lần gần đây nhất** Ngày dự đoán làm mới kết quả trong thực thể đầu ra.
 1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xem lại kết quả rồi chọn **Xem**.
    > [!div class="mx-imgBorder"]
-   > ![Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa](media/subscription-churn-verticalellipses.PNG "Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa")
+   > ![Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa.](media/subscription-churn-verticalellipses.PNG "Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa")
 1. Có 3 phần dữ liệu chính trong trang kết quả:
     1. **Hiệu suất mô hình đào tạo:** A, B hoặc C là các điểm số có thể có. Điểm số này cho biết hiệu suất của dự đoán và có thể giúp bạn ra quyết định sử dụng kết quả được lưu trữ trong thực thể đầu ra.
         - Điểm số được xác định dựa trên các quy tắc sau:
@@ -139,13 +139,13 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
             - **B** khi mô hình dự đoán chính xác 50% tổng số dự đoán và khi tỷ lệ dự đoán chính xác đối với khách hàng rời đi lớn hơn so với tỷ lệ rời đi trung bình trước đây tối đa là là 10%.
             - **C** khi mô hình dự đoán chính xác dưới 50% tổng số dự đoán, hoặc khi tỷ lệ dự đoán chính xác đối với khách hàng rời đi thấp hơn tỷ lệ rời đi trung bình trước đây.
                > [!div class="mx-imgBorder"]
-               > ![Xem kết quả hiệu suất của mô hình](media/subscription-churn-modelperformance.PNG "Xem kết quả hiệu suất của mô hình")
+               > ![Xem kết quả hiệu suất của mô hình.](media/subscription-churn-modelperformance.PNG "Xem kết quả hiệu suất của mô hình")
     1. **Khả năng rời bỏ (số lượng khách hàng):** Các nhóm khách hàng dựa trên rủi ro rời bỏ dự đoán của họ. Dữ liệu này có thể giúp bạn về sau này nếu muốn tạo phân khúc khách hàng có khả năng rời bỏ cao. Những phân khúc này giúp hiểu được điểm cắt nên dành cho các thành phần phân khúc.
        > [!div class="mx-imgBorder"]
-       > ![Biểu đồ hiển thị mức độ phân phối kết quả rời bỏ, chia thành các phạm vi từ 0-100%](media/subscription-churn-resultdistribution.PNG "Biểu đồ hiển thị mức độ phân phối kết quả rời bỏ, chia thành các phạm vi từ 0-100%")
+       > ![Biểu đồ hiển thị mức độ phân phối kết quả rời bỏ, chia thành các phạm vi từ 0-100%.](media/subscription-churn-resultdistribution.PNG "Biểu đồ hiển thị mức độ phân phối kết quả rời bỏ, chia thành các phạm vi từ 0-100%")
     1. **Các yếu tố có ảnh hưởng nhất:** Có nhiều yếu tố được tính đến khi tạo dự đoán. Mỗi yếu tố có tầm quan trọng được tính toán cho các dự đoán tổng hợp mà một mô hình tạo ra. Bạn có thể sử dụng các yếu tố này để giúp xác nhận kết quả dự đoán. Hoặc bạn có thể sử dụng thông tin này sau để [tạo phân khúc](segments.md) có thể giúp ảnh hưởng đến rủi ro rời bỏ của khách hàng.
        > [!div class="mx-imgBorder"]
-       > ![Danh sách cho thấy các yếu tố ảnh hưởng và tầm quan trọng của chúng trong việc dự đoán kết quả rời bỏ](media/subscription-churn-influentialfactors.PNG "Danh sách cho thấy các yếu tố ảnh hưởng và tầm quan trọng của chúng trong việc dự đoán kết quả rời bỏ")
+       > ![Danh sách cho thấy các yếu tố ảnh hưởng và tầm quan trọng của chúng trong việc dự đoán kết quả rời bỏ.](media/subscription-churn-influentialfactors.PNG "Danh sách cho thấy các yếu tố ảnh hưởng và tầm quan trọng của chúng trong việc dự đoán kết quả rời bỏ")
 
 ## <a name="manage-predictions"></a>Quản lý dự đoán
 

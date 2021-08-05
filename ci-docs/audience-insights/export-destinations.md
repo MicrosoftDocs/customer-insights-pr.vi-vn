@@ -9,12 +9,13 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 47bdcc5bb38587063e4414377568943f868107a3
+ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305504"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "6539369"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
@@ -71,7 +72,7 @@ Sau khi tạo đích xuất, các đích xuất đã tạo sẽ có trong phần
 
 ## <a name="schedule-and-run-exports"></a>Lên lịch và chạy nội dung xuất
 
-Mỗi nội dung xuất bạn định cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](system.md#schedule-tab). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
+Mỗi nội dung xuất bạn đặt cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](system.md#schedule-tab). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
 
 Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu đang tiến hành cập nhật [yếu tố phụ thuộc](system.md#refresh-policies) khi quy trình xuất theo lịch trình chuẩn bị bắt đầu, trước tiên hệ thống sẽ hoàn thành việc cập nhật đó rồi mới chạy quy trình xuất. Bạn có thể biết thời điểm gần đây nhất mà nội dung xuất được làm mới trong cột **Đã làm mới**.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304630"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554644"
 ---
 # <a name="customer-profiles"></a>Hồ sơ khách hàng
 
@@ -23,11 +23,11 @@ Trang **Khách hàng** hiển thị thông tin kết hợp về khách hàng c�
 Khách hàng có thể là cá nhân hoặc tổ chức (xem trước). Mỗi hồ sơ khách hàng hoặc tổ chức được đại diện bởi một ngăn xếp. Chọn một ngăn xếp để xem thông tin bổ sung về khách hàng hoặc tổ chức cụ thể đó. Sử dụng các điều khiển phân trang ở cuối trang để xem các bản ghi bổ sung.
 
 > [!div class="mx-imgBorder"] 
-> ![Hồ sơ khách hàng B2C](media/profiles-customers.png "Hồ sơ khách hàng B2C")
+> ![Hồ sơ khách hàng B2C.](media/profiles-customers.png "Hồ sơ khách hàng B2C")
 
 Tổ chức (Xem trước)
 > [!div class="mx-imgBorder"] 
-> ![Hồ sơ khách hàng B2B](media/profile-customers-b2b.png "Hồ sơ khách hàng B2B")
+> ![Hồ sơ khách hàng B2B.](media/profile-customers-b2b.png "Hồ sơ khách hàng B2B")
 
 > [!NOTE]
 > Nếu bạn không thể nhìn thấy ngăn xếp khi bạn chọn **Khách hàng** trong điều hướng, quản trị viên của bạn cần phải [xác định ít nhất một thuộc tính có thể tìm kiếm](search-filter-index.md) trên **Chỉ mục tìm kiếm & lọc**.
@@ -47,7 +47,7 @@ Bạn có thể lọc khách hàng theo các trường thực thể Hồ sơ kh�
 2. Chọn các hộp bên cạnh các thuộc tính bạn muốn lọc khách hàng.
 
    > [!div class="mx-imgBorder"] 
-   > ![Hồ sơ khách hàng](media/profiles-customers3.png "Hồ sơ khách hàng")
+   > ![Hồ sơ khách hàng.](media/profiles-customers3.png "Hồ sơ khách hàng")
 
 3. Xóa bộ lọc của bạn bằng cách chọn **Xóa bộ lọc** trên trang **Khách hàng**.
 

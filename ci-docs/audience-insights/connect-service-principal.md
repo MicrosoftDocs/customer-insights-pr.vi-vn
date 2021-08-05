@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596525"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692139"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Kết nối với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure để biết thông tin chi tiết về đối tượng
 
 Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các quyền hạn chế. Thay vì để các ứng dụng đăng nhập với tư cách là người dùng có đầy đủ đặc quyền, Azure cung cấp các dịch vụ chính. Đọc tiếp để tìm hiểu cách kết nối thông tin chi tiết về đối tượng với tài khoản Azure Data Lake Storage Gen2 sử dụng dịch vụ chính Azure thay vì khóa tài khoản lưu trữ. 
 
-Bạn có thể sử dụng dịch vụ chính để [thêm hoặc chỉnh sửa an toàn thư mục Common Data Model dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo mới hoặc cập nhật môi trường hiện có](manage-environments.md#create-an-environment-in-an-existing-organization).
+Bạn có thể sử dụng dịch vụ chính để [thêm hoặc chỉnh sửa an toàn thư mục Common Data Model dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo mới hoặc cập nhật môi trường hiện có](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Tài khoản lưu trữ Azure Data Lake thế hệ 2 dự định sử dụng dịch vụ chính phải [Đã bật Không gian Tên phân cấp (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Có thể mất đến 15 phút để các thay đổi được thực hiện.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Nhập ID tài nguyên Azure hoặc chi tiết Đăng ký Azure trong tệp đính kèm tài khoản lưu trữ cho Audience Insights.
 
-Đính kèm tài khoản lưu trữ Azure Data Lake trong thông tin chi tiết về đối tượng để [lưu trữ dữ liệu kết quả](manage-environments.md) hoặc [sử dụng làm nguồn dữ liệu](connect-common-data-service-lake.md). Chọn tùy chọn Azure Data Lake cho phép bạn chọn giữa phương pháp dựa trên tài nguyên hoặc dựa trên đăng ký.
+Đính kèm tài khoản lưu trữ Azure Data Lake trong thông tin chi tiết về đối tượng để [lưu trữ dữ liệu kết quả](manage-environments.md) hoặc [sử dụng làm nguồn dữ liệu](connect-dataverse-managed-lake.md). Chọn tùy chọn Azure Data Lake cho phép bạn chọn giữa phương pháp dựa trên tài nguyên hoặc dựa trên đăng ký.
 
 Thực hiện theo các bước dưới đây để cung cấp thông tin cần thiết về phương pháp đã chọn.
 

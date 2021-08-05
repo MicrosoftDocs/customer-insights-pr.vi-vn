@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305917"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554723"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với nguồn dữ liệu Power Query
 
@@ -42,7 +42,7 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
 1. Hộp thoại **Power Query - Chỉnh sửa truy vấn** cho phép bạn xem lại và tinh chỉnh dữ liệu. Các thực thể mà các hệ thống được xác định trong nguồn dữ liệu đã chọn của bạn xuất hiện trong ngăn bên trái.
 
    > [!div class="mx-imgBorder"]
-   > ![Hộp thoại Chỉnh sửa truy vấn](media/data-manager-configure-edit-queries.png "Hộp thoại Chỉnh sửa truy vấn")
+   > ![Hộp thoại Chỉnh sửa truy vấn.](media/data-manager-configure-edit-queries.png "Hộp thoại Chỉnh sửa truy vấn")
 
 1. Bạn cũng có thể chuyển đổi dữ liệu của bạn. Chọn một thực thể để chỉnh sửa hoặc chuyển đổi. Sử dụng các tùy chọn trong cửa sổ Power Query để áp dụng các phép biến đổi. Mỗi chuyển đổi được liệt kê dưới **Các bước đã áp dụng**. Power Query cung cấp nhiều tùy chọn chuyển đổi được tạo sẵn. Xem [Chuyển đổi Power Query](/power-query/power-query-what-is-power-query#transformations) để biết thêm thông tin.
 
@@ -75,7 +75,7 @@ Các trình kết nối có dấu kiểm trong cột **Customer Insights (Luồn
 2. Chọn dấu 3 chấm dọc bên cạnh nguồn dữ liệu bạn muốn thay đổi và chọn **Chỉnh sửa** từ menu thả xuống.
 
    > [!div class="mx-imgBorder"]
-   > ![Tùy chọn chỉnh sửa](media/edit-option-data-sources.png "Tùy chọn chỉnh sửa")
+   > ![Tùy chọn chỉnh sửa.](media/edit-option-data-sources.png "Tùy chọn chỉnh sửa")
 
 3. Áp dụng các thay đổi và chuyển đổi của bạn trong hộp thoại **Power Query - Chỉnh sửa truy vấn** như được mô tả trong phần [Tạo nguồn dữ liệu mới](#create-a-new-data-source).
 

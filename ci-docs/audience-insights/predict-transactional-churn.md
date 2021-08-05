@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095628"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559431"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Dự đoán Khả năng rời bỏ giao dịch (xem trước)
 
@@ -47,7 +47,7 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
         - **Sự kiện:** Tên của sự kiện bạn muốn sử dụng. Ví dụ: trường có tên "UserAction" trong cửa hàng tạp hóa có thể được khách hàng sử dụng phiếu giảm giá.
         - **Chi tiết:** Thông tin chi tiết về sự kiện. Ví dụ: trường có tên "CouponValue" trong cửa hàng tạp hóa có thể là giá trị tiền tệ của phiếu giảm giá.
 - Đặc điểm dữ liệu được đề xuất:
-    - Đủ dữ liệu lịch sử: Dữ liệu giao dịch cho ít nhất gấp đôi khoảng thời gian đã chọn. Tốt nhất là hai đến ba năm dữ liệu gói đăng ký. 
+    - Đủ dữ liệu lịch sử: Dữ liệu giao dịch cho ít nhất gấp đôi khoảng thời gian đã chọn. Tốt hơn là lịch sử giao dịch từ hai đến ba năm. 
     - Nhiều giao dịch mua trên mỗi khách hàng: Lý tưởng là tối thiểu hai giao dịch trở lên trên mỗi khách hàng.
     - Số lượng khách hàng: Tối thiểu 10 hồ sơ khách hàng, tốt nhất là 1.000 khách hàng. Mô hình sẽ không thành công nếu dưới 10 khách hàng và không đủ dữ liệu lịch sử.
     - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường dữ liệu của thực thể được cung cấp.

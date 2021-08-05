@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304768"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554507"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
@@ -35,7 +35,7 @@ Bài viết này mô tả cách tiếp cận API Customer Insights, tạo Đăng
  
    Việc bật API sẽ tạo khóa đăng ký chính và phụ cho phiên bản của bạn, khóa này được sử dụng trong các yêu cầu API. Bạn có thể tạo lại các khóa bằng cách chọn **Tạo lại khóa chính** hoặc **Tạo lại khóa phụ** trên **Quản trị viên** > **Quyền** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Bật API Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Bật API Customer Insights.":::
 
 1. Chọn **Khám phá API** để [dùng thử các API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
  
    Ngoài ra, hãy chạy lệnh này trong **Bảng điều khiển trình quản lý gói NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Thêm gói NuGet vào dự án Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Thêm gói NuGet vào dự án Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Sử dụng thư viện máy khách C#
 
@@ -141,7 +141,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 
 1. Chuyển `HttpClient` này vào việc xây dựng máy khách `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Mẫu httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Mẫu httpclient.":::
 
 1. Thực hiện cuộc gọi với máy khách đến "phương pháp mở rộng", ví dụ: `GetAllInstancesAsync`. Nếu truy cập vào `Microsoft.Rest.HttpOperationResponse` cơ sở được ưu tiên, hãy sử dụng "phương thức thông báo http", ví dụ: `GetAllInstancesWithHttpMessagesAsync`.
 

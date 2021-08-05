@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305685"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650252"
 ---
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
@@ -109,7 +109,7 @@ Một số thực thể chứa nhiều chi tiết hơn những thực thể khá
 Cho dù bạn hợp nhất thủ công các thuộc tính hay để hệ thống hợp nhất chúng, bạn luôn có thể chạy hợp nhất. Chọn **Chạy** trên trang **Hợp nhất** để bắt đầu quy trình.
 
 > [!div class="mx-imgBorder"]
-> ![Lưu và chạy hợp nhất dữ liệu](media/configure-data-merge-save-run.png "Lưu và chạy hợp nhất dữ liệu")
+> ![Lưu và chạy hợp nhất dữ liệu.](media/configure-data-merge-save-run.png "Lưu và chạy hợp nhất dữ liệu")
 
 Chọn **Chỉ chạy Hợp nhất** nếu bạn chỉ muốn xem kết quả đầu ra được phản ánh trong thực thể khách hàng hợp nhất. Các quy trình xuôi dòng sẽ được làm mới như [đã xác định trong lịch trình làm mới](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới 
 Để thực hiện thêm nhiều thay đổi và chạy lại bước, bạn có thể hủy quá trình hợp nhất đang diễn ra. Chọn **Đang làm mới ...** rồi chọn **Hủy công việc**  trong ngăn bên xuất hiện.
 
 > [!TIP]
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
+> Sau khi chạy quá trình trộn, hãy chọn trạng thái quá trình để mở ngăn **Chi tiết công việc**. Ngăn này cung cấp một cái nhìn tổng quan về thời gian xử lý, ngày xử lý cuối cùng và tất cả các lỗi và cảnh báo liên quan đến công việc. Chọn **Xem chi tiết** để xem các thực thể nào đã tham gia vào quá trình đối sánh, nếu giải quyết xung đột thành công và nếu các bản cập nhật được xuất bản thành công.  
+> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quy trình xuôi dòng khác](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Đường dẫn xem chi tiết để xử lý chi tiết từ liên kết trạng thái nhiệm vụ.":::
 
 ## <a name="next-step"></a>Bước tiếp theo
 

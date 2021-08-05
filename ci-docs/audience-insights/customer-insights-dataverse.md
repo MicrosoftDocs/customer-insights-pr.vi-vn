@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259217"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650068"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights cung cấp tùy chọn để hiển thị các thực thể đ
 
 **Tổ chức đã có môi trường Dataverse**
 
-Các tổ chức đã sử dụng Dataverse có thể [dùng một trong các môi trường Dataverse hiện có của họ](manage-environments.md#create-an-environment-in-an-existing-organization) khi quản trị viên thiết lập thông tin chuyên sâu về đối tượng. Bằng cách cung cấp URL cho môi trường Dataverse, môi trường đó sẽ đính kèm vào môi trường thông tin chuyên sâu về đối tượng mới của họ. Để đảm bảo hiệu suất tốt nhất có thể, môi trường Customer Insights và Dataverse phải được lưu trữ trong cùng một khu vực.
+Các tổ chức đã sử dụng Dataverse có thể [dùng một trong các môi trường Dataverse hiện có của họ](get-started-paid.md) khi quản trị viên thiết lập thông tin chuyên sâu về đối tượng. Bằng cách cung cấp URL cho môi trường Dataverse, môi trường đó sẽ đính kèm vào môi trường thông tin chuyên sâu về đối tượng mới của họ. Để đảm bảo hiệu suất tốt nhất có thể, môi trường Customer Insights và Dataverse phải được lưu trữ trong cùng một khu vực.
 
 Để đính kèm môi trường Dataverse, hãy mở rộng phần **Thiết đặt nâng cao** khi tạo môi trường thông tin chuyên sâu về đối tượng. Cung cấp **URL môi trường Microsoft Dataverse** và chọn hộp kiểm để **Bật chia sẻ dữ liệu**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Tổ chức mới**
 

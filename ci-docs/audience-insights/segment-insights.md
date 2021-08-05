@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306100"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555011"
 ---
 # <a name="segment-insights-preview"></a>Thông tin chuyên sâu về phân khúc (xem trước)
 
@@ -44,7 +44,7 @@ Bạn cũng có thể phân tính xem sự chồng chéo thay đổi như thế 
 Sau khi hoàn thành phân tích, bạn có thể tìm thấy thống tin chuyên sâu trong mục **Phân khúc** > **Thông tin chuyên sâu (xem trước)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Thông tin chuyên sâu về phân khúc chồng chéo":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Thông tin chuyên sâu về phân khúc chồng chéo.":::
 
 Chọn một thông tin chuyên sâu để xem kết quả phân tích:
 
@@ -77,7 +77,7 @@ Bạn có thể dựa vào các nhân tố khác biệt của phân khúc để 
 Sau khi hoàn thành phân tích, bạn có thể tìm thấy thống tin chuyên sâu trong mục **Phân khúc** > **Thông tin chuyên sâu (xem trước)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Thông tin chi tiết về nhân tố khác biệt của phân khúc":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Thông tin chi tiết về nhân tố khác biệt của phân khúc.":::
 
 Chọn một thông tin chuyên sâu để xem kết quả phân tích. Phép phân tích nhân tố khác biệt gồm có 2 tab. Tab **Thuộc tính** liệt kê các thuộc tính hồ sơ, được coi là nhân tố khác biệt. Tab **Phép đo** liệt kê các nhân tố khác biệt. Mỗi tab bao gồm những thông tin sau:
 

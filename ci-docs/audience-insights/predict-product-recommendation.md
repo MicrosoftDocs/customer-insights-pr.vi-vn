@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095582"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556150"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Dự đoán đề xuất sản phẩm (xem trước)
 
@@ -64,7 +64,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Chọn ngăn xếp **Mô hình đề xuất sản phẩm (xem trước)** và chọn **Sử dụng mô hình này**.
    > [!div class="mx-imgBorder"]
-   > ![Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này](media/product-recommendation-usethismodel.PNG "Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này")
+   > ![Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này.](media/product-recommendation-usethismodel.PNG "Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này")
 
 1. Xem lại thông tin về các yêu cầu của mô hình. Nếu bạn có dữ liệu cần thiết, hãy chọn **Bắt đầu**.
 
@@ -93,7 +93,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Ánh xạ các trường ngữ nghĩa với các thuộc tính trong thực thể lịch sử mua hàng của bạn và chọn **Tiếp theo**. Để biết mô tả về các trường, hãy xem [điều kiện tiên quyết](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Xác định mối quan hệ của thực thể](media/product-recommendation-purchasehistorymapping.PNG "Trang lịch sử mua hàng hiển thị các thuộc tính ngữ nghĩa được ánh xạ tới các trường trong thực thể lịch sử mua hàng đã chọn")
+   > ![Xác định mối quan hệ của thực thể.](media/product-recommendation-purchasehistorymapping.PNG "Trang lịch sử mua hàng hiển thị các thuộc tính ngữ nghĩa được ánh xạ tới các trường trong thực thể lịch sử mua hàng đã chọn")
 
 1. Nếu các trường không được điền, hãy định cấu hình mối quan hệ từ thực thể lịch sử mua hàng của bạn với thực thể *Khách hàng*.
     1. Chọn **Thực thể lịch sử mua hàng**.
@@ -101,7 +101,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
     1. Chọn **Thực thể khách hàng** khớp với thực thể khách hàng chính của bạn.
     1. Nhập tên mô tả mối quan hệ.
        > [!div class="mx-imgBorder"]
-       > ![Trang lịch sử mua hàng hiển thị việc tạo mối quan hệ với khách hàng](media/model-purchase-join.png "Trang lịch sử mua hàng hiển thị việc tạo mối quan hệ với khách hàng")
+       > ![Trang lịch sử mua hàng hiển thị việc tạo mối quan hệ với khách hàng.](media/model-purchase-join.png "Trang lịch sử mua hàng hiển thị việc tạo mối quan hệ với khách hàng")
 
 1. Chọn **Lưu**.
 
@@ -145,7 +145,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Chuyển đến tab **Dự đoán của tôi** trên **Thông tin** > **Dự đoán**.
    > [!div class="mx-imgBorder"]
-   > ![Xem trang Dự đoán của tôi](media/product-recommendation-mypredictions.PNG "Xem trang Dự đoán của tôi")
+   > ![Xem trang Dự đoán của tôi.](media/product-recommendation-mypredictions.PNG "Xem trang Dự đoán của tôi")
 
 1. Chọn dự đoán bạn muốn xem lại.
    - **Tên dự đoán:** Tên của dự đoán được cung cấp khi tạo.
@@ -163,7 +163,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xem lại kết quả rồi chọn **Xem**.
    > [!div class="mx-imgBorder"]
-   > ![Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa](media/product-recommendation-verticalellipses.PNG "Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa")
+   > ![Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa.](media/product-recommendation-verticalellipses.PNG "Xem các tùy chọn trong menu hình elip dọc để dự đoán bao gồm chỉnh sửa, làm mới, xem, ghi nhật ký và xóa")
 
 1. Có năm phần dữ liệu chính trong trang kết quả:
     1. **Hiệu suất mô hình đào tạo:** A, B hoặc C là các điểm số có thể có. Điểm số này cho biết hiệu suất của dự đoán và có thể giúp bạn ra quyết định sử dụng kết quả được lưu trữ trong thực thể đầu ra.
@@ -173,13 +173,13 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
             - **C** Mô hình sẽ được coi là có chất lượng **C** nếu chỉ số "Thành công @ K" là nhỏ hơn đường cơ sở.
                
                > [!div class="mx-imgBorder"]
-               > ![Xem kết quả hiệu suất của mô hình](media/product-recommendation-modelperformance.PNG "Xem kết quả hiệu suất của mô hình")
+               > ![Xem kết quả hiệu suất của mô hình.](media/product-recommendation-modelperformance.PNG "Xem kết quả hiệu suất của mô hình")
             - **Đường cơ sở**: Mô hình lấy các sản phẩm được đề xuất nhiều nhất theo số lượng mua của tất cả các khách hàng và sử dụng các quy tắc đã học do mô hình xác định để tạo một tập hợp các đề xuất cho khách hàng. Sau đó, các dự đoán được so sánh với các sản phẩm hàng đầu, được tính bằng số lượng khách hàng đã mua sản phẩm. Nếu khách hàng có ít nhất một sản phẩm trong các sản phẩm được đề xuất cũng có trong các sản phẩm được mua nhiều nhất, thì chúng được coi là một phần của đường cơ sở. Nếu có 10 khách hàng trong số này đã mua sản phẩm được đề xuất trong tổng số 100 khách hàng, thì mức cơ bản sẽ là 10%.
             - **Thành công @ K**: Sử dụng tập hợp xác thực khoảng thời gian của các giao dịch, các đề xuất được tạo cho tất cả khách hàng và được so sánh với tập hợp xác thực của các giao dịch. Ví dụ: trong khoảng thời gian 12 tháng, tháng 12 có thể được dành làm tập hợp dữ liệu xác thực. Nếu mô hình dự đoán ít nhất một thứ bạn sẽ mua trong tháng 12 dựa trên những gì đã học được từ 11 tháng trước, thì khách hàng sẽ tăng chỉ số "Thành công @ K".
     
     1. **Các sản phẩm được đề xuất nhiều nhất (có kiểm đếm):** Năm sản phẩm hàng đầu được dự đoán cho khách hàng của bạn.
        > [!div class="mx-imgBorder"]
-       > ![Biểu đồ hiển thị 5 sản phẩm được đề xuất hàng đầu](media/product-recommendation-topproducts.PNG "Biểu đồ hiển thị 5 sản phẩm được đề xuất hàng đầu")
+       > ![Biểu đồ hiển thị 5 sản phẩm được đề xuất hàng đầu.](media/product-recommendation-topproducts.PNG "Biểu đồ hiển thị 5 sản phẩm được đề xuất hàng đầu")
     
     1. **Các yếu tố đề xuất chính:** Mô hình sử dụng lịch sử giao dịch của khách hàng để đưa ra các đề xuất về sản phẩm. Mô hình học các thói quen dựa trên những giao dịch mua hàng trước đây và tìm ra những điểm tương đồng giữa khách hàng và sản phẩm. Những điểm tương đồng này sau đó được sử dụng để đưa ra các đề xuất về sản phẩm.
     Sau đây là các yếu tố có thể ảnh hưởng đến đề xuất về sản phẩm do mô hình đưa ra. 
@@ -190,20 +190,20 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
         Mọi đề xuất về sản phẩm đều chịu ảnh hưởng của một hoặc nhiều yếu tố này. Tỷ lệ phần trăm đề xuất (trong đó mỗi yếu tố ảnh hưởng đóng một vai trò) được minh họa trong biểu đồ. Trong ví dụ sau, 100% đề xuất bị ảnh hưởng bởi các giao dịch trước đây, 60% bị ảnh hưởng bởi sự tương đồng của khách hàng và 22% bị ảnh hưởng bởi sự tương đồng của sản phẩm. Di chuột qua các thanh trong biểu đồ để xem chính xác tỷ lệ phần trăm mà các yếu tố ảnh hưởng đã đóng góp.
 
         > [!div class="mx-imgBorder"]
-        > ![Các yếu tố đề xuất chính](media/product-recommendation-keyrecommendationfactors.png "Các yếu tố đề xuất chính mà mô hình học được để đưa ra các đề xuất về sản phẩm")
+        > ![Các yếu tố đề xuất chính.](media/product-recommendation-keyrecommendationfactors.png "Các yếu tố đề xuất chính mà mô hình học được để đưa ra các đề xuất về sản phẩm")
        
      
    1. **Thống kê dữ liệu**: Cung cấp tổng quan về số lượng giao dịch, khách hàng và sản phẩm mà mô hình xem xét. Thống kê này dựa trên dữ liệu đầu vào được dùng để tìm hiểu các thói quen và đưa ra đề xuất về sản phẩm.
 
       > [!div class="mx-imgBorder"]
-      > ![Thống kê dữ liệu](media/product-recommendation-datastatistics.png "Thống kê dữ liệu xoay quanh dữ liệu đầu vào được mô hình sử dụng để tìm hiểu các thói quen")
+      > ![Thống kê dữ liệu.](media/product-recommendation-datastatistics.png "Thống kê dữ liệu xoay quanh dữ liệu đầu vào được mô hình sử dụng để tìm hiểu các thói quen")
 
       Phần này hiển thị số liệu thống kê xoay quanh các điểm dữ liệu đã được mô hình sử dụng để tìm hiểu các thói quen và đưa ra đề xuất về sản phẩm. Chế độ lọc, như được đặt cấu hình trong cấu hình mô hình, sẽ áp dụng trên đầu ra do mô hình tạo. Tuy nhiên, mô hình sử dụng tất cả dữ liệu có sẵn để tìm hiểu các thói quen. Do đó, nếu bạn sử dụng tính năng lọc sản phẩm trong cấu hình mô hình, phần này sẽ hiển thị tổng số sản phẩm mà mô hình đã phân tích để tìm hiểu các thói quen. Số liệu này có thể khác với số lượng sản phẩm khớp với tiêu chí lọc đã xác định.
 
    1. **Đề xuất sản phẩm có độ tin cậy cao:** Một mẫu đề xuất được cung cấp cho khách hàng của bạn mà mô hình đó tin rằng khách hàng có thể mua.    
       Nếu danh mục sản phẩm được thêm vào, ID sản phẩm sẽ được thay thế bằng tên sản phẩm. Tên sản phẩm cung cấp thông tin trực quan và hữu ích hơn về các dự đoán.
        > [!div class="mx-imgBorder"]
-       > ![Danh sách hiển thị các đề xuất có độ tin cậy cao cho một nhóm khách hàng cá nhân được chọn](media/product-recommendation-highconfidence.PNG "Danh sách hiển thị các đề xuất có độ tin cậy cao cho một nhóm khách hàng cá nhân được chọn")
+       > ![Danh sách hiển thị các đề xuất có độ tin cậy cao cho một nhóm khách hàng cá nhân được chọn.](media/product-recommendation-highconfidence.PNG "Danh sách hiển thị các đề xuất có độ tin cậy cao cho một nhóm khách hàng cá nhân được chọn")
 
 ## <a name="manage-predictions"></a>Quản lý dự đoán
 

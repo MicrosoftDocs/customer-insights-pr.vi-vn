@@ -1,7 +1,7 @@
 ---
 title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
 description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305274"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555287"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
 Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để tăng cường dữ liệu khách hàng của bạn.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Trang trung tâm tăng cường":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Trang trung tâm tăng cường.":::
 
 Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Tăng cường** để làm việc với các tùy chọn tăng cường.  
 
@@ -42,9 +43,9 @@ Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông 
 
 Đi đến tab **Dữ liệu tăng cường của tôi** để xem tất cả thông tin bổ sung đã định cấu hình. Mỗi dữ liệu tăng cường được biểu thị bằng một hàng bao gồm thông tin bổ sung về dữ liệu tăng cường đó.
 
-Chọn dữ liệu tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng (...) trên một mục danh sách để xem các tùy chọn.
+Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng (...) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã định cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Các tùy chọn quản lý dữ liệu tăng cường trong danh sách dữ liệu tăng cường":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Các tùy chọn quản lý dữ liệu tăng cường trong danh sách dữ liệu tăng cường.":::
 
 - **Xem** thông tin chi tiết về dữ liệu tăng cường với số hồ sơ khách hàng được tăng cường.
 - **Chỉnh sửa** cấu hình dữ liệu tăng cường.
@@ -52,7 +53,7 @@ Chọn dữ liệu tăng cường để xem các tùy chọn có sẵn. Bạn c�
 - **Vô hiệu hóa** dữ liệu tăng cường hiện có để thông tin đó không làm mới tự động với mỗi lần làm mới theo lịch. Dữ liệu từ lần làm mới thành công gần nhất sẽ tiếp tục hiển thị. **Kích hoạt** dữ liệu tăng cường không hoạt động để khởi động lại tính năng làm mới tự động với mỗi lần làm mới theo lịch.
 - **Xóa** dữ liệu tăng cường.
 
-Bạn có thể chạy hoặc hủy kích hoạt nhiều dữ liệu tăng cường cùng một lúc bằng cách chọn trong danh sách. Xem và chỉnh sửa các tùy chọn hiện không thực hiện được dưới dạng hành động hàng loạt và tính năng này chỉ hoạt động với một dữ liệu tăng cường mỗi lần.
+Chạy hoặc hủy kích hoạt nhiều dữ liệu tăng cường cùng lúc bằng cách chọn chúng trong danh sách. Các tùy chọn xem và chỉnh sửa không khả dụng dưới dạng hành động hàng loạt. Chúng chỉ phù hợp với một dữ liệu tăng cường tại một thời điểm.
 
 ## <a name="enrichments-and-connections"></a>Dữ liệu tăng cường và kết nối
 

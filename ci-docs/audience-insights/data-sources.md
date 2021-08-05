@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304722"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692461"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -30,13 +31,13 @@ Bạn có thể thêm nguồn dữ liệu theo ba cách chính:
 
 - [Thông qua hàng chục trình kết nối Power Query](connect-power-query.md)
 - [Từ thư mục Common Data Model](connect-common-data-model.md)
-- [Từ kho lưu trữ Microsoft Dataverse của riêng bạn](connect-common-data-service-lake.md)
+- [Từ kho lưu trữ Microsoft Dataverse của riêng bạn](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Thêm dữ liệu từ nguồn dữ liệu tại chỗ
 
-Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chuyên sâu về đối tượng được hỗ trợ dựa trên luồng dữ liệu Microsoft Power Platform. Bạn có thể bật luồng dữ liệu trong Customer Insights bằng cách [cung cấp URL môi trường Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) khi thiết lập môi trường.
+Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chuyên sâu về đối tượng được hỗ trợ dựa trên luồng dữ liệu Microsoft Power Platform. Bạn có thể bật luồng dữ liệu trong Customer Insights bằng cách [cung cấp URL môi trường Microsoft Dataverse](get-started-paid.md) khi thiết lập môi trường.
 
-Nguồn dữ liệu được tạo sau khi liên kết một môi trường Dataverse với Customer Insights sẽ sử dụng [luồng dữ liệu Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Loại bỏ và tái tạo các nguồn dữ liệu đã tồn tại trước khi môi trường Dataverse được liên kết để [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app.md).
+Nguồn dữ liệu được tạo sau khi liên kết một môi trường Dataverse với Customer Insights sẽ sử dụng [luồng dữ liệu Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Loại bỏ và tái tạo các nguồn dữ liệu đã tồn tại trước khi môi trường Dataverse được liên kết để [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
 
 Cổng dữ liệu từ một môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Customer Insights. Trang nguồn dữ liệu hiển thị các liên kết đi đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
 
@@ -45,11 +46,11 @@ Cổng dữ liệu từ một môi trường Power BI hoặc Power Apps hiện c
 Bạn sẽ thấy tên của mỗi nguồn dữ liệu đã nhập, trạng thái của nó và lần cuối cùng dữ liệu được làm mới cho nguồn đó. Bạn có thể sắp xếp danh sách nguồn dữ liệu theo mọi cột.
 
 > [!div class="mx-imgBorder"]
-> ![Nguồn dữ liệu đã thêm](media/configure-data-datasource-added.png "Nguồn dữ liệu đã thêm")
+> ![Nguồn dữ liệu đã thêm.](media/configure-data-datasource-added.png "Nguồn dữ liệu đã thêm")
 
-|Trạng thái  |Nội dung mô tả  |
+|Trạng thái  |Mô tả  |
 |---------|---------|
-|Thành công   |Nguồn dữ liệu đã được nhập thành công nếu thời gian được đề cập trong cột **Làm mới**.
+|Thành công   |Nguồn dữ liệu đã được nhập thành công nếu thời gian được đề cập trong cột **Làm mới**.
 |Chưa bắt đầu   |Nguồn dữ liệu chưa nhập dữ liệu nào hoặc vẫn ở chế độ nháp.         |
 |Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
 |Không thành công     |Phiên nhập dữ liệu gặp lỗi.         |

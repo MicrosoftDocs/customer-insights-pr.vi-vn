@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305182"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555517"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng mối quan hệ thương hiệu và sở thích (bản xem trước)
 
@@ -27,7 +27,7 @@ Trong thông tin chuyên sâu về đối tượng, hãy đi tới **Dữ liệu
 Để định cấu hình dữ liệu tăng cường mối quan hệ về sở thích, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Sở thích**.
 
    > [!div class="mx-imgBorder"]
-   > ![Ngăn xếp Thương hiệu và Sở thích](media/BrandsInterest-tile-Hub.png "Ngăn xếp Thương hiệu và Sở thích")
+   > ![Ngăn xếp Thương hiệu và Sở thích.](media/BrandsInterest-tile-Hub.png "Ngăn xếp Thương hiệu và Sở thích")
 
 ## <a name="how-we-determine-affinities"></a>Cách chúng tôi xác định mối quan hệ
 
@@ -123,7 +123,7 @@ Tùy thuộc vào kích thước dữ liệu khách hàng của bạn, có thể
 
 Sau khi chạy quá trình tăng cường, hãy chuyển đến **Dữ liệu tăng cường của tôi** để xem xét tổng số khách hàng được tăng cường dữ liệu và số liệu phân tích về các thương hiệu hoặc sở thích trong hồ sơ khách hàng được tăng cường dữ liệu.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Xem trước kết quả sau khi chạy quy trình tăng cường":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Xem trước kết quả sau khi chạy quy trình tăng cường.":::
 
 Xem xét dữ liệu tăng cường bằng cách chọn **Xem dữ liệu tăng cường** trong biểu đồ. Dữ liệu tăng cường cho các thương hiệu đi đến thực thể **BrandAffinityFromMicrosoft**. Dữ liệu cho sở thích trong thực thể **InterestAffinityFromMicrosoft**. Bạn cũng sẽ tìm thấy các thực thể được liệt kê trong nhóm **Tăng cường** trong **Dữ liệu** > **Thực thể**.
 
@@ -131,9 +131,9 @@ Xem xét dữ liệu tăng cường bằng cách chọn **Xem dữ liệu tăng 
 
 Các mối quan hệ về thương hiệu và sở thích cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** rồi chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy biểu đồ cho các thương hiệu hoặc sở thích mà mọi người trong hồ sơ nhân khẩu học của khách hàng có mối quan hệ.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Thẻ khách hàng với dữ liệu tăng cường":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Thẻ khách hàng với dữ liệu tăng cường.":::
 
-## <a name="next-steps"></a>Bước tiếp theo
+## <a name="next-steps"></a>Các bước tiếp theo
 
 Xây dựng dựa trên dữ liệu khách hàng tăng cường của bạn. Tạo [Phân khúc](segments.md) và [Giá trị đo](measures.md), thậm chí [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm được cá nhân hóa cho khách hàng của bạn.
 

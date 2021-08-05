@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý phân đoạn
 description: Tạo phân đoạn khách hàng để nhóm họ lại dựa trên các đặc điểm khác nhau.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064963"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685488"
 ---
 # <a name="create-and-manage-segments"></a>Tạo và quản lý phân đoạn
+
+> [!IMPORTANT]
+> Có một số thay đổi sẽ được triển khai cho trải nghiệm tạo phân khúc vào tháng 9 năm 2021: 
+> - Trình tạo phân khúc trông sẽ hơi khác với các phần tử được thiết kế lại và dòng người dùng được cải thiện.
+> - Các toán tử datetime và bộ chọn ngày được cải thiện được bật trong trình tạo phân khúc.
+> - Bạn sẽ có thể thêm hoặc xóa điều kiện và quy tắc khỏi phân khúc. 
+> - Các quy tắc lồng nhau bắt đầu bằng điều kiện OR sẽ khả dụng. Bạn không cần điều kiện AND ở lớp ngoài cùng nữa.
+> - Một ngăn bên để chọn các thuộc tính sẽ liên tục khả dụng.
+> - Một tùy chọn để chọn đường dẫn mối quan hệ của thực thể.
+> Để thử trình tạo phân khúc mới, hãy gửi email với chủ đề "Yêu cầu bật trình tạo phân khúc mới" đến cihelp [at] microsoft.com. Bao gồm tên tổ chức và ID của môi trường hộp cát của bạn.
 
 Xác định các bộ lọc phức hợp xung quanh thực thể khách hàng hợp nhất và các thực thể có liên quan. Mỗi phân khúc, sau khi xử lý, sẽ tạo một bộ hồ sơ khách hàng mà bạn có thể xuất và hành động. Các phân khúc được quản lý trên trang **Phân khúc**. 
 
@@ -50,7 +60,7 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Bản nháp sẽ 
 1. Chọn một toán tử và một giá trị cho thuộc tính đã chọn.
 
    > [!div class="mx-imgBorder"]
-   > ![Bộ lọc nhóm tùy chỉnh](media/customer-group-numbers.png "Bộ lọc nhóm khách hàng")
+   > ![Bộ lọc nhóm tùy chỉnh.](media/customer-group-numbers.png "Bộ lọc nhóm khách hàng")
 
    |Số điện thoại |Định nghĩa  |
    |---------|---------|
@@ -63,10 +73,10 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Bản nháp sẽ 
 
       - Toán tử **AND**: Cả hai điều kiện phải được thỏa mãn như một phần của quá trình tạo phân đoạn. Tùy chọn này hữu ích nhất khi bạn xác định các điều kiện trên các thực thể khác nhau.
 
-      - Toán tử **OR**: Một trong các điều kiện cần phải được thỏa mãn như một phần của quá trình tạo phân đoạn. Tùy chọn này hữu ích nhất khi bạn xác định nhiều điều kiện cho cùng một thực thể.
+      - Toán tử **OR**: Một trong các điều kiện cần phải được thỏa mãn như một phần của quá trình tạo phân khúc. Tùy chọn này hữu ích nhất khi bạn xác định nhiều điều kiện cho cùng một thực thể.
 
       > [!div class="mx-imgBorder"]
-      > ![Toán tử OR trong đó một trong hai điều kiện cần phải được thỏa mãn](media/segmentation-either-condition.png "Toán tử OR trong đó một trong hai điều kiện cần phải được thỏa mãn")
+      > ![Toán tử OR trong đó một trong hai điều kiện cần phải được thỏa mãn.](media/segmentation-either-condition.png "Toán tử OR trong đó một trong hai điều kiện cần phải được thỏa mãn")
 
       Hiện tại, có thể lồng một toán tử **OR** trong toán tử **AND** nhưng không phải là ngược lại.
 
@@ -74,12 +84,12 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Bản nháp sẽ 
    Chọn **Thêm nhóm**.
 
       > [!div class="mx-imgBorder"]
-      > ![Thêm nhóm khách hàng](media/customer-group-add-group.png "Thêm nhóm khách hàng")
+      > ![Thêm nhóm khách hàng.](media/customer-group-add-group.png "Thêm nhóm khách hàng")
 
    1. Chọn một trong các toán tử đã đặt: **Hợp nhất**, **Giao nhau** hoặc **Ngoại trừ**.
 
    > [!div class="mx-imgBorder"]
-   > ![Thêm tập hợp nhóm khách hàng](media/customer-group-union.png "Thêm tập hợp nhóm khách hàng")
+   > ![Thêm tập hợp nhóm khách hàng.](media/customer-group-union.png "Thêm tập hợp nhóm khách hàng")
 
    - **Hợp nhất** sẽ hợp nhất hai nhóm với nhau.
 
@@ -90,7 +100,7 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Bản nháp sẽ 
 1. Nếu thực thể được kết nối với thực thể khách hàng hợp nhất qua [các mối quan hệ](relationships.md), thì bạn cần xác định đường dẫn mối quan hệ để tạo một phân đoạn hợp lệ. Thêm các thực thể từ đường dẫn mối quan hệ cho đến khi bạn có thể chọn thực thể **Khách hàng : CustomerInsights** từ danh sách thả xuống. Sau đó chọn **Tất cả hồ sơ** cho mỗi bước.
 
    > [!div class="mx-imgBorder"]
-   > ![Đường dẫn mối quan hệ trong khi tạo phận đoạn](media/segments-multiple-relationships.png "Đường dẫn mối quan hệ trong khi tạo phận đoạn")
+   > ![Đường dẫn mối quan hệ trong khi tạo phận đoạn.](media/segments-multiple-relationships.png "Đường dẫn mối quan hệ trong khi tạo phận đoạn")
 
 1. Theo mặc định, các phân khúc tạo một thực thể đầu ra chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân khúc dựa trên các thực thể khác với *Khách hàng*, bạn có thể thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra. Chọn **Thuộc tính dự án** để chọn các thuộc tính sẽ được thêm vào thực thể đầu ra.  
   
@@ -127,7 +137,7 @@ Phân khúc nhanh cho phép bạn tạo nhanh các phân khúc đơn giản vớ
 4. Hệ thống sẽ cung cấp cho bạn một **Kích cỡ phân đoạn ước tính**. Bạn có thể chọn tạo phân đoạn bạn đã xác định hoặc truy cập lại vào phân đoạn đó để có kích cỡ phân đoạn khác.
 
     > [!div class="mx-imgBorder"]
-    > ![Tên và ước tính cho một phân đoạn nhanh](media/quick-segment-name.png "Tên và ước tính cho một phân đoạn nhanh")
+    > ![Tên và ước tính cho một phân khúc nhanh.](media/quick-segment-name.png "Tên và ước tính cho một phân đoạn nhanh")
 
 5. Đặt **Tên** cho phân đoạn của bạn. Bạn cũng có thể cung cấp **Tên hiển thị**.
 

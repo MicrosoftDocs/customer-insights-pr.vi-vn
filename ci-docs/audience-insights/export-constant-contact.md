@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124299"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362444"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Xuất phân khúc sang Constant Contact (xem trước)
 
@@ -47,15 +47,15 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Constant Contact
 
 1. Chọn **Kết nối** để khởi tạo kết nối với Constant Contact.
 
-1. Chọn **Xác thực với AdRoll** và cung cấp thông tin xác thực quản trị viên của bạn cho Constant Contact. 
+1. Chọn **Xác thực với Constant Contact** và cung cấp thông tin đăng nhập quản trị viên của bạn cho Constant Contact. 
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 

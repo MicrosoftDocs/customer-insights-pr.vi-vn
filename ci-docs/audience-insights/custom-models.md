@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305688"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554874"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
 
@@ -42,7 +42,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 1. Đặt cho mô hình tùy chỉnh một tên dễ nhận ra trong trường **Tên**.
 
    > [!div class="mx-imgBorder"]
-   > ![Ảnh chụp màn hình ngăn quy trình làm việc mới](media/new-workflowv2.png "Ảnh chụp màn hình ngăn Quy trình làm việc mới")
+   > ![Ảnh chụp màn hình ngăn quy trình làm việc mới.](media/new-workflowv2.png "Ảnh chụp màn hình ngăn Quy trình làm việc mới")
 
 1. Chọn tổ chức chứa dịch vụ web trong **Đối tượng thuê chứa dịch vụ web**.
 
@@ -59,7 +59,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
    > Quy trình làm việc của mô hình tùy chỉnh sẽ áp dụng phương pháp phỏng đoán để ánh xạ các trường đầu vào của dịch vụ web với các thuộc tính thực thể dựa trên tên và kiểu dữ liệu của trường. Bạn sẽ thấy lỗi nếu không thể ánh xạ trường dịch vụ web tới một thực thể.
 
    > [!div class="mx-imgBorder"]
-   > ![Đặt cấu hình cho quy trình](media/intelligence-screen2-updated.png "Đặt cấu hình cho quy trình")
+   > ![Đặt cấu hình cho quy trình.](media/intelligence-screen2-updated.png "Đặt cấu hình cho quy trình")
 
 1. Trong bước **Tham số đầu ra mô hình**, đặt các thuộc tính sau:
    - Machine Learning Studio (cổ điển)
@@ -70,12 +70,12 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
       1. Chọn **Tên tham số đường dẫn đầu ra** của quy trình hàng loạt của bạn từ menu thả xuống.
 
       > [!div class="mx-imgBorder"]
-      > ![Ngăn tham số đầu ra của mô hình](media/intelligence-screen3-outputparameters.png "Ngăn tham số đầu ra của mô hình")
+      > ![Ngăn tham số đầu ra của mô hình.](media/intelligence-screen3-outputparameters.png "Ngăn tham số đầu ra của mô hình")
 
 1. Chọn thuộc tính phù hợp từ danh sách thả xuống **ID khách hàng trong kết quả** xác định khách hàng và chọn **Lưu**.
 
    > [!div class="mx-imgBorder"]
-   > ![Liên kết kết quả với ngăn Dữ liệu khách hàng](media/intelligence-screen4-relatetocustomer.png "Liên kết kết quả với ngăn Dữ liệu khách hàng")
+   > ![Liên kết kết quả với ngăn Dữ liệu khách hàng.](media/intelligence-screen4-relatetocustomer.png "Liên kết kết quả với ngăn Dữ liệu khách hàng")
 
 1. Bạn sẽ nhìn thấy màn hình **Quy trình làm việc được lưu** có thông tin chi tiết về quy trình làm việc.    
    Nếu bạn đã định cấu hình quy trình làm việc cho quy trình Azure Machine Learning, thông tin chi tiết về đối tượng sẽ đính kèm vào không gian làm việc chứa quy trình. Thông tin chi tiết về đối tượng sẽ nhận được vai trò **Cộng tác viên** trên không gian làm việc Azure.

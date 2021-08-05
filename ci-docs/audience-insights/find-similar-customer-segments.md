@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596801"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554231"
 ---
 # <a name="similar-customers-preview"></a>Khách hàng tương tự (xem trước)
 
@@ -50,7 +50,7 @@ Tính năng này cho phép bạn tìm thấy những khách hàng tương tự t
 Sau khi xử lý phân khúc tương tự, bạn sẽ tìm thấy phân khúc mới được liệt kê trên trang **Phân khúc**.
 
 > [!div class="mx-imgBorder"]
-> ![Phân khúc khách hàng tương tự](media/expanded-segment.png "Phân khúc khách hàng tương tự")
+> ![Phân khúc khách hàng tương tự.](media/expanded-segment.png "Phân khúc khách hàng tương tự")
 
 Chọn **Xem** trên thành hành động để mở chi tiết phân khúc. Dạng xem này chứa thông tin về phân phối kết quả trên [điểm tương đồng](#about-similarity-scores). Bạn cũng sẽ tìm thấy các giá trị điểm tương đồng trong **Xem trước thành phần phân khúc**.
 

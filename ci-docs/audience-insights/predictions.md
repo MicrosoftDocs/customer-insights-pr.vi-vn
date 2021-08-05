@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595927"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692553"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
 
@@ -31,11 +31,11 @@ Tính năng Dự đoán cho phép bạn dễ dàng tạo các giá trị dự đ
 
 Trước khi tổ chức của bạn có thể sử dụng tính năng dự đoán, hãy đảm bảo đáp ứng các điều kiện tiên quyết sau đây:
 
-1. Tổ chức của bạn có một phiên bản [được thiết lập trong Common Data Service](/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
+1. Tổ chức của bạn có một phiên bản [thiết lập trong Microsoft Dataverse](/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
 
-2. Môi trường của bạn gắn với phiên bản Common Data Service.
+2. Môi trường thông tin chi tiết về đối tượng của bạn được liên kết với phiên bản Dataverse.
 
-Nếu bạn [tạo môi trường đầu tiên](manage-environments.md), hãy đặt cấu hình trong hộp thoại **Tạo môi trường** và chọn **Nâng cao**. Nếu bạn đã tạo một môi trường, hãy đi tới cài đặt của nó và chọn **Nâng cao**. Dù bằng cách nào, trong phần **Sử dụng dự đoán**, nhập URL phiên bản Common Data Service mà bạn muốn đính kèm môi trường của mình.
+Nếu bạn [tạo môi trường đầu tiên](get-started-paid.md), hãy đặt cấu hình trong hộp thoại **Tạo môi trường** và chọn **Nâng cao**. Nếu bạn đã tạo một môi trường, hãy đi tới cài đặt của nó và chọn **Nâng cao**. Dù bằng cách nào, trong phần **Sử dụng dự đoán**, nhập URL phiên bản Dataverse mà bạn muốn đính kèm môi trường của mình.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Tạo dự đoán trong thực thể Khách hàng
 
@@ -47,17 +47,17 @@ Nếu bạn [tạo môi trường đầu tiên](manage-environments.md), hãy đ
 
 4. Tìm tên thuộc tính bạn muốn dự đoán giá trị, sau đó chọn biểu tượng **Tổng quan** trong cột **Tóm tắt**.
    > [!div class="mx-imgBorder"]
-   > ![Biểu tượng tổng quan](media/intelligence-overviewicon.png "Biểu tượng tổng quan")
+   > ![Biểu tượng tổng quan.](media/intelligence-overviewicon.png "Biểu tượng tổng quan")
 
 5. Nếu có tỷ lệ cao là thiếu giá trị cho thuộc tính của bạn, chọn **Dự đoán các giá trị còn thiếu** để tiếp tục với dự đoán của bạn.
    > [!div class="mx-imgBorder"]
-   > ![Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu](media/intelligence-overviewpredictmissingvalues.png "Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu")
+   > ![Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu.](media/intelligence-overviewpredictmissingvalues.png "Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu")
 
 6. Cung cấp **Tên hiển thị** và **Tên thực thể đầu ra** cho kết quả dự đoán.
 
 7. Một danh sách các tùy chọn được điền sẵn sẽ hiển thị ở nơi bạn có thể ánh xạ các giá trị vào thể loại được dự đoán. Trong trường hợp này, các tùy chọn thể loại duy nhất của bạn sẽ là 0 hoặc 1 khi chúng ánh xạ vào đặc điểm đúng/sai hoặc nhị phân của dự đoán. Trong cột Thể loại, ánh xạ các giá trị trường mà bạn muốn phân loại là "0" trong dự đoán cuối cùng vào "0" và các mục bạn muốn phân loại là "1" trong dự đoán cuối cùng vào "1".
    > [!div class="mx-imgBorder"]
-   > ![Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại](media/intelligence-categorymapping.png "Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại")
+   > ![Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại.](media/intelligence-categorymapping.png "Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại")
 
 8. Chọn **Xong** và dự đoán sẽ được xử lý. Việc xử lý sẽ mất một lúc, tùy thuộc vào kích thước và độ phức tạp của dữ liệu. Kết quả sẽ có sẵn trong một thực thể mới dựa trên **Tên thực thể đầu ra** của dự đoán bạn đã tạo.
 
@@ -77,7 +77,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 5. Nếu phân đoạn bạn vừa tạo có dữ liệu chưa hoàn chỉnh trong trường nguồn, bạn có thể chọn để dự đoán các giá trị còn thiếu.
    > [!div class="mx-imgBorder"]
-   > ![Nút dự đoán](media/segments-predictoption.png "Nút dự đoán")
+   > ![Nút dự đoán.](media/segments-predictoption.png "Nút dự đoán")
 
 6. Cung cấp **Tên hiển thị** và **Tên thực thể đầu ra** cho kết quả dự đoán.
 
@@ -93,7 +93,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 4. Bạn sẽ thấy một số điểm dữ liệu trong dạng xem dự đoán của mình.
    > [!div class="mx-imgBorder"]
-   > ![Trang dự đoán](media/intelligence-predictionsviewpage.png "Trang dự đoán")
+   > ![Trang dự đoán.](media/intelligence-predictionsviewpage.png "Trang dự đoán")
 
    - **Giá trị dự đoán** cho thấy ánh xạ bạn tạo ra trong giai đoạn ánh xạ giá trị Trường sang Thể loại. Đó là các giá trị trong tập dữ liệu của bạn đã được ánh xạ tới một thể loại cụ thể.
    -**Các yếu tố ảnh hưởng hàng đầu** là các yếu tố trong tập dữ liệu của bạn có nhiều khả năng ảnh hưởng đến độ tin cậy của dự đoán về giá trị Trường được ánh xạ tới một thể loại cụ thể.
@@ -139,7 +139,7 @@ Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nh�
 
 ## <a name="troubleshooting"></a>Gỡ rối
 
-Nếu không thể hoàn thành quy trình đính kèm Common Data Service do lỗi, bạn có thể cố hoàn thành quy trình theo cách thủ công. Có hai vấn đề đã biết có thể xảy ra trong quy trình đính kèm:
+Nếu không thể hoàn thành quy trình đính kèm Dataverse do lỗi, bạn có thể cố hoàn thành quy trình theo cách thủ công. Có hai vấn đề đã biết có thể xảy ra trong quy trình đính kèm:
 
 - Giải pháp Bổ trợ thẻ khách hàng chưa được cài đặt.
     1. Hoàn thành các hướng dẫn để [cài đặt và đặt cấu hình giải pháp](customer-card-add-in.md).

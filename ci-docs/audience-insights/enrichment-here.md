@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305320"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555333"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng HERE Technologies (bản xem trước)
 
@@ -35,7 +35,7 @@ HERE Technologies là một công ty nền tảng vị trí cung cấp dữ li�
 1. Chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp HERE Technologies rồi chọn **Bắt đầu**.
 
    > [!div class="mx-imgBorder"]
-   > ![lát HERE Technologies](media/HERE-tile.png "lát HERE Technologies")
+   > ![Ngăn xếp HERE Technologies.](media/HERE-tile.png "lát HERE Technologies")
 
 1. Chọn một [kết nối](connections.md) từ danh sách thả xuống. Liên hệ với quản trị viên nếu không có kết nối. Nếu là quản trị viên, bạn có thể tạo kết nối bằng cách chọn **Thêm kết nối**. Chọn **HERE Technologies** từ danh sách thả xuống. 
 
@@ -50,7 +50,7 @@ HERE Technologies là một công ty nền tảng vị trí cung cấp dữ li�
 1. Xác định trường nào từ hồ sơ hợp nhất của bạn sẽ được sử dụng để tìm kiếm dữ liệu vị trí phù hợp từ HERE Technologies. Các trường **Đường 1** và **Mã zip/bưu chính** là bắt buộc cho địa chỉ chính và/hoặc phụ đã chọn. Để có độ chính xác so khớp cao hơn, có thể thêm nhiều trường khác.
 
    > [!div class="mx-imgBorder"]
-   > ![Trang cấu hình tăng cường dữ liệu HERE Technologies](media/enrichment-HERE-configuration.png "Trang cấu hình tăng cường dữ liệu HERE Technologies")
+   > ![Trang cấu hình tăng cường dữ liệu HERE Technologies.](media/enrichment-HERE-configuration.png "Trang cấu hình tăng cường dữ liệu HERE Technologies")
 
 1. Chọn **Tiếp** để hoàn thành quá trình ánh xạ trường.
 
@@ -73,7 +73,7 @@ Bạn cần phải là quản trị viên thì mới có thể định cấu hì
 1. Sau khi hoàn thành xác minh, hãy chọn **Lưu**.
 
    > [!div class="mx-imgBorder"]
-   > ![Trang cấu hình kết nối cho HERE Technologies](media/enrichment-HERE-connection.png "Trang cấu hình kết nối cho HERE Technologies")
+   > ![Trang cấu hình kết nối cho HERE Technologies.](media/enrichment-HERE-connection.png "Trang cấu hình kết nối cho HERE Technologies")
 
 ## <a name="enrichment-results"></a>Kết quả tăng cường
 

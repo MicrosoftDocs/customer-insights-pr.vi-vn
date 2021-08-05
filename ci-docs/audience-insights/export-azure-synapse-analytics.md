@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977403"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327390"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (Bản xem trước)
 
@@ -74,8 +74,10 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 1. Đặt một **Tên hiển thị** dễ nhận biết cho việc xuất dữ liệu và **Tên cơ sở dữ liệu** của bạn.
 
 1. Chọn thực thể bạn muốn xuất dữ liệu sang Azure Synapse Analytics.
+   > [!NOTE]
+   > Nguồn dữ liệu dựa trên [Thư mục Common Data Model](connect-common-data-model.md) không được hỗ trợ.
 
-1. Chọn **Lưu**.
+2. Chọn **Lưu**.
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 

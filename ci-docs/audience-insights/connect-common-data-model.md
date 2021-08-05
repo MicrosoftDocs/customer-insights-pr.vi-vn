@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596571"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554920"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 
@@ -45,7 +45,7 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
 
 1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Nhập thông tin **Vùng chứa** và chọn **Tiếp theo**.
    > [!div class="mx-imgBorder"]
-   > ![Hộp thoại để nhập chi tiết kết nối mới cho Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Hộp thoại để nhập chi tiết kết nối mới cho Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Bạn cần một trong các vai trò sau đối với vùng chứa hoặc tài khoản lưu trữ được đề cập ở trên để có thể kết nối và tạo nguồn dữ liệu:
    >  - Bộ đọc dữ liệu khối lưu trữ
@@ -58,11 +58,11 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
 
 1. Bạn sẽ nhận được danh sách các thực thể có sẵn trong tệp model.json hoặc manifest.json đã chọn. Bạn có thể xem lại và chọn từ danh sách các thực thể có sẵn rồi chọn **Lưu**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
    > [!div class="mx-imgBorder"]
-   > ![Hộp thoại hiển thị danh sách thực thể từ tệp model.json](media/review-entities.png)
+   > ![Hộp thoại hiển thị danh sách thực thể từ tệp model.json.](media/review-entities.png)
 
 8. Cho biết những thực thể dữ liệu nào bạn muốn bật tính năng phân tích chất lượng dữ liệu và chọn **Lưu**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
    > [!div class="mx-imgBorder"]
-   > ![Hộp thoại hiển thị phân tích chất lượng dữ liệu](media/dataprofiling-entities.png)
+   > ![Hộp thoại hiển thị phân tích chất lượng dữ liệu.](media/dataprofiling-entities.png)
 
 9. Sau khi bạn lưu các lựa chọn, trang **Nguồn dữ liệu** sẽ mở ra. Lúc này, bạn sẽ thấy kết nối thư mục Common Data Model dưới dạng nguồn dữ liệu.
 
@@ -81,12 +81,12 @@ Bạn có thể cập nhật khóa truy cập cho tài khoản lưu trữ có ch
 
 4. Nếu muốn, hãy thay đổi **Mã truy cập** rồi chọn **Tiếp**.
 
-   ![Hộp thoại để chỉnh sửa và cập nhật mã truy cập cho nguồn dữ liệu hiện tại](media/edit-access-key.png)
+   ![Hộp thoại để chỉnh sửa và cập nhật mã truy cập cho nguồn dữ liệu hiện tại.](media/edit-access-key.png)
 
 5. Theo tùy chọn, bạn có thể cập nhật từ kết nối khóa tài khoản thành kết nối dựa trên tài nguyên hoặc dựa trên đăng ký. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
    > [!div class="mx-imgBorder"]
 
-   > ![Hộp thoại để nhập chi tiết kết nối cho Azure Data Lake với tài khoản lưu trữ hiện có](media/enter-existing-storage-details.png)
+   > ![Hộp thoại để nhập chi tiết kết nối cho Azure Data Lake với tài khoản lưu trữ hiện có.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Bạn cần một trong các vai trò sau đối với vùng chứa hoặc tài khoản lưu trữ được đề cập ở trên để có thể kết nối và tạo nguồn dữ liệu:

@@ -1,7 +1,9 @@
 - name: Dynamics 365 Customer Insights
   href: index.yml
-- name: Tổng quan về sản phẩm
+- name: Tổng quan sản phẩm
   href: overview.md
+- name: Tạo bản dùng thử
+  href: audience-insights/get-started-trial.md
 - name: Truy cập môi trường của bạn
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Thông tin chuyên sâu về đối tượng
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Tổng quan về khả năng
       href: audience-insights/overview.md
-    - name: Dùng thử miễn phí
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Tính năng mới và cập nhật
       href: audience-insights/whats-new-audience-insights.md
     - name: Tạo môi trường mới
-      href: audience-insights/home.md
+      href: audience-insights/get-started-paid.md
     - name: Tìm hiểu các mô-đun
       items:
         - name: Thu thập dữ liệu
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Thêm thư mục Common Data Model làm nguồn dữ liệu
           href: audience-insights/connect-common-data-model.md
-        - name: Thêm kho dữ liệu được quản lý Common Data Service
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Thêm kho dữ liệu được quản lý Dataverse
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Làm mới tăng dần cho các nguồn dữ liệu
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Thu thập dữ liệu trong thời gian thực
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Tăng cường dữ liệu bằng tính năng nhập tùy chỉnh SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Phân khúc và giá trị đo
+    - name: Phân khúc
       items:
         - name: Tổng quan về phân khúc
           href: audience-insights/segments.md
-        - name: Tạo phân khúc và nhóm khách hàng
+        - name: Tạo phân khúc
           href: audience-insights/segment-builder.md
         - name: Các phân khúc được đề xuất dựa trên giá trị đo
           href: audience-insights/suggested-segments.md
@@ -254,6 +254,8 @@
       items:
         - name: Tạo và sửa đổi sự kiện
           href: engagement-insights/refined-events.md
+        - name: Nhận biết các sự kiện web từ những khách truy cập đã xác thực trước đó
+          href: engagement-insights/unknown-to-known.md
         - name: Xuất sự kiện
           href: engagement-insights/export-events.md
     - name: Báo cáo
@@ -304,7 +306,9 @@
       items:
         - name: Xóa và xuất dữ liệu cá nhân
           href: engagement-insights/delete-export-personal-data.md
+    - name: Trạng thái sẵn có theo khu vực
+      href: engagement-insights/regional-availability.md
     - name: Giới hạn dịch vụ
       href: engagement-insights/quotas.md
-- name: Liên hệ với bộ phận hỗ trợ
+- name: Liên hệ bộ phận hỗ trợ
   href: 'https://admin.powerplatform.microsoft.com/support'

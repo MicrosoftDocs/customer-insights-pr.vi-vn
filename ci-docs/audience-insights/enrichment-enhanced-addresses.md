@@ -1,7 +1,7 @@
 ---
 title: Tăng cường nâng cao địa chỉ
 description: Tăng cường và chuẩn hóa thông tin địa chỉ của hồ sơ khách hàng bằng các mô hình của Microsoft.
-ms.date: 04/21/2021
+ms.date: 07/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 65db6ce05f4d6f7f7b08ada172fec057027dd310
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305458"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692279"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Tăng cường hồ sơ khách hàng với các địa chỉ nâng cao
 
@@ -58,6 +58,10 @@ Chúng tôi hiện hỗ trợ tăng cường địa chỉ ở các quốc gia ho
 
 - Australia
 - Canada
+- Pháp
+- Đức
+- Italy
+- Nhật Bản
 - Vương quốc Anh
 - Hoa Kỳ
 

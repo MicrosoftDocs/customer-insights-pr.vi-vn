@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597169"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554047"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Hồ sơ khách hàng: Chỉ mục tìm kiếm và lọc
 
 Kết quả của việc thống nhất dữ liệu khách hàng của bạn là một thực thể Hồ sơ khách hàng cung cấp một cái nhìn tổng hợp vào toàn bộ cơ sở khách hàng của bạn. Để nhanh chóng [tìm thông tin về một khách hàng hoặc một nhóm khách hàng cụ thể](customer-profiles.md), bạn có thể đặt cấu hình khả năng **Tìm kiếm** và **Bộ lọc** trên trang **Khách hàng**. Đọc để tìm hiểu cách quản trị viên có thể chỉnh sửa các thuộc tính trên trang **Tìm kiếm và lọc chỉ mục**, trong đó có sẵn cho người dùng để tìm kiếm và lọc.
 
 > [!div class="mx-imgBorder"]
-> ![Bộ lọc tìm kiếm](media/search-filter.png "Bộ lọc tìm kiếm")
+> ![Bộ lọc tìm kiếm.](media/search-filter.png "Bộ lọc tìm kiếm")
 
 ## <a name="add-fields-and-specify-attributes"></a>Thêm trường và chỉ định thuộc tính
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760353"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555471"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Xuất phân khúc sang LiveRamp&reg; (bản xem trước)
 
@@ -46,7 +46,7 @@ Thông tin đăng nhập này có thể khác với thông tin đăng nhập Liv
 
 ## <a name="configure-an-export"></a>Đặt cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -56,7 +56,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 1. Trong trường **Chọn khóa định danh**, chọn **Email**,  **Tên và địa chỉ** hoặc **Điện thoại** để gửi phương án định danh cho LiveRamp.
    > [!div class="mx-imgBorder"]
-   > ![Trình kết nối LiveRamp khi ánh xạ thuộc tính](media/export-liveramp-segments.png "Trình kết nối LiveRamp khi ánh xạ thuộc tính")
+   > ![Trình kết nối LiveRamp khi ánh xạ thuộc tính.](media/export-liveramp-segments.png "Trình kết nối LiveRamp khi ánh xạ thuộc tính")
 
 1. Ánh xạ các thuộc tính tương ứng từ thực thể khách hàng hợp nhất của bạn cho khóa định danh đã chọn.
 

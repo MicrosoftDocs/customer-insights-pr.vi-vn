@@ -1,7 +1,7 @@
 ---
 title: Trình kết nối Power BI
 description: Tìm hiểu về cách dùng trình kết nối Dynamics 365 Customer Insights trong Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596065"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661128"
 ---
 # <a name="connector-for-power-bi-preview"></a>Trình kết nối cho Power BI (xem trước)
 
@@ -39,7 +39,7 @@ Tạo trực quan hóa cho dữ liệu của bạn với Power BI Desktop. Tạo
 
 1. Trong hộp thoại **Trình điều hướng**. bạn sẽ thấy danh sách tất cả các môi trường mà bạn có quyền truy cập. Mở rộng môi trường và mở bất kỳ thư mục nào (thực thể, đo lường, phân đoạn, tăng cường). Ví dụ: mở thư mục **Thực thể** để xem tất cả các thực thể bạn có thể nhập.
 
-   ![Trình điều hướng trình kết nối Power BI](media/power-bi-navigator.png "Trình điều hướng trình kết nối Power BI")
+   ![Trình điều hướng trình kết nối Power BI.](media/power-bi-navigator.png "Trình điều hướng trình kết nối Power BI")
 
 1. Chọn hộp kiểm bên cạnh các thực thể để bao gồm và **Tải**. Bạn có thể chọn nhiều thực thể ngay từ nhiều môi trường.
 
@@ -68,5 +68,11 @@ Bạn có thể xác định và loại bỏ các mối quan hệ trùng lặp.
 3. Loại bỏ bất kỳ mối quan hệ trùng lặp nào được xác định.
 
 Sau khi loại bỏ các mối quan hệ trùng lặp, hãy thử định cấu hình trình kết nối Power BI lần nữa. Môi trường sẽ có sẵn ngay.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Lỗi trên trường ngày khi tải các thực thể trong Power BI Desktop
+
+Khi tải thực thể chứa các trường có định dạng ngày tháng như MM/DD/YYYY, bạn có thể gặp lỗi do định dạng ngôn ngữ không khớp. Sự không phù hợp này xảy ra khi tệp Power BI Desktop được đặt thành ngôn ngữ không phải tiếng Anh (Hoa Kỳ), vì trường ngày trong thông tin chi tiết về đối tượng được lưu ở định dạng Hoa Kỳ.
+
+Tệp Power BI Desktop có một cài đặt ngôn ngữ duy nhất, được áp dụng khi truy xuất dữ liệu. Trường lấy ngày này được diễn giải chính xác, đặt ngôn ngữ của tệp .BPI thành tiếng Anh (Hoa Kỳ). [Tìm hiểu cách thay đổi ngôn ngữ của một tệp Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

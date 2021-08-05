@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309846"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555379"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu nhân khẩu học từ Experian (bản xem trước)
 
@@ -39,7 +39,7 @@ Chúng tôi hiện chỉ hỗ trợ tăng cường thông tin hồ sơ khách h�
 1. Chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Ngăn xếp Experian](media/experian-tile.png "Ngăn xếp Experian")
+   > ![Ngăn xếp Experian.](media/experian-tile.png "Ngăn xếp Experian")
    > 
 
 1. Chọn một [kết nối](connections.md) từ danh sách thả xuống. Liên hệ với quản trị viên nếu không có kết nối. Nếu là quản trị viên, bạn có thể tạo kết nối bằng cách chọn **Thêm kết nối** rồi chọn Experian từ danh sách thả xuống. 

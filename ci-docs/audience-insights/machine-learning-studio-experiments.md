@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598365"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555195"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Sử dụng các mô hình dựa trên Azure Machine Learning Studio (cổ điển)
 
@@ -41,7 +41,7 @@ Trong bước đầu tiên, chúng ta cần tạo không gian làm việc và m�
 
 1. Sau khi tạo nguồn lực, bảng thông tin không gian làm việc Studio máy học sẽ xuất hiện. Chọn **Khởi chạy Studio máy học**.
 
-   ![Giao diện người dùng Studio máy học của Azure](media/azure-machine-learning-studio.png)
+   ![Giao diện người dùng Studio máy học của Azure.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Làm việc với Studio máy học của Azure
 
@@ -55,7 +55,7 @@ Giờ đây, bạn có thể tạo một thử nghiệm mới hoặc nhập mộ
 
 1. Nếu bạn tạo thử nghiệm mới hoặc sử dụng mẫu thử nghiệm từ thư viện, bạn cần đặt cấu hình thuộc tính **Nhập dữ liệu**. Sử dụng trải nghiệm được hướng dẫn hoặc trực tiếp cung cấp thông tin chi tiết để truy cập Azure Blob Storage chứa dữ liệu của bạn.  
 
-   ![Thử nghiệm Studio máy học của Azure](media/azure-machine-learning-studio-experiment.png)
+   ![Thử nghiệm Studio máy học của Azure.](media/azure-machine-learning-studio-experiment.png)
 
 1. Giờ đây, bạn có thể xây dựng một quy trình bán hàng xử lý tùy chỉnh để làm sạch và xử lý trước dữ liệu, trích xuất các đặc điểm và đào tạo một mô hình phù hợp.
 
@@ -63,15 +63,15 @@ Giờ đây, bạn có thể tạo một thử nghiệm mới hoặc nhập mộ
 
 1. Khi bạn hài lòng với chất lượng của một mô hình, hãy chọn **Thiết lập dịch vụ web** > **Dịch vụ web dự đoán**. Tùy chọn này nhập mô hình được đào tạo và quy trình bán hàng phát triển các đặc điểm bổ sung từ thử nghiệm đào tạo đến dịch vụ dự đoán. Dịch vụ dự đoán có thể lấy một tập hợp dữ liệu đầu vào khác với lược đồ được sử dụng trong thử nghiệm đào tạo để đưa ra dự đoán.
 
-   ![Thiết lập dịch vụ web dự đoán](media/predictive-webservice-control.png)
+   ![Thiết lập dịch vụ web dự đoán.](media/predictive-webservice-control.png)
 
 1. Sau khi thử nghiệm dịch vụ web dự đoán thành công, bạn có thể triển khai nó để lập lịch tự động. Để dịch vụ web hoạt động với Customer Insights, hãy chọn **Triển khai dịch vụ web** > **Xem trước Triển khai dịch vụ web [Mới]**. [Tìm hiểu thêm về việc triển khai dịch vụ web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service)
 
-   ![Triển khai dịch vụ web dự đoán](media/predictive-webservice-deploy.png)
+   ![Triển khai dịch vụ web dự đoán.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Các chế độ mẫu từ thư viện
 
-Chúng tôi sẽ sử dụng một kịch bản giả tưởng về Khách sạn Đàm cho các mô hình trong bài viết này. Khách sạn Đàm thu thập các dữ liệu sau:
+Chúng tôi sẽ sử dụng một kịch bản hư cấu về Khách sạn Contoso cho các mô hình trong bài viết này. Khách sạn Contoso thu thập các dữ liệu sau:
 
 - Dữ liệu CRM bao gồm hoạt động lưu trú tại khách sạn. Tập hợp dữ liệu bao gồm thông tin về ngày lưu trú của từng khách hàng đã đăng ký. Nó cũng chứa thông tin về đặt phòng, loại phòng, chi tiết chi tiêu, v.v. Dữ liệu kéo dài bốn năm, từ tháng 1 năm 2014 đến tháng 1 năm 2018.
 - Hồ sơ khách hàng của khách trong khách sạn. Những hồ sơ này chứa thông tin về từng khách hàng, bao gồm tên, ngày sinh, địa chỉ bưu điện, giới tính và số điện thoại của họ.
@@ -87,13 +87,13 @@ Phân tích khả năng rời đi áp dụng cho các lĩnh vực kinh doanh kh�
 
 Mẫu thử nghiệm có thể được nhập từ thư viện. Trước tiên, hãy đảm bảo rằng bạn nhập dữ liệu cho **Hoạt động lưu trú tại khách sạn**, **Dữ liệu khách hàng** và **Dữ liệu sử dụng dịch vụ** từ bộ nhớ Azure Blob.
 
-   ![Nhập dữ liệu cho mô hình rời đi](media/import-data-azure-blob-storage.png)
+   ![Nhập dữ liệu cho mô hình rời đi.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Phát triển các đặc điểm bổ sung
 
 Dựa trên định nghĩa của việc rời đi, trước tiên chúng tôi xác định các đặc điểm thô sẽ ảnh hưởng đến nhãn. Sau đó, chúng tôi xử lý các đặc điểm thô này thành đặc điểm dạng số có thể dùng với mô hình học trên máy. Tích hợp dữ liệu diễn ra trong Customer Insights để chúng tôi có thể kết hợp các bảng này bằng cách sử dụng *ID khách hàng*.
 
-   ![Kết hợp dữ liệu đã nhập](media/join-imported-data.png)
+   ![Kết hợp dữ liệu đã nhập.](media/join-imported-data.png)
 
 Việc phát triển các đặc điểm bổ sung để xây dựng mô hình nhằm phân tích khả năng rời đi có thể hơi phức tạp. Dữ liệu là một hàm thời gian với hoạt động mới của khách sạn được ghi lại hàng ngày. Trong quá trình phát triển các đặc điểm bổ sung, chúng tôi muốn tạo các đặc điểm tĩnh từ dữ liệu động. Trong trường hợp này, chúng tôi tạo ra nhiều đặc điểm từ hoạt động của khách sạn với cửa sổ trượt trong một năm. Chúng tôi cũng mở rộng các đặc điểm phân loại như loại phòng hoặc loại đặt phòng thành các đặc điểm riêng biệt bằng cách sử dụng mã hóa one-hot.  
 
@@ -114,7 +114,7 @@ Bây giờ chúng ta cần chọn thuật toán tối ưu để sử dụng. Tro
 
 Hình ảnh sau đây cho thấy quy trình đào tạo và đánh giá mô hình từ Studio máy học của Azure:
 
-![Mô hình rời đi trong Studio máy học của Azure](media/azure-machine-learning-model.png)
+![Mô hình rời đi trong Studio máy học của Azure.](media/azure-machine-learning-model.png)
 
 Chúng tôi cũng áp dụng một kỹ thuật gọi là **Tầm quan trọng của đặc điểm hoán vị**, một khía cạnh quan trọng của tối ưu hóa mô hình. Các mô hình tích hợp có rất ít hoặc không có thông tin chuyên sâu về tác động của bất kỳ đặc điểm cụ thể nào đối với dự đoán cuối cùng. Máy tính mức độ quan trọng của đặc điểm sử dụng một thuật toán tùy chỉnh để tính toán ảnh hưởng của các đặc điểm riêng lẻ đến kết quả của một mô hình cụ thể. Mức độ quan trọng của đặc điểm được chuẩn hóa từ +1 đến -1. Ảnh hưởng tiêu cực có nghĩa là đặc điểm tương ứng có ảnh hưởng ngược lại trực quan đến kết quả và cần được loại bỏ khỏi mô hình. Ảnh hưởng tích cực cho thấy đặc điểm này đang đóng góp rất nhiều vào dự đoán. Các giá trị này không phải là hệ số tương quan vì chúng là các chỉ số khác nhau. Để biết thêm thông tin, hãy xem [Tầm quan trọng của đặc điểm hoán vị](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Chúng tôi xác định mục tiêu là tối đa hóa số tiền sử dụng 
 
 Giống như mô hình rời đi, chúng tôi đang kết hợp ServiceCustomerID của khách sạn với CustomerID để tạo các đề xuất nhất quán cho mỗi CustomerID.
 
-![Phát triển đặc điểm bổ sung của mô hình đề xuất](media/azure-machine-learning-model-featurization.png)
+![Phát triển đặc điểm bổ sung của mô hình đề xuất.](media/azure-machine-learning-model-featurization.png)
 
 Dữ liệu được lấy từ ba thực thể khác nhau và các đặc điểm được lấy từ chúng. Việc phát triển đặc điểm bổ sung cho vấn đề khuyến nghị khác với tình huống rời đi hoặc CLTV. Mô hình khuyến nghị cần dữ liệu đầu vào dưới dạng ba bộ đặc điểm.
 
@@ -156,13 +156,13 @@ Dữ liệu được lấy từ ba thực thể khác nhau và các đặc đi�
 
 Chúng tôi dự đoán các sản phẩm hoặc dịch vụ bằng cách sử dụng thuật toán được gọi là **Trình đề xuất hộp đối sánh đào tạo** để đào tạo mô hình khuyến nghị.
 
-![Thuật toán đề xuất sản phẩm](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Thuật toán đề xuất sản phẩm.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Ba cổng đầu vào cho mô hình **Trình đề xuất hộp đối sánh đào tạo** lấy dữ liệu sử dụng dịch vụ đào tạo, mô tả khách hàng (tùy chọn) và mô tả dịch vụ. Có ba cách khác nhau để cho tính điểm mô hình. Một là để đánh giá mô hình trong đó điểm Độ lợi tích lũy giảm dần (NDCG) được tính để xếp hạng các mặt hàng được xếp hạng. Trong thử nghiệm này, chúng tôi có điểm NDCG là 0,97. Hai tùy chọn khác là chấm điểm mô hình trên toàn bộ danh mục dịch vụ được đề xuất, hoặc chỉ cho điểm trên các mặt hàng mà người dùng chưa sử dụng trước đó.
 
 Xem xét thêm về việc phân phối các đề xuất trên toàn bộ danh mục dịch vụ, chúng tôi nhận thấy rằng điện thoại, Wi-Fi và chuyển phát nhanh là những dịch vụ hàng đầu được đề xuất. Điều này phù hợp với những gì chúng tôi tìm thấy từ việc phân phối dữ liệu tiêu thụ dịch vụ:
 
-![Đầu ra mô hình đề xuất](media/azure-machine-learning-model-output.png)
+![Đầu ra mô hình đề xuất.](media/azure-machine-learning-model-output.png)
 
 Toàn bộ [thử nghiệm đề xuất sản phẩm có thể được truy cập trong Thư viện trí tuệ nhân tạo Azure.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

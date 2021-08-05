@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597445"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554461"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Sử dụng các mô hình dựa trên Azure Machine Learning
 
@@ -52,7 +52,7 @@ Bạn cần tạo tập dữ liệu để sử dụng dữ liệu thực thể t
      Trong trình thiết kế, mở **Chọn cột trong tập dữ liệu** và chọn **Đặt làm tham số quy trình**, tại đây bạn cung cấp tên cho tham số đó.
 
      > [!div class="mx-imgBorder"]
-     > ![Tham số hóa tập dữ liệu trong trình thiết kế](media/intelligence-designer-dataset-parameters.png "Tham số hóa tập dữ liệu trong trình thiết kế")
+     > ![Tham số hóa tập dữ liệu trong trình thiết kế.](media/intelligence-designer-dataset-parameters.png "Tham số hóa tập dữ liệu trong trình thiết kế")
    
 * Tham số tập dữ liệu trong SDK (Python)
    
@@ -78,7 +78,7 @@ Bạn cần tạo tập dữ liệu để sử dụng dữ liệu thực thể t
 
 * Trình thiết kế cung cấp [mô-đun Xuất dữ liệu](/azure/machine-learning/algorithm-module-reference/export-data) cho phép xuất đầu ra của quy trình đến kho lưu trữ Azure. Hiện tại, mô-đun phải sử dụng loại kho dữ liệu **Bộ nhớ Azure Blob** và tham số hóa **Kho dữ liệu** và **Đường dẫn** liên quan. Customer Insights ghi đè cả hai tham số này trong quá trình thực thi quy trình bằng kho dữ liệu và đường dẫn có thể truy cập đến sản phẩm.
    > [!div class="mx-imgBorder"]
-   > ![Cấu hình mô-đun xuất dữ liệu](media/intelligence-designer-importdata.png "Cấu hình mô-đun xuất dữ liệu")
+   > ![Cấu hình mô-đun xuất dữ liệu.](media/intelligence-designer-importdata.png "Cấu hình mô-đun xuất dữ liệu")
    
 * Khi viết đầu ra suy luận bằng mã, bạn có thể tải đầu ra lên một đường dẫn trong *kho dữ liệu đã đăng ký* trong không gian làm việc. Nếu đường dẫn và kho dữ liệu được tham số hóa trong đường dẫn, Customer insights sẽ có thể đọc và nhập kết quả suy luận. Hiện tại, một đầu ra dạng bảng duy nhất ở định dạng csv được hỗ trợ. Đường dẫn phải bao gồm thư mục và tên tệp.
 

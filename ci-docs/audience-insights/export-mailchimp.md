@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124253"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362535"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Xuất phân khúc sang Mailchimp (xem trước)
 
@@ -38,7 +38,7 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Mailchimp để tạo
 
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
-1. Chọn **Thêm kết nối** rồi chọn **Autopilot** để đặt cấu hình kết nối.
+1. Chọn **Thêm kết nối** rồi chọn **Mailchimp** để định cấu hình kết nối.
 
 1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
 
@@ -56,7 +56,7 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Mailchimp để tạo
 
 ## <a name="configure-the-connector"></a>Đặt cấu hình trình kết nối
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu**> **Nội dung xuất**.
 

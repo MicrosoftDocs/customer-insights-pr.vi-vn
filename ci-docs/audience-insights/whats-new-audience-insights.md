@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263277"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692415"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chuyên sâu về đối tượng của Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Bản cập nhật tháng 6 năm 2021
+
+Bản cập nhật tháng 6 năm 2021 bao gồm một vài tính năng, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="data-ingestion"></a>Nhập dữ liệu
+
+- **Cải tiến bản cập nhật tiến trình hợp nhất dữ liệu** Bạn hiện có thể xem các bản cập nhật trạng thái động được cải tiến, chi tiết hơn trên các bước [quy trình hợp nhất dữ liệu](data-unification.md). Tính năng này cho phép bạn theo dõi tiến trình chi tiết để hiểu quy trình của quy trình và thực hiện hành động nếu bất kỳ bước nào cần chú ý.
+
+### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Xuất các phân khúc và dữ liệu khác sang Salesforce Marketing Cloud** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm [Salesforce Marketing Cloud](export-salesforce.md). Giờ đây, bạn có thể xuất các phân khúc và các loại dữ liệu khác sang Salesforce Marketing Cloud thông qua xuất SFTP có thương hiệu. Việc nhập dữ liệu có thể hoàn toàn tự động trong Salesforce và được sử dụng để tạo các chiến dịch tiếp thị hiệu quả hơn.  
+ 
+- **Xuất phân khúc sang ActiveCampaign** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm [Chiến dịch hiện hoạt](export-active-campaign.md). Bạn hiện có thể xuất các phân khúc để tạo chiến dịch, chạy email tiếp thị và hợp tác với các nhóm khách hàng cụ thể trong ActiveCampaign.
+ 
+- **Xuất phân khúc sang Sendinblue** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm [Sendinblue](export-sendinblue.md). Bạn hiện có thể xuất các phân khúc để tạo chiến dịch, chạy email tiếp thị và hợp tác với các nhóm khách hàng cụ thể thông qua Sendinblue.
+ 
+### <a name="ux-updates"></a>Bản cập nhật UX 
+
+- **Trang khách hàng mới và nâng cao và trang chi tiết hồ sơ** Chúng tôi đã thiết kế lại trang Khách hàng và trang chi tiết hồ sơ để cải thiện trải nghiệm người dùng và hiệu suất tốt hơn. Những thay đổi này cho phép bạn xem, sắp xếp, tìm kiếm và lọc khách hàng. Bộ lọc hiện được trình bày trong URL để chia sẻ kết quả tìm kiếm với những người dùng khác một cách liền mạch. Kết quả tìm kiếm cũng có thể được lưu dưới dạng phân khúc.    
+  Trang chi tiết cho hồ sơ khách hàng hiện nhóm dữ liệu thành nhiều phần phụ khác nhau, chẳng hạn như dữ liệu nhân khẩu học, ID và các thuộc tính hồ sơ khác để cải thiện khả năng đọc. Các phần khác trên trang chi tiết hồ sơ hiện tương tác hơn. Ví dụ: phần hoạt động hiện cho phép lọc và sắp xếp.
+
 
 ## <a name="may-2021-updates"></a>Bản cập nhật tháng 5 năm 2021
 
@@ -170,7 +192,7 @@ Các bản cập nhật vào tháng 2 năm 2021 bao gồm một số tính năng
 
 - **Môi trường sao chép hỗ trợ nhiều loại nguồn dữ liệu hơn**
 
-  Quản trị viên có thể sao chép cấu hình môi trường sang môi trường mới trong cùng một tổ chức. Tính năng này mở rộng chức năng môi trường sao chép cho các trường hợp trong đó các nguồn dữ liệu dựa trên kho dữ liệu Common Data Service hoặc một thư mục Common Data Model được sử dụng.
+  Quản trị viên có thể sao chép cấu hình môi trường sang môi trường mới trong cùng một tổ chức. Tính năng này mở rộng chức năng môi trường sao chép cho các trường hợp trong đó các nguồn dữ liệu dựa trên Microsoft Dataverse Managed Data Lake hoặc một thư mục Common Data Model được sử dụng.
 
 ## <a name="january-2021-updates"></a>Bản cập nhật tháng 1 năm 2021
 
