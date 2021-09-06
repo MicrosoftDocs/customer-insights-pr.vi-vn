@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e320a48d5b7c35b530e3a38567b226b804879e4e
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760169"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032051"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Xuất phân khúc sang Autopilot (bản xem trước)
 
@@ -53,9 +53,9 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất sang Autopilot và sử 
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -76,7 +76,7 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Autopilot, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Autopilot đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
-ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
+ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059342"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033519"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Xuất phân khúc sang Marketo (bản xem trước)
 
@@ -52,9 +52,9 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -80,7 +80,7 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Marketo, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Marketo đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

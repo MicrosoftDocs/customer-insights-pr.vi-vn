@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: c4408e52550b6648e2a001041dc0acdb5063d6a6ef1b8e4bba3321bf25fefcfc
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760077"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032005"
 ---
 # <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Thiết lập kết nối với Azure Data Lake Storage Thế hệ 2 (bản xem trước)
 
@@ -34,7 +34,7 @@ ms.locfileid: "5760077"
 
 ## <a name="configure-an-export"></a>Đặt cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 

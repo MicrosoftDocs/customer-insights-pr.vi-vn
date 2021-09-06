@@ -1,6 +1,6 @@
 ---
-title: Xuất dữ liệu Customer Insights vào nền tảng trải nghiệm Adobe
-description: Tìm hiểu cách sử dụng phân khúc thông tin chuyên sâu về đối tượng trong Adobe Experience Platform.
+title: Xuất dữ liệu Customer Insights sang Adobe Experience Platform
+description: Tìm hiểu cách sử dụng phân đoạn thông tin chi tiết về đối tượng trong Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305550"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032143"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Sử dụng phân khúc Customer Insights trong nền tảng trải nghiệm Adobe (xem trước)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Sử dụng các phân đoạn Customer Insights trong Adobe Experience Platform (bản xem trước)
 
-Là người dùng thông tin chuyên sâu về đối tượng trong Dynamics 365 Customer Insights, có lẽ bạn đã tạo ra những phân khúc để chiến dịch tiếp thị của mình hoạt động hiệu quả hơn bằng cách nhắm mục tiêu các đối tượng có liên quan. Để sử dụng phân khúc từ thông tin chi tiết đối tượng trong Adobe Experience Platform và các ứng dụng như Adobe Campaign Standard, bạn cần làm theo một vài bước nêu trong bài viết này.
+Là người dùng thông tin chuyên sâu về đối tượng trong Dynamics 365 Customer Insights, có lẽ bạn đã tạo ra những phân khúc để chiến dịch tiếp thị của mình hoạt động hiệu quả hơn bằng cách nhắm mục tiêu các đối tượng có liên quan. Để sử dụng một phân đoạn từ thông tin chi tiết về đối tượng trong Adobe Experience Platform và các ứng dụng như Adobe Campaign Standard, bạn cần làm theo một số bước trong bài viết này.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Sơ đồ quy trình các bước nêu trong bài viết này.":::
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 -   Giấy phép Dynamics 365 Customer Insights
--   Giấy phép Nền tảng Trải nghiệm Adobe
+-   Giấy phép Adobe Experience Platform
 -   Giấy phép Adobe Campaign Standard
--   Tài khoản lưu trữ Azure Blob
+-   Tài khoản Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Tổng quan về chiến dịch
 
-Để hiểu rõ hơn về cách bạn có thể sử dụng các phân khúc từ thông tin chuyên sâu về đối tượng trong Adobe Experience Platform, hãy xem một chiến dịch mẫu giả tưởng.
+Để hiểu rõ hơn về cách bạn có thể sử dụng các phân đoạn từ thông tin chi tiết về đối tượng trong Adobe Experience Platform, hãy xem một chiến dịch mẫu giả tưởng.
 
-Giả sử rằng công ty của bạn cung cấp dịch vụ dựa trên đăng ký hàng tháng cho khách hàng của bạn ở Hoa Kỳ. Bạn muốn xác định những khách hàng có đăng ký sẽ đến hạn gia hạn trong 8 ngày tới nhưng chưa gia hạn đăng ký của họ. Để giữ chân những khách hàng này, bạn nên gửi khuyến mại cho họ qua email, sử dụng Adobe Experience Platform.
+Giả sử rằng công ty của bạn cung cấp dịch vụ dựa trên đăng ký hàng tháng cho khách hàng của bạn ở Hoa Kỳ. Bạn muốn xác định những khách hàng có đăng ký sẽ đến hạn gia hạn trong 8 ngày tới nhưng chưa gia hạn đăng ký của họ. Để giữ chân những khách hàng này, bạn cần gửi cho họ một ưu đãi khuyến mại qua email, sử dụng Adobe Experience Platform.
 
 Trong ví dụ này, chúng tôi muốn chạy chiến dịch email quảng cáo một lần. Bài viết này không đề cập đến trường hợp sử dụng của việc chạy chiến dịch nhiều lần.
 
@@ -93,7 +93,7 @@ Sau khi lưu đích xuất, bạn sẽ thấy đích này trên **Dữ liệu** 
 Bây giờ, bạn có thể [xuất phân khúc theo yêu cầu](export-destinations.md#run-exports-on-demand). Mỗi lần [làm mới theo lịch](system.md), tác vụ xuất cũng sẽ chạy.
 
 > [!NOTE]
-> Đảm bảo rằng số lượng bản ghi trong phân khúc đã xuất nằm trong giới hạn cho phép của giấy phép Adobe Campaign Standard.
+> Đảm bảo rằng số lượng bản ghi trong phân đoạn đã xuất nằm trong giới hạn cho phép của giấy phép Adobe Campaign Standard.
 
 Dữ liệu đã xuất được lưu trữ trong vùng chứa Azure Blob Storage mà bạn đã định cấu hình ở trên. Đường dẫn thư mục sau được tạo tự động trong vùng chứa của bạn:
 
@@ -105,29 +105,29 @@ Ví dụ: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-2
 
 Ví dụ: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Xác định mô hình dữ liệu trải nghiệm Experience Data Model (XDM) trong Adobe Experience Platform
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Xác định Experience Data Model (XDM) trong Adobe Experience Platform
 
-Trước khi dữ liệu đã xuất từ audience insights có thể được dùng với Adobe Experience Platform, chúng ta cần xác định lược đồ Mô hình dữ liệu trải nghiệm và [định cấu hình dữ liệu cho Hồ sơ khách hàng trong thời gian thực](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Trước khi có thể sử dụng dữ liệu đã xuất từ thông tin chi tiết về đối tượng trong Adobe Experience Platform, chúng tôi cần xác định sơ đồ Experience Data Model và [định cấu hình dữ liệu cho Hồ sơ khách hàng thời gian thực](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Tìm hiểu [XDM là gì](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) và hiểu [thông tin cơ bản về thành phần lược đồ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Nhập dữ liệu vào Nền tảng Trải nghiệm Adobe
+## <a name="import-data-into-adobe-experience-platform"></a>Nhập dữ liệu vào Adobe Experience Platform
 
 Bây giờ mọi thứ đã sẵn sàng, chúng tôi cần nhập dữ liệu đối tượng đã chuẩn bị từ thông tin chuyên sâu về đối tượng vào Adobe Experience Platform.
 
 Đầu tiên, [tạo kết nối nguồn lưu trữ Azure Blob](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Sau khi xác định kết nối nguồn, hãy [định cấu hình luồng dữ liệu](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) cho kết nối loạt lưu trữ đám mây để nhập kết quả phân khúc từ thông tin chuyên sâu về đối tượng vào Adobe Experience Platform.
+Sau khi xác định kết nối nguồn, [định cấu hình luồng dữ liệu](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) cho kết nối hàng loạt lưu trữ đám mây để nhập đầu ra phân đoạn từ thông tin chi tiết của đối tượng vào Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Tạo đối tượng trong Adobe Campaign Standard
 
-Để gửi email cho chiến dịch này, chúng tôi sẽ sử dụng Adobe Campaign Standard. Sau khi nhập dữ liệu vào Adobe Experience Platform, chúng ta cần [tạo đối tượng](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) trong Adobe Campaign Standard bằng dữ liệu trong Adobe Experience Platform.
+Để gửi email cho chiến dịch này, chúng tôi sẽ sử dụng Adobe Campaign Standard. Sau khi nhập dữ liệu vào Adobe Experience Platform, chúng ta cần phải [tạo đối tượng](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) trong Adobe Campaign Standard sử dụng dữ liệu trong Adobe Experience Platform.
 
 
-Tìm hiểu cách [sử dụng trình tạo phân phúc](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) trong Adobe Campaign Standard để xác định đối tượng dựa trên dữ liệu trong Adobe Experience Platform.
+Tìm hiểu cách [sử dụng trình tạo phân đoạn](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) trong Adobe Campaign Standard để xác định đối tượng dựa trên dữ liệu trong Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Tạo và gửi email bằng Adobe Campaign Standard
 
 Tạo nội dung email rồi [thử nghiệm và gửi](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) email của bạn.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Email mẫu với đề nghị gia hạn từ Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Email mẫu với ưu đãi gia hạn từ Adobe Campaign Standard.":::

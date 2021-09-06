@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554047"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029425"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Hồ sơ khách hàng: Chỉ mục tìm kiếm và lọc
 
@@ -60,7 +60,7 @@ Menu **Bộ lọc** trên trang **Khách hàng** có thể bao gồm một số 
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 
-Đi đến trang **Khách hàng** để tìm kiếm hồ sơ khách hàng hoặc sử dụng các trường được lập chỉ mục để xem một tập hợp con của tất cả hồ sơ khách hàng.
+Xem lại [trang hồ sơ hợp nhất](customer-profiles.md) để tìm kiếm các hồ sơ hoặc sử dụng các trường được lập chỉ mục để xem một tập hợp con của tất cả các hồ sơ hợp nhất.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
