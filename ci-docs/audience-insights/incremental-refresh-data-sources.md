@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554185"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377860"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
 
@@ -44,8 +44,7 @@ Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các n
 
 1. Trên **Thiết đặt làm mới tăng dần**, bạn sẽ định cấu hình làm mới tăng dần cho tất cả các thực thể mà bạn đã chọn khi tạo nguồn dữ liệu.
 
-   > [!div class="mx-imgBorder"]
-   > ![Định cấu hình các thực thể trong nguồn dữ liệu để làm mới gia tăng.](media/incremental-refresh-settings.png "Định cấu hình các thực thể trong nguồn dữ liệu để làm mới tăng dần")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Định cấu hình các thực thể trong nguồn dữ liệu để làm mới gia tăng.":::
 
 1. Chọn một thực thể và cung cấp các chi tiết sau:
 

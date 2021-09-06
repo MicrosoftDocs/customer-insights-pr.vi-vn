@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Dynamics 365 Marketing
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692507"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417231"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Sử dụng các phân khúc trong Dynamics 365 Marketing (bản xem trước)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Dùng [các phân đoạn](segments.md) để tạo chiến dịch và liên hệ với các nhóm khách hàng cụ thể với Dynamics 365 Marketing. Để biết thêm thông tin, hãy xem [Sử dụng phân khúc từ Dynamics 365 Customer Insights với Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+Dùng [các phân đoạn](segments.md) để tạo chiến dịch và liên hệ với các nhóm khách hàng cụ thể với Dynamics 365 Marketing. Để biết thêm thông tin, hãy xem [Sử dụng phân khúc từ Dynamics 365 Customer Insights với Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Nếu bạn đang sử dụng các tính năng mới của Dynamics 365 Marketing để điều phối hành trình của khách hàng thời gian thực trong một tổ chức Dataverse, bạn không cần tạo một bản xuất chuẩn sang Dynamics 365 Marketing. Địa chỉ liên hệ và phân khúc từ thông tin chi tiết về đối tượng có sẵn ngay trong Dynamics 365 Marketing sau khi kết nối Marketing và Customer Insights. Trước khi bạn xóa các bản xuất hiện có, hãy xem lại tài liệu về [cách kết nối thông tin chi tiết về đối tượng và phối hợp hành trình của khách hàng Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 

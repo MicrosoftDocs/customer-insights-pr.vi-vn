@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Tìm các bài viết có liên quan để bắt đầu với nội dung trợ giúp.
   ms.author: mhart
-  ms.date: 10/29/2020
+  ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
+  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598507"
+  ms.lasthandoff: 08/10/2021
+  ms.locfileid: "7036583"
 title: Tài liệu Dynamics 365 Customer Insights
-summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và kiến thức cơ bản của Customer Insights.
+summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và chức năng của Customer Insights.
 landingContent:
 - title: Làm quen với Customer Insights
   linkLists:
@@ -23,16 +23,16 @@ landingContent:
     - text: Tổng quan về Customer Insights
       url: overview.md
     - text: Kế hoạch phát hành
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Truy cập môi trường của bạn
-      url: https://home.ci.ai.dynamics.com/
+      url: /dynamics365-release-plan/
+    - text: Khám phá CDP
+      url: https://dynamics.microsoft.com/ai/customer-insights/
 - title: Bắt đầu với thông tin chi tiết về đối tượng
   linkLists:
   - linkListType: get-started
     links:
     - text: Đăng ký dùng thử
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Tính năng mới
+    - text: Có gì mới
       url: audience-insights/whats-new-audience-insights.md
     - text: Tài liệu thông tin chi tiết về đối tượng
       url: audience-insights/index.yml

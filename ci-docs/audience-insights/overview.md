@@ -1,7 +1,7 @@
 ---
 title: Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
 description: Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539141"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034386"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
 
-Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khách hàng của mình. Kết nối dữ liệu từ nhiều nguồn giao dịch, hành vi và quan sát khác nhau để tạo ra một góc nhìn toàn diện về khách hàng. Sử dụng những hiểu biết này để thúc đẩy trải nghiệm và quy trình định hướng khách hàng. Hợp nhất và hiểu dữ liệu khách hàng và khai thác dữ liệu đó để có những hiểu biết và hành động thông minh.
+[Thông tin chi tiết về đối tượng, tính năng của Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) giúp bạn hiểu rõ hơn về khách hàng của mình. Kết nối dữ liệu từ nhiều nguồn giao dịch, hành vi và quan sát khác nhau để tạo ra một góc nhìn toàn diện về khách hàng. Sử dụng những hiểu biết này để thúc đẩy trải nghiệm và quy trình định hướng khách hàng. Hợp nhất và hiểu dữ liệu khách hàng và khai thác dữ liệu đó để có những hiểu biết và hành động thông minh.
 
 ## <a name="main-benefits"></a>Lợi ích chính 
 
@@ -34,9 +34,9 @@ Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khá
 
 - **Tạo sức mạnh cho quy trình kinh doanh và trải nghiệm khách hàng theo cá nhân**
 
-  - Thúc đẩy tương tác cá nhân trên các kênh — trao quyền cho các chuyên gia tiếp thị, bán hàng và dịch vụ với Customer Insights theo ngữ cảnh, sẵn dùng và thẻ hồ sơ khách hàng phù hợp được truyền vào các ứng dụng kinh doanh mà họ đã sử dụng hàng ngày
-  - Tự động hóa trải nghiệm và quy trình của khách hàng dựa trên cấu hình tùy chỉnh, các biện pháp kinh doanh và phân đoạn.
-  - Kích hoạt và mở rộng kinh nghiệm theo ngành nghề kinh doanh được xây dựng trên [Microsoft Power Platform](https://powerplatform.microsoft.com/). Nhanh chóng xây dựng các ứng dụng với thông tin chi tiết được nhúng bằng cách sử dụng phương pháp mã thấp mạnh mẽ từ PowerApps.  
+  - Thúc đẩy sự tương tác được cá nhân hóa trên các kênh — trao quyền cho các chuyên gia tiếp thị, bán hàng và dịch vụ. Sử dụng thẻ thông tin chi tiết và hồ sơ khách hàng phù hợp có sẵn để tích hợp với các ứng dụng kinh doanh mà họ đã sử dụng.
+  - Tự động hóa trải nghiệm và quy trình của khách hàng dựa trên cấu hình tùy chỉnh, các biện pháp kinh doanh và phân khúc.
+  - Kích hoạt và mở rộng kinh nghiệm theo ngành nghề kinh doanh được xây dựng trên [Microsoft Power Platform](https://powerplatform.microsoft.com/). Nhanh chóng xây dựng các ứng dụng với thông tin chi tiết được nhúng bằng cách sử dụng phương pháp mã thấp mạnh mẽ từ Power Apps.  
 
 ## <a name="key-audiences"></a>Đối tượng chính
 
@@ -50,13 +50,18 @@ Thông tin chi tiết về đối tượng giúp bạn hiểu rõ hơn về khá
 
 - **Người dùng doanh nghiệp:**
 
-  - Thông tin chi tiết về hồ sơ khách hàng 360 độ và cái nhìn toàn diện về hành trình của khách hàng.
+  - Thông tin chi tiết về hồ sơ khách hàng 360 độ và hành trình của khách hàng.
   - Xem dữ liệu khách hàng 360 độ trong quy trình công việc Dynamics 365 với các gói dựng sẵn.
 
 - **Nhà phân tích kinh doanh:**
 
   - Xây dựng hồ sơ tùy chỉnh, xác định các biện pháp, tạo phân đoạn và hưởng lợi từ phân tích dự đoán để có được một cái nhìn 360 độ về khách hàng của bạn, cụ thể cho tổ chức của bạn.  
-  - Sử dụng các trình kết nối sẵn dùng cho một số ứng dụng hoặc API của Microsoft và bên thứ ba để xử lý thêm thông tin chi tiết.
+  - Sử dụng các trình kết nối có sẵn cho một số ứng dụng hoặc API của Microsoft và bên thứ ba để xử lý thông tin chi tiết.
 
+## <a name="pricing-and-licensing"></a>Định giá và cấp giấy phép
+
+Customer Insights được cấp phép cho mỗi đối tượng thuê và bao gồm nhiều tính năng. Các tính năng được cung cấp bao gồm bộ cấu hình, làm mới hệ thống hàng ngày, yêu cầu Power Platform và 2 môi trường. Bạn có thể mua thêm dung lượng và giấy phép để tăng hạn ngạch mặc định. 
+- Năng lực và quyền lợi chi tiết: [Hướng dẫn cấp phép Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Tổng quan về giá: [Giá Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

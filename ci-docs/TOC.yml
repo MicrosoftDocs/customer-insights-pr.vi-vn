@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Giới hạn dịch vụ
       href: engagement-insights/quotas.md
-- name: Liên hệ bộ phận hỗ trợ
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Tích hợp thông tin chi tiết về đối tượng và mức độ tương tác
+  items:
+    - name: Liên kết thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Sử dụng phân khúc thông tin chi tiết về đối tượng trong báo cáo thông tin chi tiết về mức độ tương tác
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Sử dụng thứ nguyên nhân khẩu học để phân chia dữ liệu hành vi
+      href: engagement-insights/curate-dimensions.md
+- name: Nhận hỗ trợ
+  href: 'https://dynamics.microsoft.com/en-us/support/'

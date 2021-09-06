@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 1c7b0c728bc4d4cf6b5aea79396cf0779fbf298d
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124572"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034249"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Xuất phân khúc sang LinkedIn Ads (xem trước)
 
@@ -54,9 +54,9 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang LinkedIn Ads để t�
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình nội dung xuất nếu có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình nội dung xuất nếu có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685488"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377814"
 ---
 # <a name="create-and-manage-segments"></a>Tạo và quản lý phân đoạn
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685488"
 > - Một ngăn bên để chọn các thuộc tính sẽ liên tục khả dụng.
 > - Một tùy chọn để chọn đường dẫn mối quan hệ của thực thể.
 > Để thử trình tạo phân khúc mới, hãy gửi email với chủ đề "Yêu cầu bật trình tạo phân khúc mới" đến cihelp [at] microsoft.com. Bao gồm tên tổ chức và ID của môi trường hộp cát của bạn.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Các yếu tố của trình tạo phân khúc." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Tổ chức phân khúc của bạn với các quy tắc và mô-đun con. Mỗi quy tắc hoặc quy tắc con bao gồm các điều kiện. Kết hợp các điều kiện với các toán tử logic
+>
+> 2 - Chọn [đường dẫn mối quan hệ](relationships.md) giữa các thực thể áp dụng cho một quy tắc. Đường dẫn mối quan hệ xác định thuộc tính nào có thể được sử dụng trong một điều kiện.
+>
+> 3 - Quản lý các quy tắc và quy tắc phụ. Thay đổi vị trí của quy tắc hoặc xóa quy tắc đó.
+>
+> 4 - Thêm điều kiện và xây dựng cấp độ lồng nhau phù hợp bằng cách sử dụng các quy tắc phụ.
+>
+> 5 - Áp dụng các hoạt động đã thiết lập cho các quy tắc được kết nối.
+>
+> 6 - Sử dụng ngăn thuộc tính để thêm các thuộc tính thực thể có sẵn hoặc tạo điều kiện dựa trên thuộc tính. Ngăn hiển thị danh sách các thực thể và thuộc tính, dựa trên đường dẫn mối quan hệ đã chọn, có sẵn cho quy tắc đã chọn.
+>
+> 7 - Thêm các điều kiện dựa trên thuộc tính vào các quy tắc và quy tắc phụ hiện có hoặc thêm nó vào một quy tắc mới.
+>
+> 8 - Hoàn tác và làm lại các thay đổi trong khi xây dựng phân khúc.
 
 Xác định các bộ lọc phức hợp xung quanh thực thể khách hàng hợp nhất và các thực thể có liên quan. Mỗi phân khúc, sau khi xử lý, sẽ tạo một bộ hồ sơ khách hàng mà bạn có thể xuất và hành động. Các phân khúc được quản lý trên trang **Phân khúc**. 
 
@@ -147,6 +164,6 @@ Phân khúc nhanh cho phép bạn tạo nhanh các phân khúc đơn giản vớ
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 
-[Xuất phân đoạn](export-destinations.md) và khám phá [Thẻ khách hàng](customer-card-add-in.md) và [Bộ kết nối](export-power-bi.md) để nắm được thông tin chi tiết ở cấp độ khách hàng.
+[Xuất một phân khúc](export-destinations.md) và khám phá [Tích hợp thẻ khách hàng](customer-card-add-in.md) để sử dụng các phân khúc trong các ứng dụng khác.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171190"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035257"
 ---
 # <a name="relationships-between-entities"></a>Mối quan hệ giữa các thực thể
 
@@ -82,7 +82,7 @@ Trang này cung cấp một bộ tùy chọn cho các mối quan hệ hiện có
 
 ### <a name="explore-the-relationship-visualizer"></a>Khám phá trình hiển thị mối quan hệ
 
-Trình hiển thị mối quan hệ hiển thị sơ đồ mạng lưới của các mối quan hệ hiện có giữa các thực thể được kết nối và lượng số của chúng.
+Trình hiển thị mối quan hệ hiển thị sơ đồ mạng lưới của các mối quan hệ hiện có giữa các thực thể được kết nối và lượng số của chúng. Trình hiển thị cũng hiển thị đường dẫn mối quan hệ.
 
 Để tùy chỉnh dạng xem này, bạn có thể thay đổi vị trí của các hộp bằng cách kéo chúng trên canvas.
 
@@ -92,6 +92,20 @@ Các tùy chọn có thể dùng:
 - **Xuất dưới dạng hình ảnh**: Lưu dạng xem hiện tại dưới dạng tệp hình ảnh.
 - **Thay đổi thành bố cục ngang/dọc**: Thay đổi hướng của các thực thể và mối quan hệ.
 - **Chỉnh sửa**: Cập nhật các thuộc tính của mối quan hệ tùy chỉnh trong ngăn chỉnh sửa và lưu các thay đổi.
+
+### <a name="relationship-path"></a>Đường dẫn mối quan hệ
+
+Đường dẫn mối quan hệ mô tả các thực thể được kết nối với các mối quan hệ giữa một thực thể nguồn và một thực thể đích. Nó được sử dụng khi tạo một phân khúc hoặc một thước đo bao gồm các thực thể khác ngoài thực thể hồ sơ hợp nhất và có nhiều tùy chọn để tiếp cận thực thể hồ sơ hợp nhất.
+
+Đường dẫn mối quan hệ thông báo cho hệ thống về mối quan hệ nào để truy cập vào thực thể hồ sơ hợp nhất. Các đường dẫn mối quan hệ khác nhau có thể mang lại những kết quả khác nhau.
+
+Ví dụ: thực thể *eCommerce_eCommercePurchases* có các mối quan hệ sau với thực thể *Khách hàng* hồ sơ hợp nhất:
+
+- eCommerce_eCommercePurchases > Khách hàng
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Khách hàng
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Khách hàng 
+
+Đường dẫn mối quan hệ xác định thực thể nào bạn có thể sử dụng khi tạo quy tắc cho các biện pháp hoặc phân khúc. Việc chọn tùy chọn có đường dẫn mối quan hệ dài nhất có thể sẽ mang lại ít kết quả hơn vì các bản ghi phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, khách hàng phải mua hàng thông qua thương mại điện tử (eCommerce_eCommercePurchases), tại điểm bán hàng (POS_posPurchases) và tham gia vào chương trình khách hàng thân thiết của chúng tôi (loyaltyScheme_loyCustomers). Khi chọn tùy chọn đầu tiên, bạn có thể sẽ nhận được nhiều kết quả hơn vì khách hàng chỉ cần tồn tại trong một thực thể bổ sung.
 
 ## <a name="manage-existing-relationships"></a>Quản lý mối quan hệ hiện có 
 
@@ -105,6 +119,6 @@ Chọn một mối quan hệ rồi chọn một trong các tùy chọn sau:
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Các mối quan hệ tùy chỉnh và hệ thống dùng để [tạo phân khúc](segments.md) dựa trên nhiều nguồn dữ liệu không còn lưu trữ theo dạng silo.
+Các mối quan hệ hệ thống và tùy chỉnh được sử dụng để [tạo phân khúc](segments.md) và [đo](measures.md) dựa trên nhiều nguồn dữ liệu không còn được lưu trữ.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

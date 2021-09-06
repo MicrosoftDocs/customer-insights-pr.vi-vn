@@ -1,7 +1,7 @@
 ---
 title: Lược đồ thực thể Customer Insights trong Common Data Model
 description: Làm việc với các thực thể trong Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692331"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380769"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Lược đồ thực thể trong Common Data Model
 
@@ -42,7 +42,7 @@ Ngày nay, nhiều hệ thống và nền tảng đã áp dụng Common Data Mod
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Xem các thực thể bằng Bộ điều hướng thực thể Common Data Model
 
-Bạn có thể xem các thực thể trong [Bộ điều hướng thực thể Common Data Model](https://microsoft.github.io/CDM/). Chọn nút **Tải từ GitHub!** rồi điều hướng đến **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**. Tại đây, bạn sẽ thấy danh sách các thực thể Customer Insights và định nghĩa của chúng.
+Bạn có thể xem các thực thể trong [Bộ điều hướng thực thể Common Data Model](https://microsoft.github.io/CDM/). Chọn một thực thể từ phần Ứng dụng Thông tin chi tiết để nhận danh sách các thực thể Customer Insights và định nghĩa của chúng.
 > [!div class="mx-imgBorder"]
 > ![Bộ điều hướng thực thể CDM hiển thị thực thể CustomerActivity.](media/CDM-entity-navigator.png "Bộ điều hướng thực thể CDM hiển thị thực thể CustomerActivity")
 
