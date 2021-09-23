@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 07/19/2021
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 3412213bcf3a4174baf28c6b4d38f5febded18707c355d236d5082698c4c0db7
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
+ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035989"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "7465231"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chuyên sâu về đối tượng của Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -26,6 +26,15 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2021-updates"></a>Bản cập nhật tháng 8 năm 2021
+
+Bản cập nhật tháng 7 và tháng 8 năm 2021 bao gồm một tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="extensibility"></a>Khả năng mở rộng
+
+- **Xuất phân khúc sang Klaviyo** Chúng tôi đã mở rộng [các đích xuất của mình để bao gồm Klaviyo](export-klaviyo.md). Giờ đây, bạn có thể xuất các phân khúc để tạo chiến dịch, tiếp thị qua email và sử dụng các nhóm khách hàng cụ thể với Klaviyo. 
+
 
 ## <a name="june-2021-updates"></a>Bản cập nhật tháng 6 năm 2021
 
@@ -55,7 +64,7 @@ Bản cập nhật tháng 5 năm 2021 bao gồm một số tính năng, bản n�
 
 ### <a name="data-ingestion"></a>Nhập dữ liệu
 
-- **Xem và sửa đổi siêu dữ liệu hoặc định nghĩa thực thể khi đính kèm dữ liệu từ Azure Data Lake Storage** Giờ đây, bạn có thể xem và chỉnh sửa siêu dữ liệu hoặc định nghĩa thực thể trong thông tin chuyên sâu về đối tượng khi đính kèm dữ liệu từ thư mục Common Data Model trong Azure Data Lake Storage. Chức năng này cung cấp ý kiến phản hồi theo thời gian thực, tùy chọn xác thực mô hình và kiểm tra lỗi. Chức năng này cho phép bạn chỉnh sửa dễ dàng cả tệp model.json và manifest.json.
+- **Xem và sửa đổi siêu dữ liệu hoặc định nghĩa thực thể khi đính kèm dữ liệu từ Azure Data Lake Storage** Giờ đây, bạn có thể xem và chỉnh sửa siêu dữ liệu hoặc định nghĩa thực thể trong thông tin chi tiết về đối tượng khi đính kèm dữ liệu từ thư mục Common Data Model trong Azure Data Lake Storage. Chức năng này cung cấp ý kiến phản hồi theo thời gian thực, tùy chọn xác thực mô hình và kiểm tra lỗi. Chức năng này cho phép bạn chỉnh sửa dễ dàng cả tệp model.json và manifest.json.
 
 ### <a name="extensibility"></a>Khả năng mở rộng
 
@@ -68,7 +77,7 @@ Bản cập nhật tháng 5 năm 2021 bao gồm một số tính năng, bản n�
 - **Xuất phân khúc sang LinkedIn Ads** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả LinkedIn Ads, đồng thời cho phép bạn mở khóa chức năng Nhắm mục tiêu người liên hệ và Nhắm mục tiêu công ty thông qua LinkedIn bằng cách xuất dữ liệu hồ sơ khách hàng hợp nhất của bạn. Để biết thêm thông tin, hãy xem bài viết [Xuất phân khúc sang LinkedIn Ads](export-linkedin-ads.md).
 
 
-- **Xuất phân khúc sang Omnisend** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Omnisend. Sử dụng phân khúc đã tạo trong thông tin chuyên sâu về đối tượng để tạo chiến dịch, cung cấp email tiếp thị và tận dụng các nhóm khách hàng cụ thể với Omnisend. Để biết thêm thông tin, hãy xem bài viết [Xuất phân khúc sang Omnisend](export-omnisend.md)
+- **Xuất phân khúc sang Omnisend** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Omnisend. Sử dụng phân khúc đã tạo trong thông tin chi tiết về đối tượng để tạo chiến dịch, cung cấp email tiếp thị và tận dụng các nhóm khách hàng cụ thể với Omnisend. Để biết thêm thông tin, hãy xem bài viết [Xuất phân khúc sang Omnisend](export-omnisend.md)
 
 ### <a name="predictions"></a>Dự đoán
 
@@ -90,7 +99,7 @@ Các bản cập nhật vào tháng 4 năm 2021 bao gồm một số tính năng
   
    Hiện nay, chúng tôi có trải nghiệm người dùng nâng cao trong cấu hình hợp nhất của quá trình hợp nhất dữ liệu. Những thay đổi bao gồm thứ tự trực quan của các trường đã hợp nhất cùng thống kê chi tiết về các trường kết hợp và trường đơn.
 
-- **Thực thể sắp xếp lại thứ tự và định cấu hình tất cả các bản ghi nguồn sang thực thể Khách hàng**  
+- **Thực thể sắp xếp lại thứ tự và đặt cấu hình tất cả các bản ghi nguồn sang thực thể Khách hàng**  
       
    Giờ đây, bạn có thể sắp xếp lại thứ tự và xóa các thực thể khỏi kế hoạch hợp nhất hiện có trong quá trình hợp nhất dữ liệu. Điều này giúp bạn có thể linh hoạt sắp xếp lại các thực thể trong quá trình đối sánh tùy theo nhu cầu kinh doanh. Ngoài ra, chúng tôi cho phép thêm tất cả các bản ghi không khớp vào bản cuối cùng thực thể *Khách hàng*, giúp họ xác định định nghĩa tập dữ liệu hồ sơ khách hàng của mình.
 
@@ -210,7 +219,7 @@ Bản cập nhật tháng 1 năm 2021 bao gồm một vài tính năng, nâng c�
 
 #### <a name="data-unification"></a>Thống nhất dữ liệu
 
-- **Nâng cao trải nghiệm so khớp** Trong khu vực hợp nhất dữ liệu, trải nghiệm so khớp đã được cập nhật. Nó cho phép bạn định cấu hình và xem các quy tắc đối sánh, bao gồm số liệu thống kê chi tiết để giải thích thêm về cách đối sánh hoạt động. Có các tùy chọn để tắt quy tắc đối sánh để quy tắc đó không còn hoạt động trong khi vẫn giữ nguyên cấu hình, kéo và thả quy tắc đối sánh, v.v.
+- **Nâng cao trải nghiệm so khớp** Trong khu vực hợp nhất dữ liệu, trải nghiệm so khớp đã được cập nhật. Nó cho phép bạn đặt cấu hình và xem các quy tắc đối sánh, bao gồm số liệu thống kê chi tiết để giải thích thêm về cách đối sánh hoạt động. Có các tùy chọn để tắt quy tắc đối sánh để quy tắc đó không còn hoạt động trong khi vẫn giữ nguyên cấu hình, kéo và thả quy tắc đối sánh, v.v.
   Để biết thêm thông tin, hãy xem phần [Đối sánh các thực thể](match-entities.md).
 
 - **Đầu ra khử trùng lặp từ quy trình đối sánh có sẵn dưới dạng thực thể** Đầu ra của quy trình khử trùng lặp từ quy trình đối sánh hiện được viết thành một thực thể riêng biệt để phân tích thêm. Thực thể này bao gồm các trường được sử dụng trong quá trình loại bỏ trùng lặp, đồng thời, bản ghi chiến thắng và bản ghi thay thế tương ứng được hợp nhất với bản ghi chiến thắng.

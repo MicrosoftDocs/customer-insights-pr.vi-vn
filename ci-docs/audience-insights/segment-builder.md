@@ -1,7 +1,7 @@
 ---
-title: Tạo và quản lý phân đoạn
-description: Tạo phân đoạn khách hàng để nhóm họ lại dựa trên các đặc điểm khác nhau.
-ms.date: 07/18/2021
+title: Tạo phân khúc bằng trình tạo phân khúc
+description: Tạo phân khúc khách hàng để nhóm họ lại dựa trên các đặc điểm khác nhau.
+ms.date: 09/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,104 +9,86 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: 7f7bd0e7e581305836287bd503ef273a2d556bff
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377814"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494573"
 ---
-# <a name="create-and-manage-segments"></a>Tạo và quản lý phân đoạn
+# <a name="create-segments"></a>Tạo phân khúc
 
-> [!IMPORTANT]
-> Có một số thay đổi sẽ được triển khai cho trải nghiệm tạo phân khúc vào tháng 9 năm 2021: 
-> - Trình tạo phân khúc trông sẽ hơi khác với các phần tử được thiết kế lại và dòng người dùng được cải thiện.
-> - Các toán tử datetime và bộ chọn ngày được cải thiện được bật trong trình tạo phân khúc.
-> - Bạn sẽ có thể thêm hoặc xóa điều kiện và quy tắc khỏi phân khúc. 
-> - Các quy tắc lồng nhau bắt đầu bằng điều kiện OR sẽ khả dụng. Bạn không cần điều kiện AND ở lớp ngoài cùng nữa.
-> - Một ngăn bên để chọn các thuộc tính sẽ liên tục khả dụng.
-> - Một tùy chọn để chọn đường dẫn mối quan hệ của thực thể.
-> Để thử trình tạo phân khúc mới, hãy gửi email với chủ đề "Yêu cầu bật trình tạo phân khúc mới" đến cihelp [at] microsoft.com. Bao gồm tên tổ chức và ID của môi trường hộp cát của bạn.
-> :::image type="content" source="media/segment-builder-overview.png" alt-text="Các yếu tố của trình tạo phân khúc." lightbox="media/segment-builder-overview.png":::
->
-> 1 - Tổ chức phân khúc của bạn với các quy tắc và mô-đun con. Mỗi quy tắc hoặc quy tắc con bao gồm các điều kiện. Kết hợp các điều kiện với các toán tử logic
->
-> 2 - Chọn [đường dẫn mối quan hệ](relationships.md) giữa các thực thể áp dụng cho một quy tắc. Đường dẫn mối quan hệ xác định thuộc tính nào có thể được sử dụng trong một điều kiện.
->
-> 3 - Quản lý các quy tắc và quy tắc phụ. Thay đổi vị trí của quy tắc hoặc xóa quy tắc đó.
->
-> 4 - Thêm điều kiện và xây dựng cấp độ lồng nhau phù hợp bằng cách sử dụng các quy tắc phụ.
->
-> 5 - Áp dụng các hoạt động đã thiết lập cho các quy tắc được kết nối.
->
-> 6 - Sử dụng ngăn thuộc tính để thêm các thuộc tính thực thể có sẵn hoặc tạo điều kiện dựa trên thuộc tính. Ngăn hiển thị danh sách các thực thể và thuộc tính, dựa trên đường dẫn mối quan hệ đã chọn, có sẵn cho quy tắc đã chọn.
->
-> 7 - Thêm các điều kiện dựa trên thuộc tính vào các quy tắc và quy tắc phụ hiện có hoặc thêm nó vào một quy tắc mới.
->
-> 8 - Hoàn tác và làm lại các thay đổi trong khi xây dựng phân khúc.
+Xác định các bộ lọc phức hợp xung quanh thực thể khách hàng hợp nhất và các thực thể có liên quan. Mỗi phân khúc, sau khi xử lý, sẽ tạo một bộ hồ sơ khách hàng mà bạn có thể xuất và hành động. Các phân khúc được quản lý trên trang **Phân khúc**. Bạn có thể [tạo các phân khúc mới](#create-a-new-segment) bằng [trình tạo phân khúc](#segment-builder) hoặc [tạo phân khúc nhanh](#quick-segments) từ các khu vực khác của ứng dụng.
 
-Xác định các bộ lọc phức hợp xung quanh thực thể khách hàng hợp nhất và các thực thể có liên quan. Mỗi phân khúc, sau khi xử lý, sẽ tạo một bộ hồ sơ khách hàng mà bạn có thể xuất và hành động. Các phân khúc được quản lý trên trang **Phân khúc**. 
+## <a name="segment-builder"></a>Trình tạo phân khúc
 
-Ví dụ sau minh họa khả năng tạo phân khúc. Chúng tôi đã xác định một phân đoạn cho khách hàng đặt hàng hóa trị giá ít nhất $500 trong 90 ngày qua *và* đã tham gia vào cuộc gọi dịch vụ khách hàng đã báo cáo.
+Hình ảnh sau đây minh họa các khía cạnh khác nhau của trình tạo phân khúc. Hình ảnh đó cho thấy một phân khúc dẫn đến một nhóm khách hàng. Khách hàng đặt hàng trong một khung thời gian cụ thể và tích lũy một số điểm thưởng hoặc chi tiêu một số tiền nhất định. 
 
-:::image type="content" source="media/segmentation-group1-2.png" alt-text="Ảnh chụp màn hình của giao diện người dùng từ trình tạo phân khúc với hai nhóm chỉ định phân khúc khách hàng.":::
+:::image type="content" source="media/segment-builder-overview.png" alt-text="Các yếu tố của trình tạo phân khúc." lightbox="media/segment-builder-overview.png":::
 
-## <a name="create-a-new-segment"></a>Tạo phân đoạn mới
+1 - Tổ chức phân khúc của bạn với các quy tắc và mô-đun con. Mỗi quy tắc hoặc quy tắc con bao gồm các điều kiện. Kết hợp các điều kiện với các toán tử logic
 
-Có nhiều cách để tạo một phân khúc mới. Phần này mô tả cách tạo *phân khúc trống* từ đầu. Bạn cũng có thể tạo một *phân khúc nhanh* dựa trên các thực thể hiện có hoặc sử dụng các mô hình máy học để có được *phân khúc đề xuất*. Thông tin thêm: [Tổng quan về các phân khúc](segments.md).
+2 - Chọn [đường dẫn mối quan hệ](relationships.md) giữa các thực thể áp dụng cho một quy tắc. Đường dẫn mối quan hệ xác định thuộc tính nào có thể được sử dụng trong một điều kiện.
+
+3 - Quản lý các quy tắc và quy tắc phụ. Thay đổi vị trí của quy tắc hoặc xóa quy tắc đó.
+
+4 - Thêm điều kiện và xây dựng cấp độ lồng nhau phù hợp bằng cách sử dụng các quy tắc phụ.
+
+5 - Áp dụng các hoạt động đã thiết lập cho các quy tắc được kết nối.
+
+6 - Sử dụng ngăn thuộc tính để thêm các thuộc tính thực thể có sẵn hoặc tạo điều kiện dựa trên thuộc tính. Ngăn hiển thị danh sách các thực thể và thuộc tính, dựa trên đường dẫn mối quan hệ đã chọn, có sẵn cho quy tắc đã chọn.
+
+7 - Thêm các điều kiện dựa trên thuộc tính vào các quy tắc và quy tắc phụ hiện có hoặc thêm nó vào một quy tắc mới.
+
+8 - Hoàn tác và làm lại các thay đổi trong khi xây dựng phân khúc.
+
+Ví dụ trên minh họa khả năng phân khúc. Chúng tôi đã xác định một phân khúc cho những khách hàng đã mua ít nhất $500 hàng hóa trực tuyến *và* quan tâm đến phát triển phần mềm.
+
+## <a name="create-a-new-segment"></a>Tạo phân khúc mới
+
+Có nhiều cách để tạo một phân khúc mới. Phần này mô tả cách tạo phân khúc của riêng bạn từ đầu. Bạn cũng có thể tạo một *phân khúc nhanh* dựa trên các thực thể hiện có hoặc sử dụng các mô hình máy học để có được *phân khúc đề xuất*. Thông tin thêm: [Tổng quan về các phân khúc](segments.md).
 
 Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Bản nháp sẽ được lưu dưới dạng một phân khúc không hoạt động và không thể kích hoạt với cấu hình hợp lệ.
 
-1. Truy cập trang **Phân đoạn**.
+1. Chuyển đến trang **Phân khúc**.
 
-1. Chọn **Mới** > **Phân đoạn trống**.
+1. Chọn **Mới** > **Xây dựng phân khúc của riêng bạn**.
 
-1. Trong ngăn **Phân khúc mới**, chọn một loại phân khúc:
+1. Trên trang trình tạo phân khúc, bạn xác định quy tắc đầu tiên. Quy tắc bao gồm một hoặc nhiều điều kiện và xác định một tập khách hàng.
 
-   - **Phân khúc động** [làm mới](segments.md#refresh-segments) theo lịch trình định kỳ.
-   - **Phân khúc tĩnh** chạy một lần khi bạn khởi tạo.
+1. Trong phần **Quy tắc 1**, chọn một thuộc tính của thực thể mà bạn muốn lọc khách hàng. Có hai cách để chọn thuộc tính: 
+   - Xem lại danh sách các thực thể và thuộc tính có sẵn trong ngăn **Thêm vào quy tắc** và chọn biểu tượng **+** bên cạnh thuộc tính cần thêm. Chọn nếu bạn muốn thêm thuộc tính vào quy tắc hiện có hoặc sử dụng thuộc tính đó để tạo quy tắc mới.
+   - Nhập tên của thuộc tính vào phần quy tắc để xem các đề xuất phù hợp.
 
-1. Đặt **Tên thực thể đầu ra** cho phân khúc. Bạn cũng có thể cung cấp tên hiển thị và mô tả nhằm xác định phân đoạn.
+1. Chọn các toán tử để chỉ định các giá trị phù hợp của điều kiện. Thuộc tính có thể có một trong bốn kiểu dữ liệu dưới dạng giá trị: số, chuỗi, ngày tháng hoặc Boolean. Tùy thuộc vào kiểu dữ liệu của thuộc tính, các toán tử khác nhau có sẵn để chỉ định điều kiện. 
 
-1. Chọn **Tiếp theo** để đi đến trang **Trình tạo phân đoạn** và xác định nhóm. Một nhóm là một tập hợp các khách hàng.
+1. Chọn **Thêm điều kiện** để thêm nhiều điều kiện hơn vào quy tắc. Để tạo quy tắc theo quy tắc hiện tại, hãy chọn **Thêm quy tắc phụ**.
 
-1. Chọn thực thể bao gồm thuộc tính mà bạn muốn tạo phân đoạn.
+1. Nếu một quy tắc sử dụng các thực thể khác với thực thể *Khách hàng*, bạn phải thiết lập đường dẫn mối quan hệ. Đường dẫn mối quan hệ được yêu cầu để thông báo cho hệ thống về mối quan hệ nào bạn muốn truy cập vào thực thể khách hàng hợp nhất. Chọn **Đặt đường dẫn mối quan hệ** để ánh xạ thực thể đã chọn với thực thể khách hàng hợp nhất. Nếu chỉ có một đường dẫn mối quan hệ khả thi, hệ thống sẽ tự động chọn đường dẫn đó. Các đường dẫn mối quan hệ khác nhau có thể mang lại những kết quả khác nhau. Mọi quy tắc đều có thể có đường dẫn mối quan hệ riêng.
 
-1. Chọn thuộc tính để tạo phân đoạn. Thuộc tính này có thể có 1 trong số 4 loại giá trị: số, chuỗi, ngày hoặc Boolean.
+   :::image type="content" source="media/relationship-path.png" alt-text="Đường dẫn mối quan hệ tiềm năng khi tạo quy tắc dựa trên một thực thể được ánh xạ tới thực thể khách hàng hợp nhất.":::
 
-1. Chọn một toán tử và một giá trị cho thuộc tính đã chọn.
+   Ví dụ: thực thể *eCommerce_eCommercePurchases* trong ảnh chụp màn hình có bốn tùy chọn để ánh xạ đến thực thể *Khách hàng*: 
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Khách hàng
+   - eCommerce_eCommercePurchases > Khách hàng
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Khách hàng
+   - eCommerce_eCommercePurchases> eCommerce_eCommerceContacts> POS_posPurchases >yalScheme_loyCustomers> Khách hàng Khi chọn tùy chọn cuối cùng, chúng tôi có thể bao gồm các thuộc tính từ tất cả các thực thể được liệt kê trong điều kiện quy tắc. Chúng tôi có thể sẽ nhận được ít kết quả hơn vì hồ sơ khách hàng phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, họ đã mua hàng thông qua thương mại điện tử (*eCommerce_eCommercePurchases*), tại điểm bán hàng (*POS_posPurchases*) và tham gia vào chương trình khách hàng thân thiết của chúng tôi (*loyaltyScheme_loyCustomers*). Khi chọn tùy chọn thứ hai, chúng tôi chỉ có thể chọn các thuộc tính từ *eCommerce_eCommercePurchases* và thực thể *Khách hàng*. Điều này có thể dẫn đến nhiều hồ sơ khách hàng hơn.
 
-   > [!div class="mx-imgBorder"]
-   > ![Bộ lọc nhóm tùy chỉnh.](media/customer-group-numbers.png "Bộ lọc nhóm khách hàng")
+1. Nếu bạn có nhiều điều kiện trong một quy tắc, bạn có thể chọn toán tử logic nào kết nối chúng.
 
-   |Số điện thoại |Định nghĩa  |
-   |---------|---------|
-   |1     |Thực thể          |
-   |2     |Thuộc tính          |
-   |3    |Toán tử         |
-   |Tệp 4    |Giá trị         |
+   - Toán tử **VÀ**: Tất cả các điều kiện phải được đáp ứng để bao gồm một bản ghi trong phân khúc. Tùy chọn này hữu ích nhất khi bạn xác định các điều kiện trên các thực thể khác nhau.
 
-   1. Để thêm nhiều điều kiện vào một nhóm, bạn có thể sử dụng hai toán tử logic:
+   - Toán tử **HOẶC**: Phải đáp ứng một trong các điều kiện để đưa bản ghi vào phân khúc. Tùy chọn này hữu ích nhất khi bạn xác định nhiều điều kiện cho cùng một thực thể.
 
-      - Toán tử **AND**: Cả hai điều kiện phải được thỏa mãn như một phần của quá trình tạo phân đoạn. Tùy chọn này hữu ích nhất khi bạn xác định các điều kiện trên các thực thể khác nhau.
+   :::image type="content" source="media/segmentation-either-condition.png" alt-text="Quy tắc với hai điều kiện VÀ.":::
 
-      - Toán tử **OR**: Một trong các điều kiện cần phải được thỏa mãn như một phần của quá trình tạo phân khúc. Tùy chọn này hữu ích nhất khi bạn xác định nhiều điều kiện cho cùng một thực thể.
+   Khi sử dụng toán tử HOẶC, tất cả các điều kiện phải dựa trên các thực thể có trong đường dẫn mối quan hệ.
 
-      > [!div class="mx-imgBorder"]
-      > ![Toán tử OR trong đó một trong hai điều kiện cần phải được thỏa mãn.](media/segmentation-either-condition.png "Toán tử OR trong đó một trong hai điều kiện cần phải được thỏa mãn")
+   1. Bạn có thể tạo nhiều quy tắc để tạo các bộ hồ sơ khách hàng khác nhau. Bạn có thể kết hợp các nhóm để có được những khách hàng cần thiết cho hoạt động kinh doanh của bạn. Để tạo một quy tắc mới, hãy chọn **Thêm quy tắc**. Cụ thể, nếu bạn không thể bao gồm và thực thể trong một quy tắc do đường dẫn mối quan hệ đã chỉ định, bạn phải tạo quy tắc mới để chọn các thuộc tính tạo thành quy tắc đó.
 
-      Hiện tại, có thể lồng một toán tử **OR** trong toán tử **AND** nhưng không phải là ngược lại.
-
-   1. Mỗi nhóm phù hợp với tập khách hàng. Bạn có thể kết hợp các nhóm để có được những khách hàng cần thiết cho hoạt động kinh doanh của bạn.    
-   Chọn **Thêm nhóm**.
-
-      > [!div class="mx-imgBorder"]
-      > ![Thêm nhóm khách hàng.](media/customer-group-add-group.png "Thêm nhóm khách hàng")
+      :::image type="content" source="media/segment-rule-grouping.png" alt-text="Thêm quy tắc mới vào một phân khúc và chọn toán tử đặt.":::
 
    1. Chọn một trong các toán tử đã đặt: **Hợp nhất**, **Giao nhau** hoặc **Ngoại trừ**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Thêm tập hợp nhóm khách hàng.](media/customer-group-union.png "Thêm tập hợp nhóm khách hàng")
 
    - **Hợp nhất** sẽ hợp nhất hai nhóm với nhau.
 
@@ -114,27 +96,31 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Bản nháp sẽ 
 
    - **Trừ** kết hợp hai nhóm với nhau. Chỉ dữ liệu trong nhóm A *là không phổ biến* cho dữ liệu trong nhóm B được giữ lại.
 
-1. Nếu thực thể được kết nối với thực thể khách hàng hợp nhất qua [các mối quan hệ](relationships.md), thì bạn cần xác định đường dẫn mối quan hệ để tạo một phân đoạn hợp lệ. Thêm các thực thể từ đường dẫn mối quan hệ cho đến khi bạn có thể chọn thực thể **Khách hàng : CustomerInsights** từ danh sách thả xuống. Sau đó chọn **Tất cả hồ sơ** cho mỗi bước.
+1. Theo mặc định, các phân khúc tạo thực thể đầu ra chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân khúc dựa trên các thực thể khác với *Khách hàng*, bạn có thể thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra. Chọn **Thuộc tính dự án** để chọn các thuộc tính sẽ được thêm vào thực thể đầu ra.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Đường dẫn mối quan hệ trong khi tạo phận đoạn.](media/segments-multiple-relationships.png "Đường dẫn mối quan hệ trong khi tạo phận đoạn")
-
-1. Theo mặc định, các phân khúc tạo một thực thể đầu ra chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân khúc dựa trên các thực thể khác với *Khách hàng*, bạn có thể thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra. Chọn **Thuộc tính dự án** để chọn các thuộc tính sẽ được thêm vào thực thể đầu ra.  
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Ví dụ về các thuộc tính dự kiến được chọn trong ngăn bên để được thêm vào thực thể đầu ra.":::
   
-   Ví dụ: Một phân khúc dựa trên một thực thể chứa dữ liệu về hoạt động khách hàng, liên quan đến thực thể *Khách hàng*. Phân đoạn này tìm kiếm tất cả khách hàng đã gọi điện đến bộ phận trợ giúp trong 60 ngày qua. Bạn có thể chọn thêm thời lượng cuộc gọi và số lượng cuộc gọi vào tất cả các bản ghi khách hàng phù hợp trong thực thể đầu ra. Thông tin này có thể hữu ích để gửi một email với các liên kết hữu ích đến các bài báo trợ giúp trực tuyến và Câu hỏi thường gặp cho những khách hàng đã gọi điện thường xuyên.
+   Ví dụ: Một phân khúc dựa trên một thực thể có chứa dữ liệu mua hàng, có liên quan đến thực thể *Khách hàng*. Phân khúc này dành cho tất cả khách hàng đến từ Tây Ban Nha đã mua hàng trong năm hiện tại. Bạn có thể chọn thêm các thuộc tính như giá hàng hóa hoặc ngày mua hàng vào tất cả các hồ sơ khách hàng phù hợp trong thực thể đầu ra. Thông tin này có thể hữu ích để phân tích mối tương quan giữa mùa vụ với tổng chi tiêu.
 
    > [!NOTE]
    > - Các thuộc tính dự kiến chỉ hoạt động với các thực thể có mối quan hệ một-nhiều với thực thể khách hàng. Ví dụ: một khách hàng có thể có nhiều gói đăng ký.
-   > - Bạn chỉ có thể chiếu các thuộc tính từ một thực thể được sử dụng trong tất cả các nhóm truy vấn phân khúc mà bạn đang tạo.
+   > - Bạn chỉ có thể chiếu các thuộc tính từ một thực thể được sử dụng trong mọi quy tắc của truy vấn phân khúc mà bạn đang xây dựng.
    > - Các thuộc tính dự kiến được coi như yếu tố khi sử dụng các toán tử tập hợp.
 
-1. Chọn **Lưu** để lưu phân đoạn của bạn. Phân đoạn của bạn sẽ được lưu và xử lý nếu tất cả các yêu cầu được xác thực. Nếu không, nó sẽ được lưu dưới dạng bản nháp.
+1. Trước khi bạn lưu và chạy phân khúc, hãy chọn **Chỉnh sửa chi tiết** bên cạnh tên phân khúc. Cung cấp tên cho phân khúc của bạn và cập nhật **Tên thực thể đầu ra** được đề xuất cho phân khúc. Bạn cũng có thể thêm mô tả vào phân khúc.
+
+1. Chọn **Chạy** để lưu và xử lý phân khúc của bạn nếu tất cả các yêu cầu đã được xác thực. Nếu không, phân khúc đó sẽ được lưu dưới dạng bản nháp phân khúc không hoạt động.
 
 1. Chọn **Quay lại phân khúc** để quay lại trang **Phân khúc**.
 
+> [!TIP]
+> - Trình tạo phân khúc sẽ không đề xuất các giá trị hợp lệ từ các thực thể khi đặt toán tử cho các điều kiện. Bạn có thể chuyển đến phần **Dữ liệu** > **Thực thể** và tải xuống dữ liệu thực thể để xem những giá trị nào có sẵn.
+> - Các điều kiện dựa trên ngày cho phép bạn chuyển đổi giữa các ngày cố định và một phạm vi ngày thực.
+> - Nếu bạn có nhiều quy tắc cho phân khúc của mình, bạn sẽ thấy một thanh màu xanh lam xung quanh quy tắc bạn đang chỉnh sửa.
+> - Bạn có thể di chuyển các quy tắc và điều kiện đến các vị trí khác trong định nghĩa phân khúc. Chọn [...] bên cạnh một quy tắc hoặc điều kiện và chọn cách thức và vị trí để di chuyển nó.
+> - Các tùy chọn điều khiển **Hủy** và **Làm lại** trong thanh lệnh cho phép bạn khôi phục các thay đổi.
 
-
-## <a name="quick-segments"></a>Phân đoạn nhanh
+## <a name="quick-segments"></a>Phân khúc nhanh
 
 Phân khúc nhanh cho phép bạn tạo nhanh các phân khúc đơn giản với một toán tử để có thông tin chi tiết nhanh chóng hơn.
 
@@ -142,25 +128,25 @@ Phân khúc nhanh cho phép bạn tạo nhanh các phân khúc đơn giản vớ
 
    - Chọn **Hồ sơ** để xây dựng phân khúc dựa trên thực thể *khách hàng hợp nhất*.
    - Chọn các tùy chọn **Biện pháp** để xây dựng một phân khúc xung quanh các biện pháp bạn đã tạo trước đó.
-   - Chọn tùy chọn **Thông tin** để xây dựng một phân đoạn xung quanh một trong các thực thể đầu ra mà bạn tạo bằng một trong hai chức năng **Dự đoán** hoặc **Mô hình tùy chỉnh**.
+   - Chọn tùy chọn **Thông tin** để xây dựng một phân khúc xung quanh một trong các thực thể đầu ra mà bạn tạo bằng một trong hai chức năng **Dự đoán** hoặc **Mô hình tùy chỉnh**.
 
-2. Trong hộp thoại **Phân đoạn nhanh mới**, hãy chọn một thuộc tính từ mục thả xuống **Trường**.
+2. Trong hộp thoại **Phân khúc nhanh mới**, hãy chọn một thuộc tính từ mục thả xuống **Trường**.
 
-3. Hệ thống sẽ cung cấp thêm một số thông tin chi tiết để giúp bạn tạo các phân đoạn khách hàng tốt hơn.
+3. Hệ thống sẽ cung cấp thêm thông tin chi tiết giúp bạn tạo phân khúc khách hàng tốt hơn.
    - Đối với các trường có phân loại, chúng tôi sẽ hiển thị 10 lượt khách hàng tốt nhất. Chọn **Giá trị** rồi chọn **Xem lại**.
 
    - Đối với một thuộc tính số, hệ thống sẽ hiển thị giá trị thuộc tính nào nằm trong phần trăm của mỗi khách hàng. Chọn một **Toán tử** và một **Giá trị**, sau đó chọn **Xem lại**.
 
-4. Hệ thống sẽ cung cấp cho bạn một **Kích cỡ phân đoạn ước tính**. Bạn có thể chọn tạo phân đoạn bạn đã xác định hoặc truy cập lại vào phân đoạn đó để có kích cỡ phân đoạn khác.
+4. Hệ thống sẽ cung cấp cho bạn một **Kích cỡ phân khúc ước tính**. Bạn có thể chọn tạo phân khúc bạn đã xác định hoặc truy cập lại vào phân khúc đó để có kích cỡ phân khúc khác.
 
     > [!div class="mx-imgBorder"]
-    > ![Tên và ước tính cho một phân khúc nhanh.](media/quick-segment-name.png "Tên và ước tính cho một phân đoạn nhanh")
+    > ![Tên và ước tính cho một phân khúc nhanh.](media/quick-segment-name.png "Tên và ước tính cho một phân khúc nhanh")
 
-5. Đặt **Tên** cho phân đoạn của bạn. Bạn cũng có thể cung cấp **Tên hiển thị**.
+5. Đặt **Tên** cho phân khúc của bạn. Bạn cũng có thể cung cấp **Tên hiển thị**.
 
-6. Chọn **Lưu** để tạo phân đoạn.
+6. Chọn **Lưu** để tạo phân khúc.
 
-7. Sau khi phân đoạn đã xử lý xong, bạn có thể xem nó như bất kỳ phân đoạn nào khác mà bạn đã tạo.
+7. Sau khi phân khúc đã xử lý xong, bạn có thể xem nó như bất kỳ phân khúc nào khác mà bạn đã tạo.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

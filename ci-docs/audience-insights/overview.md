@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034386"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474083"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
 
@@ -45,7 +45,7 @@ ms.locfileid: "7034386"
   - Truy cập vào một bộ sưu các trình kết nối phong phú để nhập tất cả các dữ liệu khách hàng của bạn.
   - Khả năng thống nhất dữ liệu khách hàng và biến nó thành định dạng [Common Data Model](/common-data-model/).
   - Làm phong phú thông tin về khách hàng bằng thông tin chi tiết từ thông tin về đối tượng, chẳng hạn như mối quan hệ thương hiệu và sở thích.
-  - Cấu hình "nhấp chuột-không-mã" và trải nghiệm gỡ lỗi giúp dễ dàng định cấu hình thông tin chi tiết về đối tượng và nhận dạng các sự cố tiềm ẩn.
+  - Cấu hình "nhấp chuột-không-mã" và trải nghiệm gỡ lỗi giúp dễ dàng đặt cấu hình thông tin chi tiết về đối tượng và nhận dạng các sự cố tiềm ẩn.
   - Làm sạch và chuẩn hóa dữ liệu khách hàng qua các nguồn khác nhau với các khuyến nghị theo AI.  
 
 - **Người dùng doanh nghiệp:**
@@ -55,13 +55,7 @@ ms.locfileid: "7034386"
 
 - **Nhà phân tích kinh doanh:**
 
-  - Xây dựng hồ sơ tùy chỉnh, xác định các biện pháp, tạo phân đoạn và hưởng lợi từ phân tích dự đoán để có được một cái nhìn 360 độ về khách hàng của bạn, cụ thể cho tổ chức của bạn.  
+  - Xây dựng hồ sơ tùy chỉnh, xác định các biện pháp, tạo phân khúc và hưởng lợi từ phân tích dự đoán để có được một cái nhìn 360 độ về khách hàng của bạn, cụ thể cho tổ chức của bạn.  
   - Sử dụng các trình kết nối có sẵn cho một số ứng dụng hoặc API của Microsoft và bên thứ ba để xử lý thông tin chi tiết.
-
-## <a name="pricing-and-licensing"></a>Định giá và cấp giấy phép
-
-Customer Insights được cấp phép cho mỗi đối tượng thuê và bao gồm nhiều tính năng. Các tính năng được cung cấp bao gồm bộ cấu hình, làm mới hệ thống hàng ngày, yêu cầu Power Platform và 2 môi trường. Bạn có thể mua thêm dung lượng và giấy phép để tăng hạn ngạch mặc định. 
-- Năng lực và quyền lợi chi tiết: [Hướng dẫn cấp phép Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Tổng quan về giá: [Giá Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

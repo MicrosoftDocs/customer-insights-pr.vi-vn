@@ -4,23 +4,23 @@ description: Tìm hiểu cách cá nhân hóa và chạy SDK Android
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036944"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494301"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Bắt đầu với SDK Android
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Hướng dẫn này sẽ giúp bạn thực hiện quá trình trang bị cho ứng dụng Android bằng SDK thông tin chuyên sâu về tương tác Dynamics 365 Customer Insights. Bạn sẽ bắt đầu thấy các sự kiện trong cổng thông tin của mình sau 5 phút hoặc sớm hơn.
+Hướng dẫn này sẽ giúp bạn thực hiện quá trình trang bị cho ứng dụng Android bằng SDK thông tin chi tiết về tương tác Dynamics 365 Customer Insights. Bạn sẽ bắt đầu thấy các sự kiện trong cổng thông tin của mình sau 5 phút hoặc sớm hơn.
 
 ## <a name="configuration-options"></a>Tùy chọn cấu hình
 Các tùy chọn cấu hình sau có thể được chuyển tới SDK:
@@ -35,18 +35,39 @@ Các tùy chọn cấu hình sau có thể được chuyển tới SDK:
 
 - Khóa thu thập dữ liệu (xem phần bên dưới để biết hướng dẫn về cách lấy)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>Bước 1. Tích hợp SDK vào ứng dụng của bạn
+## <a name="integrate-the-sdk-into-your-application"></a>Tích hợp SDK vào ứng dụng của bạn
 Bắt đầu quá trình bằng cách chọn một không gian làm việc, chọn nền tảng di động Android và tải xuống SDK Android.
 
 - Sử dụng trình chuyển đổi không gian làm việc trong ngăn điều hướng bên trái để chọn không gian làm việc của bạn.
 
 - Nếu bạn hiện không có không gian làm việc, hãy chọn **Không gian làm việc mới** và làm theo các bước để tạo [không gian làm việc mới](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>Bước 2. Định cấu hình SDK
+- Sau khi tạo không gian làm việc, hãy chuyển đến **Quản trị viên** > **Không gian làm việc** rồi chọn **Hướng dẫn cài đặt**. 
 
-1. Sau khi tạo không gian làm việc, hãy chuyển đến **Quản trị viên** > **Không gian làm việc** rồi chọn **Hướng dẫn cài đặt**. 
+## <a name="configure-the-sdk"></a>Đặt cấu hình SDK
 
-1. Tải xuống [thông tin chuyên sâu về tương tác SDK Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) và đặt tệp `eiandroidsdk-debug.aar` vào thư mục `libs`.
+Sau khi tải xuống SDK, bạn có thể làm việc với SDK đó trong Android Studio để kích hoạt và xác định sự kiện. Có hai cách để làm vậy:
+### <a name="option-1-using-jitpack-recommended"></a>Tùy chọn 1: Sử dụng JitPack (khuyên dùng)
+1. Thêm kho lưu trữ JitPack vào `build.gradle` gốc của bạn:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Thêm phần phụ thuộc:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>Tùy chọn 2: Sử dụng liên kết tải xuống
+1. Tải xuống [thông tin chi tiết về tương tác SDK Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) và đặt tệp `eiandroidsdk-debug.aar` vào thư mục `libs`.
 
 1. Mở tệp `build.gradle` cấp độ dự án của bạn và thêm các đoạn mã sau:
     ```gradle
@@ -62,7 +83,17 @@ Bắt đầu quá trình bằng cách chọn một không gian làm việc, ch�
     }
     ```
 
-1. Thiết lập cấu hình SDK thông tin chuyên sâu về tương tác thông qua tệp `AndroidManifest.xml` trong thư mục `manifests`. 
+1. Thêm quyền cho mạng và Internet trong tệp `AndroidManifest.xml` nằm ở thư mục `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Thiết lập cấu hình SDK thông tin chi tiết về tương tác thông qua tệp `AndroidManifest.xml`. 
+
+## <a name="enable-auto-instrumentation"></a>Bật tính năng tự động trang bị
 1. Sao chép đoạn mã XML từ **Hướng dẫn cài đặt**. `Your-Ingestion-Key` sẽ được tự động điền.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Bắt đầu quá trình bằng cách chọn một không gian làm việc, ch�
    </application>
    ```
 
-1. Bật hoặc tắt tính năng thu nạp tự động sự kiện `View` bằng cách đặt trường `autoCapture` ở trên thành `true` hoặc `false`.
+1. Bật hoặc tắt tính năng thu nạp tự động sự kiện `View` bằng cách đặt trường `autoCapture` ở trên thành `true` hoặc `false`. Hiện tại, bạn cần thêm sự kiện `Action` theo cách thủ công.
 
 1. (Không bắt buộc) Các cấu hình khác bao gồm việc thiết lập URL trình thu thập điểm cuối. Cấu hình này có thể được thêm vào siêu dữ liệu khóa thu thập trong `AndroidManifest.xml`:
     ```xml
@@ -94,9 +125,9 @@ Bắt đầu quá trình bằng cách chọn một không gian làm việc, ch�
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Bước 3. Khởi tạo SDK từ MainActivity 
+## <a name="implement-custom-events"></a>Triển khai sự kiện tùy chỉnh
 
-Sau khi khởi tạo SDK, bạn có thể làm việc với các sự kiện và thuộc tính của sự kiện đó trong môi trường MainActivity.
+Sau khi khởi tạo SDK, bạn có thể làm việc với các sự kiện và thuộc tính của sự kiện đó trong môi trường `MainActivity`.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Đặt chi tiết người dùng cho sự kiện của bạn (không bắt buộc)
+## <a name="set-user-details-for-your-event-optional"></a>Đặt chi tiết người dùng cho sự kiện của bạn (không bắt buộc)
 
 SDK cho phép bạn xác định thông tin người dùng có thể được gửi trong mọi sự kiện. Bạn có thể chỉ định thông tin người dùng bằng cách gọi API `setUser(user: User)` cấp độ `Analytics`.
 

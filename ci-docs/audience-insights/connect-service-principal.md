@@ -1,7 +1,7 @@
 ---
 title: Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính
 description: Sử dụng tên dịch vụ chính Azure để kết nối với kho dữ liệu của riêng bạn.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461174"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483551"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các quyền hạn chế. Thay vì để các ứng dụng đăng nhập với tư cách là người dùng có đầy đủ đặc quyền, Azure cung cấp các dịch vụ chính. Đọc tiếp để tìm hiểu cách kết nối Dynamics 365 Customer Insights với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure thay vì khóa tài khoản lưu trữ. 
 
-Bạn có thể sử dụng tên dịch vụ chính để [thêm hoặc chỉnh sửa thư mục Common Data Model một cách an toàn dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo hoặc cập nhật môi trường](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Bạn có thể sử dụng tên dịch vụ chính để [thêm hoặc chỉnh sửa thư mục Common Data Model một cách an toàn dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo hoặc cập nhật môi trường](get-started-paid.md).
 
 > [!IMPORTANT]
-> - Tài khoản Data Lake Storage sẽ sử dụng<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> Tên dịch vụ chính phải bật [không gian tên theo cấp bậc](/azure/storage/blobs/data-lake-storage-namespace).
+> - Tài khoản Data Lake Storage sẽ sử dụng dịch vụ chính phải đã bật tính năng [không gian tên theo cấp bậc](/azure/storage/blobs/data-lake-storage-namespace).
 > - Bạn cần quyền quản trị cho đăng ký Azure của mình để tạo dịch vụ chính.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Tạo một tên dịch vụ chính Azure cho Customer Insights
@@ -38,7 +38,7 @@ Trước khi tạo một tên dịch vụ chính mới để có thông tin chi 
 
 3. Trong **Quản lý**, chọn **Ứng dụng doanh nghiệp**.
 
-4. Tìm kiếm Microsoft<!--note from editor: Via Microsoft Writing Style Guide.--> ID ứng dụng:
+4. Tìm kiếm ID ứng dụng Microsoft:
    - Thông tin chi tiết về đối tượng: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` có tên `Dynamics 365 AI for Customer Insights`
    - Thông tin chi tiết về tương tác: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` có tên `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Trước khi tạo một tên dịch vụ chính mới để có thông tin chi 
 6. Nếu không có kết quả nào được trả lại, hãy tạo một dịch vụ chính mới.
 
 >[!NOTE]
->Để tận dụng toàn bộ sức mạnh của Dynamics 365 Customer Insights, chúng tôi khuyên bạn nên thêm cả hai ứng dụng vào tên dịch vụ chính.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Để tận dụng toàn bộ sức mạnh của Dynamics 365 Customer Insights, chúng tôi khuyên bạn nên thêm cả hai ứng dụng vào tên dịch vụ chính.
 
 ### <a name="create-a-new-service-principal"></a>Tạo dịch vụ chính mới
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Cài đặt phiên bản mới nhất của Azure Active Directory PowerShell for Graph. Để biết thêm thông tin, hãy truy cập [Cài đặt Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. Trên PC, chọn phím Windows trên bàn phím và tìm kiếm **Windows PowerShell** và chọn **Chạy với tư cách quản trị viên**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. Trên PC, chọn phím Windows trên bàn phím và tìm kiếm **Windows PowerShell** và chọn **Chạy với tư cách quản trị viên**.
    
    1. Trong cửa sổ PowerShell mở ra, hãy nhập `Install-Module AzureAD`.
 
 2. Tạo tên dịch vụ chính cho Customer Insights với mô-đun Azure AD PowerShell.
 
-   1. Trong cửa sổ PowerShell, hãy nhập `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Thay thế *"[ID đối tượng thuê của bạn]"*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> với ID thực tế của đối tượng thuê mà bạn muốn tạo tên dịch vụ chính. Tham số tên môi trường `AzureEnvironmentName` là không bắt buộc.
+   1. Trong cửa sổ PowerShell, hãy nhập `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Thay thế *[ID đối tượng thuê của bạn]* bằng ID thực tế của đối tượng thuê mà bạn muốn tạo dịch vụ chính. Tham số tên môi trường `AzureEnvironmentName` là không bắt buộc.
   
    1. Nhập `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Lệnh này tạo dịch vụ chính cho thông tin chi tiết về đối tượng trên đối tượng thuê đã chọn. 
 
-   1. Nhập `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Lệnh này tạo tên dịch vụ chính cho thông tin chi tiết về mức độ tương tác<!--note from editor: Edit okay?--> đối với đối tượng thuê đã chọn.
+   1. Nhập `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Lệnh này tạo tên dịch vụ chính cho thông tin chi tiết về mức độ tương tác đối với người thuê đã chọn.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Cấp quyền cho dịch vụ chính để truy cập vào tài khoản lưu trữ
 
@@ -90,7 +90,7 @@ Có thể mất đến 15 phút để các thay đổi được thực hiện.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Nhập ID tài nguyên Azure hoặc chi tiết đăng ký Azure trong tệp đính kèm tài khoản lưu trữ cho thông tin chi tiết về đối tượng
 
-Bạn có thể<!--note from editor: Edit suggested only if this section is optional.--> đính kèm tài khoản Data Lake Storage trong thông tin chi tiết về đối tượng [lưu trữ dữ liệu đầu ra](manage-environments.md) hoặc [sử dụng làm nguồn dữ liệu](connect-common-data-service-lake.md). Tùy chọn này cho phép bạn chọn giữa cách tiếp cận dựa trên tài nguyên hoặc dựa trên đăng ký. Tùy thuộc vào cách tiếp cận bạn chọn, hãy làm theo quy trình ở một trong các phần sau.<!--note from editor: Suggested.-->
+Bạn có thể đính kèm tài khoản Data Lake Storage trong thông tin chi tiết về đối tượng [lưu trữ dữ liệu đầu ra](manage-environments.md) hoặc [sử dụng làm nguồn dữ liệu](connect-common-data-service-lake.md). Tùy chọn này cho phép bạn chọn giữa cách tiếp cận dựa trên tài nguyên hoặc dựa trên đăng ký. Tùy thuộc vào cách tiếp cận bạn chọn, hãy làm theo quy trình ở một trong các phần sau.
 
 ### <a name="resource-based-storage-account-connection"></a>Kết nối tài khoản lưu trữ dựa trên tài nguyên
 

@@ -4,17 +4,17 @@ description: Cách sử dụng báo cáo phễu để hiểu cách đối tượ
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032281"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498668"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Tạo và quản lý báo cáo phễu
 
@@ -38,7 +38,7 @@ Báo cáo phễu thu thập thông tin về các bước diễn ra trong hành t
 
 1. Sử dụng **Tiêu chí bước** để chỉ định thứ nguyên của hoạt động. [Thứ nguyên](dimensions.md) là các thuộc tính có thể mô tả, lọc hoặc nhóm dữ liệu.
 
-1. Bạn có thể tùy ý định cấu hình các bước phễu nhiều điều kiện. Chọn **Thêm điều kiện** để chỉ định nhiều thứ nguyên trong một bước. Các tiêu chí bổ sung phải sử dụng cùng một loại hoạt động. Bạn có thể chọn nếu có nhiều điều kiện được kết nối bằng toán tử AND hoặc OR.
+1. Bạn có thể tùy ý đặt cấu hình các bước phễu nhiều điều kiện. Chọn **Thêm điều kiện** để chỉ định nhiều thứ nguyên trong một bước. Các tiêu chí bổ sung phải sử dụng cùng một loại hoạt động. Bạn có thể chọn nếu có nhiều điều kiện được kết nối bằng toán tử AND hoặc OR.
 
    :::image type="content" source="media/funnel-add-condition.png" alt-text="Trình chỉnh sửa phễu hiển thị cấu hình bước với các bước nhiều điều kiện.":::
 
@@ -59,7 +59,7 @@ Bước 4: Đăng ký dùng gói đăng ký
   
 Phễu này cho phép bạn xem số lượng người dùng đã sử dụng mã khuyến mãi sau khi mua một lần để đăng ký chương trình đăng ký.
 
-### <a name="configure-advanced-settings"></a>Định cấu hình thiết đặt nâng cao 
+### <a name="configure-advanced-settings"></a>Đặt cấu hình thiết đặt nâng cao 
 
 Báo cáo phễu cho phép bạn xác định giới hạn về thời gian cần để hoàn thành một phễu. Ví dụ: bạn có thể đặt thời gian để hoàn thành phễu là 4 ngày. Tùy chọn thiết đặt này sẽ chỉ tính những lượt đăng ký thành công xảy ra trong vòng 4 ngày kể từ khi người dùng truy cập vào trang chủ.
 
@@ -80,7 +80,7 @@ Báo cáo phễu cho phép bạn xác định giới hạn về thời gian cầ
 
 ## <a name="cross-channel-funnel-reports"></a>Báo cáo phễu đa kênh 
 
-Thông tin chuyên sâu về tương tác cũng có thể thu thập dữ liệu hành vi của khách hàng trên ứng dụng dành cho thiết bị di động của bạn. Sau khi trang bị cho ứng dụng dành cho thiết bị di động của mình bằng thông tin chuyên sâu về tương tác [SDK Android](get-started-android.md) hoặc [SDK iOS](get-started-ios.md), bạn có thể tạo báo cáo phễu đa kênh. 
+Thông tin chi tiết về tương tác cũng có thể thu thập dữ liệu hành vi của khách hàng trên ứng dụng dành cho thiết bị di động của bạn. Sau khi trang bị cho ứng dụng dành cho thiết bị di động của mình bằng thông tin chi tiết về tương tác [SDK Android](get-started-android.md) hoặc [SDK iOS](get-started-ios.md), bạn có thể tạo báo cáo phễu đa kênh. 
 
 ### <a name="create-a-cross-channel-funnel-report"></a>Tạo báo cáo phễu đa kênh 
 
@@ -93,7 +93,7 @@ Thông tin chuyên sâu về tương tác cũng có thể thu thập dữ liệu
 Bạn có thể xem lại báo cáo phễu để phân tích dữ liệu, theo dõi hiệu suất và thu thập thông tin chi tiết.
 
 > [!NOTE]
-> - Báo cáo phễu thông tin chuyên sâu về tương tác hiện hỗ trợ các tình huống trong đó tất cả người dùng trong phễu đều ẩn danh hoặc tất cả người dùng đều được xác thực. 
+> - Báo cáo phễu thông tin chi tiết về tương tác hiện hỗ trợ các tình huống trong đó tất cả người dùng trong phễu đều ẩn danh hoặc tất cả người dùng đều được xác thực. 
 > - Dữ liệu lịch sử trong báo cáo phễu có sẵn trong 30 ngày qua.
 
 ### <a name="view-funnel-reports"></a>Xem báo cáo phễu
@@ -158,4 +158,21 @@ Bạn có thể thay đổi tên của báo cáo phễu, xóa hoặc sửa đổ
 1. Chọn tên để mở báo cáo.
 
 1. Chọn bước bạn muốn xóa rồi chọn **Xóa**.
+
+## <a name="funnel-insights"></a>Thông tin chi tiết về phễu 
+
+Thông tin chi tiết về mức độ tương tác hiện cung cấp thông tin chi tiết về phễu cho khách hàng. Sử dụng thông tin chi tiết về phễu để hiểu sâu hơn về hành vi của khách hàng về các bước trong báo cáo phễu của bạn. Khi bạn tạo và lưu báo cáo phễu mới, thông tin chi tiết về phễu sẽ tự động được tạo cho báo cáo của bạn. 
+
+Bạn có thể xem thông tin chi tiết về phễu từ các danh mục sau, ở cả cấp độ chính và cấp độ bước: 
+
+ - Tỉ lệ chuyển đổi 
+ - Thời gian chuyển tiếp 
+ - Thời gian hoàn thành 
+
+Sử dụng những thông tin chi tiết này để khám phá sâu hơn về hành vi của khách hàng cũng như hiểu rõ hơn về các điểm giảm và chuyển đổi cho báo cáo phễu của bạn. 
+
+Thông tin chi tiết về phễu được tính toán lại sau mỗi 24 giờ hoặc khi bạn **Lưu** báo cáo phễu của bạn. 
+
+> [!NOTE]
+> Để xem thông tin chi tiết cho phễu của bạn, bạn phải lưu báo cáo của mình mỗi khi bạn thực hiện các thay đổi. 
 

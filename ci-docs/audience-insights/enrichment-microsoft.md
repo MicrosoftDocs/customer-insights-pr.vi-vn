@@ -9,22 +9,22 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033887"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466650"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng mối quan hệ thương hiệu và sở thích (bản xem trước)
 
 Sử dụng dữ liệu độc quyền của Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn. Các mối quan hệ này dựa trên dữ liệu từ những người thuộc nhóm nhân khẩu học tương tự với khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và chia phân khúc khách hàng của bạn dựa trên mối quan hệ của họ với các thương hiệu và sở thích cụ thể.
 
-Trong thông tin chuyên sâu về đối tượng, hãy đi tới **Dữ liệu** > **Tăng cường dữ liệu** để [định cấu hình và xem dữ liệu tăng cường](enrichment-hub.md).
+Trong thông tin chi tiết về đối tượng, hãy đi tới **Dữ liệu** > **Tăng cường dữ liệu** để [đặt cấu hình và xem dữ liệu tăng cường](enrichment-hub.md).
 
-Để định cấu hình dữ liệu tăng cường phụ về mối quan hệ thương hiệu, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
+Để đặt cấu hình dữ liệu tăng cường phụ về mối quan hệ thương hiệu, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
 
-Để định cấu hình dữ liệu tăng cường mối quan hệ về sở thích, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Sở thích**.
+Để đặt cấu hình dữ liệu tăng cường mối quan hệ về sở thích, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Sở thích**.
 
    > [!div class="mx-imgBorder"]
    > ![Ngăn xếp Thương hiệu và Sở thích.](media/BrandsInterest-tile-Hub.png "Ngăn xếp Thương hiệu và Sở thích")
@@ -63,7 +63,7 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia/vùng sau đây: Úc, 
 
 - Khi [tăng cường dữ liệu hồ sơ](#refresh-enrichment), chúng tôi sẽ bổ sung thông tin cho tất cả hồ sơ khách hàng mà chúng tôi lấy dữ liệu cho thương hiệu và sở thích đã chọn, bao gồm cả các hồ sơ không thuộc quốc gia hoặc khu vực đã chọn. Ví dụ: nếu bạn đã chọn Đức, chúng tôi sẽ tăng cường dữ liệu cho hồ sơ ở Hoa Kỳ nếu có sẵn dữ liệu về các thương hiệu và sở thích đã chọn ở Hoa Kỳ.
 
-## <a name="configure-enrichment"></a>Định cấu hình dữ liệu tăng cường
+## <a name="configure-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
 
 Trải nghiệm có hướng dẫn sẽ giúp bạn hoàn thành quá trình cấu hình dữ liệu tăng cường. 
 
@@ -112,7 +112,7 @@ Cuối cùng, bạn phải xem xét thông tin và đặt tên cho dữ liệu t
 
 ## <a name="refresh-enrichment"></a>Làm mới dữ liệu tăng cường
 
-Chạy quá trình cung cấp dữ liệu tăng cường sau khi định cấu hình thương hiệu, sở thích và ánh xạ trường cho nhân khẩu học. Để bắt đầu quá trình, chọn **Chạy** trên trang cấu hình thương hiệu hoặc sở thích. Ngoài ra, bạn có thể để hệ thống tự động chạy tính năng tăng cường như một phần của việc làm mới theo lịch trình.
+Chạy quá trình cung cấp dữ liệu tăng cường sau khi đặt cấu hình thương hiệu, sở thích và ánh xạ trường cho nhân khẩu học. Để bắt đầu quá trình, chọn **Chạy** trên trang cấu hình thương hiệu hoặc sở thích. Ngoài ra, bạn có thể để hệ thống tự động chạy tính năng tăng cường như một phần của việc làm mới theo lịch trình.
 
 Tùy thuộc vào kích thước dữ liệu khách hàng của bạn, có thể mất vài phút để quá trình cung cấp dữ liệu tăng cường hoàn tất.
 
@@ -126,6 +126,8 @@ Sau khi chạy quá trình tăng cường, hãy chuyển đến **Dữ liệu t�
 :::image type="content" source="media/my-enrichments.png" alt-text="Xem trước kết quả sau khi chạy quy trình tăng cường.":::
 
 Xem xét dữ liệu tăng cường bằng cách chọn **Xem dữ liệu tăng cường** trong biểu đồ. Dữ liệu tăng cường cho các thương hiệu đi đến thực thể **BrandAffinityFromMicrosoft**. Dữ liệu cho sở thích trong thực thể **InterestAffinityFromMicrosoft**. Bạn cũng sẽ tìm thấy các thực thể được liệt kê trong nhóm **Tăng cường** trong **Dữ liệu** > **Thực thể**.
+
+Bạn sẽ thấy biểu đồ với số lượng hồ sơ khách hàng được tăng cường theo thời gian và bản xem trước của thực thể được tăng cường. Chọn **Hiển thị thêm** trong ô xem trước để mở thực thể được tăng cường.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu tăng cường trên thẻ khách hàng
 

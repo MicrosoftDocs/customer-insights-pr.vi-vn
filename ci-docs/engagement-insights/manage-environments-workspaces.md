@@ -4,17 +4,17 @@ description: Cách tạo, đổi tên và xóa không gian làm việc cũng nh�
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034068"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486065"
 ---
 # <a name="manage-environments-and-workspaces"></a>Quản lý môi trường và không gian làm việc
 
@@ -30,7 +30,7 @@ Môi trường là không gian mà bạn quản lý không gian làm việc và 
 -   Môi trường riêng biệt để thử nghiệm và sản xuất.
 -   Môi trường riêng biệt cho các nhóm hoặc phòng ban cụ thể trong tổ chức của bạn có chứa các sự kiện liên quan cho từng đối tượng.
 -   Môi trường riêng biệt cho các chi nhánh toàn cầu khác nhau của công ty bạn.
--   Kết nối với chức năng thông tin chuyên sâu về đối tượng của Customer Insights.
+-   Kết nối với chức năng thông tin chi tiết về đối tượng của Customer Insights.
 
 ## <a name="choose-an-environment-and-create-a-workspace"></a>Chọn môi trường và tạo không gian làm việc 
 
@@ -38,7 +38,7 @@ Mọi không gian làm việc cần phải ở trong một môi trường. Bạn
 
 **Để tạo không gian làm việc đầu tiên của bạn**
 
-1. Trong thông tin chuyên sâu về tương tác, hãy chọn **Mới** từ trình chuyển đổi không gian làm việc. 
+1. Trong thông tin chi tiết về tương tác, hãy chọn **Mới** từ trình chuyển đổi không gian làm việc. 
 
    :::image type="content" source="media/New-workspace.png" alt-text="Bộ chọn không gian làm việc của trang Customer Insights.":::
 
@@ -85,13 +85,11 @@ Thao tác xóa không gian làm việc sẽ xóa vĩnh viễn tất cả nội d
 
 1. Chọn **Thêm thành viên** để cấp quyền truy cập và [chỉ định vai trò](user-roles.md). Hiện nay, chỉ có sẵn **Quản trị viên không gian làm việc**.
 
-1. Nếu thiết lập [kết nối với thông tin chuyên sâu về đối tượng](configure-connections.md), bạn có thể chọn **Cho phép truy cập vào dữ liệu hồ sơ** để cho phép thành viên xem các báo cáo dựa trên [thông tin người dùng](profile-reports.md).
-
 1. Chọn **Thêm thành viên** để thêm họ vào không gian làm việc của bạn.
 
 ## <a name="manage-an-environment"></a>Quản lý môi trường
 
-Là quản trị viên Môi trường, bạn có thể truy cập môi trường từ ngăn điều hướng bên trái. Bạn có thể định cấu hình cài đặt môi trường, quản trị viên Môi trường khác, không gian làm việc và [kết nối với thông tin chuyên sâu về đối tượng](configure-connections.md). Chọn các tab để di chuyển giữa các khu vực khác nhau trong trung tâm quản trị.
+Là quản trị viên Môi trường, bạn có thể truy cập môi trường từ ngăn điều hướng bên trái. Bạn có thể đặt cấu hình cài đặt môi trường, quản trị viên môi trường khác và không gian làm việc. Chọn các tab để di chuyển giữa các khu vực khác nhau trong trung tâm quản trị.
 
 :::image type="content" source="media/New-environment.png" alt-text="Trung tâm quản trị môi trường.":::
 
@@ -123,8 +121,6 @@ Là quản trị viên Môi trường, bạn có thể truy cập môi trường
 
 1. Chọn **Thêm thành viên** để cập nhật thành viên và [chỉ định vai trò](user-roles.md). Hiện nay, chỉ có sẵn **Quản trị viên môi trường**.
 
-1. Nếu thiết lập [kết nối với thông tin chuyên sâu về đối tượng](configure-connections.md), bạn có thể chọn **Cho phép truy cập vào dữ liệu hồ sơ** để cho phép thành viên xem các báo cáo dựa trên [thông tin người dùng](profile-reports.md).
-
 1. Chọn **Thêm thành viên** để thêm họ vào môi trường của bạn.
 
 ### <a name="delete-an-environment"></a>Xóa môi trường
@@ -141,9 +137,9 @@ Quản trị viên môi trường có thể xóa môi trường. Trước khi c�
 
 ## <a name="manage-connections"></a>Quản lý kết nối
 
-Thiết lập kết nối với thông tin chuyên sâu về đối tượng cho phép bạn xem báo cáo trong thông tin chuyên sâu về tương tác dựa trên hồ sơ khách hàng thống nhất. 
+Thiết lập kết nối với thông tin chi tiết về đối tượng cho phép bạn xem báo cáo trong thông tin chi tiết về tương tác dựa trên hồ sơ khách hàng thống nhất. 
 
-Để biết thêm thông tin, hãy xem phần [Định cấu hình kết nối](configure-connections.md).
+Để biết thêm thông tin: hãy xem [Tạo mối liên kết giữa thông tin chi tiết về đối tượng và thông tin chi tiết về mức độ tương tác](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Quản lý dữ liệu cá nhân
 

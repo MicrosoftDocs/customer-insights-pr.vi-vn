@@ -1,6 +1,6 @@
 ---
 title: Giới thiệu hướng dẫn bắt đầu nhanh với sản phẩm
-description: Trải nghiệm lần đầu tiên để thiết lập chức năng thông tin chuyên sâu về tương tác.
+description: Trải nghiệm lần đầu tiên để thiết lập chức năng thông tin chi tiết về tương tác.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
@@ -9,40 +9,40 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: eebe51d343f6afbed52a66c52ab6a60eb5cd410367fb2e4409eb8679f357c91e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 95caaa1f67a7740328b67face00acaea65452eb0
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033933"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494506"
 ---
 # <a name="first-run-experience"></a>Trải nghiệm trong lần chạy đầu tiên
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Thông tin chuyên sâu về tương tác là chức năng của Dynamics 365 Customer Insights, giúp bạn thu thập và đo lường hành vi của khách hàng trên trang web của bạn. Bài viết này giải thích cách đăng ký nhận thông tin chuyên sâu về tương tác, thiết lập không gian làm việc, thêm thành viên vào và thực hiện thay đổi.
+Thông tin chi tiết về tương tác là chức năng của Dynamics 365 Customer Insights, giúp bạn thu thập và đo lường hành vi của khách hàng trên trang web của bạn. Bài viết này giải thích cách đăng ký nhận thông tin chi tiết về tương tác, thiết lập không gian làm việc, thêm thành viên vào và thực hiện thay đổi.
 
-## <a name="sign-up-for-a-demo-of-engagement-insights"></a>Đăng ký bản demo về thông tin chuyên sâu về tương tác
+## <a name="sign-up-for-a-demo-of-engagement-insights"></a>Đăng ký bản demo về thông tin chi tiết về tương tác
 
 Bạn cần phải có một tài khoản người dùng Microsoft Azure Active Directory đang hoạt động. 
 
-1. Mở trang web [thông tin chuyên sâu về tương tác](https://pi.dynamics.com/). 
+1. Mở trang web [thông tin chi tiết về tương tác](https://home.ci.ai.dynamics.com/app/engagement-insights). 
 
 1. Đăng nhập bằng tài khoản cơ quan hoặc trường học của bạn.
 
 1. Chọn khu vực của bạn và sử dụng hộp kiểm để cho biết bạn có muốn chọn tham gia nhận các bản cập nhật và ưu đãi qua email hay không.
 
-1. Xem lại **Điều khoản sử dụng thông tin chuyên sâu về tương tác (xem trước)** và **Tuyên bố về quyền riêng tư** rồi chọn **Khám phá bản demo** để chấp nhận các điều khoản.
+1. Xem lại **Điều khoản sử dụng thông tin chi tiết về tương tác (xem trước)** và **Tuyên bố về quyền riêng tư** rồi chọn **Khám phá bản demo** để chấp nhận các điều khoản.
 
 1. Khám phá sản phẩm bằng cách sử dụng một bộ dữ liệu mẫu. 
 
-## <a name="set-up-your-first-workspace-in-engagement-insights"></a>Thiết lập không gian làm việc đầu tiên của bạn trong thông tin chuyên sâu về tương tác
+## <a name="set-up-your-first-workspace-in-engagement-insights"></a>Thiết lập không gian làm việc đầu tiên của bạn trong thông tin chi tiết về tương tác
 
 Không gian làm việc là cách bạn lưu trữ cũng như quản lý các sự kiện và báo cáo.
 
 Để tạo không gian làm việc đầu tiên của bạn
 
-1. Trong thông tin chuyên sâu về tương tác, hãy chọn **Kết nối dữ liệu của bạn** để bắt đầu trình hướng dẫn. 
+1. Trong thông tin chi tiết về tương tác, hãy chọn **Kết nối dữ liệu của bạn** để bắt đầu trình hướng dẫn. 
 
 :::image type="content" source="media/banner.png" alt-text="Trang Customer Insights với nút kết nối dữ liệu của bạn.":::
 
@@ -50,7 +50,7 @@ Không gian làm việc là cách bạn lưu trữ cũng như quản lý các s�
 
 1. Chọn **Tiếp theo** để xác nhận và tạo không gian làm việc.
 
-1. Thêm đoạn mã vào trang web của bạn để bắt đầu nhận dữ liệu trong thông tin chuyên sâu về tương tác. Bạn có thể thực hiện điều này ngay lập tức hoặc chia sẻ mã và hướng dẫn với quản trị viên trang web của mình. Để tìm đoạn mã sau, hãy truy cập vào **Quản trị viên** > **Không gian làm việc** > **Hướng dẫn cài đặt**.
+1. Thêm đoạn mã vào trang web của bạn để bắt đầu nhận dữ liệu trong thông tin chi tiết về tương tác. Bạn có thể thực hiện điều này ngay lập tức hoặc chia sẻ mã và hướng dẫn với quản trị viên trang web của mình. Để tìm đoạn mã sau, hãy truy cập vào **Quản trị viên** > **Không gian làm việc** > **Hướng dẫn cài đặt**.
 
    > [!IMPORTANT]
    > Dữ liệu sẽ không hiển thị trong không gian làm việc cho đến khi mã được triển khai trên trang web của bạn.
@@ -87,7 +87,7 @@ Bạn có thể chỉnh sửa thông tin chi tiết của không gian làm việ
 
 ## <a name="add-another-new-workspace"></a>Thêm một không gian làm việc mới khác
 
-:::image type="content" source="media/workspace-switcher.png" alt-text="Trang thông tin chuyên sâu về khách hàng với chú thích trên ngăn điều hướng và mô tả.":::
+:::image type="content" source="media/workspace-switcher.png" alt-text="Trang thông tin chi tiết về khách hàng với chú thích trên ngăn điều hướng và mô tả.":::
 
 Bạn có thể tạo không gian làm việc bổ sung để phân loại dữ liệu của mình.
 

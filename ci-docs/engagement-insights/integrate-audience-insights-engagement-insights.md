@@ -1,19 +1,19 @@
 ---
 title: Tạo mối liên kết giữa thông tin chi tiết về đối tượng và thông tin chi tiết về mức độ tương tác
 description: Tạo liên kết hoạt động giữa thông tin chi tiết về đối tượng và thông tin chi tiết về mức độ tương tác để cho phép chia sẻ dữ liệu theo hai chiều.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461039"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487133"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Tạo mối liên kết giữa thông tin chi tiết về đối tượng và thông tin chi tiết về mức độ tương tác
 
@@ -21,19 +21,19 @@ ms.locfileid: "7461039"
 
 Việc tích hợp giữa thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng liên kết các môi trường từ cả hai khả năng và cho phép chia sẻ dữ liệu hai chiều.
 
-Sử dụng hồ sơ và phân đoạn hợp nhất từ thông tin chi tiết về đối tượng để có thêm tùy chọn phân tích trong thông tin chi tiết về mức độ tương tác. Xuất các sự kiện có giá trị kinh doanh cao từ thông tin chi tiết về mức độ tương tác. Sử dụng các sự kiện này để thêm dữ liệu vào hồ sơ hợp nhất trong thông tin chi tiết về đối tượng.
+Sử dụng hồ sơ và phân khúc hợp nhất từ thông tin chi tiết về đối tượng để có thêm tùy chọn phân tích trong thông tin chi tiết về mức độ tương tác. Xuất các sự kiện có giá trị kinh doanh cao từ thông tin chi tiết về mức độ tương tác. Sử dụng các sự kiện này để thêm dữ liệu vào hồ sơ hợp nhất trong thông tin chi tiết về đối tượng.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Hồ sơ thông tin chi tiết về đối tượng phải được lưu trữ trong tài khoản Azure Data Lake Storage mà bạn sở hữu hoặc trong một kho dữ liệu được quản lý [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- Môi trường thông tin chi tiết về đối tượng của bạn phải có môi trường Dataverse. Và nếu môi trường đó cũng đang sử dụng Dataverse để lưu trữ dữ liệu, hãy đảm bảo rằng bạn kiểm tra tùy chọn **Bật tính năng chia sẻ dữ liệu** trong thông tin chi tiết về đối tượng. Để biết thêm thông tin: hãy xem [Tạo và đặt cấu hình môi trường trả phí trong thông tin chi tiết về đối tượng](../audience-insights/get-started-paid.md).
 - Bạn cần quyền của quản trị viên cho cả môi trường thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng.
-
 - Các môi trường liên kết phải trong cùng một vùng địa lý.
 
 > [!NOTE]
 > - Nếu đăng ký thông tin chi tiết về đối tượng của bạn là bản dùng thử, sử dụng kho dữ liệu được quản lý nội bộ về thông tin chi tiết về đối tượng, hãy liên hệ [pirequest@microsoft.com](mailto:pirequest@microsoft.com) để được hỗ trợ. 
-> - Nếu môi trường thông tin chi tiết về đối tượng của bạn sử dụng Azure Data Lake Storage để lưu trữ dữ liệu, bạn cần thêm tên dịch vụ chính Azure thông tin chi tiết về mức độ tương tác vào tài khoản lưu trữ của mình. Để biết chi tiết, hãy truy cập [Kết nối với một tài khoản Azure Data Lake Storage bằng tên dịch vụ chính Azure để có thông tin chi tiết về đối tượng](../audience-insights/connect-service-principal.md). Ngoài ra, môi trường thông tin chi tiết về đối tượng của bạn phải có [môi trường Dataverse](../audience-insights/get-started-paid.md). 
+> - Nếu môi trường thông tin chi tiết về đối tượng của bạn sử dụng Azure Data Lake Storage để lưu trữ dữ liệu, bạn cần thêm tên dịch vụ chính Azure thông tin chi tiết về mức độ tương tác vào tài khoản lưu trữ của mình. Để biết chi tiết, hãy truy cập [Kết nối với một tài khoản Azure Data Lake Storage bằng tên dịch vụ chính Azure để có thông tin chi tiết về đối tượng](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Tạo liên kết môi trường
 
@@ -47,13 +47,13 @@ Bạn có thể tạo liên kết môi trường bằng cách cập nhật cài 
 
 1. Chọn **Thiết lập môi trường** ở góc trên bên trái hoặc ở cuối màn hình.
 
-     :::image type="content" source="media/integrate2.png" alt-text="Chọn môi trường thông tin chuyên sâu về đối tượng.":::
+     :::image type="content" source="media/integrate2.png" alt-text="Chọn môi trường thông tin chi tiết về đối tượng.":::
 
 1. Chọn môi trường thông tin chi tiết về đối tượng, sau đó chọn ***Tiếp theo** để kết thúc. Bây giờ bạn có thể chọn tính năng tùy chọn cho các môi trường được liên kết.
  
-## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Bật các phân đoạn và thuộc tính hồ sơ hợp nhất thông tin chi tiết về đối tượng
+## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Bật các phân khúc và thuộc tính hồ sơ hợp nhất thông tin chi tiết về đối tượng
 
-Sau khi liên kết các môi trường, bạn có thể chọn tính năng tùy chọn cho các môi trường được liên kết. Những tính năng này cho phép các thuộc tính và phân đoạn hồ sơ hợp nhất từ thông tin chi tiết về đối tượng để phân tích tương tác trên dữ liệu khách hàng.
+Sau khi liên kết các môi trường, bạn có thể chọn tính năng tùy chọn cho các môi trường được liên kết. Những tính năng này cho phép các thuộc tính và phân khúc hồ sơ hợp nhất từ thông tin chi tiết về đối tượng để phân tích tương tác trên dữ liệu khách hàng.
 
 **Để phân tích dữ liệu web trong thông tin chi tiết về mức độ tương tác**
 
@@ -69,18 +69,19 @@ Sau khi liên kết các môi trường, bạn có thể chọn tính năng tùy
    > Tất cả các thuộc tính hồ sơ thông tin chi tiết về đối tượng đại diện cho số nhận dạng (chẳng hạn như **ID** và **ID thay thế**) được lọc ra khỏi các thuộc tính có sẵn và trở thành thứ nguyên trong thông tin chi tiết về mức độ tương tác.
 
 1. Khi bạn chọn xong các thuộc tính, hãy chọn **Tiếp theo**.
-1. Thêm người dùng có thể xem thứ nguyên và phân đoạn hồ sơ thông tin chi tiết về đối tượng trong thông tin chi tiết về mức độ tương tác.
+1. Thêm người dùng có thể xem thứ nguyên và phân khúc hồ sơ thông tin chi tiết về đối tượng trong thông tin chi tiết về mức độ tương tác.
 
     :::image type="content" source="media/integrate6.png" alt-text="Quản lý quyền truy cập vào dữ liệu khách hàng.":::
 
    > [!IMPORTANT]
    > Nếu bạn không thêm người dùng một cách rõ ràng trong bước này, dữ liệu sẽ bị ẩn với người dùng trong thông tin chi tiết về mức độ tương tác.
+   > Để phân khúc thông tin chi tiết về đối tượng hiển thị trong thông tin chi tiết về mức độ tương tác, trước tiên bạn phải [chạy các quy trình hợp nhất và xuôi dòng](../audience-insights/merge-entities.md). Các quy trình xuôi dòng rất quan trọng vì chúng tạo ra một bảng duy nhất chuẩn bị cho các phân khúc thông tin chi tiết về đối tượng được chia sẻ với thông tin chi tiết về mức độ tương tác. (Nếu quá trình làm mới hệ thống được lên lịch, nó sẽ tự động bao gồm các quy trình xuôi dòng.)
 
 1. Xem lại lựa chọn của bạn, sau đó chọn **Kết thúc**.
 
     :::image type="content" source="media/integrate7.png" alt-text="Xem lại cài đặt dữ liệu khách hàng.":::
 
-## <a name="export-refined-events-to-audience-insights"></a>Xuất các sự kiện tinh chỉnh với thông tin chuyên sâu về đối tượng
+## <a name="export-refined-events-to-audience-insights"></a>Xuất các sự kiện tinh chỉnh với thông tin chi tiết về đối tượng
 
 Sau khi tạo liên kết giữa các môi trường, bạn có thể xuất các sự kiện đã tinh chỉnh từ thông tin chi tiết về mức độ tương tác sang thông tin chi tiết về đối tượng và nhập chúng dưới dạng nguồn dữ liệu mới. 
 

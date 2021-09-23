@@ -1,33 +1,33 @@
 ### YamlMime:Landing
-title: Chức năng thông tin chuyên sâu về tương tác (xem trước) trong Dynamics 365 Customer Insights
-summary: Thu thập dữ liệu cho các trang web của bạn. Hiểu tương tác của khách hàng và việc sử dụng trên các trang web của bạn theo cách tương tác. Sử dụng tích hợp sâu giữa thông tin chuyên sâu về tương tác và thông tin chuyên sâu về đối tượng để làm phong phú thêm số liệu phân tích hành vi theo thời gian thực của bạn với báo cáo hồ sơ khách hàng. Làm phong phú hồ sơ khách hàng bằng các hoạt động web để nhận dữ liệu hành vi theo thời gian thực cùng với dữ liệu khách hàng có liên quan. Chuyển đổi doanh nghiệp của bạn để thu được giá trị tức thì từ dữ liệu khách hàng của bạn.
+title: Tính năng thông tin chi tiết về tương tác trong Dynamics 365 Customer Insights (bản xem trước)
+summary: Thu thập dữ liệu cho các trang web của bạn. Hiểu tương tác của khách hàng và việc sử dụng trên các trang web của bạn theo cách tương tác. Sử dụng tích hợp sâu giữa thông tin chi tiết về tương tác và thông tin chi tiết về đối tượng để làm phong phú thêm số liệu phân tích hành vi theo thời gian thực của bạn với báo cáo hồ sơ khách hàng. Làm phong phú hồ sơ khách hàng bằng các hoạt động web để nhận dữ liệu hành vi theo thời gian thực cùng với dữ liệu khách hàng có liên quan. Chuyển đổi doanh nghiệp của bạn để thu được giá trị tức thì từ dữ liệu khách hàng của bạn.
 metadata:
-  title: Tài liệu thông tin chuyên sâu về tương tác (xem trước)
-  description: Trung tâm trợ giúp với các liên kết chính để có thông tin chuyên sâu về tương tác.
+  title: Tài liệu thông tin chi tiết về tương tác (bản xem trước)
+  description: Trung tâm trợ giúp với các liên kết chính để có thông tin chi tiết về tương tác.
   ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036264"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494210"
 landingContent:
 - title: Giới thiệu
   linkLists:
   - linkListType: overview
     links:
-    - text: Tổng quan về khả năng
+    - text: Lợi ích của tính năng
       url: overview.md
-    - text: Điều khoản và khái niệm
+    - text: Bảng chú giải thuật ngữ
       url: glossary.md
-    - text: Khám phá thông tin chi tiết về mức độ tương tác
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Tính năng mới và cập nhật
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Đang tích hợp
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Cung cấp trang web của bạn
       url: instrument-website.md
-- title: Báo cáo
+- title: Xem và lọc báo cáo
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Xem báo cáo
       url: view-reports.md
-    - text: Tạo báo cáo tùy chỉnh
-      url: custom-reports.md
     - text: Xem báo cáo hồ sơ hợp nhất
       url: profile-reports.md
-    - text: Tạo báo cáo phễu
-      url: funnel-reports.md
-- title: Sự kiện
+    - text: Sử dụng phân khúc đối tượng để lọc báo cáo
+      url: integrate-audience-insights-segments.md
+- title: Phân tích
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Tạo báo cáo phễu
+      url: funnel-reports.md
+    - text: Phân tích dữ liệu hành vi
+      url: curate-dimensions.md
+    - text: Tạo báo cáo tùy chỉnh
+      url: custom-reports.md
     - text: Tạo các sự kiện tinh chỉnh
       url: refined-events.md
     - text: Xuất sự kiện
       url: export-events.md
-    - text: Xóa và xuất dữ liệu cá nhân
-      url: delete-export-personal-data.md
-- title: Nguồn lực dành cho nhà phát triển
+- title: Tài nguyên nhà phát triển
   linkLists:
   - linkListType: reference
     links:
-    - text: Nguồn lực dành cho nhà phát triển
+    - text: Tài nguyên nhà phát triển
       url: developer-resources.md
     - text: Mẫu WebSDK
       url: websdk-sample.md
@@ -80,7 +82,11 @@ landingContent:
     links:
     - text: Quản lý môi trường và không gian làm việc
       url: manage-environments-workspaces.md
-    - text: Kết nối với thông tin chuyên sâu về đối tượng
-      url: configure-connections.md
+    - text: Kết nối với thông tin chi tiết về đối tượng
+      url: integrate-audience-insights-engagement-insights.md
     - text: Quản lý cookie và sự đồng ý của người dùng
       url: user-consent-storage.md
+    - text: Xóa và xuất dữ liệu cá nhân
+      url: delete-export-personal-data.md
+    - text: Giới hạn dịch vụ
+      url: ../service-limits.md

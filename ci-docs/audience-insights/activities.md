@@ -1,20 +1,20 @@
 ---
 title: Hoạt động của khách hàng
-description: Xác định các hoạt động của khách hàng và xem chúng trong dòng thời gian của khách hàng.
-ms.date: 04/07/2021
+description: Xác định các hoạt động của khách hàng và xem các hoạt động đó theo dòng thời gian trên hồ sơ khách hàng.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033657"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494437"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
@@ -60,12 +60,15 @@ Nguồn dữ liệu của bạn có thể bao gồm các thực thể có dữ l
       - **Chi tiết bổ sung**: Trường có thông tin liên quan cho hoạt động này.
       - **Biểu tượng**: Biểu tượng thể hiện rõ nhất loại hoạt động này.
       - **Địa chỉ web**: Trường chứa URL có thông tin về hoạt động này. Ví dụ: hệ thống giao dịch lấy nguồn từ hoạt động này. URL này có thể là bất kỳ trường nào từ nguồn dữ liệu hoặc được xây dựng làm một trường mới bằng cách chuyển đổi Power Query. Dữ liệu URL sẽ được lưu trữ trong thực thể *Hoạt động đã hợp nhất*. Dữ liệu này có thể được dùng ở hạ nguồn bằng cách sử dụng [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Chỉ định dữ liệu hoạt động của khách hàng trong thực thể Hoạt động đã hợp nhất.":::
+
+   - **Hiển thị trong dòng thời gian**
+      - Chọn xem bạn có hiển thị hoạt động này trong dạng xem dòng thời gian trên hồ sơ khách hàng của bạn hay không. Chọn **Có** để hiển thị hoạt động trong dòng thời gian hoặc **Không** để ẩn hoạt động đó.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Chỉ định dữ liệu hoạt động của khách hàng trong thực thể Hoạt động đã hợp nhất.":::
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. Bạn có thể chọn **Kết thúc và xem xét** để lưu hoạt động ngay bây giờ khi loại hoạt động được đặt thành **Khác**. 
 
-1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, *Đăng ký* và các loại hoạt động *SalesOrderLine* có thể được ánh xạ theo ngữ nghĩa sau khi bạn đồng ý ánh xạ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
+1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, các loại hoạt động *Phản hồi*, *Khách hàng thân thiết*, *SalesOrder*, *SalesOrderLine* và *Đăng ký* có thể được ánh xạ theo ngữ nghĩa sau khi bạn đồng ý ánh xạ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. 
 

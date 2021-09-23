@@ -1,7 +1,7 @@
 ---
 title: Trộn các thực thể trong hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035028"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494345"
 ---
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
@@ -66,7 +66,7 @@ Thay đổi tên hiển thị của các thuộc tính đã hợp nhất. Bạn 
 
 Loại trừ một thuộc tính khỏi hồ sơ khách hàng hợp nhất. Nếu trường được sử dụng trong các quy trình khác, ví dụ như trong một phân khúc, hãy xóa trường khỏi các quy trình này trước khi loại trừ trường khỏi hồ sơ khách hàng. 
 
-1. Chọn trường hợp nhất.
+1. Chọn trường đã hợp nhất.
   
 1. Chọn **Hiển thị thêm** và chọn **Loại trừ**.
 
@@ -76,17 +76,40 @@ Loại trừ một thuộc tính khỏi hồ sơ khách hàng hợp nhất. Nế
 
 Trên trang **Hợp nhất**, chọn **Các trường bị loại trừ** để xem danh sách tất cả các trường đã loại trừ. Bạn có thể thêm lại các trường bị loại trừ trong ngăn này.
 
+## <a name="edit-a-merged-field"></a>Chỉnh sửa trường đã hợp nhất
+
+1.  Chọn trường đã hợp nhất.
+
+1.  Chọn **Hiển thị thêm** và chọn **Chỉnh sửa**.
+
+1.  Chỉ định cách kết hợp hoặc hợp nhất các trường từ một trong ba tùy chọn:
+    - **Quan trọng**: Xác định giá trị chiến thắng dựa trên xếp hạng quan trọng được chỉ định cho các trường tham gia. Đây là tùy chọn phối mặc định. Chọn **Di chuyển lên/xuống** để thiết lập xếp hạng mức độ quan trọng.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Tùy chọn quan trọng trong hộp thoại hợp nhất các trường."::: 
+    - **Gần đây nhất**: Xác định giá trị chiến thắng dựa trên giá trị gần đây nhất. Yêu cầu ngày hoặc trường số cho mọi thực thể tham gia trong phạm vi trường hợp nhất để xác định giá trị gần đây.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Tùy chọn gần đây trong hộp thoại hợp nhất các trường.":::
+    - **Cách đây xa nhất**: Xác định giá trị chiến thắng dựa trên giá trị cách đây xa nhất. Yêu cầu ngày hoặc trường số cho mọi thực thể tham gia trong phạm vi trường hợp nhất để xác định giá trị gần đây.
+
+1.  Bạn có thể thêm các trường bổ sung để tham gia vào quá trình hợp nhất.
+
+1.  Bạn có thể đổi tên trường đã hợp nhất.
+
+1. Chọn **Xong** để áp dụng các thay đổi của bạn.
+
+1. Chọn **Lưu** và **Chạy** để thay đổi. 
+
 ## <a name="manually-combine-fields"></a>Các trường kết hợp theo cách thủ công
 
 Chỉ định một thuộc tính đã hợp nhất theo cách thủ công. 
 
 1. Trên trang **Hợp nhất**, chọn **Kết hợp các trường**.
 
-1. Đặt **Tên** và **Tên trường đầu ra**.
+1. Chỉ định chính sách hợp nhất người chiến thắng trong trình đơn thả xuống **Kết hợp các trường theo**.
 
 1. Chọn trường để thêm vào. Chọn **Thêm trường** để kết hợp nhiều trường.
 
-1. Xác nhận việc loại trừ.
+1. Đặt **Tên** và **Tên trường đầu ra**.
+
+1. Chọn **Xong** để áp dụng các thay đổi.
 
 1. Chọn **Lưu** và **Chạy** để thay đổi. 
 
@@ -104,6 +127,27 @@ Một số thực thể chứa nhiều chi tiết hơn những thực thể khá
 
 1. Chọn **Lưu** và **Chạy** để thay đổi.
 
+## <a name="configure-customer-id-generation"></a>Đặt cấu hình tạo ID khách hàng 
+
+Sau khi đặt cấu hình các trường hợp nhất, bạn có thể xác định cách tạo giá trị CustomerId, mã nhận dạng hồ sơ khách hàng duy nhất. Bước hợp nhất trong quy trình hợp nhất dữ liệu tạo ra mã nhận dạng hồ sơ khách hàng duy nhất. Mã định danh là CustomerId trong thực thể *Khách hàng* là kết quả của quá trình hợp nhất dữ liệu. 
+
+CustomerId trong thực thể Khách hàng dựa trên hàm băm của giá trị đầu tiên của các khóa chính chiến thắng không rỗng. Các khóa này đến từ các thực thể được sử dụng trong giai đoạn so khớp và hợp nhất, đồng thời chịu ảnh hưởng của thứ tự so khớp. Vì vậy, CustomerID đã tạo có thể thay đổi khi giá trị khóa chính thay đổi trong thực thể chính của thứ tự so khớp. Do đó, giá trị khóa chính có thể không phải lúc nào cũng đại diện cho cùng một khách hàng.
+
+Đặt cấu hình Id khách hàng ổn định cho phép bạn tránh được hành vi đó.
+
+**Đặt cấu hình một ID khách hàng duy nhất**
+
+1. Chuyển đến **Thống nhất** > **Hợp nhất**.
+
+1. Trên trang **Hợp nhất**, chọn tab **Khóa**. 
+
+1. Di chuột trên hàng **CustomerId** và chọn tùy chọn **Đặt cấu hình**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kiểm soát để tùy chỉnh quy trình tạo ID.":::
+
+1. Chọn tối đa 5 trường sẽ bao gồm một ID khách hàng duy nhất và ổn định hơn. Thay vào đó, các bản ghi không khớp với cấu hình của bạn sử dụng ID do hệ thống đặt cấu hình.  
+
+1. Chọn **Xong** và chạy quy trình hợp nhất để áp dụng các thay đổi của bạn.
+
 ## <a name="run-your-merge"></a>Chạy hợp nhất của bạn
 
 Cho dù bạn hợp nhất thủ công các thuộc tính hay để hệ thống hợp nhất chúng, bạn luôn có thể chạy hợp nhất. Chọn **Chạy** trên trang **Hợp nhất** để bắt đầu quy trình.
@@ -113,7 +157,7 @@ Cho dù bạn hợp nhất thủ công các thuộc tính hay để hệ thống
 
 Chọn **Chỉ chạy Hợp nhất** nếu bạn chỉ muốn xem kết quả đầu ra được phản ánh trong thực thể khách hàng hợp nhất. Các quy trình xuôi dòng sẽ được làm mới như [đã xác định trong lịch trình làm mới](system.md#schedule-tab).
 
-Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới hệ thống với các thay đổi của bạn. Tất cả các quy trình, bao gồm tăng cường, phân đoạn và đo lường sẽ tự động chạy lại. Sau khi tất cả các quy trình xuôi dòng đã hoàn tất, hồ sơ khách hàng hiển thị mọi thay đổi bạn đã thực hiện.
+Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới hệ thống với các thay đổi của bạn. Tất cả các quy trình, bao gồm tăng cường, phân khúc và đo lường sẽ tự động chạy lại. Sau khi tất cả các quy trình xuôi dòng đã hoàn tất, hồ sơ khách hàng hiển thị mọi thay đổi bạn đã thực hiện.
 
 Để thực hiện thêm nhiều thay đổi và chạy lại bước, bạn có thể hủy quá trình hợp nhất đang diễn ra. Chọn **Đang làm mới ...** rồi chọn **Hủy công việc**  trong ngăn bên xuất hiện.
 
@@ -124,8 +168,8 @@ Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới 
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Định cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.
+Đặt cấu hình [hoạt động](activities.md), [nội dung phong phú](enrichment-hub.md) hoặc [mối quan hệ](relationships.md) để hiểu thêm về khách hàng của bạn.
 
-Nếu bạn đã định cấu hình các hoạt động, quá trình tăng cường hoặc phân đoạn, những phần này sẽ được xử lý tự động để sử dụng dữ liệu khách hàng mới nhất.
+Nếu bạn đã đặt cấu hình các hoạt động, quá trình tăng cường hoặc phân khúc, những phần này sẽ được xử lý tự động để sử dụng dữ liệu khách hàng mới nhất.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

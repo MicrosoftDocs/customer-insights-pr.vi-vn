@@ -6,7 +6,7 @@
   href: audience-insights/get-started-trial.md
 - name: Truy cập môi trường của bạn
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Thông tin chuyên sâu về đối tượng
+- name: Thông tin chi tiết về đối tượng
   items:
     - name: Trung tâm trợ giúp
       href: audience-insights/index.yml
@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Tính năng mới và cập nhật
       href: audience-insights/whats-new-audience-insights.md
-    - name: Tạo môi trường mới
-      href: audience-insights/get-started-paid.md
+    - name: Bắt đầu
+      items:
+        - name: Hướng dẫn Bắt đầu nhanh
+          href: audience-insights/get-started.md
+        - name: Tạo môi trường mới
+          href: audience-insights/get-started-paid.md
+        - name: Khám phá thông tin chi tiết về đối tượng
+          href: audience-insights/home.md
     - name: Tìm hiểu các mô-đun
       items:
         - name: Thu thập dữ liệu
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Địa chỉ nâng cao
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Tăng cường với Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Tăng cường dữ liệu bằng HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Tăng cường dữ liệu bằng Leadspace
@@ -86,7 +94,7 @@
           href: audience-insights/suggested-segments.md
         - name: Các phân khúc được đề xuất dựa trên hoạt động
           href: audience-insights/suggested-segments-activity.md
-        - name: Nhận thông tin chuyên sâu về phân khúc
+        - name: Nhận thông tin chi tiết về phân khúc
           href: audience-insights/segment-insights.md
         - name: Tìm khách hàng tương tự
           href: audience-insights/find-similar-customer-segments.md
@@ -220,7 +228,7 @@
           href: audience-insights/supported-languages.md
     - name: Khả năng mở rộng
       items:
-        - name: Tích hợp dữ liệu web từ thông tin chuyên sâu về tương tác
+        - name: Tích hợp dữ liệu web từ thông tin chi tiết về tương tác
           href: audience-insights/integrate-engagement-insights.md
         - name: Xem lại lược đồ thực thể trong Common Data Model
           href: audience-insights/entity-schemas.md
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Tham chiếu API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Giới hạn dịch vụ
-      href: audience-insights/service-limits.md
-    - name: Yêu cầu DSR theo GDPR
-      href: audience-insights/gdpr.md
-- name: Thông tin chuyên sâu về tương tác (bản xem trước)
+- name: Thông tin chi tiết về tương tác (bản xem trước)
   items:
     - name: Trung tâm trợ giúp
       href: engagement-insights/index.yml
     - name: Tổng quan về khả năng
       href: engagement-insights/overview.md
-    - name: Dùng thử miễn phí
-      href: 'https://pi.dynamics.com/'
     - name: Bắt đầu
       items:
-        - name: Bắt đầu
+        - name: Hướng dẫn Bắt đầu nhanh
           href: engagement-insights/get-started.md
         - name: Tạo không gian làm việc
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Quản lý môi trường và không gian làm việc
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Định cấu hình kết nối
-          href: engagement-insights/configure-connections.md
         - name: Quản lý cookie và sự đồng ý của người dùng
           href: engagement-insights/user-consent-storage.md
-    - name: GDPR
-      items:
-        - name: Xóa và xuất dữ liệu cá nhân
-          href: engagement-insights/delete-export-personal-data.md
     - name: Trạng thái sẵn có theo khu vực
       href: engagement-insights/regional-availability.md
-    - name: Giới hạn dịch vụ
-      href: engagement-insights/quotas.md
 - name: Tích hợp thông tin chi tiết về đối tượng và mức độ tương tác
   items:
     - name: Liên kết thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Sử dụng thứ nguyên nhân khẩu học để phân chia dữ liệu hành vi
       href: engagement-insights/curate-dimensions.md
+- name: Giới hạn dịch vụ
+  href: service-limits.md
+- name: Quyền và yêu cầu DSR
+  href: dsr-rights-requests.md
 - name: Nhận hỗ trợ
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

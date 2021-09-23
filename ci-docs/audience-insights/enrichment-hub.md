@@ -1,7 +1,7 @@
 ---
 title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
 description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032554"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7470054"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -29,6 +29,7 @@ Bạn cần có quyền của Người đóng góp hoặc Quản trị viên đ�
 
 Trên tab **Khám phá**, bạn sẽ tìm thấy những dữ liệu tăng cường sau:
 
+- [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
 - [Thương hiệu](enrichment-microsoft.md) do Microsoft cung cấp
 - [Sở thích](enrichment-microsoft.md) do Microsoft cung cấp
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp
@@ -37,13 +38,13 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy những dữ liệu tăng cư�
 - [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp
 - [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP)
 
-Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông tin bổ sung mà mình đã định cấu hình và chỉnh sửa thuộc tính.
+Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông tin bổ sung mà mình đã đặt cấu hình và chỉnh sửa thuộc tính.
 
 ## <a name="manage-existing-enrichments"></a>Quản lý dữ liệu tăng cường hiện có
 
-Đi đến tab **Dữ liệu tăng cường của tôi** để xem tất cả thông tin bổ sung đã định cấu hình. Mỗi dữ liệu tăng cường được biểu thị bằng một hàng bao gồm thông tin bổ sung về dữ liệu tăng cường đó.
+Đi đến tab **Dữ liệu tăng cường của tôi** để xem tất cả thông tin bổ sung đã đặt cấu hình. Mỗi dữ liệu tăng cường được biểu thị bằng một hàng bao gồm thông tin bổ sung về dữ liệu tăng cường đó.
 
-Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng (...) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã định cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
+Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng (...) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã đặt cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Các tùy chọn quản lý dữ liệu tăng cường trong danh sách dữ liệu tăng cường.":::
 
@@ -57,10 +58,22 @@ Chạy hoặc hủy kích hoạt nhiều dữ liệu tăng cường cùng lúc b
 
 ## <a name="enrichments-and-connections"></a>Dữ liệu tăng cường và kết nối
 
-Các dữ liệu tăng cường của bên thứ ba được định cấu hình bằng cách sử dụng [kết nối](connections.md) do quản trị viên thiết lập bằng thông tin xác thực và cho phép truyền dữ liệu. Quản trị viên và người đóng góp có thể dùng kết nối để định cấu hình dữ liệu tăng cường.  
+Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình bằng cách sử dụng [kết nối](connections.md) do quản trị viên thiết lập bằng thông tin xác thực và cho phép truyền dữ liệu. Quản trị viên và người đóng góp có thể dùng kết nối để đặt cấu hình dữ liệu tăng cường.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Nhiều dữ liệu tăng cường thuộc cùng loại
 
-Thực thể cần tăng cường sẽ được chỉ định trong quá trình định cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể định cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Bạn có thể xem các giới hạn và việc sử dụng hiện tại trên trang **Dữ liệu tăng cường**.
+Thực thể cần tăng cường sẽ được chỉ định trong quá trình đặt cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể đặt cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Bạn có thể xem các giới hạn và việc sử dụng hiện tại trên trang **Dữ liệu tăng cường**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
+
+Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
+
+Để xem tình trạng của quy trình tăng cường
+
+1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. 
+1. Trong tab **Nội dung tăng cường của tôi**, chọn trạng thái bổ sung để mở ngăn bên. 
+1. Trong ngăn **Chi tiết tiến trình**, hãy bung rộng phần **Nội dung tăng cường**. 
+1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**. 
+1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

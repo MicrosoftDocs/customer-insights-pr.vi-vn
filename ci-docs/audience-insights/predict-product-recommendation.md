@@ -1,20 +1,20 @@
 ---
 title: Dự đoán đề xuất sản phẩm
 description: Dự đoán các sản phẩm mà khách hàng có khả năng mua hoặc tương tác.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034982"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494565"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Dự đoán đề xuất sản phẩm (xem trước)
 
@@ -74,7 +74,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Nhập tên cho thực thể đầu ra chỉ bằng chữ cái và số, không có bất kỳ khoảng trắng nào. Đó là tên mà thực thể mô hình sẽ sử dụng. Sau đó, chọn **Tiếp**.
 
-### <a name="define-product-recommendation-configuration"></a>Xác định cấu hình đề xuất sản phẩm
+### <a name="define-product-recommendation-configuration"></a>Xác đặt cấu hình đề xuất sản phẩm
 
 1. Đặt **Số lượng sản phẩm** bạn muốn giới thiệu cho khách hàng. Giá trị này phụ thuộc vào cách phương thức phân phối của bạn điền vào dữ liệu. Nếu bạn có thể đề xuất ba sản phẩm, hãy đặt giá trị này cho phù hợp.
    
@@ -89,23 +89,24 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 ### <a name="add-required-data"></a>Thêm dữ liệu bắt buộc
 
-1. Chọn **Thêm dữ liệu** cho **Lịch sử giao dịch khách hàng** và chọn thực thể cung cấp thông tin lịch sử giao dịch/mua hàng như được mô tả trong [điều kiện tiên quyết](#prerequisites).
+1. Chọn **Thêm dữ liệu** và chọn loại hoạt động trong ngăn bên có chứa thông tin lịch sử giao dịch hoặc mua hàng được yêu cầu.
 
-1. Ánh xạ các trường ngữ nghĩa với các thuộc tính trong thực thể lịch sử mua hàng của bạn và chọn **Tiếp theo**. Để biết mô tả về các trường, hãy xem [điều kiện tiên quyết](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Xác định mối quan hệ của thực thể.](media/product-recommendation-purchasehistorymapping.PNG "Trang lịch sử mua hàng hiển thị các thuộc tính ngữ nghĩa được ánh xạ tới các trường trong thực thể lịch sử mua hàng đã chọn")
+1. Trong phần **Chọn các hoạt động**, chọn các hoạt động cụ thể từ hoạt động đã chọn mà bạn muốn tính toán tập trung vào.
 
-1. Nếu các trường không được điền, hãy định cấu hình mối quan hệ từ thực thể lịch sử mua hàng của bạn với thực thể *Khách hàng*.
-    1. Chọn **Thực thể lịch sử mua hàng**.
-    1. Chọn **Trường** xác định khách hàng trong thực thể lịch sử mua hàng. Trường đó cần liên quan đến ID khách hàng chính của thực thể *Khách hàng*.
-    1. Chọn **Thực thể khách hàng** khớp với thực thể khách hàng chính của bạn.
-    1. Nhập tên mô tả mối quan hệ.
-       > [!div class="mx-imgBorder"]
-       > ![Trang lịch sử mua hàng hiển thị việc tạo mối quan hệ với khách hàng.](media/model-purchase-join.png "Trang lịch sử mua hàng hiển thị việc tạo mối quan hệ với khách hàng")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Ngăn bên hiển thị việc chọn các hoạt động cụ thể theo loại ngữ nghĩa.":::
+
+1. Nếu bạn chưa ánh xạ hoạt động tới một loại ngữ nghĩa, hãy chọn **Chỉnh sửa** để làm vậy. Trải nghiệm được hướng dẫn để ánh xạ các hoạt động ngữ nghĩa sẽ mở ra. Ánh xạ dữ liệu của bạn đến các trường tương ứng trong loại hoạt động đã chọn.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Loại hoạt động thiết đặt trang.":::
+
+1. Sau khi ánh xạ hoạt động sang loại ngữ nghĩa tương ứng, hãy chọn **Tiếp theo** để tiếp tục 
+ 
+1. Ánh xạ các thuộc tính ngữ nghĩa đến các trường được yêu cầu để chạy mô hình.
 
 1. Chọn **Lưu**.
 
 1. Chọn **Tiếp theo**.
+
 
 ### <a name="configure-product-filters"></a>Đặt cấu hình bộ lọc sản phẩm
 
