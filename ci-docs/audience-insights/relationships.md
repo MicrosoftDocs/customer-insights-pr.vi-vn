@@ -1,20 +1,20 @@
 ---
 title: Mối quan hệ giữa các thực thể và đường dẫn thực thể
 description: Tạo và quản lý mối quan hệ giữa các thực thể từ nhiều nguồn dữ liệu.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035257"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557378"
 ---
 # <a name="relationships-between-entities"></a>Mối quan hệ giữa các thực thể
 
@@ -93,11 +93,11 @@ Các tùy chọn có thể dùng:
 - **Thay đổi thành bố cục ngang/dọc**: Thay đổi hướng của các thực thể và mối quan hệ.
 - **Chỉnh sửa**: Cập nhật các thuộc tính của mối quan hệ tùy chỉnh trong ngăn chỉnh sửa và lưu các thay đổi.
 
-### <a name="relationship-path"></a>Đường dẫn mối quan hệ
+## <a name="relationship-paths"></a>Đường dẫn mối quan hệ
 
-Đường dẫn mối quan hệ mô tả các thực thể được kết nối với các mối quan hệ giữa một thực thể nguồn và một thực thể đích. Nó được sử dụng khi tạo một phân khúc hoặc một thước đo bao gồm các thực thể khác ngoài thực thể hồ sơ hợp nhất và có nhiều tùy chọn để tiếp cận thực thể hồ sơ hợp nhất.
+Đường dẫn mối quan hệ mô tả các thực thể được kết nối bằng các mối quan hệ giữa một thực thể nguồn và một thực thể đích. Nó được sử dụng khi tạo một phân khúc hoặc một thước đo bao gồm các thực thể khác ngoài thực thể hồ sơ hợp nhất và có nhiều tùy chọn để tiếp cận thực thể hồ sơ hợp nhất. 
 
-Đường dẫn mối quan hệ thông báo cho hệ thống về mối quan hệ nào để truy cập vào thực thể hồ sơ hợp nhất. Các đường dẫn mối quan hệ khác nhau có thể mang lại những kết quả khác nhau.
+Đường dẫn mối quan hệ thông báo cho hệ thống về mối quan hệ nào sẽ truy cập vào thực thể hồ sơ hợp nhất. Các đường dẫn mối quan hệ khác nhau có thể mang lại những kết quả khác nhau.
 
 Ví dụ: thực thể *eCommerce_eCommercePurchases* có các mối quan hệ sau với thực thể *Khách hàng* hồ sơ hợp nhất:
 
@@ -105,7 +105,43 @@ Ví dụ: thực thể *eCommerce_eCommercePurchases* có các mối quan hệ s
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Khách hàng
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Khách hàng 
 
-Đường dẫn mối quan hệ xác định thực thể nào bạn có thể sử dụng khi tạo quy tắc cho các biện pháp hoặc phân khúc. Việc chọn tùy chọn có đường dẫn mối quan hệ dài nhất có thể sẽ mang lại ít kết quả hơn vì các bản ghi phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, khách hàng phải mua hàng thông qua thương mại điện tử (eCommerce_eCommercePurchases), tại điểm bán hàng (POS_posPurchases) và tham gia vào chương trình khách hàng thân thiết của chúng tôi (loyaltyScheme_loyCustomers). Khi chọn tùy chọn đầu tiên, bạn có thể sẽ nhận được nhiều kết quả hơn vì khách hàng chỉ cần tồn tại trong một thực thể bổ sung.
+Đường dẫn mối quan hệ xác định thực thể mà bạn có thể sử dụng khi tạo quy tắc cho các biện pháp hoặc phân đoạn. Việc chọn tùy chọn có đường dẫn mối quan hệ dài nhất có thể sẽ mang lại ít kết quả hơn vì các bản ghi phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, khách hàng phải mua hàng thông qua thương mại điện tử (eCommerce_eCommercePurchases), tại điểm bán hàng (POS_posPurchases) và tham gia vào chương trình khách hàng thân thiết của chúng tôi (loyaltyScheme_loyCustomers). Khi chọn tùy chọn đầu tiên, bạn có thể sẽ nhận được nhiều kết quả hơn vì khách hàng chỉ cần tồn tại trong một thực thể bổ sung.
+
+### <a name="direct-relationship"></a>Mối quan hệ trực tiếp
+
+Một mối quan hệ được phân loại là **mối quan hệ trực tiếp** khi một thực thể nguồn liên quan đến một thực thể đích chỉ có một mối quan hệ.
+
+Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchases* kết nối với một thực thể đích *eCommerce_eCommerceContacts* thực thể chỉ thông qua *ContactId*, đó là một mối quan hệ trực tiếp.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với thực thể đích.":::
+
+#### <a name="multi-path-relationship"></a>Mối quan hệ nhiều đường dẫn
+
+Một **mối quan hệ nhiều đường dẫn** là một kiểu quan hệ trực tiếp đặc biệt kết nối một thực thể nguồn với nhiều thực thể đích.
+
+Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchases* liên quan đến hai thực thể đích, thì cả hai *eCommerce_eCommerceContacts* và *loyaltyScheme_loyCustomers* là một mối quan hệ nhiều đường dẫn.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với nhiều thực thể đích thông qua mối quan hệ nhiều bước.":::
+
+### <a name="indirect-relationship"></a>Mối quan hệ gián tiếp
+
+Một mối quan hệ được phân loại là **mối quan hệ gián tiếp** khi một thực thể nguồn có liên quan đến một hoặc nhiều thực thể bổ sung trước khi có liên quan đến một thực thể đích.
+
+#### <a name="multi-hop-relationship"></a>Mối quan hệ nhiều bước
+
+Một *mối quan hệ nhiều bước* là một *mối quan hệ gián tiếp* cho phép bạn kết nối một thực thể nguồn với một thực thể đích thông qua một hoặc nhiều thực thể trung gian khác.
+
+Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchasesWest* kết nối với một thực thể trung gian được gọi là *eCommerce_eCommercePurchasesEast*, sau đó kết nối với một thực thể đích được gọi là *eCommerce_eCommerceContacts*, đó là một mối quan hệ nhiều bước.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với một thực thể đích qua một thực thể trung gian.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Mối quan hệ nhiều bước, nhiều đường dẫn
+
+Các mối quan hệ nhiều bước và nhiều đường dẫn có thể được sử dụng cùng nhau để tạo **các mối quan hệ nhiều bước, nhiều đường dẫn**. Loại đặc biệt này kết hợp các chức năng của mối quan hệ **nhiều bước** và **nhiều đường dẫn**. Mối quan hệ này giúp bạn kết nối với nhiều thực thể đích thông qua các thực thể trung gian.
+
+Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchasesWest* kết nối với một thực thể trung gian được gọi là *eCommerce_eCommercePurchasesEast*, sau đó kết nối với hai thực thể đích, cả hai *eCommerce_eCommerceContacts* và *loyaltyScheme_loyCustomers* là mối quan hệ nhiều bước, nhiều đường dẫn.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với một thực thể đích và kết nối với một thực thể đích khác thông qua một thực thể trung gian.":::
 
 ## <a name="manage-existing-relationships"></a>Quản lý mối quan hệ hiện có 
 

@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Google Ads
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Google Ads.
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031683"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558998"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
 Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đối tượng Google Ads và sử dụng chúng để quảng cáo trên Google Tìm kiếm, Gmail, YouTube và Google Display Network. 
+
+> [!IMPORTANT]
+> Hiện tại, bạn chỉ có thể tạo một kết nối mới và xuất dữ liệu sang Google Ads nếu bạn đã có mã thông báo Nhà phát triển Google Ads được chấp thuận. Do các thay đổi về chính sách, chúng tôi sẽ sớm cập nhật quá trình xuất Google Ads và cung cấp tùy chọn xuất không yêu cầu mã thông báo của nhà phát triển để đảm bảo trải nghiệm của bạn liên tục và đơn giản hóa quá trình xuất sang Google Ads. Chúng tôi khuyên bạn không nên thiết lập thêm kết nối với Google Ads để tạo điều kiện chuyển sang tùy chọn xuất mới dễ dàng hơn.
 
 ## <a name="prerequisites-for-connection"></a>Điều kiện tiên quyết để kết nối
 

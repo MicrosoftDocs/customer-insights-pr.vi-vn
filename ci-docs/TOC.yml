@@ -238,11 +238,11 @@
           href: audience-insights/apis.md
         - name: Tham chiếu API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Thông tin chi tiết về tương tác (bản xem trước)
+- name: Thông tin chuyên sâu về tương tác (bản xem trước)
   items:
     - name: Trung tâm trợ giúp
       href: engagement-insights/index.yml
-    - name: Tổng quan về khả năng
+    - name: Giới thiệu về thông tin chi tiết về tương tác
       href: engagement-insights/overview.md
     - name: Bắt đầu
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Trạng thái sẵn có theo khu vực
       href: engagement-insights/regional-availability.md
-- name: Tích hợp thông tin chi tiết về đối tượng và mức độ tương tác
+- name: Chia sẻ dữ liệu giữa các tính năng
   items:
     - name: Liên kết thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Quyền và yêu cầu DSR
   href: dsr-rights-requests.md
-- name: Nhận hỗ trợ
-  href: 'https://dynamics.microsoft.com/support/'
