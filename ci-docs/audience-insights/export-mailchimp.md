@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Mailchimp
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033565"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618641"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Xuất phân khúc sang Mailchimp (xem trước)
 
@@ -27,12 +27,12 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Mailchimp để tạo
 -   Bạn có [các phân khúc được định cấu hình](segments.md)
 -   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ mỗi lần xuất sang Mailchimp.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Mailchimp.
 - Bạn chỉ xuất được phân khúc sang Mailchimp.
-- Quá trình xuất phân khúc với 1 triệu hồ sơ có thể mất đến ba giờ. 
-- Số lượng hồ sơ mà bạn có thể xuất sang Mailchimp phụ thuộc và giới hạn vào hợp đồng của bạn với Mailchimp.
+- Quá trình xuất phân khúc với 1 triệu hồ sơ khách hàng có thể mất đến 3 giờ. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Mailchimp tùy thuộc vào và giới hạn trong hợp đồng của bạn với Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Thiết lập kết nối với Mailchimp
 
@@ -66,7 +66,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 1. Nhập **[ID đối tượng Mailchimp](https://mailchimp.com/help/find-audience-id/)** của bạn
 
-3. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. 
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. 
 
 1. Bạn có thể tùy ý xuất **Tên** và **Họ** để tạo nhiều email được cá nhân hóa hơn. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
 

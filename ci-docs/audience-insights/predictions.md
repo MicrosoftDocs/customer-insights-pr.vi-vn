@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6ce72486faa97e6f630a991044ca5e6d4714d0b8b8395a60fad12f3e3a49fa29
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032462"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645060"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
 
@@ -35,7 +35,7 @@ Trước khi tổ chức của bạn có thể sử dụng tính năng dự đo�
 
 2. Môi trường thông tin chi tiết về đối tượng của bạn được liên kết với phiên bản Dataverse.
 
-Nếu bạn [tạo môi trường đầu tiên](get-started-paid.md), hãy đặt cấu hình trong hộp thoại **Tạo môi trường** và chọn **Nâng cao**. Nếu bạn đã tạo một môi trường, hãy đi tới cài đặt của nó và chọn **Nâng cao**. Dù bằng cách nào, trong phần **Sử dụng dự đoán**, nhập URL phiên bản Dataverse mà bạn muốn đính kèm môi trường của mình.
+Để biết thêm thông tin, hãy xem [Tạo môi trường mới](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Tạo dự đoán trong thực thể Khách hàng
 

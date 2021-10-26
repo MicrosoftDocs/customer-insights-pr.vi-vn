@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465231"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606152"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Bản cập nhật tháng 9 năm 2021
+
+Các bản cập nhật vào tháng 9 năm 2021 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="activities"></a>Hoạt động
+
+- **Cải thiện tiến trình hoạt động** Chúng tôi đã mở rộng bộ lọc cho tiến trình hoạt động trên hồ sơ khách hàng. Ngoài ra, bạn có thể sử dụng khay lọc mới để lọc theo loại hoạt động và theo ngày. Ngày có thể được lọc bằng các điều kiện khác nhau. Để biết thêm thông tin, hãy xem phần [Xem tiến trình hoạt động trên hồ sơ khách hàng](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Mối quan hệ
+
+- **Hỗ trợ mối quan hệ nhiều bước** Sử dụng các mối quan hệ nhiều bước khi đặt cấu hình hoạt động và xác định mối quan hệ giữa các thực thể. Mối quan hệ nhiều bước sử dụng một thực thể trung gian để kết nối hai thực thể. Khi đặt cấu hình một hoạt động, bạn có thể sử dụng mối quan hệ nhiều bước để kết nối thực thể hoạt động với một thực thể trung gian, sau đó là thực thể khách hàng. Bạn có thể kết nối mối quan hệ nhiều bước với mối quan hệ nhiều đường dẫn. Để biết thêm thông tin, hãy xem [Mối quan hệ nhiều bước](relationships.md#multi-hop-relationship).
+
+- **Hỗ trợ mối quan hệ nhiều đường dẫn** Sử dụng mối quan hệ nhiều đường dẫn khi đặt cấu hình hoạt động và xác định mối quan hệ giữa các thực thể. Mối quan hệ đa nhiều đường dẫn liên quan đến thực thể nguồn với nhiều hơn một thực thể. Khi đặt cấu hình một hoạt động, bạn có thể sử dụng mối quan hệ nhiều đường dẫn để kết nối thực thể hoạt động với nhiều thực thể khách hàng. Bạn có thể kết nối mối quan hệ nhiều đường dẫn với mối quan hệ nhiều bước. Để biết thêm thông tin, xem phần [Mối quan hệ nhiều đường dẫn](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Bản cập nhật tháng 8 năm 2021
 

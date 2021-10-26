@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557378"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623203"
 ---
 # <a name="relationships-between-entities"></a>Mối quan hệ giữa các thực thể
 
@@ -68,6 +68,20 @@ Mối quan hệ bao gồm một *thực thể nguồn* chứa khóa ngoại và 
 
 4. Chọn **Lưu** để tạo mối quan hệ tùy chỉnh.
 
+## <a name="set-up-account-hierarchies"></a>Thiết lập hệ thống phân cấp tài khoản
+
+Các môi trường được đặt cấu hình để sử dụng tài khoản doanh nghiệp làm đối tượng đích chính có thể đặt cấu hình hệ thống phân cấp tài khoản cho các tài khoản doanh nghiệp liên quan. Ví dụ, một công ty có các đơn vị kinh doanh riêng biệt. 
+
+Các tổ chức tạo phân cấp tài khoản để quản lý tốt hơn các tài khoản và mối quan hệ của chúng với nhau. Khả năng thông tin chi tiết về đối tượng hỗ trợ hệ thống phân cấp tài khoản mẹ-con đã tồn tại trong dữ liệu khách hàng được nhập. Ví dụ: tài khoản từ Dynamics 365 Sales. Các cấu trúc phân cấp này có thể được đặt cấu hình trên trang **Mối quan hệ** trong thông tin chi tiết về đối tượng, trong tab phân cấp tài khoản.
+
+1. Chuyển đến **Dữ liệu** > **Mối quan hệ**.
+1. Chọn tab **Phân cấp tài khoản**.
+1. Chọn **Hệ thống cấp bậc tài khoản mới**. 
+1. Trong ngăn **Hệ thống cấp bậc tài khoản**, cung cấp tên cho hệ thống cấp bậc. Hệ thống tạo tên cho thực thể đầu ra. Bạn có thể thay đổi tên của thực thể tên đầu ra.
+1. Chọn thực thể chứa hệ thống cấp bậc tài khoản của bạn. Nó thường nằm trong cùng một thực thể có chứa các tài khoản.
+1. Chọn **ID tài khoản** và **ID tài khoản mẹ** từ thực thể đã chọn 
+1. Chọn **Lưu** để áp dụng các thiết đặt và hoàn thiện hệ thống cấp bậc tài khoản.
+
 ## <a name="view-relationships"></a>Xem mối quan hệ
 
 Trang Mối quan hệ liệt kê tất cả các mối quan hệ đã được tạo. Mỗi hàng đại diện cho một mối quan hệ, cũng bao gồm thông tin chi tiết về thực thể nguồn, thực thể đích và lượng số. 
@@ -105,7 +119,7 @@ Ví dụ: thực thể *eCommerce_eCommercePurchases* có các mối quan hệ s
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Khách hàng
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Khách hàng 
 
-Đường dẫn mối quan hệ xác định thực thể mà bạn có thể sử dụng khi tạo quy tắc cho các biện pháp hoặc phân đoạn. Việc chọn tùy chọn có đường dẫn mối quan hệ dài nhất có thể sẽ mang lại ít kết quả hơn vì các bản ghi phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, khách hàng phải mua hàng thông qua thương mại điện tử (eCommerce_eCommercePurchases), tại điểm bán hàng (POS_posPurchases) và tham gia vào chương trình khách hàng thân thiết của chúng tôi (loyaltyScheme_loyCustomers). Khi chọn tùy chọn đầu tiên, bạn có thể sẽ nhận được nhiều kết quả hơn vì khách hàng chỉ cần tồn tại trong một thực thể bổ sung.
+Đường dẫn mối quan hệ xác định thực thể mà bạn có thể sử dụng khi tạo quy tắc cho các biện pháp hoặc phân đoạn. Việc chọn tùy chọn có đường dẫn mối quan hệ dài nhất có thể sẽ mang lại ít kết quả hơn vì các bản ghi phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, khách hàng đã mua hàng hóa thông qua thương mại điện tử(eCommerce_eCommercePurchases) làm điểm bán hàng (POS_posPurchases) và tham gia vào chương trình khách hàng thân thiết (loyaltyScheme_loyCustomers). Khi chọn tùy chọn đầu tiên, bạn có thể sẽ nhận được nhiều kết quả hơn vì khách hàng chỉ cần tồn tại trong một thực thể bổ sung.
 
 ### <a name="direct-relationship"></a>Mối quan hệ trực tiếp
 

@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559044"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645608"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Tạo mối liên kết giữa thông tin chi tiết về đối tượng và thông tin chi tiết về mức độ tương tác
 
@@ -25,8 +25,8 @@ Sử dụng hồ sơ và phân khúc hợp nhất từ thông tin chi tiết v�
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Hồ sơ thông tin chi tiết về đối tượng phải được lưu trữ trong tài khoản Azure Data Lake Storage mà bạn sở hữu hoặc trong một kho dữ liệu được quản lý [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-- Môi trường thông tin chi tiết về đối tượng của bạn phải có môi trường Dataverse. Và nếu môi trường đó cũng đang sử dụng Dataverse để lưu trữ dữ liệu, hãy đảm bảo rằng bạn kiểm tra tùy chọn **Bật tính năng chia sẻ dữ liệu** trong thông tin chi tiết về đối tượng. Để biết thêm thông tin: hãy xem [Tạo và đặt cấu hình môi trường trả phí trong thông tin chi tiết về đối tượng](../audience-insights/get-started-paid.md).
+- Hồ sơ thông tin chuyên sâu về đối tượng phải được lưu trữ trong tài khoản Azure Data Lake Storage mà bạn sở hữu hoặc trong một kho dữ liệu [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;được quản lý. 
+- Môi trường thông tin chi tiết về đối tượng của bạn phải có môi trường Dataverse. Và nếu môi trường đó cũng đang sử dụng Dataverse để lưu trữ dữ liệu, hãy đảm bảo rằng bạn kiểm tra tùy chọn **Bật tính năng chia sẻ dữ liệu** trong thông tin chi tiết về đối tượng. Để biết thêm thông tin, hãy xem [Tạo và đặt cấu hình môi trường trong thông tin chi tiết về đối tượng](../audience-insights/create-environment.md).
 - Bạn cần quyền của quản trị viên cho cả môi trường thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng.
 - Các môi trường liên kết phải trong cùng một vùng địa lý.
 

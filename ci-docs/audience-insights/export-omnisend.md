@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Omnisend
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Omnisend.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 58b54dc24f4656f9dd376415a701539c8796e83e6d4e3c6754f5627ce77c5685
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031792"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619054"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Xuất phân khúc sang Omnisend (xem trước)
 
@@ -26,11 +26,11 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Omnisend để d
 -   Bạn có [các phân khúc đã đặt cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
 -   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất tối đa 1 triệu hồ sơ trong mỗi lần xuất sang Omnisend và có thể mất tới 4 giờ để hoàn tất.
+- Bạn có thể xuất tối đa 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Omnisend và có thể mất đến 4 giờ để hoàn thành.
 - Bạn chỉ xuất được phân khúc sang Omnisend.
-- Số lượng hồ sơ mà bạn có thể xuất sang Omnisend tùy thuộc vào hợp đồng của bạn với Omnisend.
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Omnisend tùy thuộc vào hợp đồng của bạn với Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Thiết lập kết nối với Omnisend
 
@@ -62,7 +62,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Omnisend. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Omnisend. Bạn có thể tùy ý xuất Tên, Họ, Địa chỉ, Quốc gia/Khu vực, Tiểu bang, Thành phố và Mã bưu chính để tạo thêm nhiều email được cá nhân hóa. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Omnisend. Bạn có thể tùy ý xuất Tên, Họ, Địa chỉ, Quốc gia/Khu vực, Tiểu bang, Thành phố và Mã bưu chính để tạo thêm nhiều email được cá nhân hóa. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
 
 1. Chọn **Lưu**.
 

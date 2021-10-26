@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Snapchat
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033428"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618709"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Xuất phân khúc sang Snapchat (xem trước)
 
@@ -29,7 +29,7 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Snapchat và s�
 ## <a name="known-limitations"></a>Các giới hạn đã biết
 
 - Bạn chỉ xuất được phân khúc sang Snapchat.
-- Có thể mất tới 15 phút để hoàn thành quá trình xuất tối đa 1 triệu hồ sơ sang Snapchat. 
+- Có thể mất tới 15 phút để hoàn tất việc xuất tối đa 1 triệu hồ sơ khách hàng sang Snapchat. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Thiết lập kết nối với Snapchat
 
@@ -63,7 +63,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập [**ID đối tượng Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Snapchat.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Snapchat.
 
 1. Chọn phân khúc mà bạn muốn xuất. 
 

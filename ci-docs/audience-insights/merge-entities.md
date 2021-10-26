@@ -1,7 +1,7 @@
 ---
 title: Trộn các thực thể trong hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494345"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648280"
 ---
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
@@ -89,7 +91,7 @@ Trên trang **Hợp nhất**, chọn **Các trường bị loại trừ** để 
     :::image type="content" source="media/recency-merge-option.png" alt-text="Tùy chọn gần đây trong hộp thoại hợp nhất các trường.":::
     - **Cách đây xa nhất**: Xác định giá trị chiến thắng dựa trên giá trị cách đây xa nhất. Yêu cầu ngày hoặc trường số cho mọi thực thể tham gia trong phạm vi trường hợp nhất để xác định giá trị gần đây.
 
-1.  Bạn có thể thêm các trường bổ sung để tham gia vào quá trình hợp nhất.
+1.  Bạn có thể thêm nhiều trường khác để tham gia vào quá trình hợp nhất.
 
 1.  Bạn có thể đổi tên trường đã hợp nhất.
 
@@ -131,15 +133,15 @@ Một số thực thể chứa nhiều chi tiết hơn những thực thể khá
 
 Sau khi đặt cấu hình các trường hợp nhất, bạn có thể xác định cách tạo giá trị CustomerId, mã nhận dạng hồ sơ khách hàng duy nhất. Bước hợp nhất trong quy trình hợp nhất dữ liệu tạo ra mã nhận dạng hồ sơ khách hàng duy nhất. Mã định danh là CustomerId trong thực thể *Khách hàng* là kết quả của quá trình hợp nhất dữ liệu. 
 
-CustomerId trong thực thể Khách hàng dựa trên hàm băm của giá trị đầu tiên của các khóa chính chiến thắng không rỗng. Các khóa này đến từ các thực thể được sử dụng trong giai đoạn so khớp và hợp nhất, đồng thời chịu ảnh hưởng của thứ tự so khớp. Vì vậy, CustomerID đã tạo có thể thay đổi khi giá trị khóa chính thay đổi trong thực thể chính của thứ tự so khớp. Do đó, giá trị khóa chính có thể không phải lúc nào cũng đại diện cho cùng một khách hàng.
+CustomerId trong thực thể Khách hàng dựa trên hàm băm của giá trị đầu tiên của các khóa chính chiến thắng không rỗng. Các khóa này đến từ các thực thể được sử dụng trong giai đoạn so khớp và hợp nhất, đồng thời chịu ảnh hưởng của thứ tự so khớp. Vì vậy, CustomerID đã tạo có thể thay đổi khi giá trị khóa chính thay đổi trong thực thể chính của thứ tự so khớp. Giá trị khóa chính có thể không phải lúc nào cũng đại diện cho cùng một khách hàng.
 
-Đặt cấu hình Id khách hàng ổn định cho phép bạn tránh được hành vi đó.
+Khi đặt cấu hình ID khách hàng ổn định, bạn có thể tránh được hành vi đó.
 
 **Đặt cấu hình một ID khách hàng duy nhất**
 
 1. Chuyển đến **Thống nhất** > **Hợp nhất**.
 
-1. Trên trang **Hợp nhất**, chọn tab **Khóa**. 
+1. Chọn tab **Khóa**. 
 
 1. Di chuột trên hàng **CustomerId** và chọn tùy chọn **Đặt cấu hình**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kiểm soát để tùy chỉnh quy trình tạo ID.":::
@@ -147,6 +149,30 @@ CustomerId trong thực thể Khách hàng dựa trên hàm băm của giá tr�
 1. Chọn tối đa 5 trường sẽ bao gồm một ID khách hàng duy nhất và ổn định hơn. Thay vào đó, các bản ghi không khớp với cấu hình của bạn sử dụng ID do hệ thống đặt cấu hình.  
 
 1. Chọn **Xong** và chạy quy trình hợp nhất để áp dụng các thay đổi của bạn.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Nhóm hồ sơ thành các hộ gia đình hoặc cụm
+
+Trong quá trình đặt cấu hình tạo hồ sơ khách hàng, bạn có thể xác định quy tắc để nhóm các hồ sơ liên quan vào một cụm. Hiện tại có 2 loại cụm – cụm hộ gia đình và cụm tùy chỉnh. Hệ thống tự động chọn một gia đình có các quy tắc định sẵn nếu thực thể *Khách hàng* chứa trường ngữ nghĩa *Person.LastName* và *Location.Address*. Bạn cũng có thể tạo một cụm có các quy tắc và điều kiện của riêng mình, tương tự như [quy tắc so khớp](match-entities.md#define-rules-for-match-pairs).
+
+**Xác định một hộ gia đình hoặc một cụm**
+
+1. Chuyển đến **Thống nhất** > **Hợp nhất**.
+
+1. Trên tab **Hợp nhất**, chọn **Nâng cao** > **Tạo cụm**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Điều khiển để tạo một cụm mới.":::
+
+1. Chọn giữa **Hộ gia đình** hoặc một cụm **Tùy chỉnh**. Nếu trường ngữ nghĩa *Person.LastName* và *Location.Address* có trong thực thể *Customer*, hộ gia đình sẽ tự động được chọn.
+
+1. Cung cấp tên cho cụm rồi chọn **Xong**.
+
+1. Chọn tab **Cụm** để tìm cụm mà bạn đã tạo.
+
+1. Chỉ định các quy tắc và điều kiện để xác định cụm của bạn.
+
+1. Chọn **Chạy** để chạy quá trình hợp nhất và tạo cụm.
+
+Sau khi chạy quá trình hợp nhất, các giá trị nhận dạng cụm được thêm thành các trường mới vào thực thể *Khách hàng*.
 
 ## <a name="run-your-merge"></a>Chạy hợp nhất của bạn
 

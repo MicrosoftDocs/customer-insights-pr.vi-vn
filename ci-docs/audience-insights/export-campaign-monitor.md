@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Campaign Monitor
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031913"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619007"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Xuất phân khúc sang Campaign Monitor (xem trước)
 
@@ -26,12 +26,12 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Campaign Monitor
 -   Bạn có [các phân khúc được định cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
 -   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất tối đa 1 triệu hồ sơ trong mỗi lần xuất sang Campaign Monitor.
+- Bạn có thể xuất tối đa 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Campaign Monitor.
 - Bạn chỉ xuất được phân khúc sang Campaign Monitor.
-- Có thể mất tới 20 phút để hoàn thành quá trình xuất tối đa 1 triệu hồ sơ sang Campaign Monitor. 
-- Số lượng hồ sơ mà bạn có thể xuất sang Campaign Monitor phụ thuộc và bị giới hạn theo hợp đồng của bạn với Campaign Monitor.
+- Có thể mất tới 20 phút để hoàn tất việc xuất tối đa 1 triệu hồ sơ khách hàng sang Campaign Monitor. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Campaign Monitor tùy thuộc vào và giới hạn trong hợp đồng của bạn với Campaign Monitor.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Thiết lập kết nối với Campaign Monitor
 
@@ -66,7 +66,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 1. Nhập [**ID danh sách Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    [Tạo khóa API](https://www.campaignmonitor.com/api/getting-started/) từ **Cài đặt tài khoản** trong Campaign Monitor trước tiên để xem ID danh sách API.  
 
-3. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Campaign Monitor.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Campaign Monitor.
 
 1. Chọn **Lưu**.
 

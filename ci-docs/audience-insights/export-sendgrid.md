@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang SendGrid
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang SendGrid.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036127"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617857"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Xuất phân khúc sang SendGrid (bản xem trước)
 
@@ -25,14 +25,14 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất sang danh sách liên h�
 -   Bạn có một [Tài khoản SendGrid](https://sendgrid.com/) và thông tin đăng nhập quản trị viên tương ứng.
 -   Có danh sách liên hệ hiện có trong SendGrid và các ID tương ứng. Để biết thêm thông tin, hãy xem [SendGrid - Quản lý liên hệ](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   Bạn có [các phân đoạn được định cấu hình](segments.md) trong thông tin chi tiết về đối tượng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Tối đa 100.000 hồ sơ trên SendGrid.
+- Có tới 100.000 hồ sơ khách hàng trên SendGrid.
 - Việc xuất sang SendGrid bị giới hạn ở các phân đoạn.
-- Có thể mất tới vài giờ để hoàn thành việc xuất lên đến 100.000 hồ sơ sang SendGrid. 
-- Số lượng hồ sơ mà bạn có thể xuất sang SendGrid còn phụ thuộc vào giới hạn cho hợp đồng của bạn với SendGrid.
+- Có thể mất tới vài phút để hoàn tất việc xuất tối đa 100.000 hồ sơ khách hàng sang SendGrid. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang SendGrid tùy thuộc vào và giới hạn trong hợp đồng của bạn với SendGrid.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Thiết lập kết nối với SendGrid
 
@@ -66,7 +66,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **[ID danh sách SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Lặp lại các bước tương tự cho các trường tùy chọn khác như **Tên**, **Họ**, **Quốc gia/Khu vực**, **Tiểu bang**, **Thành phố** và **Mã bưu điện**.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Lặp lại các bước tương tự cho các trường tùy chọn khác như **Tên**, **Họ**, **Quốc gia/Khu vực**, **Tiểu bang**, **Thành phố** và **Mã bưu điện**.
 
 1. Chọn phân khúc mà bạn muốn xuất. Chúng tôi **khuyên bạn không nên xuất tổng cộng hơn 100.000 hồ sơ khách hàng** tới SendGrid. 
 

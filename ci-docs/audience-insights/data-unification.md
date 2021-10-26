@@ -1,7 +1,7 @@
 ---
-title: Thống nhất dữ liệu
-description: Tìm hiểu cách hợp nhất dữ liệu đã nhập.
-ms.date: 04/16/2020
+title: Tạo dạng xem hợp nhất về khách hàng của bạn
+description: Thực hiện quy trình hợp nhất dữ liệu với dữ liệu của bạn để tạo một tập hợp dữ liệu chính duy nhất về hồ sơ khách hàng.
+ms.date: 10/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,14 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bf1bbcd31333c8a557b59b001112042a1783546ab0cd2af394d8af2953a493f4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-unify
+ms.openlocfilehash: 694bfd0e407975af64ca0971a73fe4c3f5ba5a23
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032784"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648097"
 ---
 # <a name="data-unification-overview"></a>Tổng quan về hợp nhất dữ liệu
 

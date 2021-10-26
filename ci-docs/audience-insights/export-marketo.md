@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Marketo
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033519"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619191"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Xuất phân khúc sang Marketo (bản xem trước)
 
@@ -25,14 +25,14 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến
 -   Bạn có một [Tài khoản Marketo](https://login.marketo.com/) và thông tin đăng nhập quản trị viên tương ứng.
 -   Có danh sách hiện có trong Marketo và các ID tương ứng. Để biết thêm thông tin, hãy xem phần [Danh sách Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 -   Bạn có [các phân đoạn được định cấu hình](segments.md).
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ mỗi lần xuất sang Marketo.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Marketo.
 - Việc xuất sang Marketo bị giới hạn ở các phân đoạn.
-- Quá trình xuất phân đoạn với tổng số 1 triệu hồ sơ có thể mất đến 3 giờ. 
-- Số lượng hồ sơ mà bạn có thể xuất sang Marketo phụ thuộc và giới hạn vào hợp đồng của bạn với Marketo.
+- Quá trình xuất phân khúc với tổng cộng 1 triệu hồ sơ khách hàng có thể mất đến 3 giờ. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Marketo tùy thuộc vào và giới hạn trong hợp đồng của bạn với Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Thiết lập kết nối với Marketo
 
@@ -64,7 +64,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **[ID danh sách Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** của bạn. ID danh sách là một giá trị số đơn thuần. Ví dụ: nếu ID danh sách Marketo của bạn là ST12345A7, hãy xóa ký tự đứng trước và sau các chữ số và nhập `12345`. 
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. 
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. 
 
 1. Bạn có thể tùy ý xuất **Tên**, **Họ**, **Thành phố**, **Tiểu bang** và **Quốc gia/Khu vực** để tạo thêm nhiều email được cá nhân hóa hơn. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
 

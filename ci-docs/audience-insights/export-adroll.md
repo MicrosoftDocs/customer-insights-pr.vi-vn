@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang AdRoll
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032097"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617425"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Xuất phân khúc sang AdRoll (xem trước)
 
@@ -28,11 +28,11 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang AdRoll và sử dụn
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất tối đa 250.000 hồ sơ cùng lúc sang AdRoll.
-- Bạn không thể xuất các phân khúc có ít hơn 100 hồ sơ sang AdRoll. 
+- Bạn có thể xuất tối đa 250.000 hồ sơ khách hàng cùng một lúc sang AdRoll.
+- Bạn không thể xuất các phân khúc có ít hơn 100 hồ sơ khách hàng sang AdRoll. 
 - Bạn chỉ xuất được phân khúc sang AdRoll.
-- Có thể mất tới 10 phút để hoàn tất việc xuất tối đa 250.000 hồ sơ sang AdRoll. 
-- Số lượng hồ sơ mà bạn có thể xuất sang AdRoll tùy thuộc vào hợp đồng của bạn với AdRoll.
+- Có thể mất tới 10 phút để hoàn tất việc xuất tối đa 250.000 hồ sơ khách hàng sang AdRoll. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang AdRoll tùy thuộc vào hợp đồng của bạn với AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Thiết lập kết nối với AdRoll
 
@@ -66,7 +66,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **ID nhà quảng cáo AdRoll**. Để biết thêm thông tin, hãy xem [Hồ sơ Nhà quảng cáo AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bắt buộc phải xuất các phân khúc sang AdRoll.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bắt buộc phải xuất các phân khúc sang AdRoll.
 
 1. Chọn phân khúc mà bạn muốn xuất. Chọn một phân khúc có ít nhất 100 thành viên. Bạn không thể xuất các phân khúc nhỏ hơn. Ngoài ra, kích thước tối đa của một phân khúc có thể xuất là 250.000 thành viên/lần. 
 

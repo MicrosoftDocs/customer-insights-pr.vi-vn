@@ -1,7 +1,7 @@
 ---
 title: Bổ trợ thẻ khách hàng cho các ứng dụng Dynamics 365
 description: Hiển thị dữ liệu từ thông tin chi tiết về khán giả trong ứng dụng Dynamics 365 với phần bổ trợ này.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,39 +9,40 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033014"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643474"
 ---
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Với phần Bổ trợ thẻ khách hàng có trong ứng dụng Dynamics 365 được hỗ trợ, bạn có thể chọn hiển thị dữ liệu nhân khẩu học, thông tin chi tiết và tiến trình hoạt động. Phần bổ trợ sẽ truy xuất dữ liệu từ Customer Insights mà không ảnh hưởng đến dữ liệu trong ứng dụng Dynamics 365 được kết nối. 
+Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Với phần bổ trợ Thẻ khách hàng được cài đặt trong ứng dụng Dynamics 365 được hỗ trợ, bạn có thể chọn hiển thị các trường hồ sơ khách hàng, thông tin chi tiết và tiến trình hoạt động. Phần bổ trợ sẽ truy xuất dữ liệu từ Customer Insights mà không ảnh hưởng đến dữ liệu trong ứng dụng Dynamics 365 được kết nối.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Phần bổ trợ này chỉ hoạt động với các ứng dụng dựa trên mô hình Dynamics 365, chẳng hạn như ứng dụng Sales hoặc Customer Service, phiên bản 9.0 trở lên.
-- Để dữ liệu Dynamics 365 của bạn ánh xạ sang hồ sơ khách hàng trong thông tin chuyên sâu về đối tượng bắt buộc [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng trình kết nối Microsoft Dataverse](connect-power-query.md).
+- Để dữ liệu Dynamics 365 của bạn ánh xạ sang hồ sơ khách hàng trong thông tin chuyên sâu về đối tượng, chúng cần được [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng trình kết nối Microsoft Dataverse](connect-power-query.md).
 - Tất cả người dùng Dynamics 365 của phần Bổ trợ thẻ khách hàng phải [được thêm vào với tư cách là người dùng](permissions.md) trong thông tin chuyên sâu về đối tượng để xem dữ liệu.
 - Cần có [các khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md) trong thông tin chuyên sâu về đối tượng để tra cứu dữ liệu cho công việc.
-- Các tính năng điều khiển bổ trợ đều dựa trên dữ liệu cụ thể trong phần thông tin chuyên sâu về đối tượng:
-  - Kiểm soát đo lường: Yêu cầu [các biện pháp được đặt cấu hình](measures.md).
-  - Điều khiển thông minh: Bạn cần tạo dữ liệu bằng cách sử dụng phương thức [dự đoán](predictions.md) hoặc [mô hình tùy chỉnh](custom-models.md).
-  - Kiểm soát nhân khẩu học: Các trường nhân khẩu học (chẳng hạn như tuổi hoặc giới tính) có sẵn trong hồ sơ khách hàng hợp nhất.
-  - Điều khiển tăng cường: Yêu cầu dữ liệu [tăng cường](enrichment-hub.md) hiện hoạt áp dụng cho hồ sơ khách hàng.
-  - Kiểm soát dòng thời gian: Yêu cầu [các hoạt động được đặt cấu hình](activities.md).
+- Các tính năng điều khiển bổ trợ đều dựa trên dữ liệu cụ thể trong phần thông tin chuyên sâu về đối tượng. Một số dữ liệu và điều khiển chỉ có sẵn trong các môi trường thuộc các loại cụ thể. Cấu hình bổ trợ sẽ thông báo cho bạn nếu điều khiển không khả dụng do loại môi trường đã chọn. Tìm hiểu thêm về [trường hợp sử dụng môi trường](work-with-business-accounts.md).
+  - **Kiểm soát đo lường**: Yêu cầu [các biện pháp được đặt cấu hình](measures.md) của thuộc tính của loại khách hàng.
+  - **Điều khiển thông minh**: Bạn cần tạo dữ liệu bằng cách sử dụng phương thức [dự đoán](predictions.md) hoặc [mô hình tùy chỉnh](custom-models.md).
+  - **Kiểm soát chi tiết khách hàng**: Tất cả các trường từ hồ sơ đều có sẵn trong hồ sơ khách hàng hợp nhất.
+  - **Điều khiển tăng cường**: Yêu cầu dữ liệu [tăng cường](enrichment-hub.md) hiện hoạt áp dụng cho hồ sơ khách hàng.
+  - **Kiểm soát danh bạ**: Yêu cầu định nghĩa thực thể ngữ nghĩa của các liên hệ kiểu.
+  - **Kiểm soát dòng thời gian**: Yêu cầu [các hoạt động được đặt cấu hình](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Cài đặt phần bổ trợ Thẻ khách hàng
 
 Phần bổ trợ Thẻ khách hàng là một giải pháp cho các ứng dụng gắn kết khách hàng trong Dynamics 365. Để cài đặt giải pháp, hãy chuyển đến AppSource và tìm kiếm **Thẻ khách hàng Dynamics**. Chọn [Trình bổ sung thẻ khách hàng trên AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) và chọn **Tải ngay**.
 
-Bạn có thể cần phải đăng nhập bằng thông tin đăng nhập quản trị viên của mình cho ứng dụng Dynamics 365 để cài đặt giải pháp.
-
-Có thể mất một chút thời gian để cài đặt giải pháp vào môi trường của bạn.
+Bạn có thể cần phải đăng nhập bằng thông tin đăng nhập quản trị viên của mình cho ứng dụng Dynamics 365 để cài đặt giải pháp. Có thể mất một chút thời gian để cài đặt giải pháp vào môi trường của bạn.
 
 ## <a name="configure-the-customer-card-add-in"></a>Đặt cấu hình Trình bổ trợ thẻ khách hàng
 
@@ -50,7 +51,7 @@ Có thể mất một chút thời gian để cài đặt giải pháp vào môi
 1. Chọn liên kết **Tên hiển thị** cho giải pháp Trình bổ trợ thẻ khách hàng **Dynamics 365 Customer Insights (Xem trước)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Chọn tên hiển thị.](media/select-display-name.png "Chọn tên hiển thị")
+   > ![Chọn tên hiển thị.](media/select-display-name.png "Chọn tên hiển thị.")
 
 1. Chọn **Đăng nhập** và nhập thông tin xác thực cho tài khoản quản trị viên bạn sử dụng để đặt cấu hình Customer Insights.
 
@@ -64,7 +65,7 @@ Có thể mất một chút thời gian để cài đặt giải pháp vào môi
    - Để ánh xạ với một tài khoản, hãy chọn trường trong thực thể Khách hàng khớp với ID của thực thể tài khoản của bạn.
 
    > [!div class="mx-imgBorder"]
-   > ![Trường ID người liên hệ.](media/contact-id-field.png "Trường ID người liên hệ")
+   > ![Trường ID người liên hệ.](media/contact-id-field.png "Trường ID liên hệ.")
 
 1. Chọn **Lưu cấu hình** để lưu cài đặt.
 
@@ -73,17 +74,19 @@ Có thể mất một chút thời gian để cài đặt giải pháp vào môi
 1. Gán vai trò **Người tùy chỉnh thẻ Customer Insights** cho những người dùng sẽ tùy chỉnh nội dung hiển thị trên thẻ cho toàn bộ tổ chức.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Thêm kiểm soát Thẻ khách hàng vào biểu mẫu
-  
+
+Tùy thuộc vào tình huống của bạn, bạn có thể chọn thêm các điều khiển vào biểu mẫu **Liên hệ** hoặc **Tài khoản**. Nếu môi trường thông tin chuyên sâu về đối tượng của bạn dành cho tài khoản doanh nghiệp, chúng tôi khuyên bạn nên thêm các điều khiển vào biểu mẫu Tài khoản. Trong trường hợp đó, hãy thay thế "liên hệ" trong các bước dưới đây bằng "tài khoản".
+
 1. Để thêm các điều khiển Thẻ khách hàng vào biểu mẫu Liên hệ của bạn, hãy chuyển tới **Cài đặt** > **Tùy chỉnh** trong Dynamics 365.
 
 1. Chọn **Tùy chỉnh hệ thống**.
 
-1. Duyệt đến thực thể **Người liên hệ**, mở rộng thực thể này rồi chọn **Biểu mẫu**.
+1. Duyệt đến thực thể **Liên hệ**, mở rộng thực thể này rồi chọn **Biểu mẫu**.
 
-1. Chọn biểu mẫu người liên hệ mà bạn muốn thêm điều khiển Thẻ khách hàng.
+1. Chọn biểu mẫu liên hệ mà bạn muốn thêm điều khiển Thẻ khách hàng.
 
     > [!div class="mx-imgBorder"]
-    > ![Chọn biểu mẫu người liên hệ.](media/contact-active-forms.png "Chọn biểu mẫu người liên hệ")
+    > ![Chọn biểu mẫu người liên hệ.](media/contact-active-forms.png "Chọn biểu mẫu Liên hệ.")
 
 1. Để thêm một điều khiển, trong công cụ biên tập biểu mẫu, hãy kéo trường bất kỳ từ **Field Explorer** tới vị trí bạn muốn điều khiển xuất hiện.
 
@@ -102,7 +105,8 @@ Có thể mất một chút thời gian để cài đặt giải pháp vào môi
 1. Để tùy chỉnh nội dung bạn muốn hiển thị trên điều khiển tùy chỉnh, hãy chọn nút chỉnh sửa ở góc trên bên phải.
 
 ## <a name="upgrade-customer-card-add-in"></a>Nâng cấp phần bổ trợ Thẻ Khách hàng
-Phần bổ trợ Thẻ Khách hàng không tự động nâng cấp. Để nâng cấp lên phiên bản mới nhất, hãy làm theo quy trình này trong ứng dụng Dynamics 365 đã cài đặt Phần bổ trợ.
+
+Phần bổ trợ Thẻ Khách hàng không tự động nâng cấp. Để nâng cấp lên phiên bản mới nhất, hãy làm theo các bước sau trong ứng dụng Dynamics 365 đã cài đặt phần bổ trợ.
 
 1. Trong ứng dụng Dynamics 365, hãy chuyển đến **Cài đặt** > **Tùy chỉnh** và chọn **Các giải pháp**.
 

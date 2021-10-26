@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang LinkedIn Ads
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034249"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618317"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Xuất phân khúc sang LinkedIn Ads (xem trước)
 
@@ -26,11 +26,11 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang LinkedIn Ads để t�
 -   Bạn có [các phân khúc đã đặt cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
 -   Hồ sơ khách hàng trong các phân khúc đã xuất chứa trường có địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất tối đa 100 nghìn hồ sơ trong mỗi lần xuất sang LinkedIn Ads.
+- Bạn có thể xuất tối đa 100.000 hồ sơ khách hàng mỗi lần sang LinkedIn Ads.
 - Bạn chỉ xuất được phân khúc sang LinkedIn Ads.
-- Có thể mất tới 10 phút để hoàn thành quá trình xuất tối đa 100 nghìn hồ sơ sang LinkedIn Ads. 
+- Có thể mất tới 10 phút để hoàn tất việc xuất tối đa 100 nghìn hồ sơ khách hàng sang LinkedIn Ads. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Thiết lập kết nối với LinkedIn Ads
 
@@ -66,7 +66,7 @@ Bạn có thể định cấu hình nội dung xuất nếu có quyền truy c�
 
 1. Chọn xem bạn muốn xuất dữ liệu để [nhắm mục tiêu người liên hệ](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) hay [nhắm mục tiêu công ty](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) trên LinkedIn. 
 
-1. Trong phần **So khớp dữ liệu**, hãy chọn trường đại diện cho địa chỉ email của khách hàng trong hồ sơ khách hàng hợp nhất của bạn. Bạn phải xuất các phân khúc sang LinkedIn Ads.
+1. Trong phần **Đối sánh dữ liệu**, để nhắm mục tiêu theo địa chỉ liên hệ, hãy chọn ít nhất một trường đại diện cho địa chỉ email của khách hàng, ID quảng cáo Apple, ID quảng cáo của Google, ID người dùng Google hoặc họ và tên. Nếu bạn chọn nhắm mục tiêu theo công ty, hãy chọn ít nhất một trường đại diện cho tên công ty, miền email, URL trang LinkedIn, biểu tượng Stock hoặc Trang web. Các trường bổ sung có thể được chọn để xác định rõ hơn bản xuất của bạn. 
 
 1. Chọn phân khúc mà bạn muốn xuất. Đối tượng phù hợp trong LinkedIn Campaign Manager sẽ được tạo tự động với tên của các phân khúc mà bạn đã chọn để xuất. Mỗi phân khúc sẽ cho ra một đối tượng phù hợp riêng biệt. 
 

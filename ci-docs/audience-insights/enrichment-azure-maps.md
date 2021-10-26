@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
-ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
+ms.openlocfilehash: cbeac7e25d83df152c38d1c59cc6734a3d1fee97
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466788"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618593"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng Azure Maps (bản xem trước)
 
@@ -84,9 +84,9 @@ Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ li
 
 Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
 
-## <a name="next-steps"></a>Các bước tiếp theo
+## <a name="next-steps"></a>Các bước tiếp theo
 
-Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [phân khúc](segments.md), [biện pháp](measures.md) và [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm cá nhân cho khách hàng của bạn.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 

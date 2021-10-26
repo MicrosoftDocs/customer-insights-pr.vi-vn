@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558998"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617949"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
@@ -35,9 +35,9 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đố
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ mỗi lần xuất sang Google Ads.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Google Ads.
 - Việc xuất sang Google Ads bị giới hạn ở các phân khúc.
-- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ có thể mất đến 5 phút vì những hạn chế từ phía nhà cung cấp. 
+- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ khách hàng có thể mất tới 5 phút vì những giới hạn từ phía nhà cung cấp. 
 - Quá trình so khớp trong Google Ads có thể mất đến 48 giờ.
 
 ## <a name="set-up-connection-to-google-ads"></a>Thiết lập kết nối với Google Ads
@@ -74,7 +74,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **[ID đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** và chọn **Kết nối** để khởi tạo kết nối với Google Ads.
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng.
 
 1. Chọn phân khúc mà bạn muốn xuất. Bạn có thể xuất tổng cộng tối đa 1 triệu hồ sơ khách hàng sang Google Ads.
 

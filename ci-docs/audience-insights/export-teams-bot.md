@@ -1,7 +1,7 @@
 ---
 title: Bot dành cho Microsoft Teams
 description: Tra cứu hồ sơ khách hàng hợp nhất trong Microsoft Teams với sự giúp đỡ của một bot.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: cff696834e3dad00ce5b0f1b5bcb13d86354a4e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032508"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617627"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams dành cho Dynamics 365 Customer Insights (bản xem trước)
 
@@ -31,6 +31,7 @@ Kết nối với Microsoft Teams để cho phép bot tra cứu hồ sơ khách 
 - Đã hoàn thành [quy trình hợp nhất](data-unification.md).
 - Đã thêm các trường vào [chỉ mục tìm kiếm và lọc](search-filter-index.md).
 - Customer Insights và Teams thuộc cùng một tổ chức.
+- Môi trường của bạn có đối tượng mục tiêu chính được đặt thành các khách hàng cá nhân. Tài khoản doanh nghiệp không được hỗ trợ.
 
 ## <a name="configure-the-bot"></a>Đặt cấu hình bot
 

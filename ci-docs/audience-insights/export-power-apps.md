@@ -1,7 +1,7 @@
 ---
 title: Trình kết nối Power Apps
 description: Kết nối với Power Apps và Power Automate.
-ms.date: 01/19/2021
+ms.date: 10/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: fc0af656cd5b436d9efd65b2a2c75dde9c9deb9dbcdd56ffc6a960f5878a631f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 985e6c85795fba8ca3063cdffc7f9012e798856a
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031821"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623249"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Trình kết nối Microsoft Power Apps (xem trước)
 
@@ -30,48 +30,47 @@ Tham khảo tài liệu Power Apps để tìm hiểu cách [thêm kết nối d�
 
 Sau khi thêm Customer Insights làm kết nối dữ liệu, bạn có thể chọn các thực thể sau trong Power Apps:
 
-- Khách hàng: để sử dụng dữ liệu từ [hồ sơ khách hàng hợp nhất](customer-profiles.md).
-- UnifiedActivity: để hiển thị [dòng thời gian hoạt động](activities.md) trên ứng dụng.
+- **Khách hàng**: để sử dụng dữ liệu từ [hồ sơ khách hàng hợp nhất](customer-profiles.md).
+- **UnifiedActivity**: để hiển thị [dòng thời gian hoạt động](activities.md) trong ứng dụng.
+- **ContactProfile**: để hiển thị danh bạ của khách hàng. Thực thể này chỉ có sẵn trong môi trường thông tin chuyên sâu về đối tượng cho tài khoản doanh nghiệp.
 
 ## <a name="limitations"></a>Giới hạn
 
 ### <a name="retrievable-entities"></a>Các thực thể có thể truy xuất
 
-Bạn chỉ có thể truy xuất các thực thể **Khách hàng**, **UnifiedActivity** và **Phân khúc** thông qua trình kết nối Power Apps. Các thực thể khác được hiển thị vì trình kết nối cơ bản hỗ trợ chúng thông qua trình kích hoạt trong Power Automate.  
+Bạn chỉ có thể truy xuất các thực thể **Khách hàng**, **UnifiedActivity**, **Phân khúc** và **ContactProfile** thông qua trình kết nối Power Apps. ContactProfile chỉ có sẵn trong phiên bản thông tin chuyên sâu về đối tượng cho tài khoản doanh nghiệp. Các thực thể khác được hiển thị vì trình kết nối cơ bản hỗ trợ chúng thông qua trình kích hoạt trong Power Automate.
 
 ### <a name="delegation"></a>Đại diện
 
-Ủy quyền hoạt động cho thực thể Khách hàng và thực thể UnifiedActivity. 
+Ủy quyền hoạt động cho thực thể **Khách hàng** và thực thể **UnifiedActivity**. 
 
 - Ủy quyền cho thực thể **Khách hàng**: Để sử dụng ủy quyền cho thực thể này, cần lập chỉ mục các trường trong [Chỉ mục tìm kiếm và lọc](search-filter-index.md).  
-
 - Ủy quyền cho **UnifiedActivity**: Ủy quyền cho thực thể này chỉ hoạt động cho các trường **ActivityId** và **CustomerId**.  
+- Ủy quyền cho **ContactProfile**: Ủy quyền cho thực thể này chỉ hoạt động cho các trường **ContactId** và **CustomerId**. ContactProfile chỉ có sẵn trong môi trường thông tin chuyên sâu về đối tượng cho tài khoản doanh nghiệp.
 
-- Để biết thêm thông tin về ủy quyền, hãy xem [Hoạt động và các chức năng có thể ủy quyền Power Apps](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Để biết thêm thông tin về ủy quyền, hãy truy cập [Chức năng và hoạt động có thể ủy quyền của Power Apps](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Kiểm soát thư viện ví dụ
 
-Ví dụ: bạn thêm hồ sơ khách hàng vào [kiểm soát thư viện](/powerapps/maker/canvas-apps/add-gallery).
+Bạn có thể thêm hồ sơ khách hàng vào [điều khiển thư viện](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Thêm một kiểm soát **Thư viện** vào ứng dụng bạn đang xây dựng.
-
-> [!div class="mx-imgBorder"]
-> ![Thêm một thành phần thư viện.](media/connector-powerapps9.png "Thêm một thành phần thư viện")
-
-1. Chọn **Khách hàng** làm nguồn dữ liệu cho các mặt hàng.
+1. Thêm điều khiển **thư viện** vào ứng dụng bạn đang xây dựng.
 
     > [!div class="mx-imgBorder"]
-    > ![Chọn nguồn dữ liệu.](media/choose-datasource-powerapps.png "Chọn nguồn dữ liệu")
+    > ![Thêm một thành phần thư viện.](media/connector-powerapps9.png "Thêm một thành phần thư viện.")
 
-1. Bạn có thể thay đổi bảng dữ liệu ở bên phải để chọn trường cho thực thể Khách hàng hiển thị trên thư viện.
+2. Chọn **Khách hàng** làm nguồn dữ liệu cho các mặt hàng.
 
-1. Nếu bạn muốn hiển thị bất kỳ trường nào từ khách hàng đã chọn trên thư viện, hãy điền vào thuộc tính Văn bản của nhãn: **{Name_of_the_gallery}.Đã chọn.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Chọn nguồn dữ liệu.](media/choose-datasource-powerapps.png "Chọn nguồn dữ liệu.")
 
-    Ví dụ: Gallery1.Selected.address1_city
+3. Bạn có thể thay đổi bảng dữ liệu ở bên phải để chọn trường cho thực thể Khách hàng hiển thị trên thư viện.
 
-1. Để hiển thị dòng thời gian hợp nhất cho khách hàng, hãy thêm phần tử Thư viện và thuộc tính Items: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Nếu bạn muốn hiển thị bất kỳ trường nào từ khách hàng đã chọn trên thư viện, hãy điền vào thuộc tính **Văn bản** của nhãn bằng cách sử dụng **{Name_of_the_gallery}.Đã chọn.{property_name}**  
+    - Ví dụ: _Gallery1.Selected.address1_city_
 
-    Ví dụ: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Để hiển thị dòng thời gian hợp nhất cho khách hàng, hãy thêm phần tử thư viện và thêm thuộc tính **Mục** bằng cách dùng **Bộ lọc('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Ví dụ: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

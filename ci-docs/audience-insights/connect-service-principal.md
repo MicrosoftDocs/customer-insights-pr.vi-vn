@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483551"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645198"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 
 Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các quyền hạn chế. Thay vì để các ứng dụng đăng nhập với tư cách là người dùng có đầy đủ đặc quyền, Azure cung cấp các dịch vụ chính. Đọc tiếp để tìm hiểu cách kết nối Dynamics 365 Customer Insights với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure thay vì khóa tài khoản lưu trữ. 
 
-Bạn có thể sử dụng tên dịch vụ chính để [thêm hoặc chỉnh sửa thư mục Common Data Model một cách an toàn dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo hoặc cập nhật môi trường](get-started-paid.md).
+Bạn có thể sử dụng tên dịch vụ chính để [thêm hoặc chỉnh sửa thư mục Common Data Model một cách an toàn dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo hoặc cập nhật môi trường](create-environment.md).
 
 > [!IMPORTANT]
 > - Tài khoản Data Lake Storage sẽ sử dụng dịch vụ chính phải đã bật tính năng [không gian tên theo cấp bậc](/azure/storage/blobs/data-lake-storage-namespace).

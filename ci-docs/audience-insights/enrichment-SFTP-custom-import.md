@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032738"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618731"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu tùy chỉnh (bản xem trước)
 
@@ -44,6 +44,8 @@ Nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP) cho phép bạ
 1.  Chọn **Tiếp** và nhập **Đường dẫn** và **Tên tệp** của tệp dữ liệu mà bạn muốn nhập.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ảnh chụp màn hình khi nhập vị trí dữ liệu.":::
+
+1. Chọn **Tiếp** và chọn tập hợp dữ liệu khách hàng. Đây có thể là tất cả hồ sơ khách hàng hoặc một phân khúc.
 
 1. Chọn **Tiếp** rồi đặt tên cho dữ liệu tăng cường và tên cho thực thể đầu ra. 
 
@@ -121,8 +123,8 @@ Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ li
 
 Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
 
-## <a name="next-steps"></a>Các bước tiếp theo
+## <a name="next-steps"></a>Các bước tiếp theo
 
-Xây dựng dựa trên dữ liệu khách hàng tăng cường của bạn. Tạo [phân khúc](segments.md) và [giá trị đo](measures.md), cũng như [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm được cá nhân hóa cho khách hàng của bạn.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

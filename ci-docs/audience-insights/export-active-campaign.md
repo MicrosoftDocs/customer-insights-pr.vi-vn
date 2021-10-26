@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang ActiveCampaign
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032235"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618179"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Xuất phân khúc sang ActiveCampaign (bản xem trước)
 
@@ -28,9 +28,9 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang ActiveCampaign và s�
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất đến 1 triệu hồ sơ/lần sang ActiveCampaign và quy trình này có thể mất tối đa 90 phút để hoàn thành.
+- Bạn có thể xuất tối đa 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang ActiveCampaign và có thể mất đến 90 phút để hoàn thành.
 - Việc xuất sang ActiveCampaign bị giới hạn theo phân khúc.
-- Số lượng hồ sơ mà bạn có thể xuất sang ActiveCampaign tùy thuộc vào hợp đồng của bạn với ActiveCampaign.
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang ActiveCampaign tùy thuộc vào hợp đồng của bạn với ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Thiết lập kết nối với ActiveCampaign
 
@@ -64,7 +64,7 @@ Bạn có thể định cấu hình nội dung xuất nếu có quyền truy c�
 
 1. Nhập [**ID Danh sách ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-3. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất phân khúc sang ActiveCampaign. Bạn có thể xuất Tên, Họ và Số điện thoại để tạo nhiều email được cá nhân hóa hơn. Chọn Thêm thuộc tính để ánh xạ những trường này.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất phân khúc sang ActiveCampaign. Bạn có thể xuất Tên, Họ và Số điện thoại để tạo nhiều email được cá nhân hóa hơn. Chọn Thêm thuộc tính để ánh xạ những trường này.
 
 1. Chọn **Lưu**.
 

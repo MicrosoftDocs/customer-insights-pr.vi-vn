@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý môi trường
 description: Tìm hiểu cách đăng ký dịch vụ và cách quản lý môi trường.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034203"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645152"
 ---
 # <a name="manage-environments"></a>Quản lý môi trường
 
@@ -26,7 +26,7 @@ Chọn kiểm soát **Môi trường** ở góc trên bên phải của trang đ
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Ảnh chụp màn hình của điều khiển để chuyển đổi môi trường.":::
 
-Quản trị viên có thể [tạo](get-started-paid.md) và quản lý môi trường.
+Quản trị viên có thể [tạo](create-environment.md) và quản lý môi trường.
 
 ## <a name="edit-an-existing-environment"></a>Chỉnh sửa môi trường hiện có
 
@@ -36,23 +36,9 @@ Bạn có thể chỉnh sửa một số thông tin của các môi trường hi
 
 2.  Chọn biểu tượng **Chỉnh sửa**.
 
-3. Trong hộp **Chỉnh sửa môi trường**, bạn có thể cập nhật **Tên hiển thị** của môi trường, nhưng bạn không thể thay đổi **Khu vực** hoặc **Kiểu**.
+3. Trong hộp **Chỉnh sửa môi trường**, bạn có thể cập nhật thiết đặt môi trường.
 
-4. Nếu một môi trường được định cấu hình để lưu trữ dữ liệu trong Azure Data Lake Storage, bạn có thể cập nhật **Khóa tài khoản**. Tuy nhiên, bạn không thể thay đổi **Tên tài khoản** hoặc tên **Vùng chứa** .
-
-5. Bạn có thể cập nhật từ kết nối dựa trên khóa tài khoản thành kết nối dựa trên nguồn lực hoặc dựa trên đăng ký. Sau khi nâng cấp, bạn không thể hoàn nguyên về khóa tài khoản sau khi cập nhật. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
-
-6. Bạn có thể tùy ý cung cấp URL môi trường Microsoft Dataverse trong mục **Đặt cấu hình chia sẻ dữ liệu với Microsoft Dataverse và kích hoạt các nguồn lực bổ sung**. Các nguồn lực này bao gồm việc chia sẻ dữ liệu với các ứng dụng và giải pháp dựa trên Microsoft Dataverse, nhập dữ liệu từ nguồn dữ liệu tại chỗ hoặc sử dụng [dự đoán](predictions.md). Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu được quản lý của Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Chia sẻ dữ liệu với Microsoft Dataverse Managed Data Lake hiện không được hỗ trợ khi bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của riêng mình.
-   > - [Dự đoán giá trị bị thiếu trong một thực thể](predictions.md) và báo cáo PowerBI Embedded trong thông tin chi tiết về đối tượng (nếu được bật trên môi trường của bạn) hiện không được hỗ trợ khi bạn bật chia sẻ dữ liệu với Microsoft Dataverse Managed Data Lake.
-
-   Sau khi bạn bật tính năng chia sẻ dữ liệu với Microsoft Dataverse, một lần làm mới hoàn toàn nguồn dữ liệu của bạn và các quy trình khác sẽ bắt đầu. Nếu các quy trình hiện đang chạy, bạn sẽ không thấy tùy chọn bật tính năng chia sẻ dữ liệu với Microsoft Dataverse. Hãy đợi các quy trình đó hoàn tất hoặc hủy chúng để bật tính năng chia sẻ dữ liệu. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
-   
-   Khi bạn chạy các quy trình, chẳng hạn như nhập dữ liệu hoặc tạo phân khúc, các thư mục tương ứng sẽ được tạo trong tài khoản lưu trữ mà bạn đã chỉ định ở trên. Tệp dữ liệu và tệp model.json sẽ được tạo và thêm vào các thư mục con tương ứng, tùy thuộc vào quá trình bạn chạy.
+Để biết thêm thông tin về thiết đặt môi trường, hãy xem [Tạo môi trường mới](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Sao chép cấu hình môi trường
 

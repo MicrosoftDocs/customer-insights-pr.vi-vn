@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c54f6a00cb28b0ab11716c02aa8761dfa382f07e3360183b5d38b9720e890c21
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fabc3cc9faf4e11f46c396782b561ef61cd0f6d5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032646"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618547"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu nhân khẩu học từ Experian (bản xem trước)
 
@@ -89,9 +89,9 @@ Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ li
 
 Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
 
-## <a name="next-steps"></a>Các bước tiếp theo
+## <a name="next-steps"></a>Các bước tiếp theo
 
-Xây dựng dựa trên dữ liệu khách hàng tăng cường của bạn. Tạo [phân khúc](segments.md) và [giá trị đo](measures.md), thậm chí [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm được cá nhân hóa cho khách hàng của bạn.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34dc753aa9d2420ef8780d436e14c3c27377e4779eda0f83ca6b5424f2328f22
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031476"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619237"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Xuất danh sách phân khúc sang Trình quản lý quảng cáo Facebook (bản xem trước)
 
@@ -30,7 +30,7 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Trình quản lý qu�
 - Lên đến 10 triệu hồ sơ khách hàng/lần xuất sang Trình quản lý quảng cáo Facebook.
 - Chỉ có thể xuất các phân khúc sang Facebook.
 - Chỉ tạo hoặc cập nhật đối tượng tùy chỉnh thuộc loại *danh sách khách hàng* trong Facebook.
-- Có thể mất đến 90 phút để hoàn tất quá trình xuất phân khúc với tổng số 10 triệu hồ sơ.
+- Quá trình xuất phân khúc với tổng số 10 triệu hồ sơ khách hàng có thể mất đến 90 phút để hoàn thành.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Thiết lập kết nối với Trình quản lý quảng cáo Facebook
 

@@ -1,7 +1,7 @@
 ---
 title: Phân khúc trong thông tin chuyên sâu về đối tượng
 description: Tổng quan, cách tạo và quản lý phân khúc.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036399"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617468"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -26,11 +26,19 @@ Hồ sơ khách hàng phù hợp với các bộ lọc của định nghĩa phâ
 
 Có nhiều cách để tạo một phân khúc mới: 
 
-- Phân khúc phức tạp với trình tạo phân khúc: [Phân khúc trống](segment-builder.md#create-a-new-segment)
-- Các phân khúc đơn giản với một toán tử: [Phân khúc nhanh](segment-builder.md#quick-segments)
-- Cách tìm khách hàng tương tự dựa trên AI: [Khách hàng tương tự](find-similar-customer-segments.md)
-- Đề xuất do AI hỗ trợ dựa trên các biện pháp hoặc thuộc tính: [Các phân khúc được đề xuất nhằm cải thiện các biện pháp](suggested-segments.md)
-- Đề xuất dựa trên các hoạt động: [Các phân khúc được đề xuất dựa trên hoạt động của khách hàng](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+
+- Phân khúc phức tạp với trình dựng phân khúc [Tạo phân khúc của riêng bạn](segment-builder.md#create-a-new-segment) 
+- Các phân khúc đơn giản với một toán tử: [Phân khúc nhanh](segment-builder.md#quick-segments) 
+- Cách tìm khách hàng tương tự dựa trên AI: [Khách hàng tương tự](find-similar-customer-segments.md) 
+- Đề xuất do AI hỗ trợ dựa trên các biện pháp hoặc thuộc tính: [Các phân khúc được đề xuất nhằm cải thiện các biện pháp](suggested-segments.md) 
+- Đề xuất dựa trên các hoạt động: [Các phân khúc được đề xuất dựa trên hoạt động của khách hàng](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+
+- Phân khúc phức tạp với trình dựng phân khúc [Tạo phân khúc của riêng bạn](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Quản lý các phân khúc hiện có
 
@@ -70,9 +78,9 @@ Bạn có thể xuất một phân khúc từ trang phân khúc hoặc [trang n�
 
 1. Chọn **Quản lý nội dung xuất** từ danh sách thả xuống các hành động.
 
-1. Trang **Nội dung xuất (xem trước) cho phân khúc** sẽ mở ra. Bạn có thể xem tất cả các nội dung xuất đã định cấu hình, được nhóm theo nội dung xuất có chứa hoặc không chứa phân khúc hiện tại.
+1. Trang **Nội dung xuất (xem trước) cho phân khúc** sẽ mở ra. Bạn có thể xem tất cả các bản xuất đã đặt cấu hình được nhóm theo nhóm có chứa phân khúc hiện tại hay không.
 
-   1. Để thêm phân khúc đã chọn vào một nội dung xuất, hãy chọn nội dung xuất trong danh sách rồi chọn **Thêm phân khúc**.
+   1. Để thêm phân khúc đã chọn vào bản xuất, hãy **Chỉnh sửa** bản xuất tương ứng để chọn phân khúc tương ứng rồi lưu. Trong môi trường cho khách hàng cá nhân, bạn có thể chọn bản xuất trong danh sách và chọn **Thêm phân khúc** để đạt được cùng một kết quả.
 
    1. Để tạo nội dung xuất mới bằng phân khúc đã chọn, hãy chọn **Thêm nội dung xuất**. Để biết thêm thông tin về cách tạo nội dung xuất, hãy xem phần [Thiết lập nội dung xuất mới](export-destinations.md#set-up-a-new-export).
 

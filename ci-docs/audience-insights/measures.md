@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý các giá trị đo
 description: Xác định các giá trị đo để phân tích và phản ánh tình hình hoạt động của doanh nghiệp bạn.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037034"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623058"
 ---
 # <a name="define-and-manage-measures"></a>Xác định và quản lý các biện pháp
 
@@ -26,15 +26,15 @@ Hãy sử dụng trình tạo giá trị đo để lập kế hoạch hoạt đ�
 
 ## <a name="build-your-own-measure-from-scratch"></a>Tạo giá trị đo của riêng bạn từ đầu
 
-Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới từ đầu. Bạn có thể tạo một giá trị đo với các thuộc tính dữ liệu từ các thực thể dữ liệu có mối quan hệ được thiết lập để kết nối với thực thể Khách hàng. 
+Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới từ đầu. Bạn có thể tạo giá trị đo với các thuộc tính dữ liệu từ các thực thể dữ liệu có mối quan hệ được thiết lập để kết nối với thực thể hồ sơ khách hàng hợp nhất.
+
+# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Giá trị đo**.
 
 1. Chọn **Mới** rồi chọn **Tạo giá trị đo riêng**.
 
 1. Chọn **Chỉnh sửa tên** và cung cấp một **Tên** cho giá trị đo. 
-   > [!NOTE]
-   > Nếu cấu hình giá trị đo mới của bạn chỉ có hai trường, ví dụ: CustomerID và một phép tính thì kết quả đầu ra sẽ được thêm vào thực thể do hệ thống tạo ra có tên là Customer_Measure dưới dạng một cột mới. Và bạn sẽ có thể thấy giá trị của giá trị đo trong hồ sơ khách hàng hợp nhất. Các giá trị đo khác sẽ tạo ra các thực thể của riêng chúng.
 
 1. Trong vùng cấu hình, hãy chọn hàm tổng hợp từ menu thả xuống **Chọn hàm**. Các hàm tổng hợp bao gồm: 
    - **Sum**
@@ -53,7 +53,7 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
    1. Chọn thẻ **Thuộc tính**. 
    1. Thực thể dữ liệu: Chọn thực thể bao gồm thuộc tính bạn muốn đo. 
    1. Thuộc tính dữ liệu: Chọn thuộc tính bạn muốn sử dụng trong hàm tổng hợp để tính toán giá trị đo. Mỗi lần, bạn chỉ có thể chọn một thuộc tính.
-   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**. Hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo. 
+   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**, hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo. 
    1. Chọn **Thêm** để thêm thuộc tính đã chọn vào giá trị đo.
 
    :::image type="content" source="media/measure-attribute-selection.png" alt-text="Chọn một thuộc tính để sử dụng trong tính toán.":::
@@ -73,11 +73,11 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
    1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính. Theo mặc định, thứ nguyên *ID khách hàng* được chọn để tạo *giá trị đo cấp khách hàng*. Bạn có thể xóa thứ nguyên mặc định nếu muốn tạo *giá trị đo cấp doanh nghiệp*.
    1. Chọn **Xong** để thêm các thứ nguyên vào giá trị đo.
 
-1. Nếu có các giá trị trong dữ liệu của bạn mà bạn cần thay thế bằng một số nguyên, chẳng hạn như thay thế *null* bằng *0*, hãy chọn **Quy tắc**. Định cấu hình quy tắc và đảm bảo rằng bạn chỉ chọn các số nguyên làm giá trị thay thế.
+1. Nếu có các giá trị trong dữ liệu mà bạn cần thay thế bằng số nguyên, hãy chọn **Quy tắc**. Định cấu hình quy tắc và đảm bảo rằng bạn chỉ chọn các số nguyên làm giá trị thay thế. Ví dụ: thay thế *null* bằng *0*.
 
 1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn. 
    
-   1. Chọn **Tùy chọn dữ liệu** và chọn đường dẫn thực thể sẽ được sử dụng để xác định giá trị đo của bạn. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
+   1. Chọn **Đường dẫn mối quan hệ** và chọn đường dẫn thực thể sẽ được dùng để xác định giá trị đo. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
    1. Chọn **Xong** để áp dụng lựa chọn của bạn. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Chọn đường dẫn thực thể cho giá trị đo đó.":::
@@ -92,7 +92,79 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
 
 1. Đi đến **Giá trị đo** để xem số đo mới được tạo trong danh sách.
 
+# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+
+1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Giá trị đo**.
+
+1. Chọn **Mới** rồi chọn **Tạo giá trị đo riêng**.
+
+1. Chọn **Chỉnh sửa tên** và cung cấp một **Tên** cho giá trị đo. 
+
+1. Trong vùng cấu hình, hãy chọn hàm tổng hợp từ menu thả xuống **Chọn hàm**. Các hàm tổng hợp bao gồm: 
+   - **Sum**
+   - **Trung bình**
+   - **Đếm**
+   - **Số đếm Duy nhất**
+   - **Tối đa**
+   - **Min**
+   - **Đầu tiên**: lấy giá trị đầu tiên của bản ghi dữ liệu
+   - **Cuối cùng**: lấy giá trị cuối cùng đã được thêm vào bản ghi dữ liệu
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Các toán tử để tính toán giá trị đo.":::
+
+1. Chọn **Thêm thuộc tính** để chọn dữ liệu bạn cần để tạo giá trị đo này.
+   
+   1. Chọn thẻ **Thuộc tính**. 
+   1. Thực thể dữ liệu: Chọn thực thể bao gồm thuộc tính bạn muốn đo. 
+   1. Thuộc tính dữ liệu: Chọn thuộc tính bạn muốn sử dụng trong hàm tổng hợp để tính toán giá trị đo. Mỗi lần, bạn chỉ có thể chọn một thuộc tính.
+   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**, hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo. 
+   1. Chọn **Thêm** để thêm thuộc tính đã chọn vào giá trị đo.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Chọn một thuộc tính để sử dụng trong tính toán.":::
+
+1. Để xây dựng các giá trị đo phức tạp hơn, bạn có thể thêm nhiều thuộc tính hơn hoặc sử dụng các toán tử toán học trên hàm đo lường của mình.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Tạo một giá trị đo phức tạp với các toán tử toán học.":::
+
+1. Để thêm bộ lọc, hãy chọn **Bộ lọc** trong vùng cấu hình. 
+  
+   1. Trong phần **Thêm thuộc tính** của ngăn **Bộ lọc**, chọn thuộc tính bạn muốn sử dụng để tạo bộ lọc.
+   1. Đặt toán tử bộ lọc để xác định bộ lọc cho mọi thuộc tính đã chọn.
+   1. Chọn **Áp dụng** để thêm các bộ lọc vào giá trị đo.
+
+1. Để thêm các thứ nguyên, hãy chọn **Thứ nguyên** trong vùng cấu hình. Thứ nguyên sẽ hiển thị dưới dạng cột trong thực thể đầu ra giá trị đo.
+ 
+   1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính. Theo mặc định, thứ nguyên *ID khách hàng* được chọn để tạo *giá trị đo cấp khách hàng*. Bạn có thể xóa thứ nguyên mặc định nếu muốn tạo *giá trị đo cấp doanh nghiệp*.
+   1. Chọn **Xong** để thêm các thứ nguyên vào giá trị đo.
+
+1. Nếu có các giá trị trong dữ liệu mà bạn cần thay thế bằng số nguyên, hãy chọn **Quy tắc**. Định cấu hình quy tắc và đảm bảo rằng bạn chỉ chọn các số nguyên làm giá trị thay thế. Ví dụ: thay thế *null* bằng *0*.
+
+1. Bạn có thể dùng chuyển đổi **Tổng hợp các tài khoản phụ** nếu bạn [sử dụng các tài khoản có phân cấp](relationships.md#set-up-account-hierarchies).
+   - Nếu công tắc được đặt thành **Tắt**, giá trị đo được tính cho mọi tài khoản. Mọi tài khoản đều có kết quả riêng.
+   - Nếu công tắc được đặt thành **Bật**, hãy chọn **Chỉnh sửa** để chọn hệ thống cấp bậc tài khoản theo cấp bậc đã nhập. Giá trị đo sẽ chỉ mang lại một kết quả vì nó được tổng hợp với các tài khoản phụ.
+
+1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn. 
+   
+   1. Chọn **Đường dẫn mối quan hệ** và chọn đường dẫn thực thể sẽ được dùng để xác định giá trị đo. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
+   1. Chọn **Xong** để áp dụng lựa chọn của bạn. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Chọn đường dẫn thực thể cho giá trị đo đó.":::
+
+1. Chọn **...** trên phép tính để **Nhân bản**, **Đổi tên** hoặc **Xóa** phép tính khỏi giá trị đo.
+
+1. Trong ngăn **Xem trước**, bạn sẽ thấy giản đồ dữ liệu của thực thể đầu ra giá trị đo, bao gồm các bộ lọc và thứ nguyên. Bản xem trước phản ứng tự động với các thay đổi trong cấu hình.
+
+1. Chọn **Chạy** để tính toán kết quả cho giá trị đo đã định cấu hình. Chọn **Lưu và đóng** nếu bạn muốn giữ cấu hình hiện tại và chạy giá trị đo sau.
+
+1. Đi đến **Giá trị đo** để xem số đo mới được tạo trong danh sách.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Sử dụng mẫu để tạo giá trị đo
+
+Bạn có thể sử dụng các mẫu định sẵn có chứa các giá trị đo thường dùng để tạo giá trị đo. Mô tả chi tiết về các mẫu và trải nghiệm có hướng dẫn sẽ giúp bạn tạo giá trị đo hiệu quả. Các mẫu xây dựng dựa trên dữ liệu được ánh xạ từ thực thể *Hoạt động được hợp nhất*. Vì vậy, hãy đảm bảo rằng bạn đã định cấu hình [hoạt động của khách hàng](activities.md) trước khi tạo giá trị đo từ một mẫu.
+
+# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
 
 Bạn có thể sử dụng các mẫu định sẵn có chứa các giá trị đo thường dùng để tạo giá trị đo. Mô tả chi tiết về các mẫu và trải nghiệm có hướng dẫn sẽ giúp bạn tạo giá trị đo hiệu quả. Các mẫu xây dựng dựa trên dữ liệu được ánh xạ từ thực thể *Hoạt động được hợp nhất*. Vì vậy, hãy đảm bảo rằng bạn đã định cấu hình [hoạt động của khách hàng](activities.md) trước khi tạo giá trị đo từ một mẫu.
 
@@ -140,6 +212,12 @@ Quy trình sau đây phác thảo các bước để tạo giá trị đo mới 
 
 1. Bây giờ, bạn có thể chọn **Chạy** để tính toán kết quả của giá trị đo. Để tinh chỉnh giá trị đo về sau, hãy chọn **Lưu bản nháp**.
 
+# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+
+Tính năng này chỉ dùng được cho các giá trị đo được tạo trong môi trường có khách hàng riêng lẻ là đối tượng mục tiêu chính.
+
+---
+
 ## <a name="manage-your-measures"></a>Quản lý các giá trị đo của bạn
 
 Bạn có thể tìm thấy danh sách các giá trị đo trên trang **Giá trị đo**.
@@ -166,6 +244,5 @@ Chọn một giá trị đo từ danh sách cho các tùy chọn sau:
 ## <a name="next-step"></a>Bước tiếp theo
 
 Bạn có thể sử dụng các giá trị đo hiện có để tạo [một phân khúc khách hàng](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

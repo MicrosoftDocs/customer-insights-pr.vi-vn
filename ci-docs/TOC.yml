@@ -2,11 +2,17 @@
   href: index.yml
 - name: Tổng quan sản phẩm
   href: overview.md
-- name: Tạo bản dùng thử
-  href: audience-insights/get-started-trial.md
+- name: Dùng thử miễn phí
+  items:
+    - name: Đăng ký dùng thử miễn phí
+      href: trial-signup.md
+    - name: Câu hỏi thường gặp về Bản dùng thử
+      href: trial-FAQ.md
+- name: Bắt đầu với giấy phép trả phí
+  href: paid-license.md
 - name: Truy cập môi trường của bạn
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Thông tin chi tiết về đối tượng
+- name: Thông tin chuyên sâu về đối tượng
   items:
     - name: Trung tâm trợ giúp
       href: audience-insights/index.yml
@@ -19,9 +25,11 @@
         - name: Hướng dẫn Bắt đầu nhanh
           href: audience-insights/get-started.md
         - name: Tạo môi trường mới
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Khám phá thông tin chi tiết về đối tượng
           href: audience-insights/home.md
+    - name: Làm việc với tài khoản công việc
+      href: audience-insights/work-with-business-accounts.md
     - name: Tìm hiểu các mô-đun
       items:
         - name: Thu thập dữ liệu
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Liệt kê hoạt động dành cho khách hàng
           href: audience-insights/activities.md
+        - name: Xác định ánh xạ ngữ nghĩa
+          href: audience-insights/semantic-mappings.md
     - name: Tăng cường dữ liệu
       items:
         - name: Tăng cường thông tin hồ sơ khách hàng
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Dự đoán khả năng rời bỏ đăng ký
               href: audience-insights/predict-subscription-churn.md
-            - name: Dự đoán khả năng rời bỏ giao dịch
+            - name: Dự đoán khách hàng rời khỏi giao dịch
               href: audience-insights/predict-transactional-churn.md
             - name: Sử dụng các mô hình tùy chỉnh của Azure Machine Learning
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Hướng dẫn mẫu cho dự đoán khả năng rời bỏ đăng ký
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Hướng dẫn mẫu cho dự đoán khả năng rời bỏ giao dịch
+            - name: Hướng dẫn mẫu cho dự đoán khách hàng rời khỏi giao dịch
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Hướng dẫn mẫu dự đoán đề xuất sản phẩm
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Quản lý nhiều môi trường
           href: audience-insights/manage-environments.md
-        - name: Kết nối với tài khoản lưu trữ ADLS sử dụng Dịch vụ chính
-          href: audience-insights/connect-service-principal.md
         - name: Ngôn ngữ được hỗ trợ
           href: audience-insights/supported-languages.md
+        - name: Bảo mật
+          items:
+            - name: Mang Key Vault của riêng bạn
+              href: audience-insights/use-azure-key-vault.md
+            - name: Kết nối với tài khoản lưu trữ ADLS sử dụng Dịch vụ chính
+              href: audience-insights/connect-service-principal.md
     - name: Khả năng mở rộng
       items:
         - name: Tích hợp dữ liệu web từ thông tin chi tiết về tương tác
@@ -248,6 +262,8 @@
       items:
         - name: Hướng dẫn Bắt đầu nhanh
           href: engagement-insights/get-started.md
+        - name: Tạo môi trường
+          href: engagement-insights/create-new-environment.md
         - name: Tạo không gian làm việc
           href: engagement-insights/create-workspace.md
         - name: Thu nạp sự kiện từ trang web và ứng dụng dành cho thiết bị di động

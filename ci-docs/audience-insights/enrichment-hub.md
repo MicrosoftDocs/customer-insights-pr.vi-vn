@@ -1,7 +1,7 @@
 ---
 title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
 description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470054"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617581"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -27,16 +27,26 @@ Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ li
 
 Bạn cần có quyền của Người đóng góp hoặc Quản trị viên để tạo hoặc chỉnh sửa phần dữ liệu tăng cường. Để biết thêm thông tin, hãy xem [Quyền](permissions.md).
 
-Trên tab **Khám phá**, bạn sẽ tìm thấy những dữ liệu tăng cường sau:
+Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tăng cường được hỗ trợ.
 
-- [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
+# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+
 - [Thương hiệu](enrichment-microsoft.md) do Microsoft cung cấp
 - [Sở thích](enrichment-microsoft.md) do Microsoft cung cấp
-- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp
-- [Dữ liệu công ty](enrichment-leadspace.md) do Leadspace cung cấp
+- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp 
 - [Dữ liệu nhân khẩu học](enrichment-experian.md) do Experian cung cấp
-- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp
-- [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP)
+- [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
+
+# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+
+- [Dữ liệu công ty](enrichment-leadspace.md) do Leadspace cung cấp
+- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp 
+- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp 
+- [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
+
+---
 
 Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông tin bổ sung mà mình đã đặt cấu hình và chỉnh sửa thuộc tính.
 
@@ -58,7 +68,7 @@ Chạy hoặc hủy kích hoạt nhiều dữ liệu tăng cường cùng lúc b
 
 ## <a name="enrichments-and-connections"></a>Dữ liệu tăng cường và kết nối
 
-Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình bằng cách sử dụng [kết nối](connections.md) do quản trị viên thiết lập bằng thông tin xác thực và cho phép truyền dữ liệu. Quản trị viên và người đóng góp có thể dùng kết nối để đặt cấu hình dữ liệu tăng cường.  
+Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình bằng cách sử dụng [kết nối](connections.md) do quản trị viên thiết lập bằng thông tin xác thực và cho phép truyền dữ liệu. Quản trị viên và người đóng góp có thể sử dụng kết nối này để đặt cấu hình nội dung tăng cường.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Nhiều dữ liệu tăng cường thuộc cùng loại
 

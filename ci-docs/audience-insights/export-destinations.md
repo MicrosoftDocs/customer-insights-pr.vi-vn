@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu từ Customer Insights
 description: Quản lý nội dung xuất để chia sẻ dữ liệu.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034708"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623159"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
-Trang **Nội dung xuất** hiển thị cho bạn tất cả các nội dung xuất đã định cấu hình. Nội dung xuất chia sẻ dữ liệu cụ thể với các ứng dụng khác nhau. Chúng có thể bao gồm các thực thể hoặc hồ sơ khách hàng, lược đồ và thông tin chi tiết ánh xạ. Mỗi nội dung xuất yêu cầu một [kết nối, do quản trị viên thiết lập, để quản lý hoạt động xác thực và truy cập](connections.md).
+Trang **Nội dung xuất** hiển thị cho bạn tất cả các nội dung xuất đã định cấu hình. Nội dung xuất chia sẻ dữ liệu cụ thể với các ứng dụng khác nhau. Chúng có thể bao gồm hồ sơ khách hàng, thực thể, lược đồ và chi tiết ánh xạ. Mỗi nội dung xuất yêu cầu một [kết nối, do quản trị viên thiết lập, để quản lý hoạt động xác thực và truy cập](connections.md).
 
 Đi đến **Dữ liệu** > **Nội dung xuất** để xem trang nội dung xuất. Tất cả các vai trò người dùng đều có thể xem nội dung xuất đã định cấu hình. Sử dụng trường tìm kiếm trong thanh lệnh để tìm nội dung xuất theo tên, tên kết nối hoặc kiểu kết nối.
 
-## <a name="set-up-a-new-export"></a>Thiết lập một nội dung xuất mới
+## <a name="export-types"></a>Loại xuất
 
+Có hai loại xuất chính:  
+
+- **Xuất dữ liệu ra** cho phép bạn xuất bất kỳ loại thực thể nào có sẵn trong thông tin chuyên sâu về đối tượng. Các thực thể mà bạn chọn để xuất được xuất với tất cả các trường dữ liệu, siêu dữ liệu, lược đồ và chi tiết ánh xạ. 
+- **Xuất phân khúc** cho phép bạn xuất các thực thể phân khúc từ thông tin chuyên sâu về đối tượng. Các phân khúc đại diện cho một danh sách các hồ sơ khách hàng. Khi đặt cấu hình xuất, bạn chọn các trường dữ liệu được bao gồm, tùy thuộc vào hệ thống đích mà bạn đang xuất dữ liệu. 
+
+### <a name="export-segments"></a>Xuất phân khúc
+
+**Xuất phân khúc trong môi trường dành cho tài khoản doanh nghiệp (B2B) hoặc khách hàng cá nhân (B2C)**  
+Hầu hết tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất phân khúc sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. Nói chung, thành phần phân khúc, hồ sơ khách hàng, chứa thông tin liên hệ. Mặc dù điều này thường xảy ra đối với các phân khúc được xây dựng trên khách hàng cá nhân (B2C), nhưng nó không nhất thiết phải xảy ra đối với các phân khúc dựa trên tài khoản doanh nghiệp (B2B). 
+
+**Môi trường xuất phân khúc cho tài khoản doanh nghiệp (B2B)**  
+- Các phân khúc trong bối cảnh môi trường dành cho tài khoản doanh nghiệp được xây dựng dựa trên thực thể *tài khoản*. Để xuất các phân khúc tài khoản như hiện tại, hệ thống mục tiêu cần hỗ trợ các phân khúc tài khoản thuần túy. Đây là trường hợp cho [LinkedIn](export-linkedin-ads.md) khi bạn chọn tùy chọn **công ty** trong khi xác định xuất.
+- Tất cả các hệ thống đích khác đều yêu cầu các trường từ thực thể liên hệ. Để đảm bảo các phân khúc tài khoản có thể truy xuất dữ liệu từ các liên hệ có liên quan, định nghĩa phân khúc của bạn cần phải chiếu các thuộc tính của thực thể liên hệ. Tìm hiểu thêm về cách [đặt cấu hình các phân khúc và chiếu thuộc tính](segment-builder.md).
+
+**Xuất phân khúc trong môi trường dành cho khách hàng cá nhân (B2C)**  
+- Các phân khúc trong bối cảnh môi trường dành cho khách hàng cá nhân được xây dựng dựa trên thực thể *hồ sơ khách hàng hợp nhất*. Mọi phân khúc đáp ứng yêu cầu của hệ thống mục tiêu (ví dụ: địa chỉ email) đều có thể được xuất.
+
+**Giới hạn đối với xuất phân khúc**  
+- Hệ thống mục tiêu của bên thứ ba có thể giới hạn số lượng hồ sơ khách hàng mà bạn có thể xuất. 
+- Đối với khách hàng cá nhân, bạn sẽ thấy số lượng thành phần phân khúc thực tế khi chọn phân khúc để xuất. Bạn sẽ nhận được cảnh báo nếu một phân khúc quá lớn. 
+- Đối với tài khoản doanh nghiệp, bạn sẽ thấy số lượng tài khoản trong một phân khúc; tuy nhiên, số lượng liên hệ có thể được chiếu không hiển thị. Trong một số trường hợp, điều này có thể dẫn đến phân khúc đã xuất thực sự chứa nhiều hồ sơ khách hàng hơn hệ thống mục tiêu chấp nhận. Vượt quá giới hạn của kết quả hệ thống đích sẽ bỏ qua quá trình xuất. 
+
+## <a name="set-up-a-new-export"></a>Thiết lập một nội dung xuất mới  
 Để thiết lập hoặc chỉnh sửa một nội dung xuất, bạn cần có sẵn các kết nối. Kết nối phụ thuộc vào [vai trò người dùng](permissions.md) của bạn:
-- Quản trị viên có quyền truy cập vào tất cả các kết nối. Họ cũng có thể tạo kết nối mới khi thiết lập nội dung xuất.
-- Những người đóng góp có thể có quyền truy cập vào các kết nối cụ thể. Họ có thể định cấu hình và chia sẻ kết nối hay không là tùy thuộc vào quản trị viên. Danh sách nội dung xuất cho người đóng góp biết họ có thể chỉnh sửa hay chỉ được xem nội dung xuất trong cột **Quyền của bạn**. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Người xem chỉ có thể xem các nội dung xuất hiện có nhưng không thể tạo chúng.
+- **Quản trị viên** có quyền truy cập vào tất cả các kết nối. Họ cũng có thể tạo kết nối mới khi thiết lập nội dung xuất.
+- **Người đóng góp** có thể có quyền truy cập vào các kết nối cụ thể. Họ có thể định cấu hình và chia sẻ kết nối hay không là tùy thuộc vào quản trị viên. Danh sách nội dung xuất cho người đóng góp biết họ có thể chỉnh sửa hay chỉ được xem nội dung xuất trong cột **Quyền của bạn**. Để biết thêm thông tin, hãy truy cập [Cho phép những người đóng góp sử dụng kết nối để xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Người xem** chỉ có thể xem các xuất hiện có chứ không thể tạo.
 
 ### <a name="define-a-new-export"></a>Xác định nội dung xuất mới
 

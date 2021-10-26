@@ -4,17 +4,17 @@ description: Tìm hiểu cách cá nhân hóa và chạy mẫu SDK web.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036629"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606291"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Chạy mẫu SDK web cho chức năng thông tin chuyên sâu về tương tác của Dynamics 365 Customer Insights
 
@@ -26,7 +26,7 @@ Thư viện SDK web của chức năng thông tin chuyên sâu về tương tác
 
 - Tải [Visual Studio Code](https://code.visualstudio.com/).
 - [Cài đặt tiện ích mở rộng Máy chủ trực tiếp](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) trong Visual Studio Code và làm quen với cách chạy Máy chủ trực tiếp.
-- Bạn cần phải có [khóa thu thập dữ liệu](instrument-website.md).
+- Bạn phải có một [không gian làm việc thông tin chi tiết về mức độ tương tác](create-workspace.md).
 
 ## <a name="run-sample"></a>Chạy mẫu
 
@@ -36,7 +36,11 @@ Thư viện SDK web của chức năng thông tin chuyên sâu về tương tác
 
 1. Mở thư mục đã giải nén trong Visual Studio Code.
 
-1. Trong tệp `ei_websdk_sample.html`, thay thế chuỗi "INGESTION_KEY" bằng khóa thu thập dữ liệu của bạn từ cổng thông tin chuyên sâu về tương tác và chuỗi "NAME" bằng tên chung mà bạn muốn SDK được khởi tạo. Đảm bảo rằng bạn thay thế tất cả các lần xuất hiện.
+1. Chuyển đến cổng thông tin chi tiết về mức độ tương tác cho không gian làm việc. Chọn **Quản trị viên** > **Không gian làm việc** rồi chọn **Hướng dẫn cài đặt**. Làm theo tùy chọn đầu tiên rồi chọn **Sao chép mã** để sao chép đoạn mã JavaScript.
+
+1. Trong tệp `ei_websdk_sample.html`, dán đoạn mã mà bạn đã sao chép vào dòng sau:
+
+   - <-- DÁN ĐOẠN MÃ JAVASCRIPT TỪ CỔNG THÔNG TIN CHI TIẾT VỀ MỨC ĐỘ TƯƠNG TÁC VÀO ĐÂY, BÊN DƯỚI DÒNG NÀY -->
 
 1. Mở tệp `ei_websdk_sample.html` bằng Máy chủ trực tiếp trong Visual Studio Code bằng cách chọn **Đưa vào thực hiện** từ thanh trạng thái.
 

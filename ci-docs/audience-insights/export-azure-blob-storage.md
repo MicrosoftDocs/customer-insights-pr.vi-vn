@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Azure Blob Storage
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang bộ lưu trữ Blob.
-ms.date: 06/30/2021
+ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b159f87276581f68e07bb73ffd257080eb3cb56422997b09a613bd7afa4e3980
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034754"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605876"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang Azure Blob Storage (bản xem trước)
 
 Lưu trữ dữ liệu Customer Insights của bạn trong bộ lưu trữ Blob hoặc sử dụng bộ lưu trữ đó để chuyển dữ liệu của bạn sang các ứng dụng khác.
+
+## <a name="known-limitations"></a>Các hạn chế đã biết
+
+1. Đối với Azure Blob Storage, bạn có thể chọn giữa [Bậc Hiệu suất tiêu chuẩn và Hiệu suất cao cấp](/azure/storage/blobs/storage-blob-performance-tiers). Nếu bạn chọn bậc Hiệu suất cao cấp, hãy chọn [các blob khối cao cấp làm loại tài khoản](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
 
 ## <a name="set-up-the-connection-to-blob-storage"></a>Thiết lập kết nối với Bộ lưu trữ Blob
 

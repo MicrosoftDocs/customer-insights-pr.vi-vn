@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Sendinblue
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036081"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617811"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Xuất phân khúc sang Sendinblue (bản xem trước)
 
@@ -29,10 +29,10 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất để tạo chiến d
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ khách hàng/lần xuất sang Sendinblue.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Sendinblue.
 - Việc xuất sang Sendinblue bị giới hạn theo phân khúc.
-- Quy trình xuất các phân khúc với tổng số 1 triệu hồ sơ có thể mất đến 90 phút. 
-- Số lượng hồ sơ mà bạn có thể xuất sang Sendinblue tùy thuộc vào và bị giới hạn bởi hợp đồng của bạn với Sendinblue.
+- Quá trình xuất phân khúc với tổng cộng 1 triệu hồ sơ khách hàng có thể mất đến 90 phút. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Sendinblue tùy thuộc vào và giới hạn trong hợp đồng của bạn với Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Thiết lập kết nối đến Sendinblue
 
@@ -64,7 +64,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **ID danh sách Sendinblue** 
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. 
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. 
 
 1. Bạn có thể xuất **Tên**, **Họ** và **Số điện thoại** để tạo nhiều email được cá nhân hóa hơn. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
 

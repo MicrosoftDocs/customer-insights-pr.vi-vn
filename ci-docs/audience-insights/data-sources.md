@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032876"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645381"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -35,7 +35,7 @@ Bạn có thể thêm nguồn dữ liệu theo ba cách chính:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Thêm dữ liệu từ nguồn dữ liệu tại chỗ
 
-Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chuyên sâu về đối tượng được hỗ trợ dựa trên luồng dữ liệu Microsoft Power Platform. Bạn có thể bật luồng dữ liệu trong Customer Insights bằng cách [cung cấp URL môi trường Microsoft Dataverse](get-started-paid.md) khi thiết lập môi trường.
+Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chuyên sâu về đối tượng được hỗ trợ dựa trên luồng dữ liệu Microsoft Power Platform. Bạn có thể bật luồng dữ liệu trong Customer Insights bằng cách [cung cấp URL môi trường Microsoft Dataverse](create-environment.md) khi thiết lập môi trường.
 
 Nguồn dữ liệu được tạo sau khi liên kết một môi trường Dataverse với Customer Insights sẽ sử dụng [luồng dữ liệu Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Loại bỏ và tái tạo các nguồn dữ liệu đã tồn tại trước khi môi trường Dataverse được liên kết để [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
 
