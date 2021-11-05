@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623159"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673349"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
@@ -33,13 +33,13 @@ Có hai loại xuất chính:
 ### <a name="export-segments"></a>Xuất phân khúc
 
 **Xuất phân khúc trong môi trường dành cho tài khoản doanh nghiệp (B2B) hoặc khách hàng cá nhân (B2C)**  
-Hầu hết tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất phân khúc sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. Nói chung, thành phần phân khúc, hồ sơ khách hàng, chứa thông tin liên hệ. Mặc dù điều này thường xảy ra đối với các phân khúc được xây dựng trên khách hàng cá nhân (B2C), nhưng nó không nhất thiết phải xảy ra đối với các phân khúc dựa trên tài khoản doanh nghiệp (B2B). 
+Hầu hết tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất phân khúc sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. Nói chung, thành phần phân khúc, hồ sơ khách hàng, chứa thông tin liên hệ. Mặc dù điều này thường xảy ra đối với các phân khúc được xây dựng trên người tiêu dùng cá nhân (B2C), nhưng nó không nhất thiết phải xảy ra đối với các phân khúc dựa trên tài khoản doanh nghiệp (B2B). 
 
 **Môi trường xuất phân khúc cho tài khoản doanh nghiệp (B2B)**  
 - Các phân khúc trong bối cảnh môi trường dành cho tài khoản doanh nghiệp được xây dựng dựa trên thực thể *tài khoản*. Để xuất các phân khúc tài khoản như hiện tại, hệ thống mục tiêu cần hỗ trợ các phân khúc tài khoản thuần túy. Đây là trường hợp cho [LinkedIn](export-linkedin-ads.md) khi bạn chọn tùy chọn **công ty** trong khi xác định xuất.
 - Tất cả các hệ thống đích khác đều yêu cầu các trường từ thực thể liên hệ. Để đảm bảo các phân khúc tài khoản có thể truy xuất dữ liệu từ các liên hệ có liên quan, định nghĩa phân khúc của bạn cần phải chiếu các thuộc tính của thực thể liên hệ. Tìm hiểu thêm về cách [đặt cấu hình các phân khúc và chiếu thuộc tính](segment-builder.md).
 
-**Xuất phân khúc trong môi trường dành cho khách hàng cá nhân (B2C)**  
+**Xuất phân khúc trong môi trường dành cho người tiêu dùng cá nhân (B2C)**  
 - Các phân khúc trong bối cảnh môi trường dành cho khách hàng cá nhân được xây dựng dựa trên thực thể *hồ sơ khách hàng hợp nhất*. Mọi phân khúc đáp ứng yêu cầu của hệ thống mục tiêu (ví dụ: địa chỉ email) đều có thể được xuất.
 
 **Giới hạn đối với xuất phân khúc**  

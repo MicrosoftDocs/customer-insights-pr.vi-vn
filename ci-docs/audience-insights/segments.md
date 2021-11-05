@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617468"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673874"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -26,7 +26,7 @@ Hồ sơ khách hàng phù hợp với các bộ lọc của định nghĩa phâ
 
 Có nhiều cách để tạo một phân khúc mới: 
 
-# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
 - Phân khúc phức tạp với trình dựng phân khúc [Tạo phân khúc của riêng bạn](segment-builder.md#create-a-new-segment) 
 - Các phân khúc đơn giản với một toán tử: [Phân khúc nhanh](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Có nhiều cách để tạo một phân khúc mới:
 - Đề xuất do AI hỗ trợ dựa trên các biện pháp hoặc thuộc tính: [Các phân khúc được đề xuất nhằm cải thiện các biện pháp](suggested-segments.md) 
 - Đề xuất dựa trên các hoạt động: [Các phân khúc được đề xuất dựa trên hoạt động của khách hàng](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 - Phân khúc phức tạp với trình dựng phân khúc [Tạo phân khúc của riêng bạn](segment-builder.md#create-a-new-segment)
 

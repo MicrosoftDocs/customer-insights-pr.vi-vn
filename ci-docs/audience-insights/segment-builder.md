@@ -1,7 +1,7 @@
 ---
 title: Tạo phân khúc bằng trình tạo phân khúc
 description: Tạo phân khúc khách hàng để nhóm họ lại dựa trên các đặc điểm khác nhau.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623070"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673576"
 ---
 # <a name="create-segments"></a>Tạo phân khúc
 
@@ -23,6 +23,7 @@ Xác định các bộ lọc phức hợp xung quanh thực thể khách hàng h
 > [!TIP]
 > - Phân khúc nhanh chỉ được hỗ trợ trong các môi trường cho **khách hàng cá nhân**.    
 > - Phân khúc dựa trên **khách hàng cá nhân** tự động bao gồm thông tin liên hệ có sẵn cho các thành phần phân khúc. Trong môi trường cho **tài khoản doanh nghiệp**, các phân khúc được dựa trên tài khoản (công ty hoặc đại lý). Để bao gồm thông tin liên hệ trong phân khúc, hãy sử dụng chức năng **Thuộc tính dự án** trong trình dựng phân khúc.
+>    - Đảm bảo rằng các nguồn dữ liệu liên hệ là [ánh xạ ngữ nghĩa tới ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) thực thể.
 
 ## <a name="segment-builder"></a>Trình tạo phân khúc
 
@@ -52,7 +53,7 @@ Ví dụ trên minh họa khả năng phân khúc. Chúng tôi đã xác định
 
 Có nhiều cách để tạo một phân khúc mới. Phần này mô tả cách tạo phân khúc của riêng bạn từ đầu. Bạn cũng có thể tạo một *phân khúc nhanh* dựa trên các thực thể hiện có hoặc sử dụng các mô hình máy học để có được *phân khúc đề xuất*. Để biết thêm thông tin, hãy chuyển đến [Tổng quan về phân khúc](segments.md).
 
-Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Trong giai đoạn nháp, một phân khúc được lưu dưới dạng phân khúc không hoạt động. Khi bạn hoàn thành cấu hình phân khúc, hãy chạy cấu hình để kích hoạt phân khúc. Ngoài ra, bạn có thể _ **Kích hoạt** _ một phân khúc từ trang **Tất cả phân khúc**.
+Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Trong giai đoạn nháp, một phân khúc được lưu dưới dạng phân khúc không hoạt động. Khi bạn hoàn thành cấu hình phân khúc, hãy chạy cấu hình để kích hoạt phân khúc. Ngoài ra, bạn có thể **Kích hoạt** một phân khúc từ trang **Tất cả phân khúc**.
 
 1. Chuyển đến trang **Phân khúc**.
 
@@ -86,17 +87,25 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Trong giai đoạ
 
    Khi sử dụng toán tử HOẶC, tất cả các điều kiện phải dựa trên các thực thể có trong đường dẫn mối quan hệ.
 
-   - Bạn có thể tạo nhiều quy tắc để tạo các bộ hồ sơ khách hàng khác nhau. Bạn có thể kết hợp các nhóm để có được những khách hàng cần thiết cho hoạt động kinh doanh của bạn. Để tạo một quy tắc mới, hãy chọn **Thêm quy tắc**. Cụ thể, nếu bạn không thể bao gồm và thực thể trong một quy tắc do đường dẫn mối quan hệ đã chỉ định, bạn phải tạo quy tắc mới để chọn các thuộc tính tạo thành quy tắc đó.
+   - Bạn có thể tạo nhiều quy tắc để tạo các bộ hồ sơ khách hàng khác nhau. Bạn có thể kết hợp các nhóm để có được những khách hàng cần thiết cho hoạt động kinh doanh của bạn. Để tạo một quy tắc mới, hãy chọn **Thêm quy tắc**. Cụ thể, nếu bạn không thể bao gồm và thực thể trong một quy tắc vì đường dẫn mối quan hệ đã chỉ định, bạn phải tạo một quy tắc mới để chọn các thuộc tính tạo thành quy tắc đó.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Thêm quy tắc mới vào một phân khúc và chọn toán tử đặt.":::
 
    - Chọn một trong các toán tử đã đặt: **Hợp nhất**, **Giao nhau** hoặc **Ngoại trừ**.
 
       - **Hợp nhất** sẽ hợp nhất hai nhóm với nhau.
-      - **Giao nhau** sẽ chồng chéo hai nhóm với nhau. Chỉ dữ liệu *là phổ biến* cho cả hai nhóm được giữ lại trong nhóm hợp nhất.
-      - **Trừ** kết hợp hai nhóm với nhau. Chỉ dữ liệu trong nhóm A *là không phổ biến* cho dữ liệu trong nhóm B được giữ lại.
+      - **Giao nhau** sẽ chồng chéo hai nhóm với nhau. Chỉ dữ liệu mà cả hai nhóm *có chung* vẫn nằm trong nhóm hợp nhất.
+      - **Trừ** kết hợp hai nhóm với nhau. Chỉ dữ liệu trong nhóm A mà *không có chung* với dữ liệu trong nhóm B được giữ lại.
 
-1. Theo mặc định, các phân khúc tạo thực thể đầu ra chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân khúc dựa trên các thực thể khác với *Khách hàng*, bạn có thể thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra. Chọn **Thuộc tính dự án** để chọn các thuộc tính sẽ được thêm vào thực thể đầu ra.  
+1. Theo mặc định, các phân khúc tạo thực thể đầu ra chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân khúc dựa trên các thực thể khác với *Khách hàng*, bạn có thể thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra. Chọn **Thuộc tính dự án** để chọn các thuộc tính sẽ được thêm vào thực thể đầu ra. 
+
+   > [!IMPORTANT]
+   > Đối với các phân khúc dựa trên tài khoản doanh nghiệp, chi tiết của một hoặc nhiều liên hệ của từng tài khoản từ thực thể *ContactProfile* cần được bao gồm trong phân khúc để cho phép phân khúc được kích hoạt hoặc xuất sang các đích cần thông tin liên hệ. Để biết thêm thông tin về thực thể *ContactProfile*, xem [Ánh xạ ngữ nghĩa](semantic-mappings.md).
+   > Đầu ra mẫu cho một phân khúc dựa trên tài khoản doanh nghiệp với các thuộc tính dự kiến của địa chỉ liên hệ sẽ có dạng như thế này: 
+   >
+   > |ID  |Tên Khách hàng  |Doanh thu  |Tên liên hệ  | Vai trò liên hệ|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Quản lý thu mua]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Ví dụ về các thuộc tính dự kiến được chọn trong ngăn bên để được thêm vào thực thể đầu ra.":::
   
@@ -107,13 +116,14 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Trong giai đoạ
    > - Nếu thuộc tính bạn muốn chiếu xa hơn một bước so với thực thể *Khách hàng*, như xác định theo mối quan hệ, rằng thuộc tính đó nên được sử dụng trong mọi quy tắc của truy vấn phân khúc mà bạn đang xây dựng. 
    > - Nếu thuộc tính bạn muốn chiếu chỉ cách thực thể *Khách hàng* một bước, thuộc tính đó không cần xuất hiện trong mọi quy tắc của truy vấn phân khúc mà bạn đang xây dựng. 
    > - **Các thuộc tính dự kiến** được coi như yếu tố khi sử dụng các toán tử tập hợp.
-   > - Đối với các phân khúc dựa trên tài khoản doanh nghiệp, chi tiết của một hoặc nhiều liên hệ của từng tài khoản cần được bao gồm trong phân khúc để cho phép phân khúc được kích hoạt hoặc xuất sang các đích cần thông tin liên hệ.
 
 1. Trước khi bạn lưu và chạy phân khúc, hãy chọn **Chỉnh sửa chi tiết** bên cạnh tên phân khúc. Cung cấp tên cho phân khúc và cập nhật **Tên thực thể đầu ra** đã đề xuất cho phân khúc. Bạn cũng có thể thêm mô tả vào phân khúc.
 
 1. Chọn **Chạy** để lưu phân khúc, kích hoạt và bắt đầu xử lý phân khúc của bạn dựa trên tất cả các quy tắc và điều kiện. Nếu không, nó sẽ được lưu dưới dạng một phân khúc không hoạt động.
-
+   
 1. Chọn **Quay lại phân khúc** để quay lại trang **Phân khúc**.
+
+1. Theo mặc định, phân khúc được tạo dưới dạng phân khúc động. Điều đó có nghĩa là phân khúc được làm mới trong quá trình làm mới hệ thống. Để [dừng làm mới tự động](segments.md#manage-existing-segments), chọn phân khúc chọn tùy chọn **Thiết lập tĩnh**. Các phân khúc tĩnh có thể được [làm mới theo cách thủ công](segments.md#refresh-segments) bất cứ lúc nào.
 
 > [!TIP]
 > - Trình tạo phân khúc sẽ không đề xuất các giá trị hợp lệ từ các thực thể khi đặt toán tử cho các điều kiện. Bạn có thể chuyển đến phần **Dữ liệu** > **Thực thể** và tải xuống dữ liệu thực thể để xem những giá trị nào có sẵn.

@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648189"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673301"
 ---
 # <a name="map-entities-and-attributes"></a>Ánh xạ thực thể và thuộc tính
 
@@ -96,7 +96,7 @@ Tiếp tục với các bước hợp nhất và đảm bảo thuộc tính ch�
 
 Đối với tổ chức (Xem trước), loại thuộc tính sẽ được ánh xạ tới "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính B2B](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
+> ![Khóa chính và loại thuộc tính B2B.](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
 
 ## <a name="next-step"></a>Bước tiếp theo
 

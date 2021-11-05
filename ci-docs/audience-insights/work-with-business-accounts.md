@@ -1,7 +1,7 @@
 ---
 title: Bắt đầu với tài khoản doanh nghiệp làm đối tượng mục tiêu chính
 description: Tìm hiểu về tài khoản doanh nghiệp làm đối tượng mục tiêu chính Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645014"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673713"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Thao tác với tài khoản doanh nghiệp trong thông tin chuyên sâu về đối tượng
 
-Khả năng của thông tin chi tiết về đối tượng trong Dynamics 365 Customer Insights cho phép bạn đặt cấu hình môi trường cho các đối tượng mục tiêu chính khác nhau: khách hàng riêng lẻ (B2C) và tài khoản doanh nghiệp (B2B). Trong các tình huống B2C, dữ liệu tập trung xung quanh các cá nhân. Đối với B2B, đối tượng mục tiêu chính là tài khoản - tổ chức hoặc công ty - và các liên hệ. Bài viết này giúp bạn bắt đầu với một môi trường dành cho tài khoản doanh nghiệp. Bài viết liệt kê sự khác biệt của các khía cạnh tính năng trong thông tin chuyên sâu về đối tượng, tùy thuộc vào trọng tâm môi trường của bạn. Để biết thêm thông tin về sự khác biệt, hãy xem lại tài liệu về các khía cạnh tính năng. 
+Khả năng của thông tin chi tiết về đối tượng trong Dynamics 365 Customer Insights cho phép bạn đặt cấu hình môi trường cho các đối tượng mục tiêu chính khác nhau: người tiêu dùng cá nhân (B2C) và tài khoản doanh nghiệp (B2B). Trong các tình huống B2C, dữ liệu tập trung xung quanh các cá nhân. Đối với B2B, đối tượng mục tiêu chính là tài khoản – tổ chức hoặc công ty – và các liên hệ. Bài viết này giúp bạn bắt đầu với một môi trường dành cho tài khoản doanh nghiệp. Bài viết liệt kê sự khác biệt của các khía cạnh tính năng trong thông tin chuyên sâu về đối tượng, tùy thuộc vào trọng tâm môi trường của bạn. Để biết thêm thông tin về sự khác biệt, hãy xem lại tài liệu về các khía cạnh tính năng. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Tạo môi trường cho tài khoản kinh doanh
 
@@ -32,7 +32,7 @@ Sau khi hợp nhất dữ liệu, hãy [chỉ định hệ thống phân cấp t
 
 Nếu tổ chức của bạn duy trì các môi trường cho tài khoản doanh nghiệp và khách hàng cá nhân, bạn có thể sử dụng bộ chuyển đổi ứng dụng ở ngăn bên trái để chọn đối tượng mục tiêu chính.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Trình chuyển đổi để thay đổi đối tượng mục tiêu chính giữa các tài khoản khách hàng và doanh nghiệp.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Trình chuyển đổi để thay đổi đối tượng mục tiêu chính giữa các tài khoản khách hàng và doanh nghiệp.":::
 
 ## <a name="supported-feature-areas"></a>Các khía cạnh tính năng được hỗ trợ
 

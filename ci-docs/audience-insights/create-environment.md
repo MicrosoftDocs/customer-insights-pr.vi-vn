@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645742"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673417"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Tạo môi trường trong thông tin chuyên sâu về đối tượng
 
@@ -46,7 +46,7 @@ Trong bước **Thông tin cơ bản**, chọn xem bạn muốn tạo một môi
 
 Cung cấp các chi tiết sau đây:
    - **Tên**: Tên cho môi trường này. Trường này đã được điền nếu bạn sao chép một môi trường hiện có, nhưng bạn có thể thay đổi trường này.
-   - **Chọn doanh nghiệp của bạn**: Chọn đối tượng chính cho môi trường mới. Bạn có thể làm việc với khách hàng cá nhân (B2C) hoặc [tài khoản kinh doanh](work-with-business-accounts.md) (B2B).
+   - **Chọn doanh nghiệp của bạn**: Chọn đối tượng chính cho môi trường mới. Bạn có thể làm việc với người tiêu dùng cá nhân (B2C) hoặc [tài khoản kinh doanh](work-with-business-accounts.md) (B2B).
    - **Loại**: Chọn xem bạn muốn tạo môi trường sản xuất hay hộp cát. Môi trường hộp cát không cho phép làm mới dữ liệu theo lịch trình và dành cho việc triển khai và thử nghiệm trước. Môi trường hộp cát sử dụng cùng một đối tượng chính như môi trường sản xuất hiện được chọn.
    - **Vùng**: Vùng triển khai và lưu trư dịch vụ.
 
@@ -54,7 +54,7 @@ Cung cấp các chi tiết sau đây:
 
 Trong bước **Lưu trữ dữ liệu**, chọn nơi lưu trữ dữ liệu từ thông tin chuyên sâu về đối tượng.
 
-Bạn sẽ có hai lựa chọn: **Bộ nhớ Customer Insights** (một Azure Data Lake do nhóm Customer Insights quản lý) và **Azure Data Lake Storage** (Azure Data Lake Storage của riêng bạn). Tùy chọn mặc định là lưu trữ trong Customer Insights.
+Bạn sẽ có hai lựa chọn: **Bộ nhớ Customer Insights** (một kho dữ liệu Azure do nhóm Customer Insights quản lý) và **Azure Data Lake Storage** (Azure Data Lake Storage của riêng bạn). Tùy chọn mặc định là lưu trữ trong Customer Insights.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Chọn Azure Data Lake Storage để lưu trữ dữ liệu thông tin chuyên sâu về đối tượng của bạn.":::
 
@@ -66,7 +66,7 @@ Bằng cách lưu dữ liệu vào Azure Data Lake Storage, bạn đồng ý r�
 > - Tài khoản Azure Data Lake Storage từ cùng một vùng Azure mà bạn đã chọn khi tạo môi trường.
 > - Tài khoản Azure Data Lake Storage có *vùng tên theo cấp bậc* được bật.
 
-Đối với tùy chọn Azure Data Lake Storage, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Tên **Bộ chứa** sẽ là `customerinsights` và không thể thay đổi.
+Đối với tùy chọn Azure Data Lake Storage, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng một dịch vụ Azure chính](connect-service-principal.md). Tên **Bộ chứa** sẽ là `customerinsights` và không thể thay đổi.
 
 Khi quá trình hệ thống như nhập dữ liệu hoàn tất, hệ thống sẽ tạo các thư mục tương ứng trong tài khoản lưu trữ mà bạn đã chỉ định. Tệp dữ liệu và tệp *model.json* được tạo và thêm vào các thư mục dựa trên tên quy trình.
 
@@ -76,14 +76,14 @@ Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các 
    
 Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights với môi trường Dataverse.
 
-Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với Dataverse Managed Data Lake.
+Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu Dataverse được quản lý.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights không hỗ trợ các tình huống chia sẻ dữ liệu sau:
-> - Nếu bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của mình, bạn sẽ không thể bật chia sẻ dữ liệu với Data Lake Microsoft Dataverse được quản lý.
-> - Nếu bạn bật chia sẻ dữ liệu với Kho dữ liệu được quản lý Microsoft Dataverse, bạn sẽ không thể [tạo các giá trị được dự đoán hoặc bị thiếu trong một thực thể](predictions.md).
+> - Nếu bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của mình, bạn sẽ không thể bật chia sẻ dữ liệu với kho dữ liệu Dataverse được quản lý.
+> - Nếu bạn bật chia sẻ dữ liệu với Dataverse, bạn sẽ không thể [tạo các giá trị được dự đoán hoặc bị thiếu trong một thực thể](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Bước 4: Hoàn tất thiết đặt
 
@@ -93,10 +93,10 @@ Bạn cũng có thể thay đổi hầu hết các thiết đặt sau này. Đ�
 
 ## <a name="work-with-your-new-environment"></a>Làm việc với môi trường mới của bạn
 
-Xem lại các bài viết sau để giúp bạn bắt đầu đặt cấu hình Customer Insights. 
+Xem lại các bài viết sau để giúp bạn bắt đầu định cấu hình Customer Insights: 
 
 - [Thêm người dùng khác và gán quyền](permissions.md).
 - [Nhập các nguồn dữ liệu của bạn](data-sources.md) và chạy chúng thông qua [quá trình hợp nhất dữ liệu](data-unification.md) để có được [hồ sơ khách hàng hợp nhất](customer-profiles.md).
 - [Tăng cường hồ sơ khách hàng hợp nhất](enrichment-hub.md) hoặc [chạy các mô hình dự đoán](predictions-overview.md).
-- [Tạo phân khúc](segments.md) để nhóm khách hàng và [số liệu đo lường](measures.md) đánh giá KPI.
+- [Tạo phân khúc](segments.md) để nhóm khách hàng và [giá trị đo](measures.md) để xem lại KPI.
 - [Thiết lập kết nối](connections.md) và [xuất](export-destinations.md) để xử lý tập hợp con của dữ liệu trong các ứng dụng khác.

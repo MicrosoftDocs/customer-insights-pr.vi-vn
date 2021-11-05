@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617581"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673025"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -29,7 +29,7 @@ Bạn cần có quyền của Người đóng góp hoặc Quản trị viên đ�
 
 Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tăng cường được hỗ trợ.
 
-# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
 - [Thương hiệu](enrichment-microsoft.md) do Microsoft cung cấp
 - [Sở thích](enrichment-microsoft.md) do Microsoft cung cấp
@@ -38,7 +38,7 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tă
 - [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
 
-# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 - [Dữ liệu công ty](enrichment-leadspace.md) do Leadspace cung cấp
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp 

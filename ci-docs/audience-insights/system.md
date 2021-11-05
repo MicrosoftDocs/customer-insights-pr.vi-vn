@@ -1,7 +1,7 @@
 ---
 title: Cấu hình hệ thống trong thông tin chi tiết về đối tượng
 description: Tìm hiểu về cài đặt hệ thống trong khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035942"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651866"
 ---
 # <a name="system-configuration"></a>Cấu hình hệ thống
 
@@ -24,9 +24,9 @@ Trang **Hệ thống** bao gồm các tab sau:
 - [Sử dụng API](#api-usage-tab)
 - [Giới thiệu](#about-tab)
 - [Chung](#general-tab)
+- [Bảo mật](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Trang hệ thống.](media/system-tabs.png "Trang hệ thống")
+:::image type="content" source="media/system-tabs.png" alt-text="Các tab thiết đặt trên trang hệ thống.":::
 
 ## <a name="status-tab"></a>Tab Trạng thái
 
@@ -82,11 +82,17 @@ Sử dụng tab **Lịch trình** để lên lịch làm mới tự động tấ
 
 Tab **Giới thiệu** chứa **Tên hiển thị**, **ID môi trường** hiện hoạt, **Vùng** và **ID phiên** của tổ chức bạn. Nếu bạn có nhiều môi trường làm việc, bạn nên đặt cho mỗi môi trường một tên hiển thị dễ nhận dạng.
 
-## <a name="general-tab"></a>Tab tổng quát
+## <a name="general-tab"></a>Tab Tổng quát
 
-Có hai tùy chọn trên tab **Chung**, **Ngôn ngữ** và **định dạng Quốc gia/khu vực**.
+Bạn có thể thay đổi ngôn ngữ và định dạng quốc gia/khu vực trên tab **Tổng quát**.
 
-Ứng dụng này [hỗ trợ một số ngôn ngữ](supported-languages.md). Để thay đổi ngôn ngữ ưa dùng của bạn, hãy chọn một **Ngôn ngữ** từ mục thả xuống.
+Customer Insights [hỗ trợ một số ngôn ngữ](/dynamics365/get-started/availability). Ứng dụng này sử dụng tùy chọn ngôn ngữ của bạn để hiển thị các thành phần như menu, văn bản nhãn và thông báo hệ thống bằng ngôn ngữ ưa thích của bạn.
+
+Dữ liệu đã nhập và thông tin bạn đã nhập theo cách thủ công sẽ không được dịch.
+
+### <a name="update-the-settings"></a>Cập nhật thiết đặt
+
+Để thay đổi ngôn ngữ ưa dùng của bạn, hãy chọn một **Ngôn ngữ** từ mục thả xuống.
 
 Để thay đổi định dạng ưa dùng của bạn cho ngày, thời gian và số, hãy sử dụng mục thả xuống **Định dạng quốc gia/khu vực**. Một bản xem trước định dạng được hiển thị trong trường này. Hệ thống sẽ tự động đề xuất lựa chọn khi bạn chọn ngôn ngữ mới.
 
@@ -105,6 +111,13 @@ Tìm chi tiết về việc sử dụng API thời gian thực và xem sự ki�
 
    Các hoạt động sử dụng tính năng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một nút có biểu tượng ống nhòm để xem việc sử dụng API trong thời gian thực. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.   
    Sử dụng hộp **Nhóm theo** trong ngăn **Sử dụng API thời gian thực** để chọn cách tốt nhất để trình bày các tương tác trong thời gian thực của bạn. Bạn có thể nhóm dữ liệu theo phương pháp API, tên đủ điều kiện của thực thể (thực thể được nhập), tạo bởi (nguồn sự kiện), kết quả (thành công hay thất bại) hoặc mã lỗi. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
+
+## <a name="security-tab"></a>Tab Bảo mật
+
+Tab **Bảo mật** cho phép bạn liên kết và quản lý [Tín liệu khóa Azure](/azure/key-vault/general/basic-concepts) của riêng bạn với môi trường.
+Có thể dùng Key vault chuyên dụng để chia giai đoạn và sử dụng bí mật trong ranh giới tuân thủ của một tổ chức. Thông tin chuyên sâu về đối tượng có thể sử dụng bí mật trong Azure Key Vault để [thiết lập kết nối](connections.md) cho các hệ thống của bên thứ ba.
+
+Để biết thêm thông tin, hãy xem [Mang tín liệu khóa Azure của riêng bạn](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

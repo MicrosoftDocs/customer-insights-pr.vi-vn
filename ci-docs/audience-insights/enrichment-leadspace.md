@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617480"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673284"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Tăng cường dữ liệu hồ sơ công ty bằng Leadspace (bản xem trước)
 
-Leadspace là công ty khoa học dữ liệu cung cấp Nền tảng dữ liệu khách hàng B2B. Nó cho phép các môi trường có hồ sơ khách hàng hợp nhất dựa trên các tài khoản để làm phong phú thêm dữ liệu của họ. Làm phong phú *Hồ sơ khách hàng* với các thuộc tính như vị trí, ngành hoặc quy mô công ty. Làm phong phú *Hồ sơ liên hệ* với các thuộc tính như chức danh, chân dung hoặc xác minh email.
+Leadspace là một công ty khoa học dữ liệu cung cấp Nền tảng dữ liệu khách hàng B2B. Nó cho phép các môi trường có hồ sơ khách hàng hợp nhất dựa trên các tài khoản để làm phong phú thêm dữ liệu của họ. Làm phong phú *Hồ sơ khách hàng* với các thuộc tính như vị trí, ngành hoặc quy mô công ty. Làm phong phú *Hồ sơ liên hệ* với các thuộc tính như chức danh, chân dung hoặc xác minh email.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 

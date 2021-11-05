@@ -1,7 +1,7 @@
 ---
 title: Dự đoán khách hàng rời khỏi giao dịch
 description: Dự đoán xem khách hàng có nguy cơ không mua sản phẩm hoặc dịch vụ của bạn nữa không.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643458"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673071"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Dự đoán khách hàng rời khỏi giao dịch (bản xem trước)
 
@@ -28,6 +28,32 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 > Hãy thử hướng dẫn dự đoán tỷ lệ rời khỏi giao dịch bằng dữ liệu mẫu: [Hướng dẫn mẫu dự đoán tỷ lệ rời khỏi giao dịch (bản xem trước)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
+
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
+
+- Ít nhất [Quyền của người đóng góp](permissions.md) trong Customer Insights.
+- Kiến thức kinh doanh để hiểu ý nghĩa của việc rời đi với doanh nghiệp bạn. Chúng tôi hỗ trợ các định nghĩa rời bỏ dựa trên thời gian, có nghĩa là một khách hàng được coi là đã rời bỏ sau một khoảng thời gian không mua hàng.
+- Dữ liệu về các giao dịch/mua hàng của bạn và lịch sử của chúng:
+    - Định danh giao dịch để phân biệt mua hàng/giao dịch.
+    - Định danh khách hàng để so khớp các giao dịch với khách hàng của bạn.
+    - Ngày sự kiện giao dịch, xác định ngày giao dịch diễn ra.
+    - Lược đồ dữ liệu ngữ nghĩa cho mua hàng/giao dịch yêu cầu thông tin sau:
+        - **ID giao dịch**: Mã định danh duy nhất của một giao dịch mua hàng.
+        - **Ngày giao dịch**: Ngày mua hoặc giao dịch.
+        - **Giá trị của giao dịch**: Giá trị tiền tệ/số của giao dịch/mặt hàng.
+        - (Không bắt buộc) **ID sản phẩm duy nhất**: ID của sản phẩm hoặc dịch vụ được mua nếu dữ liệu của bạn ở cấp mục hàng.
+        - (Không bắt buộc) **Liệu giao dịch này có phải mục trả lại hay không**: Trường true/false cho biết liệu giao dịch có phải là mục trả lại hay không. Nếu **Giá trị của giao dịch** là âm, chúng tôi cũng sẽ sử dụng thông tin này để suy ra lợi nhuận.
+- (Tùy chọn) Dữ liệu về các hoạt động của khách hàng:
+    - Mã định danh hoạt động để phân biệt các hoạt động cùng loại.
+    - Mã định danh khách hàng để khớp hoạt động với khách hàng.
+    - Thông tin hoạt động chứa tên và ngày của hoạt động.
+    - Lược đồ dữ liệu ngữ nghĩa cho hoạt động của khách hàng bao gồm:
+        - **Khóa chính:** Mã định danh duy nhất cho một hoạt động. Ví dụ: một lượt truy cập trang web hoặc hồ sơ sử dụng cho thấy khách hàng đã thử một mẫu sản phẩm của bạn.
+        - **Dấu thời gian:** Ngày và giờ của sự kiện do khóa chính xác định.
+        - **Sự kiện:** Tên của sự kiện bạn muốn sử dụng. Ví dụ: trường có tên "UserAction" trong cửa hàng tạp hóa có thể được khách hàng sử dụng phiếu giảm giá.
+        - **Chi tiết:** Thông tin chi tiết về sự kiện. Ví dụ: trường có tên "CouponValue" trong cửa hàng tạp hóa có thể là giá trị tiền tệ của phiếu giảm giá.
+
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 - Ít nhất [Quyền của người đóng góp](permissions.md) trong Customer Insights.
 - Kiến thức kinh doanh để hiểu ý nghĩa của việc rời đi với doanh nghiệp bạn. Chúng tôi hỗ trợ các định nghĩa rời bỏ dựa trên thời gian, có nghĩa là một khách hàng được coi là đã rời bỏ sau một khoảng thời gian không mua hàng.
@@ -59,6 +85,9 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
         - **Quốc gia:** Quốc gia của khách hàng.
         - **Ngành:** Loại ngành của khách hàng. Ví dụ: trường có tên là "Ngành" trong máy rang cà phê có thể cho biết khách hàng có phải thuộc ngành bán lẻ không.
         - **Phân loại:** Việc phân loại khách hàng cho doanh nghiệp của bạn. Ví dụ: trường có tên "ValueSegment" là máy rang cà phê có thể là bậc của khách hàng dựa trên quy mô khách hàng.
+
+---
+
 - Đặc điểm dữ liệu được đề xuất:
     - Đủ dữ liệu lịch sử: Dữ liệu giao dịch cho ít nhất gấp đôi khoảng thời gian đã chọn. Tốt hơn là lịch sử giao dịch từ hai đến ba năm. 
     - Nhiều giao dịch mua trên mỗi khách hàng: Lý tưởng là tối thiểu hai giao dịch trở lên trên mỗi khách hàng.
@@ -114,6 +143,32 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 
 1. Chọn **Tiếp theo**.
 
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Thêm dữ liệu bổ sung (tùy chọn)
+
+Định cấu hình mối quan hệ từ thực thể hoạt động khách hàng của bạn thành thực thể *Khách hàng*.
+
+1. Chọn trường xác định khách hàng trong bảng hoạt động của khách hàng. Nó có thể liên quan trực tiếp đến ID khách hàng chính của thực thể *Khách hàng* của bạn.
+
+1. Chọn thực thể là thực thể *Khách hàng* chính của bạn.
+
+1. Nhập tên mô tả mối quan hệ.
+
+#### <a name="customer-activities"></a>Hoạt động của khách hàng
+
+1. Theo tùy chọn, chọn **Thêm dữ liệu** cho **Hoạt động của khách hàng**.
+
+1. Chọn loại hoạt động ngữ nghĩa chứa dữ liệu mà bạn muốn sử dụng, sau đó chọn một hoặc nhiều hoạt động trong phần **Hoạt động**.
+
+1. Chọn loại hoạt động phù hợp với loại hoạt động khách hàng mà bạn đang đặt cấu hình. Chọn **Tạo mới** và chọn một loại hoạt động có sẵn hoặc tạo một loại mới.
+
+1. Chọn **Tiếp**, sau đó chọn **Lưu**.
+
+1. Nếu bạn có bất kỳ hoạt động khách hàng nào khác mà bạn muốn bao gồm, hãy lặp lại các bước ở trên.
+
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Chọn mức dự đoán
 
 Hầu hết các dự đoán được tạo ở cấp độ khách hàng. Trong một số tình huống, điều đó có thể không đủ chi tiết để giải quyết nhu cầu kinh doanh của bạn. Ví dụ: bạn có thể sử dụng tính năng này để dự đoán tỷ lệ rời khỏi cho một nhánh hoặc khách hàng, chứ không phải cho tổng thể khách hàng.
@@ -122,9 +177,9 @@ Hầu hết các dự đoán được tạo ở cấp độ khách hàng. Trong 
 
 1. Mở rộng các thực thể bạn muốn chọn cấp phụ hoặc sử dụng hộp bộ lọc tìm kiếm để lọc các tùy chọn đã chọn.
 
-1. Chọn thuộc tính bạn muốn sử dụng làm cấp phụ, sau đó chọn **Thêm**
+1. Chọn thuộc tính bạn muốn sử dụng làm cấp phụ, sau đó chọn **Thêm**.
 
-1. Chọn **Tiếp theo**
+1. Chọn **Tiếp theo**.
 
 > [!NOTE]
 > Các thực thể có sẵn trong phần này được hiển thị vì chúng có mối quan hệ với thực thể bạn đã chọn trong phần trước. Nếu bạn không thấy thực thể bạn muốn thêm, hãy đảm bảo rằng thực thể đó có mối quan hệ hợp lệ trong phần **Mối quan hệ**. Chỉ các mối quan hệ một-một và nhiều-một mới hợp lệ cho cấu hình này.
@@ -159,7 +214,7 @@ Hầu hết các dự đoán được tạo ở cấp độ khách hàng. Trong 
 
 1. Chọn **Tiếp theo**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Cung cấp danh sách tùy chọn các tài khoản điểm chuẩn (chỉ tài khoản doanh nghiệp)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Cung cấp danh sách tùy chọn các tài khoản điểm chuẩn
 
 Thêm danh sách các tài khoản và khách hàng doanh nghiệp mà bạn muốn dùng làm điểm chuẩn. Bạn sẽ nhận được [thông tin chi tiết về các tài khoản điểm chuẩn](#review-a-prediction-status-and-results) bao gồm điểm số rời khỏi và hầu hết các tính năng có ảnh hưởng tác động đến dự đoán rời khỏi.
 
@@ -168,6 +223,8 @@ Thêm danh sách các tài khoản và khách hàng doanh nghiệp mà bạn mu�
 1. Chọn những khách hàng làm tiêu chuẩn.
 
 1. Chọn **Tiếp** để tiếp tục.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Đặt lịch và xem xét cấu hình
 
@@ -201,6 +258,25 @@ Thêm danh sách các tài khoản và khách hàng doanh nghiệp mà bạn mu�
 1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn xem lại kết quả rồi chọn **Xem**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Kiểm soát dạng xem để xem kết quả của dự đoán.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
+
+1. Có 3 phần dữ liệu chính trong trang kết quả:
+   - **Hiệu suất mô hình đào tạo**: A, B hoặc C là các điểm số có thể. Điểm số này cho biết hiệu suất của dự đoán và có thể giúp bạn ra quyết định sử dụng kết quả được lưu trữ trong thực thể đầu ra. Điểm số được xác định dựa trên các quy tắc sau: 
+        - **A** khi mô hình dự đoán chính xác ít nhất 50% tổng số dự đoán và khi tỷ lệ dự đoán chính xác cho khách hàng đã dự đoán lớn hơn tỷ lệ cơ sở ít nhất 10%.
+            
+        - **B** khi mô hình dự đoán chính xác ít nhất 50% tổng số dự đoán và khi tỷ lệ dự đoán chính xác cho khách hàng đã rời đi lớn hơn tỷ lệ cơ sở tối đa 10%.
+            
+        - **C** khi mô hình dự đoán chính xác dưới 50% tổng số dự đoán hoặc khi tỷ lệ dự đoán chính xác cho khách hàng đã rời đi nhỏ hơn tỷ lệ cơ sở.
+               
+        - **Đường cơ sở** lấy đầu vào cửa sổ thời gian dự đoán cho mô hình (ví dụ: 1 năm) và mô hình tạo ra các phần thời gian khác nhau bằng cách chia nó cho 2 cho đến khi đạt một tháng hoặc ít hơn. Nó sử dụng các phân số này để tạo quy tắc công việc cho những khách hàng chưa mua hàng trong khung thời gian này. Những khách hàng này được coi là đã rời đi. Quy tắc công việc dựa trên thời gian với khả năng dự đoán cao nhất ai có khả năng rời đi được chọn làm mô hình cơ sở.
+            
+    - **Khả năng rời khỏi (số lượng khách hàng)**: Các nhóm khách hàng dựa trên rủi ro rời khỏi dự đoán. Dữ liệu này có thể giúp bạn về sau này nếu muốn tạo phân khúc khách hàng có khả năng rời bỏ cao. Những phân khúc này giúp hiểu được điểm cắt nên dành cho các thành phần phân khúc.
+       
+    - **Các yếu tố có ảnh hưởng nhất**: Có nhiều yếu tố được xem xét khi tạo dự đoán. Mỗi yếu tố có tầm quan trọng được tính toán cho các dự đoán tổng hợp mà một mô hình tạo ra. Bạn có thể sử dụng các yếu tố này để giúp xác thực kết quả dự đoán hoặc sử dụng thông tin này sau để [tạo phân khúc](segments.md) có thể giúp ảnh hưởng đến rủi ro rời khách hàng rời khỏi.
+
+
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 1. Có 3 phần dữ liệu chính trong trang kết quả:
    - **Hiệu suất mô hình đào tạo**: A, B hoặc C là các điểm số có thể. Điểm số này cho biết hiệu suất của dự đoán và có thể giúp bạn ra quyết định sử dụng kết quả được lưu trữ trong thực thể đầu ra. Điểm số được xác định dựa trên các quy tắc sau: 
@@ -237,6 +313,11 @@ Thêm danh sách các tài khoản và khách hàng doanh nghiệp mà bạn mu�
        Khi bạn dự đoán tỷ lệ rời khỏi ở cấp tài khoản, tất cả các tài khoản đều được xem xét để tính các giá trị tính năng trung bình cho các phân khúc rời khỏi. Đối với các dự đoán rời khỏi ở cấp phụ cho mọi tài khoản, việc tạo ra các phân khúc rời khỏi phụ thuộc vào cấp phụ của mặt hàng được chọn trong ngăn bên. Ví dụ: nếu một mặt hàng có danh mục sản phẩm thứ cấp = đồ dùng văn phòng, thì chỉ những mặt hàng có đồ dùng văn phòng làm danh mục sản phẩm mới được xem xét khi tính giá trị tính năng trung bình cho các phân khúc rời khỏi. Logic này được áp dụng để đảm bảo so sánh công bằng giữa các giá trị tính năng của mặt hàng với giá trị trung bình trên các phân khúc rời khỏi thấp, trung bình và cao.
 
        Trong một số trường hợp, giá trị trung bình của các phân khúc rời khỏi thấp, trung bình hoặc cao bị trống hoặc không có sẵn vì không có mặt hàng nào thuộc về các phân khúc rời khỏi tương ứng dựa trên định nghĩa nói trên.
+       
+       > [!NOTE]
+       > Phần diễn giải các giá trị dưới các cột trung bình thấp, trung bình và cao sẽ khác nhau đối với các tính năng phân loại như quốc gia hoặc ngành. Vì khái niệm của giá trị tính năng "trung bình" không áp dụng cho tính năng phân loại, các giá trị trong các cột này là tỷ lệ khách hàng ở các phân khúc rời khỏi thấp, trung bình hoặc cao có cùng giá trị tính năng phân loại so với mục được chọn trong bảng điều khiển bên.
+
+---
 
 ## <a name="manage-predictions"></a>Quản lý dự đoán
 

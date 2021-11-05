@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618869"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673988"
 ---
 # <a name="predictions-overview"></a>Tổng quan về chức năng dự đoán
 
@@ -25,14 +25,14 @@ Dynamics 365 Customer Insights đi kèm với nhiều tùy chọn tận dụng c
 
 Sử dụng các mô hình xác định sẵn, thường được gọi là mô hình có sẵn, là cách dễ nhất để bắt đầu dự đoán dữ liệu. Các mô hình này chỉ yêu cầu một số dữ liệu và cấu trúc nhất định để tạo ra thông tin chuyên sâu một cách nhanh chóng. Hiện tại, ứng dụng cung cấp các mô hình sau đây: 
 
-# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
 - [Giá trị trọn đời của khách hàng](predict-customer-lifetime-value.md): Dự đoán doanh thu tiềm năng của khách hàng trong toàn bộ hoạt động tương tác với doanh nghiệp.
 - [Đề xuất sản phẩm](predict-product-recommendation.md): Gợi ý bộ đề xuất sản phẩm mang tính dự đoán dựa trên hành vi mua hàng và những khách hàng có kiểu mua hàng tương tự.
 - [Khả năng rời bỏ đăng ký](predict-subscription-churn.md): Dự đoán xem liệu khách hàng có nguy cơ không còn sử dụng các sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa hay không.
 - [Khả năng rời bỏ giao dịch](predict-transactional-churn.md): Dự đoán xem liệu khách hàng sẽ không còn mua sản phẩm hoặc dịch vụ của bạn nữa trong một khung thời gian nhất định hay không.
 
-# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 - [Khả năng rời bỏ giao dịch](predict-transactional-churn.md): Dự đoán xem liệu khách hàng sẽ không còn mua sản phẩm hoặc dịch vụ của bạn nữa trong một khung thời gian nhất định hay không.
 

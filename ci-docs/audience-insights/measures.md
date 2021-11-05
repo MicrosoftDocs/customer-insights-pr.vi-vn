@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623058"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673529"
 ---
 # <a name="define-and-manage-measures"></a>Xác định và quản lý các biện pháp
 
@@ -28,7 +28,7 @@ Hãy sử dụng trình tạo giá trị đo để lập kế hoạch hoạt đ�
 
 Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới từ đầu. Bạn có thể tạo giá trị đo với các thuộc tính dữ liệu từ các thực thể dữ liệu có mối quan hệ được thiết lập để kết nối với thực thể hồ sơ khách hàng hợp nhất.
 
-# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Giá trị đo**.
 
@@ -92,7 +92,7 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
 
 1. Đi đến **Giá trị đo** để xem số đo mới được tạo trong danh sách.
 
-# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Giá trị đo**.
 
@@ -164,7 +164,7 @@ Phần này sẽ hướng dẫn bạn cách tạo một giá trị đo mới t�
 
 Bạn có thể sử dụng các mẫu định sẵn có chứa các giá trị đo thường dùng để tạo giá trị đo. Mô tả chi tiết về các mẫu và trải nghiệm có hướng dẫn sẽ giúp bạn tạo giá trị đo hiệu quả. Các mẫu xây dựng dựa trên dữ liệu được ánh xạ từ thực thể *Hoạt động được hợp nhất*. Vì vậy, hãy đảm bảo rằng bạn đã định cấu hình [hoạt động của khách hàng](activities.md) trước khi tạo giá trị đo từ một mẫu.
 
-# <a name="individual-customers-b2c"></a>[Khách hàng cá nhân (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
 Bạn có thể sử dụng các mẫu định sẵn có chứa các giá trị đo thường dùng để tạo giá trị đo. Mô tả chi tiết về các mẫu và trải nghiệm có hướng dẫn sẽ giúp bạn tạo giá trị đo hiệu quả. Các mẫu xây dựng dựa trên dữ liệu được ánh xạ từ thực thể *Hoạt động được hợp nhất*. Vì vậy, hãy đảm bảo rằng bạn đã định cấu hình [hoạt động của khách hàng](activities.md) trước khi tạo giá trị đo từ một mẫu.
 
@@ -212,7 +212,7 @@ Quy trình sau đây phác thảo các bước để tạo giá trị đo mới 
 
 1. Bây giờ, bạn có thể chọn **Chạy** để tính toán kết quả của giá trị đo. Để tinh chỉnh giá trị đo về sau, hãy chọn **Lưu bản nháp**.
 
-# <a name="business-accounts-b2b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 Tính năng này chỉ dùng được cho các giá trị đo được tạo trong môi trường có khách hàng riêng lẻ là đối tượng mục tiêu chính.
 

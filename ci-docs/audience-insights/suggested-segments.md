@@ -1,7 +1,7 @@
 ---
 title: Phân đoạn được đề xuất dựa trên công nghệ máy học
 description: Hãy để máy học giúp bạn tìm các phân khúc mới và thú vị dựa trên các thuộc tính của khách hàng.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028386"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673209"
 ---
 # <a name="suggested-segments-preview"></a>Các phân khúc được đề xuất (xem trước)
 
@@ -23,7 +23,7 @@ Khám phá các phân khúc khách hàng thú vị của bạn với sự trợ 
 > [!NOTE]
 > Tính năng phân khúc được đề xuất sử dụng các cách thức tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó. Do đó, có thể sử dụng tính năng này như một phương pháp lập hồ sơ, theo cách thuật ngữ đó được xác định trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc bạn sử dụng tính năng này để xử lý dữ liệu có thể tuân theo GDPR hoặc các luật hoặc quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm tính năng này, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Trang phân khúc được đề xuất trong Customer Insights hiển thị chi tiết về đề xuất trong ngăn bên.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Trang phân khúc được gợi ý hiển thị thông tin chi tiết của gợi ý trong ngăn bên.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Các phân khúc được đề xuất để cải thiện KPI của bạn
 
@@ -49,7 +49,7 @@ Phân đoạn được đề xuất cho phép bạn chọn các thuộc tính đ
 
 Với thuộc tính số như *thu nhập hàng năm* hoặc *thời hạn thành viên* là thuộc tính chính, hệ thống đề xuất các phân đoạn có giá trị trung bình cao hơn hoặc thấp hơn thuộc tính số khi so sánh với tất cả khách hàng.
 
-Một thuộc tính phân loại như *sự hài lòng của khách hàng* dưới dạng thuộc tính chính dẫn đến các phân đoạn được đề xuất có tỷ lệ phần trăm khách hàng thuộc một danh mục cụ thể cao hơn hoặc thấp hơn khi so sánh với phần trăm của tất cả khách hàng thuộc cùng một danh mục đó. Ví dụ: *sự hài lòng của khách hàng* được chọn làm thuộc tính chính và bao gồm ba danh mục (*Thấp*, *Trung bình* và *Cao*). Đối với mỗi danh mục, các phân khúc sẽ được đề xuất có tỷ lệ phần trăm khách hàng thuộc danh mục đó cao hơn hoặc thấp hơn đáng kể so với tỷ lệ của tất cả khách hàng trong cùng danh mục. Nếu 22% tổng số khách hàng có mức độ hài lòng *Cao* thì chỉ những phân khúc có tỷ lệ khách hàng có mức độ hài lòng *Cao* thấp hơn hoặc cao hơn đáng kể so với 22% mới được đề xuất cho danh mục đó. Tương tự, các phân đoạn sẽ được đề xuất cho từng danh mục khác (*Thấp* và *Trung bình*) nếu chúng có ý nghĩa thống kê.
+Một thuộc tính phân loại như *sự hài lòng của khách hàng* dưới dạng thuộc tính chính dẫn đến các phân đoạn được đề xuất có tỷ lệ phần trăm khách hàng thuộc một danh mục cụ thể cao hơn hoặc thấp hơn khi so sánh với phần trăm của tất cả khách hàng thuộc cùng một danh mục đó. Ví dụ: *sự hài lòng của khách hàng* được chọn làm thuộc tính chính và bao gồm ba danh mục (*Thấp*, *Trung bình* và *Cao*). Với mỗi danh mục, các phân khúc sẽ được gợi ý có tỷ lệ phần trăm khách hàng thuộc danh mục đó cao hơn hoặc thấp hơn so với tỷ lệ của tất cả khách hàng trong cùng danh mục. Nếu 22% trong số tất cả khách hàng có mức độ hài lòng *Cao* thì chỉ những phân khúc có tỷ lệ khách hàng với mức độ hài lòng *Cao* cao hơn hoặc thấp hơn 22% mới được gợi ý cho danh mục đó. Tương tự, các phân đoạn sẽ được đề xuất cho từng danh mục khác (*Thấp* và *Trung bình*) nếu chúng có ý nghĩa thống kê.
 
 > [!NOTE]
 > Hiện tại, chúng tôi chỉ hỗ trợ các thuộc tính phân loại chính có tối đa 10 danh mục. Nếu muốn xem các đề xuất phân đoạn dựa trên thuộc tính chính có hơn 10 danh mục, bạn nên nhóm một số danh mục để giảm số lượng danh mục xuống còn 10 danh mục trở xuống. Giới hạn này chỉ áp dụng cho các thuộc tính chính. Để ảnh hưởng đến các thuộc tính phân loại, chúng tôi hiện hỗ trợ tối đa 100 danh mục.
@@ -77,7 +77,7 @@ Một thuộc tính phân loại như *sự hài lòng của khách hàng* dư�
 
 Khi mô hình AI đã tạo các đề xuất, bạn sẽ thấy chúng được liệt kê trên **Phân đoạn** > **Gợi ý (xem trước)**.
  
-Chọn một phân đoạn được đề xuất để xem lại chi tiết của đề xuất đó, bao gồm cả so sánh giá trị trung bình và số lượng thành viên của phân đoạn. Bạn cũng có thể xem lại các giá trị thuộc tính hoặc quy tắc mà mô hình AI đã học để đề xuất phân đoạn đã chọn.
+Chọn một phân khúc được gợi ý để xem lại thông tin chi tiết của gợi ý đó. Bạn cũng có thể xem lại các giá trị thuộc tính hoặc quy tắc mà mô hình AI đã học để đề xuất phân đoạn đã chọn.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Lưu đề xuất làm phân đoạn
 
