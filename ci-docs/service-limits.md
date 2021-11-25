@@ -9,24 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483721"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792006"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Giới hạn dịch vụ trong các tính năng của Customer Insights
 
 Bài viết này mô tả các giới hạn tích hợp đối với dịch vụ Customer Insights, được thiết kế để bảo đảm độ tin cậy và ổn định của dịch vụ. Mọi yêu cầu thay đổi có thể được đưa ra thông qua [Diễn đàn ý tưởng](https://go.microsoft.com/fwlink/?linkid=2074172). 
 
-## <a name="audience-insights"></a>Thông tin chi tiết về đối tượng
+## <a name="audience-insights"></a>Thông tin chuyên sâu về đối tượng
 
 ### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Giới hạn dịch vụ trong khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights
 
 | Diện tích  | Giới hạn  | Ghi chú |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Phân khúc và giá trị đo | 100 phân khúc hoặc giá trị đo. | Tổng số [phân khúc](audience-insights/segments.md) và [giá trị đo](audience-insights/measures.md) hiện hoạt được kết hợp không được vượt quá 100.  |
+| Phân đoạn, thước đo và dự đoán | 300  | Tổng số của [phân đoạn](audience-insights/segments.md),[đo](audience-insights/measures.md), và [phỏng đoán](audience-insights/predictions.md) kết hợp không được vượt quá 300.  |
 | Mối quan hệ | 20 cấp độ chuyên sâu về các mối quan hệ trong các đường dẫn thực thể. | Khi tạo [phân khúc](audience-insights/segments.md) hoặc [đo lường](audience-insights/measures.md) sử dụng giao diện trình tạo, đường dẫn thực thể có thể có tối đa 20 bước quan hệ giữa thực thể bắt đầu và thực thể đích.  |
 
 

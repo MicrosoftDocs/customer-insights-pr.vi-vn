@@ -1,7 +1,7 @@
 ---
 title: Cấu hình hệ thống trong thông tin chi tiết về đối tượng
 description: Tìm hiểu về cài đặt hệ thống trong khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651866"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732396"
 ---
 # <a name="system-configuration"></a>Cấu hình hệ thống
+
+Để truy cập cấu hình hệ thống trong thông tin chi tiết về đối tượng, từ thanh điều hướng bên trái, hãy chọn **quản trị viên** > **Hệ thống** để xem danh sách các tác vụ và quy trình của hệ thống.
 
 Trang **Hệ thống** bao gồm các tab sau:
 - [Trạng thái](#status-tab)
@@ -30,39 +32,55 @@ Trang **Hệ thống** bao gồm các tab sau:
 
 ## <a name="status-tab"></a>Tab Trạng thái
 
-**Tab trạng thái** cho phép bạn theo dõi tiến trình nhập dữ liệu, xuất dữ liệu và một số quy trình sản phẩm quan trọng khác. Xem lại thông tin trên tab này để đảm bảo tính đầy đủ của các quy trình hiện hoạt.
+Các **Tab trạng thái** cho phép bạn theo dõi tiến trình của các tác vụ, quá trình nhập dữ liệu, xuất dữ liệu và một số quy trình sản phẩm quan trọng khác. Xem lại thông tin trên tab này để đảm bảo tính hoàn chỉnh của các tác vụ và quy trình đang hoạt động của bạn.
 
-Tab này bao gồm các bảng với trạng thái và thông tin xử lý cho các quy trình khác nhau. Mỗi bảng theo dõi **Tên** của nhiệm vụ và thực thể tương ứng, **Trạng thái** của lần chạy gần đây nhất và thời điểm **Cập nhật gần đây nhất**.
+Tab này bao gồm các bảng với trạng thái và thông tin xử lý cho các quy trình khác nhau. Mỗi bảng theo dõi **Tên** của nhiệm vụ và thực thể tương ứng, **Trạng thái** của lần chạy gần đây nhất và thời điểm **Cập nhật gần đây nhất**. Bạn có thể xem chi tiết của vài lần chạy gần đây nhất bằng cách chọn tác vụ hoặc tên quy trình. 
 
-Xem chi tiết về một vài lần chạy gần đây nhất của nhiệm vụ bằng cách chọn tên nhiệm vụ.
+Chọn trạng thái bên cạnh nhiệm vụ hoặc quy trình trong **Trạng thái** cột để mở **Chi tiết tiến độ** ngăn.
 
-### <a name="status-types"></a>Các loại trạng thái
+   :::image type="content" source="media/system-progress-details.png" alt-text="Ngăn chi tiết tiến trình hệ thống":::
 
-Có 6 loại trạng thái cho các nhiệm vụ. Các loại trạng thái sau đây cũng hiển thị trên các trang *So khớp*, *Hợp nhất*, *Nguồn dữ liệu*, *Phân khúc*, *Biện pháp*, *Nội dung phong phú*, *Hoạt động* và *Dự đoán*:
+### <a name="status-definitions"></a>Định nghĩa trạng thái
 
-- **Xử lý:** Nhiệm vụ đang được tiến hành. Trạng thái có thể thay đổi thành Thành công hoặc Thất bại.
-- **Thành công:** Nhiệm vụ hoàn thành thành công.
-- **Bỏ qua:** Nhiệm vụ đã bị bỏ qua. Một hoặc nhiều quá trình xuôi dòng mà nhiệm vụ này phụ thuộc vào bị lỗi hoặc bị bỏ qua.
-- **Lỗi:** Xử lý nhiệm vụ không thành công.
-- **Đã hủy:** Quá trình xử lý đã bị hủy bởi người dùng trước khi hoàn thành.
-- **Đã xếp hàng:** Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi hoàn thành tất cả các tác vụ ngược dòng. Để biết thêm thông tin, hãy xem [chính sách Làm mới](#refresh-policies).
+Hệ thống sử dụng các trạng thái sau cho các tác vụ và quy trình:
 
-### <a name="refresh-policies"></a>Chính sách làm mới
+|Trạng thái  |Định nghĩa  |
+|---------|---------|
+|Đã huỷ |Người dùng đã hủy quá trình xử lý trước khi quá trình kết thúc.   |
+|Không thành công   |Phiên nhập dữ liệu gặp lỗi.         |
+|Thất bại  |Xử lý không thành công.  |
+|Chưa bắt đầu   |Nguồn dữ liệu chưa nhập dữ liệu nào hoặc vẫn ở chế độ nháp.         |
+|Đang xử lý  |Nhiệm vụ hoặc quy trình đang được thực hiện.  |
+|Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
+|Đã bỏ qua  |Tác vụ hoặc quy trình đã bị bỏ qua. Một hoặc nhiều quá trình xuôi dòng mà nhiệm vụ này phụ thuộc vào bị lỗi hoặc bị bỏ qua.|
+|Thành công  |Tác vụ hoặc quy trình đã hoàn thành thành công. Đối với nguồn dữ liệu, cho biết dữ liệu đã được nhập thành công nếu thời gian được đề cập trong **Làm mới** cột.|
+|Đã xếp hàng đợi | Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi hoàn thành tất cả các tác vụ và quy trình ngược dòng. Để biết thêm thông tin, hãy xem [Làm mới quy trình](#refresh-processes).|
 
-Danh sách này hiển thị các chính sách làm mới cho từng quy trình chính:
+### <a name="refresh-processes"></a>Làm mới quy trình
 
-- **Nguồn dữ liệu:** Chạy theo [lịch trình đã định cấu hình](#schedule-tab). Không phụ thuộc vào bất kỳ quy trình nào khác. So khớp phụ thuộc vào sự hoàn thành thành công của quy trình này.
-- **So khớp:** Chạy theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào việc xử lý các nguồn dữ liệu được sử dụng trong định nghĩa so khớp. Hợp nhất phụ thuộc vào sự hoàn thành thành công của quy trình này.
-- **Hợp nhất**: Chạy theo [lịch trình đã định cấu hình](#schedule-tab). phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.
-- **Phân khúc**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.
-- **Biện pháp**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Hoạt động**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Làm phong phú**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Tìm kiếm**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Chuẩn bị dữ liệu:**: Chạy theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Hợp nhất.
-- **Thông tin chi tiết**: Chạy thủ công (làm mới một lần) và theo [lịch trình đã định cấu hình](#schedule-tab). Phụ thuộc vào Phân khúc.
+Làm mới cho các tác vụ và quy trình được chạy theo [lịch trình đã định cấu hình](#schedule-tab). 
 
-Chọn trạng thái của một nhiệm vụ để xem chi tiết về tiến trình của toàn bộ công việc. Các chính sách làm mới ở trên có thể giúp hiểu những gì bạn có thể làm để giải quyết nhiệm vụ **Bỏ qua** hoặc **Xếp hàng**.
+|Xử lý  |Mô tả  |
+|---------|---------|
+|Hoạt động  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.|
+|Liên kết phân tích |Chạy thủ công (làm mới một lần). Phụ thuộc vào các phân đoạn.  |
+|Chuẩn bị phân tích |Chạy thủ công (làm mới một lần). Phụ thuộc vào các phân đoạn.  |
+|Chuẩn bị dữ liệu   |Phụ thuộc vào hợp nhất.   |
+|Nguồn dữ liệu   |Không phụ thuộc vào bất kỳ quy trình nào khác. So khớp phụ thuộc vào sự hoàn thành thành công của quy trình này.  |
+|Nội dung tăng cường   |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. |
+|Xuất khẩu các điểm đến |Chạy thủ công (làm mới một lần). Phụ thuộc vào các phân đoạn.  |
+|Thông tin chuyên sâu |Chạy thủ công (làm mới một lần). Phụ thuộc vào các phân đoạn.  |
+|Thông tin   |Phụ thuộc vào hợp nhất.   |
+|Kết quả khớp |Phụ thuộc vào việc xử lý các nguồn dữ liệu được sử dụng trong định nghĩa so khớp.      |
+|Biện pháp  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất.  |
+|Hợp nhất   |phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.   |
+|Hồ sơ   |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. |
+|Tìm kiếm   |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. |
+|Phân khúc  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.|
+|Hệ thống   |phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.   |
+|Người dùng  |Chạy thủ công (làm mới một lần). Phụ thuộc vào các thực thể.  |
+
+Chọn trạng thái của một quá trình để xem chi tiết tiến độ của toàn bộ công việc mà nó đã thực hiện. Các quy trình làm mới ở trên có thể giúp hiểu những gì bạn có thể làm để giải quyết **Đã bỏ qua** hoặc **Đã xếp hàng** nhiệm vụ hoặc quy trình.
 
 ## <a name="schedule-tab"></a>Tab Lập lịch trình
 
@@ -86,7 +104,7 @@ Tab **Giới thiệu** chứa **Tên hiển thị**, **ID môi trường** hiệ
 
 Bạn có thể thay đổi ngôn ngữ và định dạng quốc gia/khu vực trên tab **Tổng quát**.
 
-Customer Insights [hỗ trợ một số ngôn ngữ](/dynamics365/get-started/availability). Ứng dụng này sử dụng tùy chọn ngôn ngữ của bạn để hiển thị các thành phần như menu, văn bản nhãn và thông báo hệ thống bằng ngôn ngữ ưa thích của bạn.
+Thấu hiểu khách hàng [hỗ trợ nhiều ngôn ngữ](/dynamics365/get-started/availability). Ứng dụng này sử dụng tùy chọn ngôn ngữ của bạn để hiển thị các thành phần như menu, văn bản nhãn và thông báo hệ thống bằng ngôn ngữ ưa thích của bạn.
 
 Dữ liệu đã nhập và thông tin bạn đã nhập theo cách thủ công sẽ không được dịch.
 
@@ -109,7 +127,7 @@ Tìm chi tiết về việc sử dụng API thời gian thực và xem sự ki�
 
 -  **Hoạt động** - một bảng với các hàng cho mỗi hoạt động API có sẵn và thông tin chi tiết về việc sử dụng các hoạt động. Bạn có thể chọn một tên hoạt động để truy cập [tham chiếu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Các hoạt động sử dụng tính năng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một nút có biểu tượng ống nhòm để xem việc sử dụng API trong thời gian thực. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.   
+   Các hoạt động sử dụng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một nút có biểu tượng ống nhòm để xem việc sử dụng API trong thời gian thực. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.   
    Sử dụng hộp **Nhóm theo** trong ngăn **Sử dụng API thời gian thực** để chọn cách tốt nhất để trình bày các tương tác trong thời gian thực của bạn. Bạn có thể nhóm dữ liệu theo phương pháp API, tên đủ điều kiện của thực thể (thực thể được nhập), tạo bởi (nguồn sự kiện), kết quả (thành công hay thất bại) hoặc mã lỗi. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
 
 ## <a name="security-tab"></a>Tab Bảo mật

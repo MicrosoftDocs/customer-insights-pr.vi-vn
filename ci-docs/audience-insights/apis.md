@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033611"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732290"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
-Dynamics 365 Customer Insights cung cấp các API để bạn xây dựng ứng dụng dựa trên dữ liệu của mình trong Customer Insights.
+Dynamics 365 Customer Insights cung cấp các API để tạo ứng dụng của riêng bạn dựa trên dữ liệu của bạn trong Thông tin chi tiết về khách hàng.
 
 > [!IMPORTANT]
 > Thông tin chi tiết về các API này được liệt kê trên [Tham chiếu API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Những thông tin này bao gồm thông tin bổ sung về hoạt động, tham số và phản hồi.
@@ -115,19 +115,19 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 Phần này giúp bạn bắt đầu sử dụng các thư viện máy khách có sẵn cho các API Customer Insights. Tất cả mã nguồn thư viện và các ứng dụng mẫu có thể được tìm thấy trên [Trang GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
-### <a name="c-nuget"></a>C# NuGet
+### <a name="c-nuget"></a>C # NuGet
 
-Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet.org. Để biết thêm thông tin về gói NuGet, xem [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Hiện tại, gói này dành cho framework netstandard2.0 và netcoreapp2.0.
+Tìm hiểu cách bắt đầu sử dụng thư viện ứng dụng khách C # từ NuGet.org. Để biết thêm thông tin về gói NuGet, hãy xem [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Hiện tại, gói này dành cho framework netstandard2.0 và netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Thêm thư viện máy khách C# vào dự án C#
 
-1. Trong Visual Studio, mở **Trình quản lý gói NuGet** cho dự án của bạn.
+1. Trong Visual Studio, hãy mở **NuGet Trình quản lý gói** cho dự án của bạn.
 
 1. Tìm kiếm **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Chọn **Cài đặt** để thêm gói vào dự án.
  
-   Ngoài ra, hãy chạy lệnh này trong **Bảng điều khiển trình quản lý gói NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Ngoài ra, hãy chạy lệnh này trong **NuGet Bảng điều khiển Trình quản lý Gói** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Thêm gói NuGet vào dự án Visual Studio.":::
 
@@ -135,7 +135,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 
 1. Sử dụng [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) để nhận `AccessToken` bằng cách sử dụng [đăng ký ứng dụng Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng `HttpClient` hiện tại với **DefaultRequestHeaders "Authorization"** bổ sung được đặt thành **<access token> mang chuyển** và **Ocp-Apim-Subscription-Key** được đặt thành [**khóa đăng ký** từ môi trường Customer Insights của bạn](#get-started-trying-the-customer-insights-apis).   
+1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng`HttpClient` với phần bổ sung **DefaultRequestHeaders "Ủy quyền"** đặt thành **Mang "mã thông báo truy cập"** và **Ocp-Apim-Đăng ký-Khóa** đặt thành [**khóa đăng ký** từ môi trường Thông tin chi tiết về khách hàng của bạn](#get-started-trying-the-customer-insights-apis).   
  
    Đặt lại tiêu đề **Ủy quyền** khi thích hợp. Ví dụ: khi mã thông báo hết hạn.
 

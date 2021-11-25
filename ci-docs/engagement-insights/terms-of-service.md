@@ -9,22 +9,22 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d43d3c49c81ab343db5623ee4f5ebeb100d3b2b7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
-ms.translationtype: HT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218964"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7774132"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS – Thông tin chuyên sâu về tương tác (xem trước) 
 
-Thông tin chuyên sâu về tương tác (xem trước) là chức năng xem trước trước khi phát hành, có nghĩa là bản xem trước có các biện pháp bảo mật, quyền riêng tư và vị trí dữ liệu ít hơn hoặc khác với các tính năng và chức năng thường có sẵn trong Dynamics 365 Customer Insights. Xem lại các điều khoản bên dưới và tài liệu sản phẩm để xác định xem thông tin chuyên sâu về tương tác (xem trước) có phù hợp với dữ liệu của bạn hay không.
+Thông tin chi tiết về mức độ tương tác (xem trước) là khả năng xem trước trước khi phát hành, có nghĩa là khả năng này có các biện pháp bảo mật, quyền riêng tư và vị trí dữ liệu ít hơn hoặc khác với các tính năng và khả năng thường có trong Dynamics 365 Customer Insights. Xem lại các điều khoản bên dưới và tài liệu sản phẩm để xác định xem thông tin chuyên sâu về tương tác (xem trước) có phù hợp với dữ liệu của bạn hay không.
 
 ## <a name="preview-terms-of-service"></a>BẢN XEM TRƯỚC ĐIỀU KHOẢN DỊCH VỤ
 
 CẬP NHẬT LẦN CUỐI VÀO THÁNG 10 NĂM 2020 
 
-Bằng cách truy cập hoặc sử dụng bản xem trước dịch vụ của Dynamics 365 Customer Insights – Thông tin chuyên sâu về tương tác (cùng với bất kỳ nguồn dữ liệu nào do Microsoft cung cấp, "Dịch vụ"), bạn đã đồng ý với các điều khoản và điều kiện của Thỏa thuận này. Nếu không đồng ý với các điều khoản và điều kiện này, bạn không nên truy cập hoặc sử dụng Dịch vụ.
+Bằng cách truy cập hoặc sử dụng bản xem trước dịch vụ của Dynamics 365 Customer Insights - Thông tin chi tiết về mức độ tương tác (cùng với bất kỳ nguồn dữ liệu nào do Microsoft cung cấp, "Dịch vụ"), bạn chấp nhận các điều khoản và điều kiện của Thỏa thuận này. Nếu không đồng ý với các điều khoản và điều kiện này, bạn không nên truy cập hoặc sử dụng Dịch vụ.
 
 ## <a name="1-what-this-agreement-covers"></a>1. ĐIỀU KHOẢN VÀ ĐIỀU KIỆN CỦA THỎA THUẬN
 

@@ -1,7 +1,7 @@
 ---
 title: Các tác vụ chung cho kịch bản dự đoán
 description: Tìm hiểu cách quản lý, khắc phục sự cố và tinh chỉnh dự đoán.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036491"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732014"
 ---
 # <a name="manage-predictions"></a>Quản lý dự đoán
 
@@ -50,12 +50,12 @@ Các cột sau trong báo cáo chứa thông tin hữu ích để cải thiện 
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Ví dụ về một báo cáo khả năng sử dụng dữ liệu đầu vào hiển thị một bảng có lỗi, cảnh báo và đề xuất.":::
 
-- Tên: Tên mô tả của lỗi, cảnh báo hoặc đề xuất.
-- Bước: Giai đoạn của mô hình, đào tạo hoặc điểm số, thông tin đề cập đến.
-- Trạng thái: Mức độ nghiêm trọng của thông tin (lỗi, cảnh báo, đề xuất).
-- Tên cột: Cột trong thực thể cần được sửa đổi để cải thiện hiệu suất mô hình.
-- Tên thực thể: Tên của thực thể cần được sửa đổi để cải thiện hiệu suất mô hình.
-- Chi tiết: Thông tin chi tiết về lỗi, cảnh báo hoặc đề xuất.
+- **Tên:** Tên mô tả của lỗi, cảnh báo hoặc khuyến nghị.
+- **Bươc chân:** Giai đoạn mô hình, đào tạo hoặc điểm số, thông tin đề cập đến.
+- **Tiểu bang:** Mức độ nghiêm trọng của thông tin (lỗi, cảnh báo, khuyến nghị).
+- **Tên cột dọc:** Cột trong một thực thể cần được sửa đổi để cải thiện hiệu suất mô hình.
+- **Tên thực thể:** Tên của thực thể cần được sửa đổi để cải thiện hiệu suất của mô hình.
+- **Thông tin chi tiết:** Thông tin chi tiết về lỗi, cảnh báo hoặc khuyến nghị.
 
 ## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
 
@@ -66,6 +66,8 @@ Các dự đoán sẽ tự động làm mới trên cùng một [trình làm m�
 1. Chọn các hình elip dọc bên cạnh dự đoán bạn muốn làm mới.
 
 1. Chọn **Làm mới**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Xóa dự đoán
 

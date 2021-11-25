@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý môi trường
 description: Tìm hiểu cách đăng ký dịch vụ và cách quản lý môi trường.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673770"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799661"
 ---
 # <a name="manage-environments"></a>Quản lý môi trường
 
@@ -39,6 +39,19 @@ Bạn có thể chỉnh sửa một số thông tin của các môi trường hi
 3. Trong hộp **Chỉnh sửa môi trường**, bạn có thể cập nhật thiết đặt môi trường.
 
 Để biết thêm thông tin về thiết đặt môi trường, hãy xem [Tạo môi trường mới](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Kết nối với Microsoft Dataverse
+   
+Các **Microsoft Dataverse** bước này cho phép bạn kết nối Thông tin chi tiết về khách hàng với môi trường Dataverse của bạn.
+
+Để sử dụng [mô hình ngoài hộp dự đoán](predictions-overview.md#out-of-box-models), định cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật nhập dữ liệu từ nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Lựa chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra Thông tin chi tiết về khách hàng với hồ dữ liệu do Dataverse quản lý.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Tùy chọn cấu hình để bật chia sẻ dữ liệu với Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights không hỗ trợ các tình huống chia sẻ dữ liệu sau:
+> - Nếu bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của riêng mình, bạn sẽ không thể bật chia sẻ dữ liệu với hồ dữ liệu do Dataverse quản lý.
+> - Nếu bạn bật chia sẻ dữ liệu với Dataverse, bạn sẽ không thể [tạo các giá trị được dự đoán hoặc bị thiếu trong một thực thể](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Sao chép cấu hình môi trường
 
@@ -68,7 +81,7 @@ Dữ liệu sau *không* được sao chép:
 - Hồ sơ khách hàng.
 - Thông tin xác thực nguồn dữ liệu. Bạn sẽ phải cung cấp thông tin đăng nhập cho mỗi nguồn dữ liệu và làm mới các nguồn dữ liệu theo cách thủ công.
 
-- Nguồn dữ liệu từ thư mục Common Data Model và kho dữ liệu Dataverse được quản lý. Bạn sẽ phải tạo các nguồn dữ liệu đó theo cách thủ công có cùng tên như trong môi trường nguồn.
+- Nguồn dữ liệu từ thư mục Mô hình dữ liệu chung và hồ dữ liệu do Dataverse quản lý. Bạn sẽ phải tạo các nguồn dữ liệu đó theo cách thủ công có cùng tên như trong môi trường nguồn.
 
 Khi bạn sao chép một môi trường, bạn sẽ thấy một thông báo xác nhận rằng môi trường mới đã được tạo. Chọn **Chuyển đến nguồn dữ liệu** để xem danh sách các nguồn dữ liệu.
 

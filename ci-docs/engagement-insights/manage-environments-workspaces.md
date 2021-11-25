@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645472"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673897"
 ---
 # <a name="manage-environments-and-workspaces"></a>Quản lý môi trường và không gian làm việc
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645472"
 
 Chủ đề này thảo luận về cách quản lý không gian làm việc và môi trường sau khi được tạo. 
 
-- *Không gian làm việc* là không gian để lưu trữ cũng như quản lý các sự kiện và báo cáo. Đó là nơi bạn có thể xem hoạt động của người dùng trong thời gian thực. Khi tạo không gian làm việc, bạn có thể chọn loại dữ liệu để gửi đến không gian làm việc. Hiện tại, dữ liệu web và ứng dụng dành cho thiết bị di động đều được hỗ trợ. Để biết thêm thông tin, hãy xem [Tạo không gian làm việc và thêm thành viên](create-workspace.md).
+- *Không gian làm việc* là không gian để lưu trữ cũng như quản lý các sự kiện và báo cáo. Đó là nơi bạn có thể xem hoạt động của người dùng trong thời gian thực. Khi tạo không gian làm việc, bạn có thể chọn loại dữ liệu để gửi đến không gian làm việc. Hiện tại, dữ liệu web và ứng dụng dành cho thiết bị di động đều được hỗ trợ. Để biết thêm thông tin, hãy xem [Tạo không gian làm việc mới và thêm thành viên](create-workspace.md).
 
 - *Môi trường* là không gian mà bạn quản lý không gian làm việc và kết nối của mình. Để biết thêm thông tin, hãy xem [Tạo môi trường mới](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Bạn có thể duy trì nhiều không gian làm việc đồng thời trong m�
 
 ### <a name="delete-a-workspace"></a>Xóa không gian làm việc
 
-Thao tác xóa không gian làm việc sẽ xóa vĩnh viễn tất cả nội dung, dữ liệu, thiết đặt và quyền của không gian đó. Không thể hoàn tác điều này.
+Xóa không gian làm việc sẽ xóa vĩnh viễn tất cả nội dung, dữ liệu, cài đặt và quyền của nó. Không thể hoàn tác điều này.
 
 1. Chuyển đến **Quản trị viên** > **Không gian làm việc** và chọn **Cài đặt**.
 
@@ -71,19 +71,11 @@ Là quản trị viên môi trường, bạn có thể truy cập vào môi trư
 
 :::image type="content" source="media/environment-edit.png" alt-text="Trung tâm quản trị môi trường.":::
 
-### <a name="rename-an-environment"></a>Đổi tên môi trường
+### <a name="edit-an-environment-name"></a>Chỉnh sửa tên môi trường
 
 1. Chuyển đến **Quản trị viên** > **Môi trường** và chọn **Cài đặt**.
 
 1. Cập nhật **Tên môi trường** và chọn **Lưu** để áp dụng các thay đổi của bạn.
-
-### <a name="manage-environment-members"></a>Quản lý thành viên môi trường
-
-1. Chuyển đến **Quản trị viên** > **Môi trường** và chọn **Thành viên**.
-
-1. Chọn **Thêm thành viên** để cập nhật thành viên và [chỉ định vai trò](user-roles.md). Hiện nay, chỉ có sẵn **Quản trị viên môi trường**.
-
-1. Chọn **Thêm thành viên** để thêm họ vào môi trường của bạn.
 
 ### <a name="delete-an-environment"></a>Xóa môi trường
 
@@ -97,6 +89,14 @@ Quản trị viên môi trường có thể xóa môi trường. Trước khi c�
 
 1. Chọn **Xóa** để xóa vĩnh viễn môi trường.
 
+### <a name="manage-environment-members"></a>Quản lý thành viên môi trường
+
+1. Chuyển đến **Quản trị viên** > **Môi trường** và chọn **Thành viên**.
+
+1. Chọn **Thêm thành viên** để cập nhật thành viên và [chỉ định vai trò](user-roles.md). Hiện nay, chỉ có sẵn **Quản trị viên môi trường**.
+
+1. Chọn **Thêm thành viên** để thêm họ vào môi trường của bạn.
+
 ## <a name="manage-connections"></a>Quản lý kết nối
 
 Thiết lập kết nối với thông tin chi tiết về đối tượng cho phép bạn xem báo cáo trong thông tin chi tiết về tương tác dựa trên hồ sơ khách hàng thống nhất. 
@@ -107,7 +107,6 @@ Thiết lập kết nối với thông tin chi tiết về đối tượng cho p
 
 Để bảo vệ dữ liệu cá nhân của khách hàng, bạn có thể xóa hoặc xuất dữ liệu nhận dạng người dùng cuối.
 
-Để biết thêm thông tin, hãy xem phần [Xóa và xuất dữ liệu sự kiện có chứa thông tin cá nhân](delete-export-personal-data.md).
-
+Để biết thêm thông tin, hãy xem phần [Xóa và xuất dữ liệu sự kiện có chứa thông tin cá nhân](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

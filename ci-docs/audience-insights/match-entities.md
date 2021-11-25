@@ -1,7 +1,7 @@
 ---
 title: So khớp các thực thể để hợp nhất dữ liệu
 description: So khớp các thực thể để kết hợp tập dữ liệu và tạo hồ sơ khách hàng hợp nhất.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648234"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732660"
 ---
 # <a name="match-entities"></a>So khớp thực thể
 
@@ -79,7 +79,7 @@ Cảnh báo **Cần quy tắc** bên cạnh tên thực thể đề xuất rằn
 
 1. Cung cấp **Tên** cho quy tắc.
 
-1. [Thêm các điều kiện khác](#add-conditions-to-a-rule) hoặc chọn **Xong** để hoàn thiện quy tắc.
+1. [Thêm các điều kiện khác](#add-conditions-to-a-rule) hoặc chọn [Xong](#add-conditions-to-a-rule) để hoàn thiện quy tắc.
 
 1. Không bắt buộc, [thêm các quy tắc khác](#add-rules-to-a-match-pair).
 
@@ -180,10 +180,7 @@ Chuyển đến **Dữ liệu** > **Hợp nhất** > **So khớp** rồi chọn 
 
 Bạn sẽ thấy kết quả của một lần chạy thành công, thực thể hồ sơ khách hàng hợp nhất trên trang **Thực thể**. Thực thể khách hàng hợp nhất được gọi là **Khách hàng** trong phần **Hồ sơ**. Lần chạy so khớp thành công đầu tiên tạo ra thực thể *Khách hàng* hợp nhất. Tất cả lần so khớp tiếp theo sẽ mở rộng thực thể đó.
 
-> [!TIP]
-> Sau khi chạy quá trình đối sánh, hãy chọn trạng thái quá trình để mở ngăn **Chi tiết công việc**. Ngăn này cung cấp một cái nhìn tổng quan về thời gian xử lý, ngày xử lý cuối cùng và tất cả các lỗi và cảnh báo liên quan đến công việc. Chọn **Xem chi tiết** để xem các thực thể nào đã tham gia vào quá trình đối sánh, các quy tắc nào được áp dụng cho chúng và liệu các bản cập nhật có được xuất bản thành công hay không.  
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quy trình xuôi dòng khác](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Đường dẫn xem chi tiết để xử lý chi tiết từ liên kết trạng thái nhiệm vụ.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Xem lại và xác thực các so khớp của bạn
 

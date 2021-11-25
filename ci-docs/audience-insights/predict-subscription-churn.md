@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035349"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799753"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Dự đoán khả năng rời bỏ đăng ký (xem trước)
 
 Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng có nguy cơ không sử dụng sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa không. Bạn có thể tạo dự đoán khả năng rời bỏ đăng ký mới trên trang **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Hãy thử hướng dẫn cho dự đoán khả năng rời bỏ đăng ký bằng dữ liệu mẫu: [Hướng dẫn mẫu về dự đoán rời khỏi đăng ký](sample-guide-predict-subscription-churn.md).

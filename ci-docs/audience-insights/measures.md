@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý các giá trị đo
 description: Xác định các giá trị đo để phân tích và phản ánh tình hình hoạt động của doanh nghiệp bạn.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673529"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732752"
 ---
 # <a name="define-and-manage-measures"></a>Xác định và quản lý các biện pháp
 
@@ -238,8 +238,7 @@ Chọn một giá trị đo từ danh sách cho các tùy chọn sau:
 - **Xóa** giá trị đo.
 - **Kích hoạt** hoặc **hủy kích hoạt**. Các giá trị đo không hoạt động sẽ không được làm mới trong [quá trình làm mới theo lịch trình](system.md#schedule-tab).
 
-> [!TIP]
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các nhiệm vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung như: thời gian xử lý, ngày xử lý cuối cùng và tất cả các lỗi cũng như cảnh báo liên quan đến nhiệm vụ.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Bước tiếp theo
 

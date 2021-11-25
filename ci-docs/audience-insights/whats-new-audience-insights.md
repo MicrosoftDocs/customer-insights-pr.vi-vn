@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,58 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673890"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753143"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Tính năng mới trong khả năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch dài hạn đối với tính năng, hãy xem [kế hoạch phát hành Dynamics 365 và Power Platform](/dynamics365/release-plans/).
+Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch tính năng dài hạn, hãy xem [Kế hoạch phát hành Dynamics 365 và Power Platform](/dynamics365/release-plans/).
 
 Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng khu vực. Do đó, một số khu vực sẽ thấy các tính năng trước khu vực khác. Trừ khi có lưu ý khác, bạn sẽ không phải thực hiện nào và chúng tôi sẽ tự động cập nhật ứng dụng mà không gây ra thời gian ngừng hoạt động.
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Cập nhật tháng 10 năm 2021
+
+Các bản cập nhật vào tháng 10 năm 2021 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="b-to-b"></a>B-to-B
+
+Bắt đầu từ tháng 10 năm 2021, bạn có thể làm việc với các tài khoản doanh nghiệp và các địa chỉ liên hệ có liên quan của họ trong Thông tin chi tiết về khách hàng. Trước đây, ứng dụng chủ yếu được điều chỉnh cho người tiêu dùng cá nhân. Một số khu vực tính năng đã được cập nhật để hỗ trợ các kịch bản B-to-B trên một loại môi trường mới. Để biết tổng quan về các tính năng B-to-B được hỗ trợ, hãy xem [Làm việc với các tài khoản doanh nghiệp trong thông tin chi tiết về đối tượng](work-with-business-accounts.md).
+
+Các phần sau đây nêu bật một số lĩnh vực chính đã được điều chỉnh để hỗ trợ tài khoản doanh nghiệp và người tiêu dùng cá nhân.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Xuất phân đoạn dựa trên tài khoản doanh nghiệp
+
+Tất cả các xuất khẩu phân khúc trong thông tin chi tiết về đối tượng đều có sẵn trong ngữ cảnh của tài khoản doanh nghiệp. Hầu hết các xuất khẩu phân khúc yêu cầu cấu hình bổ sung và [thông tin liên hệ dự kiến](segment-builder.md#create-a-new-segment) trong các phân đoạn cơ bản để hợp lệ cho tài khoản doanh nghiệp. Để biết thêm thông tin, hãy xem [Các phân đoạn xuất khẩu](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Sử dụng xuất Quảng cáo LinkedIn với các tài khoản doanh nghiệp
+
+Bản xuất Quảng cáo LinkedIn hiện có sẵn để nhắm mục tiêu liên hệ và công ty trong bối cảnh tài khoản doanh nghiệp. Khi chọn nhắm mục tiêu theo công ty làm trọng tâm chính của quá trình xuất LinkedIn, bạn có thể xuất các phân đoạn được xây dựng trên tài khoản doanh nghiệp mà không cần chiếu thông tin liên hệ. Để biết thêm thông tin, hãy truy cập tài liệu về [Xuất Quảng cáo LinkedIn](export-linkedin-ads.md) và sự khác biệt giữa [nhắm mục tiêu liên hệ](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) và [nhắm mục tiêu công ty](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Tạo các biện pháp dựa trên tài khoản doanh nghiệp và hệ thống phân cấp của chúng
+
+Trình tạo thước đo cho phép bạn tạo các thước đo xung quanh tài khoản doanh nghiệp và tùy chọn sử dụng thông tin phân cấp. Thông tin phân cấp được sử dụng để tổng hợp một phép tính đo lường trên một tài khoản và tất cả các tài khoản phụ có liên quan. Ví dụ: bạn có thể tạo các thước đo như tổng doanh thu cho từng nhóm tài khoản doanh nghiệp được xác định theo thứ bậc của chúng. Để biết thêm thông tin, hãy xem [Xác định và quản lý các biện pháp](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Tạo phân khúc dựa trên tài khoản doanh nghiệp và hệ thống phân cấp của chúng
+
+Trình tạo phân đoạn cho phép bạn tạo các phân đoạn tài khoản doanh nghiệp có tùy chọn bao gồm thông tin liên hệ cho từng tài khoản trong phân đoạn. Nếu bạn đã thiết lập phân cấp tài khoản, bạn có thể sử dụng thông tin phân cấp tài khoản khi tạo phân đoạn. Để biết thêm thông tin, hãy xem [Tạo một phân đoạn mới](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Giữ lại các tài khoản doanh nghiệp của bạn với những hiểu biết sâu sắc về xu hướng biến động của chúng
+
+Mô hình churn dự đoán của khách hàng hiện cũng hỗ trợ tài khoản doanh nghiệp. Bạn có thể đánh giá rủi ro ngừng hoạt động không chỉ đối với tài khoản mà còn đối với sự kết hợp của tài khoản và danh mục sản phẩm hoặc dịch vụ mà họ mua từ bạn. Việc bổ sung này giúp bạn hiểu liệu một tài khoản có nhiều khả năng ngừng mua hàng của bạn nói chung hay chỉ đối với một danh mục hàng hóa hoặc dịch vụ nhất định. Để giúp bạn sử dụng thêm mô hình AI này, nó cũng liệt kê các lý do khiến tài khoản có khả năng bị gián đoạn. Để biết thêm thông tin, hãy xem [Giao dịch churn dự đoán (xem trước)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Xem địa chỉ liên hệ của tài khoản doanh nghiệp trong chế độ xem Khách hàng
+
+Nếu tài khoản doanh nghiệp được ánh xạ với các tài khoản có liên quan, ứng dụng Thông tin chi tiết về khách hàng sẽ hiển thị các địa chỉ liên hệ có liên quan này như một phần của chế độ xem chi tiết khách hàng. Để biết thêm thông tin, hãy xem [Hồ sơ khách hàng](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Bản cập nhật tháng 9 năm 2021
 
@@ -78,7 +113,7 @@ Bản cập nhật tháng 5 năm 2021 bao gồm một số tính năng, bản n�
 
 ### <a name="data-ingestion"></a>Nhập dữ liệu
 
-- **Xem và sửa đổi siêu dữ liệu hoặc định nghĩa thực thể khi đính kèm dữ liệu từ Azure Data Lake Storage** Giờ đây, bạn có thể xem và chỉnh sửa siêu dữ liệu hoặc định nghĩa thực thể trong thông tin chi tiết về đối tượng khi đính kèm dữ liệu từ thư mục Common Data Model trong Azure Data Lake Storage. Chức năng này cung cấp ý kiến phản hồi theo thời gian thực, tùy chọn xác thực mô hình và kiểm tra lỗi. Chức năng này cho phép bạn chỉnh sửa dễ dàng cả tệp model.json và manifest.json.
+- **Xem hoặc sửa đổi siêu dữ liệu hoặc định nghĩa đối tượng khi đính kèm dữ liệu từ Azure Data Lake Storage của bạn** Giờ đây, bạn có thể xem và chỉnh sửa siêu dữ liệu hoặc định nghĩa đối tượng trong thông tin chi tiết về đối tượng khi đính kèm dữ liệu từ thư mục Mô hình dữ liệu chung trong Azure Data Lake Storage của bạn. Chức năng này cung cấp ý kiến phản hồi theo thời gian thực, tùy chọn xác thực mô hình và kiểm tra lỗi. Chức năng này cho phép bạn chỉnh sửa dễ dàng cả tệp model.json và manifest.json.
 
 ### <a name="extensibility"></a>Khả năng mở rộng
 
@@ -153,7 +188,7 @@ Các bản cập nhật vào tháng 3 năm 2021 bao gồm một số tính năng
 
 ### <a name="data-ingestion"></a>Nhập dữ liệu
 
-- **Kết nối với nguồn dữ liệu tại chỗ bằng cách sử dụng các cổng và luồng dữ liệu Power Platform** Chúng tôi vui mừng công bố bản xem trước của luồng dữ liệu Power Platform và khả năng kết nối tại chỗ thông qua các cổng trong Customer Insights có môi trường Power Platform hoặc Dataverse được liên kết. Mọi nguồn dữ liệu mới tạo trong môi trường Customer Insights có môi trường Dataverse được liên kết sẽ mặc định là luồng dữ liệu Power Platform mang lại khả năng kết nối dữ liệu tại chỗ và một bộ trình kết nối cũng như khả năng chuyển đổi phong phú.
+- **Kết nối với nguồn dữ liệu tại chỗ bằng cách sử dụng Power Platform luồng dữ liệu và cổng** Chúng tôi vui mừng thông báo bản xem trước luồng dữ liệu Power Platform và kết nối tại chỗ sử dụng các cổng trong Thông tin chi tiết về khách hàng với môi trường Power Platform hoặc Dataverse được liên kết. Bất kỳ nguồn dữ liệu mới nào được tạo trong môi trường Thông tin chi tiết về khách hàng với môi trường Dataverse được liên kết sẽ mặc định thành luồng dữ liệu Power Platform mang đến kết nối dữ liệu tại chỗ và một loạt trình kết nối và khả năng chuyển đổi phong phú.
 
 ### <a name="extensibility"></a>Khả năng mở rộng
 
@@ -167,7 +202,7 @@ Các bản cập nhật vào tháng 3 năm 2021 bao gồm một số tính năng
    Để biết thêm thông tin, hãy xem [Xuất sang Constant Contact](export-constant-contact.md).
 
 - **Xuất phân khúc sang RollWorks** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả RollWorks. Giờ đây, bạn có thể xuất các phân khúc từ Customer Insights sang đối tượng RollWorks và sử dụng chúng làm cơ sở cho quảng cáo B2B của mình.    
-   Để biết thêm thông tin, hãy xem [Xuất sang RollWorks ](export-rollworks.md).
+   Để biết thêm thông tin, hãy xem [Xuất sang RollWorks](export-rollworks.md).
 
 - **Xuất phân khúc sang Snapchat** Chúng tôi đã mở rộng các đích xuất của mình để bao gồm cả Snapchat. Giờ đây, bạn có thể xuất các phân khúc từ Customer Insights sang Snapchat và sử dụng chúng làm cơ sở cho quảng cáo của bạn.     
    Để biết thêm thông tin, hãy xem [Xuất sang Snapchat](export-snapchat.md).
@@ -215,7 +250,7 @@ Các bản cập nhật vào tháng 2 năm 2021 bao gồm một số tính năng
 
 - **Môi trường sao chép hỗ trợ nhiều loại nguồn dữ liệu hơn**
 
-  Quản trị viên có thể sao chép cấu hình môi trường sang môi trường mới trong cùng một tổ chức. Tính năng này mở rộng chức năng môi trường sao chép cho các trường hợp trong đó các nguồn dữ liệu dựa trên Microsoft Dataverse Managed Data Lake hoặc một thư mục Common Data Model được sử dụng.
+  Quản trị viên có thể sao chép cấu hình môi trường sang môi trường mới trong cùng một tổ chức. Tính năng này mở rộng chức năng môi trường sao chép cho các trường hợp sử dụng nguồn dữ liệu dựa trên hồ dữ liệu được quản lý Microsoft Dataverse hoặc thư mục Mô hình Dữ liệu Chung.
 
 ## <a name="january-2021-updates"></a>Bản cập nhật tháng 1 năm 2021
 
@@ -241,7 +276,7 @@ Bản cập nhật tháng 1 năm 2021 bao gồm một vài tính năng, nâng c�
 
 #### <a name="system-administration"></a>Quản trị hệ thống
 
-- **Chia sẻ dữ liệu liền mạch với Microsoft Dataverse** Giờ đây, bạn có thể chia sẻ kết quả Customer Insights với các ứng dụng Microsoft Dataverse bằng Microsoft Dataverse Managed Data Lake. Khi liên kết một môi trường Dataverse với Customer Insights, bạn có tùy chọn để bật chia sẻ dữ liệu.
+- **Chia sẻ dữ liệu liền mạch với Microsoft Dataverse** Giờ đây, bạn có thể chia sẻ kết quả Thông tin chi tiết về khách hàng với các ứng dụng Microsoft Dataverse bằng cách sử dụng Hồ dữ liệu được quản lý Microsoft Dataverse. Sau khi liên kết môi trường Dataverse với Thông tin chi tiết về khách hàng, bạn sẽ có tùy chọn bật chia sẻ dữ liệu.
   Để biết thêm thông tin, hãy xem [Quản lý môi trường](manage-environments.md).
 
 

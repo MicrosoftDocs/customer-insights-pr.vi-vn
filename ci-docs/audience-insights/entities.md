@@ -1,7 +1,7 @@
 ---
 title: Thực thể và tập hợp dữ liệu
 description: Xem dữ liệu trên trang Thực thể.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033841"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732107"
 ---
 # <a name="entities-in-audience-insights"></a>Các thực thể trong thông tin chi tiết về đối tượng
 
-Sau khi [định cấu hình nguồn dữ liệu](data-sources.md), hãy truy cập trang **Thực thể** để đánh giá chất lượng của dữ liệu được nhập. Các thực thể được coi là tập hợp dữ liệu. Nhiều chức năng của Dynamics 365 Customer Insights được xây dựng liên quan đến những thực thể này. Việc xem xét chúng một cách chi tiết có thể giúp bạn xác thực đầu ra của những khả năng.
+Sau khi [định cấu hình nguồn dữ liệu](data-sources.md), hãy truy cập trang [Thực thể](data-sources.md) để đánh giá chất lượng của dữ liệu được nhập. Các thực thể được coi là tập hợp dữ liệu. Nhiều khả năng của Dynamics 365 Customer Insights được xây dựng xung quanh các thực thể này. Việc xem xét chúng một cách chi tiết có thể giúp bạn xác thực đầu ra của những khả năng.
 
 Trang **Thực thể** liệt kê các thực thể và bao gồm một số cột:
 
@@ -26,9 +26,10 @@ Trang **Thực thể** liệt kê các thực thể và bao gồm một số c�
 - **Nguồn**: Hiển thị loại nguồn dữ liệu được nhập vào thực thể
 - **Người tạo**: Tên của người đã tạo thực thể
 - **Ngày tạo**: Ngày và giờ tạo thực thể
-- **Người cập nhật**: Tên của người cập nhật thực thể
-- **Cập nhật lần cuối**: Ngày và giờ của bản cập nhật cuối cùng của thực thể
-- **Làm mới lần cuối**: Ngày và giờ làm mới dữ liệu cuối cùng
+- **Đã cập nhật** : Tên của người đã cập nhật thực thể
+- **Trạng thái** : Thông tin chi tiết về bản cập nhật cuối cùng của thực thể
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Khám phá dữ liệu của một thực thể cụ thể
 

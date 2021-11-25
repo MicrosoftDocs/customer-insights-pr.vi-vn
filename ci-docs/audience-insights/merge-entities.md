@@ -1,7 +1,7 @@
 ---
 title: Trộn các thực thể trong hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648280"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732798"
 ---
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
@@ -187,10 +187,9 @@ Chọn **Chạy các quy trình Hợp nhất và xuôi dòng** để làm mới 
 
 Để thực hiện thêm nhiều thay đổi và chạy lại bước, bạn có thể hủy quá trình hợp nhất đang diễn ra. Chọn **Đang làm mới ...** rồi chọn **Hủy công việc**  trong ngăn bên xuất hiện.
 
-> [!TIP]
-> Sau khi chạy quá trình trộn, hãy chọn trạng thái quá trình để mở ngăn **Chi tiết công việc**. Ngăn này cung cấp một cái nhìn tổng quan về thời gian xử lý, ngày xử lý cuối cùng và tất cả các lỗi và cảnh báo liên quan đến công việc. Chọn **Xem chi tiết** để xem các thực thể nào đã tham gia vào quá trình đối sánh, nếu giải quyết xung đột thành công và nếu các bản cập nhật được xuất bản thành công.  
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quy trình xuôi dòng khác](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Đường dẫn xem chi tiết để xử lý chi tiết từ liên kết trạng thái nhiệm vụ.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Đường dẫn xem chi tiết để xử lý chi tiết từ liên kết trạng thái nhiệm vụ.":::
 
 ## <a name="next-step"></a>Bước tiếp theo
 

@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Thêm thư mục Common Data Model làm nguồn dữ liệu
           href: audience-insights/connect-common-data-model.md
-        - name: Thêm kho dữ liệu được quản lý Dataverse
+        - name: Thêm hồ dữ liệu được quản lý Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Làm mới tăng dần cho các nguồn dữ liệu
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Địa chỉ nâng cao
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Nâng cao dữ liệu công ty
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Tăng cường với Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Tăng cường dữ liệu bằng HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Tăng cường dữ liệu bằng Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Tăng cường dữ liệu bằng Experian
+        - name: Làm phong phú với Experian
           href: audience-insights/enrichment-experian.md
         - name: Tăng cường dữ liệu bằng tính năng nhập tùy chỉnh SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -162,7 +164,7 @@
               href: audience-insights/export-autopilot.md
             - name: Azure Blob Storage
               href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Thế hệ thứ 2
+            - name: Azure Data Lake Storage Thế hệ 2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
             - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Trình quản lý quảng cáo Facebook
+            - name: Facebook Trình quản lý quảng cáo
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Xem lại lược đồ thực thể trong Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Dữ liệu Customer Insights trong Dataverse
+        - name: Dữ liệu Thông tin chi tiết về khách hàng trong Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Làm việc với API
           href: audience-insights/apis.md
         - name: Tham chiếu API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Quản lý sự đồng ý (xem trước)
+  items:
+    - name: Trung tâm trợ giúp
+      href: consent-management/index.yml
+    - name: Tổng quan về khả năng
+      href: consent-management/overview.md
+    - name: Bắt đầu
+      items:
+        - name: Bắt đầu
+          href: consent-management/get-started.md
+        - name: Các khái niệm và thuật ngữ
+          href: consent-management/glossary.md
+    - name: Nhập dữ liệu chấp thuận
+      items:
+        - name: Nhập dữ liệu chấp thuận
+          href: consent-management/import-consent-data.md
+        - name: Đặt dữ liệu về sự đồng ý và áp dụng các tùy chọn về sự đồng ý
+          href: consent-management/set-consent-rules.md
+    - name: Quản lý dữ liệu về sự đồng ý
+      items:
+        - name: Bật quy tắc về sự đồng ý trong thông tin chi tiết về đối tượng
+          href: audience-insights/activate-consent.md
+        - name: Quản lý các quy tắc đồng ý mặc định trong các phân đoạn thông tin chi tiết về đối tượng
+          href: audience-insights/change-default-consent-rules.md
+    - name: Quản lý cài đặt và người dùng
+      items:
+        - name: Định cấu hình cài đặt hệ thống
+          href: consent-management/system-settings.md
+        - name: Quản lý người dùng và quyền
+          href: consent-management/manage-users.md
+    - name: Sử dụng dữ liệu về sự đồng ý
+      items:
+        - name: Tạo dự đoán với dữ liệu về sự đồng ý
+          href: consent-management/predictions-consent-data.md
 - name: Thông tin chuyên sâu về tương tác (bản xem trước)
   items:
     - name: Trung tâm trợ giúp
@@ -298,13 +334,13 @@
       items:
         - name: Tổng quan về nguồn lực dành cho nhà phát triển
           href: engagement-insights/developer-resources.md
-        - name: Hướng dẫn về SDK web
+        - name: Hướng dẫn về SDK Web
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Mẫu SDK web
           href: engagement-insights/websdk-sample.md
-        - name: Hướng dẫn về SDK Android
+        - name: Hướng dẫn về SDK Android
           href: engagement-insights/get-started-android.md
-        - name: Mẫu SDK Android
+        - name: Android mẫu SDK
           href: engagement-insights/androidsdk-sample.md
         - name: Hướng dẫn về SDK iOS
           href: engagement-insights/get-started-ios.md

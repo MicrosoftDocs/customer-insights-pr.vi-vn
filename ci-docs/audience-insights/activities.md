@@ -1,7 +1,7 @@
 ---
 title: Hoạt động của khách hàng
 description: Xác định các hoạt động của khách hàng và xem các hoạt động đó theo dòng thời gian trên hồ sơ khách hàng.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673164"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732486"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
-Kết hợp các hoạt động của khách hàng từ [những nguồn dữ liệu khác nhau](data-sources.md) trong Dynamics 365 Customer Insights để tạo dòng thời gian liệt kê các hoạt động theo thứ tự thời gian. Bao gồm dòng thời gian trong các ứng dụng Dynamics 365 với giải pháp [phần bổ trợ Thẻ khách hàng](customer-card-add-in.md) hoặc trong một bảng điều khiển Power BI.
+Kết hợp các hoạt động của khách hàng từ [các nguồn dữ liệu khác nhau](data-sources.md) trong Dynamics 365 Customer Insights để tạo dòng thời gian liệt kê các hoạt động theo thứ tự thời gian. Bao gồm tiến trình trong các ứng dụng Dynamics 365 với [Tiện ích bổ sung Thẻ khách hàng](customer-card-add-in.md) giải pháp hoặc trong trang tổng quan Power BI.
 
 ## <a name="define-an-activity"></a>Xác định hoạt động
 
@@ -82,9 +82,7 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
 1. Trên trang **Hoạt động**, hãy chọn **Chạy** để xử lý hoạt động. 
 
-> [!TIP]
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Quản lý các hoạt động hiện có
 

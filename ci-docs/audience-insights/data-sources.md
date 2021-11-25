@@ -1,7 +1,7 @@
 ---
 title: Sử dụng nguồn dữ liệu để nhập dữ liệu
 description: Tìm hiểu cách nhập dữ liệu từ nhiều nguồn khác nhau.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645381"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732193"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -31,15 +31,15 @@ Bạn có thể thêm nguồn dữ liệu theo ba cách chính:
 
 - [Thông qua hàng chục trình kết nối Power Query](connect-power-query.md)
 - [Từ thư mục Common Data Model](connect-common-data-model.md)
-- [Từ kho lưu trữ Microsoft Dataverse của riêng bạn](connect-dataverse-managed-lake.md)
+- [Từ hồ Microsoft Dataverse của riêng bạn](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Thêm dữ liệu từ nguồn dữ liệu tại chỗ
 
-Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chuyên sâu về đối tượng được hỗ trợ dựa trên luồng dữ liệu Microsoft Power Platform. Bạn có thể bật luồng dữ liệu trong Customer Insights bằng cách [cung cấp URL môi trường Microsoft Dataverse](create-environment.md) khi thiết lập môi trường.
+Việc thay đổi dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chi tiết về đối tượng được hỗ trợ dựa trên quy trình dữ liệu Microsoft Power Platform. Quy trình dữ liệu có thể được bật trong Thông tin chi tiết về khách hàng bằng cách [cung cấp URL môi trường Microsoft Dataverse](create-environment.md) khi thiết lập môi trường.
 
-Nguồn dữ liệu được tạo sau khi liên kết một môi trường Dataverse với Customer Insights sẽ sử dụng [luồng dữ liệu Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Loại bỏ và tái tạo các nguồn dữ liệu đã tồn tại trước khi môi trường Dataverse được liên kết để [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
+Nguồn dữ liệu được tạo sau khi liên kết môi trường Dataverse với Thông tin chi tiết về khách hàng sẽ sử dụng [Power Platform luồng dữ liệu](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Xóa và tạo lại các nguồn dữ liệu tồn tại trước khi môi trường Dataverse được liên kết với [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
 
-Cổng dữ liệu từ một môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Customer Insights. Trang nguồn dữ liệu hiển thị các liên kết đi đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
+Cổng dữ liệu từ môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Thông tin chi tiết về khách hàng. Trang nguồn dữ liệu hiển thị các liên kết để chuyển đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
 
 ## <a name="review-ingested-data"></a>Xem lại dữ liệu đã nhập
 
@@ -48,14 +48,7 @@ Bạn sẽ thấy tên của mỗi nguồn dữ liệu đã nhập, trạng thá
 > [!div class="mx-imgBorder"]
 > ![Nguồn dữ liệu đã thêm.](media/configure-data-datasource-added.png "Nguồn dữ liệu đã thêm")
 
-|Trạng thái  |Mô tả  |
-|---------|---------|
-|Thành công   |Nguồn dữ liệu đã được nhập thành công nếu thời gian được đề cập trong cột **Làm mới**.
-|Chưa bắt đầu   |Nguồn dữ liệu chưa nhập dữ liệu nào hoặc vẫn ở chế độ nháp.         |
-|Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
-|Không thành công     |Phiên nhập dữ liệu gặp lỗi.         |
-
-Chọn giá trị trong cột **Trạng thái** của bất kỳ nguồn dữ liệu nào để xem xét thêm chi tiết. Trong ngăn **Chi tiết tiến độ**, hãy mở rộng **Nguồn dữ liệu**. Chọn **Xem chi tiết** để xem thêm thông tin về trạng thái làm mới, bao gồm chi tiết lỗi và cập nhật quy trình xuôi dòng.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 Quá trình tải dữ liệu có thể mất một khoảng thời gian. Sau khi làm mới thành công, dữ liệu đã nhập có thể được xem xét từ trang **Các thực thể**. Để biết thêm thông tin, hãy xem [Các thực thể](entities.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Hoàn thành dữ liệu từng phần bằng cách sử dụng dự đoán
 description: Sử dụng dự đoán để điền vào dữ liệu khách hàng không đầy đủ.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,31 +9,32 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645060"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732509"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Hoàn thành từng phần dữ liệu của bạn với các dự đoán (không được dùng nữa)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Tính năng này sẽ **không dùng nữa** kể từ **Ngày 5 tháng 11 năm 2021**. Các triển khai hiện tại sẽ tiếp tục hoạt động cho đến khi tính năng bị xóa, nhưng bạn sẽ không thể tạo các tích hợp mới bằng cách sử dụng hướng dẫn bên dưới.
 
 Tính năng Dự đoán cho phép bạn dễ dàng tạo các giá trị dự đoán nhằm nâng cao sự hiểu biết của bạn về một khách hàng. Trên trang **Thông tin** > **Dự đoán**, bạn có thể chọn **Dự đoán của tôi** để xem các dự đoán mà bạn đã định cấu hình trong các phần khác của thông tin chi tiết về đối tượng và cho phép bạn tùy chỉnh thêm.
 
 > [!NOTE]
 > Bạn không thể sử dụng tính năng này nếu môi trường của bạn sử dụng lưu trữ Azure Data Lake Gen 2.
 >
-> Tính năng dự đoán sử dụng phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó, do vậy có khả năng được dùng làm phương thức lập hồ sơ, theo định nghĩa về thuật ngữ đó trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
+> Tính năng dự đoán sử dụng phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó, do vậy có khả năng được dùng làm phương thức lập hồ sơ, theo định nghĩa về thuật ngữ đó trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn chịu trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights của bạn, bao gồm cả các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 Trước khi tổ chức của bạn có thể sử dụng tính năng dự đoán, hãy đảm bảo đáp ứng các điều kiện tiên quyết sau đây:
 
-1. Tổ chức của bạn có một phiên bản [thiết lập trong Microsoft Dataverse](/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
+1. Tổ chức của bạn có một phiên bản [thiết lập trong Microsoft Dataverse](/ai-builder/build-model#prerequisites) và nó nằm trong cùng một tổ chức với Customer Insights.
 
-2. Môi trường thông tin chi tiết về đối tượng của bạn được liên kết với phiên bản Dataverse.
+2. Môi trường thông tin chi tiết về đối tượng của bạn được đính kèm với phiên bản Dataverse của bạn.
 
 Để biết thêm thông tin, hãy xem [Tạo môi trường mới](create-environment.md).
 
@@ -60,6 +61,8 @@ Trước khi tổ chức của bạn có thể sử dụng tính năng dự đo�
    > ![Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại.](media/intelligence-categorymapping.png "Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại")
 
 8. Chọn **Xong** và dự đoán sẽ được xử lý. Việc xử lý sẽ mất một lúc, tùy thuộc vào kích thước và độ phức tạp của dữ liệu. Kết quả sẽ có sẵn trong một thực thể mới dựa trên **Tên thực thể đầu ra** của dự đoán bạn đã tạo.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Tạo dự đoán trong khi tạo phân đoạn
 
@@ -137,9 +140,9 @@ Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nh�
 
 4. Xác nhận tác vụ xóa này.
 
-## <a name="troubleshooting"></a>Gỡ rối
+## <a name="troubleshooting"></a>Khắc phục sự cố
 
-Nếu không thể hoàn thành quy trình đính kèm Dataverse do lỗi, bạn có thể cố hoàn thành quy trình theo cách thủ công. Có hai vấn đề đã biết có thể xảy ra trong quy trình đính kèm:
+Nếu bạn không thể hoàn tất quy trình đính kèm Dataverse do lỗi, bạn có thể thử hoàn tất quy trình theo cách thủ công. Có hai vấn đề đã biết có thể xảy ra trong quy trình đính kèm:
 
 - Giải pháp Bổ trợ thẻ khách hàng chưa được cài đặt.
     1. Hoàn thành các hướng dẫn để [cài đặt và đặt cấu hình giải pháp](customer-card-add-in.md).

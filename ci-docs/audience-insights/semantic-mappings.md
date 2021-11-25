@@ -1,7 +1,7 @@
 ---
 title: Ánh xạ ngữ nghĩa (Bản xem trước)
 description: Tổng quan về ánh xạ ngữ nghĩa và cách sử dụng chúng.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622962"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731969"
 ---
 # <a name="semantic-mappings"></a>Ánh xạ ngữ nghĩa
 
@@ -75,8 +75,7 @@ ms.locfileid: "7622962"
 
 1. Để chạy ánh xạ ngữ nghĩa vào lúc khác, hãy chọn ánh xạ ngữ nghĩa rồi chọn **Làm mới**.
 
-> [!TIP]
-> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Quản lý ánh xạ ngữ nghĩa hiện có
 
@@ -91,5 +90,6 @@ Trên **Dữ liệu** > **Ánh xạ ngữ nghĩa (bản xem trước)**, bạn c
 - **Đổi tên**: Mở hộp thoại trong đó bạn có thể nhập một tên khác cho ánh xạ ngữ nghĩa đã chọn. Chọn **Lưu** để áp dụng thay đổi.
 
 - **Xóa**: Mở hộp thoại để xác nhận việc xóa ánh xạ ngữ nghĩa đã chọn. Bạn cũng có thể xóa nhiều ánh xạ ngữ nghĩa cùng một lúc bằng cách chọn ánh xạ ngữ nghĩa và biểu tượng xóa. Chọn **Xóa** để xác nhận thao tác xóa.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

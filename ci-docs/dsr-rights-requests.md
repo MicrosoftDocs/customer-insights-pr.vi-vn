@@ -1,6 +1,6 @@
 ---
 title: Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR | Microsoft Docs
-description: Trả lời các yêu cầu về chủ đề dữ liệu cho khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
+description: Trả lời Yêu cầu về chủ đề dữ liệu để có khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483720"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732706"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR
 
@@ -22,9 +22,9 @@ Quy định Chung về Bảo vệ Dữ liệu (GDPR) của Liên minh Châu Âu 
 
 Chúng tôi cam kết giúp khách hàng của mình đáp ứng các yêu cầu về GDPR của họ. Chức năng này bao gồm quyền xóa và xuất dữ liệu có chứa thông tin cá nhân như ID người dùng, số điện thoại và địa chỉ email. Quản trị viên có thể thực hiện các yêu cầu của người dùng để xóa hoặc xuất dữ liệu cá nhân.
 
-## <a name="audience-insights"></a>Thông tin chi tiết về đối tượng
+## <a name="audience-insights"></a>Thông tin chuyên sâu về đối tượng
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Trả lời yêu cầu xóa chủ đề dữ liệu GDPR cho khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Đáp ứng yêu cầu xóa chủ đề dữ liệu GDPR cho khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights
 
 "Quyền xóa" dữ liệu cá nhân khỏi dữ liệu khách hàng của tổ chức là sự bảo vệ chính trong Quy định Chung về Bảo vệ Dữ liệu (GDPR). Việc xóa dữ liệu cá nhân bao gồm xóa tất cả dữ liệu cá nhân và nhật ký do hệ thống tạo, ngoại trừ thông tin nhật ký kiểm tra.
 
@@ -39,7 +39,7 @@ Thông tin chi tiết về đối tượng cung cấp những trải nghiệm tr
 
 Quản trị viên Customer Insights có thể làm theo các bước sau để xóa dữ liệu khách hàng đã bị xóa trong nguồn dữ liệu:
 
-1. Đăng nhập vào Dynamics 365 Customer Insights.
+1. đăng nhập vào Dynamics 365 Customer Insights.
 2. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Nguồn dữ liệu**
 3. Đối với từng nguồn dữ liệu trong danh sách chứa dữ liệu khách hàng đã xóa:
    1. Chọn (...) rồi chọn **Làm mới**.
@@ -52,7 +52,7 @@ Quản trị viên Customer Insights có thể làm theo các bước sau để 
 
 Quản trị viên Customer Insights có thể làm theo các bước sau để xóa dữ liệu người dùng Customer Insights:
 
-1. Đăng nhập vào Dynamics 365 Customer Insights.
+1. đăng nhập vào Dynamics 365 Customer Insights.
 2. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị** > **Quyền**.
 3. Chọn hộp kiểm tương ứng với người dùng bạn muốn xóa.
 4. Chọn **Loại bỏ**.
@@ -79,7 +79,14 @@ Quản trị viên đối tượng thuê có thể tuân theo các bước sau �
 2. Hãy xác minh để xuất dữ liệu cho người dùng yêu cầu.
 3. Nhận dữ liệu được xuất thông qua địa chỉ email quản trị viên đối tượng thuê.
 
-## <a name="engagement-insights"></a>Thông tin chi tiết về tương tác
+## <a name="consent-management-preview"></a>Quản lý sự đồng ý (xem trước)
+
+Khả năng quản lý sự đồng ý không trực tiếp thu thập dữ liệu người dùng. Nó chỉ nhập và xử lý dữ liệu về sự đồng ý do người dùng cung cấp trong các ứng dụng khác.
+
+Để xóa dữ liệu về sự đồng ý về những người dùng cụ thể, hãy xóa dữ liệu đó trong các nguồn dữ liệu được nhập vào khả năng quản lý sự đồng ý. Sau khi làm mới nguồn dữ liệu, dữ liệu đã xóa cũng sẽ bị xóa trong Trung tâm đồng ý. Các ứng dụng sử dụng pháp nhân đồng ý cũng sẽ xóa dữ liệu đã bị xóa trên nguồn sau [Làm tươi](audience-insights/system.md#refresh-processes). Chúng tôi khuyên bạn nên nhanh chóng làm mới nguồn dữ liệu sau khi phản hồi yêu cầu chủ thể dữ liệu để xóa dữ liệu của người dùng khỏi tất cả các quy trình và ứng dụng khác.
+
+
+## <a name="engagement-insights-preview"></a>Thông tin chuyên sâu về tương tác (bản xem trước)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Xóa và xuất dữ liệu sự kiện có chứa thông tin nhận dạng người dùng cuối
 
