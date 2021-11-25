@@ -1,7 +1,7 @@
 ---
 title: Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu từ Microsoft
-description: Sử dụng dữ liệu độc quyền từ Microsoft để bổ sung các mối quan hệ về thương hiệu và sở thích cho dữ liệu khách hàng của bạn.
-ms.date: 11/01/2021
+description: Sử dụng dữ liệu độc quyền từ Microsoft để làm phong phú thêm dữ liệu khách hàng của bạn với các mối quan hệ và chia sẻ tiếng nói.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732568"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793729"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng mối quan hệ thương hiệu và sở thích (bản xem trước)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Làm phong phú hồ sơ khách hàng với sở thích và chia sẻ tiếng nói (xem trước)
 
-Sử dụng dữ liệu độc quyền của Microsoft để bổ sung các mối quan hệ về sở thích và thương hiệu cho dữ liệu khách hàng của bạn. Các mối quan hệ này dựa trên dữ liệu từ những người thuộc nhóm nhân khẩu học tương tự với khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và chia phân khúc khách hàng của bạn dựa trên mối quan hệ của họ với các thương hiệu và sở thích cụ thể.
+Sử dụng dữ liệu độc quyền của Microsoft để làm phong phú thêm dữ liệu khách hàng của bạn với mối quan tâm thương hiệu, mối quan tâm và sự chia sẻ tiếng nói (SoV). Những mối quan hệ và SoV này dựa trên dữ liệu từ những người có nhân khẩu học tương tự như khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và phân khúc khách hàng của mình dựa trên sở thích của họ hoặc SoV với các thương hiệu và sở thích cụ thể.
 
 Trong thông tin chi tiết về đối tượng, hãy đi tới **Dữ liệu** > **Tăng cường dữ liệu** để [đặt cấu hình và xem dữ liệu tăng cường](enrichment-hub.md).
 
-Để đặt cấu hình dữ liệu tăng cường phụ về mối quan hệ thương hiệu, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Thương hiệu**.
+Để định cấu hình sở thích thương hiệu và làm giàu SoV, hãy chuyển đến **Phát hiện** tab và chọn **Làm phong phú dữ liệu của tôi** trên **Nhãn hiệu** ngói.
 
-Để đặt cấu hình dữ liệu tăng cường mối quan hệ về sở thích, hãy chuyển đến tab **Khám phá** rồi chọn **Tăng cường dữ liệu của tôi** trên ngăn xếp **Sở thích**.
+Để định cấu hình sở thích và làm giàu SoV, hãy chuyển đến **Phát hiện** tab và chọn **Làm phong phú dữ liệu của tôi** trên **Sở thích** ngói.
 
    > [!div class="mx-imgBorder"]
    > ![Ngăn xếp Thương hiệu và Sở thích.](media/BrandsInterest-tile-Hub.png "Ngăn xếp Thương hiệu và Sở thích")
 
-## <a name="how-we-determine-affinities"></a>Cách chúng tôi xác định mối quan hệ
+## <a name="how-we-determine-affinities-and-sov"></a>Cách chúng tôi xác định mối quan hệ và SoV
 
-Chúng tôi sử dụng dữ liệu tìm kiếm trực tuyến của Microsoft để tìm mối quan hệ về thương hiệu và sở thích trên các phân khúc nhân khẩu học khác nhau (được xác định theo độ tuổi, giới tính hoặc vị trí). Khối lượng tìm kiếm trực tuyến cho một thương hiệu hoặc sở thích xác định mức độ quan hệ của một phân khúc nhân khẩu học, so với các phân khúc khác, đối với thương hiệu hoặc sở thích đó.
+Chúng tôi sử dụng dữ liệu tìm kiếm trực tuyến của Microsoft để tìm sở thích và SoV cho các thương hiệu và sở thích trên các phân khúc nhân khẩu học khác nhau (được xác định theo độ tuổi, giới tính hoặc vị trí). Khối lượng tìm kiếm trực tuyến cho một thương hiệu hoặc sở thích là cơ sở để xác định mối quan hệ hoặc SoV. Tuy nhiên, mỗi cách cung cấp một góc nhìn khác nhau để hiểu khách hàng của bạn.
+
+- Sở thích là một so sánh giữa các phân đoạn nhân khẩu học. Bạn có thể sử dụng thông tin này để xác định các phân đoạn nhân khẩu học có mức độ quan tâm cao nhất đối với một thương hiệu hoặc mối quan tâm nhất định, so với các phân đoạn khác.
+
+- Chia sẻ tiếng nói là một so sánh giữa các thương hiệu hoặc sở thích đã chọn của bạn. Bạn có thể sử dụng thông tin này để xác định thương hiệu hoặc sở thích nào có tỷ lệ quan tâm cao nhất cho một phân khúc nhân khẩu học nhất định, so với các thương hiệu hoặc sở thích khác mà bạn đã chọn.
 
 ## <a name="affinity-level-and-score"></a>Mức độ và điểm số mối quan hệ
 
@@ -48,6 +52,10 @@ Trên mỗi hồ sơ khách hàng được tăng cường dữ liệu, chúng t�
 |Thấp     | 1-34        |
 
 Tùy thuộc vào mức độ chi tiết mà bạn muốn đo lường mối quan hệ, bạn có thể sử dụng mức độ hoặc điểm số mối quan hệ. Điểm số mối quan hệ giúp bạn kiểm soát chính xác hơn.
+
+## <a name="share-of-voice-sov"></a>Chia sẻ giọng nói (SoV)
+
+Chúng tôi tính SoV trên thang điểm 100. Tổng số SoV trên tất cả các thương hiệu hoặc sở thích cho mỗi hồ sơ khách hàng được bổ sung thêm tối đa 100. Không giống như mối quan hệ, SoV có liên quan đến thương hiệu và sở thích mà bạn chọn. Ví dụ: các giá trị SoV cho 'Microsoft' có thể khác nhau nếu các thương hiệu được chọn là ('Microsoft', 'GitHub') so với ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Quốc gia/khu vực được hỗ trợ
 
@@ -82,7 +90,7 @@ Xem xét các tùy chọn tăng cường dữ liệu mặc định của bạn v
 
 ### <a name="select-entity-to-enrich"></a>Chọn thực thể để tăng cường
 
-Chọn **Thực thể được tăng cường** rồi chọn tập hợp dữ liệu mà bạn muốn bổ sung thêm dữ liệu công ty từ Microsoft. Bạn có thể chọn thực thể khách hàng để tăng cường dữ liệu cho tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ tăng cường dữ liệu cho hồ sơ khách hàng có trong phân khúc đó.
+Lựa chọn **Thực thể phong phú** và chọn tập dữ liệu bạn muốn bổ sung bằng dữ liệu từ Microsoft. Bạn có thể chọn thực thể khách hàng để tăng cường dữ liệu cho tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ tăng cường dữ liệu cho hồ sơ khách hàng có trong phân khúc đó.
 
 ### <a name="map-your-fields"></a>Ánh xạ trường của bạn
 
@@ -124,13 +132,11 @@ Sau khi chạy quá trình tăng cường, hãy chuyển đến **Dữ liệu t�
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Xem trước kết quả sau khi chạy quy trình tăng cường.":::
 
-Xem xét dữ liệu tăng cường bằng cách chọn **Xem dữ liệu tăng cường** trong biểu đồ. Dữ liệu tăng cường cho các thương hiệu đi đến thực thể **BrandAffinityFromMicrosoft**. Dữ liệu cho sở thích trong thực thể **InterestAffinityFromMicrosoft**. Bạn cũng sẽ tìm thấy các thực thể được liệt kê trong nhóm **Tăng cường** trong **Dữ liệu** > **Thực thể**.
-
-Bạn sẽ thấy biểu đồ với số lượng hồ sơ khách hàng được tăng cường theo thời gian và bản xem trước của thực thể được tăng cường. Chọn **Hiển thị thêm** trong ô xem trước để mở thực thể được tăng cường.
+Bạn sẽ tìm thấy biểu đồ với số lượng hồ sơ khách hàng được bổ sung theo thời gian và bản xem trước của các thực thể đã được bổ sung. Xem lại dữ liệu đã được bổ sung chi tiết bằng cách chọn **Xem thêm** bên trong **Mức độ chung sở thích** hoặc **Chia sẻ giọng nói** các biểu đồ. Dữ liệu phong phú cho các thương hiệu được chuyển đến **BrandAffinityFromMicrosoft** và **BrandShareOfVoiceFromMicrosoft** các thực thể. Dữ liệu cho sở thích nằm trong **Sở thíchAffinityFromMicrosoft** và **InterestShareOfVoiceFromMicrosoft** các thực thể. Bạn cũng sẽ tìm thấy các thực thể được liệt kê trong nhóm **Tăng cường** trong **Dữ liệu** > **Thực thể**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu tăng cường trên thẻ khách hàng
 
-Các mối quan hệ về thương hiệu và sở thích cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** rồi chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy biểu đồ cho các thương hiệu hoặc sở thích mà mọi người trong hồ sơ nhân khẩu học của khách hàng có mối quan hệ.
+SoV thương hiệu và sở thích cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** rồi chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy các biểu đồ cho thương hiệu hoặc SoV quan tâm dựa trên những người trong hồ sơ nhân khẩu học của khách hàng đó.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Thẻ khách hàng với dữ liệu tăng cường.":::
 
