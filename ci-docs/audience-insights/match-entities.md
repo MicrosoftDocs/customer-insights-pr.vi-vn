@@ -1,7 +1,7 @@
 ---
 title: So khớp các thực thể để hợp nhất dữ liệu
-description: So khớp các thực thể để kết hợp tập dữ liệu và tạo hồ sơ khách hàng hợp nhất.
-ms.date: 11/01/2021
+description: So khớp các thực thể để tạo hồ sơ khách hàng hợp nhất.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732660"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863837"
 ---
 # <a name="match-entities"></a>So khớp thực thể
 
@@ -79,7 +79,7 @@ Cảnh báo **Cần quy tắc** bên cạnh tên thực thể đề xuất rằn
 
 1. Cung cấp **Tên** cho quy tắc.
 
-1. [Thêm các điều kiện khác](#add-conditions-to-a-rule) hoặc chọn [Xong](#add-conditions-to-a-rule) để hoàn thiện quy tắc.
+1. [Thêm các điều kiện khác](#add-conditions-to-a-rule) hoặc chọn **Xong** để hoàn thiện quy tắc.
 
 1. Không bắt buộc, [thêm các quy tắc khác](#add-rules-to-a-match-pair).
 
@@ -224,17 +224,24 @@ Bạn có thể định cấu hình lại và tinh chỉnh hầu hết các thô
 
 ## <a name="specify-custom-match-conditions"></a>Chỉ định các điều kiện so khớp tùy chỉnh
 
-Bạn có thể chỉ định các điều kiện mà hồ sơ phải luôn khớp hoặc không bao giờ khớp. Các quy tắc này có thể được tải lên để ghi đè quy trình so khớp tiêu chuẩn. Ví dụ: nếu có John Doe I và John Doe II trong hồ sơ của chúng tôi, hệ thống có thể khớp chúng với tư cách là một người. Quy tắc so khớp tùy chỉnh cho phép bạn chỉ định rằng hồ sơ của họ đề cập đến những người khác nhau. 
+Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh mặc định. Có bốn tùy chọn có sẵn: 
+
+|Tùy chọn  |Description |Ví dụ:  |
+|---------|---------|---------|
+|Luôn khớp     | Xác định các giá trị luôn được so khớp.         |  Luôn phù hợp *Mike* và *MikeR*.       |
+|Không khớp     | Xác định các giá trị không bao giờ khớp.        | Không bao giờ phù hợp *John* và *Jonathan*.        |
+|Bỏ qua tùy chỉnh     | Xác định các giá trị mà hệ thống luôn phải bỏ qua trong giai đoạn đối sánh. |  Bỏ qua các giá trị *11111* và *không xác định* trong trận đấu.        |
+|Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Xem xét *Joe* ngang bằng với *Joseph*.        |
 
 1. Chuyển đến **Dữ liệu** > **Hợp nhất** > **So khớp** rồi chọn **So khớp tùy chỉnh** trong phần **Chi tiết bản ghi khớp**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Ảnh chụp màn hình của phần Chi tiết bản ghi khớp có kiểm soát để thêm các quy tắc được đánh dấu.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Ảnh chụp màn hình của phần Chi tiết bản ghi khớp có kiểm soát để thêm các quy tắc được đánh dấu.":::
 
-1. Nếu bạn chưa đặt quy tắc so khớp tùy chỉnh, bạn sẽ thấy ngăn **So khớp tùy chỉnh** với nhiều chi tiết hơn.
+1. Bên trong **Tập quán** ngăn, chuyển đến **Hồ sơ** chuyển hướng.
 
-1. Chọn **Điền vào mẫu** để có được một tệp mẫu có thể chỉ định các bản ghi mà từ đó các thực thể phải luôn khớp hoặc không bao giờ khớp. Bạn sẽ cần điền riêng vào các bản ghi "luôn khớp" và các bản ghi "không bao giờ khớp" trong hai tệp khác nhau.
+1. Chọn tùy chọn đối sánh tùy chỉnh từ **Loại tùy chỉnh** thả xuống và chọn **Tải xuống mẫu**. Bạn cần một mẫu riêng cho từng tùy chọn đối sánh.
 
-1. Mẫu chứa các trường để chỉ định thực thể và các giá trị khóa chính của thực thể sẽ được sử dụng trong so khớp tùy chỉnh. Ví dụ: nếu bạn muốn khóa chính *12345* từ thực thể *Bán hàng* để luôn so khớp với khóa chính *34567* từ thực thể *Liên hệ*, hãy điền vào mẫu:
+1. Tải xuống tệp mẫu. Mở nó và điền vào các chi tiết. Mẫu chứa các trường để chỉ định thực thể và các giá trị khóa chính của thực thể sẽ được sử dụng trong so khớp tùy chỉnh. Ví dụ: nếu bạn muốn khóa chính *12345* từ thực thể *Bán hàng* để luôn so khớp với khóa chính *34567* từ thực thể *Liên hệ*, hãy điền vào mẫu:
     - Thực thể 1: Bán hàng
     - Entity1Key: 12345
     - Thực thể 2: Người liên hệ
@@ -244,26 +251,32 @@ Bạn có thể chỉ định các điều kiện mà hồ sơ phải luôn kh�
    
    Nếu bạn muốn chỉ định quá trình so khớp tùy chỉnh để loại bỏ trùng lặp trên một thực thể, hãy cung cấp cùng một thực thể cho cả Entity1 và Entity2 rồi đặt các giá trị khóa chính khác nhau.
 
-1. Sau khi thêm tất cả các phần ghi đè bạn muốn áp dụng, hãy lưu tệp mẫu.
+1. Sau khi thêm tất cả các ghi đè, hãy lưu tệp mẫu.
 
-1. Đi tới **Dữ liệu** > **Nguồn dữ liệu** và nhập các tệp mẫu dưới dạng thực thể mới. Sau khi nhập, bạn có thể sử dụng chúng để chỉ định cấu hình So khớp.
+1. Đi tới **Dữ liệu** > **Nguồn dữ liệu** và nhập các tệp mẫu dưới dạng thực thể mới.
 
-1. Sau khi tải lên các tệp và thực thể có sẵn, chọn tùy chọn **So khớp tùy chỉnh** một lần nữa. Bạn sẽ thấy các tùy chọn để chỉ định các thực thể bạn muốn bao gồm. Chọn thực thể cần thiết từ menu thả xuống.
+1. Sau khi tải lên các tệp và thực thể có sẵn, chọn tùy chọn **So khớp tùy chỉnh** một lần nữa. Bạn sẽ thấy các tùy chọn để chỉ định các thực thể bạn muốn bao gồm. Chọn các thực thể bắt buộc từ menu thả xuống và chọn **Xong**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Ảnh chụp màn hình hộp thoại để chọn ghi đè cho tình huống so khớp tùy chỉnh.":::
 
-1. Chọn các thực thể bạn muốn sử dụng cho **Luôn so khớp** và **Không bao giờ khớp**, chọn **Xong**.
+1. Việc áp dụng đối sánh tùy chỉnh phụ thuộc vào tùy chọn đối sánh bạn muốn sử dụng. 
+
+   - Vì **Luôn phù hợp** hoặc **Không bao giờ phù hợp**, tiến hành bước tiếp theo.
+   - Vì **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh**, lựa chọn **Chỉnh sửa** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh** tùy chọn và chọn **Xong**.
 
 1. Chọn **Lưu** trên trang **So khớp** để áp dụng cấu hình so khớp tùy chỉnh.
 
 1. Chọn **Chạy** trên trang **So khớp** để bắt đầu quy trình so khớp. Các quy tắc so khớp được chỉ định khác bị ghi đè bởi cấu hình so khớp tùy chỉnh.
 
-> [!TIP]
-> Chuyển đến **Dữ liệu** > **Thực thể** và xem lại thực thể **ConflationMatchPair** để xác nhận rằng đã áp dụng giá trị ghi đè.
+### <a name="known-issues"></a>Các vấn đề đã biết
+
+- Tự kết hợp không hiển thị dữ liệu chuẩn hóa trong các thực thể chống trùng lặp. Tuy nhiên, nó áp dụng chuẩn hóa nội bộ trong quá trình khử trùng lặp. Nó được thiết kế cho tất cả các chuẩn hóa. 
+- Nếu cài đặt loại ngữ nghĩa bị xóa trong **Bản đồ** khi quy tắc đối sánh sử dụng ánh xạ Bí danh hoặc Bỏ qua tùy chỉnh, quá trình chuẩn hóa sẽ không được áp dụng. Nó chỉ xảy ra nếu bạn xóa loại ngữ nghĩa sau khi định cấu hình chuẩn hóa trong quy tắc đối sánh vì loại ngữ nghĩa sẽ không xác định.
+
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Sau khi hoàn thành quy trình so khớp cho ít nhất một cặp so khớp, bạn có thể giải quyết các mâu thuẫn có thể có trong dữ liệu của mình bằng cách tham khảo chủ đề [**Hợp nhất**](merge-entities.md).
+Sau khi hoàn tất quá trình đối sánh cho ít nhất một cặp đối sánh, hãy tiếp tục [**Hợp nhất**](merge-entities.md) bươc chân.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

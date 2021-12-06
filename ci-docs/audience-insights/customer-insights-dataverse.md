@@ -1,7 +1,7 @@
 ---
-title: Dữ liệu Customer Insights trong Microsoft Dataverse
-description: Sử dụng các thực thể Customer Insights dưới dạng bảng trong Microsoft Dataverse.
-ms.date: 10/14/2021
+title: Dữ liệu Thông tin chi tiết về khách hàng trong Microsoft Dataverse
+description: Sử dụng các thực thể Thông tin chi tiết về khách hàng dưới dạng bảng trong Microsoft Dataverse.
+ms.date: 11/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,35 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645244"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866960"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Thông tin chi tiết về khách hàng trong Microsoft Dataverse
 
-Customer Insights cung cấp tùy chọn để hiển thị các thực thể đầu ra trong [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Phần tích hợp này giúp chia sẻ dữ liệu dễ dàng và phát triển tùy chỉnh thông qua cách tiếp cận ít dùng mã/không dùng mã. Các thực thể đầu ra sẽ có sẵn dưới dạng bảng trong Dataverse. Các bảng này hỗ trợ các kịch bản như [quy trình làm việc tự động thông qua Power Automate](/power-automate/getting-started), [ứng dụng dựa trên mô hình](/powerapps/maker/model-driven-apps/) và [ứng dụng canvas](/powerapps/maker/canvas-apps/) thông qua Power Apps. Bạn có thể sử dụng dữ liệu cho bất kỳ ứng dụng nào khác dựa trên bảng Dataverse. Quy trình triển khai hiện tại chủ yếu hỗ trợ các lượt tra cứu trong đó dữ liệu từ các thực thể thông tin chuyên sâu về đối tượng có sẵn có thể được tìm nạp cho một ID khách hàng nhất định.
+Thông tin chi tiết về khách hàng cung cấp tùy chọn để cung cấp các thực thể đầu ra trong [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Phần tích hợp này giúp chia sẻ dữ liệu dễ dàng và phát triển tùy chỉnh thông qua cách tiếp cận ít dùng mã/không dùng mã. Các thực thể đầu ra sẽ có sẵn dưới dạng bảng trong Dataverse. Các bảng này cho phép các tình huống như [quy trình công việc tự động thông qua Power Automate](/power-automate/getting-started),[ứng dụng hướng mô hình](/powerapps/maker/model-driven-apps/) và [ứng dụng canvas](/powerapps/maker/canvas-apps/) thông qua Power Apps. Bạn có thể sử dụng dữ liệu cho bất kỳ ứng dụng nào khác dựa trên bảng Dataverse. Quy trình triển khai hiện tại chủ yếu hỗ trợ các lượt tra cứu trong đó dữ liệu từ các thực thể thông tin chuyên sâu về đối tượng có sẵn có thể được tìm nạp cho một ID khách hàng nhất định.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Đính kèm môi trường Dataverse vào Customer Insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Đính kèm môi trường Dataverse vào Thông tin chi tiết về khách hàng
 
-**Tổ chức đã có môi trường Dataverse**
+**Các tổ chức có môi trường Dataverse hiện có**
 
-Các tổ chức đã sử dụng Dataverse có thể [dùng một trong các môi trường Dataverse hiện có của họ](create-environment.md) khi quản trị viên thiết lập thông tin chuyên sâu về đối tượng. Bằng cách cung cấp URL cho môi trường Dataverse, môi trường đó sẽ đính kèm vào môi trường thông tin chuyên sâu về đối tượng mới của họ. Để đảm bảo hiệu suất tốt nhất có thể, môi trường Customer Insights và Dataverse phải được lưu trữ trong cùng một khu vực.
+Các tổ chức đã sử dụng Dataverse có thể [sử dụng một trong các môi trường Dataverse hiện có của họ](create-environment.md) khi quản trị viên thiết lập thông tin chi tiết về đối tượng. Bằng cách cung cấp URL cho môi trường Dataverse, URL sẽ gắn với môi trường thông tin chi tiết về đối tượng mới của họ. Để đảm bảo hiệu suất tốt nhất có thể, môi trường Customer Insights và Dataverse phải được lưu trữ trong cùng một khu vực.
 
 **Tổ chức mới**
 
-Nếu tạo một tổ chức mới khi thiết lập Customer Insights, bạn sẽ tự động nhận được môi trường Dataverse mới.
+Nếu bạn tạo một tổ chức mới khi thiết lập Thông tin chi tiết về khách hàng, bạn sẽ tự động nhận được môi trường Dataverse mới.
 
 > [!NOTE]
-> Nếu các tổ chức của bạn đã sử dụng Dataverse trong đối tượng thuê của họ, bạn cần lưu ý rằng [Việc tạo môi trường Dataverse sẽ do quản trị viên kiểm soát](/power-platform/admin/control-environment-creation.md). Ví dụ: nếu bạn đang thiết lập một môi trường thông tin chuyên sâu về đối tượng mới bằng tài khoản tổ chức của mình và quản trị viên đã tắt chức năng tạo môi trường dùng thử Dataverse cho tất cả mọi người ngoại trừ quản trị viên, thì bạn không thể tạo môi trường dùng thử mới.
+> Nếu tổ chức của bạn đã sử dụng Dataverse trong đối tượng thuê của họ, thì điều quan trọng cần nhớ là [Dataverse tạo môi trường do quản trị viên kiểm soát](/power-platform/admin/control-environment-creation.md) . Ví dụ: nếu bạn đang thiết lập môi trường thông tin chi tiết về đối tượng mới bằng tài khoản tổ chức của mình và quản trị viên đã tắt tính năng tạo môi trường dùng thử Dataverse cho mọi người ngoại trừ quản trị viên, bạn không thể tạo môi trường dùng thử mới.
 > 
-> Các môi trường dùng thử Dataverse được tạo trong Customer Insights có 3 GB dung lượng lưu trữ. Dung lượng lưu trữ này sẽ không được tính vào dung lượng tổng thể mà đối tượng thuê được hưởng. Các gói đăng ký trả phí được hưởng quyền lợi Dataverse là 15 GB cho cơ sở dữ liệu và 20 GB để lưu trữ tệp.
+> Môi trường dùng thử Dataverse được tạo trong Thông tin chi tiết về khách hàng có 3 GB dung lượng lưu trữ, sẽ không được tính vào dung lượng tổng thể mà đối tượng thuê. Đăng ký trả phí nhận được quyền Dataverse 15 GB cho cơ sở dữ liệu và 20 GB cho bộ nhớ tệp.
 
 ## <a name="output-entities"></a>Các thực thể đầu ra
 
-Một số thực thể đầu ra của thông tin chuyên sâu về đối tượng có sẵn dưới dạng bảng trong Dataverse. Các phần dưới đây mô tả sơ đồ dự kiến của các bảng này.
+Một số thực thể đầu ra từ thông tin chi tiết về đối tượng có sẵn dưới dạng bảng trong Dataverse. Các phần dưới đây mô tả sơ đồ dự kiến của các bảng này.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -45,6 +45,7 @@ Một số thực thể đầu ra của thông tin chuyên sâu về đối tư�
 - [CustomerMeasure](#customermeasure)
 - [Enrichment](#enrichment)
 - [Prediction](#prediction)
+- [Thành viên phân khúc](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -60,8 +61,8 @@ Bảng AlternateKey chứa khóa của các thực thể đã tham gia vào quá
 |DataSourceName    |Chuỗi         | Tên nguồn dữ liệu. Ví dụ: `datasource5`        |
 |EntityName        | Chuỗi        | Tên của thực thể trong thông tin chuyên sâu về đối tượng. Ví dụ: `contact1`        |
 |AlternateValue    |Chuỗi         |ID thay thế được ánh xạ tới ID khách hàng. Ví dụ: `cntid_1078`         |
-|KeyRing           | Văn bản nhiều dòng        | Giá trị JSON  </br> Ví dụ: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | Chuỗi        | ID của hồ sơ khách hàng hợp nhất.         |
+|KeyRing           | Văn bản nhiều dòng        | Giá trị JSON  </br> Mẫu: [{"dataSourceName": "datasource5",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"khóa": ["cntid_1078"]}]       |
+|CustomerId         | String        | ID của hồ sơ khách hàng hợp nhất.         |
 |AlternateKeyId     | GUID         |  GUID tất định của AlternateKey dựa trên msdynci_identifier       |
 |msdynci_identifier |   Chuỗi      |   `DataSourceName|EntityName|AlternateValue`  </br> Ví dụ: `testdatasource|contact1|cntid_1078`    |
 
@@ -120,4 +121,17 @@ Bảng này chứa kết quả đầu ra của lượt dự đoán mô hình.
 | Model                | Chuỗi      | Tên mô hình                                                |
 | Values               | Chuỗi JSON | Danh sách các thuộc tính do mô hình tạo ra |
 | msdynci_predictionid | GUID        | GUID tất định được tạo từ msdynci_identifier | 
-| msdynci_identifier   | Chuỗi      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Thành viên phân khúc
+
+Bảng này chứa thông tin thành viên phân khúc của hồ sơ khách hàng.
+
+| Column        | Loại | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID hồ sơ khách hàng        |
+| SegmentProvider      | String       | Ứng dụng xuất bản các phân đoạn. Mặc định: Thông tin chi tiết về đối tượng         |
+| SegmentMembershipType | String       | Loại khách hàng hồ sơ thành viên phân khúc này. Hỗ trợ nhiều loại như Khách hàng, Liên hệ hoặc Tài khoản. Mặc định: Khách hàng  |
+| Phân khúc       | Chuỗi JSON  | Danh sách các phân đoạn duy nhất mà hồ sơ khách hàng là thành viên của      |
+| msdynci_identifier  | String   | Định danh duy nhất của bản ghi thành viên phân khúc. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID xác định được tạo từ`msdynci_identifier`          |

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618317"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866914"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Xuất phân khúc sang LinkedIn Ads (xem trước)
 
@@ -22,12 +22,13 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang LinkedIn Ads để t�
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
--   Bạn có một [tài khoản LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) và thông tin xác thực tương ứng của quản trị viên.
+-   Bạn có một [tài khoản LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) và thông tin đăng nhập quản trị viên tương ứng.
 -   Bạn có [các phân khúc đã đặt cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
 -   Hồ sơ khách hàng trong các phân khúc đã xuất chứa trường có địa chỉ email.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Phân đoạn của bạn trong Thông tin chi tiết về khách hàng cần phải chứa ít nhất 300 hồ sơ duy nhất. 
 - Bạn có thể xuất tối đa 100.000 hồ sơ khách hàng mỗi lần sang LinkedIn Ads.
 - Bạn chỉ xuất được phân khúc sang LinkedIn Ads.
 - Có thể mất tới 10 phút để hoàn tất việc xuất tối đa 100 nghìn hồ sơ khách hàng sang LinkedIn Ads. 
@@ -42,13 +43,13 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang LinkedIn Ads để t�
 
 1. Chọn người có thể sử dụng kết nối này. Nếu bạn không làm gì cả, giá trị mặc định sẽ là quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Cung cấp [ID tài khoản LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270) của bạn.
+1. Cung cấp của bạn [LinkedIn Campaign Manager ID tài khoản](https://www.linkedin.com/help/lms/answer/a424270).
 
 1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ**.
 
 1. Chọn **Kết nối** để khởi tạo kết nối với Campaign Monitor.
 
-1. Chọn **Xác thực với LinkedIn** và cung cấp thông tin xác thực quản trị viên của bạn cho LinkedIn Campaign Manager.
+1. Lựa chọn **Xác thực với LinkedIn** và cung cấp thông tin đăng nhập quản trị viên của bạn cho LinkedIn Campaign Manager.
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
@@ -68,7 +69,7 @@ Bạn có thể định cấu hình nội dung xuất nếu có quyền truy c�
 
 1. Trong phần **Đối sánh dữ liệu**, để nhắm mục tiêu theo địa chỉ liên hệ, hãy chọn ít nhất một trường đại diện cho địa chỉ email của khách hàng, ID quảng cáo Apple, ID quảng cáo của Google, ID người dùng Google hoặc họ và tên. Nếu bạn chọn nhắm mục tiêu theo công ty, hãy chọn ít nhất một trường đại diện cho tên công ty, miền email, URL trang LinkedIn, biểu tượng Stock hoặc Trang web. Các trường bổ sung có thể được chọn để xác định rõ hơn bản xuất của bạn. 
 
-1. Chọn phân khúc mà bạn muốn xuất. Đối tượng phù hợp trong LinkedIn Campaign Manager sẽ được tạo tự động với tên của các phân khúc mà bạn đã chọn để xuất. Mỗi phân khúc sẽ cho ra một đối tượng phù hợp riêng biệt. 
+1. Chọn phân khúc mà bạn muốn xuất. Các đối tượng phù hợp trong LinkedIn Campaign Manager sẽ tự động được tạo với tên của các phân đoạn mà bạn đã chọn để xuất. Mỗi phân khúc sẽ cho ra một đối tượng phù hợp riêng biệt. 
 
 1. Chọn **Lưu**.
 
@@ -79,6 +80,6 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
-Khi bật Dynamics 365 Customer Insights để truyền dữ liệu đến LinkedIn Ads, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ của Dynamics 365 Customer Insights, bao gồm cả dữ liệu có thể nhạy cảm như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng LinkedIn Ads đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu đến Quảng cáo trên LinkedIn, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm cả dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng LinkedIn Ads đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất kỳ lúc nào để ngừng sử dụng chức năng này.
