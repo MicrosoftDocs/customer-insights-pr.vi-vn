@@ -1,5 +1,5 @@
 ---
-title: Tìm khách hàng tương tự với AI
+title: Tìm khách hàng tương tự bằng AI (Video)
 description: Tìm phân khúc khách hàng tương tự nhờ trí tuệ nhân tạo.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: MT
+ms.openlocfilehash: 7999c4964773c3b5c49537027a2ed67f0ad57ec5
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799707"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903917"
 ---
 # <a name="similar-customers-preview"></a>Khách hàng tương tự (xem trước)
 
@@ -23,7 +23,7 @@ Tính năng này cho phép bạn tìm thấy những khách hàng tương tự t
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Tìm khách hàng tương tự* sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó và do đó có khả năng được sử dụng làm phương pháp lập hồ sơ, theo định nghĩa về thuật ngữ đó trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn chịu trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights của bạn, bao gồm cả các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
+> *Tìm khách hàng tương tự* sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó và do đó có khả năng được sử dụng làm phương pháp lập hồ sơ, theo định nghĩa về thuật ngữ đó trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
 
 ## <a name="finding-similar-customers"></a>Tìm khách hàng tương tự
 

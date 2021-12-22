@@ -1,7 +1,7 @@
 ---
 title: Kết nối dữ liệu Common Data Model với tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033152"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900223"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 
@@ -30,7 +30,7 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
 
 - Azure Data Lake mà bạn muốn kết nối và nhập dữ liệu phải ở cùng khu vực Azure với môi trường Dynamics 365 Customer Insights. Không hỗ trợ kết nối với thư mục Common Data Model từ một kho dữ liệu trong một vùng Azure khác. Để biết vùng Azure của môi trường, hãy đi tới **Quản trị viên** > **Hệ thống** > **Giới thiệu** trong thông tin chuyên sâu về đối tượng.
 
-- Dữ liệu được lưu trữ trong các dịch vụ trực tuyến, có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights. Khi nhập hoặc kết nối với dữ liệu lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển sang hoặc lưu trữ bằng Dynamics 365 Customer Insights. [Tìm hiểu thêm trên Trung tâm tin cậy Microsoft.](https://www.microsoft.com/trust-center)
+- Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Kết nối với thư mục Common Data Model
 
@@ -38,12 +38,11 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Chọn **Kết nối với thư mục Common Data Model**, nhập **Tên** cho nguồn dữ liệu và chọn **Tiếp theo**. Hướng dẫn về tên: 
-   - Bắt đầu bằng một chữ cái.
-   - Chỉ sử dụng chữ cái và số. Không được phép nhập ký tự đặc biệt và khoảng trống.
-   - Sử dụng từ 3 đến 64 ký tự.
+1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**, nhập **Tên** cho nguồn dữ liệu, sau đó chọn **Kế tiếp**.
 
-1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Nhập thông tin **Vùng chứa** và chọn **Tiếp theo**.
+   - Nếu được nhắc, hãy chọn một trong các bộ dữ liệu mẫu liên quan đến ngành của bạn, sau đó chọn **Kế tiếp**. 
+
+1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Nhập **Địa chỉ máy chủ**, lựa chọn **đăng nhập**, sau đó chọn **Kế tiếp**.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại để nhập chi tiết kết nối mới cho Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
    > [!NOTE]
    > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách.
 
-1. Bạn sẽ nhận được danh sách các thực thể có sẵn trong tệp model.json hoặc manifest.json đã chọn. Bạn có thể xem lại và chọn từ danh sách các thực thể có sẵn rồi chọn **Lưu**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
+1. Bạn sẽ thấy danh sách các thực thể có sẵn trong tệp model.json hoặc tệp manifest.json đã chọn. Xem lại và chọn từ danh sách các thực thể có sẵn, sau đó chọn **Cứu**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại hiển thị danh sách thực thể từ tệp model.json.](media/review-entities.png)
 
-8. Cho biết những thực thể dữ liệu nào bạn muốn bật tính năng phân tích chất lượng dữ liệu và chọn **Lưu**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
+8. Cho biết thực thể dữ liệu nào bạn muốn bật cấu hình dữ liệu, sau đó chọn **Cứu**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại hiển thị phân tích chất lượng dữ liệu.](media/dataprofiling-entities.png)
 

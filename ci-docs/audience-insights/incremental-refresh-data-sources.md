@@ -1,7 +1,7 @@
 ---
 title: Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
 description: Làm mới dữ liệu mới và cập nhật cho các nguồn dữ liệu lớn dựa trên Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377860"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900311"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
+
+Bài viết này thảo luận về cách định cấu hình làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query.
 
 Làm mới gia tăng cho các nguồn dữ liệu cung cấp các lợi ích sau:
 
@@ -30,9 +32,9 @@ Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các n
 
 1. [Tạo nguồn dữ liệu mới dựa trên Power Query](connect-power-query.md).
 
-1. Cung cấp tên cho nguồn dữ liệu.
+1. Cung cấp một **Tên** cho nguồn dữ liệu.
 
-1. Chọn nguồn dữ liệu hỗ trợ làm mới tăng dần, chẳng hạn như cơ sở dữ liệu Azure SQL.
+1. Chọn nguồn dữ liệu hỗ trợ làm mới gia tăng, chẳng hạn như [Cơ sở dữ liệu Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Chọn các thực thể hoặc bảng để nhập.
 

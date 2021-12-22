@@ -1,7 +1,7 @@
 ---
 title: Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính
 description: Sử dụng tên dịch vụ chính Azure để kết nối với kho dữ liệu của riêng bạn.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645198"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900315"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 
-Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các quyền hạn chế. Thay vì để các ứng dụng đăng nhập với tư cách là người dùng có đầy đủ đặc quyền, Azure cung cấp các dịch vụ chính. Đọc tiếp để tìm hiểu cách kết nối Dynamics 365 Customer Insights với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure thay vì khóa tài khoản lưu trữ. 
+Bài viết này thảo luận về cách kết nối Dynamics 365 Customer Insights với một Azure Data Lake Storage tài khoản bằng cách sử dụng chính dịch vụ Azure thay vì các khóa tài khoản lưu trữ. 
 
-Bạn có thể sử dụng tên dịch vụ chính để [thêm hoặc chỉnh sửa thư mục Common Data Model một cách an toàn dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc [tạo hoặc cập nhật môi trường](create-environment.md).
+Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các quyền hạn chế. Thay vì để các ứng dụng đăng nhập với tư cách là người dùng có đầy đủ đặc quyền, Azure cung cấp các dịch vụ chính. Bạn có thể sử dụng các nguyên tắc dịch vụ để bảo mật [thêm hoặc chỉnh sửa thư mục Mô hình Dữ liệu Chung dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc là [tạo hoặc cập nhật môi trường](create-environment.md).
 
 > [!IMPORTANT]
 > - Tài khoản Data Lake Storage sẽ sử dụng dịch vụ chính phải đã bật tính năng [không gian tên theo cấp bậc](/azure/storage/blobs/data-lake-storage-namespace).
-> - Bạn cần quyền quản trị cho đăng ký Azure của mình để tạo dịch vụ chính.
+> - Bạn cần quyền quản trị viên cho đăng ký Azure của mình để tạo dịch vụ chính.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Tạo một tên dịch vụ chính Azure cho Customer Insights
 
-Trước khi tạo một tên dịch vụ chính mới để có thông tin chi tiết về đối tượng hoặc thông tin chi tiết về mức độ tương tác, hãy kiểm tra xem nó đã tồn tại trong tổ chức của bạn chưa.
+Trước khi tạo dịch vụ chính mới cho Thông tin chi tiết về khách hàng, hãy kiểm tra xem dịch vụ đó đã tồn tại trong tổ chức của bạn chưa.
 
 ### <a name="look-for-an-existing-service-principal"></a>Tìm một dịch vụ chính hiện có
 

@@ -1,7 +1,7 @@
 ---
-title: Nhập dữ liệu thông qua trình kết nối Power Query
+title: Nhập dữ liệu thông qua trình kết nối Power Query (Video)
 description: Trình kết nối cho nguồn dữ liệu dựa trên Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732244"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903866"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với nguồn dữ liệu Power Query
 
-Power Query cung cấp một loạt các trình kết nối để nhập dữ liệu. Hầu hết các trình kết nối này đều được hỗ trợ bởi Dynamics 365 Customer Insights. Việc thêm nguồn dữ liệu dựa trên trình kết nối Power Query thường tuân theo các bước được nêu trong phần tiếp theo. Tuy nhiên, tùy thuộc vào trình kết nối bạn sử dụng, bạn sẽ cần dùng thông tin khác nhau. Để biết thêm thông tin, hãy xem tài liệu về các trình kết nối riêng lẻ trong [tham khảo trình kết nối Power Query](/power-query/connectors/).
+Power Query cung cấp một loạt các trình kết nối để nhập dữ liệu. Hầu hết các trình kết nối này được hỗ trợ bởi Dynamics 365 Customer Insights. 
+
+Việc thêm nguồn dữ liệu dựa trên trình kết nối Power Query thường tuân theo các bước được nêu trong phần này. Tuy nhiên, tùy thuộc vào trình kết nối bạn sử dụng, bạn sẽ cần dùng thông tin khác nhau. Để tìm hiểu thêm, hãy xem tài liệu về các trình kết nối riêng lẻ trong [Tham chiếu trình kết nối Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Chọn phương thức **Nhập dữ liệu** và chọn **Tiếp theo**.
+1. Lựa chọn **Microsoft Power Query**, sau đó chọn **Kế tiếp**.
 
-1. Cung cấp một **Tên** cho nguồn dữ liệu và chọn **Tiếp theo** để tạo nguồn dữ liệu. Hướng dẫn về tên: 
-   - Bắt đầu bằng một chữ cái.
-   - Chỉ sử dụng chữ cái và số. Không được phép nhập ký tự đặc biệt và khoảng trống.
-   - Sử dụng từ 3 đến 64 ký tự.
+1. Cung cấp một **Tên** cho nguồn dữ liệu và chọn **Tiếp theo** để tạo nguồn dữ liệu.
 
-1. Chọn một trong các [trình kết nối có sẵn](#available-power-query-data-sources). Đối với ví dụ này, chúng tôi chọn trình kết nối **Văn bản/CSV**.
+1. Chọn một trong các [trình kết nối có sẵn](#available-power-query-data-sources). Trong ví dụ này, chúng tôi chọn **Văn bản / CSV** tư nối.
 
 1. Nhập các chi tiết được yêu cầu trong **Cài đặt kết nối** cho trình kết nối đã chọn và chọn **Tiếp theo** để xem bản xem trước của dữ liệu.
 
@@ -50,7 +49,7 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
 
 1. Bạn có thể thêm các thực thể bổ sung vào nguồn dữ liệu của mình bằng cách chọn **Lấy dữ liệu** trong hộp thoại **Chỉnh sửa truy vấn**.
 
-   Những chuyển đổi này rất được khuyến khích:
+   Chúng tôi khuyên bạn nên sử dụng các biến đổi sau:
 
    - Nếu bạn đang nhập dữ liệu từ tệp CSV, hàng đầu tiên thường chứa các tiêu đề. Đi đến **Bảng biến đổi** và chọn **Sử dụng tiêu đề làm hàng đầu tiên**.
    - Đảm bảo loại dữ liệu được đặt phù hợp.
@@ -61,7 +60,7 @@ Power Query cung cấp một loạt các trình kết nối để nhập dữ li
 
 ## <a name="available-power-query-data-sources"></a>Nguồn dữ liệu Power Query có sẵn
 
-Xem [tham khảo trình kết nối Power Query](/power-query/connectors/) để có danh sách cập nhật các trình kết nối mà bạn có thể chọn để nhập dữ liệu vào Customer Insights. 
+Xem [Tham chiếu trình kết nối Power Query](/power-query/connectors/) để biết danh sách các trình kết nối mà bạn có thể sử dụng để nhập dữ liệu vào Thông tin chi tiết về khách hàng. 
 
 Các trình kết nối có dấu kiểm trong cột **Customer Insights (Luồng dữ liệu)** có sẵn để tạo nguồn dữ liệu mới dựa trên Power Query. Xem lại tài liệu về một trình kết nối cụ thể để tìm hiểu thêm về các điều kiện tiên quyết, giới hạn và các chi tiết khác của nó.
 
@@ -70,7 +69,7 @@ Các trình kết nối có dấu kiểm trong cột **Customer Insights (Luồn
 > [!NOTE]
 > Có thể không thực hiện được thay đổi đối với các nguồn dữ liệu hiện đang được sử dụng trong một trong các quy trình của ứng dụng (*phân khúc*, *so khớp* hoặc *hợp nhất*). 
 >
-> Sử dụng trang **Cài đặt**, bạn có thể theo dõi tiến trình của từng quá trình hoạt động. Khi một quá trình hoàn tất, bạn có thể quay lại trang **Nguồn dữ liệu** và thực hiện các thay đổi của bạn.
+> Bên trong **Cài đặt**, bạn có thể theo dõi tiến trình của từng quy trình đang hoạt động. Khi một quá trình hoàn tất, bạn có thể quay lại trang **Nguồn dữ liệu** và thực hiện các thay đổi của bạn.
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Nguồn dữ liệu**.
 

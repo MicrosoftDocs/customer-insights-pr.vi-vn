@@ -1,7 +1,7 @@
 ---
 title: Kích hoạt các quy tắc về sự đồng ý cho các phân đoạn
 description: Làm theo các bước sau để liên kết dữ liệu về sự đồng ý và kích hoạt kiểm tra sự đồng ý trong thông tin chi tiết về đối tượng. Quản trị viên cũng có thể tắt kiểm tra sự đồng ý.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790801"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884100"
 ---
 # <a name="activate-consent-rules"></a>Kích hoạt các quy tắc về sự đồng ý
 
@@ -49,3 +49,6 @@ Với dữ liệu về sự đồng ý được nhập vào Trung tâm đồng �
 1. Chọn **Đồng ý (xem trước)** chuyển hướng.
 
 1. Bên trong **Bật kiểm tra sự đồng ý**, đặt nút chuyển đổi thành **Tắt**.
+
+> [!TIP]
+> Để ngừng sử dụng khả năng quản lý sự đồng ý, hãy xem [Cài đặt hệ thống trong Trung tâm đồng ý (xem trước)](../consent-management/system-settings.md).

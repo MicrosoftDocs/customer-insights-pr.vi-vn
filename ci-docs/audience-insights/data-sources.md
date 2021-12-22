@@ -1,7 +1,7 @@
 ---
 title: Sử dụng nguồn dữ liệu để nhập dữ liệu
 description: Tìm hiểu cách nhập dữ liệu từ nhiều nguồn khác nhau.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732193"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900405"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -25,21 +25,24 @@ Khả năng thông tin chi tiết về đối tượng trong Dynamics 365 Custom
 
 ## <a name="add-a-data-source"></a>Thêm nguồn dữ liệu
 
-Tham khảo các bài viết chi tiết về cách thêm nguồn dữ liệu, tùy thuộc vào tùy chọn bạn chọn.
+Tham khảo các bài viết chi tiết để biết cách thêm nguồn dữ liệu, tùy thuộc vào tùy chọn bạn chọn.
 
-Bạn có thể thêm nguồn dữ liệu theo ba cách chính:
+Bạn có thể thêm các nguồn dữ liệu sau:
 
-- [Thông qua hàng chục trình kết nối Power Query](connect-power-query.md)
-- [Từ thư mục Common Data Model](connect-common-data-model.md)
-- [Từ hồ Microsoft Dataverse của riêng bạn](connect-dataverse-managed-lake.md)
+- [Power Query trình kết nối](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Microsoft Dataverse Hồ](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Nếu bạn đang sử dụng phiên bản dùng thử, phần phương pháp nhập bao gồm **Thư viện dữ liệu Thông tin chi tiết về khách hàng** lựa chọn. Chọn tùy chọn này để chọn một tập dữ liệu mẫu có sẵn cho các ngành khác nhau. Để biết thêm thông tin, hãy xem [Dynamics 365 Customer Insights thử nghiệm](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Thêm dữ liệu từ nguồn dữ liệu tại chỗ
 
-Việc thay đổi dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chi tiết về đối tượng được hỗ trợ dựa trên quy trình dữ liệu Microsoft Power Platform. Quy trình dữ liệu có thể được bật trong Thông tin chi tiết về khách hàng bằng cách [cung cấp URL môi trường Microsoft Dataverse](create-environment.md) khi thiết lập môi trường.
+Việc nhập dữ liệu từ nguồn dữ liệu tại chỗ trong thông tin chuyên sâu về đối tượng được hỗ trợ dựa trên luồng dữ liệu Microsoft Power Platform. Bạn có thể bật Luồng dữ liệu trong Thông tin chi tiết về khách hàng bằng cách [cung cấp Microsoft Dataverse URL môi trường](create-environment.md) khi thiết lập môi trường.
 
-Nguồn dữ liệu được tạo sau khi liên kết môi trường Dataverse với Thông tin chi tiết về khách hàng sẽ sử dụng [Power Platform luồng dữ liệu](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Xóa và tạo lại các nguồn dữ liệu tồn tại trước khi môi trường Dataverse được liên kết với [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
+Nguồn dữ liệu được tạo sau khi liên kết Dataverse môi trường sử dụng Thông tin chi tiết về khách hàng [Power Platform luồng dữ liệu](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Bạn có thể xóa và tạo lại các nguồn dữ liệu đã tồn tại trước Dataverse môi trường được liên kết [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
 
-Cổng dữ liệu từ môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Thông tin chi tiết về khách hàng. Trang nguồn dữ liệu hiển thị các liên kết để chuyển đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
+Cổng dữ liệu từ một môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Customer Insights. Trang nguồn dữ liệu hiển thị các liên kết đi đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
 
 ## <a name="review-ingested-data"></a>Xem lại dữ liệu đã nhập
 

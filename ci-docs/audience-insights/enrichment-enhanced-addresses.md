@@ -1,7 +1,7 @@
 ---
-title: Tăng cường nâng cao địa chỉ
+title: Làm giàu nâng cao địa chỉ (Video)
 description: Tăng cường và chuẩn hóa thông tin địa chỉ của hồ sơ khách hàng bằng các mô hình của Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643451"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927537"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Tăng cường hồ sơ khách hàng với các địa chỉ nâng cao
 
@@ -101,6 +101,16 @@ Chúng tôi hiện hỗ trợ tăng cường địa chỉ ở các quốc gia ho
 Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ liệu hồ sơ khách hàng mới được bổ sung trong **Dữ liệu tăng cường của tôi**. Ngoài ra, bạn sẽ tìm thấy thời gian của lần cập nhật gần nhất và số lượng hồ sơ được tăng cường.
 
 Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
+
+### <a name="overview-card"></a>Thẻ tổng quan
+
+Thẻ tổng quan hiển thị chi tiết về phạm vi bổ sung. 
+
+* **Khách hàng đã xử lý và thay đổi** : Số lượng hồ sơ khách hàng đã được bổ sung thành công.
+
+* **Khách hàng đã xử lý và không thay đổi** : Số lượng hồ sơ khách hàng đã được nhận dạng nhưng không thay đổi. Điều này thường xảy ra khi dữ liệu đầu vào hợp lệ và không thể cải thiện bằng cách bổ sung.
+
+* **Khách hàng không xử lý và không thay đổi** : Số lượng cấu hình không được nhận dạng. Thông thường đối với dữ liệu đầu vào không hợp lệ hoặc không được bổ sung hỗ trợ.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

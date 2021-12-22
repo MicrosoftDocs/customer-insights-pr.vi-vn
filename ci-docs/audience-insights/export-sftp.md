@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Customer Insights sang máy chủ SFTP
+title: Xuất dữ liệu Thông tin chi tiết về khách hàng sang máy chủ SFTP (Video)
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang vị trí SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673942"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927629"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Xuất phân khúc và dữ liệu khác sang SFTP (xem trước)
 
@@ -26,8 +26,9 @@ Sử dụng dữ liệu khách hàng của bạn trong các ứng dụng của b
 
 - Tính khả dụng của máy chủ SFTP và thông tin đăng nhập tương ứng.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Các điểm đến SFTP sau tường lửa hiện không được hỗ trợ. 
 - Thời gian chạy của một lần xuất phụ thuộc vào hiệu suất hệ thống của bạn. Chúng tôi khuyên bạn nên sử dụng máy chủ có tối thiểu hai lõi CPU và bộ nhớ 1 Gb. 
 - Việc xuất các thực thể với tối đa 100 triệu hồ sơ khách hàng có thể mất 90 phút khi sử dụng cấu hình tối thiểu được khuyến nghị gồm CPU 2 lõi và 1 Gb bộ nhớ. 
 

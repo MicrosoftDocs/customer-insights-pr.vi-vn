@@ -1,7 +1,7 @@
 ---
 title: Mô hình máy học tùy chỉnh | Microsoft Docs
 description: Làm việc với các mô hình tùy chỉnh của Azure Machine Learning trong Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032968"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881810"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
+
+> [!NOTE]
+> Hỗ trợ cho máy học Studio (cổ điển) sẽ kết thúc vào ngày 31 tháng 8 năm 2024. Chúng tôi khuyên bạn nên chuyển sang [Azure máy học](/azure/machine-learning/overview-what-is-azure-machine-learning) vào ngày đó.
+>
+> Bắt đầu từ ngày 1 tháng 12 năm 2021, bạn sẽ không thể tạo tài nguyên máy học Studio (cổ điển) mới. Cho đến hết ngày 31 tháng 8 năm 2024, bạn có thể tiếp tục sử dụng các tài nguyên máy học Studio (cổ điển) hiện có. Để biết thêm thông tin, hãy xem [Di chuyển sang Azure máy học](/azure/machine-learning/migrate-overview).
+
 
 **Thông tin** > **Mô hình tùy chỉnh** cho phép bạn quản lý quy trình công việc dựa trên mô hình Azure Machine Learning. Quy trình làm việc giúp bạn chọn dữ liệu bạn muốn tạo thông tin chi tiết và ánh xạ kết quả với dữ liệu khách hàng hợp nhất của bạn. Để biết thêm thông tin về cách xây dựng mô hình ML tùy chỉnh, hãy xem [Sử dụng các mô hình dựa trên Azure Machine Learning](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Hiện tại, tính năng này hỗ trợ các dịch vụ web được xuất bản thông qua [Machine Learning Studio (cổ điển)](https://studio.azureml.net) và [quy trình hàng loạt Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
+- Tính năng này hỗ trợ các dịch vụ web được xuất bản thông qua [Đường ống dẫn hàng loạt Azure máy học](/azure/machine-learning/concept-ml-pipelines).
 
 - Bạn cần có tài khoản lưu trữ Azure Data Lake Gen2 được liên kết với phiên bản Azure Studio của bạn để sử dụng tính năng này. Để biết thêm thông tin, hãy xem [Tạo tài khoản Azure Data Lake Storage thế hệ 2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 1. Nếu đăng ký Azure Machine Learning khác với đối tượng thuê trong Customer Insights, hãy chọn **Đăng nhập** bằng thông tin đăng nhập của bạn cho tổ chức đã chọn.
 
-1. Chọn **Không gian làm việc** được liên kết với dịch vụ web của bạn. Có hai phần được liệt kê, một dành cho Azure Machine Learning v1 (Machine Learning Studio (cổ điển)) và Azure Machine Learning v2 (Azure Machine Learning). Nếu bạn không chắc không gian làm việc nào phù hợp với dịch vụ web Machine Learning Studio (cổ điển) của mình, hãy chọn **Bất kì**.
+1. Chọn **Không gian làm việc** được liên kết với dịch vụ web của bạn. 
 
-1. Chọn dịch vụ web Machine Learning Studio (cổ điển) hoặc quy trình Azure Machine Learning trong menu thả xuống **Dịch vụ web chứa mô hình của bạn**. Sau đó, chọn **Tiếp**.
-   - Tìm hiểu thêm về [phát hành một dịch vụ web trong Machine Learning Studio (cổ điển)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Tìm hiểu thêm về [phát hành một quy trình trong Azure Machine Learning bằng cách sử dụng trình thiết kế](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) hoặc [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Quy trình của bạn phải được thiết kế theo [điểm cuối quy trình](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Chọn đường dẫn Azure máy học trong **Dịch vụ web chứa mô hình của bạn** trình đơn thả xuống. Sau đó, chọn **Tiếp**.    
+   Tìm hiểu thêm về [phát hành một quy trình trong Azure Machine Learning bằng cách sử dụng trình thiết kế](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) hoặc [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Quy trình của bạn phải được thiết kế theo [điểm cuối quy trình](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Đối với mỗi **Đầu vào dịch vụ web**, chọn **Thực thể** phù hợp từ thông tin chi tiết về đối tượng và chọn **Tiếp theo**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
    > ![Đặt cấu hình cho quy trình.](media/intelligence-screen2-updated.png "Đặt cấu hình cho quy trình")
 
 1. Trong bước **Tham số đầu ra mô hình**, đặt các thuộc tính sau:
-   - Machine Learning Studio (cổ điển)
-      1. Nhập **Tên thực thể** đầu ra mà bạn muốn kết quả đầu ra của dịch vụ web chuyển vào.
-   - Máy học của Azure
       1. Nhập **Tên thực thể** đầu ra mà bạn muốn kết quả đầu ra của quy trình làm việc chuyển vào.
       1. Chọn **Tên tham số đầu ra kho dữ liệu** của quy trình hàng loạt của bạn từ menu thả xuống.
       1. Chọn **Tên tham số đường dẫn đầu ra** của quy trình hàng loạt của bạn từ menu thả xuống.
@@ -93,9 +95,6 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 1. Đối với mỗi **Đầu vào dịch vụ web**, bạn có thể cập nhật **Thực thể** phù hợp từ thông tin chi tiết về đối tượng. Sau đó, chọn **Tiếp**.
 
 1. Trong bước **Tham số đầu ra mô hình**, đặt các thuộc tính sau:
-   - Machine Learning Studio (cổ điển)
-      1. Nhập **Tên thực thể** đầu ra mà bạn muốn kết quả đầu ra của dịch vụ web chuyển vào.
-   - Máy học của Azure
       1. Nhập **Tên thực thể** đầu ra mà bạn muốn kết quả đầu ra của quy trình làm việc chuyển vào.
       1. Chọn **Tên tham số kho dữ liệu đầu ra** cho quy trình thử nghiệm của bạn.
       1. Chọn **Tên tham số đường dẫn đầu ra** cho quy trình thử nghiệm của bạn.

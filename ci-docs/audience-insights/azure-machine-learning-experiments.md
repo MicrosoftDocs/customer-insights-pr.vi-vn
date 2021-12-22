@@ -1,7 +1,7 @@
 ---
 title: Thử nghiệm Azure Machine Learning
 description: Sử dụng các mô hình dựa trên Azure Machine Learning trong Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033198"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881764"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Sử dụng các mô hình dựa trên Azure Machine Learning
 
-Dữ liệu hợp nhất trong Dynamics 365 Customer Insights là nguồn để xây dựng các mô hình máy học có thể tạo thêm thông tin chi tiết về doanh nghiệp. Customer Insights tích hợp với Machine Learning Studio (cổ điển) và Azure Machine Learning để sử dụng các mô hình tùy chỉnh của riêng bạn. Tham khảo [Thử nghiệm Machine Learning Studio (cổ điển)](machine-learning-studio-experiments.md) để biết ví dụ về các thử nghiệm được xây dựng trên Machine Learning Studio (cổ điển). 
+Dữ liệu hợp nhất trong Dynamics 365 Customer Insights là nguồn để xây dựng các mô hình máy học có thể tạo thêm thông tin chi tiết về doanh nghiệp. Customer Insights tích hợp với Máy học của Azure để sử dụng các mô hình tùy chỉnh của riêng bạn.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -35,7 +35,7 @@ Dữ liệu hợp nhất trong Dynamics 365 Customer Insights là nguồn để 
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Làm việc với trình thiết kế Azure Machine Learning
 
-Trình thiết kế Azure Machine Learning cung cấp bảng tùy biến trực quan, nơi bạn có thể kéo và thả tập dữ liệu và mô-đun, tương tự như Machine Learning Studio (cổ điển). Một đường dẫn hàng loạt được tạo từ trình thiết kế có thể được tích hợp vào Customer Insights nếu chúng được định cấu hình phù hợp. 
+Azure máy học designer cung cấp một canvas trực quan, nơi bạn có thể kéo và thả tập dữ liệu và mô-đun. Một đường dẫn hàng loạt được tạo từ trình thiết kế có thể được tích hợp vào Customer Insights nếu chúng được định cấu hình phù hợp. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Làm việc với SDK Azure Machine Learning
 

@@ -1,7 +1,7 @@
 ---
 title: Kết nối với bảng trong Microsoft Dataverse
 description: Nhập dữ liệu từ một kho dữ liệu Microsoft Dataverse được quản lý.
-ms.date: 07/23/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,22 +9,25 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: ffeccffd0e353cb5490b537552d585c184ad672f9c806e673bd04743214ad068
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033106"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900177"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Kết nối với dữ liệu trong một kho dữ liệu được quản lý Microsoft Dataverse
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Bài viết này cung cấp thông tin về cách người dùng Dataverse có thể nhanh chóng kết nối với các thực thể phân tích của họ trong một kho được Dataverse quản lý. Bạn phải là quản trị viên trên tổ chức Dataverse để tiến hành và xem danh sách các thực thể có trong kho dữ liệu được quản lý.
+Bài viết này cung cấp thông tin về cách Dataverse người dùng có thể nhanh chóng kết nối với các thực thể phân tích trong một Microsoft Dataverse hồ quản lý. 
+
+> [!NOTE]
+> Bạn phải là quản trị viên trên Dataverse tổ chức để tiến hành và xem danh sách các thực thể có trong hồ được quản lý.
 
 ## <a name="important-considerations"></a>Những điều quan trọng cần cân nhắc
 
-Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lake Storage có thể được lưu trữ ở địa điểm khác với nơi xử lý hoặc lưu trữ dữ liệu trong Dynamics 365 Customer Insights. Khi nhập hoặc kết nối với dữ liệu lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển sang hoặc lưu trữ bằng Dynamics 365 Customer Insights. [Tìm hiểu thêm trên Trung tâm tin cậy Microsoft.](https://www.microsoft.com/trust-center)
+Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lake Storage có thể được lưu trữ ở địa điểm khác với nơi xử lý hoặc lưu trữ dữ liệu trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Kết nối với kho được quản lý Dataverse
 
@@ -32,12 +35,9 @@ Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lak
 
 2. Chọn **Thêm nguồn dữ liệu**.
 
-3. Chọn **Kết nối với kho được Microsoft Dataverse quản lý** và chọn **Tiếp theo**.
+3. Lựa chọn **Microsoft Dataverse** và chọn **Kế tiếp**.
 
-4. Đặt **Tên** cho nguồn dữ liệu rồi chọn **Tiếp**. Hướng dẫn về tên: 
-   - Bắt đầu bằng một chữ cái.
-   - Chỉ sử dụng chữ cái và số. Không được phép nhập ký tự đặc biệt và khoảng trống.
-   - Sử dụng từ 3 đến 64 ký tự.
+4. Đặt **Tên** cho nguồn dữ liệu rồi chọn **Tiếp**. 
 
 5. Cung cấp **Địa chỉ máy chủ** cho tổ chức Dataverse và chọn **Đăng nhập**.
 

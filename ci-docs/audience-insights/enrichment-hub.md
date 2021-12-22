@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770150"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884242"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -46,6 +46,7 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tă
 - [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp 
 - [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
+- [Dữ liệu tương tác tài khoản](enrichment-office.md) do Microsoft cung cấp
 
 ---
 
@@ -77,7 +78,7 @@ Thực thể cần tăng cường sẽ được chỉ định trong quá trình 
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
 
-Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái bổ sung được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
+Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
 
 Để xem tình trạng của quy trình tăng cường
 

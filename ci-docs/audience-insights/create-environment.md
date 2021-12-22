@@ -1,7 +1,7 @@
 ---
 title: Tạo môi trường trong Customer Insights
 description: Các bước để tạo môi trường với đăng ký được cấp phép cho Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673417"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892364"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Tạo môi trường trong thông tin chuyên sâu về đối tượng
 
@@ -77,6 +77,9 @@ Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các 
 Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights với môi trường Dataverse.
 
 Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu Dataverse được quản lý.
+
+> [!IMPORTANT]
+> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để có thể chia sẻ dữ liệu.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
 
