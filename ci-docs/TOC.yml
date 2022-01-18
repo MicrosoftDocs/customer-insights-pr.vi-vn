@@ -44,7 +44,7 @@
       items:
         - name: Tổng quan về nguồn dữ liệu
           href: audience-insights/data-sources.md
-        - name: Thêm nguồn dữ liệu qua trình kết nối Power Query
+        - name: Thêm nguồn dữ liệu qua Power Query đầu nối
           href: audience-insights/connect-power-query.md
         - name: Thêm thư mục Common Data Model làm nguồn dữ liệu
           href: audience-insights/connect-common-data-model.md
@@ -80,7 +80,7 @@
       items:
         - name: Tăng cường thông tin hồ sơ khách hàng
           href: audience-insights/enrichment-hub.md
-        - name: Mối quan hệ giữa thương hiệu và sở thích
+        - name: Thương hiệu và mối quan tâm
           href: audience-insights/enrichment-microsoft.md
         - name: Địa chỉ nâng cao
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Dự đoán khách hàng rời khỏi giao dịch
               href: audience-insights/predict-transactional-churn.md
+            - name: Phân tích tình cảm trong phản hồi của khách hàng
+              href: audience-insights/sentiment-analysis.md
             - name: Sử dụng các mô hình tùy chỉnh của Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Hoàn thành dữ liệu chưa hoàn chỉnh

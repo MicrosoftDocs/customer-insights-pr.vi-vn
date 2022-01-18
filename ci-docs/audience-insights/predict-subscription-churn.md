@@ -1,5 +1,5 @@
 ---
-title: Đăng ký churn dự đoán (Video)
+title: Đăng ký churn dự đoán (có video)
 description: Dự đoán xem khách hàng có nguy cơ không sử dụng sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa không.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904051"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967727"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Dự đoán khả năng rời bỏ đăng ký (xem trước)
 
@@ -77,7 +77,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
 1. Nhập số **Ngày kể từ khi đăng ký kết thúc** mà doanh nghiệp của bạn xem xét một khách hàng là đang ở trong trạng thái rời đi. Giai đoạn này thường giống như các hoạt động kinh doanh như chào hàng hoặc các nỗ lực tiếp thị khác nhằm cố ngăn chặn mất khách hàng.
 1. Nhập số lượng **Ngày xem xét trong tương lai để dự đoán sự rời đi** để đặt khoảng thời gian dự đoán khả năng rời bỏ. Ví dụ: để dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro khách hàng ngừng sử dụng gói đăng ký trong khoảng thời gian dài hơn hoặc ngắn hơn có thể khiến việc xử lý các yếu tố trong hồ sơ rủi ro khách hàng ngừng sử dụng gói đăng ký của bạn gặp nhiều khó khăn hơn, tùy thuộc vào yêu cầu kinh doanh cụ thể của bạn. Chọn **Tiếp** tiếp tục
    >[!TIP]
-   > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
+   > Bạn có thể chọn **Lưu bản nháp** bất kỳ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
 
 ### <a name="add-required-data"></a>Thêm dữ liệu bắt buộc
 

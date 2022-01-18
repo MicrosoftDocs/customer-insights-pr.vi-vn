@@ -1,21 +1,20 @@
 ---
 title: Tổng quan về các kịch bản dự đoán được hỗ trợ
 description: Các kịch bản và tùy chọn dự đoán được ứng dụng Dynamics 365 Customer Insights hỗ trợ.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673988"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978039"
 ---
 # <a name="predictions-overview"></a>Tổng quan về chức năng dự đoán
 
@@ -31,6 +30,7 @@ Sử dụng các mô hình xác định sẵn, thường được gọi là mô 
 - [Đề xuất sản phẩm](predict-product-recommendation.md): Gợi ý bộ đề xuất sản phẩm mang tính dự đoán dựa trên hành vi mua hàng và những khách hàng có kiểu mua hàng tương tự.
 - [Khả năng rời bỏ đăng ký](predict-subscription-churn.md): Dự đoán xem liệu khách hàng có nguy cơ không còn sử dụng các sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa hay không.
 - [Khả năng rời bỏ giao dịch](predict-transactional-churn.md): Dự đoán xem liệu khách hàng sẽ không còn mua sản phẩm hoặc dịch vụ của bạn nữa trong một khung thời gian nhất định hay không.
+- [Phân tích tình cảm](sentiment-analysis.md) : Phân tích cảm tính về phản hồi của khách hàng và xác định các khía cạnh kinh doanh thường xuyên được đề cập.
 
 # <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
@@ -43,6 +43,6 @@ Sử dụng các mô hình xác định sẵn, thường được gọi là mô 
 
 Nếu tổ chức đã sử dụng các kịch bản máy học dựa trên thử nghiệm Azure Machine Learning, thì tính năng mô hình tùy chỉnh trong Customer Insights sẽ giúp kết nối các điểm. Tạo quy trình làm việc giúp bạn chọn dữ liệu bạn muốn để tạo thông tin chuyên sâu và ánh xạ kết quả đến hồ sơ khách hàng hợp nhất. Để biết thêm thông tin, hãy xem [Mô hình máy học tùy chỉnh](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Dự đoán của AI Builder
+## <a name="ai-builder-prediction"></a>AI Builder dự đoán
 
 Đôi khi, tập dữ liệu không hoàn chỉnh và thiếu một số giá trị. Customer Insights có thể giúp dự đoán các giá trị còn thiếu cho thực thể và phân khúc Khách hàng. Để biết thêm thông tin, hãy xem bài viết [Hoàn thành dữ liệu chưa hoàn chỉnh bằng tính năng dự đoán](predictions.md).

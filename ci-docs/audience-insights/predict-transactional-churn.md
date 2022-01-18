@@ -1,7 +1,7 @@
 ---
-title: Giao dịch churn dự đoán (Video)
+title: Giao dịch churn dự đoán (có video)
 description: Dự đoán xem khách hàng có nguy cơ không mua sản phẩm hoặc dịch vụ của bạn nữa không.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904098"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967773"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Dự đoán khách hàng rời khỏi giao dịch (bản xem trước)
 
@@ -103,10 +103,10 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 
 1. Chọn ngăn xếp **Mô hình khách hàng rời đi (xem trước)** và chọn **Sử dụng mô hình này**.
 
-1. Trong ngăn **Mô hình khách hàng rời đi**, chọn **Giao dịch** rồi chọn **Bắt đầu**.
+1. Bên trong **Mô hình churn của khách hàng (xem trước)** ngăn, chọn **Giao dịch** và chọn **Bắt đầu**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Ảnh chụp màn hình tùy chọn giao dịch đã chọn trong ngăn mô hình Khách hàng rời khỏi.":::
-
+ 
 ### <a name="name-model"></a>Đặt tên mô hình
 
 1. Cung cấp tên cho mô hình để phân biệt với các mô hình khác.
@@ -117,11 +117,11 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 
 ### <a name="define-customer-churn"></a>Xác định khách hàng rời đi
 
-1. Đặt khoảng thời gian trong ngày để dự đoán khả năng rời đi trong trường **Xác định những khách hàng có thể rời đi trong thời gian tới**. Ví dụ: dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro rời đi trong một khoảng thời gian dài hơn hoặc ngắn hơn có thể gây khó khăn hơn cho việc giải quyết các yếu tố trong hồ sơ rủi ro rời đi của bạn, nhưng nó phụ thuộc vào yêu cầu kinh doanh cụ thể của bạn.
+1. Đặt **Cửa sổ dự đoán**. Ví dụ: dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro rời đi trong một khoảng thời gian dài hơn hoặc ngắn hơn có thể gây khó khăn hơn cho việc giải quyết các yếu tố trong hồ sơ rủi ro rời đi của bạn, nhưng nó phụ thuộc vào yêu cầu kinh doanh cụ thể của bạn.
    >[!TIP]
-   > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
+   > Bạn có thể chọn **Lưu bản nháp** bất kỳ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
 
-1. Nhập số ngày để xác định thời gian rời đi trong trường **Một khách hàng đã rời đi nếu họ không mua hàng trong:**. Ví dụ: nếu khách hàng không mua hàng nào trong 30 ngày qua, họ có thể được coi là đã bỏ qua doanh nghiệp của bạn. 
+1. Nhập số ngày để xác định thời gian gián đoạn trong **Định nghĩa Churn** cánh đồng. Ví dụ: nếu khách hàng không mua hàng nào trong 30 ngày qua, họ có thể được coi là đã bỏ qua doanh nghiệp của bạn. 
 
 1. Chọn **Tiếp** để tiếp tục.
 
@@ -129,19 +129,16 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 
 1. Chọn **Thêm dữ liệu** và chọn loại hoạt động trong ngăn bên có chứa thông tin lịch sử giao dịch hoặc mua hàng được yêu cầu.
 
-1. Trong phần **Chọn các hoạt động**, chọn các hoạt động cụ thể từ hoạt động đã chọn mà bạn muốn tính toán tập trung vào.
+1. Ở dưới **Chọn các hoạt động**, chọn các hoạt động cụ thể từ loại hoạt động đã chọn mà bạn muốn tính toán tập trung vào.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Ngăn bên hiển thị việc chọn các hoạt động cụ thể theo loại ngữ nghĩa.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Ngăn bên hiển thị việc chọn các hoạt động cụ thể theo loại ngữ nghĩa.":::
 
-1. Nếu bạn chưa ánh xạ hoạt động tới một loại ngữ nghĩa, hãy chọn **Chỉnh sửa** để làm vậy. Trải nghiệm được hướng dẫn để ánh xạ các hoạt động ngữ nghĩa sẽ mở ra. Ánh xạ dữ liệu của bạn đến các trường tương ứng trong loại hoạt động đã chọn.
+   Nếu bạn chưa ánh xạ hoạt động tới một loại ngữ nghĩa, hãy chọn **Chỉnh sửa** để làm vậy. Trải nghiệm được hướng dẫn để ánh xạ các hoạt động ngữ nghĩa sẽ mở ra. Ánh xạ dữ liệu của bạn đến các trường tương ứng trong loại hoạt động đã chọn.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Loại hoạt động thiết đặt trang.":::
+1. Ánh xạ các thuộc tính ngữ nghĩa đến các trường được yêu cầu để chạy mô hình. Nếu các trường bên dưới chưa điền, hãy đặt cấu hình mối quan hệ từ thực thể nhật ký mua hàng cho thực thể *Khách hàng*. Chọn **Lưu.**
 
-1. Sau khi ánh xạ hoạt động sang loại ngữ nghĩa tương ứng, hãy chọn **Tiếp theo** để tiếp tục
+1. Bên trong **Thêm dữ liệu bắt buộc** bước, chọn **Kế tiếp** để tiếp tục nếu bạn không muốn thêm các hoạt động khác.
 
-1. Ánh xạ các thuộc tính ngữ nghĩa đến các trường được yêu cầu để chạy mô hình. Nếu các trường bên dưới chưa điền, hãy đặt cấu hình mối quan hệ từ thực thể nhật ký mua hàng cho thực thể *Khách hàng*.
-
-1. Chọn **Tiếp theo**.
 
 # <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
