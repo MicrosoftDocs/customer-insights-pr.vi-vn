@@ -1,7 +1,7 @@
 ---
 title: So khớp các thực thể để hợp nhất dữ liệu
 description: So khớp các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863837"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>So khớp thực thể
 
 Giai đoạn so khớp chỉ định cách kết hợp bộ dữ liệu của bạn vào bộ dữ liệu hồ sơ khách hàng hợp nhất. Sau khi hoàn thành [bước lập bản đồ](map-entities.md) trong quy trình hợp nhất dữ liệu, bạn đã sẵn sàng khớp các thực thể. Giai đoạn so khớp cần ít nhất hai thực thể ánh xạ.
@@ -35,7 +30,7 @@ Mỗi quy tắc hợp nhất hai hoặc nhiều thực thể thành một thực
 
 :::image type="content" source="media/match-page.png" alt-text="Ảnh chụp màn hình của trang So khớp trong khu vực Hợp nhất của quá trình hợp nhất dữ liệu.":::
   
-Thực thể chính *eCommerce:eCommerceContacts* được khớp với thực thể tiếp theo *LoyaltyScheme:loyCustomers*. Tập dữ liệu là kết quả của bước so khớp đầu tiên được so khớp với thực thể sau nếu bạn có nhiều hơn hai thực thể.
+Thực thể chính *eCommerce:eCommerceContacts* được khớp với thực thể tiếp theo *LoyaltyScheme:loyCustomers*. Tập dữ liệu là kết quả của bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
 
 > [!IMPORTANT]
 > Thực thể mà bạn chọn làm thực thể chính sẽ làm cơ sở cho tập dữ liệu hồ sơ hợp nhất. Các thực thể bổ sung được chọn trong giai đoạn so khớp sẽ được thêm vào thực thể này. Điều này không có nghĩa là thực thể hợp nhất sẽ bao gồm *tất cả* dữ liệu được bao gồm trong thực thể này.
@@ -108,7 +103,7 @@ Các quy tắc so khớp đại diện cho các tập hợp các điều kiện.
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Thay đổi thứ tự thực thể trong quy tắc so khớp
 
-Bạn có thể sắp xếp lại thứ tự các thực thể cho các quy tắc so khớp để thay đổi trình tự xử lý. Các quy tắc bị xung đột do thay đổi thứ tự sẽ bị xóa. Bạn phải tạo lại các quy tắc đã xóa với cấu hình được cập nhật.
+Bạn có thể sắp xếp lại thứ tự các thực thể cho các quy tắc đối sánh để thay đổi thứ tự xử lý chúng. Các quy tắc bị xung đột do thay đổi thứ tự sẽ bị xóa. Bạn phải tạo lại các quy tắc đã xóa với cấu hình được cập nhật.
 
 1. Chuyển tới mục **Dữ liệu** > **Hợp nhất** > **So khớp** và chọn **Chỉnh sửa**.
 
@@ -130,17 +125,21 @@ Việc chỉ định các quy tắc chống trùng lặp là không bắt buộc
 
 1. Chuyển đến **Dữ liệu** > **Hợp nhất** > **So khớp**.
 
-1. Trong phần **Bản trùng lặp đã hợp nhất**, chọn **Đặt thực thể**. Trong trường hợp các quy tắc khử trùng lặp đã được tạo, hãy chọn **Chỉnh sửa**.
+1. Bên trong **Chi tiết hồ sơ trùng lặp** phần, chọn **Đặt các thực thể**. Trong trường hợp các quy tắc khử trùng lặp đã được tạo, hãy chọn **Chỉnh sửa**.
 
 1. Trong ngăn **Tùy chọn trộn**, hãy chọn các thực thể mà bạn muốn chạy loại bỏ trùng lặp.
 
-1. Chỉ định cách kết hợp các bản ghi trùng lặp và chọn 1 trong 3 tùy chọn:
-   - **Điền nhiều nhất**: Xác định bản ghi có các trường thuộc tính được điền nhiều nhất là bản ghi được chọn. Đây là tùy chọn phối mặc định.
-   - **Gần đây nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập gần đây nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
-   - **Cách đây xa nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập cách đây xa nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
+   1. Chỉ định cách kết hợp các bản ghi trùng lặp và chọn 1 trong 3 tùy chọn:
+      - **Điền nhiều nhất**: Xác định bản ghi có các trường thuộc tính được điền nhiều nhất là bản ghi được chọn. Đây là tùy chọn phối mặc định.
+      - **Gần đây nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập gần đây nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
+      - **Cách đây xa nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập cách đây xa nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
+
+   1. Tùy ý, chọn **Trình độ cao** để xác định các quy tắc khử trùng lặp trên các thuộc tính riêng lẻ của một thực thể. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng đối tượng để xem tất cả các thuộc tính của nó và xác định tùy chọn nào để sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Quy tắc chống trùng lặp bước 1.](media/match-selfconflation.png "Quy tắc chống trùng lặp bước 1")
+      > [!div class="mx-imgBorder"]
+      > ![Quy tắc chống trùng lặp bước 1.](media/match-selfconflation.png "Quy tắc chống trùng lặp bước 1")
+
+   1. Lựa chọn **Làm xong** để áp dụng các tùy chọn hợp nhất của bạn để loại bỏ trùng lặp.
  
 1. Sau khi thực thể được chọn và tùy chọn trộn được đặt, hãy chọn **Thêm quy tắc** để xác định các quy tắc loại bỏ trùng lặp ở cấp độ thực thể.
    - **Chọn trường** liệt kê tất cả các trường hiện có từ thực thể đó. Chọn trường bạn muốn kiểm tra các bản trùng lặp. Chọn các trường có thể là duy nhất cho mọi khách hàng. Ví dụ: địa chỉ email hoặc sự kết hợp của tên, thành phố và số điện thoại.
@@ -158,7 +157,7 @@ Việc chỉ định các quy tắc chống trùng lặp là không bắt buộc
 
 1. Bất kỳ quy tắc so khớp tùy chỉnh nào được xác định sẽ ghi đè quy tắc loại bỏ trùng lặp. Nếu quy tắc chống trùng lặp xác định các bản ghi khớp và quy tắc so khớp tùy chỉnh được đặt để không bao giờ khớp với các bản ghi đó, thì hai bản ghi này sẽ không được khớp.
 
-1. Sau khi [chạy quá trình so khớp](#run-the-match-process), bạn sẽ nhìn thấy các thông số loại bỏ trùng lặp trong lát chỉ số chính.
+1. Sau [chạy quá trình đối sánh](#run-the-match-process), bạn sẽ thấy thống kê loại bỏ trùng lặp trong các ô chỉ số chính.
 
 ### <a name="deduplication-output-as-an-entity"></a>Đầu ra khử trùng lặp dưới dạng một thực thể
 
@@ -222,7 +221,23 @@ Bạn có thể định cấu hình lại và tinh chỉnh hầu hết các thô
 
 - **Xóa quy tắc** bằng cách chọn biểu tượng **Xóa**.
 
-## <a name="specify-custom-match-conditions"></a>Chỉ định các điều kiện so khớp tùy chỉnh
+## <a name="advanced-options"></a>Tùy chọn nâng cao
+
+### <a name="add-exceptions-to-a-rule"></a>Thêm ngoại lệ vào quy tắc
+
+Trong hầu hết các trường hợp, đối sánh thực thể dẫn đến hồ sơ người dùng duy nhất với dữ liệu tổng hợp. Để giải quyết động các trường hợp hiếm hoi về dương tính giả và âm tính giả, bạn có thể xác định các ngoại lệ cho quy tắc đối sánh. Các ngoại lệ được áp dụng sau khi xử lý các quy tắc đối sánh và tránh đối sánh tất cả các bản ghi đáp ứng các tiêu chí ngoại lệ.
+
+Ví dụ: nếu quy tắc đối sánh của bạn kết hợp họ, thành phố và ngày sinh, hệ thống sẽ xác định các cặp song sinh có cùng họ sống trong cùng một thị trấn với cùng một hồ sơ. Bạn có thể chỉ định một ngoại lệ không khớp với các cấu hình nếu tên trong các thực thể bạn kết hợp không giống nhau.
+
+1. Chuyển đến **Dữ liệu** > **Hợp nhất** > **So khớp** và chọn **Chỉnh sửa** cho quy tắc bạn muốn thêm điều kiện vào.
+
+1. Bên trong **Chỉnh sửa quy tắc** ngăn, chọn **Thêm ngoại lệ**.
+
+1. Chỉ định các tiêu chí ngoại lệ. 
+
+1. Chọn **Hoàn tất** để lưu quy tắc.
+
+### <a name="specify-custom-match-conditions"></a>Chỉ định các điều kiện so khớp tùy chỉnh
 
 Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh mặc định. Có bốn tùy chọn có sẵn: 
 
@@ -231,7 +246,7 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 |Luôn khớp     | Xác định các giá trị luôn được so khớp.         |  Luôn phù hợp *Mike* và *MikeR*.       |
 |Không khớp     | Xác định các giá trị không bao giờ khớp.        | Không bao giờ phù hợp *John* và *Jonathan*.        |
 |Bỏ qua tùy chỉnh     | Xác định các giá trị mà hệ thống luôn phải bỏ qua trong giai đoạn đối sánh. |  Bỏ qua các giá trị *11111* và *không xác định* trong trận đấu.        |
-|Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Xem xét *Joe* ngang bằng với *Joseph*.        |
+|Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Coi như *Joe* ngang bằng với *Joseph*.        |
 
 1. Chuyển đến **Dữ liệu** > **Hợp nhất** > **So khớp** rồi chọn **So khớp tùy chỉnh** trong phần **Chi tiết bản ghi khớp**.
 
@@ -241,7 +256,7 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
 1. Chọn tùy chọn đối sánh tùy chỉnh từ **Loại tùy chỉnh** thả xuống và chọn **Tải xuống mẫu**. Bạn cần một mẫu riêng cho từng tùy chọn đối sánh.
 
-1. Tải xuống tệp mẫu. Mở nó và điền vào các chi tiết. Mẫu chứa các trường để chỉ định thực thể và các giá trị khóa chính của thực thể sẽ được sử dụng trong so khớp tùy chỉnh. Ví dụ: nếu bạn muốn khóa chính *12345* từ thực thể *Bán hàng* để luôn so khớp với khóa chính *34567* từ thực thể *Liên hệ*, hãy điền vào mẫu:
+1. Mở tệp mẫu đã tải xuống và điền thông tin chi tiết. Mẫu chứa các trường để chỉ định thực thể và các giá trị khóa chính của thực thể sẽ được sử dụng trong so khớp tùy chỉnh. Ví dụ: nếu bạn muốn khóa chính *12345* từ thực thể *Bán hàng* để luôn so khớp với khóa chính *34567* từ thực thể *Liên hệ*, hãy điền vào mẫu:
     - Thực thể 1: Bán hàng
     - Entity1Key: 12345
     - Thực thể 2: Người liên hệ
@@ -255,20 +270,20 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
 1. Đi tới **Dữ liệu** > **Nguồn dữ liệu** và nhập các tệp mẫu dưới dạng thực thể mới.
 
-1. Sau khi tải lên các tệp và thực thể có sẵn, chọn tùy chọn **So khớp tùy chỉnh** một lần nữa. Bạn sẽ thấy các tùy chọn để chỉ định các thực thể bạn muốn bao gồm. Chọn các thực thể bắt buộc từ menu thả xuống và chọn **Xong**.
+1. Sau khi tải lên các tệp và thực thể có sẵn, chọn tùy chọn **So khớp tùy chỉnh** một lần nữa. Bạn sẽ thấy các tùy chọn để chỉ định các thực thể bạn muốn bao gồm. Chọn các thực thể bắt buộc từ menu thả xuống và chọn **Làm xong**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Ảnh chụp màn hình hộp thoại để chọn ghi đè cho tình huống so khớp tùy chỉnh.":::
 
 1. Việc áp dụng đối sánh tùy chỉnh phụ thuộc vào tùy chọn đối sánh bạn muốn sử dụng. 
 
-   - Vì **Luôn phù hợp** hoặc **Không bao giờ phù hợp**, tiến hành bước tiếp theo.
-   - Vì **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh**, lựa chọn **Chỉnh sửa** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh** tùy chọn và chọn **Xong**.
+   - Vì **Luôn phù hợp** hoặc là **Không bao giờ phù hợp**, tiến hành bước tiếp theo.
+   - Vì **Bỏ qua tùy chỉnh** hoặc là **Lập bản đồ bí danh**, lựa chọn **Biên tập** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc là **Lập bản đồ bí danh** tùy chọn và chọn **Làm xong**.
 
 1. Chọn **Lưu** trên trang **So khớp** để áp dụng cấu hình so khớp tùy chỉnh.
 
 1. Chọn **Chạy** trên trang **So khớp** để bắt đầu quy trình so khớp. Các quy tắc so khớp được chỉ định khác bị ghi đè bởi cấu hình so khớp tùy chỉnh.
 
-### <a name="known-issues"></a>Các vấn đề đã biết
+#### <a name="known-issues"></a>Các vấn đề đã biết
 
 - Tự kết hợp không hiển thị dữ liệu chuẩn hóa trong các thực thể chống trùng lặp. Tuy nhiên, nó áp dụng chuẩn hóa nội bộ trong quá trình khử trùng lặp. Nó được thiết kế cho tất cả các chuẩn hóa. 
 - Nếu cài đặt loại ngữ nghĩa bị xóa trong **Bản đồ** khi quy tắc đối sánh sử dụng ánh xạ Bí danh hoặc Bỏ qua tùy chỉnh, quá trình chuẩn hóa sẽ không được áp dụng. Nó chỉ xảy ra nếu bạn xóa loại ngữ nghĩa sau khi định cấu hình chuẩn hóa trong quy tắc đối sánh vì loại ngữ nghĩa sẽ không xác định.
@@ -276,7 +291,7 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Sau khi hoàn tất quá trình đối sánh cho ít nhất một cặp đối sánh, hãy tiếp tục [**Hợp nhất**](merge-entities.md) bươc chân.
+Sau khi hoàn tất quá trình đối sánh cho ít nhất một cặp đối sánh, hãy tiếp tục [**Hợp nhất**](merge-entities.md) bươc.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 78379c827e132b3b172aa7381f4c5ef2c70b9771
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977855"
 ---
+
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Khả năng thông tin chi tiết về đối tượng trong Dynamics 365 Customer Insights kết nối với dữ liệu từ nhiều nguồn. Kết nối với nguồn dữ liệu thường được gọi là quá trình *nhập dữ liệu*. Sau khi nhập dữ liệu, bạn có thể [thống nhất](data-unification.md) và thực hiện hành động trên nó.
 

@@ -1,7 +1,7 @@
 ---
 title: Trộn các thực thể trong hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732798"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Hợp nhất thực thể
 
 Giai đoạn hợp nhất là giai đoạn cuối cùng trong quy trình hợp nhất dữ liệu. Mục đích của nó là đối chiếu dữ liệu xung đột. Ví dụ về dữ liệu xung đột có thể bao gồm tên khách hàng được tìm thấy trong hai bộ dữ liệu của bạn nhưng hiển thị hơi khác nhau trong mỗi dữ liệu ("Grant Marshall" so với "Grant Marshal") hoặc số điện thoại khác nhau ở định dạng (617-803-091X so với 617803091X). Việc hợp nhất các điểm dữ liệu xung đột đó được thực hiện trên cơ sở từng thuộc tính.
@@ -99,11 +94,13 @@ Trên trang **Hợp nhất**, chọn **Các trường bị loại trừ** để 
 
 1. Chọn **Lưu** và **Chạy** để thay đổi. 
 
-## <a name="manually-combine-fields"></a>Các trường kết hợp theo cách thủ công
+## <a name="combine-fields-manually"></a>Kết hợp các trường theo cách thủ công
 
-Chỉ định một thuộc tính đã hợp nhất theo cách thủ công. 
+Chỉ định một thuộc tính đã hợp nhất theo cách thủ công.
 
-1. Trên trang **Hợp nhất**, chọn **Kết hợp các trường**.
+1. Trên **Hợp nhất** trang, chọn **Phối hợp**.
+
+1. Chọn **Lĩnh vực** lựa chọn.
 
 1. Chỉ định chính sách hợp nhất người chiến thắng trong trình đơn thả xuống **Kết hợp các trường theo**.
 
@@ -114,6 +111,26 @@ Chỉ định một thuộc tính đã hợp nhất theo cách thủ công.
 1. Chọn **Xong** để áp dụng các thay đổi.
 
 1. Chọn **Lưu** và **Chạy** để thay đổi. 
+
+## <a name="combine-a-group-of-fields"></a>Kết hợp một nhóm trường
+
+Coi một nhóm trường như một đơn vị duy nhất. Ví dụ: khi bản ghi của chúng tôi chứa các trường Address1, Address2, City, State và Zip. Chúng tôi có thể không muốn hợp nhất trong Address2 của một bản ghi khác, vì nghĩ rằng nó sẽ làm cho dữ liệu của chúng tôi đầy đủ hơn
+
+1. Trên **Hợp nhất** trang, chọn **Phối hợp**.
+
+1. Chọn **Nhóm lĩnh vực** lựa chọn.
+
+1. Chỉ định chính sách hợp nhất người chiến thắng trong **Xếp hạng các nhóm theo** trình đơn thả xuống.
+
+1. Lựa chọn **cộng** và chọn nếu bạn muốn thêm nhiều trường hoặc nhóm bổ sung vào các trường.
+
+1. Cung cấp một **Tên** và một **Tên đầu ra** cho mọi trường kết hợp.
+
+1. Cung cấp một **Tên** cho nhóm trường. 
+
+1. Chọn **Xong** để áp dụng các thay đổi.
+
+1. Chọn **Lưu** và **Chạy** để thay đổi.
 
 ## <a name="change-the-order-of-fields"></a>Thay đổi thứ tự trường
 

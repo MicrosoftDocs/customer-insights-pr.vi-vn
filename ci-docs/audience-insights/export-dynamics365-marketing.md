@@ -9,16 +9,11 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
-ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "7975150"
 ---
+
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Sử dụng các phân khúc trong Dynamics 365 Marketing (bản xem trước)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Dùng [các phân đoạn](segments.md) để tạo chiến dịch và liên hệ với các nhóm khách hàng cụ thể với Dynamics 365 Marketing. Để biết thêm thông tin, hãy xem [Sử dụng phân khúc từ Dynamics 365 Customer Insights với Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 

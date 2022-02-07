@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
-description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 12/02/2021
+description: 'Thông tin về các tính năng mới, cải tiến và sửa lỗi.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884288"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch dài hạn đối với tính năng, hãy xem [kế hoạch phát hành Dynamics 365 và Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Cập nhật tháng 12 năm 2021
+
+Các bản cập nhật vào tháng 12 năm 2021 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Chuyển tiếp nhật ký Thông tin chi tiết về khách hàng tới Azure Monitor
+
+Thông tin chi tiết về khách hàng cung cấp tích hợp trực tiếp với Azure Monitor. Tính năng này bao gồm các sự kiện kiểm toán và các sự kiện hoạt động. Nhật ký tài nguyên Azure Monitor cho phép bạn theo dõi và gửi nhật ký đến Azure Storage, Azure Log Analytics hoặc truyền trực tuyến chúng tới Trung tâm sự kiện Azure.
+
+Để biết thêm thông tin, hãy xem [Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (Xem trước)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Làm phong phú hồ sơ khách hàng với dữ liệu tương tác
+
+Sử dụng dữ liệu từ Microsoft Office 365 để làm phong phú thêm hồ sơ tài khoản khách hàng của bạn với thông tin chi tiết về các cam kết thông qua Office 365 ứng dụng. Dữ liệu tương tác bao gồm email và hoạt động cuộc họp, được tổng hợp ở cấp tài khoản. Ví dụ: số lượng email từ tài khoản doanh nghiệp hoặc số cuộc họp với tài khoản. Không có dữ liệu về người dùng cá nhân được chia sẻ. Tính năng làm giàu này có sẵn ở các khu vực sau: Vương quốc Anh, Châu Âu, Bắc Mỹ.
+
+Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng dữ liệu tương tác (xem trước)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Các tính năng hợp nhất dữ liệu nâng cao
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Bật các chính sách giải quyết xung đột ở cấp thuộc tính riêng lẻ
+
+Khi loại bỏ trùng lặp hồ sơ khách hàng trong một thực thể, bạn có thể không muốn phải chọn một hồ sơ đầy đủ làm người chiến thắng. Giờ đây, chúng tôi cho phép bạn hợp nhất các trường tốt nhất từ các bản ghi khác nhau dựa trên các quy tắc cho mọi thuộc tính. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. 
+
+Giờ đây, bạn có thể xác định các quy tắc hợp nhất riêng biệt cho các thuộc tính riêng lẻ trong khi loại bỏ trùng lặp và hợp nhất các bản ghi trong một thực thể duy nhất. Trước đây, chúng tôi chỉ cho phép bạn chọn một quy tắc hợp nhất duy nhất (lưu giữ hồ sơ dựa trên tính đầy đủ của dữ liệu lần truy cập gần đây) và quy tắc đó được áp dụng ở cấp bản ghi cho tất cả các thuộc tính. Điều đó không lý tưởng khi một số dữ liệu bạn muốn giữ lại được tìm thấy trong bản ghi A và dữ liệu tốt khác được tìm thấy trong bản ghi B.
+
+Để biết thêm thông tin, hãy xem [Xác định quy tắc chống trùng lặp trên một thực thể so khớp](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Quy tắc tùy chỉnh để đối sánh
+
+Đôi khi bạn cần chỉ định một ngoại lệ cho các quy tắc chung để KHÔNG khớp với các bản ghi. Điều này có thể xảy ra khi nhiều cá nhân chia sẻ đủ thông tin để hệ thống đối sánh họ như một cá nhân duy nhất. Ví dụ: các cặp song sinh có cùng họ, sống trong cùng một thành phố và có chung ngày sinh.
+
+Các trường hợp ngoại lệ đảm bảo rằng việc hợp nhất dữ liệu không chính xác có thể được giải quyết trong các quy tắc hợp nhất. Bạn có thể thêm nhiều ngoại lệ vào một quy tắc.
+
+Để biết thêm thông tin, hãy xem [Thêm ngoại lệ vào quy tắc](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Cung cấp các chính sách giải quyết xung đột bổ sung và cho phép nhóm các thuộc tính
+
+Tính năng này cho phép bạn coi một nhóm trường như một đơn vị duy nhất. Ví dụ: khi bản ghi của chúng tôi chứa các trường Address1, Address2, City, State và Zip. Chúng tôi có thể không muốn hợp nhất trong Address2 của một bản ghi khác, vì nghĩ rằng nó sẽ làm cho dữ liệu của chúng tôi đầy đủ hơn.
+
+Bây giờ bạn có thể kết hợp một nhóm các trường liên quan và áp dụng một chính sách hợp nhất duy nhất cho nhóm. 
+
+Để biết thêm thông tin, hãy xem [Kết hợp một nhóm trường](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Cập nhật tháng 11 năm 2021
 
@@ -51,7 +90,7 @@ Các phần sau đây nêu bật một số lĩnh vực chính đã được đi
 
 #### <a name="export-segments-based-on-business-accounts"></a>Xuất phân đoạn dựa trên tài khoản doanh nghiệp
 
-Tất cả các xuất khẩu phân khúc trong thông tin chi tiết về đối tượng đều có sẵn trong ngữ cảnh của tài khoản doanh nghiệp. Hầu hết các xuất khẩu phân khúc yêu cầu cấu hình bổ sung và [thông tin liên hệ dự kiến](segment-builder.md#create-a-new-segment) trong các phân đoạn cơ bản để hợp lệ cho tài khoản doanh nghiệp. Để biết thêm thông tin, hãy xem [Các phân đoạn xuất khẩu](export-destinations.md#export-segments).
+Tất cả các xuất khẩu phân khúc trong thông tin chi tiết về đối tượng đều có sẵn trong ngữ cảnh của tài khoản doanh nghiệp. Hầu hết các xuất khẩu phân khúc yêu cầu cấu hình bổ sung và [thông tin liên hệ dự kiến](segment-builder.md#create-a-new-segment) trong các phân đoạn cơ bản để hợp lệ cho tài khoản doanh nghiệp. Để biết thêm thông tin, hãy xem [Xuất phân đoạn](export-destinations.md#export-segments).
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Sử dụng xuất Quảng cáo LinkedIn với các tài khoản doanh nghiệp
 

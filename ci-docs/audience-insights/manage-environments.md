@@ -9,16 +9,11 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892410"
 ---
+
 # <a name="manage-environments"></a>Quản lý môi trường
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Chuyển đổi môi trường
 
@@ -47,7 +42,7 @@ Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights v�
 Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu Dataverse được quản lý.
 
 > [!IMPORTANT]
-> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để có thể chia sẻ dữ liệu.
+> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để cho phép chia sẻ dữ liệu.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
 

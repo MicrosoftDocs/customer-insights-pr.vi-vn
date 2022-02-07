@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945453"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Với phần bổ trợ Thẻ khách hàng được cài đặt trong ứng dụng Dynamics 365 được hỗ trợ, bạn có thể chọn hiển thị các trường hồ sơ khách hàng, thông tin chi tiết và tiến trình hoạt động. Phần bổ trợ sẽ truy xuất dữ liệu từ Customer Insights mà không ảnh hưởng đến dữ liệu trong ứng dụng Dynamics 365 được kết nối.
 

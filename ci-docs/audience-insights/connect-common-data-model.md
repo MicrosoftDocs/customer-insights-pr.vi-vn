@@ -1,7 +1,7 @@
 ---
 title: Kết nối dữ liệu Common Data Model với tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: vi-VN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900223"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 
 Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư mục Common Data Model bằng cách sử dụng tài khoản Azure Data Lake Storage Gen2.
@@ -25,6 +20,8 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
 - Dữ liệu trong Azure Data Lake của bạn phải theo chuẩn Common Data Model. Hiện các định dạng khác chưa được hỗ trợ.
 
 - Nhập dữ liệu chỉ hỗ trợ tài khoản lưu trữ Azure Data Lake *Gen2*. Bạn không thể sử dụng tài khoản lưu trữ Azure Data Lake Gen1 để nhập dữ liệu.
+
+- Tài khoản lưu trữ Azure Data Lake phải có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Để xác thực bằng dịch vụ chính Azure, hãy đảm bảo rằng dịch vụ chính được định cấu hình trong đối tượng thuê của bạn. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md).
 
