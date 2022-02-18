@@ -1,7 +1,7 @@
 ---
 title: Phần bổ trợ Thẻ khách hàng cho các ứng dụng Dynamics 365 (có video)
 description: Hiển thị dữ liệu từ thông tin chi tiết về khán giả trong ứng dụng Dynamics 365 với phần bổ trợ này.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085274"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
 
 
@@ -113,5 +118,26 @@ Phần bổ trợ Thẻ Khách hàng không tự động nâng cấp. Để nân
 
 1. Sau khi bắt đầu quá trình nâng cấp, bạn sẽ thấy chỉ báo tải cho đến khi quá trình nâng cấp hoàn tất. Nếu không có phiên bản mới hơn, bản nâng cấp sẽ hiển thị thông báo lỗi.
 
+## <a name="troubleshooting"></a>Gỡ rối
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kiểm soát từ Tiện ích bổ sung thẻ khách hàng không tìm thấy dữ liệu
+
+**Vấn đề:**
+
+Ngay cả với các trường ID được định cấu hình chính xác, các điều khiển không thể tìm thấy dữ liệu cho bất kỳ khách hàng nào.  
+
+**Cách giải quyết:**
+
+1. Đảm bảo rằng bạn đã định cấu hình Phần bổ trợ Thẻ theo hướng dẫn: [Định cấu hình bổ trợ Thẻ khách hàng](#configure-the-customer-card-add-in) 
+
+1. Xem lại cấu hình nhập dữ liệu. Chỉnh sửa nguồn dữ liệu cho hệ thống Dynamics 365 có chứa GUID ID liên hệ. Nếu GUID ID liên hệ được hiển thị với các ký tự viết hoa trong Power Query trình chỉnh sửa, hãy thử những cách sau: 
+    1. Chỉnh sửa nguồn dữ liệu để mở nguồn dữ liệu trong Power Query Người biên tập.
+    1. Chọn cột ID liên hệ.
+    1. Lựa chọn **Biến đổi** trong thanh tiêu đề để xem các hành động khả dụng.
+    1. Lựa chọn **chữ thường**. Xác thực nếu GUID trong bảng bây giờ là chữ thường.
+    1. Lưu nguồn dữ liệu.
+    1. Chạy các quy trình nhập, hợp nhất và hạ nguồn dữ liệu để phổ biến các thay đổi đối với GUID. 
+
+Sau khi hoàn tất việc làm mới đầy đủ, các điều khiển của Phần bổ trợ Thẻ Khách hàng sẽ hiển thị dữ liệu mong đợi. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

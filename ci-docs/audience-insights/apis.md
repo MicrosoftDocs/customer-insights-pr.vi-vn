@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732290"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100166"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
-Dynamics 365 Customer Insights cung cấp các API để tạo ứng dụng của riêng bạn dựa trên dữ liệu của bạn trong Thông tin chi tiết về khách hàng.
+Dynamics 365 Customer Insights cung cấp các API để bạn xây dựng ứng dụng dựa trên dữ liệu của mình trong Customer Insights.
 
 > [!IMPORTANT]
 > Thông tin chi tiết về các API này được liệt kê trên [Tham chiếu API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Những thông tin này bao gồm thông tin bổ sung về hoạt động, tham số và phản hồi.
@@ -35,7 +35,7 @@ Bài viết này mô tả cách tiếp cận API Customer Insights, tạo Đăng
  
    Việc bật API sẽ tạo khóa đăng ký chính và phụ cho phiên bản của bạn, khóa này được sử dụng trong các yêu cầu API. Bạn có thể tạo lại các khóa bằng cách chọn **Tạo lại khóa chính** hoặc **Tạo lại khóa phụ** trên **Quản trị viên** > **Quyền** > **API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Bật API Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Chọn **Khám phá API** để [dùng thử các API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Bài viết này mô tả cách tiếp cận API Customer Insights, tạo Đăng
 
 Phản hồi HTTP sẽ sớm xuất hiện bên dưới.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Cách thử nghiệm API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Tạo đăng ký ứng dụng mới trong cổng thông tin Azure
 
@@ -65,7 +65,7 @@ Các bước này giúp bạn bắt đầu dùng API Customer Insights trong ứ
 
 1. Trên đăng ký ứng dụng mới, hãy đi tới **Quyền API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Cách thiết đặt quyền API trong Đăng ký ứng dụng.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Chọn **Thêm quyền** và chọn **Customer Insights** trong ngăn bên.
 
@@ -77,7 +77,7 @@ Các bước này giúp bạn bắt đầu dùng API Customer Insights trong ứ
 
 Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng dụng này với Microsoft Authentication Library (MSAL) để nhận mã thông báo mang chuyển để gửi kèm theo yêu cầu của bạn đến API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cách cấp phép của quản trị viên.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Để biết thêm thông tin về MSAL, hãy xem [Tổng quan về Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 1. Chọn **Cấp quyền của quản trị viên cho...** để hoàn thành đăng ký ứng dụng.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cách cấp phép của quản trị viên.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Để kết thúc, chúng tôi phải thêm tên đăng ký ứng dụng làm người dùng trong Customer Insights.  
    
@@ -115,21 +115,21 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 Phần này giúp bạn bắt đầu sử dụng các thư viện máy khách có sẵn cho các API Customer Insights. Tất cả mã nguồn thư viện và các ứng dụng mẫu có thể được tìm thấy trên [Trang GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
-### <a name="c-nuget"></a>C # NuGet
+### <a name="c-nuget"></a>C# NuGet
 
-Tìm hiểu cách bắt đầu sử dụng thư viện ứng dụng khách C # từ NuGet.org. Để biết thêm thông tin về gói NuGet, hãy xem [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Hiện tại, gói này dành cho framework netstandard2.0 và netcoreapp2.0.
+Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet.org. Để biết thêm thông tin về gói NuGet, xem [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Hiện tại, gói này dành cho framework netstandard2.0 và netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Thêm thư viện máy khách C# vào dự án C#
 
-1. Trong Visual Studio, hãy mở **NuGet Trình quản lý gói** cho dự án của bạn.
+1. Trong Visual Studio, mở **Trình quản lý gói NuGet** cho dự án của bạn.
 
 1. Tìm kiếm **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Chọn **Cài đặt** để thêm gói vào dự án.
  
-   Ngoài ra, hãy chạy lệnh này trong **NuGet Bảng điều khiển Trình quản lý Gói** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Ngoài ra, hãy chạy lệnh này trong **Bảng điều khiển trình quản lý gói NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Thêm gói NuGet vào dự án Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Sử dụng thư viện máy khách C#
 
@@ -141,7 +141,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện ứng dụng khách C # t
 
 1. Chuyển `HttpClient` này vào việc xây dựng máy khách `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Mẫu httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Thực hiện cuộc gọi với máy khách đến "phương pháp mở rộng", ví dụ: `GetAllInstancesAsync`. Nếu truy cập vào `Microsoft.Rest.HttpOperationResponse` cơ sở được ưu tiên, hãy sử dụng "phương thức thông báo http", ví dụ: `GetAllInstancesWithHttpMessagesAsync`.
 

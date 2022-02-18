@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090949"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Sử dụng các phân khúc trong Dynamics 365 Sales (bản xem trước)
 
 
 
 Sử dụng dữ liệu khách hàng của bạn để tạo danh sách khách hàng tiếp thị, theo dõi quy trình làm việc và gửi thư quảng cáo với Dynamics 365 Sales.
+
+## <a name="known-limitations"></a>Các hạn chế đã biết
+
+- Xuất khẩu sang Dynamics 365 Sales được giới hạn ở 100'000 thành viên trên mỗi phân khúc.
+- Quá trình xuất phân đoạn sang Dynamics 365 Sales có thể mất đến 3 giờ để hoàn tất. 
 
 ## <a name="prerequisite-for-connection"></a>Điều kiện tiên quyết để kết nối
 

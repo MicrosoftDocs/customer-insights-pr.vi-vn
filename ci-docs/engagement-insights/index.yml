@@ -11,12 +11,12 @@ metadata:
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+  ms.openlocfilehash: 0ec5a31a968fc97deeeef3ef444bb558a4ff2b65
+  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494210"
+  ms.lasthandoff: 02/10/2022
+  ms.locfileid: "8107273"
 landingContent:
 - title: Giới thiệu
   linkLists:
@@ -26,8 +26,8 @@ landingContent:
       url: overview.md
     - text: Bảng chú giải thuật ngữ
       url: glossary.md
-    - text: Tính năng mới và cập nhật
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
+    - text: Kế hoạch phát hành
+      url: /dynamics365/release-plans/
 - title: Đang tích hợp
   linkLists:
   - linkListType: how-to-guide

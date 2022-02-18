@@ -1,7 +1,7 @@
 ---
 title: So khớp các thực thể để hợp nhất dữ liệu
 description: So khớp các thực thể để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098861"
 ---
-
 # <a name="match-entities"></a>So khớp thực thể
 
 Giai đoạn so khớp chỉ định cách kết hợp bộ dữ liệu của bạn vào bộ dữ liệu hồ sơ khách hàng hợp nhất. Sau khi hoàn thành [bước lập bản đồ](map-entities.md) trong quy trình hợp nhất dữ liệu, bạn đã sẵn sàng khớp các thực thể. Giai đoạn so khớp cần ít nhất hai thực thể ánh xạ.
@@ -24,13 +29,7 @@ Trang so khớp bao gồm ba phần:
 
 ## <a name="specify-the-match-order"></a>Chỉ định thứ tự so khớp
 
-Truy cập **Dữ liệu** > **Hợp nhất** > **So khớp** rồi chọn **Đặt thứ tự** để bắt đầu giai đoạn so khớp.
-
-Mỗi quy tắc hợp nhất hai hoặc nhiều thực thể thành một thực thể hợp nhất. Đồng thời, nó lưu giữ hồ sơ khách hàng duy nhất. Ví dụ: chúng tôi đã chọn hai thực thể: **eCommerce:eCommerceContacts** làm thực thể chính và **LoyaltyScheme:loyCustomers** làm thực thể phụ. Thứ tự của các thực thể xác định thứ tự mà hệ thống sẽ cố gắng khớp các bản ghi.
-
-:::image type="content" source="media/match-page.png" alt-text="Ảnh chụp màn hình của trang So khớp trong khu vực Hợp nhất của quá trình hợp nhất dữ liệu.":::
-  
-Thực thể chính *eCommerce:eCommerceContacts* được khớp với thực thể tiếp theo *LoyaltyScheme:loyCustomers*. Tập dữ liệu là kết quả của bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
+Mỗi quy tắc hợp nhất hai hoặc nhiều thực thể thành một thực thể hợp nhất. Đồng thời, nó lưu giữ hồ sơ khách hàng duy nhất. Thứ tự khớp cho biết thứ tự mà hệ thống cố gắng khớp các bản ghi.
 
 > [!IMPORTANT]
 > Thực thể mà bạn chọn làm thực thể chính sẽ làm cơ sở cho tập dữ liệu hồ sơ hợp nhất. Các thực thể bổ sung được chọn trong giai đoạn so khớp sẽ được thêm vào thực thể này. Điều này không có nghĩa là thực thể hợp nhất sẽ bao gồm *tất cả* dữ liệu được bao gồm trong thực thể này.
@@ -38,9 +37,18 @@ Thực thể chính *eCommerce:eCommerceContacts* được khớp với thực t
 > Có hai cân nhắc có thể giúp bạn chọn phân cấp của các thực thể:
 >
 > - Chọn thực thể có dữ liệu hồ sơ đầy đủ và đáng tin cậy nhất về khách hàng của bạn làm thực thể chính.
-> - Chọn thực thể có một số thuộc tính chung với các thực thể khác (ví dụ: tên, số điện thoại hoặc địa chỉ email) làm thực thể chính.
+> - Chọn đối tượng có một số thuộc tính chung với các đối tượng khác (ví dụ: tên, số điện thoại hoặc địa chỉ email) làm đối tượng chính.
 
-Sau khi chỉ định thứ tự so khớp, bạn sẽ nhìn thấy các cặp so khớp xác định trong phần **Thông tin chi tiết bản ghi khớp** trên **Dữ liệu** > **Hợp nhất** > **So khớp**. Các chỉ số chính sẽ trống cho đến khi quá trình so khớp hoàn tất.
+1. Truy cập **Dữ liệu** > **Hợp nhất** > **So khớp** rồi chọn **Đặt thứ tự** để bắt đầu giai đoạn so khớp.
+1. Lựa chọn **Thứ tự thực thể**. Ví dụ: chọn **Thương mại điện tử: eCommerceContacts** là thực thể chính và **LoyaltyScheme: loyCustomers** như thực thể thứ hai. 
+1. Để có mọi bản ghi trong thực thể là một khách hàng duy nhất và khớp với mọi thực thể sau, hãy chọn **Bao gồm tất cả**.
+1. Chọn **Xong**. 
+
+Sau khi chỉ định thứ tự đối sánh, các cặp đối sánh đã xác định hiển thị trong **Chi tiết hồ sơ phù hợp** phần trên **Dữ liệu** > **Thống nhất** > **Cuộc thi đấu**. Các chỉ số chính trống cho đến khi quá trình đối sánh hoàn tất.
+
+:::image type="content" source="media/match-page.png" alt-text="Ảnh chụp màn hình của trang So khớp trong khu vực Hợp nhất của quá trình hợp nhất dữ liệu.":::
+  
+Thực thể chính *eCommerce:eCommerceContacts* được khớp với thực thể tiếp theo *LoyaltyScheme:loyCustomers*. Tập dữ liệu là kết quả của bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
 
 ## <a name="define-rules-for-match-pairs"></a>Xác định quy tắc cho các cặp so khớp
 
@@ -50,7 +58,7 @@ Cảnh báo **Cần quy tắc** bên cạnh tên thực thể đề xuất rằn
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Ảnh chụp màn hình của phần Chi tiết bản ghi khớp có kiểm soát để thêm các quy tắc được đánh dấu.":::
 
-1. Chọn **Thêm quy tắc** bên dưới một thực thể trong phần **Chi tiết bản ghi khớp** để xác định các quy tắc so khớp.
+1. Lựa chọn **Thêm quy tắc** dưới một thực thể trong **Chi tiết hồ sơ phù hợp** để xác định quy tắc đối sánh.
 
 1. Trong ngăn **Tạo quy tắc**, hãy cấu hình các điều kiện cho quy tắc.
 
@@ -61,15 +69,15 @@ Cảnh báo **Cần quy tắc** bên cạnh tên thực thể đề xuất rằn
    - **Thực thể/Trường (hàng thứ hai)**: Chọn một thuộc tính liên quan đến thuộc tính của thực thể được chỉ định trong hàng đầu tiên.
 
    - **Bình thường hóa**: Chọn trong số các tùy chọn chuẩn hóa sau cho các thuộc tính đã chọn. 
-     - Khoảng trắng: Loại bỏ tất cả các khoảng trắng. *Hello   World* trở thành *HelloWorld*.
+     - Chữ số: Chuyển đổi các hệ thống chữ số khác, chẳng hạn như chữ số La Mã, sang chữ số Ả Rập. *VIII* trở thành *8*.
      - Biểu tượng: Loại bỏ tất cả biểu tượng và ký tự đặc biệt. *Head&Shoulder* trở thành *HeadShoulder*.
      - Văn bản thành chữ thường: Chuyển đổi tất cả các ký tự thành chữ thường. *ALL CAPS and Title Case* trở thành *all caps and title case*.
+     - Loại (Điện thoại, Tên, Địa chỉ, Tổ chức): Chuẩn hóa tên, chức danh, số điện thoại, địa chỉ, v.v. 
      - Unicode sang ASCII: Chuyển đổi ký hiệu unicode thành ký tự ASCII. */u00B2* trở thành *2*.
-     - Chữ số: Chuyển đổi các hệ thống chữ số khác, chẳng hạn như chữ số La Mã, sang chữ số Ả Rập. *VIII* trở thành *8*.
-     - Loại ngữ nghĩa: Chuẩn hóa tên, chức danh, số điện thoại, địa chỉ, v.v. 
+     - Khoảng trắng: Loại bỏ tất cả các khoảng trắng. *Hello   World* trở thành *HelloWorld*.
 
    - **Độ chính xác**: Đặt mức độ chính xác để áp dụng cho điều kiện này. 
-     - **Căn bản**: Chọn từ *Thấp*, *Trung bình*, *Cao* và *Chính xác*. Chọn **Chính xác** để chỉ so khớp các bản ghi khớp 100%. Chọn một trong các cấp độ khác để khớp với các bản ghi không giống nhau 100%.
+     - **Căn bản**: Chọn từ *Thấp*, *Trung bình*, *Cao* và *Chính xác*. Lựa chọn **Chính xác** để chỉ khớp các bản ghi khớp 100 phần trăm. Chọn một trong các cấp độ khác để khớp với các bản ghi không giống nhau 100%.
      - **Tùy chỉnh**: Đặt tỷ lệ phần trăm mà bản ghi cần so khớp. Hệ thống sẽ chỉ khớp các bản ghi vượt qua ngưỡng này.
 
 1. Cung cấp **Tên** cho quy tắc.
@@ -92,7 +100,7 @@ Cảnh báo **Cần quy tắc** bên cạnh tên thực thể đề xuất rằn
 
 ### <a name="add-rules-to-a-match-pair"></a>Thêm quy tắc vào một cặp so khớp
 
-Các quy tắc so khớp đại diện cho các tập hợp các điều kiện. Để so khớp các thực thể theo điều kiện dựa trên nhiều thuộc tính, hãy thêm các quy tắc khác.
+Các quy tắc so khớp đại diện cho các tập hợp các điều kiện. Để đối sánh các thực thể theo điều kiện dựa trên nhiều thuộc tính, hãy thêm nhiều quy tắc hơn.
 
 1.  Chuyển đến **Dữ liệu** > **Hợp nhất** > **So khớp** rồi chọn **Thêm quy tắc** đối với thực thể mà bạn muốn quy tắc vào.
 
@@ -117,7 +125,7 @@ Bạn có thể sắp xếp lại thứ tự các thực thể cho các quy tắ
 
 Ngoài [quy tắc so khớp trên nhiều thực thể](#define-rules-for-match-pairs), bạn cũng có thể chỉ định các quy tắc loại bỏ trùng lặp. *Loại bỏ trùng lặp* là một quy trình khác khi so khớp các bản ghi. Nó xác định các bản ghi trùng lặp và hợp nhất chúng thành một bản ghi. Bản ghi nguồn được liên kết với bản ghi đã hợp nhất bằng các ID thay thế.
 
-Sau đó bản ghi đã loại bỏ trùng lặp này sẽ được sử dụng trong quá trình so khớp trên nhiều thực thể. Việc trùng lặp xảy ra trên các thực thể riêng lẻ và có thể được định cấu hình cho mọi thực thể được sử dụng trong các cặp so khớp.
+Các bản ghi trùng lặp được sử dụng trong quy trình đối sánh nhiều thực thể. Việc trùng lặp xảy ra trên các thực thể riêng lẻ và có thể được định cấu hình cho mọi thực thể được sử dụng trong các cặp đối sánh.
 
 Việc chỉ định các quy tắc chống trùng lặp là không bắt buộc. Nếu không có quy tắc nào như vậy được định cấu hình, các quy tắc do hệ thống xác định sẽ được áp dụng. Chúng kết hợp tất cả các bản ghi thành một bản ghi duy nhất trước khi chuyển dữ liệu thực thể sang so khớp nhiều thực thể để nâng cao hiệu suất.
 
@@ -134,7 +142,7 @@ Việc chỉ định các quy tắc chống trùng lặp là không bắt buộc
       - **Gần đây nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập gần đây nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
       - **Cách đây xa nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập cách đây xa nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
 
-   1. Tùy ý, chọn **Trình độ cao** để xác định các quy tắc khử trùng lặp trên các thuộc tính riêng lẻ của một thực thể. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng đối tượng để xem tất cả các thuộc tính của nó và xác định tùy chọn nào để sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây. 
+   1. Theo tùy chọn, để xác định các quy tắc loại bỏ trùng lặp trên các thuộc tính riêng lẻ của một thực thể, hãy chọn **Trình độ cao**. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng thực thể để xem tất cả các thuộc tính của nó và xác định tùy chọn nào sẽ sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây. 
  
       > [!div class="mx-imgBorder"]
       > ![Quy tắc chống trùng lặp bước 1.](media/match-selfconflation.png "Quy tắc chống trùng lặp bước 1")

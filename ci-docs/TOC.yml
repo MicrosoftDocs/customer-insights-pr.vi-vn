@@ -1,7 +1,23 @@
 - name: Dynamics 365 Customer Insights
   href: index.yml
-- name: Tổng quan sản phẩm
+- name: Tổng quan về sản phẩm
   href: overview.md
+- name: Danh mục học tập
+  items:
+    - name: Bắt đầu
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Thu thập dữ liệu
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Tạo hồ sơ khách hàng hợp nhất
+      href: /learn/modules/unified-customer-profile/
+    - name: Làm việc với thông tin chi tiết về khán giả
+      href: /learn/modules/working-with-customer-insights/
+    - name: Làm phong phú dữ liệu và đưa ra dự đoán
+      href: /learn/modules/enrich-data/
+    - name: Quản lý các kết nối bên ngoài
+      href: /learn/modules/configure-third-party-connections/
+    - name: Quản trị Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Dùng thử miễn phí
   items:
     - name: Đăng ký dùng thử miễn phí
@@ -30,16 +46,6 @@
           href: audience-insights/home.md
     - name: Làm việc với tài khoản công việc
       href: audience-insights/work-with-business-accounts.md
-    - name: Tìm hiểu các mô-đun
-      items:
-        - name: Thu thập dữ liệu
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Tạo hồ sơ khách hàng hợp nhất
-          href: /learn/modules/unified-customer-profile/
-        - name: Làm việc với ứng dụng
-          href: /learn/modules/working-with-customer-insights/
-        - name: Tăng cường dữ liệu và dự đoán
-          href: /learn/modules/enrich-data/
     - name: Nguồn dữ liệu
       items:
         - name: Tổng quan về nguồn dữ liệu
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Quyền và yêu cầu DSR
   href: dsr-rights-requests.md
+- name: Nhận hỗ trợ
+  href: /power-platform/admin/get-help-support

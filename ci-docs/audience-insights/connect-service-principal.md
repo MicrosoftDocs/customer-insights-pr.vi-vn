@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900315"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088173"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 
@@ -23,7 +23,7 @@ Bài viết này thảo luận về cách kết nối Dynamics 365 Customer Insi
 Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các quyền hạn chế. Thay vì để các ứng dụng đăng nhập với tư cách là người dùng có đầy đủ đặc quyền, Azure cung cấp các dịch vụ chính. Bạn có thể sử dụng các nguyên tắc dịch vụ để bảo mật [thêm hoặc chỉnh sửa thư mục Mô hình Dữ liệu Chung dưới dạng nguồn dữ liệu](connect-common-data-model.md) hoặc là [tạo hoặc cập nhật môi trường](create-environment.md).
 
 > [!IMPORTANT]
-> - Tài khoản Data Lake Storage sẽ sử dụng dịch vụ chính phải đã bật tính năng [không gian tên theo cấp bậc](/azure/storage/blobs/data-lake-storage-namespace).
+> - Tài khoản Data Lake Storage sẽ sử dụng dịch vụ chính phải là Gen2 và có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace). Tài khoản lưu trữ Azure Data Lake Gen1 không được hỗ trợ.
 > - Bạn cần quyền quản trị viên cho đăng ký Azure của mình để tạo dịch vụ chính.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Tạo một tên dịch vụ chính Azure cho Customer Insights

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892364"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088139"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Tạo môi trường trong thông tin chuyên sâu về đối tượng
 
@@ -28,7 +28,7 @@ Các tổ chức có thể tạo *hai* môi trường cho mọi giấy phép Cus
 
 ## <a name="create-a-new-environment"></a>Tạo môi trường mới
 
-Sau khi mua giấy phép đăng ký cho Customer Insights, quản trị viên toàn cầu của đối tượng thuê Microsoft 365 sẽ nhận được email mời họ tạo môi trường. Đi tới [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) để bắt đầu. 
+Sau khi mua giấy phép đăng ký cho Customer Insights, quản trị viên toàn cầu của Microsoft 365 người thuê nhận được một email mời họ tạo môi trường. Đi tới [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) để bắt đầu. 
 
 Trải nghiệm có hướng dẫn giúp bạn thực hiện các bước để thu thập tất cả thông tin cần thiết cho một môi trường mới. Bạn cần [quyền quản trị viên](permissions.md) trong thông tin chuyên sâu về đối tượng để tạo hoặc quản lý môi trường.
 
@@ -64,7 +64,7 @@ Bằng cách lưu dữ liệu vào Azure Data Lake Storage, bạn đồng ý r�
 > Customer Insights hiện hỗ trợ:
 > - Các thực thể được nhập từ luồng dữ liệu Power BI được lưu trữ trong Microsoft Dataverse - Data Lake được quản lý.  
 > - Tài khoản Azure Data Lake Storage từ cùng một vùng Azure mà bạn đã chọn khi tạo môi trường.
-> - Tài khoản Azure Data Lake Storage có *vùng tên theo cấp bậc* được bật.
+> - Azure Data Lake Storage tài khoản Gen2 và có *không gian tên phân cấp* đã được kích hoạt. Tài khoản lưu trữ Azure Data Lake Gen1 không được hỗ trợ.
 
 Đối với tùy chọn Azure Data Lake Storage, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng một dịch vụ Azure chính](connect-service-principal.md). Tên **Bộ chứa** sẽ là `customerinsights` và không thể thay đổi.
 
@@ -79,7 +79,7 @@ Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights v�
 Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu Dataverse được quản lý.
 
 > [!IMPORTANT]
-> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để có thể chia sẻ dữ liệu.
+> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để cho phép chia sẻ dữ liệu.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
 

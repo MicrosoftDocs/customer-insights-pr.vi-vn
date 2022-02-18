@@ -1,7 +1,7 @@
 ---
 title: Các tính năng mới sắp ra mắt
-description: 'Thông tin về các tính năng mới, cải tiến và sửa lỗi.'
-ms.date: 01/27/2022
+description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088311"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Cập nhật tháng 1 năm 2022
+
+Các bản cập nhật vào tháng 1 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Phân tích cảm xúc về phản hồi của khách hàng của bạn
+
+Thông tin chi tiết về khách hàng cung cấp một tính năng mới do AI hỗ trợ để tổng hợp tâm lý khách hàng và xác định các khía cạnh kinh doanh cụ thể làm cơ hội cho các cải tiến được nhắm mục tiêu. Bằng cách phân tích phản hồi bằng văn bản của khách hàng, bạn có thể nhận được thông tin chi tiết chính xác với chi phí thấp. Phân tích tình cảm được hỗ trợ bởi các mô hình Xử lý ngôn ngữ tự nhiên (NLP) tạo ra hai thông tin chi tiết có được cho mỗi ID khách hàng. Điểm tình cảm (từ –5 đến 5) và danh sách các khía cạnh kinh doanh có thể áp dụng. 
+
+Để biết thêm thông tin, hãy xem [Phân tích tình cảm trong phản hồi của khách hàng (Xem trước)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Cập nhật tháng 12 năm 2021
@@ -37,7 +53,7 @@ Thông tin chi tiết về khách hàng cung cấp tích hợp trực tiếp v�
 
 Sử dụng dữ liệu từ Microsoft Office 365 để làm phong phú thêm hồ sơ tài khoản khách hàng của bạn với thông tin chi tiết về các cam kết thông qua Office 365 ứng dụng. Dữ liệu tương tác bao gồm email và hoạt động cuộc họp, được tổng hợp ở cấp tài khoản. Ví dụ: số lượng email từ tài khoản doanh nghiệp hoặc số cuộc họp với tài khoản. Không có dữ liệu về người dùng cá nhân được chia sẻ. Tính năng làm giàu này có sẵn ở các khu vực sau: Vương quốc Anh, Châu Âu, Bắc Mỹ.
 
-Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng bằng dữ liệu tương tác (xem trước)](enrichment-office.md)
+Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng với dữ liệu tương tác (Xem trước)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Các tính năng hợp nhất dữ liệu nâng cao
 
@@ -102,9 +118,9 @@ Trình tạo thước đo cho phép bạn tạo các thước đo xung quanh tà
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Tạo phân khúc dựa trên tài khoản doanh nghiệp và hệ thống phân cấp của chúng
 
-Trình tạo phân đoạn cho phép bạn tạo các phân đoạn tài khoản doanh nghiệp có tùy chọn bao gồm thông tin liên hệ cho từng tài khoản trong phân đoạn. Nếu bạn đã thiết lập phân cấp tài khoản, bạn có thể sử dụng thông tin phân cấp tài khoản khi tạo phân đoạn. Để biết thêm thông tin, hãy xem [Tạo một phân đoạn mới](segment-builder.md#create-a-new-segment).
+Trình tạo phân đoạn cho phép bạn tạo các phân đoạn tài khoản doanh nghiệp có tùy chọn bao gồm thông tin liên hệ cho từng tài khoản trong một phân đoạn. Nếu bạn đã thiết lập phân cấp tài khoản, bạn có thể sử dụng thông tin phân cấp tài khoản khi tạo phân đoạn. Để biết thêm thông tin, hãy xem [Tạo một phân đoạn mới](segment-builder.md#create-a-new-segment).
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Giữ lại các tài khoản doanh nghiệp của bạn với những hiểu biết sâu sắc về xu hướng biến động của chúng
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Giữ lại các tài khoản doanh nghiệp của bạn với thông tin chi tiết sâu sắc về xu hướng biến động của chúng
 
 Mô hình churn dự đoán của khách hàng hiện cũng hỗ trợ tài khoản doanh nghiệp. Bạn có thể đánh giá rủi ro ngừng hoạt động không chỉ đối với tài khoản mà còn đối với sự kết hợp của tài khoản và danh mục sản phẩm hoặc dịch vụ mà họ mua từ bạn. Việc bổ sung này giúp bạn hiểu liệu một tài khoản có nhiều khả năng ngừng mua hàng của bạn nói chung hay chỉ đối với một danh mục hàng hóa hoặc dịch vụ nhất định. Để giúp bạn sử dụng thêm mô hình AI này, nó cũng liệt kê các lý do khiến tài khoản có khả năng bị gián đoạn. Để biết thêm thông tin, hãy xem [Giao dịch churn dự đoán (xem trước)](predict-transactional-churn.md).
 

@@ -9,24 +9,28 @@ metadata:
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 3764ed7c7fc4bd0dfa89e8a574617a1eb6273c2e36f6e5daa5aeca2c919ba7b8
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 03/02/2022
+  ms.openlocfilehash: d24ed34b794e77a52ceec1a4411440a88430a369
+  ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7031407"
+  ms.lasthandoff: 02/03/2022
+  ms.locfileid: "8088265"
 landingContent:
 - title: Giới thiệu thông tin chi tiết về đối tượng
   linkLists:
   - linkListType: overview
     links:
-    - text: Tổng quan sản phẩm
+    - text: Tổng quan về sản phẩm
       url: overview.md
     - text: Tính năng mới và cập nhật
       url: whats-new-audience-insights.md
     - text: Khám phá thông tin chi tiết về đối tượng
       url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
+  - linkListType: learn
+    links:
+    - text: Lộ trình học thông tin chi tiết về khách hàng
+      url: /learn/paths/build-customer-insights/
 - title: Hợp nhất dữ liệu
   linkLists:
   - linkListType: how-to-guide
@@ -37,17 +41,25 @@ landingContent:
       url: data-unification.md
     - text: Hiểu rõ các thực thể
       url: entities.md
-- title: Làm phong phú và tinh chỉnh dữ liệu
+  - linkListType: learn
+    links:
+    - text: Tạo một hồ sơ thống nhất
+      url: /learn/modules/unified-customer-profile/
+- title: Tải thông tin chuyên sâu
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Làm phong phú hồ sơ khách hàng
+    - text: Tăng cường thông tin hồ sơ khách hàng
       url: enrichment-hub.md
     - text: Đặt cấu hình mối quan hệ
       url: relationships.md
-    - text: Liệt kê hoạt động dành cho khách hàng
-      url: activities.md
-- title: Tải thông tin chuyên sâu
+    - text: Hoàn thành dữ liệu với các dự đoán
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Làm phong phú và dự đoán dữ liệu
+      url: /learn/modules/enrich-data/
+- title: Xây dựng dựa trên dữ liệu của bạn
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -55,8 +67,12 @@ landingContent:
       url: segments.md
     - text: Tạo giá trị đo
       url: measures.md
-    - text: Hoàn thành dữ liệu với các dự đoán
-      url: predictions.md
+    - text: Liệt kê hoạt động dành cho khách hàng
+      url: activities.md
+  - linkListType: learn
+    links:
+    - text: Làm việc với ứng dụng
+      url: /learn/modules/working-with-customer-insights/
 - title: Xuất dữ liệu khách hàng
   linkLists:
   - linkListType: how-to-guide
@@ -67,6 +83,10 @@ landingContent:
       url: customer-card-add-in.md
     - text: Trình kết nối Power BI
       url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Quản lý các kết nối bên ngoài
+      url: /learn/modules/configure-third-party-connections/
 - title: Quản trị ứng dụng
   linkLists:
   - linkListType: how-to-guide
@@ -77,3 +97,7 @@ landingContent:
       url: permissions.md
     - text: Quản lý nhiều môi trường
       url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Quản trị Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
