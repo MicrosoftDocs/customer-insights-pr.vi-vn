@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: vi-VN
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008791"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Phân tích tình cảm trong phản hồi của khách hàng (Xem trước)
 
 Ngày nay, khách hàng mong đợi những sản phẩm, dịch vụ và trải nghiệm chất lượng cao. Đặc biệt là những khách hàng chia sẻ phản hồi của họ. Rất khó khăn cho các tổ chức khi phân tích khối lượng dữ liệu ngày càng tăng mà không làm giảm độ chính xác và chi phí lao động cao hơn. Dynamics 365 Customer Insights đưa ra mô hình phân tích tình cảm cho phản hồi của khách hàng cho phép các tổ chức phân tích dữ liệu của họ chính xác hơn và với chi phí thấp hơn.
