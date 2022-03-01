@@ -1,27 +1,26 @@
 ---
-title: Bắt đầu với SDK Android
-description: Tìm hiểu cách cá nhân hóa và chạy SDK Android
+title: Bắt đầu với Android SDK
+description: Tìm hiểu cách cá nhân hóa và chạy Android SDK
 author: britl
 ms.reviewer: mhart
-ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977601"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655368"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Bắt đầu với SDK Android
+# <a name="get-started-with-the-android-sdk"></a>Bắt đầu với Android SDK
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Hướng dẫn này sẽ giúp bạn thực hiện quá trình trang bị cho ứng dụng Android bằng SDK thông tin chi tiết về tương tác Dynamics 365 Customer Insights. Bạn sẽ bắt đầu thấy các sự kiện trong cổng thông tin của mình sau 5 phút hoặc sớm hơn.
+Hướng dẫn này hướng dẫn bạn quy trình sửa đổi ứng dụng Android của bạn bằng SDK thông tin chi tiết về mức độ tương tác Dynamics 365 Customer Insights. Bạn sẽ bắt đầu thấy các sự kiện trong cổng thông tin của mình sau 5 phút hoặc sớm hơn.
 
 ## <a name="configuration-options"></a>Tùy chọn cấu hình
 Các tùy chọn cấu hình sau có thể được chuyển tới SDK:
@@ -32,12 +31,12 @@ Các tùy chọn cấu hình sau có thể được chuyển tới SDK:
 
 - Android Studio
 
-- Cấp độ API Android tối thiểu: 16 (Jelly Bean)
+- Cấp độ API tối thiểu Android: 16 (Jelly Bean)
 
 - Khóa thu thập dữ liệu (xem phần bên dưới để biết hướng dẫn về cách lấy)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Tích hợp SDK vào ứng dụng của bạn
-Bắt đầu quá trình bằng cách chọn một không gian làm việc, chọn nền tảng di động Android và tải xuống SDK Android.
+Bắt đầu quá trình bằng cách chọn không gian làm việc, chọn nền tảng di động Android và tải xuống Android SDK.
 
 - Sử dụng trình chuyển đổi không gian làm việc trong ngăn điều hướng bên trái để chọn không gian làm việc của bạn.
 
@@ -47,7 +46,7 @@ Bắt đầu quá trình bằng cách chọn một không gian làm việc, ch�
 
 ## <a name="configure-the-sdk"></a>Đặt cấu hình SDK
 
-Sau khi tải xuống SDK, bạn có thể làm việc với SDK đó trong Android Studio để kích hoạt và xác định sự kiện. Có hai cách để làm vậy:
+Sau khi tải xuống SDK, bạn có thể làm việc với SDK trong Android Studio để bật và xác định các sự kiện. Có hai cách để làm vậy:
 ### <a name="option-1-use-jitpack-recommended"></a>Tùy chọn 1: Sử dụng JitPack (khuyến nghị)
 1. Thêm kho lưu trữ JitPack vào `build.gradle` gốc của bạn:
     ```gradle
@@ -68,7 +67,7 @@ Sau khi tải xuống SDK, bạn có thể làm việc với SDK đó trong Andr
     ```
 
 ### <a name="option-2-use-download-link"></a>Tùy chọn 2: Sử dụng liên kết tải xuống
-1. Tải xuống [thông tin chi tiết về tương tác SDK Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) và đặt tệp `eiandroidsdk-debug.aar` vào thư mục `libs`.
+1. Tải về [thông tin chi tiết về mức độ tương tác Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), và đặt`eiandroidsdk-debug.aar` tập tin trong`libs` thư mục.
 
 1. Mở tệp `build.gradle` cấp độ dự án của bạn và thêm các đoạn mã sau:
     ```gradle

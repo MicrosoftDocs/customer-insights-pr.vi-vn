@@ -4,17 +4,17 @@ description: Cách sử dụng báo cáo phễu để hiểu cách đối tượ
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/21/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558968"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498668"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Tạo và quản lý báo cáo phễu
 
@@ -163,23 +163,13 @@ Bạn có thể thay đổi tên của báo cáo phễu, xóa hoặc sửa đổ
 
 Thông tin chi tiết về mức độ tương tác hiện cung cấp thông tin chi tiết về phễu cho khách hàng. Sử dụng thông tin chi tiết về phễu để hiểu sâu hơn về hành vi của khách hàng về các bước trong báo cáo phễu của bạn. Khi bạn tạo và lưu báo cáo phễu mới, thông tin chi tiết về phễu sẽ tự động được tạo cho báo cáo của bạn. 
 
-:::image type="content" source="media/funnel-insights.png" alt-text="Thông tin chi tiết về phễu.":::
-
-> [!NOTE]
-> Chỉ có thể tạo thông tin chi tiết về phễu cho các bước trong phễu **không** bao gồm các kích thước tùy chỉnh. Để tạo thông tin chi tiết về phễu cho tất cả các bước trong phễu của bạn, hãy sử dụng các thứ nguyên có thể dùng được ngay của thông tin chi tiết về tương tác để tạo các bước trong phễu của bạn. 
-
 Bạn có thể xem thông tin chi tiết về phễu từ các danh mục sau, ở cả cấp độ chính và cấp độ bước: 
 
- - Tỉ lệ chuyển đổi
- -    Tỷ lệ chuyển đổi từ Thanh toán đến Mua là 22%.
+ - Tỉ lệ chuyển đổi 
  - Thời gian chuyển tiếp 
- -    Thời gian chuyển tiếp trung bình từ Giỏ hàng đến Thanh toán là 23 phút. 
  - Thời gian hoàn thành 
- -    Lượng thời gian trung bình mà khách hàng cần để hoàn thành phễu là 47 phút. 
 
 Sử dụng những thông tin chi tiết này để khám phá sâu hơn về hành vi của khách hàng cũng như hiểu rõ hơn về các điểm giảm và chuyển đổi cho báo cáo phễu của bạn. 
-
-Để so sánh thông tin chi tiết qua các bước khác nhau, hãy chọn **Xem phân tích bước** hoặc **So sánh với các bước khác** từ thẻ thông tin chi tiết. Những thẻ này sẽ hiển thị biểu đồ thanh so sánh số liệu của từng bước trong phễu. 
 
 Thông tin chi tiết về phễu được tính toán lại sau mỗi 24 giờ hoặc khi bạn **Lưu** báo cáo phễu của bạn. 
 

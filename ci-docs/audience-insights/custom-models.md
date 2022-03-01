@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967681"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881810"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
 
@@ -40,8 +40,6 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
    > [!NOTE]
    > Dữ liệu được chuyển giữa các phiên bản Customer Insights của bạn và các dịch vụ web Azure hoặc quy trình đã chọn trong quy trình làm việc. Khi bạn chuyển dữ liệu sang dịch vụ Azure, vui lòng đảm bảo rằng dịch vụ được đặt cấu hình để xử lý dữ liệu theo cách thức và vị trí cần thiết để tuân thủ mọi yêu cầu pháp lý hoặc quy định đối với dữ liệu đó cho tổ chức của bạn.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Thêm quy trình mới
 

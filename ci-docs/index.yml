@@ -4,17 +4,17 @@ metadata:
   author: m-hartmann
   description: Tìm các bài viết có liên quan để bắt đầu với nội dung trợ giúp.
   ms.author: mhart
-  ms.date: 03/02/2022
+  ms.date: 10/29/2020
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
+  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
   ms.translationtype: HT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107225"
+  ms.lasthandoff: 03/15/2021
+  ms.locfileid: "5598507"
 title: Tài liệu Dynamics 365 Customer Insights
-summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và chức năng của Customer Insights.
+summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và kiến thức cơ bản của Customer Insights.
 landingContent:
 - title: Làm quen với Customer Insights
   linkLists:
@@ -23,41 +23,19 @@ landingContent:
     - text: Tổng quan về Customer Insights
       url: overview.md
     - text: Kế hoạch phát hành
-      url: /dynamics365/release-plans/
-    - text: Khám phá CDP
-      url: https://dynamics.microsoft.com/ai/customer-insights/
-  - linkListType: learn
-    links:
-    - text: Lộ trình học thông tin chi tiết về khách hàng
-      url: /learn/paths/build-customer-insights/
-- title: Bắt đầu với Customer Insights
+      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Truy cập môi trường của bạn
+      url: https://home.ci.ai.dynamics.com/
+- title: Bắt đầu với thông tin chi tiết về đối tượng
   linkLists:
   - linkListType: get-started
     links:
     - text: Đăng ký dùng thử
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Tính năng mới trong thông tin chi tiết về đối tượng
+    - text: Tính năng mới
       url: audience-insights/whats-new-audience-insights.md
-    - text: Hướng dẫn Bắt đầu nhanh
-      url: audience-insights/get-started.md
-  - linkListType: learn
-    links:
-    - text: Bắt đầu
-      url: /learn/modules/get-started-customer-data-platform/
-- title: Quản trị thông tin chi tiết về đối tượng
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Đặt cấu hình hệ thống
-      url: audience-insights/system.md
-    - text: Xác định quyền của người dùng
-      url: audience-insights/permissions.md
-    - text: Quản lý nhiều môi trường
-      url: audience-insights/manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Quản trị Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+    - text: Tài liệu thông tin chi tiết về đối tượng
+      url: audience-insights/index.yml
 - title: Liên lạc
   linkLists:
   - linkListType: overview
@@ -66,18 +44,18 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2073991
     - text: Chia sẻ ý tưởng của bạn
       url: https://go.microsoft.com/fwlink/?linkid=2074172
-    - text: Báo cáo một sự cố
+    - text: Báo cáo sự cố
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Chia sẻ dữ liệu giữa các tính năng
+- title: Hướng dẫn thông tin chi tiết về đối tượng
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: tutorial
     links:
-    - text: Tạo liên kết giữa các khả năng
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Tạo phân khúc để sử dụng trong báo cáo
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Sử dụng thuộc tính hồ sơ để phân tích tương tác
-      url: engagement-insights/curate-dimensions.md
+    - text: Tạo môi trường mới
+      url: audience-insights/home.md
+    - text: Tạo hồ sơ khách hàng hợp nhất
+      url: /learn/modules/unified-customer-profile/
+    - text: Làm việc với ứng dụng
+      url: /learn/modules/working-with-customer-insights/
 - title: Xuất dữ liệu thông tin chi tiết về đối tượng
   linkLists:
   - linkListType: how-to-guide
@@ -88,6 +66,16 @@ landingContent:
       url: audience-insights/customer-card-add-in.md
     - text: Trình kết nối Power BI
       url: audience-insights/export-power-bi.md
+- title: Quản trị thông tin chi tiết về đối tượng
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Đặt cấu hình hệ thống
+      url: audience-insights/system.md
+    - text: Xác định quyền của người dùng
+      url: audience-insights/permissions.md
+    - text: Quản lý nhiều môi trường
+      url: audience-insights/manage-environments.md
 - title: Giới thiệu thông tin chi tiết về tương tác (bản xem trước)
   linkLists:
   - linkListType: overview

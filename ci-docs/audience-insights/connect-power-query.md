@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
-ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8092098"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7935004"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với một Power Query nguồn dữ liệu
 
@@ -30,7 +30,7 @@ Thêm nguồn dữ liệu dựa trên Power Query trình kết nối thường t
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Chọn **Microsoft Power Query**.
+1. Lựa chọn **Microsoft Power Query**, sau đó chọn **Kế tiếp**.
 
 1. Cung cấp một **Tên** cho nguồn dữ liệu và chọn **Tiếp theo** để tạo nguồn dữ liệu.
 
@@ -47,12 +47,12 @@ Thêm nguồn dữ liệu dựa trên Power Query trình kết nối thường t
 
 1. Bạn cũng có thể chuyển đổi dữ liệu của bạn. Chọn một thực thể để chỉnh sửa hoặc chuyển đổi. Sử dụng các tùy chọn trong Power Query cửa sổ để áp dụng các phép biến đổi. Mỗi chuyển đổi được liệt kê dưới **Các bước đã áp dụng**. Power Query cung cấp nhiều tùy chọn chuyển đổi được xây dựng trước. Để biết thêm thông tin, hãy xem [Power Query Sự biến đổi](/power-query/power-query-what-is-power-query#transformations).
 
+1. Bạn có thể thêm các thực thể bổ sung vào nguồn dữ liệu của mình bằng cách chọn **Lấy dữ liệu** trong hộp thoại **Chỉnh sửa truy vấn**.
+
    Chúng tôi khuyên bạn nên sử dụng các biến đổi sau:
 
-   - Nếu bạn đang nhập dữ liệu từ tệp CSV, hàng đầu tiên thường chứa các tiêu đề. Đi đến **Biến đổi** và chọn **Sử dụng hàng đầu tiên làm tiêu đề**.
-   - Đảm bảo loại dữ liệu được đặt phù hợp. Ví dụ: đối với các trường ngày, hãy chọn một loại ngày.
-
-1. Để thêm các thực thể bổ sung vào nguồn dữ liệu của bạn trong **Chỉnh sửa truy vấn** hộp thoại, đi tới **Trang chủ** và chọn **Lấy dữ liệu**.
+   - Nếu bạn đang nhập dữ liệu từ tệp CSV, hàng đầu tiên thường chứa các tiêu đề. Đi đến **Bảng biến đổi** và chọn **Sử dụng tiêu đề làm hàng đầu tiên**.
+   - Đảm bảo loại dữ liệu được đặt phù hợp.
 
 1. Lựa chọn **Cứu** ở cuối Power Query cửa sổ để lưu các phép biến đổi. Sau khi lưu, bạn sẽ thấy nguồn dữ liệu của mình trên **Dữ liệu** > **Nguồn dữ liệu**.
 

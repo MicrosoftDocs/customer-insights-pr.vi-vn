@@ -1,7 +1,7 @@
 ---
 title: Dự đoán đề xuất sản phẩm
 description: Dự đoán các sản phẩm mà khách hàng có khả năng mua hoặc tương tác.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967865"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494565"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Dự đoán đề xuất sản phẩm (xem trước)
 
@@ -54,7 +54,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 > [!NOTE]
 > - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Định nghĩa về một giao dịch là khá linh hoạt. Bất kỳ dữ liệu nào mô tả sự tương tác giữa người dùng với sản phẩm đều có thể hoạt động như một dữ liệu đầu vào. Ví dụ: mua một sản phẩm, tham gia một lớp học hoặc tham dự một sự kiện.
-> - Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng, hãy kết hợp chúng thành Power Query trước khi nhập dữ liệu.
+> - Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng, hãy liên kết chúng trong Power Query trước khi nhập dữ liệu.
 > - Nếu đơn hàng và chi tiết đơn hàng là các thực thể khác nhau, hãy liên kết chúng trước khi sử dụng trong mô hình. Mô hình không hoạt động chỉ với ID đơn hàng hoặc ID biên nhận trong một thực thể.
 
 
@@ -79,11 +79,11 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 1. Đặt **Số lượng sản phẩm** bạn muốn giới thiệu cho khách hàng. Giá trị này phụ thuộc vào cách phương thức phân phối của bạn điền vào dữ liệu. Nếu bạn có thể đề xuất ba sản phẩm, hãy đặt giá trị này cho phù hợp.
    
    >[!TIP]
-   > Bạn có thể chọn **Lưu bản nháp** bất kỳ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán dự thảo trong tab **Dự đoán của tôi**.
+   > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán dự thảo trong tab **Dự đoán của tôi**.
 
-1. Chọn xem bạn có muốn đưa các sản phẩm mà khách hàng đã mua gần đây vào **Các giao dịch mua lặp lại dự kiến** cánh đồng.
+1. Chọn xem bạn muốn **Đề xuất sản phẩm khách hàng đã mua gần đây hay không**.
 
-1. Đặt **Cửa sổ nhìn lại**. Cài đặt này chỉ định khung thời gian mà mô hình xem xét trước khi giới thiệu lại sản phẩm cho người dùng. Ví dụ: cho biết một khách hàng mua máy tính xách tay hai năm một lần. Cửa sổ này sẽ xem xét lịch sử mua hàng trong hai năm qua và nếu tìm thấy một mặt hàng, thì mặt hàng đó sẽ được lọc khỏi các đề xuất.
+1. Nếu bạn đã chọn *không* giới thiệu các sản phẩm đã mua gần đây, hãy đặt **Khoảng thời gian nhìn lại**. Cài đặt này chỉ định khung thời gian mà mô hình xem xét trước khi giới thiệu lại sản phẩm cho người dùng. Ví dụ: cho biết một khách hàng mua máy tính xách tay hai năm một lần. Cửa sổ này sẽ xem xét lịch sử mua hàng trong hai năm qua và nếu tìm thấy một mặt hàng, thì mặt hàng đó sẽ được lọc khỏi các đề xuất.
 
 1. Chọn **Tiếp theo**
 

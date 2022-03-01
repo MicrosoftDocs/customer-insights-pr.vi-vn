@@ -4,17 +4,17 @@ description: Cách tạo, chỉnh sửa, xóa phân khúc và nơi sử dụng p
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623613"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036174"
 ---
 # <a name="view-and-create-segments"></a>Xem và tạo phân khúc
 
@@ -44,27 +44,22 @@ Phần này mô tả cách tạo *phân khúc trống* từ đầu.
 
 1. Chọn **Phân khúc mới**.
 
-1. Trong **Thư viện tài nguyên**, chọn (+) bên cạnh thuộc tính mà bạn muốn lọc. Hiện tại, bạn chỉ có thể tạo phân khúc dựa trên thứ nguyên.
+1. Trong **Thư viện tài nguyên**, hãy chọn thuộc tính bạn muốn lọc theo. Hiện tại, bạn chỉ có thể tạo phân khúc dựa trên thứ nguyên.
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="Tạo phân khúc mới.":::
-
-1. Trong phần **Quy tắc**, chọn một toán tử và giá trị cho thuộc tính đã chọn. Các toán tử sau được hỗ trợ.
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="Chọn một toán tử cho phân khúc mới của bạn.":::
-
+1. Chọn một toán tử và một giá trị cho thuộc tính đã chọn. Các toán tử sau được hỗ trợ.
    - **là**: yêu cầu khớp chính xác để bao gồm các giá trị. Sử dụng **bằng** đối một giá trị duy nhất hoặc **bất kỳ trong số** để bao gồm nhiều giá trị.
    - **không phải là**: yêu cầu khớp chính xác để loại trừ các giá trị. Sử dụng **bằng** đối một giá trị duy nhất hoặc **bất kỳ trong số** để bao gồm nhiều giá trị.
    - **bắt đầu bằng**: một chuỗi mà các giá trị khớp bắt đầu bằng.
    - **kết thúc bằng**: một chuỗi mà các giá trị khớp kết thúc bằng.
    - **chứa**: một chuỗi có trong các giá trị khớp.
 
-1. Để thêm nhiều điều kiện hơn vào một nhóm, bạn có thể sử dụng các toán tử logic. Các thuộc tính dự kiến được coi như yếu tố khi sử dụng các toán tử tập hợp.
+1. Để thêm nhiều điều kiện vào một nhóm, bạn có thể sử dụng 2 toán tử logic. Các thuộc tính dự kiến được coi như yếu tố khi sử dụng các toán tử tập hợp.
    - Toán tử **AND**: Cả hai điều kiện phải được thỏa mãn như một phần của quá trình tạo phân khúc. Tùy chọn này hữu ích nhất khi bạn xác định các điều kiện trên các thực thể khác nhau.
    - Toán tử **OR**: Một trong các điều kiện cần phải được thỏa mãn như một phần của quá trình tạo phân khúc. Tùy chọn này hữu ích nhất khi bạn xác định nhiều điều kiện cho cùng một thực thể.
 
 1. Chọn **Lưu** và đặt tên cho phân khúc. 
 
-Phân khúc sẽ được liệt kê trên trang **Phân khúc** và bạn có thể áp dụng cho tất cả các báo cáo và phễu trong không gian làm việc.
+Phân khúc đã lưu sẽ xuất hiện trên trang Phân khúc và bạn có thể áp dụng phân khúc này cho tất cả các báo cáo và phễu trong không gian làm việc.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Sử dụng phân khúc trong báo cáo hoặc phễu
 
@@ -72,7 +67,7 @@ Bạn có thể áp dụng phân khúc cho báo cáo hoặc phễu để lọc c
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Báo cáo lượt xem trang với danh sách thả xuống mở rộng để chọn phân khúc sẽ áp dụng.":::
 
-Để áp dụng phân khúc, hãy mở báo cáo hoặc phễu. Chọn **+ Thêm điều kiện** rồi chọn **Lọc theo phân khúc**. Chọn phân khúc từ danh sách bạn muốn áp dụng. Phân khúc bạn chọn sẽ được áp dụng cho báo cáo. Nếu biểu đồ không hỗ trợ phân khúc đó, thông báo lỗi sẽ xuất hiện. Để biết thêm thông tin, hãy xem [Tạo và quản lý báo cáo kênh](funnel-reports.md).
+Để áp dụng phân khúc, hãy mở báo cáo hoặc phễu. Chọn **Thêm điều kiện** rồi chọn **Lọc theo phân khúc**. Chọn phân khúc từ danh sách bạn muốn áp dụng. Phân khúc bạn chọn sẽ được áp dụng cho báo cáo. Nếu biểu đồ không hỗ trợ phân khúc đó, thông báo lỗi sẽ xuất hiện.
  
 Bạn có thể áp dụng *tối đa 3 phân khúc* cho một báo cáo hoặc phễu.
 
@@ -96,7 +91,5 @@ Bạn có thể áp dụng *tối đa 3 phân khúc* cho một báo cáo hoặc 
 1. Trong danh sách phân khúc, hãy chọn **Thêm [...]**. 
 1. Chọn **Xóa** từ danh sách thả xuống.
 1. Chọn **Xóa** để xác nhận.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

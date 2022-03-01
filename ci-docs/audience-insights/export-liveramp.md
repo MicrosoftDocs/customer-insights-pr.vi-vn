@@ -1,39 +1,37 @@
 ---
 title: Trình kết nối LiveRamp
-description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang LiveRamp.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Tìm hiểu cách xuất dữ liệu sang LiveRamp.
+ms.date: 12/02/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: kishorem-ms
-ms.author: kishorem
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 86aa8c66a47ee61741082c95f05d2e5ce3f06f35
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618961"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667210"
 ---
-# <a name="export-segments-to-liverampreg-preview"></a>Xuất phân khúc sang LiveRamp&reg; (bản xem trước)
+# <a name="liverampreg-connector-preview"></a>Trình kết nối LiveRamp&reg; (xem trước)
 
-Kích hoạt dữ liệu của bạn trong LiveRamp để kết nối với hơn 500 nền tảng kỹ thuật số, mạng xã hội và TV. Làm việc với dữ liệu của bạn trong LiveRamp nhắm mục tiêu, chặn và cá nhân hóa chiến dịch quảng cáo.
+Kích hoạt dữ liệu của bạn trong LiveRamp để kết nối với hơn 500 nền tảng trên hệ sinh thái kỹ thuật số, mạng xã hội và TV. Làm việc với dữ liệu của bạn trong LiveRamp nhắm mục tiêu, chặn và cá nhân hóa chiến dịch quảng cáo.
 
-## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
+## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Bạn phải có gói đăng ký LiveRamp thì mới dùng được trình kết nối này.
 - Để đăng ký, hãy trực tiếp [liên hệ với LiveRamp](https://liveramp.com/contact/). [Tìm hiểu thêm về LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="set-up-connection-to-liveramp"></a>Thiết lập kết nối với LiveRamp
+## <a name="connect-to-liveramp"></a>Kết nối với LiveRamp
 
-1. Đi đến **Quản trị viên** > **Kết nối**.
+1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Nơi xuất đích**.
 
-1. Chọn **Thêm kết nối** rồi chọn **LiveRamp** để đặt cấu hình kết nối.
+1. Trong ngăn xếp **LiveRamp**, chọn **Thiết lập**.
 
-1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
-
-1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Trong trường **Tên hiển thị**, hãy đặt tên cho vị trí để dễ nhận diện.
 
 1. Điền **Tên người dùng** và **Mật khẩu** cho tài khoản LiveRamp Secure FTP (SFTP) của bạn.
 Thông tin đăng nhập này có thể khác với thông tin đăng nhập LiveRamp Onboarding.
@@ -42,25 +40,15 @@ Thông tin đăng nhập này có thể khác với thông tin đăng nhập Liv
 
 1. Sau khi xác minh xong, hãy đồng ý với **Quyền riêng tư và tuân thủ dữ liệu** bằng cách đánh dấu vào ô **Tôi đồng ý**.
 
-1. Chọn **Lưu** để hoàn thành kết nối.
+1. Chọn **Tiếp** để thiết lập trình kết nối LiveRamp.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
-
-Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
-
-1. Đi tới **Dữ liệu** > **Nội dung xuất**.
-
-1. Để tạo một nội dung xuất mới, hãy chọn **Thêm đích**.
-
-1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần LiveRamp. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
+## <a name="configure-the-connector"></a>Đặt cấu hình trình kết nối
 
 1. Trong trường **Chọn khóa định danh**, chọn **Email**,  **Tên và địa chỉ** hoặc **Điện thoại** để gửi phương án định danh cho LiveRamp.
-   > [!div class="mx-imgBorder"]
-   > ![Trình kết nối LiveRamp khi ánh xạ thuộc tính.](media/export-liveramp-segments.png "Trình kết nối LiveRamp khi ánh xạ thuộc tính")
 
-1. Ánh xạ các thuộc tính tương ứng từ thực thể *Khách hàng* cho số nhận dạng khóa đã chọn.
+1. Ánh xạ các thuộc tính tương ứng từ thực thể khách hàng hợp nhất của bạn cho khóa định danh đã chọn.
 
-1. Chọn **Thêm thuộc tính** để ánh xạ thêm các thuộc tính cho mục đích gửi đến LiveRamp.
+1. Chọn **Thêm thuộc tính** để ánh xạ thêm các thuộc tính cần gửi đến LiveRamp.
 
    > [!TIP]
    > Khi gửi thêm thuộc tính khóa định danh đến LiveRamp, bạn sẽ có tỷ lệ khớp cao hơn.
@@ -69,14 +57,15 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Chọn **Lưu**.
 
-Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
+> [!div class="mx-imgBorder"]
+> ![Trình kết nối LiveRamp khi ánh xạ thuộc tính](media/export-liveramp-segments.png "Trình kết nối LiveRamp khi ánh xạ thuộc tính")
 
-Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
+## <a name="export-the-data"></a>Xuất dữ liệu
 
+Tác vụ xuất sẽ bắt đầu ngay khi mọi điều kiện tiên quyết đã được đáp ứng. Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.
+Khi quá trình xuất hoàn thành, bạn có thể đăng nhập vào LiveRamp Onboarding để kích hoạt và phân phối dữ liệu.
 
-## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
+## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Liveramp, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Liveramp đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

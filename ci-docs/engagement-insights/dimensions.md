@@ -4,17 +4,17 @@ description: Cách tạo, chỉnh sửa và xóa thứ nguyên.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623658"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034023"
 ---
 # <a name="view-and-create-dimensions"></a>Xem và tạo thứ nguyên
 
@@ -22,7 +22,7 @@ ms.locfileid: "7623658"
 
 Thứ nguyên là thuộc tính của sự kiện, có thể mô tả, lọc hoặc nhóm dữ liệu. Nếu đang chạy quảng cáo tiếp thị trên trang web của mình, bạn có thể sử dụng các thứ nguyên để sắp xếp khách truy cập theo người dùng mới và người dùng cũ.  
 
-Thông tin chuyên sâu về tương tác bao gồm các thứ nguyên có sẵn (OOB) cho các thuộc tính sự kiện. Ví dụ bao gồm:
+Thông tin chuyên sâu về tương tác bao gồm các thứ nguyên có sẵn cho các thuộc tính sự kiện. Ví dụ bao gồm:
 
 - Tên trình duyệt
 - Tên trang
@@ -44,21 +44,17 @@ Thứ nguyên dựa trên các thuộc tính sự kiện hiện có. Khi bạn s
 Ngoài thứ nguyên do hệ thống tạo, quản trị viên môi trường và không gian làm việc có thể tạo thứ nguyên tùy chỉnh. Thứ nguyên tùy chỉnh dựa trên các thuộc tính mặc định của sự kiện cơ sở hoặc có thể sử dụng [các thuộc tính tùy chỉnh của sự kiện](advanced-SDK-implementation.md).
 
 1. Chuyển đến phần **Dữ liệu** > **Thứ nguyên**.
-1. Chọn **Kích thước mới**.
+1. Chọn **Thêm thứ nguyên**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Thêm thứ nguyên vào sự kiện.":::
 
 1. Trong ngăn **Tạo thứ nguyên**, hãy chọn một thuộc tính để làm cơ sở cho thứ nguyên. Danh sách thuộc tính sẽ hiển thị tất cả các thuộc tính trong không gian làm việc chưa được gán cho một thứ nguyên.
-   
-   :::image type="content" source="media/create-new-dimension.png" alt-text="Tạo thứ nguyên mới.":::
-      
-3. Nhập tên trong hộp **Tên hiển thị**. Bạn có thể tùy ý thêm **Mô tả**.
-4. Chọn **Tạo** để lưu thứ nguyên. Có thể mất đến một phút trước khi bạn có thể sử dụng thứ nguyên này trong [báo cáo tùy chỉnh](custom-reports.md) hoặc [phân khúc](segments.md). 
+1. Nhập tên trong hộp **Tên hiển thị**. Bạn có thể tùy ý thêm phần mô tả.
+1. Chọn **Tạo** để lưu thứ nguyên. Có thể mất đến một phút trước khi bạn có thể sử dụng thứ nguyên này trong [báo cáo tùy chỉnh](custom-reports.md) hoặc [phân khúc](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Chỉnh sửa thứ nguyên
 
-Bạn có thể thay đổi tên và phần mô tả của thứ nguyên. Bạn chỉ có thể chỉnh sửa thứ nguyên do người dùng tạo chứ không thể chỉnh sửa thứ nguyên hệ thống.
-
+Bạn có thể thay đổi tên và phần mô tả của thứ nguyên.
 
 1. Chuyển đến phần **Dữ liệu** > **Thứ nguyên**.
 1. Chọn thứ nguyên mà bạn muốn xóa.

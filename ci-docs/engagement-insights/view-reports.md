@@ -4,17 +4,17 @@ description: Sử dụng các báo cáo có sẵn để xem hoạt động theo 
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 10/01/2021
+ms.date: 06/18/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582948"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036674"
 ---
 # <a name="view-reports"></a>Xem báo cáo
 
@@ -92,18 +92,12 @@ Báo cáo dành cho di động được nhóm theo hạng mục người dùng, 
 
 - **Vị trí** hiển thị thông tin về người dùng ứng dụng theo quốc gia, khu vực và thành phố.
 
-## <a name="filter-by-time-or-date-range"></a>Lọc theo phạm vi thời gian hoặc ngày
+## <a name="filter-by-time-or-value"></a>Lọc theo thời gian hoặc giá trị
 
-Bạn có thể chọn khung thời gian hoặc phạm vi ngày trong báo cáo dành cho di động hoặc web để tập trung vào giá trị hoặc khoảng thời gian. 
+Bạn có thể chọn khung thời gian hoặc giá trị trong báo cáo web hoặc báo cáo dành cho di động để tập trung vào một giá trị hoặc khoảng thời gian. 
 
-- Để chọn khung thời gian, ở góc trên bên phải của chế độ xem báo cáo, hãy chọn một giá trị từ danh sách thả xuống của báo cáo. Bạn cũng có thể chọn một **Phạm vi ngày cố định**. 
+- Để chọn khung thời gian, hãy chọn **Thêm [...]** từ danh sách thả xuống của báo cáo. Lựa chọn phạm vi thời gian bị tắt đối với báo cáo mức độ sử dụng trong thời gian thực; phạm vi thời gian cho báo cáo mức độ sử dụng trong thời gian thực là "bây giờ".
 
-  :::image type="content" source="media/filter-by-time.png" alt-text="Lọc theo thời gian hoặc phạm vi ngày.":::   
-
-- Đối với hầu hết các báo cáo, hãy chọn một giá trị trong biểu đồ hoặc danh sách để lọc báo cáo.
-
-> [!NOTE]
-> Lựa chọn phạm vi thời gian bị tắt đối với báo cáo mức độ sử dụng trong thời gian thực; phạm vi thời gian cho báo cáo mức độ sử dụng trong thời gian thực là "bây giờ".
-
+- Trong hầu hết các báo cáo, hãy chọn một giá trị trong biểu đồ hoặc danh sách để lọc báo cáo cho giá trị đã chọn.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

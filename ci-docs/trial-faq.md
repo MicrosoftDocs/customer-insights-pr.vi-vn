@@ -3,18 +3,18 @@ title: Câu hỏi thường gặp về bản dùng thử - Dynamics 365 Customer
 description: Giải pháp cho các câu hỏi thường gặp liên quan đến việc thiết lập và quản lý bản dùng thử Customer Insights. Tìm hiểu cách giải quyết các vấn đề riêng theo nền tảng và ứng dụng.
 author: m-hartmann
 ms.author: mhart
-ms.date: 02/10/2022
+ms.date: 09/30/2021
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
+ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8115994"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "7642924"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Câu hỏi thường gặp về bản dùng thử Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "8115994"
 
 Ứng dụng này là một dịch vụ dựa trên đám mây không cần phần mềm đặc biệt nào ngoài trình duyệt web cập nhật, mặc dù có áp dụng một số hạn chế. Để có trải nghiệm dùng thử tốt nhất, hãy tránh truy cập vào trang web dùng thử ở chế độ ẩn danh và chọn vị trí dùng thử ở gần bạn nhất. [Tìm hiểu thêm về các yêu cầu của ứng dụng web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Làm cách nào để đăng ký dùng thử mà không có Microsoft 365 người thuê nhà?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Làm cách nào để đăng ký dùng thử mà không cần đối tượng thuê Microsoft 365?
 
 Bạn có thể nhập địa chỉ email không phải của cơ quan, sau đó chúng tôi sẽ tạo tài khoản và đối tượng thuê cho bạn.
 
@@ -43,7 +43,7 @@ Khi đăng ký bản dùng thử, bạn sẽ nhận được email chứa thông
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Làm cách nào để thêm người dùng khác vào bản dùng thử?
 
-Để thêm người dùng, hãy chuyển đến [Microsoft 365 trung tâm quản trị](https://admin.microsoft.com) sử dụng tài khoản quản trị viên dùng thử. Làm theo [hướng dẫn của trung tâm quản trị](/microsoft-365/admin/add-users/add-users) để thêm người dùng tới giới hạn của giấy phép dùng thử. Nếu người dùng bạn đang thêm đã có Microsoft 365, hãy chỉ định cho họ một vai trò bảo mật thích hợp trong tổ chức dùng thử. Để biết thêm thông tin, hãy xem [Gán vai trò bảo mật cho người dùng](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Để thêm người dùng, hãy truy cập [trung tâm quản trị Microsoft 365](https://admin.microsoft.com) bằng tài khoản quản trị dùng thử. Làm theo [hướng dẫn của trung tâm quản trị](/microsoft-365/admin/add-users/add-users) để thêm người dùng tới giới hạn của giấy phép dùng thử. Nếu người dùng bạn thêm đã có tài khoản Microsoft 365, hãy gán cho người đó một vai trò bảo mật thích hợp trong tổ chức dùng thử. Để biết thêm thông tin, hãy xem [Gán vai trò bảo mật cho người dùng](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Tôi có thể thêm bao nhiêu người dùng vào môi trường dùng thử của mình?
 
@@ -63,7 +63,7 @@ Bạn có thể kéo dài thời gian dùng thử ngay trong ứng dụng. Bạn
 
 Nói chung, chúng tôi khuyên bạn nên bắt đầu làm mới với dữ liệu của chính mình khi nâng cấp lên phiên bản trả phí của Customer Insights. 
 
-Theo tùy chọn, nếu bạn chỉ sử dụng thông tin chi tiết về đối tượng, bạn có thể sao chép dữ liệu của mình từ môi trường dùng thử nếu bạn mua Customer Insights. Bạn phải là quản trị viên của bản dùng thử Customer Insights và là quản trị viên toàn cầu của Microsoft 365 người thuê hoặc quản trị viên Dynamics 365 trong tổ chức của bạn để di chuyển cài đặt từ môi trường dùng thử sang môi trường trả phí. 
+Theo tùy chọn, nếu bạn chỉ sử dụng thông tin chi tiết về đối tượng, bạn có thể sao chép dữ liệu của mình từ môi trường dùng thử nếu bạn mua Customer Insights. Bạn phải là quản trị viên của bản dùng thử Customer Insights và quản trị viên toàn cầu của đối tượng thuê Microsoft 365 hoặc quản trị viên Dynamics 365 trong tổ chức của bạn để di chuyển cài đặt từ môi trường dùng thử sang môi trường trả phí. 
 
 Sau khi đăng nhập vào phiên bản trả phí của Customer Insights lần đầu tiên, bạn sẽ được yêu cầu tạo một môi trường mới. Trong quá trình này, bạn có thể chọn sao chép cấu hình từ môi trường hiện có và di chuyển hầu hết các cài đặt. Nếu bạn có các quyền được đề cập ở trên, môi trường dùng thử sẽ hiển thị trong danh sách này. Để biết thêm thông tin, hãy xem [Sao chép cấu hình môi trường](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,9 +82,8 @@ Sau khi đăng ký dùng thử, bạn sẽ đến màn hình chính của ứng 
 
 Hầu hết các tính năng của Customer Insights đều có trong bản dùng thử.
 
-Các tính năng sau đây là **Không có sẵn**: 
+Tính năng sau đây không có: 
 - Bạn không thể tạo môi trường mới sử dụng tài khoản Azure Data Lake Storage.
-- Bạn không thể xóa môi trường dùng thử. 
 
 ### <a name="how-long-does-the-trial-last"></a>Thời gian dùng thử kéo dài bao lâu?
 

@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Constant Contact
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Constant Contact.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 29f4320c798db62609283e3c48f0b47a4f0b982f
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619145"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124299"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Xuất phân khúc sang Constant Contact (xem trước)
 
@@ -26,12 +26,12 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Constant Contact
 -   Bạn có [các phân khúc được định cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
 -   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="known-limitations"></a>Các hạn chế đã biết
+## <a name="known-limitations"></a>Các giới hạn đã biết
 
-- Bạn có thể xuất tối đa 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Constant Contact.
+- Bạn có thể xuất tối đa 1 triệu hồ sơ trong mỗi lần xuất sang Constant Contact.
 - Bạn chỉ xuất được phân khúc sang Constant Contact.
-- Có thể mất tới 1 giờ để hoàn tất việc xuất tối đa 1 triệu hồ sơ khách hàng sang Constant Contact. 
-- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Constant Contact tùy thuộc vào và giới hạn trong hợp đồng của bạn với Constant Contact.
+- Có thể mất tới 1 giờ để hoàn thành quá trình xuất tối đa 1 triệu hồ sơ sang Constant Contact. 
+- Số lượng hồ sơ mà bạn có thể xuất sang Constant Contact phụ thuộc và bị giới hạn theo hợp đồng của bạn với Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Thiết lập kết nối với Constant Contact
 
@@ -47,15 +47,15 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Constant Contact
 
 1. Chọn **Kết nối** để khởi tạo kết nối với Constant Contact.
 
-1. Chọn **Xác thực với Constant Contact** và cung cấp thông tin đăng nhập quản trị viên của bạn cho Constant Contact. 
+1. Chọn **Xác thực với AdRoll** và cung cấp thông tin xác thực quản trị viên của bạn cho Constant Contact. 
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Định cấu hình xuất
+## <a name="configure-an-export"></a>Đặt cấu hình xuất
 
-Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -65,7 +65,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập [**ID danh sách Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Mở một danh sách trong Constant Contact để tìm ID danh sách trong URL.
 
-1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Constant Contact.
+1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Constant Contact.
 
 1. Theo tùy chọn, bạn có thể xuất Tên và Họ dưới dạng trường bổ sung để tạo thêm email cá nhân hóa. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
 

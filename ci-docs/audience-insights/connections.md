@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977763"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304998"
 ---
 # <a name="connections-preview-overview"></a>Tổng quan về kết nối (bản xem trước)
 
@@ -47,7 +47,6 @@ Chỉ quản trị viên là có thể đặt cấu hình các kết nối mới
 1. Trong ngăn **Thiết lập kết nối**, hãy cung cấp thông tin chi tiết được yêu cầu. 
    1. **Tên hiển thị** và loại kết nối mô tả một kết nối. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối này.
    1. Các trường chính xác phụ thuộc vào dịch vụ bạn đang kết nối. Bạn có thể tìm hiểu về thông tin chi tiết của một loại kết nối cụ thể trong bài viết về dịch vụ mục tiêu.
-   1. Nếu bạn [sử dụng Key Vault của riêng bạn](use-azure-key-vault.md) để lưu trữ bí mật, kích hoạt **Sử dụng Key Vault** và chọn bí mật từ danh sách.
 
 1. Để tạo kết nối, hãy chọn **Lưu**.
 
@@ -94,6 +93,3 @@ Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang ch�
 
 1. Để xác nhận xóa, hãy chọn **Loại bỏ**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Thiết lập kết nối với các bí mật do Key Vault của riêng bạn quản lý
-
-Một số kết nối cần bí mật như khóa API hoặc mật khẩu. Một số kết nối hỗ trợ bí mật được lưu trữ trong Key Vault của riêng bạn. Tìm hiểu thêm về các kết nối được hỗ trợ và cách thiết lập trên [Key Vault của riêng bạn để có thông tin chi tiết về đối tượng](use-azure-key-vault.md).

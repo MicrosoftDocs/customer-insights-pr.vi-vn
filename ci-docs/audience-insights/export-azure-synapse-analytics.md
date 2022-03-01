@@ -1,7 +1,7 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Azure Synapse Analytics
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951068"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327390"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (Bản xem trước)
 
@@ -47,9 +47,7 @@ Trong Azure:
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Thiết lập kết nối và xuất sang Azure Synapse
 
-### <a name="configure-a-connection"></a>Định cấu hình kết nối
-
-Để tạo kết nối, người quản lý dịch vụ và tài khoản người dùng trong Thông tin chi tiết về khách hàng cần **Người đọc** quyền trên *nhóm tài nguyên* nơi đặt không gian làm việc của Synapse Analytics. Ngoài ra, người quản lý dịch vụ và người dùng trên không gian làm việc Synapse Analytics cần **Quản trị viên Synapse** quyền. 
+### <a name="configure-a-connection"></a>Đặt cấu hình kết nối
 
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
@@ -65,7 +63,7 @@ Trong Azure:
 
 ### <a name="configure-an-export"></a>Đặt cấu hình xuất
 
-Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để định cấu hình xuất với kết nối được chia sẻ, bạn cần ít nhất **Người đóng góp** quyền trong Thông tin chi tiết về khách hàng. Để biết thêm thông tin, hãy xem [các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -84,8 +82,6 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
 Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand).
-
-Để truy vấn dữ liệu đã được xuất sang Synapse Analytics, bạn cần **Bộ đọc dữ liệu khối lưu trữ** quyền truy cập vào bộ nhớ đích trên không gian làm việc của các tệp xuất. 
 
 ### <a name="update-an-export"></a>Cập nhật việc xuất dữ liệu
 

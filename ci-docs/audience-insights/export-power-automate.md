@@ -1,20 +1,20 @@
 ---
 title: Trình kết nối Power Automate | Microsoft Docs
-description: Tạo quy trình trong Microsoft Power Automate từ Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
-ms.reviewer: mhart
+description: Tạo dòng trong Microsoft Power Automate từ Dynamics 365 Customer Insights.
+ms.date: 08/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: 95e0fcbfb43f2b3e7e2d0e8a1690dc7ff5a44433402b7ef3d437710eb0efff15
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035625"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4407289"
 ---
 # <a name="power-automate-connector-preview"></a>Trình kết nối Power Automate (xem trước)
 
@@ -22,35 +22,28 @@ Kích hoạt các sự kiện cụ thể xảy ra tự động khi dữ liệu c
 
 ## <a name="power-automate-triggers"></a>Trình kích hoạt Power Automate
 
-Sử dụng trình kích hoạt để tạo luồng đám mây và tự động hóa các tác vụ lặp lại, chẳng hạn như thông báo hoặc các hành động nâng cao hơn. 
+Bạn có thể sử dụng nhiều trình kích hoạt cho phép bạn tạo các quy trình để tự động hóa tác vụ lặp lại, chẳng hạn như thông báo hoặc hành động nâng cao hơn. 
 
 - Kích hoạt khi làm mới nguồn dữ liệu không thành công. 
 - Kích hoạt khi làm mới nguồn dữ liệu thành công.
 - Kích hoạt khi ngưỡng vượt quá trên một phân khúc. Kích hoạt bị giới hạn để vượt quá ngưỡng.
-- Kích hoạt khi ngưỡng vượt quá trên một giá trị đo kinh doanh. Chỉ hỗ trợ giá trị đo công việc không có kích thước. Kích hoạt bị giới hạn để vượt quá ngưỡng.
-- Kích hoạt khi hoàn thành quá trình làm mới đầy đủ (nguồn dữ liệu, phân khúc, đo lường,...).
+- Kích hoạt khi ngưỡng vượt quá trên một giá trị đo kinh doanh. Kích hoạt bị giới hạn vượt quá ngưỡng.
+- Kích hoạt khi hoàn thành quá trình làm mới đầy đủ (nguồn dữ liệu, phân đoạn, đo lường...).
 - Kích hoạt khi hoàn tất quá trình làm mới quy trình hợp nhất (ánh xạ, khớp, hợp nhất).
 
-[Định cấu hình trình kích hoạt trong Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
+[Đặt cấu hình trình kích hoạt trong Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Hành động Power Automate
+Trình kết nối Power Automate cung cấp các hành động khác ngoài trình kích hoạt có sẵn. Để biết thêm thông tin, xem [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-Trình kết nối Power Automate cung cấp các hành động khác ngoài trình kích hoạt có sẵn. Để biết thêm thông tin, xem [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
+## <a name="create-a-power-automate-flow-in-audience-insights"></a>Tạo quy trình Power Automate trong thông tin chi tiết về đối tượng
 
-## <a name="create-a-power-automate-flow"></a>Tạo một Dòng Power Automate
+1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Hệ thống**.
 
-1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Nơi xuất đích**.
+1. Trên trang **Hệ thống**, hãy chọn tab **Trạng thái**.
 
-1. Trên lát **Power Automate**, chọn **Thiết lập**.
+1. Trong phần **Nguồn dữ liệu**, hãy chọn **Dòng** rồi chọn **Tạo một dòng** từ danh sách thả xuống.
+   > [!div class="mx-imgBorder"]
+   > ![Trình kết nối Power Automate hiển thị hành động Tạo dòng](media/power-automate-connector-create-flow.png "Trình kết nối Power Automate hiển thị hành động Tạo dòng")
 
-1. Trình kết nối Customer Insights (xem trước) trong Power Automate mở ra. **Đăng nhập** vào Power Automate.
-
-1. Chọn một trong các trình kích hoạt có sẵn và thêm các bước khác vào quy trình mới của bạn. Để biết thêm thông tin, hãy xem [Tạo luồng đám mây trong Power Automate](/power-automate/get-started-logic-flow).
-
-Ví dụ về cách sử dụng các quy trình: 
-- Đăng tin nhắn lên một kênh Microsoft Teams nếu làm mới nguồn dữ liệu không thành công. 
-- Gửi email cho chủ sở hữu dữ liệu khi vượt qua ngưỡng trên một phân khúc.
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+1. Trong Power Automate, hãy chọn một trong các trình kích hoạt có sẵn để tạo dòng ưa thích của bạn. Nếu bạn đang tạo dòng đầu tiên của mình, bạn cần xác thực bằng trình kết nối Power Automate trước tiên.

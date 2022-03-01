@@ -1,20 +1,20 @@
 ---
 title: Mối quan hệ giữa các thực thể và đường dẫn thực thể
 description: Tạo và quản lý mối quan hệ giữa các thực thể từ nhiều nguồn dữ liệu.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623203"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171190"
 ---
 # <a name="relationships-between-entities"></a>Mối quan hệ giữa các thực thể
 
@@ -68,20 +68,6 @@ Mối quan hệ bao gồm một *thực thể nguồn* chứa khóa ngoại và 
 
 4. Chọn **Lưu** để tạo mối quan hệ tùy chỉnh.
 
-## <a name="set-up-account-hierarchies"></a>Thiết lập hệ thống phân cấp tài khoản
-
-Các môi trường được đặt cấu hình để sử dụng tài khoản doanh nghiệp làm đối tượng đích chính có thể đặt cấu hình hệ thống phân cấp tài khoản cho các tài khoản doanh nghiệp liên quan. Ví dụ, một công ty có các đơn vị kinh doanh riêng biệt. 
-
-Các tổ chức tạo phân cấp tài khoản để quản lý tốt hơn các tài khoản và mối quan hệ của chúng với nhau. Khả năng thông tin chi tiết về đối tượng hỗ trợ hệ thống phân cấp tài khoản mẹ-con đã tồn tại trong dữ liệu khách hàng được nhập. Ví dụ: tài khoản từ Dynamics 365 Sales. Các cấu trúc phân cấp này có thể được đặt cấu hình trên trang **Mối quan hệ** trong thông tin chi tiết về đối tượng, trong tab phân cấp tài khoản.
-
-1. Chuyển đến **Dữ liệu** > **Mối quan hệ**.
-1. Chọn tab **Phân cấp tài khoản**.
-1. Chọn **Hệ thống cấp bậc tài khoản mới**. 
-1. Trong ngăn **Hệ thống cấp bậc tài khoản**, cung cấp tên cho hệ thống cấp bậc. Hệ thống tạo tên cho thực thể đầu ra. Bạn có thể thay đổi tên của thực thể tên đầu ra.
-1. Chọn thực thể chứa hệ thống cấp bậc tài khoản của bạn. Nó thường nằm trong cùng một thực thể có chứa các tài khoản.
-1. Chọn **ID tài khoản** và **ID tài khoản mẹ** từ thực thể đã chọn 
-1. Chọn **Lưu** để áp dụng các thiết đặt và hoàn thiện hệ thống cấp bậc tài khoản.
-
 ## <a name="view-relationships"></a>Xem mối quan hệ
 
 Trang Mối quan hệ liệt kê tất cả các mối quan hệ đã được tạo. Mỗi hàng đại diện cho một mối quan hệ, cũng bao gồm thông tin chi tiết về thực thể nguồn, thực thể đích và lượng số. 
@@ -96,7 +82,7 @@ Trang này cung cấp một bộ tùy chọn cho các mối quan hệ hiện có
 
 ### <a name="explore-the-relationship-visualizer"></a>Khám phá trình hiển thị mối quan hệ
 
-Trình hiển thị mối quan hệ hiển thị sơ đồ mạng lưới của các mối quan hệ hiện có giữa các thực thể được kết nối và lượng số của chúng. Trình hiển thị cũng hiển thị đường dẫn mối quan hệ.
+Trình hiển thị mối quan hệ hiển thị sơ đồ mạng lưới của các mối quan hệ hiện có giữa các thực thể được kết nối và lượng số của chúng.
 
 Để tùy chỉnh dạng xem này, bạn có thể thay đổi vị trí của các hộp bằng cách kéo chúng trên canvas.
 
@@ -106,56 +92,6 @@ Các tùy chọn có thể dùng:
 - **Xuất dưới dạng hình ảnh**: Lưu dạng xem hiện tại dưới dạng tệp hình ảnh.
 - **Thay đổi thành bố cục ngang/dọc**: Thay đổi hướng của các thực thể và mối quan hệ.
 - **Chỉnh sửa**: Cập nhật các thuộc tính của mối quan hệ tùy chỉnh trong ngăn chỉnh sửa và lưu các thay đổi.
-
-## <a name="relationship-paths"></a>Đường dẫn mối quan hệ
-
-Đường dẫn mối quan hệ mô tả các thực thể được kết nối bằng các mối quan hệ giữa một thực thể nguồn và một thực thể đích. Nó được sử dụng khi tạo một phân khúc hoặc một thước đo bao gồm các thực thể khác ngoài thực thể hồ sơ hợp nhất và có nhiều tùy chọn để tiếp cận thực thể hồ sơ hợp nhất. 
-
-Đường dẫn mối quan hệ thông báo cho hệ thống về mối quan hệ nào sẽ truy cập vào thực thể hồ sơ hợp nhất. Các đường dẫn mối quan hệ khác nhau có thể mang lại những kết quả khác nhau.
-
-Ví dụ: thực thể *eCommerce_eCommercePurchases* có các mối quan hệ sau với thực thể *Khách hàng* hồ sơ hợp nhất:
-
-- eCommerce_eCommercePurchases > Khách hàng
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Khách hàng
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Khách hàng 
-
-Đường dẫn mối quan hệ xác định thực thể mà bạn có thể sử dụng khi tạo quy tắc cho các biện pháp hoặc phân đoạn. Việc chọn tùy chọn có đường dẫn mối quan hệ dài nhất có thể sẽ mang lại ít kết quả hơn vì các bản ghi phù hợp cần phải là một phần của tất cả các thực thể. Trong ví dụ này, khách hàng đã mua hàng hóa thông qua thương mại điện tử(eCommerce_eCommercePurchases) làm điểm bán hàng (POS_posPurchases) và tham gia vào chương trình khách hàng thân thiết (loyaltyScheme_loyCustomers). Khi chọn tùy chọn đầu tiên, bạn có thể sẽ nhận được nhiều kết quả hơn vì khách hàng chỉ cần tồn tại trong một thực thể bổ sung.
-
-### <a name="direct-relationship"></a>Mối quan hệ trực tiếp
-
-Một mối quan hệ được phân loại là **mối quan hệ trực tiếp** khi một thực thể nguồn liên quan đến một thực thể đích chỉ có một mối quan hệ.
-
-Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchases* kết nối với một thực thể đích *eCommerce_eCommerceContacts* thực thể chỉ thông qua *ContactId*, đó là một mối quan hệ trực tiếp.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với thực thể đích.":::
-
-#### <a name="multi-path-relationship"></a>Mối quan hệ nhiều đường dẫn
-
-Một **mối quan hệ nhiều đường dẫn** là một kiểu quan hệ trực tiếp đặc biệt kết nối một thực thể nguồn với nhiều thực thể đích.
-
-Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchases* liên quan đến hai thực thể đích, thì cả hai *eCommerce_eCommerceContacts* và *loyaltyScheme_loyCustomers* là một mối quan hệ nhiều đường dẫn.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với nhiều thực thể đích thông qua mối quan hệ nhiều bước.":::
-
-### <a name="indirect-relationship"></a>Mối quan hệ gián tiếp
-
-Một mối quan hệ được phân loại là **mối quan hệ gián tiếp** khi một thực thể nguồn có liên quan đến một hoặc nhiều thực thể bổ sung trước khi có liên quan đến một thực thể đích.
-
-#### <a name="multi-hop-relationship"></a>Mối quan hệ nhiều bước
-
-Một *mối quan hệ nhiều bước* là một *mối quan hệ gián tiếp* cho phép bạn kết nối một thực thể nguồn với một thực thể đích thông qua một hoặc nhiều thực thể trung gian khác.
-
-Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchasesWest* kết nối với một thực thể trung gian được gọi là *eCommerce_eCommercePurchasesEast*, sau đó kết nối với một thực thể đích được gọi là *eCommerce_eCommerceContacts*, đó là một mối quan hệ nhiều bước.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với một thực thể đích qua một thực thể trung gian.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Mối quan hệ nhiều bước, nhiều đường dẫn
-
-Các mối quan hệ nhiều bước và nhiều đường dẫn có thể được sử dụng cùng nhau để tạo **các mối quan hệ nhiều bước, nhiều đường dẫn**. Loại đặc biệt này kết hợp các chức năng của mối quan hệ **nhiều bước** và **nhiều đường dẫn**. Mối quan hệ này giúp bạn kết nối với nhiều thực thể đích thông qua các thực thể trung gian.
-
-Ví dụ: nếu một thực thể hoạt động được gọi là *eCommerce_eCommercePurchasesWest* kết nối với một thực thể trung gian được gọi là *eCommerce_eCommercePurchasesEast*, sau đó kết nối với hai thực thể đích, cả hai *eCommerce_eCommerceContacts* và *loyaltyScheme_loyCustomers* là mối quan hệ nhiều bước, nhiều đường dẫn.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Thực thể nguồn kết nối trực tiếp với một thực thể đích và kết nối với một thực thể đích khác thông qua một thực thể trung gian.":::
 
 ## <a name="manage-existing-relationships"></a>Quản lý mối quan hệ hiện có 
 
@@ -169,6 +105,6 @@ Chọn một mối quan hệ rồi chọn một trong các tùy chọn sau:
 
 ## <a name="next-step"></a>Bước tiếp theo
 
-Các mối quan hệ hệ thống và tùy chỉnh được sử dụng để [tạo phân khúc](segments.md) và [đo](measures.md) dựa trên nhiều nguồn dữ liệu không còn được lưu trữ.
+Các mối quan hệ tùy chỉnh và hệ thống dùng để [tạo phân khúc](segments.md) dựa trên nhiều nguồn dữ liệu không còn lưu trữ theo dạng silo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

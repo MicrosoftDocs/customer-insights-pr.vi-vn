@@ -1,7 +1,7 @@
 ---
 title: Ánh xạ ngữ nghĩa (Bản xem trước)
 description: Tổng quan về ánh xạ ngữ nghĩa và cách sử dụng chúng.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881856"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622962"
 ---
-# <a name="semantic-mappings-preview"></a>Ánh xạ ngữ nghĩa (Bản xem trước)
+# <a name="semantic-mappings"></a>Ánh xạ ngữ nghĩa
 
 Ánh xạ ngữ nghĩa cho phép bạn ánh xạ dữ liệu không hoạt động của mình tới các lược đồ được xác định trước. Các lược đồ này giúp thông tin chuyên sâu về đối tượng hiểu rõ hơn về các thuộc tính dữ liệu của bạn. Ánh xạ ngữ nghĩa và dữ liệu được cung cấp cho phép thông tin chuyên sâu và tính năng mới trong thông tin chuyên sâu về đối tượng. Để ánh xạ dữ liệu hoạt động của bạn vào lược đồ, hãy xem lại tài liệu [hoạt động](activities.md).
 
@@ -75,7 +75,8 @@ ms.locfileid: "7881856"
 
 1. Để chạy ánh xạ ngữ nghĩa vào lúc khác, hãy chọn ánh xạ ngữ nghĩa rồi chọn **Làm mới**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
 
 ## <a name="manage-existing-semantic-mappings"></a>Quản lý ánh xạ ngữ nghĩa hiện có
 
@@ -90,41 +91,5 @@ Trên **Dữ liệu** > **Ánh xạ ngữ nghĩa (bản xem trước)**, bạn c
 - **Đổi tên**: Mở hộp thoại trong đó bạn có thể nhập một tên khác cho ánh xạ ngữ nghĩa đã chọn. Chọn **Lưu** để áp dụng thay đổi.
 
 - **Xóa**: Mở hộp thoại để xác nhận việc xóa ánh xạ ngữ nghĩa đã chọn. Bạn cũng có thể xóa nhiều ánh xạ ngữ nghĩa cùng một lúc bằng cách chọn ánh xạ ngữ nghĩa và biểu tượng xóa. Chọn **Xóa** để xác nhận thao tác xóa.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Sử dụng ánh xạ thực thể ngữ nghĩa ContactProfile để tạo các hoạt động cấp liên hệ
-
-Sau khi tạo một *ContactProfile* ánh xạ thực thể ngữ nghĩa, bạn có thể nắm bắt các hoạt động của các liên hệ. Nó cho phép bạn xem trong tiến trình hoạt động cho tài khoản mà người liên hệ chịu trách nhiệm cho mỗi hoạt động. Hầu hết các bước tuân theo cấu hình lập bản đồ hoạt động điển hình.
-
-   > [!NOTE]
-   > Để các hoạt động cấp liên hệ hoạt động, bạn phải có cả hai **ID tài khoản** và **ID liên hệ** các thuộc tính cho mỗi bản ghi trong dữ liệu hoạt động của bạn.
-
-1. [Xác định một *ContactProfile* ánh xạ thực thể ngữ nghĩa.](#define-a-contactprofile-semantic-entity-mapping) Và chạy ánh xạ ngữ nghĩa.
-
-1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Hoạt động**.
-
-1. Lựa chọn **Thêm hoạt động** để tạo một hoạt động mới.
-
-1. Đặt tên cho hoạt động, chọn thực thể hoạt động nguồn và chọn khóa chính của thực thể hoạt động.
-
-1. Bên trong **Các mối quan hệ** bước, tạo mối quan hệ gián tiếp giữa dữ liệu nguồn hoạt động của bạn với các tài khoản, sử dụng dữ liệu liên hệ của bạn làm thực thể trung gian. Để biết thêm thông tin, hãy xem [các con đường quan hệ trực tiếp và gián tiếp](relationships.md#relationship-paths).
-   - Mối quan hệ mẫu cho một hoạt động được gọi là *Mua hàng*:
-      - **Dữ liệu hoạt động nguồn mua hàng** > **Dữ liệu liên hệ** trên thuộc tính **ID liên hệ**
-      - **Dữ liệu liên hệ** > **Dữ liệu tài khoản** trên thuộc tính **ID tài khoản**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ví dụ về thiết lập mối quan hệ.":::
-
-1. Sau khi thiết lập các mối quan hệ, hãy chọn **Kế tiếp** và hoàn thành cấu hình lập bản đồ hoạt động của bạn. Để biết các bước chi tiết về tạo hoạt động, hãy xem [xác định một hoạt động](activities.md).
-
-1. Chạy bản đồ hoạt động của bạn.
-
-1. Các hoạt động cấp liên hệ của bạn giờ sẽ hiển thị trên dòng thời gian của khách hàng.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Kết quả cuối cùng sau khi định cấu hình các hoạt động liên hệ":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Lọc dòng thời gian hoạt động cấp liên hệ
-
-Sau khi định cấu hình ánh xạ hoạt động cấp liên hệ và chạy nó, tiến trình hoạt động cho khách hàng của bạn sẽ được cập nhật. Nó bao gồm ID hoặc tên của họ, tùy thuộc vào *ContactProfile* cấu hình cho các hoạt động mà họ đã thực hiện. Bạn có thể lọc các hoạt động theo các liên hệ trong dòng thời gian để xem các liên hệ cụ thể mà bạn quan tâm. Ngoài ra, bạn có thể xem tất cả các hoạt động không được chỉ định cho một liên hệ cụ thể bằng cách chọn **Các hoạt động không được ánh xạ tới một Liên hệ**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Các tùy chọn lọc có sẵn cho các hoạt động cấp Liên hệ.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
