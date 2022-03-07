@@ -1,25 +1,20 @@
 ---
-title: Làm giàu nâng cao địa chỉ (chứa video)
+title: Tăng cường nâng cao địa chỉ
 description: Tăng cường và chuẩn hóa thông tin địa chỉ của hồ sơ khách hàng bằng các mô hình của Microsoft.
-ms.date: 01/19/2022
+ms.date: 07/25/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-searchScope:
-- ci-data-sources-enrichment
-- ci-data-sources-enrichment-details
-- ci-enrichments
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353662"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643451"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Tăng cường hồ sơ khách hàng với các địa chỉ nâng cao
 
@@ -105,17 +100,7 @@ Chúng tôi hiện hỗ trợ tăng cường địa chỉ ở các quốc gia ho
 
 Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ liệu hồ sơ khách hàng mới được bổ sung trong **Dữ liệu tăng cường của tôi**. Ngoài ra, bạn sẽ tìm thấy thời gian của lần cập nhật gần nhất và số lượng hồ sơ được tăng cường.
 
-Bạn có thể xem một mẫu dữ liệu được bổ sung chi tiết trong **Phong phú khách hàng xem trước** ngói. Lựa chọn **Xem thêm** và chọn **Dữ liệu** để truy cập chế độ xem chi tiết của từng hồ sơ được bổ sung chi tiết.
-
-### <a name="overview-card"></a>Thẻ tổng quan
-
-Thẻ tổng quan hiển thị chi tiết về phạm vi bổ sung. 
-
-* **Địa chỉ được xử lý và thay đổi** : Số lượng hồ sơ khách hàng có địa chỉ đã được bổ sung thành công.
-
-* **Địa chỉ được xử lý và không thay đổi** : Số lượng hồ sơ khách hàng có địa chỉ đã được nhận dạng nhưng không thay đổi. Điều này thường xảy ra khi dữ liệu đầu vào hợp lệ và không thể cải thiện bằng cách bổ sung.
-
-* **Địa chỉ không được xử lý và không thay đổi** : Số lượng cấu hình có địa chỉ không được nhận dạng. Thông thường đối với dữ liệu đầu vào không hợp lệ hoặc không được bổ sung hỗ trợ.
+Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

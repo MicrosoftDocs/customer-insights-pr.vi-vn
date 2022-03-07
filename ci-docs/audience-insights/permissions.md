@@ -1,23 +1,20 @@
 ---
 title: Quản lý quyền của người dùng
 description: Tìm hiểu về quyền và vai trò của người dùng.
-ms.date: 03/25/2021
-ms.reviewer: mhart
+ms.date: 10/27/2020
+ms.reviewer: nimagen
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-permissions
-- ci-system-security
-- customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355963"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268436"
 ---
 # <a name="user-permissions"></a>Quyền người dùng
 
@@ -34,10 +31,10 @@ Có ba loại vai trò:
 - Xem và khám phá trang **nội dung phong phú**.
 - Khám phá và xuất các thực thể bằng cách sử dụng trang **Các thực thể**.
 - Xem trạng thái của các quy trình hệ thống bằng cách sử dụng trang **Hệ thống**.
-- Xem nội dung xuất trong trang **Nội dung xuất**.
+- Xuất phân đoạn từ trang **Phân đoạn**.
 - Cài đặt và sử dụng bảng thông tin **Power BI Customer Insights**.
 
-## <a name="contributor"></a>Cộng tác viên
+## <a name="contributor"></a>Người đóng góp
 
 - Tất cả các quyền có sẵn cho Người xem.
 - Tải và chuyển đổi dữ liệu bằng cách dùng trang **Nguồn dữ liệu**.
@@ -46,7 +43,6 @@ Có ba loại vai trò:
 - Tạo phân khúc bằng cách sử dụng trang **Phân khúc**.
 - Tạo các giá trị đo sử dụng trang **Giá trị đo**.
 - Quản lý cấu hình và làm phong phú hồ sơ khách hàng từ trang **Làm phong phú** (chỉ dành cho nội dung phong phú của bên thứ nhất).
-- Quản lý và tạo các nội dung xuất dựa trên các kết nối được chia sẻ với người đóng góp. [Tìm hiểu thêm về cách quản trị viên cho phép người đóng góp sử dụng kết nối để xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Quản trị viên
 
@@ -54,9 +50,8 @@ Có ba loại vai trò:
 - Thay đổi cài đặt trên trang **Hệ thống**, bao gồm ngôn ngữ làm việc và lịch trình làm mới cho các quy trình hệ thống của bạn.
 - Xem và thêm quyền bằng cách sử dụng trang **Quyền**.
 - Đặt định nghĩa tìm kiếm và lọc cho trang Khách hàng bằng cách dùng trang **Tìm kiếm và lọc chỉ mục** (có sẵn qua trang **Khách hàng**).
-- Quản lý và cho phép các kết nối đối với những vai trò người dùng khác trên trang **Kết nối**.
+- Xác định đích đến của phân khúc Dynamics 365 Sales bằng cách dùng trang **Xuất đích đến**.
 - Quản lý cấu hình và làm phong phú hồ sơ khách hàng từ trang **Nội dung phong phú** (cho tất cả các nội dung phong phú).
-- Quản lý và tạo nội dung xuất trên trang **Nội dung xuất**.
 - Cài đặt và sử dụng **phần bổ trợ Thẻ khách hàng**.
 - Thêm và sử dụng **Trình kết nối Power Apps**.
 - Cho phép sử dụng [API Customer Insights](apis.md).

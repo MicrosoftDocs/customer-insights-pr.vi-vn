@@ -1,28 +1,24 @@
 ---
 title: Hoàn thành dữ liệu từng phần bằng cách sử dụng dự đoán
 description: Sử dụng dự đoán để điền vào dữ liệu khách hàng không đầy đủ.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: zacookmsft
-ms.author: zacook
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: zacook
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-custom-models
-- customerInsights
-ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 66f0b16b5d05741ab98ca5ce2157da8c46b6d9e0
+ms.sourcegitcommit: 5379c2b77d613d071a177f509e6417ebf3c47516
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "4648737"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Hoàn thành từng phần dữ liệu của bạn với các dự đoán (không được dùng nữa)
+# <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
 
-> [!IMPORTANT]
-> Tính năng này sẽ **không dùng nữa** kể từ **Ngày 5 tháng 11 năm 2021**. Các triển khai hiện tại sẽ tiếp tục hoạt động cho đến khi tính năng bị xóa, nhưng bạn sẽ không thể tạo các tích hợp mới bằng cách sử dụng hướng dẫn bên dưới.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Tính năng Dự đoán cho phép bạn dễ dàng tạo các giá trị dự đoán nhằm nâng cao sự hiểu biết của bạn về một khách hàng. Trên trang **Thông tin** > **Dự đoán**, bạn có thể chọn **Dự đoán của tôi** để xem các dự đoán mà bạn đã định cấu hình trong các phần khác của thông tin chi tiết về đối tượng và cho phép bạn tùy chỉnh thêm.
 
@@ -35,11 +31,11 @@ Tính năng Dự đoán cho phép bạn dễ dàng tạo các giá trị dự đ
 
 Trước khi tổ chức của bạn có thể sử dụng tính năng dự đoán, hãy đảm bảo đáp ứng các điều kiện tiên quyết sau đây:
 
-1. Tổ chức của bạn có một phiên bản [thiết lập trong Microsoft Dataverse](/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
+1. Tổ chức của bạn có một phiên bản [được thiết lập trong Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
 
-2. Môi trường thông tin chi tiết về đối tượng của bạn được liên kết với phiên bản Dataverse.
+2. Môi trường của bạn gắn với phiên bản Common Data Service.
 
-Để biết thêm thông tin, hãy xem [Tạo môi trường mới](create-environment.md).
+Nếu bạn [tạo môi trường đầu tiên](manage-environments.md), hãy đặt cấu hình trong hộp thoại **Tạo môi trường** và chọn **Nâng cao**. Nếu bạn đã tạo một môi trường, hãy đi tới cài đặt của nó và chọn **Nâng cao**. Dù bằng cách nào, trong phần **Sử dụng dự đoán**, nhập URL phiên bản Common Data Service mà bạn muốn đính kèm môi trường của mình.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Tạo dự đoán trong thực thể Khách hàng
 
@@ -51,21 +47,19 @@ Trước khi tổ chức của bạn có thể sử dụng tính năng dự đo�
 
 4. Tìm tên thuộc tính bạn muốn dự đoán giá trị, sau đó chọn biểu tượng **Tổng quan** trong cột **Tóm tắt**.
    > [!div class="mx-imgBorder"]
-   > ![Biểu tượng tổng quan.](media/intelligence-overviewicon.png "Biểu tượng tổng quan")
+   > ![Biểu tượng tổng quan](media/intelligence-overviewicon.png "Biểu tượng tổng quan")
 
 5. Nếu có tỷ lệ cao là thiếu giá trị cho thuộc tính của bạn, chọn **Dự đoán các giá trị còn thiếu** để tiếp tục với dự đoán của bạn.
    > [!div class="mx-imgBorder"]
-   > ![Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu.](media/intelligence-overviewpredictmissingvalues.png "Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu")
+   > ![Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu](media/intelligence-overviewpredictmissingvalues.png "Nút hiển thị trạng thái tổng quan với dự đoán các giá trị còn thiếu")
 
 6. Cung cấp **Tên hiển thị** và **Tên thực thể đầu ra** cho kết quả dự đoán.
 
 7. Một danh sách các tùy chọn được điền sẵn sẽ hiển thị ở nơi bạn có thể ánh xạ các giá trị vào thể loại được dự đoán. Trong trường hợp này, các tùy chọn thể loại duy nhất của bạn sẽ là 0 hoặc 1 khi chúng ánh xạ vào đặc điểm đúng/sai hoặc nhị phân của dự đoán. Trong cột Thể loại, ánh xạ các giá trị trường mà bạn muốn phân loại là "0" trong dự đoán cuối cùng vào "0" và các mục bạn muốn phân loại là "1" trong dự đoán cuối cùng vào "1".
    > [!div class="mx-imgBorder"]
-   > ![Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại.](media/intelligence-categorymapping.png "Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại")
+   > ![Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại](media/intelligence-categorymapping.png "Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại")
 
 8. Chọn **Xong** và dự đoán sẽ được xử lý. Việc xử lý sẽ mất một lúc, tùy thuộc vào kích thước và độ phức tạp của dữ liệu. Kết quả sẽ có sẵn trong một thực thể mới dựa trên **Tên thực thể đầu ra** của dự đoán bạn đã tạo.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Tạo dự đoán trong khi tạo phân đoạn
 
@@ -83,7 +77,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 5. Nếu phân đoạn bạn vừa tạo có dữ liệu chưa hoàn chỉnh trong trường nguồn, bạn có thể chọn để dự đoán các giá trị còn thiếu.
    > [!div class="mx-imgBorder"]
-   > ![Nút dự đoán.](media/segments-predictoption.png "Nút dự đoán")
+   > ![Nút dự đoán](media/segments-predictoption.png "Nút dự đoán")
 
 6. Cung cấp **Tên hiển thị** và **Tên thực thể đầu ra** cho kết quả dự đoán.
 
@@ -99,7 +93,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 4. Bạn sẽ thấy một số điểm dữ liệu trong dạng xem dự đoán của mình.
    > [!div class="mx-imgBorder"]
-   > ![Trang dự đoán.](media/intelligence-predictionsviewpage.png "Trang dự đoán")
+   > ![Trang dự đoán](media/intelligence-predictionsviewpage.png "Trang dự đoán")
 
    - **Giá trị dự đoán** cho thấy ánh xạ bạn tạo ra trong giai đoạn ánh xạ giá trị Trường sang Thể loại. Đó là các giá trị trong tập dữ liệu của bạn đã được ánh xạ tới một thể loại cụ thể.
    -**Các yếu tố ảnh hưởng hàng đầu** là các yếu tố trong tập dữ liệu của bạn có nhiều khả năng ảnh hưởng đến độ tin cậy của dự đoán về giá trị Trường được ánh xạ tới một thể loại cụ thể.
@@ -116,7 +110,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 ## <a name="edit-a-prediction"></a>Chỉnh sửa dự đoán
 
-Sau khi bạn đã tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình của bạn.  
+Sau khi tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình.  
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán** > **Dự đoán của tôi**.
 
@@ -124,14 +118,14 @@ Sau khi bạn đã tạo dự đoán, bạn có thể tùy chỉnh mô hình tro
 
 3. Chọn dấu ba chấm trong cột **Hành động** và chọn **Xem**.
 
-4. Lựa chọn **Tùy chỉnh trong AI Builder**.
+4. Chọn **Tùy chỉnh trong AI Builder**.
 
-5. Cập nhật mô hình của bạn trong AI Builder. [Tìm hiểu thêm về cách quản lý mô hình trong AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Cập nhật mô hình của bạn trong AI Builder. [Tìm hiểu thêm về cách quản lý mô hình trong AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nhật mà bạn đã tạo.
 
 > [!NOTE]
-> Các mô hình mới được tạo trong AI Builder sẽ không được hiển thị trong thông tin chi tiết về đối tượng trừ khi mô hình được tạo từ những trải nghiệm được liệt kê ở trên.
+> Các mô hình mới được tạo trong AI Builder sẽ không được hiển thị trong thông tin chi tiết về đối tượng trừ khi mô hình được tạo từ các trải nghiệm được liệt kê ở trên.
 
 ## <a name="remove-a-prediction"></a>Loại bỏ dự đoán
 
@@ -145,7 +139,7 @@ Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nh�
 
 ## <a name="troubleshooting"></a>Gỡ rối
 
-Nếu không thể hoàn thành quy trình đính kèm Dataverse do lỗi, bạn có thể cố hoàn thành quy trình theo cách thủ công. Có hai vấn đề đã biết có thể xảy ra trong quy trình đính kèm:
+Nếu không thể hoàn thành quy trình đính kèm Common Data Service do lỗi, bạn có thể cố hoàn thành quy trình theo cách thủ công. Có hai vấn đề đã biết có thể xảy ra trong quy trình đính kèm:
 
 - Giải pháp Bổ trợ thẻ khách hàng chưa được cài đặt.
     1. Hoàn thành các hướng dẫn để [cài đặt và đặt cấu hình giải pháp](customer-card-add-in.md).
@@ -166,6 +160,3 @@ Nếu không thể hoàn thành quy trình đính kèm Dataverse do lỗi, bạn
     1. Chọn người dùng bạn vừa tạo.
     1. Chọn **Quản lý vai trò** trong thanh menu trên cùng.
     1. Chọn **Quản trị viên hệ thống** rồi chọn **OK**.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

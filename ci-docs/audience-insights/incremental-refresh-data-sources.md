@@ -1,26 +1,22 @@
 ---
-title: Làm mới gia tăng cho Power Query nguồn dữ liệu dựa trên
+title: Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
 description: Làm mới dữ liệu mới và cập nhật cho các nguồn dữ liệu lớn dựa trên Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+ms.date: 09/28/2020
+ms.reviewer: adkuppa
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-system-schedule
-- customerInsights
-ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: d4b01be75d25fa0e120904924a193171eefec579
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353731"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268574"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
-
-Bài viết này thảo luận về cách định cấu hình làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query.
 
 Làm mới gia tăng cho các nguồn dữ liệu cung cấp các lợi ích sau:
 
@@ -30,13 +26,13 @@ Làm mới gia tăng cho các nguồn dữ liệu cung cấp các lợi ích sau
 
 ## <a name="configure-incremental-refresh"></a>Đặt cấu hình làm mới gia tăng
 
-Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các nguồn dữ liệu được nhập qua Power Query hỗ trợ quá trình nhập tăng dần. Ví dụ: cơ sở dữ liệu Azure SQL với các trường ngày và thời gian, cho biết thời điểm các bản ghi dữ liệu được cập nhật lần cuối.
+Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các nguồn dữ liệu được nhập thông qua Power Query hỗ trợ nhập tăng dần. Ví dụ: cơ sở dữ liệu Azure SQL với các trường ngày và thời gian, cho biết thời điểm các bản ghi dữ liệu được cập nhật lần cuối.
 
 1. [Tạo nguồn dữ liệu mới dựa trên Power Query](connect-power-query.md).
 
-1. Cung cấp một **Tên** cho nguồn dữ liệu.
+1. Cung cấp tên cho nguồn dữ liệu.
 
-1. Chọn nguồn dữ liệu hỗ trợ làm mới gia tăng, chẳng hạn như [Cơ sở dữ liệu Azure SQL](/power-query/connectors/azuresqldatabase).
+1. Chọn nguồn dữ liệu hỗ trợ làm mới tăng dần, chẳng hạn như cơ sở dữ liệu Azure SQL.
 
 1. Chọn các thực thể hoặc bảng để nhập.
 
@@ -48,7 +44,8 @@ Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các n
 
 1. Trên **Thiết đặt làm mới tăng dần**, bạn sẽ định cấu hình làm mới tăng dần cho tất cả các thực thể mà bạn đã chọn khi tạo nguồn dữ liệu.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Định cấu hình các thực thể trong nguồn dữ liệu để làm mới gia tăng.":::
+   > [!div class="mx-imgBorder"]
+   > ![Định cấu hình các thực thể trong nguồn dữ liệu để làm mới tăng dần](media/incremental-refresh-settings.png "Định cấu hình các thực thể trong nguồn dữ liệu để làm mới tăng dần")
 
 1. Chọn một thực thể và cung cấp các chi tiết sau:
 

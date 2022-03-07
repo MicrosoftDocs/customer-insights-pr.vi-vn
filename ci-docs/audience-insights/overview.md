@@ -3,17 +3,18 @@ title: Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 
 description: Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights.
 ms.date: 08/04/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b0fd10ca6f79bfec35c8a238179ba7e26e4dad98
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: a406489759466cd5b820734dbdfa16f23053c666
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230762"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977809"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Tổng quan về thông tin chi tiết về đối tượng cho Dynamics 365 Customer Insights
 

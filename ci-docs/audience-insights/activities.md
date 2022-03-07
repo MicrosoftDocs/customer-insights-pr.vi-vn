@@ -1,28 +1,20 @@
 ---
 title: Hoạt động của khách hàng
 description: Xác định các hoạt động của khách hàng và xem các hoạt động đó theo dòng thời gian trên hồ sơ khách hàng.
-ms.date: 11/01/2021
+ms.date: 09/12/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-searchScope:
-- ci-entities
-- ci-customer-card
-- ci-relationships
-- ci-activities
-- ci-activities-wizard
-- ci-measures
-- ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: a2f1e8ecf49664a4bb2dc271131d437e50cfdd24
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: MT
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359866"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494437"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
@@ -32,7 +24,8 @@ Kết hợp các hoạt động của khách hàng từ [những nguồn dữ li
 
 Nguồn dữ liệu của bạn có thể bao gồm các thực thể có dữ liệu giao dịch và hoạt động từ nhiều nguồn dữ liệu. Xác định các thực thể này và chọn các hoạt động bạn muốn xem trên dòng thời gian của khách hàng. Chọn thực thể bao gồm hoạt động mục tiêu hoặc hoạt động của bạn.
 
-Một thực thể phải có ít nhất một thuộc tính loại **Ngày** để được đưa vào dòng thời gian của khách hàng và bạn không thể thêm các thực thể mà không có trường **Ngày**. Kiểm soát **Thêm hoạt động** bị vô hiệu hóa nếu không tìm thấy thực thể đó.
+> [!NOTE]
+> Một thực thể phải có ít nhất một thuộc tính loại **Ngày** để được đưa vào dòng thời gian của khách hàng và bạn không thể thêm các thực thể mà không có trường **Ngày**. Kiểm soát **Thêm hoạt động** bị vô hiệu hóa nếu không tìm thấy thực thể đó.
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Dữ liệu** > **Hoạt động**.
 
@@ -48,16 +41,13 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo.
 
-1. Trong bước **Mối quan hệ**, đặt cấu hình chi tiết để kết nối dữ liệu hoạt động của bạn với hồ sơ khách hàng tương ứng. Bước này trực quan hóa kết nối giữa các thực thể.  
+1. Trong bước **Mối quan hệ**, hãy đặt cấu hình thông tin chi tiết để kết nối dữ liệu hoạt động của bạn với khách hàng tương ứng. Bước này trực quan hóa kết nối giữa các thực thể.  
 
    - **Đầu tiên**: Trường ngoại trong thực thể hoạt động của bạn sẽ được dùng để thiết lập mối quan hệ với một thực thể khác.
    - **Thứ hai**: Thực thể khách hàng nguồn tương ứng mà thực thể hoạt động của bạn sẽ có mối quan hệ. Bạn chỉ có thể liên kết với các thực thể khách hàng nguồn được dùng trong quá trình hợp nhất dữ liệu.
    - **Thứ ba** : Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn được chọn đã tồn tại, thì tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ nào như vậy tồn tại, một mối quan hệ mới sẽ được tạo theo tên mà bạn cung cấp trong hộp này.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Xác định mối quan hệ của thực thể.":::
-
-   > [!TIP]
-   > Trong môi trường B2B, bạn có thể chọn giữa các thực thể tài khoản và các thực thể khác. Nếu bạn chọn một thực thể tài khoản, đường dẫn mối quan hệ sẽ tự động được đặt. Đối với các thực thể khác, bạn phải xác định đường dẫn mối quan hệ trên một hoặc nhiều thực thể trung gian cho đến khi bạn tiếp cận thực thể tài khoản.
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. 
 
@@ -69,7 +59,7 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
    - **Trường tùy chọn**
       - **Chi tiết bổ sung**: Trường có thông tin liên quan cho hoạt động này.
       - **Biểu tượng**: Biểu tượng thể hiện rõ nhất loại hoạt động này.
-      - **Địa chỉ web**: Trường chứa URL có thông tin về hoạt động này. Ví dụ: hệ thống giao dịch lấy nguồn từ hoạt động này. URL này có thể là bất kỳ trường nào từ nguồn dữ liệu hoặc nó có thể được tạo thành một trường mới bằng cách sử dụng Power Query sự biến đổi. Dữ liệu URL sẽ được lưu trữ trong thực thể *Hoạt động đã hợp nhất*. Dữ liệu này có thể được dùng ở hạ nguồn bằng cách sử dụng [API](apis.md).
+      - **Địa chỉ web**: Trường chứa URL có thông tin về hoạt động này. Ví dụ: hệ thống giao dịch lấy nguồn từ hoạt động này. URL này có thể là bất kỳ trường nào từ nguồn dữ liệu hoặc được xây dựng làm một trường mới bằng cách chuyển đổi Power Query. Dữ liệu URL sẽ được lưu trữ trong thực thể *Hoạt động đã hợp nhất*. Dữ liệu này có thể được dùng ở hạ nguồn bằng cách sử dụng [API](apis.md).
 
    - **Hiển thị trong dòng thời gian**
       - Chọn xem bạn có hiển thị hoạt động này trong dạng xem dòng thời gian trên hồ sơ khách hàng của bạn hay không. Chọn **Có** để hiển thị hoạt động trong dòng thời gian hoặc **Không** để ẩn hoạt động đó.
@@ -90,7 +80,9 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
 1. Trên trang **Hoạt động**, hãy chọn **Chạy** để xử lý hoạt động. 
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Có [6 loại trạng thái](system.md#status-types) cho các nhiệm vụ/quy trình. Ngoài ra, hầu hết các quy trình [phụ thuộc vào các quá trình hạ nguồn khác](system.md#refresh-policies). Bạn có thể chọn trạng thái của một quy trình để xem chi tiết về tiến trình của toàn bộ công việc. Sau khi chọn **Xem chi tiết** đối với một trong các tác vụ của công việc, bạn sẽ tìm thấy thông tin bổ sung: thời gian xử lý, ngày xử lý gần nhất và tất cả các lỗi và cảnh báo liên quan đến tác vụ.
+
 
 ## <a name="manage-existing-activities"></a>Quản lý các hoạt động hiện có
 
@@ -102,35 +94,6 @@ Các hành động sau đây khả dụng khi bạn chọn một hoạt động.
 
 - **Đổi tên**: Mở hộp thoại nơi bạn có thể nhập tên khác cho hoạt động đã chọn. Chọn **Lưu** để áp dụng thay đổi.
 
-- **Xóa**: Mở hộp thoại để xác nhận việc xóa hoạt động đã chọn. Bạn cũng có thể xóa nhiều hoạt động cùng một lúc bằng cách chọn các hoạt động rồi chọn biểu tượng xóa. Chọn **Xóa** để xác nhận thao tác xóa.
-
-## <a name="view-activity-timelines-on-customer-profiles"></a>Xem tiến trình hoạt động trên hồ sơ khách hàng
-
-Sau khi bạn đặt cấu hình các hoạt động của khách hàng, hãy chọn **Hiển thị trong dòng thời gian hoạt động** trong cấu hình hoạt động để tìm tất cả các hoạt động của khách hàng của bạn trên hồ sơ khách hàng của họ.
-
-Để mở dòng thời gian cho khách hàng, hãy truy cập **Khách hàng** và chọn hồ sơ khách hàng mà bạn muốn xem.
-
-Nếu một khách hàng đã tham gia vào một hoạt động mà bạn đã đặt cấu hình, bạn sẽ tìm thấy nó trong phần **Dòng thời gian hoạt động**.
-
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Xem các hoạt động đã đặt cấu hình trong Hồ sơ khách hàng.":::
-
-Có một số cách để lọc các hoạt động trong dòng thời gian hoạt động:
-
-- Bạn có thể chọn một hoặc nhiều biểu tượng hoạt động để tinh chỉnh kết quả của mình để chỉ bao gồm các loại đã chọn.
-
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Lọc các hoạt động theo loại bằng cách sử dụng các biểu tượng.":::
-
-- Bạn có thể chọn **Lọc** để mở bảng điều khiển bộ lọc để đặt cấu hình bộ lọc dòng thời gian của bạn.
-
-   1. Bạn có thể lọc theo *ActivityType* và *Date*
-   1. Chọn **Áp dụng** để sử dụng các bộ lọc trong dòng thời gian hoạt động.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Sử dụng bảng điều khiển bộ lọc để đặt cấu hình các điều kiện bộ lọc.":::
-
-Để xóa bộ lọc, hãy chọn **x** bên cạnh mỗi bộ lọc được áp dụng cho dòng thời gian hoặc chọn **Xóa bộ lọc**.
-
-
-> [!NOTE]
-> Bộ lọc hoạt động bị xóa khi bạn rời khỏi hồ sơ khách hàng. Bạn phải áp dụng chúng mỗi khi mở hồ sơ khách hàng.
+- **Xóa**: Mở hộp thoại để xác nhận việc xóa hoạt động đã chọn. Bạn cũng có thể xóa nhiều hoạt động cùng một lúc bằng cách chọn các hoạt động rồi chọn biểu tượng xóa. Chọn **Xoá** để xác nhận tác vụ xoá của bạn.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

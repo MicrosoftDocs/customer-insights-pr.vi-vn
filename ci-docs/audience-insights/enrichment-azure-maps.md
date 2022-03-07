@@ -3,17 +3,18 @@ title: Tăng cường các hồ sơ khách hàng với dữ liệu vị trí t�
 description: Thông tin chung về dịch vụ tăng cường dữ liệu của bên thứ nhất Azure Maps.
 ms.date: 08/31/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226475"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466788"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng Azure Maps (bản xem trước)
 
@@ -83,9 +84,9 @@ Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ li
 
 Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
 
-## <a name="next-steps"></a>Các bước tiếp theo
+## <a name="next-steps"></a>Các bước tiếp theo
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Xây dựng dựa trên dữ liệu khách hàng phong phú của bạn. Tạo [phân khúc](segments.md), [biện pháp](measures.md) và [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm cá nhân cho khách hàng của bạn.
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 

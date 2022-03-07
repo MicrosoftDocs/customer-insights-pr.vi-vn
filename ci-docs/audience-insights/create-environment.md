@@ -1,23 +1,21 @@
 ---
 title: Tạo môi trường trong Customer Insights
 description: Các bước để tạo môi trường với đăng ký được cấp phép cho Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 10/14/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354121"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673417"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Tạo môi trường trong thông tin chuyên sâu về đối tượng
 
@@ -30,7 +28,7 @@ Các tổ chức có thể tạo *hai* môi trường cho mọi giấy phép Cus
 
 ## <a name="create-a-new-environment"></a>Tạo môi trường mới
 
-Sau khi mua giấy phép đăng ký cho Customer Insights, quản trị viên toàn cầu của Microsoft 365 người thuê nhận được một email mời họ tạo môi trường. Đi tới [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) để bắt đầu. 
+Sau khi mua giấy phép đăng ký cho Customer Insights, quản trị viên toàn cầu của đối tượng thuê Microsoft 365 sẽ nhận được email mời họ tạo môi trường. Đi tới [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) để bắt đầu. 
 
 Trải nghiệm có hướng dẫn giúp bạn thực hiện các bước để thu thập tất cả thông tin cần thiết cho một môi trường mới. Bạn cần [quyền quản trị viên](permissions.md) trong thông tin chuyên sâu về đối tượng để tạo hoặc quản lý môi trường.
 
@@ -66,7 +64,7 @@ Bằng cách lưu dữ liệu vào Azure Data Lake Storage, bạn đồng ý r�
 > Customer Insights hiện hỗ trợ:
 > - Các thực thể được nhập từ luồng dữ liệu Power BI được lưu trữ trong Microsoft Dataverse - Data Lake được quản lý.  
 > - Tài khoản Azure Data Lake Storage từ cùng một vùng Azure mà bạn đã chọn khi tạo môi trường.
-> - Azure Data Lake Storage tài khoản Gen2 và có *không gian tên phân cấp* đã được kích hoạt. Tài khoản lưu trữ Azure Data Lake Gen1 không được hỗ trợ.
+> - Tài khoản Azure Data Lake Storage có *vùng tên theo cấp bậc* được bật.
 
 Đối với tùy chọn Azure Data Lake Storage, bạn có thể chọn giữa tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng một dịch vụ Azure chính](connect-service-principal.md). Tên **Bộ chứa** sẽ là `customerinsights` và không thể thay đổi.
 
@@ -78,14 +76,9 @@ Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các 
    
 Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights với môi trường Dataverse.
 
-Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo hướng mô hình trong Power Apps. Để trống trường này nếu bạn không có Dataverse môi trường và chúng tôi sẽ cung cấp một môi trường cho bạn.
+Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý. Chọn **Bật chia sẻ dữ liệu** để chia sẻ dữ liệu đầu ra của Customer Insights với kho dữ liệu Dataverse được quản lý.
 
-Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và cổng](data-sources.md#add-data-from-on-premises-data-sources). Bạn cũng có thể dùng [mô hình xuất xưởng dự đoán](predictions-overview.md?tabs=b2c#out-of-box-models) bằng cách kết nối với một Dataverse Môi trường.
-
-> [!IMPORTANT]
-> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để cho phép chia sẻ dữ liệu.
-
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="chia sẻ dữ liệu với Microsoft Dataverse tự động được bật cho các phiên bản mới thuần.":::
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Các tùy chọn cấu hình để bật tính năng chia sẻ dữ liệu với Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights không hỗ trợ các tình huống chia sẻ dữ liệu sau:
