@@ -1,24 +1,26 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Google Ads
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Google Ads.
-ms.date: 03/03/2021
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
-ms.translationtype: HT
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604303"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227036"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
 Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đối tượng Google Ads và sử dụng chúng để quảng cáo trên Google Tìm kiếm, Gmail, YouTube và Google Display Network. 
+
+> [!IMPORTANT]
+> Hiện tại, bạn chỉ có thể tạo một kết nối mới và xuất dữ liệu sang Google Ads nếu bạn đã có mã thông báo Nhà phát triển Google Ads được chấp thuận. Do các thay đổi về chính sách, chúng tôi sẽ sớm cập nhật quá trình xuất Google Ads và cung cấp tùy chọn xuất không yêu cầu mã thông báo của nhà phát triển để đảm bảo trải nghiệm của bạn liên tục và đơn giản hóa quá trình xuất sang Google Ads. Chúng tôi khuyên bạn không nên thiết lập thêm kết nối với Google Ads để tạo điều kiện chuyển sang tùy chọn xuất mới dễ dàng hơn.
 
 ## <a name="prerequisites-for-connection"></a>Điều kiện tiên quyết để kết nối
 
@@ -32,9 +34,9 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đố
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ mỗi lần xuất sang Google Ads.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Google Ads.
 - Việc xuất sang Google Ads bị giới hạn ở các phân khúc.
-- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ có thể mất đến 5 phút vì những hạn chế từ phía nhà cung cấp. 
+- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ khách hàng có thể mất tới 5 phút vì những giới hạn từ phía nhà cung cấp. 
 - Quá trình so khớp trong Google Ads có thể mất đến 48 giờ.
 
 ## <a name="set-up-connection-to-google-ads"></a>Thiết lập kết nối với Google Ads
@@ -71,7 +73,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **[ID đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** và chọn **Kết nối** để khởi tạo kết nối với Google Ads.
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng.
 
 1. Chọn phân khúc mà bạn muốn xuất. Bạn có thể xuất tổng cộng tối đa 1 triệu hồ sơ khách hàng sang Google Ads.
 

@@ -3,18 +3,17 @@ title: Hướng dẫn mẫu về dự đoán giá trị trọn đời của khá
 description: Sử dụng hướng dẫn mẫu này để thử mô hình dự đoán giá trị trọn đời của khách hàng.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306375"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354857"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Hướng dẫn mẫu về dự đoán Giá trị trọn đời của khách hàng (CLV)
 
@@ -22,7 +21,7 @@ Hướng dẫn này sẽ giải thích cho bạn một ví dụ chi tiết về 
 
 ## <a name="scenario"></a>Kịch bản
 
-Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng cao. Họ bán sản phẩm thông qua trang web Contoso Coffee. Công ty muốn tìm hiểu giá trị (doanh thu) mà khách hàng của họ có thể tạo ra trong 12 tháng tới. Nếu biết được giá trị kỳ vọng của khách hàng trong 12 tháng tới, họ có thể hướng nỗ lực tiếp thị đến những khách hàng có giá trị cao.
+Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng cao. Họ bán sản phẩm thông qua trang web Contoso Coffee của họ. Công ty muốn tìm hiểu giá trị (doanh thu) mà khách hàng của họ có thể tạo ra trong 12 tháng tới. Nếu biết được giá trị kỳ vọng của khách hàng trong 12 tháng tới, họ có thể hướng nỗ lực tiếp thị đến những khách hàng có giá trị cao.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -31,7 +30,7 @@ Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng
 
 ## <a name="task-1---ingest-data"></a>Nhiệm vụ 1 - Nhập dữ liệu
 
-Xem lại các bài viết về cách [nhập dữ liệu](data-sources.md) và [nhập nguồn dữ liệu bằng trình kết nối Power Query](connect-power-query.md). Thông tin sau đây giả định rằng bạn đã quen với việc nhập dữ liệu nói chung.
+Xem lại các bài báo [về việc nhập dữ liệu](data-sources.md) và [nhập nguồn dữ liệu bằng cách sử dụng Power Query các đầu nối](connect-power-query.md). Thông tin sau đây giả định rằng bạn đã quen với việc nhập dữ liệu nói chung.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Nhập dữ liệu khách hàng từ nền tảng Thương mại điện tử
 
@@ -164,7 +163,7 @@ Sau khi nhập dữ liệu, bây giờ, chúng ta sẽ bắt đầu quá trình 
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán giá trị trọn đời của khách hàng
 
-Sau khi có hồ sơ khách hàng hợp nhất, bây giờ, chúng ta có thể chạy dự đoán giá trị trọn đời của khách hàng. Để biết các bước chi tiết, hãy xem bài viết [Dự đoán Giá trị trọn đời của khách hàng (xem trước)](predict-customer-lifetime-value.md).
+Sau khi có hồ sơ khách hàng hợp nhất, bây giờ, chúng ta có thể chạy dự đoán giá trị trọn đời của khách hàng. Để biết các bước chi tiết, hãy xem [Giá trị lâu dài của khách hàng dự đoán](predict-customer-lifetime-value.md).
 
 1. Chuyển đến phần **Thông tin**  > **Dự đoán** rồi chọn **Mô hình giá trị trọn đời của khách hàng**.
 

@@ -1,27 +1,26 @@
 ---
 title: Bot dành cho Microsoft Teams
 description: Tra cứu hồ sơ khách hàng hợp nhất trong Microsoft Teams với sự giúp đỡ của một bot.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+ms.openlocfilehash: d6b016c1ec35e26ce6449333234edfd218bc9354
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407322"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232128"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams dành cho Dynamics 365 Customer Insights (bản xem trước)
 
 Kết nối với Microsoft Teams để cho phép bot tra cứu hồ sơ khách hàng hợp nhất trong các kênh Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Teams bot hiển thị hồ sơ khách hàng](media/teams-bot.png "Teams bot hiển thị hồ sơ khách hàng")
+> ![Teams bot hiển thị hồ sơ khách hàng.](media/teams-bot.png "Teams bot hiển thị hồ sơ khách hàng")
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -31,7 +30,10 @@ Kết nối với Microsoft Teams để cho phép bot tra cứu hồ sơ khách 
 - Đã hoàn thành [quy trình hợp nhất](data-unification.md).
 - Đã thêm các trường vào [chỉ mục tìm kiếm và lọc](search-filter-index.md).
 - Customer Insights và Teams thuộc cùng một tổ chức.
+- Môi trường của bạn có đối tượng mục tiêu chính được đặt thành các khách hàng cá nhân. Tài khoản doanh nghiệp không được hỗ trợ.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Đặt cấu hình bot
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Điểm đến xuất**.
@@ -52,3 +54,6 @@ Bot mang đến các chức năng tra cứu đối với hồ sơ khách hàng h
 - Nếu tổ chức của bạn duy trì nhiều môi trường Customer Insights trong cùng một tổ chức, bạn có thể nhập **switchinstance** để chọn môi trường bạn muốn kết nối với bot.
 
 - Nhập **trợ giúp** để xem danh sách các lệnh có thể dùng cho bot.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

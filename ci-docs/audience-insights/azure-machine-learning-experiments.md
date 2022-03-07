@@ -2,19 +2,18 @@
 title: Thử nghiệm Azure Machine Learning
 description: Sử dụng các mô hình dựa trên Azure Machine Learning trong Dynamics 365 Customer Insights.
 ms.date: 12/02/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881764"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228914"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Sử dụng các mô hình dựa trên Azure Machine Learning
 

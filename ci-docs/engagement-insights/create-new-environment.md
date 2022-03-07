@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648143"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225473"
 ---
 # <a name="create-a-new-environment"></a>Tạo môi trường mới 
 
@@ -40,13 +39,13 @@ Môi trường là không gian mà bạn quản lý không gian làm việc và 
 
 1. Chọn **Khu vực** và chọn **Tiếp theo**. 
 
-1. Nhập **Tên không gian làm việc**, cho phép bạn thu thập dữ liệu cho trang web hoặc ứng dụng cụ thể. Để biết thêm thông tin, hãy xem [Tạo không gian làm việc](create-workspace.md).
+1. Gõ a **Tên không gian làm việc**, cho phép bạn thu thập dữ liệu cho các trang web hoặc ứng dụng cụ thể. Để biết thêm thông tin, hãy xem [Tạo không gian làm việc](create-workspace.md).
 
-1. Chọn **Loại không gian làm việc** (Web hoặc di động) mà bạn muốn tạo. 
+1. Chọn **Loại không gian làm việc** (web hoặc thiết bị di động) mà bạn muốn tạo. 
 
 1. Chọn **Hiện thiết đặt nâng cao** để bật hoặc tắt các thiết đặt tùy chọn này:
 
-   - Chuyển **Chưa xác định thành đã xác định** thành "bật" để liên kết các sự kiện web với những người dùng đã xác thực trước đó. Để biết thêm thông tin, hãy xem [Nhận ra các sự kiện web từ những khách truy cập đã được xác thực trước đó](unknown-to-known.md)
+   - Chuyển **Chưa xác định thành đã xác định** thành "bật" để liên kết các sự kiện web với những người dùng đã xác thực trước đó. Để biết thêm thông tin, hãy xem [Nhận ra các sự kiện web từ những khách truy cập đã được xác thực trước đó](unknown-to-known.md).
    - Chuyển **Lọc lưu lượng bot** thành "bật" để loại bỏ lưu lượng truy cập web của bot cho không gian làm việc này. 
 
 1. Chọn **Hoàn tất** khi bạn hoàn tất. 

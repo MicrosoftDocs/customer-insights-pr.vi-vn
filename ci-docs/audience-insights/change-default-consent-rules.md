@@ -1,25 +1,26 @@
 ---
 title: Quản lý các quy tắc đồng ý mặc định trên các phân đoạn
 description: Với khả năng quản lý sự đồng ý, bạn có thể tắt hoặc thay đổi các quy tắc đồng ý mặc định nếu tính năng ghi đè được bật.
-ms.date: 10/30/2021
-ms.service: customer-insights
+ms.date: 12/01/2021
 mms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 358ec05d0f7b5fe4ef15d65054b66eaaad301626
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
-ms.translationtype: HT
+ms.openlocfilehash: 4eae4da67fd4c6e70800f495ba30366d4fc9a0dd
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790747"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228965"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Tắt hoặc thay đổi các quy tắc đồng ý mặc định
 
 Nếu tổ chức của bạn sử dụng [khả năng quản lý sự đồng ý](../consent-management/overview.md) kết hợp với thông tin chi tiết về khán giả, [quản trị viên có thể thực thi các quy tắc về sự đồng ý](activate-consent.md) cho các phân đoạn. 
 
-Với các quy tắc về sự đồng ý được thực thi trong khu vực phân khúc, mọi phân khúc đều thông báo về trạng thái kiểm tra sự đồng ý và các quy tắc. Nếu cho phép ghi đè, các quy tắc đồng ý mặc định sẽ bị tắt cho các phân đoạn cụ thể. Mọi người tạo phân đoạn đều có thể thêm nhiều quy tắc đồng ý hơn vào phân đoạn đó. 
+Với các quy tắc về sự đồng ý được thực thi trong khu vực phân khúc, mọi phân khúc đều thông báo về trạng thái kiểm tra sự đồng ý và các quy tắc. Nếu cho phép ghi đè, các quy tắc đồng ý mặc định sẽ bị tắt cho các phân đoạn cụ thể. Mọi người tạo ra một phân khúc đều có thể thêm nhiều quy tắc đồng ý hơn vào đầu các quy tắc mặc định cho một phân khúc. 
+
+## <a name="for-administrators"></a>Dành cho quản trị viên
 
 :::image type="content" source="../consent-management/media/consent-rules-segment.png" alt-text="Trình tạo phân đoạn với các tùy chọn quy tắc đồng ý.":::
 
@@ -35,6 +36,19 @@ Với các quy tắc về sự đồng ý được thực thi trong khu vực ph
 
 1. Lựa chọn **Thêm quy tắc đồng ý** và chọn một quy tắc đồng ý từ **Chọn loại dữ liệu về sự đồng ý** trình đơn thả xuống.
 
-1. Lựa chọn **Cứu** để áp dụng quy tắc mới cho phân đoạn.
+1. Lựa chọn **Tiết kiệm** để áp dụng quy tắc mới cho phân đoạn.
+
+## <a name="for-contributors"></a>Đối với những người đóng góp
+
+Để tạo phân đoạn mà không có quy tắc đồng ý được thực thi, bạn phải làm việc với quản trị viên để tắt chúng trên phân đoạn của mình. Tuy nhiên, bạn có thể thêm các quy tắc về sự đồng ý của riêng mình vào các phân đoạn mà bạn sở hữu và quản lý.
+
+Đó là một quy trình ba bước: 
+1. [Tạo phân khúc](segments.md) trong thông tin chi tiết về khán giả và lưu nó. 
+
+1. Chia sẻ tên phân đoạn với quản trị viên của bạn và yêu cầu họ [cho phép ghi đè cho phân đoạn của bạn](activate-consent.md). 
+
+1. Mở lại các phân đoạn của bạn. Bên trong **Quy tắc đồng ý** thông báo, chọn **Xem chi tiết** và thêm các quy tắc đồng ý mà bạn muốn áp dụng. Sau đó, **Tiết kiệm** và **Chạy** phân khúc của bạn.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

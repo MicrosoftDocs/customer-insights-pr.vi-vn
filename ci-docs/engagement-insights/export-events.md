@@ -4,23 +4,22 @@ description: Cách xuất các sự kiện đã tinh chỉnh và các sự kiệ
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: d062e2982c1041454b083630404f2b68f0da9669
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032411"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232914"
 ---
 # <a name="export-events"></a>Xuất sự kiện
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Sự kiện đại diện cho hành vi của người dùng. Sự kiện ghi lại khi người dùng xem một trang (xem sự kiện) hoặc tương tác với nội dung (sự kiện hành động). Khi bạn có thể quyết định thuộc tính nào của dữ liệu mà bạn muốn hiển thị trong báo cáo, chế độ xem dữ liệu ảo này được gọi là *sự kiện đã tinh chỉnh*. 
+Sự kiện đại diện cho hành vi của người dùng. Sự kiện ghi lại khi người dùng xem một trang (xem sự kiện) hoặc tương tác với nội dung (sự kiện hành động). Khi bạn có thể quyết định thuộc tính nào của dữ liệu mà bạn muốn hiển thị trong báo cáo, chế độ xem dữ liệu ảo này được gọi là *sự kiện đã tinh chỉnh*. Để biết thêm thông tin, hãy xem [Tạo và chỉnh sửa sự kiện](refined-events.md).
 
 - Bạn có thể xuất các sự kiện và sự kiện đã tinh chỉnh sang bộ nhớ ngoài. 
 - Nội dung xuất là luồng dữ liệu chuyển tiếp. Bạn không thể nạp lại luồng. 
@@ -45,26 +44,28 @@ Trước khi thiết lập nội dung xuất, bạn cần có quyền truy cập
 
 ## <a name="export-events"></a>Xuất sự kiện
 
-Có hai cách để tìm kiếm để xuất sự kiện: 
+Có hai cách để mở hộp thoại **Xuất sự kiện**: 
 - Chuyển đến **Dữ liệu** > **Nội dung xuất** và chọn **Bản xuất mới**.
 - Đi đến **Dữ liệu** > **Sự kiện**, chọn **Thêm [...]** bên cạnh sự kiện bạn muốn xuất rồi chọn **Xuất** từ menu thả xuống. 
 
+:::image type="content" source="media/new-export.png" alt-text="Tạo xuất mới.":::
+
 Bạn được hướng dẫn qua các bước để tạo bản xuất:
 
-1. Cung cấp **Tên bản xuất**.
+1. Nhập **Tên xuất** rồi chọn **Tiếp**.
 
 1. Trong danh sách thả xuống của phần **Lựa chọn sự kiện**, chọn sự kiện cơ sở và sự kiện tinh chỉnh để xuất. 
 
-1. Trong phần **Cấu trúc tệp**, hãy chọn nhịp để tạo tệp mới trong bộ nhớ đích. Các sự kiện được xuất liên tục khi được tạo.
+1. Trong phần **Cấu trúc tệp**, chọn nhịp (hàng giờ hoặc hàng ngày) để tạo tệp mới trong bộ nhớ đích, rồi chọn **Tiếp**. Các sự kiện được xuất liên tục khi được tạo.
 
-1. Chọn định dạng cho bản xuất của bạn. Bạn có thể chọn giữa **Common Data Model**, **CSV** và định dạng **JSON**. Để sử dụng bản xuất với các ứng dụng Dynamics 365 khác, bạn nên sử dụng định dạng Common Data Model.
+1. Trong hộp thoại **Chọn định dạng**, chọn định dạng cho bản xuất. Chọn trong các định dạng **Common Data Model**, **CSV** và **JSON**. Để sử dụng bản xuất với các ứng dụng Dynamics 365 khác, chúng tôi khuyên bạn nên chọn định dạng **Common Data Model**.
 
-1. Trong bước **Chọn đích xuất**, hãy chỉ định vị trí thế hệ 2 của Azure Data Lake Storage.
+1. Trong hộp thoại **Chọn đích đến**, chỉ định vị trí Azure Data Lake Storage thế hệ 2.
     1. **Tên tài khoản ADLS thế hệ 2** là tên của tài khoản lưu trữ mà bạn muốn lưu bản xuất. 
     1. **Đường dẫn thư mục** xác định nơi bản xuất nên được lưu trữ trong hệ thống tệp và cấu trúc thư mục của tài khoản lưu trữ.
     1. **Khóa chia sẻ** có sẵn từ cổng thông tin Azure cho tài khoản lưu trữ.
 
-1. Xem lại và xác nhận lựa chọn của bạn.
+1. Xem lại và xác nhận lựa chọn để hoàn tất.
 
 ## <a name="view-and-manage-exports"></a>Xem và quản lý nội dung xuất
 

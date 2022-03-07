@@ -3,21 +3,20 @@ title: Tạo dạng xem hợp nhất về khách hàng của bạn
 description: Thực hiện quy trình hợp nhất dữ liệu với dữ liệu của bạn để tạo một tập hợp dữ liệu chính duy nhất về hồ sơ khách hàng.
 ms.date: 10/18/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.custom: intro-internal
 searchScope:
-- ci-unify
-ms.openlocfilehash: 694bfd0e407975af64ca0971a73fe4c3f5ba5a23
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+- ci-map
+- customerInsights
+ms.openlocfilehash: 2012d32494ccd4639cbffbb81d4f6eac1258e23b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648097"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353845"
 ---
 # <a name="data-unification-overview"></a>Tổng quan về hợp nhất dữ liệu
 

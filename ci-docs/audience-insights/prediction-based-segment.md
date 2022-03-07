@@ -3,18 +3,17 @@ title: Phân khúc dựa trên đầu ra dự đoán
 description: Tạo phân khúc dựa trên thực thể đầu ra của mô hình dự đoán.
 ms.date: 03/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b89754aea2b0da33f27dea5b26d212920f0c090885f951a37cf42ff11c7b6e93
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: b0b3357cdf3c049bd92f6c3f690f27433df9117b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036445"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226689"
 ---
 # <a name="create-a-segment-based-on-a-prediction-model-preview"></a>Tạo phân khúc dựa trên mô hình dự đoán (bản xem trước)
 

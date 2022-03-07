@@ -3,20 +3,19 @@ title: Làm phong phú hồ sơ khách hàng với dữ liệu từ Microsoft Of
 description: Sử dụng dữ liệu độc quyền từ Microsoft Office để làm phong phú hồ sơ khách hàng của bạn với dữ liệu tương tác.
 ms.date: 12/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a30e09b5ed491c8d36019b5f0d35e0a2f7a0199c
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7889788"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228500"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Làm phong phú hồ sơ khách hàng bằng dữ liệu tương tác (xem trước)
+# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu tương tác (xem trước)
 
 Sử dụng dữ liệu từ Microsoft Office 365 để làm phong phú thêm hồ sơ tài khoản khách hàng của bạn với thông tin chi tiết về các cam kết thông qua Office 365 ứng dụng. Dữ liệu tương tác bao gồm email và hoạt động cuộc họp, được tổng hợp ở cấp tài khoản. Ví dụ: số lượng email từ tài khoản doanh nghiệp hoặc số cuộc họp với tài khoản. Không có dữ liệu về người dùng cá nhân được cung cấp. 
 
@@ -40,15 +39,15 @@ Tính năng làm giàu này có sẵn ở các khu vực sau: Vương quốc Anh
 
    :::image type="content" source="media/enrichment-office-tile.png" alt-text="Ô tương tác tài khoản.":::
    
-1. Lựa chọn **Kế tiếp** bên trong **Tổng quat** bước và nhập địa chỉ email từ tổ chức của bạn mà dữ liệu Office sẽ được tổng hợp. Chỉ dữ liệu từ các địa chỉ email được liệt kê mới được xử lý để liên lạc có liên quan. Một phương pháp hay nhất là sử dụng các nhóm email, ví dụ: *Nhóm bán hàng Hoa Kỳ*, dễ dàng quản lý trong Office 365. Số lượng địa chỉ email trong các nhóm được giải quyết và hiển thị. Tổng số địa chỉ email phải có ít nhất 2 và không được vượt quá 2.500.
+1. Lựa chọn **Tiếp theo** bên trong **Tổng quat** bước và nhập địa chỉ email từ tổ chức của bạn mà dữ liệu Office sẽ được tổng hợp. Chỉ dữ liệu từ các địa chỉ email được liệt kê mới được xử lý để liên lạc có liên quan. Một phương pháp hay nhất là sử dụng các nhóm email, ví dụ: *Nhóm bán hàng Hoa Kỳ*, dễ dàng quản lý trong Office 365. Số lượng địa chỉ email trong các nhóm được giải quyết và hiển thị. Tổng số địa chỉ email phải có ít nhất 2 và không được vượt quá 2.500.
 
    :::image type="content" source="media/enrichment-office-email-addresses.png" alt-text="Địa chỉ email tương tác tài khoản.":::
 
-1. Xem lại tuyên bố đồng ý, chọn **tôi đồng ý** hộp kiểm và chọn **Kế tiếp**.
+1. Xem lại tuyên bố đồng ý, chọn **tôi đồng ý** hộp kiểm và chọn **Tiếp theo**.
 
-1. Chọn tập dữ liệu khách hàng và chọn **Kế tiếp**.
+1. Chọn tập dữ liệu khách hàng và chọn **Tiếp theo**.
 
-1. Ánh xạ trường địa chỉ email liên hệ và chọn **Kế tiếp**.
+1. Ánh xạ trường địa chỉ email liên hệ và chọn **Tiếp theo**.
 
 1. Xem lại cấu hình bổ sung, đặt tên cho bổ sung và chọn **Tiết kiệm làm giàu** để tiết kiệm làm giàu.
 
@@ -86,7 +85,7 @@ Tất cả dữ liệu được tổng hợp đến cấp tài khoản. Hệ th�
 | Số lượng email đến tài khoản                                                       |  NoOfEmails_ToAccount                    |
 | Số lượng email từ tài khoản                                                     |  NoOfEmails_FromAccount                  | 
 | Số cuộc họp do tài khoản khởi xướng                                           |  NoOfMeetings_FromAccount                | 
-| Số cuộc họp do tổ chức của bạn bắt đầu                                 |  NoOfMeetings_ToAccount                  | 
+| Số lượng cuộc họp do tổ chức của bạn bắt đầu                                 |  NoOfMeetings_ToAccount                  | 
 | Số người từ tổ chức của bạn trong các cuộc họp có tài khoản                  |  NoOfContactsInvolved_Meetings           | 
 | Số người từ tổ chức của bạn trong các cuộc trò chuyện qua email với tài khoản       |  NoOfContactsInvolved_Emails             | 
 | Số người từ tài khoản trong các cuộc họp với tổ chức của bạn                  |  NoOfAccountContactsInvolved_Meetings    | 
@@ -100,7 +99,7 @@ Tất cả dữ liệu được tổng hợp đến cấp tài khoản. Hệ th�
 | Mức độ tổng hợp (năm, tháng hoặc tuần)                                          |  AggregationLevel                        | 
 
 
-Xem lại dữ liệu đã được bổ sung chi tiết bằng cách chọn **Xem thêm** trong phần xem trước. Nó mở ra *Văn phòng* thực thể. Bạn cũng có thể tìm thấy thực thể được liệt kê trong **Làm giàu** nhóm trong **Dữ liệu** > **Thực thể**. Bạn cũng sẽ tìm thấy *Office_UserEntity*, chứa các ID Active Directory cho các địa chỉ email đã được chọn trong quá trình cấu hình bổ sung 
+Xem lại dữ liệu đã được bổ sung chi tiết bằng cách chọn **Xem thêm** trong phần xem trước. Nó mở ra *Văn phòng* thực thể. Bạn cũng có thể tìm thấy thực thể được liệt kê trong **Làm giàu** nhóm trong **Dữ liệu** > **Các thực thể**. Bạn cũng sẽ tìm thấy *Office_UserEntity*, chứa các ID Active Directory cho các địa chỉ email đã được chọn trong quá trình cấu hình bổ sung 
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu tăng cường trên thẻ khách hàng
 

@@ -1,22 +1,21 @@
 ---
-title: Dự đoán khả năng rời bỏ đăng ký
+title: Đăng ký churn dự đoán (có video)
 description: Dự đoán xem khách hàng có nguy cơ không sử dụng sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa không.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799753"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354737"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Dự đoán khả năng rời bỏ đăng ký (xem trước)
+# <a name="subscription-churn-prediction"></a>Dự đoán khả năng rời bỏ đăng ký
 
 Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng có nguy cơ không sử dụng sản phẩm hoặc dịch vụ đăng ký của công ty bạn nữa không. Bạn có thể tạo dự đoán khả năng rời bỏ đăng ký mới trên trang **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
 
@@ -63,7 +62,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
 ## <a name="create-a-subscription-churn-prediction"></a>Tạo dự đoán khả năng rời bỏ đăng ký
 
 1. Trong thông tin chuyên sâu về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán**.
-1. Chọn tiêu đề **Mô hình khả năng rời bỏ đăng ký (xem trước)** và chọn **Sử dụng mô hình này**.
+1. Chọn **Mô hình gián đoạn đăng ký** gạch và chọn **Sử dụng mô hình này**.
    > [!div class="mx-imgBorder"]
    > ![Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này.](media/subscription-churn-usethismodel.PNG "Tiêu đề mô hình Khả năng rời bỏ đăng ký có nút Sử dụng mô hình này")
 
@@ -77,7 +76,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
 1. Nhập số **Ngày kể từ khi đăng ký kết thúc** mà doanh nghiệp của bạn xem xét một khách hàng là đang ở trong trạng thái rời đi. Giai đoạn này thường giống như các hoạt động kinh doanh như chào hàng hoặc các nỗ lực tiếp thị khác nhằm cố ngăn chặn mất khách hàng.
 1. Nhập số lượng **Ngày xem xét trong tương lai để dự đoán sự rời đi** để đặt khoảng thời gian dự đoán khả năng rời bỏ. Ví dụ: để dự đoán nguy cơ khách hàng rời đi trong 90 ngày tới để phù hợp với nỗ lực duy trì hoạt động tiếp thị của bạn. Việc dự đoán rủi ro khách hàng ngừng sử dụng gói đăng ký trong khoảng thời gian dài hơn hoặc ngắn hơn có thể khiến việc xử lý các yếu tố trong hồ sơ rủi ro khách hàng ngừng sử dụng gói đăng ký của bạn gặp nhiều khó khăn hơn, tùy thuộc vào yêu cầu kinh doanh cụ thể của bạn. Chọn **Tiếp** tiếp tục
    >[!TIP]
-   > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
+   > Bạn có thể chọn **Lưu bản nháp** bất kỳ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán nháp trong tab **Dự đoán của tôi** để tiếp tục.
 
 ### <a name="add-required-data"></a>Thêm dữ liệu bắt buộc
 

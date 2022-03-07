@@ -1,20 +1,23 @@
 ---
-title: Ánh xạ các thực thể để hợp nhất dữ liệu
-description: Ánh xạ dữ liệu để tạo hồ sơ khách hàng hợp nhất.
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: Ánh xạ thực thể và thuộc tính để hợp nhất dữ liệu
+description: Chọn các thực thể, thuộc tính, khóa chính và loại ngữ nghĩa để ánh xạ dữ liệu vào hồ sơ khách hàng hợp nhất.
+ms.date: 10/18/2020
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+ms.topic: tutorial
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-ms.translationtype: HT
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4407326"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354984"
 ---
 # <a name="map-entities-and-attributes"></a>Ánh xạ thực thể và thuộc tính
 
@@ -35,14 +38,14 @@ ms.locfileid: "4407326"
 3. Chọn các thực thể và thuộc tính bạn muốn sử dụng trong giai đoạn *khớp* và *hợp nhất*. Bạn có thể chọn các thuộc tính bắt buộc riêng lẻ từ một thực thể hoặc bao gồm tất cả các thuộc tính từ một thực thể bằng cách chọn hộp kiểm **Bao gồm tất cả các trường** ở cấp thực thể. Chúng tôi khuyên bạn nên chọn ít nhất hai thực thể để hưởng lợi từ quá trình thống nhất dữ liệu.
 
    > [!div class="mx-imgBorder"]
-   > ![Ví dụ về thêm thực thể](media/data-manager-configure-map-add-entities-example.png "Ví dụ về thêm thực thể")
+   > ![Ví dụ về thêm thực thể.](media/data-manager-configure-map-add-entities-example.png "Ví dụ về thêm thực thể")
 
    Trong ví dụ này, chúng tôi đang thêm thực thể **eCommerceContacts** và **loyCustomers**. Bằng cách chọn những thực thể này, bạn có thể có được thông tin chi tiết về khách hàng kinh doanh trực tuyến nào là thành viên của chương trình khách hàng thân thiết.
    
    Bạn có thể tìm kiếm từ khóa trên tất cả các thuộc tính và thực thể để chọn các thuộc tính bắt buộc mà bạn muốn ánh xạ.
    
      > [!div class="mx-imgBorder"]
-   > ![Ví dụ về trường tìm kiếm](media/data-manager-configure-map-search-fields-example.png "Ví dụ về trường tìm kiếm")
+   > ![Ví dụ về trường tìm kiếm.](media/data-manager-configure-map-search-fields-example.png "Ví dụ về trường tìm kiếm")
 
 4. Lựa chọn **Áp dụng** để xác nhận lựa chọn của bạn.
 
@@ -55,7 +58,7 @@ Sau khi chọn các thực thể của bạn, trang **Bản đồ** sẽ liệt 
 - **Loại ngữ nghĩa thuộc tính**: Danh mục các thuộc tính của bạn, chẳng hạn như địa chỉ email hoặc tên. Để sử dụng mô hình trí tuệ nhân tạo cho dự đoán thông minh về ngữ nghĩa, tiết kiệm thời gian và cải thiện độ chính xác, hãy đặt **Ánh xạ thông minh** thành **BẬT**. Ánh xạ thông minh làm nổi bật các đề xuất ngữ nghĩa dựa trên AI trong trường **Loại**. Nếu bạn đặt nó thành **TẮT**, bạn sẽ thấy các đề xuất ánh xạ thông thường của chúng tôi. Bạn có thể chọn bất kỳ kiểu ngữ nghĩa nào từ danh sách tùy chọn có sẵn và ghi đè lựa chọn được gợi ý.
 
 > [!div class="mx-imgBorder"]
-> ![Loại thuộc tính và ngữ nghĩa dự đoán](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Loại thuộc tính và ngữ nghĩa dự đoán")
+> ![Loại thuộc tính và ngữ nghĩa dự đoán.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Loại thuộc tính và ngữ nghĩa dự đoán")
 
 Cũng có thể thêm một loại ngữ nghĩa tùy chỉnh. Chọn trường loại cho thuộc tính đó và nhập tên loại ngữ nghĩa tùy chỉnh của bạn. Như vậy, bạn cũng có thể thay đổi các loại thuộc tính được xác định bởi hệ thống.
 
@@ -64,7 +67,7 @@ Tất cả các thuộc tính mà một loại ngữ nghĩa được nhận dạ
 Các thuộc tính không được ánh xạ tự động đến một loại ngữ nghĩa được nhóm lại trong phần **Xác định dữ liệu trong các trường chưa được ánh xạ**. Chọn trường loại ngữ nghĩa cho các thuộc tính chưa được ánh xạ hoặc nhập tên loại thuộc tính tùy chỉnh của bạn.
 
 > [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính](media/data-manager-configure-map-add-attributes.png "Khóa chính và loại thuộc tính")
+> ![Khóa chính và loại thuộc tính.](media/data-manager-configure-map-add-attributes.png "Khóa chính và loại thuộc tính")
 
 > [!NOTE]
 > Một trường nên ánh xạ đến kiểu ngữ nghĩa Person.FullName để điền tên khách hàng vào thẻ khách hàng. Nếu không, thẻ khách hàng sẽ xuất hiện không tên. 
@@ -76,7 +79,7 @@ Các thuộc tính không được ánh xạ tự động đến một loại ng
 2. Trong ngăn **Chỉnh sửa các trường**, thêm hoặc xóa các thuộc tính và thực thể. Sử dụng tìm kiếm hoặc cuộn để tìm và chọn các thuộc tính và thực thể bạn quan tâm. Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chúng đã được đối sánh.
 
    > [!div class="mx-imgBorder"]
-   > ![Thêm hoặc loại bỏ thuộc tính](media/configure-data-map-edit.png "Thêm hoặc loại bỏ thuộc tính")
+   > ![Thêm hoặc loại bỏ thuộc tính.](media/configure-data-map-edit.png "Thêm hoặc loại bỏ thuộc tính")
 
 3. Chọn **Áp dụng**.
 
@@ -94,7 +97,7 @@ Tiếp tục với các bước hợp nhất và đảm bảo thuộc tính ch�
 
 Đối với tổ chức (Xem trước), loại thuộc tính sẽ được ánh xạ tới "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính B2B](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
+> ![Khóa chính và loại thuộc tính B2B.](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
 
 ## <a name="next-step"></a>Bước tiếp theo
 
@@ -102,3 +105,6 @@ Là một phần của quá trình thống nhất dữ liệu, hãy chuyển đ�
 
 > [!TIP]
 > Xem video sau: [Bắt đầu: Tạo hồ sơ khách hàng hợp nhất](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

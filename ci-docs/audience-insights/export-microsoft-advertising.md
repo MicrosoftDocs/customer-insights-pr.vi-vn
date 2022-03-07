@@ -1,20 +1,19 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Microsoft Advertising
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Microsoft Advertising.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: 8f009ed0258ded424340061e5320dd7df68c199f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124570"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226917"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Xuất phân khúc sang Microsoft Advertising (xem trước)
 
@@ -27,11 +26,11 @@ Xuất phân khúc Customer Insights sang Microsoft Advertising để tạo đ�
 -   [Các phân khúc đã đặt cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
 -   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa trường có địa chỉ email.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất tối đa 500 nghìn hồ sơ trong mỗi lần xuất sang Microsoft Advertising.
+- Bạn có thể xuất tối đa 500.000 hồ sơ khách hàng mỗi lần sang Microsoft Advertising.
 - Bạn chỉ xuất được phân khúc sang Microsoft Advertising.
-- Có thể mất tới 10 phút để hoàn thành quá trình xuất tối đa 500 nghìn hồ sơ sang Microsoft Advertising. 
+- Có thể mất tới 10 phút để hoàn tất việc xuất tối đa 500.000 hồ sơ khách hàng sang Microsoft Advertising. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Thiết lập kết nối với Microsoft Advertising
@@ -54,9 +53,9 @@ Xuất phân khúc Customer Insights sang Microsoft Advertising để tạo đ�
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -68,7 +67,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 1. Nhập **ID tài khoản và ID khách hàng Microsoft Advertising**. Bạn có thể tìm thấy ID khách hàng (`cid`) và ID tài khoản (`aid`) trong các tham số của URL khi bạn đăng nhập vào Microsoft Advertising.
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, hãy chọn trường có địa chỉ email của khách hàng trong hồ sơ khách hàng hợp nhất của bạn. Bạn phải xuất các phân khúc sang Microsoft Advertising.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Microsoft Advertising.
 
 1. Chọn **Lưu**.
 

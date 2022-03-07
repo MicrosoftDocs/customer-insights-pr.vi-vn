@@ -1,35 +1,34 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Snapchat
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: 7eac3307b3f82b6c5ebc3d66d6563ae50696ed65
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760665"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227274"
 ---
-# <a name="export-segment-lists-to-snapchat-preview"></a>Xuất danh sách phân khúc sang Snapchat (bản xem trước)
+# <a name="export-segments-to-snapchat-preview"></a>Xuất phân khúc sang Snapchat (xem trước)
 
 Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Snapchat và sử dụng chúng cho quảng cáo. 
 
 ## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [Tài khoản Snapchat Business](https://business.snapchat.com/), một [Tài khoản Snapchat Ads](https://ads.snapchat.com/) và thông tin xác thực tương ứng của quản trị viên.
--   Bạn có [các phân đoạn được định cấu hình](segments.md) trong thông tin chi tiết về đối tượng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Bạn có [các phân khúc được định cấu hình](segments.md) trong thông tin chuyên sâu về đối tượng.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các giới hạn đã biết
 
-- Chỉ được xuất các phân khúc sang Snapchat.
-- Có thể mất tới 15 phút để hoàn thành quá trình xuất tối đa 1 triệu hồ sơ sang Snapchat. 
+- Bạn chỉ xuất được phân khúc sang Snapchat.
+- Có thể mất tới 15 phút để hoàn tất việc xuất tối đa 1 triệu hồ sơ khách hàng sang Snapchat. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Thiết lập kết nối với Snapchat
 
@@ -51,9 +50,9 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Snapchat và s�
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-an-export"></a>Đặt cấu hình xuất
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để đặt cấu hình xuất](export-destinations.md#set-up-a-new-export).
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
@@ -63,7 +62,7 @@ Bạn có thể đặt cấu hình lần xuất này nếu bạn có quyền tru
 
 1. Nhập [**ID đối tượng Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Snapchat.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Snapchat.
 
 1. Chọn phân khúc mà bạn muốn xuất. 
 
@@ -78,4 +77,4 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu đến Snapchat, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ của Dynamics 365 Customer Insights, bao gồm cả dữ liệu có thể nhạy cảm như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Snapchat đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.

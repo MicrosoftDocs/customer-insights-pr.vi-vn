@@ -2,19 +2,25 @@
 title: Cấu hình hệ thống trong thông tin chi tiết về đối tượng
 description: Tìm hiểu về cài đặt hệ thống trong khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732396"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354259"
 ---
 # <a name="system-configuration"></a>Cấu hình hệ thống
 
@@ -53,14 +59,14 @@ Hệ thống sử dụng các trạng thái sau cho các tác vụ và quy trìn
 |Đang xử lý  |Nhiệm vụ hoặc quy trình đang được thực hiện.  |
 |Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
 |Đã bỏ qua  |Tác vụ hoặc quy trình đã bị bỏ qua. Một hoặc nhiều quá trình xuôi dòng mà nhiệm vụ này phụ thuộc vào bị lỗi hoặc bị bỏ qua.|
-|Thành công  |Tác vụ hoặc quy trình đã hoàn thành thành công. Đối với nguồn dữ liệu, cho biết dữ liệu đã được nhập thành công nếu thời gian được đề cập trong **Làm mới** cột.|
+|Thành công  |Tác vụ hoặc quy trình đã hoàn thành thành công. Đối với nguồn dữ liệu, cho biết dữ liệu đã được nhập thành công nếu thời gian được đề cập trong **Làm mới** cột.|
 |Đã xếp hàng đợi | Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi hoàn thành tất cả các tác vụ và quy trình ngược dòng. Để biết thêm thông tin, hãy xem [Làm mới quy trình](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Làm mới quy trình
 
 Làm mới cho các tác vụ và quy trình được chạy theo [lịch trình đã định cấu hình](#schedule-tab). 
 
-|Xử lý  |Mô tả  |
+|Quá trình  |Description  |
 |---------|---------|
 |Hoạt động  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.|
 |Liên kết phân tích |Chạy thủ công (làm mới một lần). Phụ thuộc vào các phân đoạn.  |
@@ -72,12 +78,12 @@ Làm mới cho các tác vụ và quy trình được chạy theo [lịch trình
 |Thông tin chuyên sâu |Chạy thủ công (làm mới một lần). Phụ thuộc vào các phân đoạn.  |
 |Thông tin   |Phụ thuộc vào hợp nhất.   |
 |Kết quả khớp |Phụ thuộc vào việc xử lý các nguồn dữ liệu được sử dụng trong định nghĩa so khớp.      |
-|Biện pháp  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất.  |
+|Measures  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất.  |
 |Hợp nhất   |phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.   |
 |Hồ sơ   |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. |
 |Tìm kiếm   |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. |
 |Phân khúc  |Chạy thủ công (làm mới một lần). Phụ thuộc vào quá trình hợp nhất. Thông tin chi tiết phụ thuộc vào quá trình xử lý.|
-|Hệ thống   |phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.   |
+|Hệ thống   |phụ thuộc vào sự hoàn thành thành công của quy trình so khớp. Phân khúc, biện pháp, làm phong phú, tìm kiếm, hoạt động, dự đoán và chuẩn bị dữ liệu phụ thuộc vào sự hoàn thành thành công của quy trình này.   |
 |Người dùng  |Chạy thủ công (làm mới một lần). Phụ thuộc vào các thực thể.  |
 
 Chọn trạng thái của một quá trình để xem chi tiết tiến độ của toàn bộ công việc mà nó đã thực hiện. Các quy trình làm mới ở trên có thể giúp hiểu những gì bạn có thể làm để giải quyết **Đã bỏ qua** hoặc **Đã xếp hàng** nhiệm vụ hoặc quy trình.
@@ -85,6 +91,10 @@ Chọn trạng thái của một quá trình để xem chi tiết tiến độ c
 ## <a name="schedule-tab"></a>Tab Lập lịch trình
 
 Sử dụng tab **Lịch trình** để lên lịch làm mới tự động tất cả [nguồn dữ liệu đã nhập](data-sources.md). Tự động làm mới giúp đảm bảo rằng cập nhật từ các nguồn dữ liệu được phản ánh trong hồ sơ khách hàng hợp nhất.
+
+> [!NOTE]
+> Các nguồn dữ liệu do bạn quản lý làm mới theo lịch trình của riêng chúng. Để lên lịch làm mới các nguồn dữ liệu do bạn quản lý, hãy định cấu hình cài đặt làm mới trên nguồn dữ liệu cụ thể đó từ **Nguồn dữ liệu** trang.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Cài đặt làm mới luồng dữ liệu.":::
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị** > **Hệ thống** và chọn tab **Lịch trình**.
 

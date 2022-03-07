@@ -1,28 +1,27 @@
 ---
 title: Nâng cao dữ liệu công ty
 description: Làm phong phú và bình thường hóa dữ liệu công ty với các mô hình của Microsoft.
-ms.date: 11/15/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813943"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229429"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Làm phong phú hồ sơ công ty với dữ liệu công ty nâng cao
 
-Sử dụng các mô hình của Microsoft và dữ liệu công ty đã biên dịch để sửa chữa, bổ sung và chuẩn hóa hồ sơ công ty của bạn. Chúng tôi sẽ sử dụng [Định dạng mô hình dữ liệu chung](/common-data-model/schema/core/applicationcommon/account) để có độ chính xác và thông tin chi tiết tốt hơn.
+Sử dụng các mô hình của Microsoft và dữ liệu công ty đã biên dịch để chỉnh sửa, bổ sung và chuẩn hóa hồ sơ công ty của bạn. Chúng tôi sẽ sử dụng [Định dạng mô hình dữ liệu chung](/common-data-model/schema/core/applicationcommon/account) để có độ chính xác và thông tin chi tiết tốt hơn.
 
 ## <a name="how-we-enhance-company-data"></a>Cách chúng tôi nâng cao dữ liệu công ty
 
-Mô hình của chúng tôi trải qua quy trình hai bước để nâng cao hồ sơ công ty. Đầu tiên, nó bình thường hóa tên công ty. Ví dụ, *Microsoft Corp* sẽ được sửa chữa và tiêu chuẩn hóa để *Tập đoàn Microsoft*. Nó cố gắng tìm sự trùng khớp trong dữ liệu công ty đã biên dịch của Microsoft. Nếu tìm thấy sự trùng khớp, chúng tôi sẽ làm phong phú thêm hồ sơ công ty với thông tin từ dữ liệu công ty đã tổng hợp của chúng tôi, bao gồm cả tên công ty.
+Mô hình của chúng tôi trải qua quy trình hai bước để nâng cao hồ sơ công ty. Đầu tiên, nó bình thường hóa tên công ty. Ví dụ, *Microsoft Corp* sẽ được sửa chữa và tiêu chuẩn hóa để *Tập đoàn Microsoft*. Nó cố gắng tìm một kết quả phù hợp trong dữ liệu công ty đã biên dịch của Microsoft. Nếu tìm thấy sự trùng khớp, chúng tôi sẽ làm phong phú thêm hồ sơ công ty với thông tin từ dữ liệu công ty đã tổng hợp của chúng tôi, bao gồm cả tên công ty.
 
 
 ### <a name="example"></a>Ví dụ:
@@ -82,7 +81,17 @@ Có một số hạn chế với dữ liệu nâng cao. Các mục trong danh s�
 
 Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ liệu hồ sơ khách hàng mới được bổ sung trong **Dữ liệu tăng cường của tôi**. Ngoài ra, bạn sẽ tìm thấy thời gian của lần cập nhật gần nhất và số lượng hồ sơ được tăng cường.
 
-Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
+Bạn có thể xem một mẫu dữ liệu được bổ sung chi tiết trong **Phong phú khách hàng xem trước** ngói. Lựa chọn **Xem thêm** và chọn **Dữ liệu** để truy cập chế độ xem chi tiết của từng hồ sơ được bổ sung chi tiết.
+
+### <a name="overview-card"></a>Thẻ tổng quan
+
+Thẻ tổng quan hiển thị chi tiết về phạm vi bổ sung. 
+
+* **Các công ty đã xử lý và thay đổi** : Số lượng hồ sơ công ty của khách hàng đã được bổ sung thành công.
+
+* **Các công ty đã xử lý và không thay đổi** : Số lượng hồ sơ công ty của khách hàng đã được công nhận nhưng không thay đổi. Điều này thường xảy ra khi dữ liệu đầu vào hợp lệ và không thể cải thiện bằng cách bổ sung.
+
+* **Các công ty không được xử lý và không thay đổi** : Số lượng hồ sơ công ty của khách hàng không được công nhận. Điều này thường xảy ra đối với dữ liệu đầu vào không hợp lệ hoặc không được bổ sung hỗ trợ.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

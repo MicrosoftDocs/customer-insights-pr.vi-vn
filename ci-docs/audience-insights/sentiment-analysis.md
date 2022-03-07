@@ -1,30 +1,29 @@
 ---
-title: Phân tích ngữ nghĩa cho phản hồi của khách hàng
+title: Phân tích cảm xúc cho phản hồi của khách hàng
 description: Tìm hiểu cách sử dụng mô hình phân tích tình cảm trên phản hồi của khách hàng trong Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: HT
+ms.openlocfilehash: b06613b00a512a31479f9d30d539a010e17d33ba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951121"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231491"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Phân tích tình cảm trong phản hồi của khách hàng (Xem trước)
 
-Ngày nay, khách hàng mong đợi những sản phẩm, dịch vụ và trải nghiệm chất lượng cao. Đặc biệt là những khách hàng chia sẻ phản hồi của họ. Rất khó khăn cho các tổ chức khi phân tích khối lượng dữ liệu ngày càng tăng mà không làm giảm độ chính xác và chi phí lao động cao hơn. Dynamics 365 Customer Insights đưa ra mô hình phân tích tình cảm cho phản hồi của khách hàng cho phép các tổ chức phân tích dữ liệu của họ chính xác hơn và với chi phí thấp hơn.
+Ngày nay, khách hàng mong đợi những sản phẩm, dịch vụ và trải nghiệm chất lượng cao. Đặc biệt là những khách hàng đã chia sẻ phản hồi của họ. Rất khó khăn cho các tổ chức khi phân tích khối lượng dữ liệu ngày càng tăng mà không làm giảm độ chính xác và chi phí lao động cao hơn. Dynamics 365 Customer Insights đưa ra mô hình phân tích tình cảm cho phản hồi của khách hàng cho phép các tổ chức phân tích dữ liệu của họ chính xác hơn và với chi phí thấp hơn.
 
 Phân tích tình cảm cho phép bạn tổng hợp tình cảm của khách hàng và xác định các khía cạnh kinh doanh là cơ hội để cải thiện. Tính năng Thông tin chi tiết về khách hàng này giúp bạn hiểu những gì hoạt động tốt và những gì bạn cần giải quyết. Tập trung vào các lĩnh vực kinh doanh có tác động và có liên quan nhất để cải thiện trải nghiệm cho khách hàng của bạn. Cuối cùng, nó có thể giúp bạn thúc đẩy các hành động kinh doanh mang lại trải nghiệm mang lại sự hài lòng và lòng trung thành cao của khách hàng.
 
 ## <a name="overview"></a>Tổng quan
 
-Tính năng phân tích tình cảm tạo ra hai thông tin chi tiết có được trên mỗi ID khách hàng. Điểm tình cảm (từ -5 đến 5) và danh sách các khía cạnh kinh doanh áp dụng (lĩnh vực kinh doanh) cùng với nhau giúp bạn hiểu rõ hơn về phản hồi của khách hàng. 
+Tính năng phân tích tình cảm tạo ra hai thông tin chi tiết có được trên mỗi ID khách hàng. Điểm tình cảm (từ -5 đến 5) và danh sách các khía cạnh kinh doanh áp dụng (lĩnh vực kinh doanh) cùng nhau giúp bạn hiểu rõ hơn về phản hồi của khách hàng. 
 
 Thông tin này có thể giúp bạn đạt được các kết quả sau: 
 - Xem tổng quan về tình cảm của khách hàng đối với thương hiệu hoặc tổ chức
@@ -38,7 +37,7 @@ Thông tin này có thể giúp bạn đạt được các kết quả sau:
 
 Chúng tôi sử dụng hai **Các mô hình Xử lý Ngôn ngữ Tự nhiên (NLP)** : Đầu tiên chỉ định cho mỗi nhận xét phản hồi một điểm tình cảm. Mô hình thứ hai liên kết mỗi phản hồi với tất cả các khía cạnh kinh doanh có thể áp dụng. Các mô hình được đào tạo dựa trên dữ liệu công khai từ các nguồn trên mạng xã hội, bán lẻ, nhà hàng, sản phẩm tiêu dùng và ngành công nghiệp ô tô.    
   
-- Các khía cạnh kinh doanh được xác định trước để mô hình liên kết với dữ liệu phản hồi bao gồm:
+Các khía cạnh kinh doanh được xác định trước để mô hình liên kết với dữ liệu phản hồi bao gồm:
 -   Quản lý tài khoản
 -   Thanh toán
 -   Hỗ trợ khách hàng
@@ -85,19 +84,19 @@ Các thuộc tính dữ liệu sau là bắt buộc:
 
 1. Bên trong **Tên mô hình** bước, cung cấp một **Tên** cho phân tích của bạn. 
 
-1. Cung cấp **Tên thực thể đầu ra khía cạnh kinh doanh** và **Tên thực thể đầu ra điểm tình cảm**, sau đó chọn **Kế tiếp**.
+1. Cung cấp **Tên thực thể đầu ra khía cạnh kinh doanh** và **Tên thực thể đầu ra điểm tình cảm**, sau đó chọn **Tiếp theo**.
 
 1. Bên trong **Dữ liệu bắt buộc** bước, chọn **Thêm dữ liệu**.
 
    :::image type="content" source="media/sentiment-add-data.png" alt-text="Thêm luồng dữ liệu trong mô hình phân tích tình cảm.":::
 
-1. Bên trong **Thêm dữ liệu** ngăn, chọn kiểu ngữ nghĩa **Phản hồi** khỏi danh sách.
+1. Bên trong **Thêm dữ liệu** ngăn, chọn loại ngữ nghĩa **Nhận xét** khỏi danh sách.
 
    :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Bước cấu hình để lựa chọn các hoạt động phản hồi để phân tích tình cảm.":::
 
-1. Chọn các hoạt động để sử dụng cho phân tích tình cảm này, sau đó chọn **Kế tiếp**.
+1. Chọn các hoạt động để sử dụng cho phân tích tình cảm này, sau đó chọn **Tiếp theo**.
  
-1. Ánh xạ các thuộc tính trong dữ liệu của bạn với các thuộc tính mô hình. Lựa chọn **Cứu** để áp dụng các lựa chọn của bạn. 
+1. Ánh xạ các thuộc tính trong dữ liệu của bạn với các thuộc tính mô hình. Lựa chọn **Tiết kiệm** để áp dụng các lựa chọn của bạn. 
 
 1. Bạn thấy trạng thái của ánh xạ dữ liệu. Chọn **Tiếp** để tiếp tục. 
 
@@ -105,7 +104,7 @@ Các thuộc tính dữ liệu sau là bắt buộc:
 
    :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Xem lại bước cho mô hình tình cảm hiển thị tất cả các mục đã định cấu hình.":::
 
-1. Lựa chọn **Làm xong** để rời khỏi trải nghiệm cấu hình. Quá trình này có thể mất vài giờ để hoàn thành tùy thuộc vào lượng dữ liệu được sử dụng. 
+1. Lựa chọn **Xong** để rời khỏi trải nghiệm cấu hình. Quá trình này có thể mất vài giờ để hoàn thành tùy thuộc vào lượng dữ liệu được sử dụng. 
 
 ## <a name="review-analysis-status"></a>Xem xét trạng thái phân tích
 
@@ -147,7 +146,7 @@ Có bốn phần dữ liệu chính trong trang kết quả.
 
   :::image type="content" source="media/distribution-customer-sentiment.png" alt-text="Biểu đồ thanh thể hiện tình cảm của khách hàng trên ba nhóm tình cảm.":::
 
-- **Điểm tình cảm trung bình theo thời gian** : Tâm lý khách hàng có thể thay đổi theo thời gian. Chúng tôi cung cấp các xu hướng về tình cảm của khách hàng trong phạm vi thời gian của dữ liệu của bạn. Chế độ xem này có thể giúp bạn đánh giá tác động của các chương trình khuyến mãi theo mùa, ra mắt sản phẩm hoặc các biện pháp can thiệp có giới hạn thời gian khác đối với tình cảm của khách hàng. Xem biểu đồ bằng cách chọn năm quan tâm từ menu thả xuống. 
+- **Điểm tình cảm trung bình theo thời gian** : Tâm lý khách hàng có thể thay đổi theo thời gian. Chúng tôi cung cấp các xu hướng về tình cảm của khách hàng trong phạm vi thời gian của dữ liệu của bạn. Chế độ xem này có thể giúp bạn đánh giá tác động của các chương trình khuyến mại theo mùa, ra mắt sản phẩm hoặc các biện pháp can thiệp có giới hạn thời gian khác đối với tình cảm của khách hàng. Xem biểu đồ bằng cách chọn năm quan tâm từ menu thả xuống. 
 
   :::image type="content" source="media/sentiment-score-over-time.png" alt-text="Biểu đồ lịch sử với điểm tình cảm theo thời gian được biểu thị dưới dạng một đường.":::
  
@@ -186,7 +185,7 @@ Bạn có thể dễ dàng bắt đầu tạo các phân khúc khách hàng mớ
  
 ## <a name="potential-bias"></a>Sự thiên vị tiềm ẩn
 
-Như với bất kỳ tính năng nào sử dụng trí thông minh nhân tạo dự đoán, bạn nên biết về sự thiên vị tiềm ẩn trong dữ liệu bạn sử dụng để dự đoán tâm lý khách hàng. Ví dụ: nếu bạn chỉ thu thập phản hồi kỹ thuật số, bạn có thể bỏ lỡ phản hồi từ những khách hàng chủ yếu giao dịch trực tiếp với bạn, điều này có thể ảnh hưởng đến kết quả đầu ra của tính năng.
+Như với bất kỳ tính năng nào sử dụng trí thông minh nhân tạo dự đoán, bạn nên biết về sự thiên vị tiềm ẩn trong dữ liệu bạn sử dụng để dự đoán tâm lý khách hàng. Ví dụ: nếu bạn chỉ thu thập phản hồi bằng kỹ thuật số, bạn có thể bỏ lỡ phản hồi từ những khách hàng chủ yếu giao dịch trực tiếp với bạn, điều này có thể ảnh hưởng đến kết quả đầu ra của tính năng.
 
 Vì tính năng này sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó, do đó, tính năng này có khả năng được sử dụng như một phương pháp lập hồ sơ, vì thuật ngữ đó được xác định bởi Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc bạn sử dụng tính năng này để xử lý dữ liệu có thể tuân theo GDPR hoặc các luật hoặc quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm cả phân tích tình cảm, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
 

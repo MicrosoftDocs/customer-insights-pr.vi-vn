@@ -1,31 +1,33 @@
 ---
-title: Xuất dữ liệu Customer Insights sang máy chủ SFTP
+title: Xuất dữ liệu Thông tin chi tiết về khách hàng sang máy chủ SFTP (chứa video)
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang vị trí SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7b09da093d6332c5081da1beadc1df59f63c31d2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035487"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231180"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Xuất phân khúc và dữ liệu khác sang SFTP (xem trước)
 
 Sử dụng dữ liệu khách hàng của bạn trong các ứng dụng của bên thứ ba bằng cách xuất chúng sang vị trí Giao thức truyền tệp bảo mật (SFTP).
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
+
 ## <a name="prerequisites-for-connection"></a>Điều kiện tiên quyết để kết nối
 
 - Tính khả dụng của máy chủ SFTP và thông tin đăng nhập tương ứng.
 
-## <a name="known-limitations"></a>Các giới hạn đã biết
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Các điểm đến SFTP sau tường lửa hiện không được hỗ trợ. 
 - Thời gian chạy của một lần xuất phụ thuộc vào hiệu suất hệ thống của bạn. Chúng tôi khuyên bạn nên sử dụng máy chủ có tối thiểu hai lõi CPU và bộ nhớ 1 Gb. 
 - Việc xuất các thực thể với tối đa 100 triệu hồ sơ khách hàng có thể mất 90 phút khi sử dụng cấu hình tối thiểu được khuyến nghị gồm CPU 2 lõi và 1 Gb bộ nhớ. 
 

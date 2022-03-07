@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645290"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353753"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Bắt đầu với tính năng thông tin chi tiết về đối tượng trong Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ Lần đầu tiên đăng nhập vào thông tin chi tiết về đối tượng
 
 Hồ sơ thống nhất là nền tảng để có được thông tin chi tiết và thực hiện hành động trên dữ liệu. Mang dữ liệu từ nhiều nguồn khác nhau và chạy quy trình hợp nhất dữ liệu để kết hợp các cấu hình thống nhất. Chỉ định mối quan hệ giữa các thực thể được nhập sử dụng các tính năng bổ sung để thêm thông tin vào hồ sơ. 
 
-1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [các trình kết nối Power Query](connect-power-query.md), một [thư mục Common Data Model](connect-common-data-model.md), hoặc [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [Power Query đầu nối](connect-power-query.md), Một [Thư mục Mô hình Dữ liệu Chung](connect-common-data-model.md), hoặc [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Chạy [quá trình hợp nhất dữ liệu](data-unification.md) bằng cách trải qua các giải đoạn [ánh xạ](map-entities.md), [so khớp](match-entities.md) và [hợp nhất](merge-entities.md).
 

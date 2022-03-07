@@ -3,18 +3,17 @@ title: Các tác vụ chung cho kịch bản dự đoán
 description: Tìm hiểu cách quản lý, khắc phục sự cố và tinh chỉnh dự đoán.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732014"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230818"
 ---
 # <a name="manage-predictions"></a>Quản lý dự đoán
 
@@ -52,10 +51,10 @@ Các cột sau trong báo cáo chứa thông tin hữu ích để cải thiện 
 
 - **Tên:** Tên mô tả của lỗi, cảnh báo hoặc khuyến nghị.
 - **Bươc chân:** Giai đoạn mô hình, đào tạo hoặc điểm số, thông tin đề cập đến.
-- **Tiểu bang:** Mức độ nghiêm trọng của thông tin (lỗi, cảnh báo, khuyến nghị).
+- **Tình trạng:** Mức độ nghiêm trọng của thông tin (lỗi, cảnh báo, khuyến nghị).
 - **Tên cột dọc:** Cột trong một thực thể cần được sửa đổi để cải thiện hiệu suất mô hình.
 - **Tên thực thể:** Tên của thực thể cần được sửa đổi để cải thiện hiệu suất của mô hình.
-- **Thông tin chi tiết:** Thông tin chi tiết về lỗi, cảnh báo hoặc khuyến nghị.
+- **Chi tiết:** Thông tin chi tiết về lỗi, cảnh báo hoặc khuyến nghị.
 
 ## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
 

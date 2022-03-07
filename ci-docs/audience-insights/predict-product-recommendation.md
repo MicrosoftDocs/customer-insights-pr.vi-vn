@@ -1,22 +1,21 @@
 ---
 title: Dự đoán đề xuất sản phẩm
 description: Dự đoán các sản phẩm mà khách hàng có khả năng mua hoặc tương tác.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494565"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355823"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Dự đoán đề xuất sản phẩm (xem trước)
+# <a name="product-recommendation-prediction"></a>Dự đoán đề xuất sản phẩm
 
 Mô hình đề xuất sản phẩm tạo ra các bộ đề xuất sản phẩm dự đoán. Các đề xuất dựa trên hành vi mua hàng trước đó và những khách hàng có kiểu mua hàng tương tự. Bạn có thể tạo dự đoán đề xuất sản phẩm mới trên trang **Thông tin** > **Dự đoán**. Chọn **Dự đoán của tôi** để xem các dự đoán khác mà bạn đã tạo.
 
@@ -54,7 +53,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 > [!NOTE]
 > - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Định nghĩa về một giao dịch là khá linh hoạt. Bất kỳ dữ liệu nào mô tả sự tương tác giữa người dùng với sản phẩm đều có thể hoạt động như một dữ liệu đầu vào. Ví dụ: mua một sản phẩm, tham gia một lớp học hoặc tham dự một sự kiện.
-> - Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng, hãy liên kết chúng trong Power Query trước khi nhập dữ liệu.
+> - Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng, hãy kết hợp chúng thành Power Query trước khi nhập dữ liệu.
 > - Nếu đơn hàng và chi tiết đơn hàng là các thực thể khác nhau, hãy liên kết chúng trước khi sử dụng trong mô hình. Mô hình không hoạt động chỉ với ID đơn hàng hoặc ID biên nhận trong một thực thể.
 
 
@@ -62,7 +61,7 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 
 1. Trong Customer Insights, chuyển đến phần **Thông tin** > **Dự đoán**.
 
-1. Chọn ngăn xếp **Mô hình đề xuất sản phẩm (xem trước)** và chọn **Sử dụng mô hình này**.
+1. Chọn **Mô hình đề xuất sản phẩm** gạch và chọn **Sử dụng mô hình này**.
    > [!div class="mx-imgBorder"]
    > ![Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này.](media/product-recommendation-usethismodel.PNG "Ô mô hình Đề xuất Sản phẩm có nút Sử dụng mô hình này")
 
@@ -79,11 +78,11 @@ Nếu bạn muốn thử tính năng này nhưng không có dữ liệu để ho
 1. Đặt **Số lượng sản phẩm** bạn muốn giới thiệu cho khách hàng. Giá trị này phụ thuộc vào cách phương thức phân phối của bạn điền vào dữ liệu. Nếu bạn có thể đề xuất ba sản phẩm, hãy đặt giá trị này cho phù hợp.
    
    >[!TIP]
-   > Bạn có thể chọn **Lưu và đóng** bất cứ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán dự thảo trong tab **Dự đoán của tôi**.
+   > Bạn có thể chọn **Lưu bản nháp** bất kỳ lúc nào để lưu dự đoán dưới dạng bản nháp. Bạn sẽ tìm thấy dự đoán dự thảo trong tab **Dự đoán của tôi**.
 
-1. Chọn xem bạn muốn **Đề xuất sản phẩm khách hàng đã mua gần đây hay không**.
+1. Chọn xem bạn có muốn đưa các sản phẩm mà khách hàng đã mua gần đây vào **Các giao dịch mua lặp lại dự kiến** đồng ruộng.
 
-1. Nếu bạn đã chọn *không* giới thiệu các sản phẩm đã mua gần đây, hãy đặt **Khoảng thời gian nhìn lại**. Cài đặt này chỉ định khung thời gian mà mô hình xem xét trước khi giới thiệu lại sản phẩm cho người dùng. Ví dụ: cho biết một khách hàng mua máy tính xách tay hai năm một lần. Cửa sổ này sẽ xem xét lịch sử mua hàng trong hai năm qua và nếu tìm thấy một mặt hàng, thì mặt hàng đó sẽ được lọc khỏi các đề xuất.
+1. Đặt **Cửa sổ nhìn lại**. Cài đặt này chỉ định khung thời gian mà mô hình xem xét trước khi giới thiệu lại sản phẩm cho người dùng. Ví dụ: cho biết một khách hàng mua máy tính xách tay hai năm một lần. Cửa sổ này sẽ xem xét lịch sử mua hàng trong hai năm qua và nếu tìm thấy một mặt hàng, thì mặt hàng đó sẽ được lọc khỏi các đề xuất.
 
 1. Chọn **Tiếp theo**
 

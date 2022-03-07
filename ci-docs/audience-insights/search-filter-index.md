@@ -1,27 +1,30 @@
 ---
 title: Tìm và lọc hồ sơ khách hàng
 description: Nhanh chóng tìm thông tin về hồ sơ khách hàng thống nhất và lọc các thuộc tính được chỉ định.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470055"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354535"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Hồ sơ khách hàng: Chỉ mục tìm kiếm và lọc
 
 Kết quả của việc thống nhất dữ liệu khách hàng của bạn là một thực thể Hồ sơ khách hàng cung cấp một cái nhìn tổng hợp vào toàn bộ cơ sở khách hàng của bạn. Để nhanh chóng [tìm thông tin về một khách hàng hoặc một nhóm khách hàng cụ thể](customer-profiles.md), bạn có thể đặt cấu hình khả năng **Tìm kiếm** và **Bộ lọc** trên trang **Khách hàng**. Đọc để tìm hiểu cách quản trị viên có thể chỉnh sửa các thuộc tính trên trang **Tìm kiếm và lọc chỉ mục**, trong đó có sẵn cho người dùng để tìm kiếm và lọc.
 
-> [!div class="mx-imgBorder"]
-> ![Bộ lọc tìm kiếm.](media/search-filter.png "Bộ lọc tìm kiếm")
+   :::image type="content" source="media/search-filter.png" alt-text="Bộ lọc tìm kiếm":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Thêm trường và chỉ định thuộc tính
 

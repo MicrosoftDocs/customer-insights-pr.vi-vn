@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Tính năng thông tin chi tiết về tương tác trong Dynamics 365 Customer Insights (bản xem trước)
-summary: Thu thập dữ liệu cho các trang web của bạn. Hiểu tương tác của khách hàng và việc sử dụng trên các trang web của bạn theo cách tương tác. Sử dụng tích hợp sâu giữa thông tin chi tiết về tương tác và thông tin chi tiết về đối tượng để làm phong phú thêm số liệu phân tích hành vi theo thời gian thực của bạn với báo cáo hồ sơ khách hàng. Làm phong phú hồ sơ khách hàng bằng các hoạt động web để nhận dữ liệu hành vi theo thời gian thực cùng với dữ liệu khách hàng có liên quan. Chuyển đổi doanh nghiệp của bạn để thu được giá trị tức thì từ dữ liệu khách hàng của bạn.
+title: Bản xem trước thông tin chi tiết về mức độ tương tác kết thúc
+summary: Các Dynamics 365 Customer Insights bản xem trước khả năng thông tin chi tiết về mức độ tương tác đã kết thúc vào ngày 15 tháng 2 năm 2022. Thay đổi này có nghĩa là trải nghiệm dùng thử Customer Insights không còn bao gồm khả năng tạo kênh cũng như chức năng báo cáo khác. Chúng tôi mời bạn khám phá và đánh giá nhiều tính năng khác của Customer Insights, Nền tảng Dữ liệu Khách hàng của Microsoft (CDP). Vui lòng liên hệ trực tiếp với nhóm Tài khoản Microsoft của bạn nếu bạn có thắc mắc về phần cuối của bản xem trước khả năng. Nhóm tài khoản của bạn sẽ cập nhật cho bạn về các lần ra mắt sắp tới. Xin cảm ơn!
 metadata:
   title: Tài liệu thông tin chi tiết về tương tác (bản xem trước)
   description: Trung tâm trợ giúp với các liên kết chính để có thông tin chi tiết về tương tác.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
-  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-  ms.translationtype: HT
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "7494210"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350525"
 landingContent:
-- title: Giới thiệu
+- title: Liên lạc
   linkLists:
   - linkListType: overview
     links:
-    - text: Lợi ích của tính năng
-      url: overview.md
-    - text: Bảng chú giải thuật ngữ
-      url: glossary.md
-    - text: Tính năng mới và cập nhật
-      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
-- title: Đang tích hợp
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Bắt đầu
-      url: get-started.md
-    - text: Tạo không gian làm việc
-      url: create-workspace.md
-    - text: Cung cấp trang web của bạn
-      url: instrument-website.md
-- title: Xem và lọc báo cáo
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Xem báo cáo
-      url: view-reports.md
-    - text: Xem báo cáo hồ sơ hợp nhất
-      url: profile-reports.md
-    - text: Sử dụng phân khúc đối tượng để lọc báo cáo
-      url: integrate-audience-insights-segments.md
-- title: Phân tích
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Tạo báo cáo phễu
-      url: funnel-reports.md
-    - text: Phân tích dữ liệu hành vi
-      url: curate-dimensions.md
-    - text: Tạo báo cáo tùy chỉnh
-      url: custom-reports.md
-    - text: Tạo các sự kiện tinh chỉnh
-      url: refined-events.md
-    - text: Xuất sự kiện
-      url: export-events.md
-- title: Tài nguyên nhà phát triển
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Tài nguyên nhà phát triển
-      url: developer-resources.md
-    - text: Mẫu WebSDK
-      url: websdk-sample.md
-    - text: Tình huống SDK trang web nâng cao
-      url: advanced-SDK-implementation.md
-    - text: Mẫu SDK Android
-      url: get-started-android.md
-    - text: Mẫu SDK iOS
-      url: get-started-ios.md
-- title: Quản trị
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Quản lý môi trường và không gian làm việc
-      url: manage-environments-workspaces.md
-    - text: Kết nối với thông tin chi tiết về đối tượng
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Quản lý cookie và sự đồng ý của người dùng
-      url: user-consent-storage.md
-    - text: Xóa và xuất dữ liệu cá nhân
-      url: delete-export-personal-data.md
-    - text: Giới hạn dịch vụ
-      url: ../service-limits.md
+    - text: Tham gia cộng đồng Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Chia sẻ ý tưởng của bạn
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Báo cáo một sự cố
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

@@ -2,21 +2,23 @@
 title: Tích hợp dữ liệu web từ thông tin chuyên sâu về tương tác với thông tin chuyên sâu về đối tượng
 description: Chuyển thông tin chuyên sâu về tương tác trên web của khách hàng thành thông tin chuyên sâu về đối tượng.
 ms.date: 06/24/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2789a7d1379e0cf56511b272a763c904d8a3d347058ea9e029aaff0f723a028
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033795"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350571"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Tích hợp dữ liệu web từ thông tin chuyên sâu về tương tác với thông tin chuyên sâu về đối tượng
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
 
 Khách hàng thường thực hiện các giao dịch trực tuyến hàng ngày của họ bằng các trang web. Tính năng thông tin chuyên sâu về tương tác (bản xem trước) trong Dynamics 365 Customer Insights là một giải pháp tiện dụng để tích hợp dữ liệu web làm nguồn. Ngoài dữ liệu giao dịch, nhân khẩu học hoặc hành vi, chúng tôi có thể xem các hoạt động trên web trong hồ sơ khách hàng hợp nhất. Chúng tôi có thể sử dụng các hồ sơ này để có thêm thông tin chuyên sâu như phân khúc, giá trị đo hoặc dự đoán cho việc kích hoạt đối tượng.
 

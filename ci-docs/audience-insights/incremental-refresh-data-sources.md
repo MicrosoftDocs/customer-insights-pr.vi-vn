@@ -1,20 +1,22 @@
 ---
-title: Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
+title: Làm mới gia tăng cho Power Query nguồn dữ liệu dựa trên
 description: Làm mới dữ liệu mới và cập nhật cho các nguồn dữ liệu lớn dựa trên Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900311"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353731"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query
 
@@ -28,7 +30,7 @@ Làm mới gia tăng cho các nguồn dữ liệu cung cấp các lợi ích sau
 
 ## <a name="configure-incremental-refresh"></a>Đặt cấu hình làm mới gia tăng
 
-Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các nguồn dữ liệu được nhập thông qua Power Query hỗ trợ nhập tăng dần. Ví dụ: cơ sở dữ liệu Azure SQL với các trường ngày và thời gian, cho biết thời điểm các bản ghi dữ liệu được cập nhật lần cuối.
+Thông tin chi tiết về đối tượng cho phép làm mới gia tăng các nguồn dữ liệu được nhập qua Power Query hỗ trợ quá trình nhập tăng dần. Ví dụ: cơ sở dữ liệu Azure SQL với các trường ngày và thời gian, cho biết thời điểm các bản ghi dữ liệu được cập nhật lần cuối.
 
 1. [Tạo nguồn dữ liệu mới dựa trên Power Query](connect-power-query.md).
 

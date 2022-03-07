@@ -1,24 +1,29 @@
 ---
-title: Tìm khách hàng tương tự với AI
+title: Tìm khách hàng tương tự bằng AI (có video)
 description: Tìm phân khúc khách hàng tương tự nhờ trí tuệ nhân tạo.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034570"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355271"
 ---
 # <a name="similar-customers-preview"></a>Khách hàng tương tự (xem trước)
 
 Tính năng này cho phép bạn tìm thấy những khách hàng tương tự trong cơ sở khách hàng của mình bằng cách sử dụng trí tuệ nhân tạo. Bạn cần phải có ít nhất một phân khúc được tạo để sử dụng tính năng này. Mở rộng các tiêu chí của một phân đoạn hiện có sẽ giúp tìm kiếm các khách hàng tương tự với phân khúc đó.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Tìm khách hàng tương tự* sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó và do đó có khả năng được sử dụng làm phương pháp lập hồ sơ, theo định nghĩa về thuật ngữ đó trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.

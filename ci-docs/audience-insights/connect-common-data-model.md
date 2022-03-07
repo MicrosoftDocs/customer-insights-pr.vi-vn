@@ -2,19 +2,23 @@
 title: Kết nối dữ liệu Common Data Model với tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
 ms.date: 01/25/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
-ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- ci-attach-cdm
+- customerInsights
+ms.openlocfilehash: 1e3b28316c06d6a15dd5690837c365b0677a882e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "8027078"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354995"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 
@@ -40,11 +44,11 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**, nhập **Tên** cho nguồn dữ liệu, sau đó chọn **Kế tiếp**.
+1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**, nhập **Tên** cho nguồn dữ liệu, sau đó chọn **Tiếp theo**.
 
-   - Nếu được nhắc, hãy chọn một trong các bộ dữ liệu mẫu liên quan đến ngành của bạn, sau đó chọn **Kế tiếp**. 
+   - Nếu được nhắc, hãy chọn một trong các bộ dữ liệu mẫu liên quan đến ngành của bạn, sau đó chọn **Tiếp theo**. 
 
-1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Nhập **Địa chỉ máy chủ**, lựa chọn **đăng nhập**, sau đó chọn **Kế tiếp**.
+1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối thông tin chuyên sâu về đối tượng với tài khoản Azure Data Lake Storage Gen2 có dịch vụ chính Azure](connect-service-principal.md). Nhập **Địa chỉ máy chủ**, lựa chọn **đăng nhập**, sau đó chọn **Tiếp theo**.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại để nhập chi tiết kết nối mới cho Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -57,11 +61,11 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu từ thư m
    > [!NOTE]
    > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách.
 
-1. Bạn sẽ thấy danh sách các thực thể có sẵn trong tệp model.json hoặc tệp manifest.json đã chọn. Xem lại và chọn từ danh sách các thực thể có sẵn, sau đó chọn **Cứu**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
+1. Bạn sẽ thấy danh sách các thực thể có sẵn trong tệp model.json hoặc tệp manifest.json đã chọn. Xem lại và chọn từ danh sách các thực thể có sẵn, sau đó chọn **Tiết kiệm**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại hiển thị danh sách thực thể từ tệp model.json.](media/review-entities.png)
 
-8. Cho biết thực thể dữ liệu nào bạn muốn bật cấu hình dữ liệu, sau đó chọn **Cứu**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
+8. Cho biết thực thể dữ liệu nào bạn muốn bật cấu hình dữ liệu, sau đó chọn **Tiết kiệm**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại hiển thị phân tích chất lượng dữ liệu.](media/dataprofiling-entities.png)
 

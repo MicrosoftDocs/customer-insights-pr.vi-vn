@@ -3,20 +3,24 @@ title: Dự đoán giá trị trọn đời của khách hàng (CLV)
 description: Dự đoán doanh thu tiềm năng cho những khách hàng đang hoạt động trong tương lai.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035395"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355815"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Dự đoán Giá trị trọn đời của khách hàng (CLV) (Xem trước)
+# <a name="customer-lifetime-value-clv-prediction"></a>Dự đoán giá trị trọn đời của khách hàng (CLV)
 
 Dự đoán giá trị tiềm năng (doanh thu) mà các khách hàng cá nhân đang hoạt động sẽ mang lại cho doanh nghiệp của bạn trong suốt khoảng thời gian xác định trong tương lai. Tính năng này có thể giúp bạn đạt được nhiều mục tiêu: 
 - Xác định những khách hàng có giá trị cao và xử lý thông tin chi tiết này
@@ -65,7 +69,7 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
     - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường bắt buộc thuộc dữ liệu đầu vào   
 
 > [!NOTE]
-> - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng/giao dịch, bạn có thể liên kết những thực thể này trong Power Query trước khi nhập dữ liệu.
+> - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng / giao dịch, bạn có thể kết hợp chúng thành Power Query trước khi nhập dữ liệu.
 > - Tuy nhiên, nhằm có thêm dữ liệu hoạt động của khách hàng (tùy chọn), bạn có thể thêm bao nhiêu thực thể hoạt động của khách hàng tùy thích để mô hình xem xét.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Tạo dự đoán Giá trị trọn đời của khách hàng
@@ -74,7 +78,7 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
 
 1. Chọn ô **Giá trị trọn đời của khách hàng** và chọn **Sử dụng mô hình**. 
 
-1. Trong ngăn **Giá trị trọn đời của khách hàng (xem trước)**, hãy chọn **Bắt đầu**.
+1. Bên trong **Giá trị lâu dài của khách hàng** ngăn, chọn **Bắt đầu**.
 
 1. **Đặt tên cho mô hình này** và **Tên thực thể đầu ra** để phân biệt chúng với các mô hình hoặc thực thể khác.
 

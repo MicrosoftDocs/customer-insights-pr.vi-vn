@@ -3,18 +3,21 @@ title: Nhập dữ liệu thông qua Power Query trình kết nối (chứa vide
 description: Kết nối cho các nguồn dữ liệu dựa trên Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: 4c12933a0684094702843be309525dd6d5d9b6f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7935004"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355547"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với một Power Query nguồn dữ liệu
 
@@ -30,7 +33,7 @@ Thêm nguồn dữ liệu dựa trên Power Query trình kết nối thường t
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Lựa chọn **Microsoft Power Query**, sau đó chọn **Kế tiếp**.
+1. Chọn **Microsoft Power Query**.
 
 1. Cung cấp một **Tên** cho nguồn dữ liệu và chọn **Tiếp theo** để tạo nguồn dữ liệu.
 
@@ -47,14 +50,14 @@ Thêm nguồn dữ liệu dựa trên Power Query trình kết nối thường t
 
 1. Bạn cũng có thể chuyển đổi dữ liệu của bạn. Chọn một thực thể để chỉnh sửa hoặc chuyển đổi. Sử dụng các tùy chọn trong Power Query cửa sổ để áp dụng các phép biến đổi. Mỗi chuyển đổi được liệt kê dưới **Các bước đã áp dụng**. Power Query cung cấp nhiều tùy chọn chuyển đổi được xây dựng trước. Để biết thêm thông tin, hãy xem [Power Query Sự biến đổi](/power-query/power-query-what-is-power-query#transformations).
 
-1. Bạn có thể thêm các thực thể bổ sung vào nguồn dữ liệu của mình bằng cách chọn **Lấy dữ liệu** trong hộp thoại **Chỉnh sửa truy vấn**.
-
    Chúng tôi khuyên bạn nên sử dụng các biến đổi sau:
 
-   - Nếu bạn đang nhập dữ liệu từ tệp CSV, hàng đầu tiên thường chứa các tiêu đề. Đi đến **Bảng biến đổi** và chọn **Sử dụng tiêu đề làm hàng đầu tiên**.
-   - Đảm bảo loại dữ liệu được đặt phù hợp.
+   - Nếu bạn đang nhập dữ liệu từ tệp CSV, hàng đầu tiên thường chứa các tiêu đề. Đi đến **Biến đổi** và chọn **Sử dụng hàng đầu tiên làm tiêu đề**.
+   - Đảm bảo loại dữ liệu được đặt phù hợp. Ví dụ: đối với các trường ngày, hãy chọn một loại ngày.
 
-1. Lựa chọn **Cứu** ở cuối Power Query cửa sổ để lưu các phép biến đổi. Sau khi lưu, bạn sẽ thấy nguồn dữ liệu của mình trên **Dữ liệu** > **Nguồn dữ liệu**.
+1. Để thêm các thực thể bổ sung vào nguồn dữ liệu của bạn trong **Chỉnh sửa truy vấn** hộp thoại, đi tới **Nhà** và chọn **Lấy dữ liệu**.
+
+1. Lựa chọn **Tiết kiệm** ở cuối Power Query cửa sổ để lưu các phép biến đổi. Sau khi lưu, bạn sẽ thấy nguồn dữ liệu của mình trên **Dữ liệu** > **Nguồn dữ liệu**.
 
 1. Trên trang **Nguồn dữ liệu**, bạn sẽ nhận thấy nguồn dữ liệu mới ở trạng thái **Làm mới**.
 
@@ -82,7 +85,7 @@ Các trình kết nối có dấu kiểm trong **Thông tin chi tiết về khá
    
 3. Áp dụng các thay đổi và chuyển đổi của bạn trong **Power Query - Chỉnh sửa các truy vấn** hộp thoại như được mô tả trong [Tạo nguồn dữ liệu mới](#create-a-new-data-source) tiết diện.
 
-4. Lựa chọn **Cứu** trong Power Query sau khi hoàn thành các chỉnh sửa của bạn để lưu các thay đổi của bạn.
+4. Lựa chọn **Tiết kiệm** trong Power Query sau khi hoàn thành các chỉnh sửa của bạn để lưu các thay đổi của bạn.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,24 +1,28 @@
 ---
 title: Hoàn thành dữ liệu từng phần bằng cách sử dụng dự đoán
 description: Sử dụng dự đoán để điền vào dữ liệu khách hàng không đầy đủ.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645060"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354029"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Hoàn thành từng phần dữ liệu của bạn với các dự đoán (không được dùng nữa)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Tính năng này sẽ **không dùng nữa** kể từ **Ngày 5 tháng 11 năm 2021**. Các triển khai hiện tại sẽ tiếp tục hoạt động cho đến khi tính năng bị xóa, nhưng bạn sẽ không thể tạo các tích hợp mới bằng cách sử dụng hướng dẫn bên dưới.
 
 Tính năng Dự đoán cho phép bạn dễ dàng tạo các giá trị dự đoán nhằm nâng cao sự hiểu biết của bạn về một khách hàng. Trên trang **Thông tin** > **Dự đoán**, bạn có thể chọn **Dự đoán của tôi** để xem các dự đoán mà bạn đã định cấu hình trong các phần khác của thông tin chi tiết về đối tượng và cho phép bạn tùy chỉnh thêm.
 
@@ -60,6 +64,8 @@ Trước khi tổ chức của bạn có thể sử dụng tính năng dự đo�
    > ![Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại.](media/intelligence-categorymapping.png "Ví dụ hiển thị các giá trị trường đã ánh xạ vào thể loại")
 
 8. Chọn **Xong** và dự đoán sẽ được xử lý. Việc xử lý sẽ mất một lúc, tùy thuộc vào kích thước và độ phức tạp của dữ liệu. Kết quả sẽ có sẵn trong một thực thể mới dựa trên **Tên thực thể đầu ra** của dự đoán bạn đã tạo.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Tạo dự đoán trong khi tạo phân đoạn
 
@@ -110,7 +116,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 ## <a name="edit-a-prediction"></a>Chỉnh sửa dự đoán
 
-Sau khi tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình.  
+Sau khi bạn đã tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình của bạn.  
 
 1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Thông tin** > **Dự đoán** > **Dự đoán của tôi**.
 
@@ -118,14 +124,14 @@ Sau khi tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Build
 
 3. Chọn dấu ba chấm trong cột **Hành động** và chọn **Xem**.
 
-4. Chọn **Tùy chỉnh trong AI Builder**.
+4. Lựa chọn **Tùy chỉnh trong AI Builder**.
 
 5. Cập nhật mô hình của bạn trong AI Builder. [Tìm hiểu thêm về cách quản lý mô hình trong AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nhật mà bạn đã tạo.
 
 > [!NOTE]
-> Các mô hình mới được tạo trong AI Builder sẽ không được hiển thị trong thông tin chi tiết về đối tượng trừ khi mô hình được tạo từ các trải nghiệm được liệt kê ở trên.
+> Các mô hình mới được tạo trong AI Builder sẽ không được hiển thị trong thông tin chi tiết về đối tượng trừ khi mô hình được tạo từ những trải nghiệm được liệt kê ở trên.
 
 ## <a name="remove-a-prediction"></a>Loại bỏ dự đoán
 

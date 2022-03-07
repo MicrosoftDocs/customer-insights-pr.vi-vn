@@ -3,26 +3,25 @@ title: Hướng dẫn mẫu dự đoán rời bỏ giao dịch
 description: Sử dụng hướng dẫn mẫu này để thử mô hình dự đoán rời bỏ giao dịch dùng ngay.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029471"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354627"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ giao dịch (bản xem trước)
+# <a name="transactional-churn-prediction-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ giao dịch
 
-Hướng dẫn này sẽ giải thích cho bạn ví dụ toàn diện về dự đoán rời bỏ giao dịch trong Customer Insights bằng cách sử dụng dữ liệu được cung cấp bên dưới. Tất cả dữ liệu được sử dụng trong hướng dẫn này không phải là dữ liệu khách hàng thực và là một phần của tập dữ liệu Contoso thuộc môi trường *Demo* trong Đăng ký Customer Insights của bạn.
+Hướng dẫn này sẽ giải thích cho bạn ví dụ toàn diện về dự đoán rời bỏ giao dịch trong Customer Insights bằng cách sử dụng dữ liệu được cung cấp bên dưới. Tất cả dữ liệu được sử dụng trong hướng dẫn này không phải là dữ liệu khách hàng thực và là một phần của tập dữ liệu Contoso được tìm thấy trong môi trường *Demo* trong Đăng ký Customer Insights của bạn.
 
 ## <a name="scenario"></a>Kịch bản
 
-Contoso là một công ty sản xuất cà phê và máy pha cà phê chất lượng cao. Họ bán sản phẩm thông qua trang web Contoso Coffee. Mục tiêu là biết những khách hàng nào thường mua sản phẩm của họ một cách thường xuyên, sẽ không còn là khách hàng tích cực trong 60 ngày tới. Biết khách hàng nào **có khả năng rời bỏ**, có thể giúp họ tiết kiệm các nỗ lực tiếp thị bằng cách tập trung vào việc giữ chân họ.
+Contoso là công ty sản xuất cà phê và máy pha cà phê chất lượng cao, họ bán thông qua trang web Contoso Coffee của mình. Mục tiêu là biết những khách hàng nào thường mua sản phẩm của họ một cách thường xuyên, sẽ không còn là khách hàng tích cực trong 60 ngày tới. Biết khách hàng nào **có khả năng rời bỏ**, có thể giúp họ tiết kiệm các nỗ lực tiếp thị bằng cách tập trung vào việc giữ chân họ.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -31,7 +30,7 @@ Contoso là một công ty sản xuất cà phê và máy pha cà phê chất l�
 
 ## <a name="task-1---ingest-data"></a>Nhiệm vụ 1 - Nhập dữ liệu
 
-Đặc biệt, hãy xem lại các bài viết [về nhập dữ liệu](data-sources.md) và [nhập nguồn dữ liệu bằng trình kết nối Power Query](connect-power-query.md). Thông tin sau đây giả định rằng bạn đã quen với việc nhập dữ liệu nói chung. 
+Xem lại các bài báo [về việc nhập dữ liệu](data-sources.md) và [nhập nguồn dữ liệu bằng cách sử dụng Power Query đầu nối](connect-power-query.md) đặc biệt. Thông tin sau đây giả định rằng bạn đã quen với việc nhập dữ liệu nói chung. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Nhập dữ liệu khách hàng từ nền tảng Thương mại điện tử
 
@@ -149,7 +148,7 @@ Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh 
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán rời bỏ giao dịch
 
-Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem bài viết [Dự đoán rời bỏ đăng ký (bản xem trước)](predict-subscription-churn.md). 
+Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem [Đăng ký churn dự đoán](predict-subscription-churn.md) bài báo. 
 
 1. Đi đến **Thông tin** > **Khám phá** và chọn để sử dụng **Mô hình khách hàng rời đi**.
 

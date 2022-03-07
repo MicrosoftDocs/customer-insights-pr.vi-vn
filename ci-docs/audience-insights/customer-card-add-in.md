@@ -3,18 +3,22 @@ title: Phần bổ trợ Thẻ khách hàng cho các ứng dụng Dynamics 365 (
 description: Hiển thị dữ liệu từ thông tin chi tiết về khán giả trong ứng dụng Dynamics 365 với phần bổ trợ này.
 ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085274"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353891"
 ---
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
 
@@ -27,7 +31,7 @@ Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamic
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Phần bổ trợ này chỉ hoạt động với các ứng dụng dựa trên mô hình Dynamics 365, chẳng hạn như ứng dụng Sales hoặc Customer Service, phiên bản 9.0 trở lên.
-- Để dữ liệu Dynamics 365 của bạn liên kết với đối tượng, thông tin chi tiết về hồ sơ khách hàng, chúng tôi khuyên bạn nên [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Microsoft Dataverse tư nối](connect-power-query.md). Nếu bạn sử dụng một phương pháp khác để nhập địa chỉ liên hệ (hoặc tài khoản) Dynamics 365, bạn cần đảm bảo`contactid` (hoặc là`accountid`) trường được đặt là [khóa chính cho nguồn dữ liệu đó trong bước bản đồ của quy trình hợp nhất dữ liệu](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Để dữ liệu Dynamics 365 của bạn liên kết với đối tượng, thông tin chi tiết về hồ sơ khách hàng, chúng tôi khuyên bạn nên [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Microsoft Dataverse tư nối](connect-power-query.md). Nếu bạn sử dụng một phương pháp khác để nhập địa chỉ liên hệ (hoặc tài khoản) Dynamics 365, bạn cần đảm bảo`contactid` (hoặc`accountid`) trường được đặt là [khóa chính cho nguồn dữ liệu đó trong bước bản đồ của quy trình hợp nhất dữ liệu](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Tất cả người dùng Dynamics 365 của phần Bổ trợ thẻ khách hàng phải [được thêm vào với tư cách là người dùng](permissions.md) trong thông tin chuyên sâu về đối tượng để xem dữ liệu.
 - Cần có [các khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md) trong thông tin chuyên sâu về đối tượng để tra cứu dữ liệu cho công việc.
 - Các tính năng điều khiển bổ trợ đều dựa trên dữ liệu cụ thể trong phần thông tin chuyên sâu về đối tượng. Một số dữ liệu và điều khiển chỉ có sẵn trong các môi trường thuộc các loại cụ thể. Cấu hình bổ trợ sẽ thông báo cho bạn nếu điều khiển không khả dụng do loại môi trường đã chọn. Tìm hiểu thêm về [trường hợp sử dụng môi trường](work-with-business-accounts.md).

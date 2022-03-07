@@ -3,18 +3,17 @@ title: Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp v�
 description: Trả lời các yêu cầu về chủ đề dữ liệu cho khả năng thông tin chi tiết về đối tượng Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483720"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350295"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR
 
@@ -79,71 +78,78 @@ Quản trị viên đối tượng thuê có thể tuân theo các bước sau �
 2. Hãy xác minh để xuất dữ liệu cho người dùng yêu cầu.
 3. Nhận dữ liệu được xuất thông qua địa chỉ email quản trị viên đối tượng thuê.
 
-## <a name="engagement-insights"></a>Thông tin chi tiết về tương tác
+## <a name="consent-management-preview"></a>Quản lý sự đồng ý (xem trước)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Xóa và xuất dữ liệu sự kiện có chứa thông tin nhận dạng người dùng cuối
+Khả năng quản lý sự đồng ý không trực tiếp thu thập dữ liệu người dùng. Nó chỉ nhập và xử lý dữ liệu về sự đồng ý do người dùng cung cấp trong các ứng dụng khác.
 
-Các phần sau đây mô tả cách xóa và xuất dữ liệu sự kiện có thể chứa dữ liệu cá nhân.
+Để xóa dữ liệu về sự đồng ý về những người dùng cụ thể, hãy xóa dữ liệu đó trong các nguồn dữ liệu được nhập vào khả năng quản lý sự đồng ý. Sau khi làm mới nguồn dữ liệu, dữ liệu đã xóa cũng sẽ bị xóa trong Trung tâm đồng ý. Các ứng dụng sử dụng pháp nhân đồng ý cũng sẽ xóa dữ liệu đã bị xóa trên nguồn sau [Làm tươi](audience-insights/system.md#refresh-processes). Chúng tôi khuyên bạn nên nhanh chóng làm mới nguồn dữ liệu sau khi phản hồi yêu cầu chủ thể dữ liệu để xóa dữ liệu của người dùng khỏi tất cả các quy trình và ứng dụng khác.
 
-Để xóa hoặc xuất dữ liệu:
 
-1. Gắn thẻ các thuộc tính sự kiện có chứa dữ liệu với thông tin cá nhân.
-2. Xóa hoặc xuất dữ liệu được liên kết với các giá trị cụ thể (ví dụ: ID người dùng được chỉ định).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Gắn thẻ và cập nhật thuộc tính sự kiện
+### Deleting and exporting event data containing end user identifiable information
 
-Dữ liệu cá nhân được gắn thẻ ở cấp độ thuộc tính sự kiện. Trước tiên, hãy gắn thẻ các thuộc tính đang được xem xét để xóa hoặc xuất.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Để gắn thẻ thuộc tính sự kiện vì có chứa thông tin cá nhân, hãy làm theo các bước sau:
+To delete or export data:
 
-1. Mở không gian làm việc có chứa sự kiện.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Chuyển đến **Dữ liệu** > **Sự kiện** để xem danh sách các sự kiện trong không gian làm việc đã chọn.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Chọn sự kiện bạn muốn gắn thẻ.
+1. Select the event you want to tag.
 
-1. Chọn **Chỉnh sửa thuộc tính** để mở ngăn danh sách có chứa tất cả các thuộc tính của sự kiện đã chọn.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Chọn **...** rồi chọn **Chỉnh sửa** để truy cập hộp thoại **Cập nhật thuộc tính**.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Chỉnh sửa sự kiện.](engagement-insights/media/edit-event.png "Chỉnh sửa sự kiện")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. Trong cửa sổ **Cập nhật thuộc tính**, hãy chọn **...** ở góc trên bên phải rồi chọn hộp **Chứa EUII**. Chọn **Cập nhật** để lưu thay đổi của bạn.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Lưu thay đổi của bạn.](engagement-insights/media/update-property.png "Lưu thay đổi của bạn")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Mỗi khi lược đồ sự kiện thay đổi hoặc bạn tạo một sự kiện mới, bạn nên đánh giá các thuộc tính sự kiện được liên kết và gắn thẻ hoặc bỏ gắn thẻ là chứa dữ liệu cá nhân, nếu cần.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Xóa hoặc xuất dữ liệu sự kiện được gắn thẻ
+#### Delete or export tagged event data
 
-Nếu tất cả các thuộc tính sự kiện đã được gắn thẻ thích hợp như được mô tả trong bước trước đó, quản trị viên môi trường có thể đưa ra yêu cầu xóa đối với dữ liệu sự kiện được gắn thẻ.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-Để quản lý các yêu cầu xóa hoặc xuất EUII
+To manage EUII deletion or export requests
 
-1. Chuyển đến **Quản trị viên** > **Môi trường** > **Cài đặt**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. Trong phần **Quản lý thông tin nhận dạng người dùng cuối (EUII)**, hãy chọn **Quản lý EUII**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Thao tác xóa
+##### Deletion
 
-Để xóa, bạn có thể nhập danh sách ID người dùng được phân tách bằng dấu phẩy trong phần **Xóa thông tin nhận dạng người dùng cuối (EUII)**. Các ID này sau đó sẽ được so sánh với tất cả các thuộc tính sự kiện đã gắn thẻ của mọi dự án trong môi trường hiện tại thông qua so khớp chuỗi chính xác. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Nếu giá trị thuộc tính khớp với một trong các ID được cung cấp, thì sự kiện được liên kết sẽ bị xóa vĩnh viễn. Do không thể thay đổi tác vụ này, bạn phải xác nhận việc xóa sau khi chọn **Xóa**.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Xuất
+##### Export
 
-Quá trình xuất giống với quá trình xóa khi nói đến việc xác định các giá trị thuộc tính sự kiện trong phần **Xuất thông tin nhận dạng người dùng cuối (EUII)**. Ngoài ra, bạn sẽ cần cung cấp **URL lưu trữ Azure blob** để chỉ định đích xuất. URL Azure Blob phải bao gồm [Chữ ký truy cập được chia sẻ (SAS)](/azure/storage/common/storage-sas-overview).
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Sau khi chọn **Xuất**, tất cả các sự kiện của nhóm hiện tại chứa các thuộc tính được gắn thẻ phù hợp sẽ được xuất ở định dạng CSV đến đích xuất.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Biện pháp hiệu quả
+### Good practices
 
-* Cố gắng tránh gửi bất kỳ sự kiện nào chứa dữ liệu cá nhân.
-* Nếu bạn cần gửi sự kiện chứa dữ liệu EUII, hãy giới hạn số lượng sự kiện và thuộc tính sự kiện có chứa dữ liệu EUII. Tốt nhất, bạn nên hạn chế tham gia vào một sự kiện như vậy.
-* Đảm bảo rằng số người có quyền truy cập vào dữ liệu cá nhân đã gửi là ít nhất có thể.
-* Đối với các sự kiện có chứa dữ liệu cá nhân, hãy đảm bảo rằng bạn đặt một thuộc tính để tạo ra số nhận dạng duy nhất có thể dễ dàng được liên kết với một người dùng cụ thể (ví dụ: ID người dùng). Biện pháp này giúp dễ dàng tách dữ liệu và xuất hoặc xóa dữ liệu phù hợp.
-* Chỉ gắn thẻ một thuộc tính cho mỗi sự kiện là chứa dữ liệu cá nhân. Tốt nhất là chỉ chứa một mã định danh duy nhất.
-* Không gắn thẻ các thuộc tính chứa giá trị diễn giải (ví dụ: toàn bộ nội dung yêu cầu). Chức năng năng thông tin chi tiết về tương tác sử dụng so khớp chuỗi chính xác khi quyết định xóa hoặc xuất sự kiện nào.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -3,18 +3,20 @@ title: Thực thể và tập hợp dữ liệu
 description: Xem dữ liệu trên trang Thực thể.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900453"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355359"
 ---
 # <a name="entities-in-audience-insights"></a>Các thực thể trong thông tin chi tiết về đối tượng
 
@@ -41,7 +43,7 @@ Các **Thực thể** trang liệt kê các thực thể và bao gồm các cộ
 > ![Bảng trường.](media/data-manager-entities-fields.PNG "Bảng trường")
 
 > [!NOTE]
-> Trang này chỉ hiển thị một mẫu dữ liệu của tổ chức của bạn. Để xem tập dữ liệu đầy đủ, hãy đi tới trang **Nguồn dữ liệu**, chọn một thực thể, chọn **Chỉnh sửa**, sau đó xem dữ liệu của thực thể này bằng trình chỉnh sửa Power Query như giải thích trong [Nguồn dữ liệu](data-sources.md).
+> Trang này chỉ hiển thị một mẫu dữ liệu của tổ chức của bạn. Để xem toàn bộ tập dữ liệu, hãy chuyển đến **Nguồn dữ liệu** trang, chọn một thực thể, chọn **Biên tập** và sau đó xem dữ liệu của thực thể này với Power Query biên tập viên như được giải thích trong [Nguồn dữ liệu](data-sources.md).
 
 Để tìm hiểu thêm về dữ liệu được nhập vào thực thể, cột **Tóm tắt** cung cấp cho bạn một số đặc điểm quan trọng của dữ liệu, chẳng hạn như giá trị rỗng, các giá trị còn thiếu, giá trị duy nhất, số lượng và phân phối, như áp dụng cho dữ liệu của bạn. Chọn biểu tượng biểu đồ để xem tóm tắt dữ liệu.
 
@@ -71,7 +73,9 @@ Các trường từ nguồn dữ liệu đã nhập có thể chứa dữ liệu
 
 Ví dụ: cột "ngày sinh" có loại dữ liệu được đặt là "ngày". Hồ sơ khách hàng có ngày sinh của họ được nhập là "01/01/19777". Hệ thống sẽ gắn cờ bản ghi này là bị hỏng. Bây giờ ai đó có thể thay đổi ngày sinh trong hệ thống nguồn thành "1977". Sau khi tự động làm mới nguồn dữ liệu, trường hiện có định dạng hợp lệ và bản ghi sẽ bị xóa khỏi thực thể bị hỏng. 
 
-Đi đến **Dữ liệu** > **Thực thể** và tìm kiếm các thực thể bị hỏng trong phần **Hệ thống**. Lược đồ đặt tên của các thực thể bị hỏng: "DataSourceName_EntityName_corrupt".
+Đi đến **Dữ liệu** > **Thực thể** và tìm kiếm các thực thể bị hỏng trong phần **Hệ thống**. Lược đồ đặt tên của các thực thể bị hỏng: "DataSourceName_EntityName_corrupt". Chọn một thực thể bị hỏng để xác định tất cả các trường bị hỏng và lý do ở cấp bản ghi riêng lẻ.
+> [!div class="mx-imgBorder"]
+> ![Lý do tham nhũng.](media/corruption-reason.png "Lý do tham nhũng")
 
 Customer Insights vẫn xử lý các hồ sơ bị hỏng. Tuy nhiên, chúng có thể gây ra sự cố khi làm việc với dữ liệu hợp nhất.
 

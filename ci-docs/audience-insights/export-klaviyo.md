@@ -1,20 +1,19 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Klaviyo
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385814"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225494"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Xuất danh sách phân khúc sang Klaviyo (bản xem trước)
 
@@ -28,10 +27,10 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Klaviyo và sử dụ
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể xuất tối đa 100.000 hồ sơ mỗi lần xuất sang Klaviyo.
+- Bạn có thể xuất tối đa 100.000 hồ sơ khách hàng mỗi lần sang Klaviyo.
 - Việc xuất sang Klaviyo bị giới hạn theo phân khúc.
-- Có thể mất tới 20 phút để hoàn tất việc xuất tối đa 1 triệu hồ sơ sang Klaviyo. 
-- Số lượng hồ sơ mà bạn có thể xuất sang Klaviyo tùy thuộc vào và bị giới hạn bởi hợp đồng của bạn với Klaviyo.
+- Có thể mất tới 20 phút để hoàn tất việc xuất tối đa 1 triệu hồ sơ khách hàng sang Klaviyo. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Klaviyo tùy thuộc vào và giới hạn trong hợp đồng của bạn với Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Thiết lập kết nối đến Klaviyo
 
@@ -67,7 +66,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập [**ID Danh sách Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Bạn phải xuất phân khúc sang Klaviyo.
+3. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất phân khúc sang Klaviyo.
 
 1. Chọn **Lưu**.
 

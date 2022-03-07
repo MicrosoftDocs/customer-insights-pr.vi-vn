@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645336"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229103"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Tạo không gian làm việc mới và thêm thành viên
 
@@ -26,17 +25,17 @@ Khi tạo không gian làm việc, bạn có thể chọn loại dữ liệu đ�
 
 ## <a name="create-a-new-workspace"></a>Tạo không gian làm việc mới
 
-Quá trình tạo không gian làm việc bao gồm thiết lập *môi trường* để sắp xếp không gian làm việc của bạn. Môi trường là không gian có thể chứa một hoặc nhiều không gian làm việc. Bạn có thể sử dụng môi trường để quản lý không gian làm việc và kết nối của mình với chức năng thông tin chuyên sâu về đối tượng của Customer Insights.
+Quá trình tạo không gian làm việc bao gồm thiết lập *môi trường* để sắp xếp không gian làm việc của bạn. Môi trường là không gian có thể chứa một hoặc nhiều không gian làm việc. Bạn có thể sử dụng một môi trường để quản lý không gian làm việc và kết nối của mình với khả năng thông tin chi tiết về đối tượng.
 
-1. Chọn **Mới** từ trình chuyển đổi không gian làm việc.
+1. Lựa chọn **+ Mới** từ trình chuyển đổi không gian làm việc.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Trang thông tin chuyên sâu về khách hàng với chú thích trên ngăn điều hướng và mô tả.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Trang Thông tin chi tiết về khách hàng với chú thích trên ngăn điều hướng và mô tả.":::
 
 1. Trong ngăn **Không gian làm việc**, nhập **Tên không gian làm việc**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Nhập tên không gian làm việc.":::
 
-1. Chọn loại nền tảng (Web hoặc thiết bị di động) mà bạn muốn đo lường.
+1. Chọn loại nền tảng (web hoặc thiết bị di động) mà bạn muốn đo lường.
 
 1. Chọn **Hiện thiết đặt nâng cao** để bật hoặc tắt các thiết đặt tùy chọn này:
 

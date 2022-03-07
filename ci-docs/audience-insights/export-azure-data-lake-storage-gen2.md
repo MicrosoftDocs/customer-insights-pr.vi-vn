@@ -1,43 +1,64 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Azure Data Lake Storage thế hệ 2
 description: Tìm hiểu cách định cấu hình kết nối với Azure Data Lake Storage thế hệ 2.
-ms.date: 02/04/2021
-ms.reviewer: sthe
-ms.service: customer-insights
+ms.date: 10/06/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: b00c3d6178150cbc93fe800779f094809d4dc67b
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
-ms.translationtype: HT
+ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477205"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231700"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Trình kết nối cho Azure Data Lake Storage thế hệ 2 (bản xem trước)
+# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang Azure Data Lake Storage thế hệ 2 (xem trước)
 
-Lưu trữ dữ liệu Customer Insights của bạn trong Azure Data Lake Storage thế hệ 2 hoặc sử dụng kho lưu trữ đó để chuyển dữ liệu của bạn sang các ứng dụng khác.
+Lưu trữ dữ liệu Customer Insights của bạn trong tài khoản Data Lake Storage thế hệ 2 hoặc sử dụng kho lưu trữ đó để chuyển dữ liệu của bạn sang các ứng dụng khác.
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Định cấu hình trình kết nối cho Azure Data Lake Storage thế hệ 2
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-1. Trong thông tin chi tiết về đối tượng, hãy chuyển đến **Quản trị viên** > **Nơi xuất đích**.
+1. Đối với Azure Data Lake Storage thế hệ 2, bạn có thể chọn giữa [Bậc Hiệu suất tiêu chuẩn và Hiệu suất cao cấp](/azure/storage/blobs/create-data-lake-storage-account) khi bạn đang tạo tài khoản lưu trữ cho kho dữ liệu của mình. Nếu bạn chọn bậc Hiệu suất cao cấp, hãy chọn các blob khối cao cấp làm loại tài khoản. 
 
-1. Trong **Azure Data Lake Storage thế hệ 2**, chọn **Thiết lập**.
 
-1. Trong trường **Tên hiển thị**, hãy đặt tên cho vị trí để dễ nhận diện.
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Thiết lập kết nối với Azure Data Lake Storage thế hệ 2 
+
+
+1. Đi đến **Quản trị viên** > **Kết nối**.
+
+1. Chọn **Thêm kết nối** rồi chọn **Azure Data Lake Thế hệ 2** để đặt cấu hình kết nối.
+
+1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
+
+1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Nhập **Tên tài khoản**, **Khóa tài khoản** và **Bộ chứa** cho Azure Data Lake Storage Thế hệ 2 của bạn.
-    - Để tìm hiểu cách tạo tài khoản lưu trữ để sử dụng với Azure Data Lake Storage thế hệ 2, hãy xem [Tạo tài khoản lưu trữ](https://docs.microsoft.com/azure/storage/blobs/create-data-lake-storage-account). 
-    - Để tìm hiểu thêm về cách tìm tên tài khoản lưu trữ Azure Data Lake thế hệ 2 và khóa tài khoản, hãy xem [Quản lý cài đặt tài khoản lưu trữ trong cổng Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Để tìm hiểu cách tạo tài khoản lưu trữ để sử dụng với Azure Data Lake Storage thế hệ 2, hãy xem [Tạo tài khoản lưu trữ](/azure/storage/blobs/create-data-lake-storage-account). 
+    - Để tìm hiểu thêm về tên tài khoản lưu trữ Azure Data Lake Thế hệ 2 và khóa tài khoản, hãy xem [Quản lý các thiết đặt tài khoản lưu trữ trong cổng thông tin Azure](/azure/storage/common/storage-account-manage).
 
-1. Chọn **Tiếp theo**.
+1. Chọn **Lưu** để hoàn thành kết nối. 
+
+## <a name="configure-an-export"></a>Đặt cấu hình xuất
+
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
+
+1. Đi tới **Dữ liệu** > **Nội dung xuất**.
+
+1. Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.
+
+1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần **Azure Data Lake**. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
 
 1. Chọn ô cạnh mỗi thực thể mà bạn muốn xuất sang vị trí này.
 
 1. Chọn **Lưu**.
 
-## <a name="export-the-data"></a>Xuất dữ liệu
+Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
-Bạn có thể [xuất dữ liệu theo nhu cầu](export-destinations.md#export-data-on-demand). Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
+
+Dữ liệu đã xuất được lưu trữ trong bộ lưu trữ Azure Data Lake Thế hệ 2 mà bạn đã đặt cấu hình. 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

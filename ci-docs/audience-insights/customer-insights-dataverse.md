@@ -1,20 +1,22 @@
 ---
 title: Dữ liệu Customer Insights trong Microsoft Dataverse
 description: Sử dụng các thực thể Customer Insights dưới dạng bảng trong Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645244"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355455"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Một số thực thể đầu ra của thông tin chuyên sâu về đối tư�
 - [CustomerMeasure](#customermeasure)
 - [Enrichment](#enrichment)
 - [Prediction](#prediction)
+- [Thành viên phân khúc](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -120,4 +123,17 @@ Bảng này chứa kết quả đầu ra của lượt dự đoán mô hình.
 | Model                | Chuỗi      | Tên mô hình                                                |
 | Values               | Chuỗi JSON | Danh sách các thuộc tính do mô hình tạo ra |
 | msdynci_predictionid | GUID        | GUID tất định được tạo từ msdynci_identifier | 
-| msdynci_identifier   | Chuỗi      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Thành viên phân khúc
+
+Bảng này chứa thông tin thành viên phân khúc của hồ sơ khách hàng.
+
+| Column        | Loại | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID hồ sơ khách hàng        |
+| SegmentProvider      | String       | Ứng dụng xuất bản các phân đoạn. Mặc định: Thông tin chi tiết về đối tượng         |
+| SegmentMembershipType | String       | Loại khách hàng hồ sơ thành viên phân khúc này. Hỗ trợ nhiều loại như Khách hàng, Liên hệ hoặc Tài khoản. Mặc định: Khách hàng  |
+| Phân khúc       | Chuỗi JSON  | Danh sách các phân đoạn duy nhất mà hồ sơ khách hàng là thành viên của      |
+| msdynci_identifier  | String   | Định danh duy nhất của bản ghi thành viên phân khúc. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID xác định được tạo từ`msdynci_identifier`          |

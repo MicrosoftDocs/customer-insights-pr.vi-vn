@@ -3,18 +3,17 @@ title: Tăng cường dữ liệu bằng tính năng nhập tùy chỉnh SFTP
 description: Thông tin chung về tính năng nhập tùy chỉnh SFTP để tăng cường dữ liệu.
 ms.date: 04/09/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304676"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229664"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu tùy chỉnh (bản xem trước)
 
@@ -45,6 +44,8 @@ Nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP) cho phép bạ
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Ảnh chụp màn hình khi nhập vị trí dữ liệu.":::
 
+1. Chọn **Tiếp** và chọn tập hợp dữ liệu khách hàng. Đây có thể là tất cả hồ sơ khách hàng hoặc một phân khúc.
+
 1. Chọn **Tiếp** rồi đặt tên cho dữ liệu tăng cường và tên cho thực thể đầu ra. 
 
 1. Chọn **Lưu dữ liệu tăng cường** sau khi xem xét các lựa chọn của bạn.
@@ -64,7 +65,7 @@ Bạn cần phải là quản trị viên thì mới có thể định cấu hì
 1. Sau khi quá trình xác minh hoàn tất, bạn có thể lưu kết nối bằng cách chọn **Lưu**.
 
    > [!div class="mx-imgBorder"]
-   > ![Trang cấu hình kết nối Experian](media/enrichment-SFTP-connection.png "Trang cấu hình kết nối Experian")
+   > ![Trang cấu hình kết nối Experian.](media/enrichment-SFTP-connection.png "Trang cấu hình kết nối Experian")
 
 
 ## <a name="defining-field-mappings"></a>Đang xác định ánh xạ trường 
@@ -121,8 +122,8 @@ Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ li
 
 Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
 
-## <a name="next-steps"></a>Các bước tiếp theo
+## <a name="next-steps"></a>Các bước tiếp theo
 
-Xây dựng dựa trên dữ liệu khách hàng tăng cường của bạn. Tạo [phân khúc](segments.md) và [giá trị đo](measures.md), cũng như [xuất dữ liệu](export-destinations.md) để cung cấp trải nghiệm được cá nhân hóa cho khách hàng của bạn.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

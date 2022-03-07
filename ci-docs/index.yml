@@ -4,17 +4,16 @@ metadata:
   author: m-hartmann
   description: Tìm các bài viết có liên quan để bắt đầu với nội dung trợ giúp.
   ms.author: mhart
-  ms.date: 10/29/2020
-  ms.service: customer-insights
+  ms.date: 03/02/2022
   ms.topic: landing-page
-  ms.openlocfilehash: e9c4aa3347d6f477751804790bd3dc9b20eb5dbe
-  ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-  ms.translationtype: HT
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 03/15/2021
-  ms.locfileid: "5598507"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350495"
 title: Tài liệu Dynamics 365 Customer Insights
-summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và kiến thức cơ bản của Customer Insights.
+summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và chức năng của Customer Insights.
 landingContent:
 - title: Làm quen với Customer Insights
   linkLists:
@@ -23,50 +22,28 @@ landingContent:
     - text: Tổng quan về Customer Insights
       url: overview.md
     - text: Kế hoạch phát hành
-      url: /dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
-    - text: Truy cập môi trường của bạn
-      url: https://home.ci.ai.dynamics.com/
-- title: Bắt đầu với thông tin chi tiết về đối tượng
+      url: /dynamics365/release-plans/
+    - text: Khám phá CDP
+      url: https://dynamics.microsoft.com/ai/customer-insights/
+  - linkListType: learn
+    links:
+    - text: Lộ trình học thông tin chi tiết về khách hàng
+      url: /learn/paths/build-customer-insights/
+- title: Bắt đầu với Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Đăng ký dùng thử
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Tính năng mới
+    - text: Tính năng mới trong thông tin chi tiết về đối tượng
       url: audience-insights/whats-new-audience-insights.md
-    - text: Tài liệu thông tin chi tiết về đối tượng
-      url: audience-insights/index.yml
-- title: Liên lạc
-  linkLists:
-  - linkListType: overview
+    - text: Hướng dẫn Bắt đầu nhanh
+      url: audience-insights/get-started.md
+  - linkListType: learn
     links:
-    - text: Tham gia cộng đồng Dynamics 365
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
-    - text: Chia sẻ ý tưởng của bạn
-      url: https://go.microsoft.com/fwlink/?linkid=2074172
-    - text: Báo cáo sự cố
-      url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Hướng dẫn thông tin chi tiết về đối tượng
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Tạo môi trường mới
-      url: audience-insights/home.md
-    - text: Tạo hồ sơ khách hàng hợp nhất
-      url: /learn/modules/unified-customer-profile/
-    - text: Làm việc với ứng dụng
-      url: /learn/modules/working-with-customer-insights/
-- title: Xuất dữ liệu thông tin chi tiết về đối tượng
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Thiết lập đích xuất
-      url: audience-insights/export-destinations.md
-    - text: Thẻ khách hàng trong ứng dụng Dynamics 365
-      url: audience-insights/customer-card-add-in.md
-    - text: Trình kết nối Power BI
-      url: audience-insights/export-power-bi.md
-- title: Quản trị thông tin chi tiết về đối tượng
+    - text: Bắt đầu
+      url: /learn/modules/get-started-customer-data-platform/
+- title: Quản trị Customer Insights
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -76,33 +53,17 @@ landingContent:
       url: audience-insights/permissions.md
     - text: Quản lý nhiều môi trường
       url: audience-insights/manage-environments.md
-- title: Giới thiệu thông tin chi tiết về tương tác (bản xem trước)
+  - linkListType: learn
+    links:
+    - text: Quản trị Customer Insights
+      url: /learn/modules/administer-customer-data-platform/
+- title: Liên lạc
   linkLists:
   - linkListType: overview
     links:
-    - text: Tổng quan về khả năng
-      url: engagement-insights/overview.md
-    - text: Điều khoản và khái niệm
-      url: engagement-insights/glossary.md
-    - text: Bắt đầu
-      url: engagement-insights/get-started.md
-- title: Báo cáo cho thông tin chi tiết về tương tác (bản xem trước)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Xem báo cáo
-      url: engagement-insights/view-reports.md
-    - text: Tạo báo cáo tùy chỉnh
-      url: engagement-insights/custom-reports.md
-    - text: Xem báo cáo hồ sơ hợp nhất
-      url: engagement-insights/profile-reports.md
-- title: Các sự kiện cho thông tin chi tiết về tương tác (bản xem trước)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Tạo các sự kiện tinh chỉnh
-      url: engagement-insights/refined-events.md
-    - text: Xuất sự kiện
-      url: engagement-insights/export-events.md
-    - text: Xóa và xuất dữ liệu cá nhân
-      url: engagement-insights/delete-export-personal-data.md
+    - text: Tham gia cộng đồng Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Chia sẻ ý tưởng của bạn
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Báo cáo một sự cố
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

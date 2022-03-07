@@ -4,22 +4,21 @@ author: m-hartmann
 description: Làm quen với trải nghiệm lần đầu trong Dynamics 365 Customer Insights và khám phá các tính năng.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645741"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350157"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Bắt đầu sau khi mua Customer Insights
 
 Bài viết này giải thích cách thực hiện các bước đầu tiên trong Dynamics 365 Customer Insights sau khi tổ chức của bạn đã mua đăng ký. Nếu bạn muốn mua Customer Insights, các tùy chọn liên hệ của chúng tôi được liệt kê trên trang web [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-Sau khi mua giấy phép đăng ký cho Customer Insights, quản trị viên toàn cầu của đối tượng thuê Microsoft 365 sẽ nhận được email mời họ tạo môi trường. 
+Sau khi mua giấy phép đăng ký cho Customer Insights, quản trị viên toàn cầu của Microsoft 365 người thuê nhận được một email mời họ tạo môi trường. 
 
 Customer Insights được cấp phép cho mỗi đối tượng thuê và bao gồm nhiều tính năng. Bạn có thể mua thêm dung lượng và giấy phép để tăng hạn ngạch mặc định. 
 - [Tổng quan về định giá](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
@@ -40,10 +39,7 @@ Trải nghiệm lần đầu tiên giúp bạn chọn trọng tâm ban đầu v�
 
 ## <a name="create-your-own-environment"></a>Tạo môi trường của riêng bạn
 
-Sau lần đăng nhập đầu tiên, bạn sẽ thấy một môi trường có dữ liệu mẫu. Bạn có thể sử dụng dữ liệu đó để khám phá các tính năng và làm quen với ứng dụng. Để sử dụng dữ liệu của riêng bạn, bạn phải tạo một môi trường trong khả năng mà bạn muốn làm việc.
-
-- [Tạo môi trường trong thông tin chuyên sâu về đối tượng.](audience-insights/get-started-paid.md)
-- [Tạo môi trường trong thông tin chuyên sâu về tương tác.](engagement-insights/create-new-environment.md) 
+Sau lần đăng nhập đầu tiên, bạn sẽ thấy một môi trường có dữ liệu mẫu. Bạn có thể sử dụng dữ liệu đó để khám phá các tính năng và làm quen với ứng dụng. Để sử dụng dữ liệu của riêng bạn, bạn phải [tạo môi trường](audience-insights/get-started-paid.md).
 
 
 

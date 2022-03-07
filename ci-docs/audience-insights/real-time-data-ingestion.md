@@ -2,19 +2,21 @@
 title: Nhập dữ liệu thời gian thực và các giới hạn
 description: Thông tin chung về khả năng thời gian thực trong thông tin chi tiết về đối tượng.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
-ms.translationtype: HT
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689201"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355501"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Nhập dữ liệu trong thời gian thực (xem trước)
 
@@ -54,7 +56,7 @@ API thời gian thực cho phép bạn xuất bản một hoạt động mới t
 
 Có hai cách để kết nối với API thời gian thực:
 
-- [gián tiếp](#connect-via-the-dynamics-365-customer-insights-connector), sử dụng [Dynamics 365 Customer Insights trình kết nối](https://docs.microsoft.com/connectors/customerinsights/)
+- [gián tiếp](#connect-via-the-dynamics-365-customer-insights-connector), sử dụng [Dynamics 365 Customer Insights trình kết nối](/connectors/customerinsights/)
 - [trực tiếp](#connect-directly-to-the-real-time-api), có mã
 
 Cả hai cách đều có chung các điều kiện tiên quyết sau:
@@ -66,13 +68,13 @@ Cả hai cách đều có chung các điều kiện tiên quyết sau:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Kết nối thông qua trình kết nối Dynamics 365 Customer Insights
 
-API thời gian thực có thể nhập dữ liệu từ một trình kết nối Power Platform chuyên dụng, trình kết nối [Dynamics 365 Customer Insights ](https://docs.microsoft.com/connectors/customerinsights/) mà không cần phải viết và triển khai bất kỳ mã nào.    
-Trình kết nối có thể thực hiện các hành động tương tự trong thời gian thực như API. Bạn cần có giấy phép hợp lệ cho các kết nối cao cấp. Để biết thêm thông tin, hãy xem Câu hỏi thường gặp về cấp phép [Power Apps và Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+API thời gian thực có thể nhập dữ liệu từ một trình kết nối Power Platform chuyên dụng, trình kết nối [Dynamics 365 Customer Insights ](/connectors/customerinsights/) mà không cần phải viết và triển khai bất kỳ mã nào.    
+Trình kết nối có thể thực hiện các hành động tương tự trong thời gian thực như API. Bạn cần có giấy phép hợp lệ cho các kết nối cao cấp. Để biết thêm thông tin, hãy xem Câu hỏi thường gặp về cấp phép [Power Apps và Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps và/hoặc Power Automate](https://docs.microsoft.com/connectors/)
-- Ứng dụng Logic [Azure](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps và/hoặc Power Automate](/connectors/)
+- Ứng dụng Logic [Azure](/azure/connectors/apis-list)
 
-Để biết chi tiết về việc tạo dòng, hãy xem tài liệu [Power Automate](https://docs.microsoft.com/power-automate/).
+Để biết chi tiết về việc tạo dòng, hãy xem tài liệu [Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Kết nối trực tiếp với API thời gian thực
 
@@ -83,6 +85,7 @@ Thông tin chi tiết về API này, bao gồm các thông số và phản hồi
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Tìm hiểu cách sử dụng trong thời gian thực với phương pháp đo từ xa
 
-Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập vào phương pháp đo từ xa trong thời gian thực](system.md#api-usage-tab) bằng cách chuyển đến **Quản trị viên** > **Hệ thống** > **Sử dụng API**. Trong bảng **Hoạt động**, các hàng cho các hoạt động API sử dụng các phương thức thời gian thực chứa một nút để xem việc sử dụng API trong thời gian thực. Nút được trực quan hóa bằng biểu tượng ống nhòm. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.
+Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập máy đo từ xa thời gian thực](system.md#api-usage-tab). 
 
-Sử dụng bộ chọn **Nhóm bởi** để chọn cách trình bày tốt nhất các tương tác trong thời gian thực trên dòng thời gian từ 24 giờ qua đến 30 ngày qua. Bạn có thể nhóm dữ liệu theo phương pháp API, tên đủ điều kiện của thực thể (thực thể được nhập), tạo bởi (nguồn sự kiện), kết quả (thành công hay thất bại) hoặc mã lỗi. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

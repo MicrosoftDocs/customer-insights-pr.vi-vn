@@ -1,21 +1,25 @@
 ---
 title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
 description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
-ms.date: 11/05/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770150"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372745"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -37,6 +41,8 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tă
 - [Dữ liệu nhân khẩu học](enrichment-experian.md) do Experian cung cấp
 - [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
+- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp 
+- [Xác thực](enrichment-liveramp.md) được cung cấp bởi LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
@@ -46,6 +52,7 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tă
 - [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp 
 - [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
+- [Dữ liệu tương tác tài khoản](enrichment-office.md) do Microsoft cung cấp
 
 ---
 
@@ -75,9 +82,13 @@ Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình 
 
 Thực thể cần tăng cường sẽ được chỉ định trong quá trình đặt cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể đặt cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Bạn có thể xem các giới hạn và việc sử dụng hiện tại trên trang **Dữ liệu tăng cường**.
 
+## <a name="enrich-data-sources-before-unification"></a>Làm phong phú nguồn dữ liệu trước khi hợp nhất
+
+Bạn có thể làm giàu dữ liệu khách hàng của mình trước khi hợp nhất dữ liệu để giúp tăng chất lượng của đối sánh dữ liệu. Để biết thêm thông tin, hãy xem [nguồn dữ liệu làm giàu](data-sources-enrichment.md).
+
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
 
-Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái bổ sung được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
+Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
 
 Để xem tình trạng của quy trình tăng cường
 

@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645517"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350249"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Đăng ký bản dùng thử miễn phí Dynamics 365 Customer Insights
 
@@ -32,23 +31,12 @@ Sẽ mất vài phút để tải bản dùng thử, sau đó bạn có thể b�
 
 Môi trường dùng thử của bạn bao gồm nhiều tính năng tương tự như phiên bản trả phí. Các liên kết bên dưới sẽ hướng dẫn bạn về một số tính năng chính.
 
-### <a name="audience-insights"></a>Thông tin chuyên sâu về đối tượng
-
 - [Hướng dẫn bắt đầu nhanh cho thông tin chuyên sâu về đối tượng.](audience-insights/get-started.md)
 - [Thêm người dùng và gán quyền.](audience-insights/permissions.md)
 - [Nhập các nguồn dữ liệu của bạn](audience-insights/data-sources.md) và chạy chúng thông qua [quá trình hợp nhất dữ liệu](audience-insights/data-unification.md) để có được [hồ sơ khách hàng hợp nhất](audience-insights/customer-profiles.md).
 - [Tăng cường hồ sơ khách hàng hợp nhất](audience-insights/enrichment-hub.md) hoặc [chạy các mô hình dự đoán](audience-insights/predictions-overview.md).
 - Tạo [phân khúc](audience-insights/segments.md) để nhóm khách hàng và [giá trị đo](audience-insights/measures.md) để xem lại KPI.
 - Thiết lập [kết nối](audience-insights/connections.md) và [xuất](audience-insights/export-destinations.md) để xử lý tập hợp con của dữ liệu trong các ứng dụng khác.
-
-### <a name="engagement-insights"></a>Thông tin chi tiết về tương tác
-
-- [Hướng dẫn bắt đầu nhanh thông tin chuyên sâu về tương tác.](engagement-insights/get-started.md)
-- [Tạo không gian làm việc](engagement-insights/create-workspace.md) và thêm thành viên.
-- [Thêm mã vào trang web của bạn](engagement-insights/instrument-website.md) hoặc [ứng dụng dành cho thiết bị di động](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Xem một [báo cáo theo thời gian thực](engagement-insights/view-reports.md) hoặc tạo [báo cáo tùy chọn](engagement-insights/custom-reports.md).
-- [Tạo các sự kiện tinh chỉnh](engagement-insights/refined-events.md) để xuất.
-- [Xuất dữ liệu](engagement-insights/export-events.md) sang Azure Data Lake Storage.
 
 ## <a name="additional-resources"></a>Tài nguyên bổ sung
 
