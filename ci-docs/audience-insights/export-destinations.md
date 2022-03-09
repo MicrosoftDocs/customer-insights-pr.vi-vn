@@ -1,21 +1,23 @@
 ---
 title: Xuất dữ liệu từ Customer Insights
 description: Quản lý nội dung xuất để chia sẻ dữ liệu.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+searchScope:
+- ci-export
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 33f59c62565560517c480be63e581465605c5f7b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623159"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354351"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
@@ -33,13 +35,13 @@ Có hai loại xuất chính:
 ### <a name="export-segments"></a>Xuất phân khúc
 
 **Xuất phân khúc trong môi trường dành cho tài khoản doanh nghiệp (B2B) hoặc khách hàng cá nhân (B2C)**  
-Hầu hết tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất phân khúc sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. Nói chung, thành phần phân khúc, hồ sơ khách hàng, chứa thông tin liên hệ. Mặc dù điều này thường xảy ra đối với các phân khúc được xây dựng trên khách hàng cá nhân (B2C), nhưng nó không nhất thiết phải xảy ra đối với các phân khúc dựa trên tài khoản doanh nghiệp (B2B). 
+Hầu hết tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất phân khúc sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. Nói chung, thành phần phân khúc, hồ sơ khách hàng, chứa thông tin liên hệ. Mặc dù điều này thường xảy ra đối với các phân khúc được xây dựng trên người tiêu dùng cá nhân (B2C), nhưng nó không nhất thiết phải xảy ra đối với các phân khúc dựa trên tài khoản doanh nghiệp (B2B). 
 
 **Môi trường xuất phân khúc cho tài khoản doanh nghiệp (B2B)**  
 - Các phân khúc trong bối cảnh môi trường dành cho tài khoản doanh nghiệp được xây dựng dựa trên thực thể *tài khoản*. Để xuất các phân khúc tài khoản như hiện tại, hệ thống mục tiêu cần hỗ trợ các phân khúc tài khoản thuần túy. Đây là trường hợp cho [LinkedIn](export-linkedin-ads.md) khi bạn chọn tùy chọn **công ty** trong khi xác định xuất.
 - Tất cả các hệ thống đích khác đều yêu cầu các trường từ thực thể liên hệ. Để đảm bảo các phân khúc tài khoản có thể truy xuất dữ liệu từ các liên hệ có liên quan, định nghĩa phân khúc của bạn cần phải chiếu các thuộc tính của thực thể liên hệ. Tìm hiểu thêm về cách [đặt cấu hình các phân khúc và chiếu thuộc tính](segment-builder.md).
 
-**Xuất phân khúc trong môi trường dành cho khách hàng cá nhân (B2C)**  
+**Xuất phân khúc trong môi trường dành cho người tiêu dùng cá nhân (B2C)**  
 - Các phân khúc trong bối cảnh môi trường dành cho khách hàng cá nhân được xây dựng dựa trên thực thể *hồ sơ khách hàng hợp nhất*. Mọi phân khúc đáp ứng yêu cầu của hệ thống mục tiêu (ví dụ: địa chỉ email) đều có thể được xuất.
 
 **Giới hạn đối với xuất phân khúc**  
@@ -97,7 +99,9 @@ Sau khi tạo đích xuất, các đích xuất đã tạo sẽ có trong phần
 
 Mỗi nội dung xuất bạn đặt cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](system.md#schedule-tab). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
 
-Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu đang tiến hành cập nhật [yếu tố phụ thuộc](system.md#refresh-policies) khi quy trình xuất theo lịch trình chuẩn bị bắt đầu, trước tiên hệ thống sẽ hoàn thành việc cập nhật đó rồi mới chạy quy trình xuất. Bạn có thể biết thời điểm gần đây nhất mà nội dung xuất được làm mới trong cột **Đã làm mới**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu đang tiến hành cập nhật [yếu tố phụ thuộc](system.md#refresh-processes) khi quy trình xuất theo lịch trình chuẩn bị bắt đầu, trước tiên hệ thống sẽ hoàn thành việc cập nhật đó rồi mới chạy quy trình xuất. Bạn có thể biết thời điểm gần đây nhất mà nội dung xuất được làm mới trong cột **Đã làm mới**.
 
 ### <a name="schedule-exports"></a>Lên lịch nội dung xuất
 

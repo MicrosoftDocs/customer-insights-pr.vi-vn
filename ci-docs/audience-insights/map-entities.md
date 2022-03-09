@@ -2,7 +2,6 @@
 title: Ánh xạ thực thể và thuộc tính để hợp nhất dữ liệu
 description: Chọn các thực thể, thuộc tính, khóa chính và loại ngữ nghĩa để ánh xạ dữ liệu vào hồ sơ khách hàng hợp nhất.
 ms.date: 10/18/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -11,12 +10,14 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648189"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354984"
 ---
 # <a name="map-entities-and-attributes"></a>Ánh xạ thực thể và thuộc tính
 
@@ -96,7 +97,7 @@ Tiếp tục với các bước hợp nhất và đảm bảo thuộc tính ch�
 
 Đối với tổ chức (Xem trước), loại thuộc tính sẽ được ánh xạ tới "Organization.Name"
 > [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính B2B](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
+> ![Khóa chính và loại thuộc tính B2B.](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
 
 ## <a name="next-step"></a>Bước tiếp theo
 

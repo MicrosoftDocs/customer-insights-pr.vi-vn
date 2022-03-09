@@ -1,27 +1,30 @@
 ---
 title: Tìm và lọc hồ sơ khách hàng
 description: Nhanh chóng tìm thông tin về hồ sơ khách hàng thống nhất và lọc các thuộc tính được chỉ định.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554047"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354535"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Hồ sơ khách hàng: Chỉ mục tìm kiếm và lọc
 
 Kết quả của việc thống nhất dữ liệu khách hàng của bạn là một thực thể Hồ sơ khách hàng cung cấp một cái nhìn tổng hợp vào toàn bộ cơ sở khách hàng của bạn. Để nhanh chóng [tìm thông tin về một khách hàng hoặc một nhóm khách hàng cụ thể](customer-profiles.md), bạn có thể đặt cấu hình khả năng **Tìm kiếm** và **Bộ lọc** trên trang **Khách hàng**. Đọc để tìm hiểu cách quản trị viên có thể chỉnh sửa các thuộc tính trên trang **Tìm kiếm và lọc chỉ mục**, trong đó có sẵn cho người dùng để tìm kiếm và lọc.
 
-> [!div class="mx-imgBorder"]
-> ![Bộ lọc tìm kiếm.](media/search-filter.png "Bộ lọc tìm kiếm")
+   :::image type="content" source="media/search-filter.png" alt-text="Bộ lọc tìm kiếm":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Thêm trường và chỉ định thuộc tính
 
@@ -56,11 +59,11 @@ Menu **Bộ lọc** trên trang **Khách hàng** có thể bao gồm một số 
 
 2. Chọn **Lưu** để áp dụng thay đổi.
 
-3. Chọn **Chạy** sau khi bạn đã sẵn sàng áp dụng cài đặt của mình.
+3. Chọn **Chạy** sau khi bạn đã sẵn sàng áp dụng cài đặt của mình. Sau khi các thay đổi được xử lý, bạn sẽ thấy chúng trong [thẻ khách hàng trên trang Khách hàng](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 
-Đi đến trang **Khách hàng** để tìm kiếm hồ sơ khách hàng hoặc sử dụng các trường được lập chỉ mục để xem một tập hợp con của tất cả hồ sơ khách hàng.
+Xem lại [trang hồ sơ hợp nhất](customer-profiles.md) để tìm kiếm các hồ sơ hoặc sử dụng các trường được lập chỉ mục để xem một tập hợp con của tất cả các hồ sơ hợp nhất.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

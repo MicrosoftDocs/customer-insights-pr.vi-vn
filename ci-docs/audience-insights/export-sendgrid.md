@@ -1,45 +1,49 @@
 ---
 title: Xuất dữ liệu Customer Insights sang SendGrid
-description: Tìm hiểu cách định cấu hình kết nối với SendGrid.
-ms.date: 12/08/2020
-ms.reviewer: philk
-ms.service: customer-insights
+description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang SendGrid.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f16d69deb2a0b48270ed04f9b72f03056f20b619
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 65d60e7e70e3444b0695b905431bab9a0269ceef
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268758"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231598"
 ---
-# <a name="connector-for-sendgrid-preview"></a>Trình kết nối cho SendGrid (bản xem trước)
+# <a name="export-segments-to-sendgrid-preview"></a>Xuất phân khúc sang SendGrid (bản xem trước)
 
 Xuất phân đoạn hồ sơ khách hàng hợp nhất sang danh sách liên hệ SendGrid và sử dụng chúng cho các chiến dịch và tiếp thị qua email trong SendGrid. 
 
-## <a name="prerequisites"></a>Điều kiện tiên quyết
+## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [Tài khoản SendGrid](https://sendgrid.com/) và thông tin đăng nhập quản trị viên tương ứng.
 -   Có danh sách liên hệ hiện có trong SendGrid và các ID tương ứng. Để biết thêm thông tin, hãy xem [SendGrid - Quản lý liên hệ](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   Bạn có [các phân đoạn được định cấu hình](segments.md) trong thông tin chi tiết về đối tượng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email.
+-   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
-## <a name="connect-to-sendgrid"></a>Kết nối với SendGrid
+## <a name="known-limitations"></a>Các hạn chế đã biết
 
-1. Đi tới **Quản trị viên** > **Đích xuất**.
+- Có tới 100.000 hồ sơ khách hàng trên SendGrid.
+- Việc xuất sang SendGrid bị giới hạn ở các phân đoạn.
+- Có thể mất tới vài phút để hoàn tất việc xuất tối đa 100.000 hồ sơ khách hàng sang SendGrid. 
+- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang SendGrid tùy thuộc vào và giới hạn trong hợp đồng của bạn với SendGrid.
 
-1. Trong **SendGrid**, chọn **Thiết lập**.
+## <a name="set-up-connection-to-sendgrid"></a>Thiết lập kết nối với SendGrid
 
-1. Trong trường **Tên hiển thị**, hãy đặt cho đích xuất một cái tên dễ nhận biết.
+1. Đi đến **Quản trị viên** > **Kết nối**.
 
-   :::image type="content" source="media/export-sendgrid.PNG" alt-text="Ngăn cấu hình xuất SendGrid.":::
+1. Chọn **Thêm kết nối** rồi chọn **SendGrid** để đặt cấu hình kết nối.
+
+1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
+
+1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Nhập **Khóa API SendGrid** [Khóa API SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
-
-1. Nhập **[ID danh sách SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
 1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ**.
 
@@ -47,31 +51,34 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất sang danh sách liên h�
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
-1. Chọn **Tiếp** để định cấu hình xuất.
+1. Chọn **Lưu** để hoàn thành kết nối.
 
-## <a name="configure-the-connector"></a>Đặt cấu hình trình kết nối
+## <a name="configure-an-export"></a>Định cấu hình xuất
 
-1. Trong phần **So khớp dữ liệu**, trong trường **Email**, chọn trường trong hồ sơ khách hàng hợp nhất trình bày địa chỉ email của khách hàng. Lặp lại các bước tương tự cho các trường tùy chọn khác như **Tên**, **Họ**, **Quốc gia/Khu vực**, **Tiểu bang**, **Thành phố** và **Mã bưu điện**.
+Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
+
+1. Đi tới **Dữ liệu** > **Nội dung xuất**.
+
+1. Để tạo một nội dung xuất mới, hãy chọn **Thêm đích**.
+
+1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần SendGrid. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
+
+1. Nhập **[ID danh sách SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Lặp lại các bước tương tự cho các trường tùy chọn khác như **Tên**, **Họ**, **Quốc gia/Khu vực**, **Tiểu bang**, **Thành phố** và **Mã bưu điện**.
 
 1. Chọn phân khúc mà bạn muốn xuất. Chúng tôi **khuyên bạn không nên xuất tổng cộng hơn 100.000 hồ sơ khách hàng** tới SendGrid. 
 
 1. Chọn **Lưu**.
 
-## <a name="export-the-data"></a>Xuất dữ liệu
+Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
-Bạn có thể [xuất dữ liệu theo nhu cầu](export-destinations.md). Mỗi lần [làm mới theo lịch](system.md#schedule-tab), tác vụ xuất cũng sẽ chạy.
-
-## <a name="known-limitations"></a>Các giới hạn đã biết
-
-- Tối đa 100.000 hồ sơ trên SendGrid.
-- Việc xuất sang SendGrid bị giới hạn ở các phân đoạn.
-- Có thể mất tới vài giờ để hoàn thành việc xuất lên đến 100.000 hồ sơ sang SendGrid. 
-- Số lượng hồ sơ mà bạn có thể xuất sang SendGrid còn phụ thuộc vào giới hạn cho hợp đồng của bạn với SendGrid.
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
 Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới SendGrid, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng SendGrid đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng sử dụng chức năng này.
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
