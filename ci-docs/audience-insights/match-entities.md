@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372653"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376948"
 ---
 # <a name="match-entities"></a>So khớp thực thể
 
@@ -181,13 +181,15 @@ Thực thể đầu ra loại bỏ trùng lặp chứa thông tin sau:
 - Các trường được sử dụng để xác định các quy tắc khử trùng lặp.
 - Các trường Quy tắc và Điểm để biểu thị quy tắc khử trùng lặp đã được áp dụng và điểm mà thuật toán so khớp trả về.
  
-## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
+## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (Xem trước)
 
 Nếu bạn đã bổ sung các đối tượng ở cấp nguồn dữ liệu, hãy chọn chúng trước khi chạy quy trình đối sánh. Các thực thể được bổ sung có thể cải thiện kết quả hợp nhất của bạn. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md). 
 
+Thực thể được bổ sung chi tiết chứa các trường nguồn dữ liệu gốc và các trường được bổ sung chi tiết. Vì vậy, nếu bạn chọn làm việc với thực thể được bổ sung chi tiết, cấu hình hiện có sẽ không bị ảnh hưởng. Tuy nhiên, bạn có thể cần cập nhật các quy tắc đối sánh để sử dụng các trường được bổ sung chi tiết thay thế.
+
 1. Đi đến **Dữ liệu** > **Thống nhất** > **Trùng khớp** và chọn **Sử dụng các thực thể được bổ sung chi tiết** ở trên cùng của trang.
 
-1. Từ **Sử dụng các thực thể được bổ sung chi tiết**, hãy chọn một hoặc nhiều thực thể được bổ sung.
+1. Từ **Sử dụng các thực thể được bổ sung chi tiết**, chọn một hoặc nhiều thực thể được bổ sung.
 
 1. Chọn **Xong**. Bất cứ nơi nào thực thể nguồn được sử dụng (chẳng hạn như thứ tự đối sánh hoặc quy tắc), nó sẽ tự động được thay đổi thành thực thể được bổ sung chi tiết.
   

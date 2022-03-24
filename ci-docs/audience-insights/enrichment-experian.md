@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229995"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376718"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu nhân khẩu học từ Experian (bản xem trước)
 
@@ -25,7 +25,7 @@ Experian là công ty hàng đầu toàn cầu chuyên cung cấp dịch vụ ti
 
 - Bạn phải có đăng ký Experian hiện hoạt. Để có đăng ký, [hãy liên hệ trực tiếp với Experian](https://www.experian.com/marketing-services/contact). [Tìm hiểu thêm về dịch vụ cung cấp dữ liệu của Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Một kết nối Experian đã được quản trị viên định cấu hình *hoặc* bạn có quyền của [quản trị viên](permissions.md#administrator). Bạn cũng cần có ID người dùng, ID bên và Số mô hình cho tài khoản Truyền tải an toàn (ST) hỗ trợ SSH mà Experian tạo cho bạn.
+- Một kết nối Experian đã được quản trị viên định cấu hình *hoặc* bạn có quyền của [quản trị viên](permissions.md#admin). Bạn cũng cần có ID người dùng, ID bên và Số mô hình cho tài khoản Truyền tải an toàn (ST) hỗ trợ SSH mà Experian tạo cho bạn.
 
 ## <a name="supported-countriesregions"></a>Quốc gia/khu vực được hỗ trợ
 

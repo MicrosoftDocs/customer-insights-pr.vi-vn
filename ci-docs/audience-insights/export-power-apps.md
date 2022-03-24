@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229058"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455978"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Trình kết nối Microsoft Power Apps (xem trước)
 
@@ -38,6 +38,8 @@ Sau khi thêm Customer Insights làm kết nối dữ liệu, bạn có thể ch
 ### <a name="retrievable-entities"></a>Các thực thể có thể truy xuất
 
 Bạn chỉ có thể truy xuất các thực thể **Khách hàng**, **UnifiedActivity**, **Phân khúc** và **ContactProfile** thông qua trình kết nối Power Apps. ContactProfile chỉ có sẵn trong phiên bản thông tin chuyên sâu về đối tượng cho tài khoản doanh nghiệp. Các thực thể khác được hiển thị vì trình kết nối cơ bản hỗ trợ chúng thông qua trình kích hoạt trong Power Automate.
+
+Bạn có thể thực hiện tối đa 100 cuộc gọi mỗi 60 giây. Bạn có thể gọi điểm cuối API nhiều lần bằng cách sử dụng tham số $ bỏ qua. [Tìm hiểu thêm về thông số $ bỏ qua](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Đại diện
 

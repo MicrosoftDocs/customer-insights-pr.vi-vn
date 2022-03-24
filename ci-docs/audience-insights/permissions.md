@@ -1,7 +1,7 @@
 ---
 title: Quản lý quyền của người dùng
 description: Tìm hiểu về quyền và vai trò của người dùng.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355963"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376764"
 ---
 # <a name="user-permissions"></a>Quyền người dùng
 
@@ -48,7 +48,7 @@ Có ba loại vai trò:
 - Quản lý cấu hình và làm phong phú hồ sơ khách hàng từ trang **Làm phong phú** (chỉ dành cho nội dung phong phú của bên thứ nhất).
 - Quản lý và tạo các nội dung xuất dựa trên các kết nối được chia sẻ với người đóng góp. [Tìm hiểu thêm về cách quản trị viên cho phép người đóng góp sử dụng kết nối để xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Quản trị viên
+## <a name="admin"></a>Quản trị viên
 
 - Tất cả các quyền có sẵn cho Cộng tác viên.
 - Thay đổi cài đặt trên trang **Hệ thống**, bao gồm ngôn ngữ làm việc và lịch trình làm mới cho các quy trình hệ thống của bạn.
@@ -60,6 +60,12 @@ Có ba loại vai trò:
 - Cài đặt và sử dụng **phần bổ trợ Thẻ khách hàng**.
 - Thêm và sử dụng **Trình kết nối Power Apps**.
 - Cho phép sử dụng [API Customer Insights](apis.md).
+- [Chỉ định quyền sở hữu môi trường](manage-environments.md#change-the-owner-of-an-environment) cho một quản trị viên khác.
+
+## <a name="admin-owner"></a>Quản trị viên (chủ sở hữu)
+
+- Tất cả các quyền có sẵn cho Quản trị viên.
+- [Đặt lại và xóa](manage-environments.md#reset-an-existing-environment) môi trường.
 
 ## <a name="assign-roles-and-permissions"></a>Gán vai trò và quyền
 

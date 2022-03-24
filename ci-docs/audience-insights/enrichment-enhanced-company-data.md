@@ -8,20 +8,22 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229429"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376380"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Làm phong phú hồ sơ công ty với dữ liệu công ty nâng cao
 
-Sử dụng các mô hình của Microsoft và dữ liệu công ty đã biên dịch để chỉnh sửa, bổ sung và chuẩn hóa hồ sơ công ty của bạn. Chúng tôi sẽ sử dụng [Định dạng mô hình dữ liệu chung](/common-data-model/schema/core/applicationcommon/account) để có độ chính xác và thông tin chi tiết tốt hơn.
+Sử dụng các mô hình của Microsoft và dữ liệu công ty đã biên dịch để sửa chữa, bổ sung và chuẩn hóa hồ sơ công ty của bạn. Chúng tôi sẽ sử dụng [Định dạng mô hình dữ liệu chung](/common-data-model/schema/core/applicationcommon/account) để có độ chính xác và thông tin chi tiết tốt hơn.
+
+Bạn cũng có thể [nâng cao dữ liệu của công ty trên các nguồn dữ liệu](data-sources-enrichment.md) để cải thiện độ chính xác đối sánh trong quá trình hợp nhất dữ liệu. 
 
 ## <a name="how-we-enhance-company-data"></a>Cách chúng tôi nâng cao dữ liệu công ty
 
-Mô hình của chúng tôi trải qua quy trình hai bước để nâng cao hồ sơ công ty. Đầu tiên, nó bình thường hóa tên công ty. Ví dụ, *Microsoft Corp* sẽ được sửa chữa và tiêu chuẩn hóa để *Tập đoàn Microsoft*. Nó cố gắng tìm một kết quả phù hợp trong dữ liệu công ty đã biên dịch của Microsoft. Nếu tìm thấy sự trùng khớp, chúng tôi sẽ làm phong phú thêm hồ sơ công ty với thông tin từ dữ liệu công ty đã tổng hợp của chúng tôi, bao gồm cả tên công ty.
+Mô hình của chúng tôi trải qua quy trình hai bước để nâng cao hồ sơ công ty. Đầu tiên, nó bình thường hóa tên công ty. Ví dụ, *Microsoft Corp* sẽ được sửa chữa và tiêu chuẩn hóa để *Tập đoàn Microsoft*. Nó cố gắng tìm sự trùng khớp trong dữ liệu công ty đã biên dịch của Microsoft. Nếu tìm thấy sự trùng khớp, chúng tôi làm phong phú hồ sơ công ty bằng thông tin từ dữ liệu công ty đã biên dịch của chúng tôi, bao gồm cả tên công ty.
 
 
 ### <a name="example"></a>Ví dụ:
@@ -48,10 +50,10 @@ Microsft
 
 Có một số hạn chế với dữ liệu nâng cao. Các mục trong danh sách dưới đây không được hỗ trợ bởi mô hình.
 
-1.  Xác nhận danh tính của công ty. Chúng tôi không xác minh xem đầu vào là một tổ chức hiện có hay một công ty sử dụng đầu ra làm tên tiêu chuẩn.
+1.  Xác nhận danh tính của công ty. Chúng tôi không xác minh xem đầu vào là một tổ chức hiện có hay một công ty sử dụng đầu ra làm tên tiêu chuẩn của nó.
 2.  Bao quát toàn diện các công ty trên toàn cầu. Dữ liệu công ty được biên dịch của Microsoft có phạm vi toàn cầu, nhưng cung cấp hầu hết các phạm vi bao phủ ở Úc, Canada, Vương quốc Anh và Hoa Kỳ.
 3.  Chuẩn hóa địa chỉ công ty trên toàn cầu. Chúng tôi hiện hỗ trợ tiêu chuẩn hóa địa chỉ ở các quốc gia hoặc khu vực sau: Úc, Canada, Pháp, Đức, Ý, Nhật Bản, Vương quốc Anh và Hoa Kỳ.
-4.  Đảm bảo độ chính xác hoặc độ mới của dữ liệu. Vì thông tin doanh nghiệp thường thay đổi, chúng tôi không thể đảm bảo rằng dữ liệu công ty nâng cao được cung cấp luôn chính xác hoặc cập nhật.
+4.  Đảm bảo độ chính xác hoặc độ mới của dữ liệu. Do thông tin doanh nghiệp thường thay đổi, chúng tôi không thể đảm bảo rằng dữ liệu công ty nâng cao được cung cấp luôn chính xác hoặc cập nhật.
 
 ## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
 

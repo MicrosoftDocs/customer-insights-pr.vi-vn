@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373085"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376605"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (xem trước)
 
@@ -37,10 +37,10 @@ Bạn phải có quyền Người đóng góp hoặc Quản trị viên để t�
 
 ## <a name="supported-data-source-enrichments"></a>Các cách làm giàu nguồn dữ liệu được hỗ trợ
 
-Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lại các bước chi tiết của phần bổ sung để tìm hiểu cách định cấu hình nó.
+Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lại các bước chi tiết cho phần bổ sung để tìm hiểu cách định cấu hình nó.
 
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md)
-- [Dữ liệu nhận dạng từ LiveRamp](enrichment-liveramp.md)
+- [Dữ liệu công ty nâng cao](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Quản lý bổ sung nguồn dữ liệu hiện có
 

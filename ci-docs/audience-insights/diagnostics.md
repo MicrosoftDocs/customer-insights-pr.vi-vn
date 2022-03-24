@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354434"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376442"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (Xem trước)
 
@@ -24,7 +24,7 @@ Dynamics 365 Customer Insights cung cấp tích hợp trực tiếp với Azure 
 
 Thông tin chi tiết về khách hàng sẽ gửi các nhật ký sự kiện sau:
 
-- **Sự kiện kiểm tra**
+- **Sự kiện kiểm toán**
   - **APIEvent** - cho phép theo dõi thay đổi được thực hiện thông qua Dynamics 365 Customer Insights Giao diện người dùng.
 - **Sự kiện hoạt động**
   - **WorkflowEvent** - Quy trình làm việc cho phép một người thiết lập [Nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md) và [làm giàu](enrichment-hub.md) và cuối cùng [xuất khẩu](export-destinations.md) dữ liệu vào các hệ thống khác. Tất cả các bước đó có thể được thực hiện riêng lẻ (ví dụ: kích hoạt một lần xuất duy nhất) hoặc được tổ chức (ví dụ: làm mới dữ liệu từ các nguồn dữ liệu sẽ kích hoạt quá trình hợp nhất sẽ kéo thêm các bước bổ sung và sau khi hoàn thành xuất dữ liệu vào một hệ thống khác). Để biết thêm chi tiết, hãy xem [Lược đồ WorkflowEvent](#workflow-event-schema).
@@ -37,7 +37,7 @@ Thông tin chi tiết về khách hàng sẽ gửi các nhật ký sự kiện s
 Để định cấu hình chẩn đoán trong Thông tin chi tiết về khách hàng, bạn phải đáp ứng các điều kiện tiên quyết sau:
 
 - Bạn có một hoạt động [Đăng ký Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Bạn có [Người quản lý](permissions.md#administrator) quyền trong Thông tin chi tiết về khách hàng.
+- Bạn có [Người quản lý](permissions.md#admin) quyền trong Thông tin chi tiết về khách hàng.
 - Bạn có **Người đóng góp** và **Quản trị viên Quyền truy cập Người dùng** vai trò của tài nguyên đích trên Azure. Tài nguyên có thể là tài khoản Azure Storage, Trung tâm sự kiện Azure hoặc không gian làm việc Azure Log Analytics. Để biết thêm thông tin, hãy xem [Thêm hoặc xóa các nhiệm vụ vai trò Azure bằng cách sử dụng cổng Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Yêu cầu về điểm đến](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) cho Azure Storage, Azure Event Hub hoặc Azure Log Analytics đã đáp ứng.
 - Bạn có ít nhất **Người đọc** vai trò trên nhóm tài nguyên mà tài nguyên đó thuộc về.
@@ -118,7 +118,7 @@ Bên dưới **Truy vấn** cửa sổ, mở rộng **Kiểm toán** giải phá
 
 ## <a name="event-schemas"></a>Lược đồ sự kiện
 
-Các sự kiện API và sự kiện quy trình làm việc có cấu trúc chung và chi tiết chúng khác nhau ở điểm nào, hãy xem [Lược đồ sự kiện API](#api-event-schema) hoặc [giản đồ sự kiện quy trình làm việc](#workflow-event-schema).
+Sự kiện API và sự kiện quy trình làm việc có cấu trúc chung và chi tiết chúng khác nhau, xem [Lược đồ sự kiện API](#api-event-schema) hoặc [giản đồ sự kiện quy trình làm việc](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Lược đồ sự kiện API
 
@@ -132,7 +132,7 @@ Các sự kiện API và sự kiện quy trình làm việc có cấu trúc chun
 | `resultSignature` | String    | Không bắt buộc          | Trạng thái kết quả của sự kiện. Nếu thao tác tương ứng với lệnh gọi REST API, thì đó là mã trạng thái HTTP.        | `200`             |
 | `durationMs`      | Dài      | Không bắt buộc          | Thời lượng của hoạt động tính bằng mili giây.     | `133`     |
 | `callerIpAddress` | String    | Không bắt buộc          | Địa chỉ IP của người gọi, nếu thao tác tương ứng với lệnh gọi API đến từ địa chỉ IP có sẵn công khai.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Không bắt buộc          | Đối tượng JSON mô tả danh tính của người dùng hoặc ứng dụng đã thực hiện hoạt động.       | Xem [Xác thực](#identity-schema) tiết diện.     |  |
+| `identity`        | String    | Không bắt buộc          | Đối tượng JSON mô tả danh tính của người dùng hoặc ứng dụng đã thực hiện hoạt động.       | Xem [Xác thực](#identity-schema) tiết diện.     |  
 | `properties`      | String    | Không bắt buộc          | Đối tượng JSON với nhiều thuộc tính hơn cho danh mục sự kiện cụ thể.      | Xem [Tính chất](#api-properties-schema) tiết diện.    |
 | `level`           | String    | Bắt buộc          | Mức độ nghiêm trọng của sự kiện.    | `Informational`,`Warning`,`Error`, hoặc `Critical`.           |
 | `uri`             | String    | Không bắt buộc          | URI yêu cầu tuyệt đối.    |               |
@@ -230,7 +230,7 @@ Các sự kiện quy trình làm việc có các thuộc tính sau.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Có      | Có  | Luôn`WorkflowEvent`, đánh dấu sự kiện là sự kiện quy trình làm việc.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Có      | Có  | Định danh của dòng công việc chạy. Tất cả các sự kiện công việc và quy trình công việc trong quá trình thực thi quy trình công việc đều giống nhau `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Có      | Có  | Số nhận dạng của hoạt động, xem [Loại hoạt động]. (# Kiểu hoạt động)                                                                                                                                                                                       |
+| `properties.operationType`                   | Có      | Có  | Định danh của hoạt động, xem[ Các loại hoạt động].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Có      | No   | Chỉ quy trình làm việc. Số tác vụ mà quy trình làm việc kích hoạt.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Có      | No   | Tùy chọn. Chỉ sự kiện quy trình làm việc. Các Azure Active Directory [objectId của người dùng](/azure/marketplace/find-tenant-object-id#find-user-object-id) ai đã kích hoạt quy trình làm việc, hãy xem thêm `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Có      | No   | `full` hoặc`incremental` Làm tươi.                                                                                                                                                                                                                            |
@@ -239,11 +239,11 @@ Các sự kiện quy trình làm việc có các thuộc tính sau.
 | `properties.startTimestamp`                  | Có      | Có  | Dấu thời gian UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Có      | Có  | Dấu thời gian UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Có      | Có  | Dấu thời gian UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Có      | Có  | Thấu hiểu khách hàng`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Có      | Có  | Thấu hiểu khách hàng`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Có  | - Đối với OperationType =`Export`, số nhận dạng là hướng dẫn của cấu hình xuất. <br> - Đối với OperationType =`Enrichment`, đó là phương châm làm giàu <br> - Đối với OperationType`Measures` và`Segmentation`, định danh là tên thực thể. |
 | `properties.friendlyName`                    | No       | Có  | Tên thân thiện với người dùng của quá trình xuất hoặc đối tượng được xử lý.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Có  | Tùy chọn. Thông báo lỗi với nhiều chi tiết hơn.                                                                                                                                                                                                                  |
 | `properties.additionalInfo.Kind`             | No       | Có  | Tùy chọn. Đối với OperationType`Export` chỉ một. Xác định loại xuất. Để biết thêm thông tin, hãy xem [tổng quan về các điểm đến xuất khẩu](export-destinations.md).                                                                                          |
-| `properties.additionalInfo.AffectedEntities` | No       | Có  | Tùy chọn. Đối với OperationType`Export` chỉ một. Chứa danh sách các thực thể đã định cấu hình trong quá trình xuất.                                                                                                                                                            |
+| `properties.additionalInfo.AffectedEntities` | No       | Có  | Tùy chọn. Đối với OperationType`Export` chỉ một. Chứa danh sách các thực thể được định cấu hình trong quá trình xuất.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Có  | Tùy chọn. Đối với OperationType`Export` chỉ một. Thông báo chi tiết cho việc xuất.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Có  | Tùy chọn. Đối với OperationType`Segmentation` chỉ một. Cho biết tổng số thành viên mà phân khúc có.                                                                                                                                                    |

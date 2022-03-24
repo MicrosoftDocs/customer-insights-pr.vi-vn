@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229664"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376626"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu tùy chỉnh (bản xem trước)
 
@@ -25,7 +25,7 @@ Nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP) cho phép bạ
 
 - Bạn có tên tệp và vị trí (đường dẫn) của tệp sẽ được nhập trên máy chủ SFTP.
 - Có một tệp *model.json* chỉ định [giản đồ Common Data Model](/common-data-model/) cho dữ liệu được nhập. Tệp này phải nằm trong cùng thư mục với tệp để nhập.
-- Một kết nối SFTP đã được quản trị viên định cấu hình *hoặc* bạn có quyền của [quản trị viên](permissions.md#administrator). Bạn sẽ cần thông tin xác thực của người dùng, URL và số cổng cho vị trí SFTP mà bạn muốn nhập dữ liệu từ đó.
+- Một kết nối SFTP đã được quản trị viên định cấu hình *hoặc* bạn có quyền của [quản trị viên](permissions.md#admin). Bạn sẽ cần thông tin xác thực của người dùng, URL và số cổng cho vị trí SFTP mà bạn muốn nhập dữ liệu từ đó.
 
 
 ## <a name="configure-the-import"></a>Định cấu hình dữ liệu nhập

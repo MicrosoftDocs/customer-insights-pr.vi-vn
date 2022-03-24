@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353662"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376348"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Tăng cường hồ sơ khách hàng với các địa chỉ nâng cao
 
 Địa chỉ trong dữ liệu của bạn có thể phi cấu trúc, không đầy đủ hoặc không chính xác. Sử dụng các mô hình của Microsoft để chuẩn hóa và tăng cường các địa chỉ của bạn tại [định dạng Common Data Model](/common-data-model/schema/core/applicationcommon/address) để có thông tin chi tiết và độ chính xác cao hơn.
+
+Bạn cũng có thể [làm giàu địa chỉ trên các nguồn dữ liệu](data-sources-enrichment.md) để cải thiện độ chính xác đối sánh trong quá trình hợp nhất dữ liệu. 
 
 ## <a name="how-we-enhance-addresses"></a>Cách chúng tôi nâng cao địa chỉ
 

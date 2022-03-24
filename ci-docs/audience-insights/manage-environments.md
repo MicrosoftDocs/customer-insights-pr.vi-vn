@@ -1,7 +1,7 @@
 ---
 title: Tạo và quản lý môi trường
 description: Tìm hiểu cách đăng ký dịch vụ và cách quản lý môi trường.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354305"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376902"
 ---
 # <a name="manage-environments"></a>Quản lý môi trường
-
-
 
 ## <a name="switch-environments"></a>Chuyển đổi môi trường
 
@@ -98,9 +96,29 @@ Sau khi làm mới nguồn dữ liệu, hãy chuyển đến **Dữ liệu** > *
 
 Khi quá trình hợp nhất dữ liệu hoàn tất, hãy chuyển đến **Biện pháp** và **Phân khúc** để đồng thời làm mới những dữ liệu này.
 
+## <a name="change-the-owner-of-an-environment"></a>Thay đổi chủ sở hữu của một môi trường
+
+Mặc dù một số người dùng có thể có quyền quản trị trong Thông tin chi tiết về khách hàng, nhưng chỉ một người dùng là chủ sở hữu của môi trường. Theo mặc định, quản trị viên là người tạo môi trường ban đầu. Với tư cách là quản trị viên của một môi trường, bạn có thể chỉ định quyền sở hữu cho người dùng khác với quyền quản trị viên.
+
+1. Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng.
+
+1. Chọn biểu tượng **Chỉnh sửa**.
+
+1. Bên trong **Chỉnh sửa môi trường** hộp, đi đến **Thông tin cơ bản** bươc chân.
+
+1. Bên trong **Thay đổi chủ sở hữu của môi trường**, chọn chủ sở hữu mới của môi trường.  
+
+1. Lựa chọn **Xem lại và kết thúc**, sau đó **Cập nhật** để áp dụng các thay đổi. 
+
+## <a name="claim-ownership-of-an-environment"></a>Yêu cầu quyền sở hữu môi trường
+
+Nếu chủ sở hữu của một môi trường rời khỏi tổ chức hoặc tài khoản người dùng của họ bị xóa, thì môi trường đó sẽ không có chủ sở hữu. Người dùng có quyền quản trị có thể xác nhận quyền sở hữu và trở thành chủ sở hữu mới. Họ có thể tiếp tục sở hữu môi trường hoặc [thay đổi quyền sở hữu thành quản trị viên khác](#change-the-owner-of-an-environment). 
+
+Để xác nhận quyền sở hữu, hãy chọn **Lấy quyền sở hữu** nút hiển thị ở đầu mỗi trang trong Thông tin chi tiết về khách hàng khi chủ sở hữu ban đầu rời tổ chức.
+
 ## <a name="reset-an-existing-environment"></a>Đặt lại môi trường hiện có
 
-Là quản trị viên, bạn có thể đặt lại một môi trường về trạng thái trống nếu bạn muốn xóa tất cả các cấu hình và xóa dữ liệu đã nhập.
+Là chủ sở hữu của môi trường, bạn có thể đặt lại môi trường về trạng thái trống nếu bạn muốn xóa tất cả các cấu hình và xóa dữ liệu đã nhập.
 
 1.  Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng. 
 
@@ -112,7 +130,7 @@ Là quản trị viên, bạn có thể đặt lại một môi trường về t
 
 ## <a name="delete-an-existing-environment"></a>Xóa môi trường hiện có
 
-Với tư cách là quản trị viên, bạn có thể xóa môi trường do mình quản lý.
+Với tư cách là chủ sở hữu của một môi trường, bạn có thể xóa một môi trường mà bạn quản lý.
 
 1.  Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng.
 

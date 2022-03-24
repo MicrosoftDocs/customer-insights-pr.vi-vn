@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230660"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376810"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Tăng cường dữ liệu hồ sơ công ty bằng Leadspace (bản xem trước)
 
@@ -25,7 +25,7 @@ Leadspace là một công ty khoa học dữ liệu cung cấp Nền tảng dữ
 
 - Bạn có một giấy phép Leadspace hiện hoạt.
 - Bạn có [hồ sơ khách hàng hợp nhất](customer-profiles.md) dựa trên tài khoản.
-- Một kết nối Leadspace đã được quản trị viên định cấu hình hoặc bạn có quyền của [quản trị viên](permissions.md#administrator) và “khóa vĩnh viễn” (còn gọi là **Mã thông báo Leadspace**). Liên hệ trực tiếp với [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) để biết thông tin chi tiết về sản phẩm của họ.
+- Một kết nối Leadspace đã được quản trị viên định cấu hình hoặc bạn có quyền của [quản trị viên](permissions.md#admin) và “khóa vĩnh viễn” (còn gọi là **Mã thông báo Leadspace**). Liên hệ trực tiếp với [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) để biết thông tin chi tiết về sản phẩm của họ.
 
 ## <a name="configure-the-enrichment"></a>Định cấu hình tăng cường
 

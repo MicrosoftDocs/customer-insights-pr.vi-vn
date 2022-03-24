@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355917"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376534"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Mang Azure key vault của riêng bạn (bản xem trước)
 
@@ -31,7 +31,7 @@ Có thể dùng Key vault chuyên dụng để chia giai đoạn và sử dụng
 
 - Bạn phải có đăng ký Azure hiện hoạt.
 
-- Bạn có vai trò [Quản trị viên](permissions.md#administrator) trong thông tin chuyên sâu về đối tượng. Tìm hiểu thêm về [quyền người dùng trong thông tin chuyên sâu về đối tượng](permissions.md#assign-roles-and-permissions).
+- Bạn có vai trò [Quản trị viên](permissions.md#admin) trong thông tin chuyên sâu về đối tượng. Tìm hiểu thêm về [quyền người dùng trong thông tin chuyên sâu về đối tượng](permissions.md#assign-roles-and-permissions).
 
 - Bạn có vai trò [Người đóng góp](/azure/role-based-access-control/built-in-roles#contributor) và [Quản trị viên truy cập người dùng](/azure/role-based-access-control/built-in-roles#user-access-administrator) trên key vault hoặc nhóm tài nguyên chứa key vault đó. Để biết thêm thông tin, hãy chuyển đến [Thêm hoặc xóa các chỉ định vai trò Azure bằng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal). Nếu bạn không có vai trò Quản trị viên truy cập người dùng trên key vault, bạn phải thiết lập các quyền kiểm soát truy cập dựa trên vai trò cho dịch vụ Azure chính cho Dynamics 365 Customer Insights một cách riêng biệt. Làm theo các bước để [sử dụng một dịch vụ Azure chính](connect-service-principal.md) cho key vault cần được liên kết.
 

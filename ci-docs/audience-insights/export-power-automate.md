@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226740"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455937"
 ---
 # <a name="power-automate-connector-preview"></a>Trình kết nối Power Automate (xem trước)
 
 Kích hoạt các sự kiện cụ thể xảy ra tự động khi dữ liệu của bạn thay đổi và quản lý các dòng phức tạp hơn trực tiếp trong [Power Automate](https://flow.microsoft.com/).
+
+## <a name="known-limitations"></a>Các hạn chế đã biết
+
+- Bạn có thể thực hiện tối đa 100 cuộc gọi mỗi 60 giây. Bạn có thể gọi điểm cuối API nhiều lần bằng cách sử dụng tham số $ bỏ qua. [Tìm hiểu thêm về thông số $ bỏ qua](/connectors/customerinsights/#get-items-from-an-entity).
 
 ## <a name="power-automate-triggers"></a>Trình kích hoạt Power Automate
 

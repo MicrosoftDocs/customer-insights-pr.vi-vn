@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355055"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455888"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Sử dụng các phân khúc trong Dynamics 365 Sales (bản xem trước)
 
@@ -31,7 +31,7 @@ Sử dụng dữ liệu khách hàng của bạn để tạo danh sách khách h
 
 ## <a name="prerequisite-for-connection"></a>Điều kiện tiên quyết để kết nối
 
-1. Hồ sơ liên hệ phải có trong Dynamics 365 Sales trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Sales. Đọc thêm về cách nhập liên hệ vào [Dynamics 365 Sales bằng Microsoft Dataverse](connect-power-query.md).
+1. Hồ sơ liên hệ phải có trong Dynamics 365 Sales trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Sales. Đọc thêm về cách nhập danh bạ từ [Sử dụng Dynamics 365 Sales Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Việc xuất các phân đoạn từ thông tin chi tiết về đối tượng sang Sales sẽ không tạo hồ sơ liên hệ mới trong các phiên bản Sales. Các bản ghi liên hệ từ Sales phải được nhập vào thông tin chi tiết về đối tượng và được sử dụng làm nguồn dữ liệu. Chúng cũng cần được đưa vào thực thể Khách hàng hợp nhất để ánh xạ ID khách hàng với ID liên hệ trước khi có thể xuất phân đoạn.

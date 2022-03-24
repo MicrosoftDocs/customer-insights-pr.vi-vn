@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232730"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376488"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Có gì mới trong chức năng thông tin chi tiết về đối tượng của Dynamics 365 Customer Insights
-
-
 
 Chúng tôi rất vui được công bố các bản cập nhật mới nhất của mình! Bài viết này tóm tắt các tính năng xem trước công khai, các điểm cải tiến được phát hành rộng rãi và những điểm cập nhật tính năng. Để xem các kế hoạch dài hạn đối với tính năng, hãy xem [kế hoạch phát hành Dynamics 365 và Power Platform](/dynamics365/release-plans/).
 
@@ -27,13 +25,69 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
 
+## <a name="february-2022-updates"></a>Cập nhật tháng 2 năm 2022
+
+Các bản cập nhật vào tháng 2 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="general-availability-for-prediction-models"></a>Tính sẵn có chung cho các mẫu dự đoán
+
+Các mẫu dự đoán xuất xưởng, bao gồm **đăng ký churn**, **dịch churn**, và **giá trị lâu dài của khách hàng (CLV)** nói chung trở nên khả dụng như một phần của Thông tin chi tiết về khách hàng. 
+
+Để biết thêm thông tin, hãy xem [Tổng quan về dự đoán](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nguồn dữ liệu mới: Tích hợp với Azure Synapse Analytics (Xem trước)
+
+Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn.
+
+Nếu tổ chức của bạn đã sử dụng các khả năng phân tích nâng cao của Azure Synapse Analytics và lưu trữ kết quả đầu ra trong cơ sở dữ liệu trong Data Lake, bạn có thể dễ dàng nhập dữ liệu đó vào Thông tin chi tiết về khách hàng. Để biết thêm thông tin, hãy xem [Kết nối một Azure Synapse nguồn dữ liệu (Xem trước)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Làm giàu LiveRamp (Xem trước)
+
+LiveRamp cung cấp giải pháp nhận dạng ngoại tuyến xác định và hợp nhất dữ liệu khách hàng. Bạn có thể ánh xạ các số nhận dạng cá nhân trong dữ liệu khách hàng của mình với biểu đồ nhận dạng AbiliTec và nhận các ID AbiliTec. Sau đó, bạn có thể sử dụng các ID này để thống nhất dữ liệu khách hàng của mình tốt hơn.
+
+Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng với dữ liệu nhận dạng từ LiveRamp (Xem trước)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (Xem trước)
+
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi thống nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và tính hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
+
+Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu (Xem trước)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Thay đổi chủ sở hữu môi trường
+
+Mặc dù một số người dùng có thể có quyền quản trị trong Thông tin chi tiết về khách hàng, nhưng chỉ một người dùng là chủ sở hữu của môi trường. Trải nghiệm được cải thiện cho phép bạn thay đổi chủ sở hữu của môi trường và xác nhận quyền sở hữu nếu chủ sở hữu cũ rời khỏi tổ chức. 
+
+Để biết thêm thông tin, hãy xem [Thay đổi chủ sở hữu của một môi trường](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Quá trình chuẩn bị dữ liệu liệt kê lý do hỏng cho các bản ghi bị hỏng
+
+Quá trình chuẩn bị dữ liệu bây giờ hiển thị lý do hỏng hóc cho tất cả các trường có dữ liệu bị hỏng ở cấp độ bản ghi riêng lẻ để dễ dàng xác định. 
+
+Để biết thêm thông tin, hãy xem [Nguồn dữ liệu bị hỏng](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kết thúc bản xem trước cho các tính năng báo cáo trong khả năng thông tin chi tiết về mức độ tương tác
+
+Các Dynamics 365 Customer Insights bản xem trước khả năng thông tin chi tiết về mức độ tương tác đã kết thúc vào ngày 15 tháng 2 năm 2022.  
+Thay đổi này có nghĩa là trải nghiệm dùng thử Customer Insights không còn bao gồm khả năng tạo kênh cũng như chức năng báo cáo khác.
+
+Chúng tôi mời bạn khám phá và đánh giá nhiều tính năng khác của [Thấu hiểu khách hàng](https://dynamics.microsoft.com/ai/customer-insights/), nền tảng dữ liệu khách hàng của Microsoft (CDP).    
+ 
+Trong khoảng thời gian chuyển tiếp, những người tham gia xem trước hiện tại vẫn có quyền truy cập vào một số chức năng và chức năng xem trước:
+
+- Tải mã để trang bị cho một trang web hoặc ứng dụng dành cho thiết bị di động 
+- Xem sự kiện và thuộc tính sự kiện 
+- Nâng cao hồ sơ hợp nhất với các sự kiện được nhập và tinh chỉnh để hưởng lợi từ toàn bộ giá trị dữ liệu khách hàng của họ
+  
+Trong giai đoạn chuyển tiếp, các sự kiện đã ghi vẫn được truyền trực tuyến đến Data Lake được kết nối. Sau khi tắt chức năng này, việc chia sẻ dữ liệu giữa thông tin chi tiết về mức độ tương tác và thông tin chi tiết về đối tượng sẽ ngừng và không có sự kiện mới nào được gửi đến bộ nhớ được kết nối.
+Vui lòng liên hệ trực tiếp với nhóm Tài khoản Microsoft của bạn nếu bạn có thắc mắc về phần cuối của bản xem trước khả năng. Nhóm Tài khoản của bạn sẽ cập nhật cho bạn về các lần ra mắt sắp tới. 
+
 ## <a name="january-2022-updates"></a>Cập nhật tháng 1 năm 2022
 
 Các bản cập nhật vào tháng 1 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
 
 ### <a name="sentiment-analysis-of-your-customers-feedback"></a>Phân tích cảm xúc về phản hồi của khách hàng của bạn
 
-Thông tin chi tiết về khách hàng cung cấp một tính năng mới do AI hỗ trợ để tổng hợp tâm lý khách hàng và xác định các khía cạnh kinh doanh cụ thể làm cơ hội cho các cải tiến được nhắm mục tiêu. Bằng cách phân tích phản hồi bằng văn bản của khách hàng, bạn có thể nhận được thông tin chi tiết chính xác với chi phí thấp. Phân tích tình cảm được cung cấp bởi các mô hình Xử lý ngôn ngữ tự nhiên (NLP) tạo ra hai thông tin chi tiết có được cho mỗi ID khách hàng. Điểm tình cảm (từ –5 đến 5) và danh sách các khía cạnh kinh doanh có thể áp dụng. 
+Thông tin chi tiết về khách hàng cung cấp một tính năng mới do AI hỗ trợ để tổng hợp tâm lý khách hàng và xác định các khía cạnh kinh doanh cụ thể làm cơ hội cho các cải tiến được nhắm mục tiêu. Bằng cách phân tích phản hồi bằng văn bản của khách hàng, bạn có thể nhận được thông tin chi tiết chính xác với chi phí thấp. Phân tích tình cảm được hỗ trợ bởi các mô hình Xử lý ngôn ngữ tự nhiên (NLP) tạo ra hai thông tin chi tiết có được cho mỗi ID khách hàng. Điểm tình cảm (từ –5 đến 5) và danh sách các khía cạnh kinh doanh có thể áp dụng. 
 
 Để biết thêm thông tin, hãy xem [Phân tích tình cảm trong phản hồi của khách hàng (Xem trước)](sentiment-analysis.md).
 
@@ -44,7 +98,7 @@ Các bản cập nhật vào tháng 12 năm 2021 bao gồm các tính năng mớ
 
 ### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Chuyển tiếp nhật ký Thông tin chi tiết về khách hàng tới Azure Monitor
 
-Thông tin chi tiết về khách hàng cung cấp tích hợp trực tiếp với Azure Monitor. Tính năng này bao gồm các sự kiện kiểm toán và các sự kiện hoạt động. Nhật ký tài nguyên Azure Monitor cho phép bạn theo dõi và gửi nhật ký tới Azure Storage, Azure Log Analytics hoặc truyền chúng tới Trung tâm sự kiện Azure.
+Thông tin chi tiết về khách hàng cung cấp tích hợp trực tiếp với Azure Monitor. Tính năng này bao gồm các sự kiện kiểm toán và các sự kiện hoạt động. Nhật ký tài nguyên Azure Monitor cho phép bạn theo dõi và gửi nhật ký đến Azure Storage, Azure Log Analytics hoặc truyền trực tuyến chúng tới Trung tâm sự kiện Azure.
 
 Để biết thêm thông tin, hãy xem [Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (Xem trước)](diagnostics.md).
 
@@ -60,11 +114,11 @@ Sử dụng dữ liệu từ Microsoft Office 365 để làm phong phú thêm h�
 
 Khi loại bỏ trùng lặp hồ sơ khách hàng trong một thực thể, bạn có thể không muốn phải chọn một hồ sơ đầy đủ làm người chiến thắng. Giờ đây, chúng tôi cho phép bạn hợp nhất các trường tốt nhất từ các bản ghi khác nhau dựa trên các quy tắc cho mọi thuộc tính. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. 
 
-Giờ đây, bạn có thể xác định các quy tắc hợp nhất riêng biệt cho các thuộc tính riêng lẻ trong khi loại bỏ trùng lặp và hợp nhất các bản ghi trong một thực thể. Trước đây, chúng tôi chỉ cho phép bạn chọn một quy tắc hợp nhất duy nhất (lưu giữ hồ sơ dựa trên tính đầy đủ của dữ liệu lần truy cập gần đây) và quy tắc đó được áp dụng ở cấp bản ghi cho tất cả các thuộc tính. Điều đó không lý tưởng khi một số dữ liệu bạn muốn giữ lại được tìm thấy trong bản ghi A và dữ liệu tốt khác được tìm thấy trong bản ghi B.
+Giờ đây, bạn có thể xác định các quy tắc hợp nhất riêng biệt cho các thuộc tính riêng lẻ trong khi loại bỏ trùng lặp và hợp nhất các bản ghi trong một thực thể duy nhất. Trước đây, chúng tôi chỉ cho phép bạn chọn một quy tắc hợp nhất duy nhất (lưu giữ hồ sơ dựa trên tính đầy đủ của dữ liệu lần truy cập gần đây) và quy tắc đó được áp dụng ở cấp bản ghi cho tất cả các thuộc tính. Điều đó không lý tưởng khi một số dữ liệu bạn muốn giữ lại được tìm thấy trong bản ghi A và dữ liệu tốt khác được tìm thấy trong bản ghi B.
 
 Để biết thêm thông tin, hãy xem [Xác định quy tắc chống trùng lặp trên một thực thể so khớp](match-entities.md#define-deduplication-on-a-match-entity).
 
-#### <a name="custom-rules-for-matching"></a>Quy tắc tùy chỉnh để đối sánh
+#### <a name="custom-rules-for-matching"></a>Các quy tắc tùy chỉnh để đối sánh
 
 Đôi khi bạn cần chỉ định một ngoại lệ cho các quy tắc chung để KHÔNG khớp với các bản ghi. Điều này có thể xảy ra khi nhiều cá nhân chia sẻ đủ thông tin để hệ thống đối sánh họ như một cá nhân duy nhất. Ví dụ: các cặp song sinh có cùng họ, sống trong cùng một thành phố và có chung ngày sinh.
 
@@ -117,7 +171,7 @@ Trình tạo thước đo cho phép bạn tạo các thước đo xung quanh tà
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Tạo phân khúc dựa trên tài khoản doanh nghiệp và hệ thống phân cấp của chúng
 
-Trình tạo phân đoạn cho phép bạn tạo các phân đoạn tài khoản doanh nghiệp có tùy chọn bao gồm thông tin liên hệ cho từng tài khoản trong phân đoạn. Nếu bạn đã thiết lập phân cấp tài khoản, bạn có thể sử dụng thông tin phân cấp tài khoản khi tạo phân đoạn. Để biết thêm thông tin, hãy xem [Tạo một phân đoạn mới](segment-builder.md#create-a-new-segment).
+Trình tạo phân đoạn cho phép bạn tạo các phân đoạn tài khoản doanh nghiệp có tùy chọn bao gồm thông tin liên hệ cho từng tài khoản trong một phân đoạn. Nếu bạn đã thiết lập phân cấp tài khoản, bạn có thể sử dụng thông tin phân cấp tài khoản khi tạo phân đoạn. Để biết thêm thông tin, hãy xem [Tạo một phân đoạn mới](segment-builder.md#create-a-new-segment).
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Giữ lại các tài khoản doanh nghiệp của bạn với những hiểu biết sâu sắc về xu hướng biến động của chúng
 

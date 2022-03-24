@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228500"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376856"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu tương tác (xem trước)
+# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Làm phong phú hồ sơ khách hàng bằng dữ liệu tương tác (xem trước)
 
 Sử dụng dữ liệu từ Microsoft Office 365 để làm phong phú thêm hồ sơ tài khoản khách hàng của bạn với thông tin chi tiết về các cam kết thông qua Office 365 ứng dụng. Dữ liệu tương tác bao gồm email và hoạt động cuộc họp, được tổng hợp ở cấp tài khoản. Ví dụ: số lượng email từ tài khoản doanh nghiệp hoặc số cuộc họp với tài khoản. Không có dữ liệu về người dùng cá nhân được cung cấp. 
 
@@ -28,7 +28,7 @@ Tính năng làm giàu này có sẵn ở các khu vực sau: Vương quốc Anh
 - Bạn có một hoạt động Office 365 giấy phép đám mây.
 - Bạn có [hồ sơ khách hàng hợp nhất](customer-profiles.md) dựa trên [tài khoản doanh nghiệp](work-with-business-accounts.md).
 - Môi trường Thông tin chi tiết về khách hàng của bạn phải có [Microsoft Dataverse tổ chức trực thuộc](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Bạn có [người quản lý](permissions.md#administrator) quyền.
+- Bạn có [người quản lý](permissions.md#admin) quyền.
 - Bạn có hoặc có thể nhận được sự đồng ý từ Office 365 quản trị viên thuê để sử dụng Office 365 dữ liệu để cung cấp **Thông tin chi tiết về Tổ chức** trong các ứng dụng Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
@@ -85,7 +85,7 @@ Tất cả dữ liệu được tổng hợp đến cấp tài khoản. Hệ th�
 | Số lượng email đến tài khoản                                                       |  NoOfEmails_ToAccount                    |
 | Số lượng email từ tài khoản                                                     |  NoOfEmails_FromAccount                  | 
 | Số cuộc họp do tài khoản khởi xướng                                           |  NoOfMeetings_FromAccount                | 
-| Số lượng cuộc họp do tổ chức của bạn bắt đầu                                 |  NoOfMeetings_ToAccount                  | 
+| Số cuộc họp do tổ chức của bạn bắt đầu                                 |  NoOfMeetings_ToAccount                  | 
 | Số người từ tổ chức của bạn trong các cuộc họp có tài khoản                  |  NoOfContactsInvolved_Meetings           | 
 | Số người từ tổ chức của bạn trong các cuộc trò chuyện qua email với tài khoản       |  NoOfContactsInvolved_Emails             | 
 | Số người từ tài khoản trong các cuộc họp với tổ chức của bạn                  |  NoOfAccountContactsInvolved_Meetings    | 

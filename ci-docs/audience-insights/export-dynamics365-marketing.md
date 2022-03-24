@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353937"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455866"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Sử dụng các phân khúc trong Dynamics 365 Marketing (bản xem trước)
 
@@ -28,7 +28,7 @@ Nếu bạn đang sử dụng các tính năng mới của Dynamics 365 Marketin
 
 ## <a name="prerequisite-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
-- Hồ sơ liên hệ phải có trong Dynamics 365 Marketing trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Marketing. Đọc thêm về cách nhập liên hệ vào [Dynamics 365 Marketing bằng Microsoft Dataverse](connect-power-query.md).
+- Hồ sơ liên hệ phải có trong Dynamics 365 Marketing trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Marketing. Đọc thêm về cách nhập liên hệ vào [Dynamics 365 Marketing bằng Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Việc xuất các phân đoạn từ thông tin chi tiết về đối tượng sang Marketing sẽ không tạo hồ sơ liên hệ mới trong các phiên bản Marketing. Các bản ghi liên hệ từ Marketing phải được nhập vào thông tin chi tiết về đối tượng và được sử dụng làm nguồn dữ liệu. Chúng cũng cần được đưa vào thực thể Khách hàng hợp nhất để ánh xạ ID khách hàng với ID liên hệ trước khi có thể xuất phân đoạn.
