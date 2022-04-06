@@ -1,23 +1,23 @@
 ---
 title: Tạo môi trường trong Customer Insights
 description: Các bước để tạo môi trường với đăng ký được cấp phép cho Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354121"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491944"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Tạo môi trường trong thông tin chuyên sâu về đối tượng
 
@@ -78,19 +78,21 @@ Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các 
    
 Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights với môi trường Dataverse.
 
-Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo hướng mô hình trong Power Apps. Để trống trường này nếu bạn không có Dataverse môi trường và chúng tôi sẽ cung cấp một môi trường cho bạn.
+Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo mô hình trong Power Apps. Để trống trường này nếu bạn không có Dataverse môi trường và chúng tôi sẽ cung cấp một môi trường cho bạn.
 
-Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và cổng](data-sources.md#add-data-from-on-premises-data-sources). Bạn cũng có thể dùng [mô hình xuất xưởng dự đoán](predictions-overview.md?tabs=b2c#out-of-box-models) bằng cách kết nối với một Dataverse Môi trường.
+Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và các cổng](data-sources.md#add-data-from-on-premises-data-sources). Bạn cũng có thể dùng [mô hình xuất xưởng dự đoán](predictions-overview.md?tabs=b2c#out-of-box-models) bằng cách kết nối với một Dataverse Môi trường.
 
 > [!IMPORTANT]
-> Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để cho phép chia sẻ dữ liệu.
+> 1. Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để có thể chia sẻ dữ liệu.
+> 1. Bạn phải có vai trò quản trị viên toàn cầu trong Dataverse Môi trường. Xác minh nếu điều này [Dataverse môi trường được liên kết](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) vào các nhóm bảo mật nhất định và đảm bảo rằng bạn được thêm vào các nhóm bảo mật đó.
+> 1. Không có môi trường Thông tin chi tiết về khách hàng hiện tại nào được liên kết với môi trường đó Dataverse Môi trường. Học cách [loại bỏ một kết nối hiện có với một Dataverse Môi trường](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="chia sẻ dữ liệu với Microsoft Dataverse tự động được bật cho các phiên bản mới thuần.":::
 
-> [!NOTE]
-> Customer Insights không hỗ trợ các tình huống chia sẻ dữ liệu sau:
-> - Nếu bạn lưu tất cả dữ liệu vào Azure Data Lake Storage của mình, bạn sẽ không thể bật chia sẻ dữ liệu với kho dữ liệu Dataverse được quản lý.
-> - Nếu bạn bật chia sẻ dữ liệu với Dataverse, bạn sẽ không thể [tạo các giá trị được dự đoán hoặc bị thiếu trong một thực thể](predictions.md).
+Để biết thêm thông tin về cách bật chia sẻ dữ liệu với Microsoft Dataverse từ của riêng bạn Azure Data Lake Storage, thấy [Kết nối với Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights không hỗ trợ các tình huống chia sẻ dữ liệu sau:
+- Nếu bạn bật chia sẻ dữ liệu với Dataverse, bạn sẽ không thể [tạo các giá trị được dự đoán hoặc bị thiếu trong một thực thể](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Bước 4: Hoàn tất thiết đặt
 

@@ -1,7 +1,7 @@
 ---
 title: Phân khúc trong thông tin chuyên sâu về đối tượng
 description: Tổng quan, cách tạo và quản lý phân khúc.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8356009"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508592"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -68,7 +68,9 @@ Hành động sau đây khả dụng khi bạn chọn một phân khúc:
 
 ## <a name="refresh-segments"></a>Làm mới phân khúc
 
-Bạn có thể làm mới tất cả phân phúc cùng lúc bằng cách chọn **Làm mới tất cả** trên trang **Phân khúc** hoặc bạn có thể làm mới một hoặc nhiều phân khúc khi chọn và chọn **Làm mới** từ các tùy chọn. Hoặc bạn có thể định cấu hình làm mới lặp lại trên **Quản trị viên** > **Hệ thống** > **Lịch trình**.
+Bạn có thể làm mới tất cả phân phúc cùng lúc bằng cách chọn **Làm mới tất cả** trên trang **Phân khúc** hoặc bạn có thể làm mới một hoặc nhiều phân khúc khi chọn và chọn **Làm mới** từ các tùy chọn. Hoặc bạn có thể định cấu hình làm mới lặp lại trên **Quản trị viên** > **Hệ thống** > **Lịch trình**. Khi cấu hình làm mới định kỳ, các quy tắc sau sẽ áp dụng:
+- Tất cả các phân đoạn với loại **Năng động** hoặc **Sự bành trướng** sẽ được tự động làm mới theo nhịp đã đặt. Khi quá trình làm mới hoàn tất, **Trạng thái** cho biết nếu có bất kỳ vấn đề nào khi làm mới phân đoạn. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần làm mới thành công gần đây nhất. Nếu xảy ra lỗi, hãy chọn lỗi để xem chi tiết về những gì đã xảy ra.
+- Phân đoạn có loại **Tĩnh** *sẽ không* được làm mới tự động. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần cuối cùng các phân đoạn tĩnh được chạy hoặc làm mới theo cách thủ công.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

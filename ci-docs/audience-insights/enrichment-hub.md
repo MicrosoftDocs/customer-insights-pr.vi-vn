@@ -1,7 +1,7 @@
 ---
 title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
 description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372745"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8492005"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -97,5 +97,19 @@ Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường
 1. Trong ngăn **Chi tiết tiến trình**, hãy bung rộng phần **Nội dung tăng cường**. 
 1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**. 
 1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng. 
+
+## <a name="enrichment-results"></a>Kết quả tăng cường
+
+Sau khi hoàn thành quá trình làm giàu, bạn có thể xem lại kết quả làm giàu.
+
+1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. 
+1. Chọn phần bổ sung mà bạn muốn có thông tin.
+
+Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung, bản xem trước của thực thể làm giàu đã tạo và số lượng các cấu hình được bổ sung theo thời gian. Nếu có, **Số lượng khách hàng làm giàu theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi của từng trường được bổ sung chi tiết.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Trang kết quả làm giàu.":::
+
+Một số làm giàu cũng hiển thị thông tin cụ thể cho loại làm giàu. Tham khảo tài liệu về cách làm giàu có liên quan để biết thêm thông tin.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

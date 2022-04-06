@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232017"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487562"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Xuất phân khúc sang Marketo (bản xem trước)
 
@@ -63,7 +63,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Nhập **[ID danh sách Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** của bạn. ID danh sách là một giá trị số đơn thuần. Ví dụ: nếu ID danh sách Marketo của bạn là ST12345A7, hãy xóa ký tự đứng trước và sau các chữ số và nhập `12345`. 
 
-1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. 
+1. Bên trong **Đối sánh dữ liệu**, hãy chọn ít nhất một trường đại diện cho địa chỉ email của khách hàng hoặc ID thị trường của khách hàng. 
 
 1. Bạn có thể tùy ý xuất **Tên**, **Họ**, **Thành phố**, **Tiểu bang** và **Quốc gia/Khu vực** để tạo thêm nhiều email được cá nhân hóa hơn. Chọn **Thêm thuộc tính** để ánh xạ những trường này.
 

@@ -1,7 +1,7 @@
 ---
 title: Kết nối với bảng trong Microsoft Dataverse
 description: Nhập dữ liệu từ một kho dữ liệu Microsoft Dataverse được quản lý.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354168"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464133"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Kết nối với dữ liệu trong một kho dữ liệu được quản lý Microsoft Dataverse
-
-
 
 Bài viết này cung cấp thông tin về cách Dataverse người dùng có thể nhanh chóng kết nối với các thực thể phân tích trong một Microsoft Dataverse hồ quản lý. 
 
@@ -29,7 +27,8 @@ Bài viết này cung cấp thông tin về cách Dataverse người dùng có t
 
 ## <a name="important-considerations"></a>Những điều quan trọng cần cân nhắc
 
-Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lake Storage có thể được lưu trữ ở địa điểm khác với nơi xử lý hoặc lưu trữ dữ liệu trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
+1. Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lake Storage có thể được lưu trữ ở địa điểm khác với nơi xử lý hoặc lưu trữ dữ liệu trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
+2. Chỉ một Dataverse thực thể với [thay đổi theo dõi](/power-platform/admin/enable-change-tracking-control-data-synchronization) được kích hoạt có thể nhìn thấy. Các thực thể này có thể được xuất sang Dataverse - hồ dữ liệu được quản lý và được sử dụng trong Thông tin chi tiết về khách hàng. Ngoài hộp Dataverse các bảng được bật theo dõi thay đổi theo mặc định. Bạn cần bật theo dõi thay đổi cho các bảng tùy chỉnh. Để kiểm tra xem một Dataverse bảng được bật để theo dõi thay đổi, đi tới [Power Apps](https://make.powerapps.com) > **Dữ liệu** > **Những cái bàn**. Tìm bảng quan tâm của bạn và chọn nó. Đi đến **Cài đặt** > **Tùy chọn nâng cao** và xem xét **Theo dõi các thay đổi** cài đặt.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Kết nối với kho được quản lý Dataverse
 

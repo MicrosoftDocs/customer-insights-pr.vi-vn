@@ -1,19 +1,19 @@
 ---
 title: Tổng quan về các kịch bản dự đoán được hỗ trợ
 description: Các kịch bản và tùy chọn dự đoán được ứng dụng Dynamics 365 Customer Insights hỗ trợ.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228270"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487566"
 ---
 # <a name="predictions-overview"></a>Tổng quan về chức năng dự đoán
 
@@ -36,6 +36,11 @@ Sử dụng các mô hình xác định sẵn, thường được gọi là mô 
 - [Khả năng rời bỏ giao dịch](predict-transactional-churn.md): Dự đoán xem liệu khách hàng sẽ không còn mua sản phẩm hoặc dịch vụ của bạn nữa trong một khung thời gian nhất định hay không.
 
 ---
+
+> [!TIP]
+> Chúng tôi khuyên bạn nên thường xuyên làm mới các mẫu mới với dữ liệu cập nhật để đảm bảo chúng thông báo chính xác cho trường hợp sử dụng của doanh nghiệp bạn. Dữ liệu được làm mới đặc biệt khi hệ thống nhập các nguồn dữ liệu mới hoặc cập nhật. Tuy nhiên, các mô hình sẽ chỉ điểm lại trong trường hợp này và tiếp tục sử dụng dữ liệu đào tạo hiện có.
+> 
+> Bạn có thể cấu hình một **Cập nhật lịch trình** bằng cách đặt lịch trình đào tạo lại mô hình trong trải nghiệm cấu hình. Mô hình sẽ đào tạo lại và xếp hạng lại theo lịch trình này, bạn có thể thay đổi lịch biểu này bất kỳ lúc nào.
 
 
 ## <a name="azure-machine-learning-integration"></a>Phần tích hợp Azure Machine Learning

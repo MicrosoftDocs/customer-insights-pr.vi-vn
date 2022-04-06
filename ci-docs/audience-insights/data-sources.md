@@ -1,7 +1,7 @@
 ---
 title: Sử dụng nguồn dữ liệu để nhập dữ liệu
 description: Tìm hiểu cách nhập dữ liệu từ nhiều nguồn khác nhau.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354075"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464100"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -47,7 +47,18 @@ Nguồn dữ liệu được tạo sau khi liên kết Dataverse môi trường 
 
 Cổng dữ liệu từ một môi trường Power BI hoặc Power Apps hiện có sẽ hiển thị và bạn có thể sử dụng lại trong Customer Insights. Trang nguồn dữ liệu hiển thị các liên kết đi đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
 
+> [!IMPORTANT]
+> Đảm bảo rằng các cổng của bạn được cập nhật lên phiên bản mới nhất. Bạn có thể cài đặt bản cập nhật và định cấu hình lại cổng từ lời nhắc hiển thị trực tiếp trên màn hình cổng hoặc [tải xuống phiên bản mới nhất](https://powerapps.microsoft.com/downloads/). Nếu bạn không sử dụng phiên bản cổng mới nhất, quá trình làm mới luồng dữ liệu không thành công với các thông báo lỗi như **Từ khóa không được hỗ trợ: thuộc tính cấu hình. Tên thông số: từ khóa**.
+
 ## <a name="review-ingested-data"></a>Xem lại dữ liệu đã nhập
+Nếu môi trường của bạn chứa Power Platform luồng dữ liệu, **Nguồn dữ liệu** trang liệt kê ba phần: 
+- **Được chia sẻ** : Nguồn dữ liệu có thể được quản lý bởi tất cả các quản trị viên Thông tin chi tiết về khách hàng. Power BI luồng dữ liệu, tài khoản lưu trữ của riêng bạn và đính kèm vào Dataverse hồ dữ liệu được quản lý là những ví dụ về các nguồn dữ liệu được chia sẻ.
+- **Do tôi quản lý** :Power Platform luồng dữ liệu được tạo và chỉ bạn mới có thể quản lý. Các quản trị viên Thông tin chi tiết khác về khách hàng chỉ có thể xem các luồng dữ liệu này nhưng không thể chỉnh sửa, làm mới hoặc xóa chúng.
+- **Do người khác quản lý** :Power Platform luồng dữ liệu do quản trị viên khác tạo. Bạn chỉ có thể xem chúng. Nó liệt kê chủ sở hữu của luồng dữ liệu cần liên hệ để được hỗ trợ.
+> [!NOTE]
+> Tất cả các thực thể có thể được xem và sử dụng bởi những người dùng khác. Ngữ cảnh của người dùng chỉ áp dụng cho các nguồn dữ liệu chứ không áp dụng cho các thực thể là kết quả của các luồng dữ liệu này.
+
+Nếu không Power Platform luồng dữ liệu được sử dụng, bạn sẽ không thấy bất kỳ nhóm hoặc phần nào. Các **Nguồn dữ liệu** trang chỉ chứa danh sách tất cả các nguồn dữ liệu.
 
 Bạn sẽ thấy tên của mỗi nguồn dữ liệu đã nhập, trạng thái của nó và lần cuối cùng dữ liệu được làm mới cho nguồn đó. Bạn có thể sắp xếp danh sách nguồn dữ liệu theo mọi cột.
 

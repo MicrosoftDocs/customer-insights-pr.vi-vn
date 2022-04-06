@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354916"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523763"
 ---
 # <a name="customer-profiles"></a>Hồ sơ khách hàng
 
 Trang **Khách hàng** hiển thị chế độ xem tổng hợp về hồ sơ khách hàng hợp nhất của bạn. Hồ sơ khách hàng có sẵn sau khi bạn [đã tạo thực thể Khách hàng hợp nhất](data-unification.md). Trang cho phép bạn tìm kiếm khách hàng và xác định chỉ mục cho tìm kiếm đó.
 
-Khách hàng có thể là cá nhân hoặc tổ chức. Mỗi hồ sơ khách hàng được thể hiện bằng một ô. Sử dụng các điều khiển phân trang để nhận được nhiều bản ghi hơn. Thẻ hiển thị các trường từ thực thể *Khách hàng* như được định nghĩa trong **Tìm kiếm và lọc chỉ mục**. Chọn một ô để xem dữ liệu cho khách hàng đã chọn trong một trang dành riêng được gọi là [Trang chi tiết khách hàng](customer-profiles.md#customer-details-page).
+Khách hàng có thể là cá nhân hoặc tổ chức. Mỗi hồ sơ khách hàng được thể hiện bằng một ô. Sử dụng các điều khiển phân trang để nhận được nhiều bản ghi hơn. Thẻ hiển thị các trường từ thực thể *Khách hàng* như được định nghĩa trong **Tìm kiếm và lọc chỉ mục**. Thứ tự của các trường trong mỗi thẻ do hệ thống chọn.
+
+Chọn một ô để xem dữ liệu cho khách hàng đã chọn trong một trang dành riêng được gọi là [Trang chi tiết khách hàng](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Trang khách hàng hiển thị các ô kết quả](media/customers-page-result-tiles-B2C.png "Trang khách hàng hiển thị các ô kết quả")

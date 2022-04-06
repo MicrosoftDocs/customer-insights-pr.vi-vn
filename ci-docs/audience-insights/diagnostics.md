@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376442"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523695"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (Xem trước)
 
@@ -24,7 +24,7 @@ Dynamics 365 Customer Insights cung cấp tích hợp trực tiếp với Azure 
 
 Thông tin chi tiết về khách hàng sẽ gửi các nhật ký sự kiện sau:
 
-- **Sự kiện kiểm toán**
+- **Sự kiện kiểm tra**
   - **APIEvent** - cho phép theo dõi thay đổi được thực hiện thông qua Dynamics 365 Customer Insights Giao diện người dùng.
 - **Sự kiện hoạt động**
   - **WorkflowEvent** - Quy trình làm việc cho phép một người thiết lập [Nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md) và [làm giàu](enrichment-hub.md) và cuối cùng [xuất khẩu](export-destinations.md) dữ liệu vào các hệ thống khác. Tất cả các bước đó có thể được thực hiện riêng lẻ (ví dụ: kích hoạt một lần xuất duy nhất) hoặc được tổ chức (ví dụ: làm mới dữ liệu từ các nguồn dữ liệu sẽ kích hoạt quá trình hợp nhất sẽ kéo thêm các bước bổ sung và sau khi hoàn thành xuất dữ liệu vào một hệ thống khác). Để biết thêm chi tiết, hãy xem [Lược đồ WorkflowEvent](#workflow-event-schema).
@@ -230,7 +230,7 @@ Các sự kiện quy trình làm việc có các thuộc tính sau.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Có      | Có  | Luôn`WorkflowEvent`, đánh dấu sự kiện là sự kiện quy trình làm việc.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Có      | Có  | Định danh của dòng công việc chạy. Tất cả các sự kiện công việc và quy trình công việc trong quá trình thực thi quy trình công việc đều giống nhau `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Có      | Có  | Định danh của hoạt động, xem[ Các loại hoạt động].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Có      | Có  | Định danh của hoạt động, xem [Các loại hoạt động](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Có      | No   | Chỉ quy trình làm việc. Số tác vụ mà quy trình làm việc kích hoạt.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Có      | No   | Tùy chọn. Chỉ sự kiện quy trình làm việc. Các Azure Active Directory [objectId của người dùng](/azure/marketplace/find-tenant-object-id#find-user-object-id) ai đã kích hoạt quy trình làm việc, hãy xem thêm `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Có      | No   | `full` hoặc`incremental` Làm tươi.                                                                                                                                                                                                                            |

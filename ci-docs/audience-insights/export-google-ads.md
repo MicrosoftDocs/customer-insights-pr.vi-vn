@@ -1,42 +1,37 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Google Ads
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Google Ads.
-ms.date: 09/27/2021
+ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227036"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523831"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
 Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đối tượng Google Ads và sử dụng chúng để quảng cáo trên Google Tìm kiếm, Gmail, YouTube và Google Display Network. 
 
-> [!IMPORTANT]
-> Hiện tại, bạn chỉ có thể tạo một kết nối mới và xuất dữ liệu sang Google Ads nếu bạn đã có mã thông báo Nhà phát triển Google Ads được chấp thuận. Do các thay đổi về chính sách, chúng tôi sẽ sớm cập nhật quá trình xuất Google Ads và cung cấp tùy chọn xuất không yêu cầu mã thông báo của nhà phát triển để đảm bảo trải nghiệm của bạn liên tục và đơn giản hóa quá trình xuất sang Google Ads. Chúng tôi khuyên bạn không nên thiết lập thêm kết nối với Google Ads để tạo điều kiện chuyển sang tùy chọn xuất mới dễ dàng hơn.
 
 ## <a name="prerequisites-for-connection"></a>Điều kiện tiên quyết để kết nối
 
 -   Bạn có một [Tài khoản Google Ads](https://ads.google.com/) và thông tin đăng nhập quản trị viên tương ứng.
--   Bạn có một [Mã thông báo Nhà phát triển Google Ads được chấp thuận](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
 -   Bạn đáp ứng các yêu cầu của [Chính sách đối sánh khách hàng](https://support.google.com/adspolicy/answer/6299717).
 -   Bạn đáp ứng các yêu cầu về [kích thước danh sách tiếp thị lại](https://support.google.com/google-ads/answer/7558048).
--   Có đối tượng hiện có trong Google Ads và các ID tương ứng. Để biết thêm thông tin, hãy xem [Đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Bạn có [các phân khúc được định cấu hình](segments.md).
--   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email, tên và họ.
+-   Bạn có [các phân đoạn được định cấu hình](segments.md).
+-   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa các trường đại diện cho địa chỉ email, điện thoại, ID nhà quảng cáo trên thiết bị di động, ID người dùng bên thứ ba hoặc địa chỉ.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Google Ads.
 - Việc xuất sang Google Ads bị giới hạn ở các phân khúc.
-- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ khách hàng có thể mất tới 5 phút vì những giới hạn từ phía nhà cung cấp. 
+- Việc xuất các phân khúc với tổng số 1 triệu hồ sơ khách hàng có thể mất tới 30 phút vì những giới hạn từ phía nhà cung cấp. 
 - Quá trình so khớp trong Google Ads có thể mất đến 48 giờ.
 
 ## <a name="set-up-connection-to-google-ads"></a>Thiết lập kết nối với Google Ads
@@ -50,8 +45,6 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đố
 1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Nhập **[ID khách hàng Google Ads](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Nhập **[Mã thông báo nhà phát triển được Google Ads phê duyệt](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
 
 1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ**.
 
@@ -71,11 +64,11 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Google Ads. Nếu bạn không thấy tên phần này thì có nghĩa là không có kết nối nào thuộc loại này khả dụng cho bạn.
 
-1. Nhập **[ID đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** và chọn **Kết nối** để khởi tạo kết nối với Google Ads.
+1. Nếu bạn muốn tạo đối tượng mới, hãy để trống trường ID đối tượng của Google. Chúng tôi sẽ tự động tạo đối tượng mới trong tài khoản Google Ads của bạn và sử dụng tên của phân khúc đã xuất. Nếu bạn muốn cập nhật đối tượng Google Ads hiện có, hãy nhập [ID đối tượng Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
-1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng.
+1. Bên trong **Đối sánh dữ liệu**, chọn một hoặc nhiều trường dữ liệu để xuất và chọn trường đại diện cho các trường dữ liệu tương ứng trong Thông tin chi tiết về khách hàng.
 
-1. Chọn phân khúc mà bạn muốn xuất. Bạn có thể xuất tổng cộng tối đa 1 triệu hồ sơ khách hàng sang Google Ads.
+1. Chọn phân khúc mà bạn muốn xuất. 
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
