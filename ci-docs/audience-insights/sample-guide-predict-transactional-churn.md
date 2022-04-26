@@ -5,15 +5,15 @@ ms.date: 11/19/2020
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d3465b7eaa17a24e2926b8ea432b33e705931b88
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354627"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555385"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ giao dịch
 
@@ -148,7 +148,7 @@ Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh 
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán rời bỏ giao dịch
 
-Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem [Đăng ký churn dự đoán](predict-subscription-churn.md) bài báo. 
+Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem [Đăng ký churn dự đoán](predict-subscription-churn.md) điều. 
 
 1. Đi đến **Thông tin** > **Khám phá** và chọn để sử dụng **Mô hình khách hàng rời đi**.
 

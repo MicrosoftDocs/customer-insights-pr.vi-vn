@@ -1,22 +1,22 @@
 ---
 title: Tạo các thước đo từ các mẫu
 description: Xác định các biện pháp sử dụng mẫu cho các trường hợp sử dụng phổ biến.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359974"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529427"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Sử dụng mẫu để tạo giá trị đo
 
@@ -51,7 +51,9 @@ Các mẫu giá trị đo sẵn có:
 
 1. Xem lại dữ liệu bắt buộc rồi chọn **Bắt đầu** nếu bạn có sẵn tất cả dữ liệu.
 
-1. Trong ngăn **Chỉnh sửa tên**, hãy đặt tên cho giá trị đo của bạn và thực thể đầu ra. 
+1. Lựa chọn **Chỉnh sửa chi tiết** bên cạnh Tên số đo. Cung cấp tên cho biện pháp. Tùy chọn, thêm [thẻ](work-with-tags-columns.md#manage-tags) để đo lường.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Hộp thoại chỉnh sửa chi tiết.":::
 
 1. Chọn **Xong**.
 

@@ -1,26 +1,26 @@
 ---
 title: Tạo các thước đo mới với trình tạo thước đo
 description: Xây dựng các biện pháp từ đầu để phân tích các chỉ số chính về doanh nghiệp của bạn.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 5329aea240ba40ec8698b3ddeb67fb5f21c62bbd
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359973"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561559"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Sử dụng trình tạo thước đo để tạo các thước đo từ đầu
 
-Bài viết này giải thích cách tạo [đo lường](measures.md) từ đầu. Trình tạo số đo cho phép bạn xác định các phép tính bằng cách sử dụng toán tử, hàm tổng hợp và bộ lọc. Bạn có thể xây dựng một thước đo với các thuộc tính từ các thực thể có liên quan đến hợp nhất *Khách hàng* thực thể. 
+Bài viết này giải thích cách tạo [đo lường](measures.md) từ đầu. Trình tạo số đo cho phép bạn xác định các phép tính bằng cách sử dụng toán tử, hàm tổng hợp và bộ lọc. Bạn có thể xây dựng một thước đo với các thuộc tính từ các thực thể có liên quan đến hợp nhất *Khách hàng* thực thể.
 
 Tạo các thước đo trong môi trường B-to-C và B-to-B hoạt động theo cùng một cách. Tuy nhiên, nếu bạn là môi trường B-to-B [sử dụng tài khoản có phân cấp](relationships.md#set-up-account-hierarchies), bạn có thể chọn tổng hợp số đo trên các tài khoản phụ có liên quan.
 
@@ -40,11 +40,11 @@ Bạn có thể tạo các thước đo ở cấp độ khách hàng cá nhân (
 
 1. Chọn **Mới** rồi chọn **Tạo giá trị đo riêng**.
 
-   :::image type="content" source="media/measure-b2c.png" alt-text="Màn hình cấu hình trống cho phép đo B-to-C.":::
+   :::image type="content" source="media/measure-b2c.png" alt-text="Màn hình cấu hình trống cho phép đo B-to-C." lightbox="media/measure-b2c.png":::
 
-1. Chọn **Chỉnh sửa tên** và cung cấp một **Tên** cho giá trị đo. 
+1. Để theo dõi hiệu suất cấp doanh nghiệp, hãy chuyển đổi **Loại đo lường** đến **Cấp độ kinh doanh**. **Cấp độ khách hàng** được chọn theo mặc định. **Cấp độ khách hàng** tự động thêm *ID khách hàng* thuộc tính cho Thứ nguyên trong khi **Cấp độ kinh doanh** tự động loại bỏ nó.
 
-1. Trong vùng cấu hình, hãy chọn chức năng tổng hợp từ **Chọn chức năng** trình đơn thả xuống. Các hàm tổng hợp bao gồm: 
+1. Trong vùng cấu hình, hãy chọn chức năng tổng hợp từ **Chọn chức năng** trình đơn thả xuống. Các hàm tổng hợp bao gồm:
    - **Sum**
    - **Trung bình**
    - **Đếm**
@@ -57,11 +57,11 @@ Bạn có thể tạo các thước đo ở cấp độ khách hàng cá nhân (
    - **ArgMin** : tìm bản ghi dữ liệu cho giá trị nhỏ nhất từ một hàm mục tiêu
 
 1. Chọn **Thêm thuộc tính** để chọn dữ liệu bạn cần để tạo giá trị đo này.
-   
-   1. Chọn thẻ **Thuộc tính**. 
-   1. Thực thể dữ liệu: Chọn thực thể bao gồm thuộc tính bạn muốn đo. 
+
+   1. Chọn thẻ **Thuộc tính**.
+   1. Thực thể dữ liệu: Chọn thực thể bao gồm thuộc tính bạn muốn đo.
    1. Thuộc tính dữ liệu: Chọn thuộc tính bạn muốn sử dụng trong hàm tổng hợp để tính toán giá trị đo. Mỗi lần, bạn chỉ có thể chọn một thuộc tính.
-   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**, hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo. 
+   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**, hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo.
    1. Chọn **Thêm** để thêm thuộc tính đã chọn vào giá trị đo.
 
 1. Để xây dựng các giá trị đo phức tạp hơn, bạn có thể thêm nhiều thuộc tính hơn hoặc sử dụng các toán tử toán học trên hàm đo lường của mình.
@@ -73,16 +73,18 @@ Bạn có thể tạo các thước đo ở cấp độ khách hàng cá nhân (
    1. Chọn **Áp dụng** để thêm các bộ lọc vào giá trị đo.
 
 1. Lựa chọn **Kích thước** để chọn thêm các trường được thêm dưới dạng cột vào thực thể đầu ra đo lường.
- 
-   1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính. Theo mặc định, thứ nguyên *ID khách hàng* được chọn để tạo *giá trị đo cấp khách hàng*. Bạn có thể xóa thứ nguyên mặc định nếu muốn tạo *giá trị đo cấp doanh nghiệp*.
+
+   1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính.
+   > [!TIP]
+   > Nếu bạn đã chọn **Cấp độ khách hàng** như là **Loại đo lường** các *ID khách hàng* thuộc tính đã được thêm vào. Nếu bạn xóa thuộc tính, **Loại đo lường** chuyển sang **Cấp độ kinh doanh**.
    1. Chọn **Xong** để thêm các thứ nguyên vào giá trị đo.
 
 1. Nếu có các giá trị trong dữ liệu mà bạn cần thay thế bằng số nguyên, hãy chọn **Quy tắc**. Định cấu hình quy tắc và đảm bảo rằng bạn chỉ chọn các số nguyên làm giá trị thay thế. Ví dụ: thay thế *null* bằng *0*.
 
-1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn. 
-   
+1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn.
+
    1. Chọn **Đường dẫn mối quan hệ** và chọn đường dẫn thực thể sẽ được dùng để xác định giá trị đo. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
-   1. Chọn **Xong** để áp dụng lựa chọn của bạn. 
+   1. Chọn **Xong** để áp dụng lựa chọn của bạn.
 
 1. Để thêm các phép tính khác cho giá trị đo đó, hãy chọn **Tính toán mới**. Bạn chỉ có thể sử dụng các thực thể trên cùng một đường dẫn thực thể cho các phép tính mới. Các phép tính khác sẽ hiển thị dưới dạng cột mới trong thực thể đầu ra giá trị đo.
 
@@ -90,14 +92,17 @@ Bạn có thể tạo các thước đo ở cấp độ khách hàng cá nhân (
 
 1. Trong ngăn **Xem trước**, bạn sẽ thấy giản đồ dữ liệu của thực thể đầu ra giá trị đo, bao gồm các bộ lọc và thứ nguyên. Bản xem trước phản ứng tự động với các thay đổi trong cấu hình.
 
+1. Lựa chọn **Chỉnh sửa chi tiết** bên cạnh Biện pháp không có tiêu đề. Cung cấp tên cho biện pháp. Tùy chọn, thêm [thẻ](work-with-tags-columns.md#manage-tags) để đo lường.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Hộp thoại chỉnh sửa chi tiết.":::
+
 1. Chọn **Chạy** để tính toán kết quả cho giá trị đo đã định cấu hình. Chọn **Lưu và đóng** nếu bạn muốn giữ cấu hình hiện tại và chạy giá trị đo sau.
 
 1. Đi đến **Giá trị đo** để xem số đo mới được tạo trong danh sách.
 
 # <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
-
-Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (thước đo khách hàng) hoặc ở cấp độ tất cả các tài khoản (thước đo kinh doanh). 
+Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (thước đo khách hàng) hoặc ở cấp độ tất cả các tài khoản (thước đo kinh doanh).
 
 - Đo lường khách hàng: Tạo ra sản lượng như thực thể của chính nó. Các thước đo khách hàng không hiển thị trong thẻ hồ sơ khách hàng.
 
@@ -109,9 +114,7 @@ Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (
 
    :::image type="content" source="media/measure-b2b.png" alt-text="Màn hình cấu hình trống cho phép đo từ B đến B.":::
 
-1. Chọn **Chỉnh sửa tên** và cung cấp một **Tên** cho giá trị đo. 
-
-1. Trong vùng cấu hình, hãy chọn chức năng tổng hợp từ **Chọn chức năng** trình đơn thả xuống. Các hàm tổng hợp bao gồm: 
+1. Trong vùng cấu hình, hãy chọn chức năng tổng hợp từ **Chọn chức năng** trình đơn thả xuống. Các hàm tổng hợp bao gồm:
    - **Sum**
    - **Trung bình**
    - **Đếm**
@@ -122,11 +125,11 @@ Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (
    - **Cuối cùng**: lấy giá trị cuối cùng đã được thêm vào bản ghi dữ liệu
 
 1. Chọn **Thêm thuộc tính** để chọn dữ liệu bạn cần để tạo giá trị đo này.
-   
-   1. Chọn thẻ **Thuộc tính**. 
-   1. Thực thể dữ liệu: Chọn thực thể bao gồm thuộc tính bạn muốn đo. 
+
+   1. Chọn thẻ **Thuộc tính**.
+   1. Thực thể dữ liệu: Chọn thực thể bao gồm thuộc tính bạn muốn đo.
    1. Thuộc tính dữ liệu: Chọn thuộc tính bạn muốn sử dụng trong hàm tổng hợp để tính toán giá trị đo. Mỗi lần, bạn chỉ có thể chọn một thuộc tính.
-   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**, hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo. 
+   1. Bạn cũng có thể chọn một thuộc tính dữ liệu từ một giá trị đo hiện có bằng cách chọn thẻ **Giá trị đo**, hoặc bạn có thể tìm kiếm một thực thể hoặc tên giá trị đo.
    1. Chọn **Thêm** để thêm thuộc tính đã chọn vào giá trị đo.
 
 1. Để xây dựng các giá trị đo phức tạp hơn, bạn có thể thêm nhiều thuộc tính hơn hoặc sử dụng các toán tử toán học trên hàm đo lường của mình.
@@ -138,8 +141,10 @@ Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (
    1. Chọn **Áp dụng** để thêm các bộ lọc vào giá trị đo.
 
 1. Lựa chọn **Kích thước** để chọn thêm các trường được thêm dưới dạng cột vào thực thể đầu ra đo lường.
- 
-   1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính. Theo mặc định, thứ nguyên *ID khách hàng* được chọn để tạo *giá trị đo cấp khách hàng*. Bạn có thể xóa thứ nguyên mặc định nếu muốn tạo *giá trị đo cấp doanh nghiệp*.
+
+   1. Chọn **Chỉnh sửa thứ nguyên** để thêm các thuộc tính dữ liệu mà bạn muốn nhóm các giá trị đo lường. Ví dụ: thành phố hoặc giới tính.
+      > [!TIP]
+      > Nếu bạn đã chọn **Cấp độ khách hàng** như là **Loại đo lường** các *ID khách hàng* thuộc tính đã được thêm vào. Nếu bạn xóa thuộc tính, **Loại đo lường** chuyển sang **Cấp độ kinh doanh**.
    1. Chọn **Xong** để thêm các thứ nguyên vào giá trị đo.
 
 1. Nếu có các giá trị trong dữ liệu mà bạn cần thay thế bằng số nguyên, hãy chọn **Quy tắc**. Định cấu hình quy tắc và đảm bảo rằng bạn chỉ chọn các số nguyên làm giá trị thay thế. Ví dụ: thay thế *null* bằng *0*.
@@ -148,17 +153,19 @@ Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (
    - Nếu công tắc được đặt thành **Tắt**, giá trị đo được tính cho mọi tài khoản. Mọi tài khoản đều có kết quả riêng.
    - Nếu công tắc được đặt thành **Bật**, hãy chọn **Chỉnh sửa** để chọn hệ thống cấp bậc tài khoản theo cấp bậc đã nhập. Giá trị đo sẽ chỉ mang lại một kết quả vì nó được tổng hợp với các tài khoản phụ.
 
-1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn. 
-   
+1. Nếu có nhiều đường dẫn giữa thực thể dữ liệu bạn đã ánh xạ và thực thể *Khách hàng*,bạn phải chọn một trong các [đường dẫn mối quan hệ thực thể](relationships.md) đã xác định. Kết quả giá trị đo có thể khác nhau tùy thuộc vào đường dẫn đã chọn.
+
    1. Chọn **Đường dẫn mối quan hệ** và chọn đường dẫn thực thể sẽ được dùng để xác định giá trị đo. Nếu chỉ có một đường dẫn đến thực thể *Khách hàng*, điều khiển này sẽ không hiển thị.
-   1. Chọn **Xong** để áp dụng lựa chọn của bạn. 
+   1. Chọn **Xong** để áp dụng lựa chọn của bạn.
 
 1. Chọn **...** trên phép tính để **Nhân bản**, **Đổi tên** hoặc **Xóa** phép tính khỏi giá trị đo.
 
 1. Trong ngăn **Xem trước**, bạn sẽ thấy giản đồ dữ liệu của thực thể đầu ra giá trị đo, bao gồm các bộ lọc và thứ nguyên. Bản xem trước phản ứng tự động với các thay đổi trong cấu hình.
 
+1. Lựa chọn **Chỉnh sửa chi tiết** bên cạnh Biện pháp không có tiêu đề. Cung cấp tên cho biện pháp. Tùy chọn, thêm [thẻ](work-with-tags-columns.md#manage-tags) để đo lường.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Hộp thoại chỉnh sửa chi tiết.":::
+
 1. Chọn **Chạy** để tính toán kết quả cho giá trị đo đã định cấu hình. Chọn **Lưu và đóng** nếu bạn muốn giữ cấu hình hiện tại và chạy giá trị đo sau.
 
 1. Đi đến **Giá trị đo** để xem số đo mới được tạo trong danh sách.
-
----

@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508592"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529565"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -47,29 +47,35 @@ Có nhiều cách để tạo một phân khúc mới:
 
 ## <a name="manage-existing-segments"></a>Quản lý các phân khúc hiện có
 
-Chuyển tới trang **Phân khúc** để xem và quản lý tất cả các phân khúc đã lưu của bạn.
+Đi đến **Phân đoạn** để xem tất cả các phân đoạn đã lưu của bạn và quản lý chúng.
 
 Mỗi phân khúc được đại diện bởi một hàng bao gồm thông tin bổ sung về phân khúc.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Phân khúc đã chọn với danh sách tùy chọn thả xuống và các tùy chọn có sẵn.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Phân khúc đã chọn với danh sách tùy chọn thả xuống và các tùy chọn có sẵn." lightbox="media/segments-selected-segment.png":::
 
-Hành động sau đây khả dụng khi bạn chọn một phân khúc:
+Các hành động sau đây khả dụng khi bạn chọn một phân đoạn:
 
 - **Xem** chi tiết phân khúc, bao gồm xu hướng số lượng thành viên của một bản xem trước thành phần phân khúc.
+- **Tải xuống** danh sách thành viên dưới dạng tệp .CSV.
 - **Chỉnh sửa** phân khúc để thay đổi các thuộc tính của phân khúc đó.
 - **Tạo bản sao** của một phân khúc. Bạn có thể chọn chỉnh sửa các thuộc tính của nó ngay lập tức hoặc chỉ cần lưu bản sao.
 - **Làm mới** phân khúc để bao gồm dữ liệu mới nhất.
-- **Kích hoạt** hoặc **Hủy kích hoạt** phân khúc. Các phân khúc có thể có hai trạng thái: hiện hoạt hoặc không hoạt động. Các trạng thái này rất hữu ích khi bạn chỉnh sửa phân khúc. Đối với các phân khúc không hoạt động, định nghĩa phân khúc tồn tại nhưng phân khúc chưa chứa bất kỳ khách hàng nào. Khi bạn kích hoạt một phân khúc, phân khúc sẽ thay đổi trạng thái từ "không hoạt động" thành "hiện hoạt" và bắt đầu tìm kiếm khách hàng phù hợp với định nghĩa phân khúc. Nếu hoạt động [làm mới theo lịch trình](system.md#schedule-tab) được định cấu hình thì các phân khúc không hoạt động sẽ có **Trạng thái** là **Đã bỏ qua**, biểu thị việc làm mới chưa được thực hiện. Khi phân khúc không hoạt động được kích hoạt, mục đó sẽ được làm mới và được đưa vào các lần làm mới theo lịch trình.
+- **Kích hoạt** hoặc **Hủy kích hoạt** phân khúc. Đối với các phân khúc không hoạt động, định nghĩa phân khúc tồn tại nhưng phân khúc chưa chứa bất kỳ khách hàng nào. Một phân khúc đang hoạt động sẽ tìm kiếm những khách hàng phù hợp với định nghĩa phân khúc. Nếu hoạt động [làm mới theo lịch trình](system.md#schedule-tab) được định cấu hình thì các phân khúc không hoạt động sẽ có **Trạng thái** là **Đã bỏ qua**, biểu thị việc làm mới chưa được thực hiện. Khi phân khúc không hoạt động được kích hoạt, mục đó sẽ được làm mới và được đưa vào các lần làm mới theo lịch trình.
   Ngoài ra, bạn cũng có thể dùng chức năng **Lên lịch sau** trong menu thả xuống **Kích hoạt/Hủy kích hoạt** để xác định ngày giờ kích hoạt và hủy kích hoạt trong tương lai của một phân khúc cụ thể.
+- **[Tìm khách hàng tương tự](find-similar-customer-segments.md)** khỏi phân khúc.
 - **Đổi tên** phân khúc.
+- **Nhãn** đến [quản lý thẻ](work-with-tags-columns.md#manage-tags) cho phân khúc.
 - **Tải xuống** danh sách thành viên dưới dạng tệp .CSV.
 - **Quản lý nội dung xuất** để xem và quản lý phân khúc liên quan đến nội dung xuất. [Tìm hiểu thêm về nội dung xuất.](export-destinations.md)
 - **Xóa** phân khúc.
+- **Cột** đến [tùy chỉnh các cột](work-with-tags-columns.md#customize-columns) màn hình đó.
+- **Lọc** đến [lọc trên các thẻ](work-with-tags-columns.md#filter-on-tags).
+- **Tim kiêm tên** để tìm kiếm theo tên phân đoạn.
 
 ## <a name="refresh-segments"></a>Làm mới phân khúc
 
 Bạn có thể làm mới tất cả phân phúc cùng lúc bằng cách chọn **Làm mới tất cả** trên trang **Phân khúc** hoặc bạn có thể làm mới một hoặc nhiều phân khúc khi chọn và chọn **Làm mới** từ các tùy chọn. Hoặc bạn có thể định cấu hình làm mới lặp lại trên **Quản trị viên** > **Hệ thống** > **Lịch trình**. Khi cấu hình làm mới định kỳ, các quy tắc sau sẽ áp dụng:
-- Tất cả các phân đoạn với loại **Năng động** hoặc **Sự bành trướng** sẽ được tự động làm mới theo nhịp đã đặt. Khi quá trình làm mới hoàn tất, **Trạng thái** cho biết nếu có bất kỳ vấn đề nào khi làm mới phân đoạn. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần làm mới thành công gần đây nhất. Nếu xảy ra lỗi, hãy chọn lỗi để xem chi tiết về những gì đã xảy ra.
+- Tất cả các phân đoạn với loại **Năng động** hoặc **Sự bành trướng** sẽ được tự động làm mới theo nhịp đã đặt. Khi quá trình làm mới hoàn tất, **Tình trạng** cho biết nếu có bất kỳ vấn đề nào khi làm mới phân đoạn. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần làm mới thành công gần đây nhất. Nếu xảy ra lỗi, hãy chọn lỗi để xem chi tiết về những gì đã xảy ra.
 - Phân đoạn có loại **Tĩnh** *sẽ không* được làm mới tự động. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần cuối cùng các phân đoạn tĩnh được chạy hoặc làm mới theo cách thủ công.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]

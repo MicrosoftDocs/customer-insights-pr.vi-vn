@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225589"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552082"
 ---
 # <a name="connector-for-power-bi-preview"></a>Trình kết nối cho Power BI (xem trước)
 
@@ -72,6 +72,6 @@ Sau khi loại bỏ các mối quan hệ trùng lặp, hãy thử định cấu 
 
 Khi tải thực thể chứa các trường có định dạng ngày tháng như MM/DD/YYYY, bạn có thể gặp lỗi do định dạng ngôn ngữ không khớp. Sự không phù hợp này xảy ra khi tệp Power BI Desktop được đặt thành ngôn ngữ không phải tiếng Anh (Hoa Kỳ), vì trường ngày trong thông tin chi tiết về đối tượng được lưu ở định dạng Hoa Kỳ.
 
-Tệp Power BI Desktop có một cài đặt ngôn ngữ duy nhất, được áp dụng khi truy xuất dữ liệu. Trường lấy ngày này được diễn giải chính xác, đặt ngôn ngữ của tệp .BPI thành tiếng Anh (Hoa Kỳ). [Tìm hiểu cách thay đổi ngôn ngữ của một tệp Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Tệp Power BI Desktop có một cài đặt ngôn ngữ duy nhất, được áp dụng khi truy xuất dữ liệu. Trường lấy ngày này được diễn giải chính xác, đặt ngôn ngữ của tệp .BPI thành tiếng Anh (Hoa Kỳ). [Tìm hiểu cách thay đổi ngôn ngữ của một tệp Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

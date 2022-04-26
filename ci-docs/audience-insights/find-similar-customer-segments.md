@@ -1,23 +1,23 @@
 ---
 title: Tìm khách hàng tương tự bằng AI (có video)
 description: Tìm phân khúc khách hàng tương tự nhờ trí tuệ nhân tạo.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355271"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561596"
 ---
 # <a name="similar-customers-preview"></a>Khách hàng tương tự (xem trước)
 
@@ -36,6 +36,8 @@ Tính năng này cho phép bạn tìm thấy những khách hàng tương tự t
 
 1. Xem lại tên được gợi ý cho phân khúc mới của bạn và đổi tên nếu cần.
 
+1. Tùy chọn, thêm [thẻ](work-with-tags-columns.md#manage-tags) sang phân khúc mới.
+
 1. Xem lại các trường xác định phân khúc mới của bạn. Các trường này xác định cơ sở mà hệ thống sẽ cố gắng tìm khách hàng tương tự với phân khúc nguồn của bạn. Hệ thống sẽ chọn các trường được đề xuất theo mặc định.
   Các trường có thể làm giảm đáng kể hiệu suất mô hình sẽ tự động bị loại trừ:
   
@@ -44,9 +46,9 @@ Tính năng này cho phép bạn tìm thấy những khách hàng tương tự t
 
 1. Chọn xem bạn muốn thêm **Tất cả khách hàng** hay chỉ khách hàng trong **Phân khúc cụ thể hiện có** vào phân khúc mới của mình.
 
-1. Loại trừ khách hàng trong phân khúc nguồn của bạn bằng cách chọn hộp kiểm **Loại trừ tất cả mọi người trong phân khúc nguồn**.
-
 1. Theo mặc định, hệ thống gợi ý chỉ nên bao gồm 20% kích thước đối tượng mục tiêu trong đầu ra của bạn. Chỉnh sửa ngưỡng này nếu cần. Tăng ngưỡng sẽ làm giảm độ chính xác.
+
+1. Bao gồm khách hàng trong phân khúc nguồn của bạn bằng cách chọn **Bao gồm các thành viên từ phân khúc nguồn ngoài những khách hàng có các thuộc tính tương tự** hộp kiểm.
 
 1. Lựa chọn **Chạy** ở dưới cùng của trang để bắt đầu nhiệm vụ phân loại nhị phân (một phương thức máy học) để phân tích tập dữ liệu.
 
@@ -67,7 +69,7 @@ Bạn có thể [làm việc với đầu ra của phân khúc tương tự](seg
 
 Để làm mới phân khúc tương tự, hãy chọn phân khúc đó trên trang **Phân khúc** rồi chọn **Làm mới** trên thanh hành động.
 
-Thao tác chỉnh sửa phân khúc tương tự sẽ xử lý lại dữ liệu của bạn. Phân khúc đã tạo trước đó được cập nhật dữ liệu làm mới.    
+Thao tác chỉnh sửa phân khúc tương tự sẽ xử lý lại dữ liệu của bạn. Phân khúc đã tạo trước đó được cập nhật dữ liệu làm mới.
 Để chỉnh sửa phân khúc tương tự, hãy chọn phân khúc đó trên trang **Phân khúc** rồi chọn **Chỉnh sửa** trên thanh hành động. Áp dụng thay đổi của bạn và chọn **Chạy** để bắt đầu xử lý.
 
 ## <a name="delete-a-similar-segment"></a>Xóa phân khúc tương tự
@@ -84,6 +86,5 @@ Mô hình học trên máy phân loại nhị phân gán một điểm số cho 
 - Điểm tương đồng trong khoảng 0,85 – 1 là các khách hàng được hệ thống phân loại là *rất giống*
 
 Khách hàng có điểm tương tự dưới 0,4 không được bao gồm trong đầu ra mô hình. Hệ thống nhận định họ không đủ tương tự với phân khúc nguồn.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

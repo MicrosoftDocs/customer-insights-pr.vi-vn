@@ -1,19 +1,19 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Azure Synapse Analytics
 description: Tìm hiểu cách định cấu hình kết nối tới Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231338"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560413"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (Xem trước)
 
@@ -28,21 +28,21 @@ Cần đáp ứng các điều kiện tiên quyết sau để định cấu hìn
 
 ## <a name="prerequisites-in-customer-insights"></a>Các điều kiện tiên quyết trong Customer Insights
 
-* Bạn có vai trò **Quản trị viên** trong thông tin chuyên sâu về đối tượng. Tìm hiểu thêm về [thiết lập quyền của người dùng trong phần thông tin chuyên sâu về đối tượng](permissions.md#assign-roles-and-permissions)
+* Của bạn Azure Active Directory (AD) tài khoản người dùng có một **Người quản lý** vai trò trong Thông tin chi tiết về khách hàng. Tìm hiểu thêm về [thiết lập quyền của người dùng trong phần thông tin chuyên sâu về đối tượng](permissions.md#assign-roles-and-permissions)
 
 Trong Azure: 
 
 - Đăng ký Azure hiện hoạt.
 
-- Nếu bạn sử dụng một tài khoản Azure Data Lake Storage Thế hệ 2 mới, *tên dịch vụ chính cho thông tin chuyên sâu về đối tượng* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob**. Tìm hiểu thêm về [cách kết nối với tài khoản Azure Data Lake Storage Thế hệ 2 với tên dịch vụ chính Azure để có thông tin chuyên sâu về đối tượng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
+- Nếu sử dụng một cái mới Azure Data Lake Storage Tài khoản Gen2, *dịch vụ chính cho Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền. Tìm hiểu thêm về [cách kết nối với tài khoản Azure Data Lake Storage Thế hệ 2 với tên dịch vụ chính Azure để có thông tin chuyên sâu về đối tượng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
 
-- Trên nhóm nguồn lực có đặt không gian làm việc Azure Synapse, *tên dịch vụ chính* và *người dùng thông tin chuyên sâu về đối tượng* cần được gán quyền **Người đọc**. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
+- Trên nhóm tài nguyên, nơi Azure Synapse không gian làm việc được đặt, *dịch vụ chính* và *Azure AD người dùng có quyền quản trị trong Thông tin chi tiết về khách hàng* ít nhất cần được chỉ định **Người đọc** quyền. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- *Người dùng* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob** trên tài khoản Azure Data Lake Storage Thế hệ 2 nơi đặt dữ liệu và liên kết với không gian làm việc Azure Synapse. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Các *Azure AD người dùng có quyền quản trị trong Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền trên Azure Data Lake Storage Tài khoản Gen2 nơi dữ liệu được đặt và liên kết với Azure Synapse không gian làm việc. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Danh tính có quản lý trong không gian làm việc Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob** trên tài khoản Azure Data Lake Storage Thế hệ 2, nơi đặt và liên kết dữ liệu với không gian làm việc Azure Synapse. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Trên không gian làm việc Azure Synapse, *tên dịch vụ chính cho thông tin chuyên sâu về đối tượng* cần được gán vai trò **Quản trị viên Synapse**. Để biết thêm thông tin, hãy xem [Cách thiết lập trạng thái kiểm soát truy cập cho không gian làm việc Synapse của bạn](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Trên Azure Synapse không gian làm việc, *dịch vụ chính cho Thông tin chi tiết về khách hàng* nhu cầu **Quản trị viên Synapse** vai trò được giao. Để biết thêm thông tin, hãy xem [Cách thiết lập trạng thái kiểm soát truy cập cho không gian làm việc Synapse của bạn](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Thiết lập kết nối và xuất sang Azure Synapse
 
@@ -84,7 +84,7 @@ Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ng
 
 Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand).
 
-Để truy vấn dữ liệu đã được xuất sang Synapse Analytics, bạn cần **Bộ đọc dữ liệu khối lưu trữ** quyền truy cập vào bộ nhớ đích trên không gian làm việc của các tệp xuất. 
+Để truy vấn dữ liệu đã được xuất sang Synapse Analytics, bạn cần **Bộ đọc dữ liệu khối lưu trữ** truy cập vào bộ nhớ đích trên không gian làm việc của các tệp xuất. 
 
 ### <a name="update-an-export"></a>Cập nhật việc xuất dữ liệu
 
