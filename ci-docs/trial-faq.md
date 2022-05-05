@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229521"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641834"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Câu hỏi thường gặp về bản dùng thử Dynamics 365 Customer Insights
 
@@ -62,13 +62,13 @@ Bạn có thể kéo dài thời gian dùng thử ngay trong ứng dụng. Bạn
 
 Nói chung, chúng tôi khuyên bạn nên bắt đầu làm mới với dữ liệu của chính mình khi nâng cấp lên phiên bản trả phí của Customer Insights. 
 
-Theo tùy chọn, nếu bạn chỉ sử dụng thông tin chi tiết về đối tượng, bạn có thể sao chép dữ liệu của mình từ môi trường dùng thử nếu bạn mua Customer Insights. Bạn phải là quản trị viên của bản dùng thử Customer Insights và là quản trị viên toàn cầu của Microsoft 365 người thuê hoặc quản trị viên Dynamics 365 trong tổ chức của bạn để di chuyển cài đặt từ môi trường dùng thử sang môi trường trả phí. 
+Theo tùy chọn, nếu bạn chỉ sử dụng Thông tin chi tiết về khách hàng, bạn có thể sao chép dữ liệu của mình từ môi trường dùng thử nếu bạn mua Thông tin chi tiết về khách hàng. Bạn phải là quản trị viên của bản dùng thử Customer Insights và là quản trị viên toàn cầu của Microsoft 365 người thuê hoặc quản trị viên Dynamics 365 trong tổ chức của bạn để di chuyển cài đặt từ môi trường dùng thử sang môi trường trả phí. 
 
-Sau khi đăng nhập vào phiên bản trả phí của Customer Insights lần đầu tiên, bạn sẽ được yêu cầu tạo một môi trường mới. Trong quá trình này, bạn có thể chọn sao chép cấu hình từ môi trường hiện có và di chuyển hầu hết các cài đặt. Nếu bạn có các quyền được đề cập ở trên, môi trường dùng thử sẽ hiển thị trong danh sách này. Để biết thêm thông tin, hãy xem [Sao chép cấu hình môi trường](audience-insights/manage-environments.md#copy-the-environment-configuration).
+Sau khi đăng nhập vào phiên bản trả phí của Customer Insights lần đầu tiên, bạn sẽ được yêu cầu tạo một môi trường mới. Trong quá trình này, bạn có thể chọn sao chép cấu hình từ môi trường hiện có và di chuyển hầu hết các cài đặt. Nếu bạn có các quyền được đề cập ở trên, môi trường dùng thử sẽ hiển thị trong danh sách này. Để biết thêm thông tin, hãy xem [Sao chép cấu hình môi trường](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Bản dùng thử có các giới hạn và hạn mức như thế nào?
 
-- Bạn không thể sử dụng tài khoản Azure Data Lake Storage của riêng mình để lưu trữ dữ liệu đầu ra trong phiên bản dùng thử của thông tin chi tiết về đối tượng. Tuy nhiên, bạn có thể nhập dữ liệu từ tài khoản Data Lake Storage.
+- Bạn không thể sử dụng tài khoản lưu trữ Azure Data Lake của riêng mình để lưu trữ dữ liệu đầu ra trong phiên bản dùng thử của Customer Insights. Tuy nhiên, bạn có thể nhập dữ liệu từ tài khoản Data Lake Storage.
 - Bạn có thể lưu trữ tối đa 3 GB dữ liệu trong môi trường Dataverse được cấp phép tự động khi bạn bắt đầu dùng thử Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Câu hỏi dành riêng cho Customer Insights

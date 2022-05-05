@@ -3,17 +3,17 @@ title: Đăng ký bản dùng thử miễn phí - Dynamics 365 Customer Insights
 description: Tìm hiểu cách đăng ký nhanh và bắt đầu dùng thử Customer Insights miễn phí. Khám phá ứng dụng và tìm các tài nguyên học tập bổ sung.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 04/12/2022
 ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350249"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641742"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Đăng ký bản dùng thử miễn phí Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Customer Insights cung cấp bản dùng thử miễn phí 30 ngày. Sau khi đ�
 
 **Cách đăng ký bản dùng thử**:
 
-1. Chuyển đến [trang tổng quan về bản dùng thử](https://dynamics.microsoft.com/get-started/?appname=customerinsights) rồi chọn **Đăng ký ngay**.
+1. Đi đến [trang tổng quan về thử nghiệm](https://dynamics.microsoft.com/ai/customer-insights/) và chọn **Dùng thử Customer Insights miễn phí**.
 1. Làm theo hướng dẫn trên màn hình để nhập [email được liên kết với tài khoản Microsoft của bạn](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) và thông tin liên hệ của bạn.
 1. Lựa chọn trọng tâm cho đến khi bạn chuyển đến trang bắt đầu cho khả năng đã chọn.
 
@@ -31,12 +31,12 @@ Sẽ mất vài phút để tải bản dùng thử, sau đó bạn có thể b�
 
 Môi trường dùng thử của bạn bao gồm nhiều tính năng tương tự như phiên bản trả phí. Các liên kết bên dưới sẽ hướng dẫn bạn về một số tính năng chính.
 
-- [Hướng dẫn bắt đầu nhanh cho thông tin chuyên sâu về đối tượng.](audience-insights/get-started.md)
-- [Thêm người dùng và gán quyền.](audience-insights/permissions.md)
-- [Nhập các nguồn dữ liệu của bạn](audience-insights/data-sources.md) và chạy chúng thông qua [quá trình hợp nhất dữ liệu](audience-insights/data-unification.md) để có được [hồ sơ khách hàng hợp nhất](audience-insights/customer-profiles.md).
-- [Tăng cường hồ sơ khách hàng hợp nhất](audience-insights/enrichment-hub.md) hoặc [chạy các mô hình dự đoán](audience-insights/predictions-overview.md).
-- Tạo [phân khúc](audience-insights/segments.md) để nhóm khách hàng và [giá trị đo](audience-insights/measures.md) để xem lại KPI.
-- Thiết lập [kết nối](audience-insights/connections.md) và [xuất](audience-insights/export-destinations.md) để xử lý tập hợp con của dữ liệu trong các ứng dụng khác.
+- [Bắt đầu với Thông tin chi tiết về khách hàng.](get-started.md)
+- [Thêm người dùng và gán quyền.](permissions.md)
+- [Nhập các nguồn dữ liệu của bạn](data-sources.md) và chạy chúng thông qua [quá trình hợp nhất dữ liệu](data-unification.md) để có được [hồ sơ khách hàng hợp nhất](customer-profiles.md).
+- [Tăng cường hồ sơ khách hàng hợp nhất](enrichment-hub.md) hoặc [chạy các mô hình dự đoán](predictions-overview.md).
+- Tạo [phân khúc](segments.md) để nhóm khách hàng và [giá trị đo](measures.md) để xem lại KPI.
+- Thiết lập [kết nối](connections.md) và [xuất](export-destinations.md) để xử lý tập hợp con của dữ liệu trong các ứng dụng khác.
 
 ## <a name="additional-resources"></a>Tài nguyên bổ sung
 
