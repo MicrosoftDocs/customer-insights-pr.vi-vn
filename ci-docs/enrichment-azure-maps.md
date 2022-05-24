@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643986"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755380"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng Azure Maps (bản xem trước)
 
@@ -51,7 +51,7 @@ Azure Maps cung cấp dữ liệu và dịch vụ tập trung vào vị trí đ�
 
 1. Chọn **Tiếp** để hoàn thành quá trình ánh xạ trường.
 
-1. Đánh giá xem bạn có muốn sửa đổi **Thiết đặt nâng cao** không. Những thiết đặt này được cung cấp để mang lại sự linh hoạt tối đa để xử lý các trường hợp sử dụng nâng cao, nhưng các giá trị mặc định sẽ phù hợp trong hầu hết các trường hợp:
+1. Đánh giá xem bạn có muốn sửa đổi **Thiết đặt nâng cao** không. Các cài đặt này được cung cấp để mang lại sự linh hoạt tối đa để xử lý các trường hợp sử dụng nâng cao, nhưng các giá trị mặc định sẽ phù hợp trong hầu hết các trường hợp:
    - **Loại địa chỉ**: Hành vi mặc định là việc bổ sung sẽ trả về địa chỉ phù hợp nhất ngay cả khi nó chưa hoàn chỉnh. Để chỉ nhận được địa chỉ đầy đủ&mdash;ví dụ: địa chỉ bao gồm số nhà&mdash;xóa tất cả các hộp kiểm ngoại trừ **Địa chỉ dạng điểm**. 
    - **Ngôn ngữ**: Theo mặc định, các địa chỉ được trả về bằng ngôn ngữ cho vùng mà địa chỉ đã được xác định là thuộc về. Để áp dụng ngôn ngữ địa chỉ được chuẩn hóa, hãy chọn ngôn ngữ từ menu thả xuống. Ví dụ: chọn **Tiếng Anh** sẽ trả về **Copenhagen, Đan Mạch** thay vì **København, Đan Mạch**.
 
@@ -89,7 +89,7 @@ Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được 
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
-Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Azure Maps, bạn cho phép truyền dữ liệu ra ngoài phạm vi tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu có khả năng là thông tin nhạy cảm, chẳng hạn như Dữ liệu cá nhân. Microsoft sẽ truyền những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Azure Maps đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy chuyển đến phần [Điều khoản về quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Azure Maps, bạn cho phép truyền dữ liệu ra ngoài phạm vi tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu có khả năng là thông tin nhạy cảm, chẳng hạn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Azure Maps đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy chuyển đến phần [Điều khoản về quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tính năng tăng cường này bất kỳ lúc nào để ngừng sử dụng chức năng này.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

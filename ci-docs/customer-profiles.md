@@ -1,7 +1,7 @@
 ---
 title: Xem hồ sơ khách hàng
 description: Nhận thông tin kết hợp về dữ liệu khách hàng hợp nhất của bạn.
-ms.date: 09/30/2021
+ms.date: 05/13/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 45ef6abcd612178a097569825e32ff9ac779de01
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643992"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755808"
 ---
 # <a name="customer-profiles"></a>Hồ sơ khách hàng
 
@@ -29,7 +29,7 @@ Khách hàng có thể là cá nhân hoặc tổ chức. Mỗi hồ sơ khách h
 
 Chọn một ô để xem dữ liệu cho khách hàng đã chọn trong một trang dành riêng được gọi là [Trang chi tiết khách hàng](customer-profiles.md#customer-details-page).
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Trang khách hàng hiển thị các ô kết quả](media/customers-page-result-tiles-B2C.png "Trang khách hàng hiển thị các ô kết quả")
 
 > [!NOTE]
@@ -37,13 +37,13 @@ Chọn một ô để xem dữ liệu cho khách hàng đã chọn trong một t
 
 ## <a name="search-for-customers"></a>Tìm kiếm khách hàng
 
-Tìm kiếm khách hàng bằng cách nhập tên hoặc một số thuộc tính khác vào hộp tìm kiếm. Tìm kiếm chỉ hoạt động trong thực thể _Khách hàng_ được tạo trong quá trình hợp nhất dữ liệu.
+Tìm kiếm khách hàng bằng cách nhập tên hoặc một số thuộc tính khác vào hộp tìm kiếm. Tìm kiếm chỉ hoạt động trong thực thể *Khách hàng* được tạo trong quá trình hợp nhất dữ liệu.
 
 Là quản trị viên, bạn có thể định cấu hình các thuộc tính có thể tìm kiếm bằng cách sử dụng trang **Tìm kiếm và lọc chỉ mục**. Để biết thêm thông tin, hãy truy cập [Quản lý tìm kiếm và lọc chỉ mục](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Lọc khách hàng
 
-Bạn có thể lọc khách hàng theo các trường thực thể _Khách hàng_. Tương tự như tìm kiếm, trước tiên, quản trị viên của bạn sẽ cần xác định các trường là có thể lọc bằng cách sử dụng trang **Tìm kiếm và lọc chỉ mục**.
+Bạn có thể lọc khách hàng theo các trường thực thể *Khách hàng*. Tương tự như tìm kiếm, trước tiên, quản trị viên của bạn sẽ cần xác định các trường là có thể lọc bằng cách sử dụng trang **Tìm kiếm và lọc chỉ mục**.
 
 1. Chọn **Hiện bộ lọc** trên trang **Khách hàng**.
 
@@ -55,24 +55,25 @@ Bạn có thể lọc khách hàng theo các trường thực thể _Khách hàn
 
 Chọn bất kỳ ngăn xếp khách hàng nào để mở **Trang thông tin chi tiết về khách hàng**. Chế độ xem này chứa thông tin hợp nhất cho khách hàng đã chọn. Thông tin chi tiết về khách hàng bao gồm các nội dung sau:
 
-**Ô hồ sơ khách hàng**: Ô này hiển thị các giá trị khác với thực thể hợp nhất _Khách hàng_. Nếu một trường không có giá trị cho hồ sơ khách hàng đã chọn, trường đó sẽ không hiển thị. Ô được cấu trúc thành các phần:  
-  - Phần đầu tiên hiển thị một tập hợp các trường được xác định trước, theo sau là tất cả các trường là một phần của tìm kiếm và lọc chỉ mục. Tất cả các trường liên quan đến địa chỉ được kết hợp thành một dòng nếu hồ sơ có chứa các trường như vậy. 
-  - **Liên hệ cho khách hàng này**: Trong môi trường dành cho tài khoản doanh nghiệp, bạn sẽ thấy tất cả các liên hệ có liên quan cho khách hàng này dưới dạng phần thứ hai. Mỗi liên hệ được hiển thị với các trường của họ. Các trường trống bị ẩn.
-  - **Các trường bổ sung**: Hiển thị các trường còn lại của khách hàng đã chọn, ngoại trừ ID. 
-  - **ID**: Liệt kê tất cả các ID dưới tên thực thể tương ứng của chúng. Các trường được xác định là ID theo ngữ nghĩa của chúng, phân loại chúng như vậy.
+**Ô hồ sơ khách hàng**: Ô này hiển thị các giá trị khác với thực thể hợp nhất *Khách hàng*. Nếu một trường không có giá trị cho hồ sơ khách hàng đã chọn, trường đó sẽ không hiển thị. Ô được cấu trúc thành các phần:
+
+- Phần đầu tiên hiển thị một tập hợp các trường được xác định trước, theo sau là tất cả các trường là một phần của tìm kiếm và lọc chỉ mục. Tất cả các trường liên quan đến địa chỉ được kết hợp thành một dòng nếu hồ sơ có chứa các trường như vậy.
+- **Liên hệ cho khách hàng này**: Trong môi trường dành cho tài khoản doanh nghiệp, bạn sẽ thấy tất cả các liên hệ có liên quan cho khách hàng này dưới dạng phần thứ hai. Mỗi liên hệ được hiển thị với các trường của họ. Các trường trống bị ẩn.
+- **Các trường bổ sung**: Hiển thị các trường còn lại của khách hàng đã chọn, ngoại trừ ID.
+- **ID**: Liệt kê tất cả các ID dưới tên thực thể tương ứng của chúng. Các trường được xác định là ID theo ngữ nghĩa của chúng, phân loại chúng như vậy.
 
 **Dòng thời gian hoạt động**: Hiển thị dữ liệu nếu bạn đã đặt cấu hình các hoạt động. Chế độ xem dòng thời gian chứa các hoạt động được sắp xếp theo thứ tự thời gian của khách hàng đã chọn, bắt đầu với hoạt động gần đây nhất. Để biết thêm thông tin, hãy truy cập [Hoạt động khách hàng](activities.md).
 
-**Thông tin chuyên sâu**:  
-  - **Đo lường**: Hiển thị nếu bạn đã đặt cấu hình một hoặc nhiều biện pháp đo lường thuộc tính khách hàng. Chúng bao gồm các KPI được tính toán xung quanh khách hàng của bạn ở cấp độ khách hàng cá nhân. Để biết thêm thông tin, hãy truy cập [Xác định và quản lý các biện pháp](measures.md).
+**Thông tin chuyên sâu**:
 
-  - **Sở thích tiềm năng, thương hiệu tiềm năng**: Hiển thị nếu bạn đã đặt cấu hình tăng cường mối quan hệ sở thích hoặc thương hiệu. Nó thể hiện sở thích và mối quan hệ tiềm năng đối với thương hiệu dựa trên những khách hàng khác có hồ sơ tương tự với hồ sơ khách hàng đã chọn. Để biết thêm thông tin, hãy truy cập [Làm phong phú hồ sơ khách hàng với mối quan hệ thương hiệu và sở thích](enrichment-microsoft.md).
+- **Đo lường**: Hiển thị nếu bạn đã đặt cấu hình một hoặc nhiều biện pháp đo lường thuộc tính khách hàng. Chúng bao gồm các KPI được tính toán xung quanh khách hàng của bạn ở cấp độ khách hàng cá nhân. Để biết thêm thông tin, hãy truy cập [Xác định và quản lý các biện pháp](measures.md).
+
+- **Sở thích tiềm năng, thương hiệu tiềm năng**: Hiển thị nếu bạn đã đặt cấu hình tăng cường mối quan hệ sở thích hoặc thương hiệu. Nó thể hiện sở thích và mối quan hệ tiềm năng đối với thương hiệu dựa trên những khách hàng khác có hồ sơ tương tự với hồ sơ khách hàng đã chọn. Để biết thêm thông tin, hãy truy cập [Làm phong phú hồ sơ khách hàng với mối quan hệ thương hiệu và sở thích](enrichment-microsoft.md).
 
 Để quay lại trang tìm kiếm của khách hàng, hãy chọn **Quay lại khách hàng**.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 
 [Thêm nhiều nguồn dữ liệu hơn](data-sources.md), [làm phong phú hồ sơ hợp nhất](enrichment-hub.md) hoặc [tạo phân đoạn](segments.md) để làm việc với hồ sơ khách hàng thống nhất trong các ứng dụng khác.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

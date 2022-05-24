@@ -1,8 +1,8 @@
 ---
 title: Hướng dẫn mẫu dự đoán rời bỏ đăng ký
 description: Sử dụng hướng dẫn mẫu này để thử mô hình dự đoán rời bỏ đăng ký dùng ngay.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644101"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741437"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ đăng ký
 
@@ -112,65 +112,11 @@ Xem lại các bài báo [về việc nhập dữ liệu](data-sources.md) và [
 
 ## <a name="task-2---data-unification"></a>Nhiệm vụ 2 - Hợp nhất dữ liệu
 
-Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh xạ, So khớp, Hợp nhất** để tạo hồ sơ khách hàng hợp nhất. Để biết thêm thông tin, hãy xem [Hợp nhất dữ liệu](data-unification.md).
-
-### <a name="map"></a>Bản đồ
-
-1. Sau khi nhập dữ liệu, hãy ánh xạ các địa chỉ liên hệ từ dữ liệu Thương mại điện tử và Mức độ trung thành thành các loại dữ liệu phổ biến. Chuyển đến **Dữ liệu** > **Hợp nhất** > **Ánh xạ**.
-
-1. Chọn các thực thể đại diện cho hồ sơ khách hàng – **eCommerceContacts** và **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="hợp nhất nguồn dữ liệu thương mại điện tử và khách hàng thân thiết.":::
-
-1. Chọn **ContactId** làm khóa chính cho **eCommerceContacts** và **LoyaltyID** làm khóa chính cho **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Hợp nhất LoyaltyId làm khóa chính.":::
-
-### <a name="match"></a>Kết quả khớp
-
-1. Đi đến tab **So khớp** và chọn **Đặt thứ tự**.
-
-1. Trong danh sách thả xuống **Chính**, chọn **eCommerceContacts: eCommerce** là nguồn chính và bao gồm tất cả các bản ghi.
-
-1. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers: LoyaltyScheme** và bao gồm tất cả các bản ghi.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Hợp nhất so khớp thương mại điện tử và khách hàng thân thiết.":::
-
-1. Chọn **Tạo quy tắc mới**
-
-1. Thêm điều kiện đầu tiên của bạn bằng FullName.
-
-   * Đối với eCommerceContacts, chọn **FullName** trong danh sách thả xuống.
-   * Đối với loyCustomers, chọn **FullName** trong danh sách thả xuống.
-   * Chọn danh sách thả xuống **Chuẩn hóa** rồi chọn **Loại (Số điện thoại, Tên, Địa chỉ,...)**.
-   * Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
-
-1. Nhập tên **FullName, Email** cho quy tắc mới.
-
-   * Thêm điều kiện thứ hai cho địa chỉ email bằng cách chọn **Thêm điều kiện**
-   * Đối với thực thể eCommerceContacts, chọn **EMail** trong danh sách thả xuống.
-   * Đối với thực thể loyCustomers, chọn **EMail** trong danh sách thả xuống. 
-   * Để trống trường Chuẩn hóa. 
-   * Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Hợp nhất quy tắc so khớp cho tên và email.":::
-
-7. Chọn **Lưu** và **Chạy**.
-
-### <a name="merge"></a>Hợp nhất
-
-1. Đi đến tab **Hợp nhất**.
-
-1. Trên thực thể **ContactId** cho **loyCustomers**, thay đổi tên hiển thị thành **ContactIdLOYALTY** để phân biệt nó với các ID khác đã nhập.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="đổi tên contactid từ id khách hàng thân thiết.":::
-
-1. Chọn **Lưu** và **Chạy** để bắt đầu quy trình Hợp nhất.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán rời bỏ đăng ký
 
-Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem [Đăng ký churn dự đoán](predict-subscription-churn.md) điều. 
+Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán khả năng rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem [Đăng ký churn dự đoán](predict-subscription-churn.md) điều. 
 
 1. Đi đến **Thông tin** > **Khám phá** và chọn để sử dụng **Mô hình khách hàng rời đi**.
 

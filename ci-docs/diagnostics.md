@@ -11,24 +11,24 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643988"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755288"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (Xem trước)
 
 Dynamics 365 Customer Insights cung cấp tích hợp trực tiếp với Azure Monitor. Nhật ký tài nguyên Azure Monitor cho phép bạn theo dõi và gửi nhật ký tới [Kho lưu trữ Azure](https://azure.microsoft.com/services/storage/),[Phân tích nhật ký Azure](/azure/azure-monitor/logs/log-analytics-overview) hoặc truyền chúng tới [Trung tâm sự kiện Azure](https://azure.microsoft.com/services/event-hubs/).
 
-Thông tin chi tiết về khách hàng sẽ gửi các nhật ký sự kiện sau:
+Thông tin chi tiết về khách hàng sẽ gửi nhật ký sự kiện sau:
 
-- **Sự kiện kiểm tra**
+- **Sự kiện kiểm toán**
   - **APIEvent** - cho phép theo dõi thay đổi được thực hiện thông qua Dynamics 365 Customer Insights Giao diện người dùng.
 - **Sự kiện hoạt động**
-  - **WorkflowEvent** - Quy trình làm việc cho phép một người thiết lập [Nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md) và [làm giàu](enrichment-hub.md) và cuối cùng [xuất khẩu](export-destinations.md) dữ liệu vào các hệ thống khác. Tất cả các bước đó có thể được thực hiện riêng lẻ (ví dụ: kích hoạt một lần xuất duy nhất) hoặc được tổ chức (ví dụ: làm mới dữ liệu từ các nguồn dữ liệu sẽ kích hoạt quá trình hợp nhất sẽ kéo thêm các bước bổ sung và sau khi hoàn thành xuất dữ liệu vào một hệ thống khác). Để biết thêm chi tiết, hãy xem [Lược đồ WorkflowEvent](#workflow-event-schema).
-  - **APIEvent** - tất cả các lệnh gọi API đến phiên bản khách hàng để Dynamics 365 Customer Insights. Để biết thêm chi tiết, hãy xem [Lược đồ APIEvent](#api-event-schema).
+  - **WorkflowEvent** - Quy trình làm việc cho phép bạn thiết lập [Nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md),[làm giàu](enrichment-hub.md), và cuối cùng [xuất khẩu](export-destinations.md) dữ liệu vào các hệ thống khác. Tất cả các bước đó có thể được thực hiện riêng lẻ (ví dụ: kích hoạt một lần xuất). Quá trình này cũng có thể chạy được sắp xếp (ví dụ: làm mới dữ liệu từ các nguồn dữ liệu kích hoạt quá trình hợp nhất, quá trình này sẽ kéo thêm các phần bổ sung và sau khi hoàn thành xuất dữ liệu sang một hệ thống khác). Để biết thêm thông tin, hãy xem [Lược đồ WorkflowEvent](#workflow-event-schema).
+  - **APIEvent** - tất cả các lệnh gọi API đến phiên bản khách hàng để Dynamics 365 Customer Insights. Để biết thêm thông tin, hãy xem [Lược đồ APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Thiết lập cài đặt chẩn đoán
 
@@ -55,7 +55,7 @@ Thông tin chi tiết về khách hàng sẽ gửi các nhật ký sự kiện s
 
 1. Chọn **Người thuê nhà** đăng ký Azure với tài nguyên đích và chọn **đăng nhập**.
 
-1. Chọn **Loại tài nguyên** (Tài khoản lưu trữ, Trung tâm sự kiện hoặc phân tích nhật ký).
+1. Chọn **Loại tài nguyên** (Tài khoản lưu trữ, trung tâm sự kiện hoặc phân tích nhật ký).
 
 1. Chọn **Đăng ký** cho tài nguyên đích.
 
@@ -118,7 +118,7 @@ Bên dưới **Truy vấn** cửa sổ, mở rộng **Kiểm toán** giải phá
 
 ## <a name="event-schemas"></a>Lược đồ sự kiện
 
-Sự kiện API và sự kiện quy trình làm việc có cấu trúc chung và chi tiết chúng khác nhau, xem [Lược đồ sự kiện API](#api-event-schema) hoặc [giản đồ sự kiện quy trình làm việc](#workflow-event-schema).
+Các sự kiện API và sự kiện quy trình làm việc có cấu trúc chung và chi tiết chúng khác nhau ở điểm nào, hãy xem [Lược đồ sự kiện API](#api-event-schema) hoặc [giản đồ sự kiện quy trình làm việc](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Lược đồ sự kiện API
 
@@ -182,7 +182,7 @@ Các`identity` Đối tượng JSON có cấu trúc sau
 
 ### <a name="workflow-event-schema"></a>Lược đồ sự kiện quy trình làm việc
 
-Quy trình làm việc bao gồm nhiều bước. [Nhập nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md),[làm giàu](enrichment-hub.md), và [xuất khẩu](export-destinations.md) dữ liệu. Tất cả các bước đó có thể chạy riêng lẻ hoặc được tổ chức với các quy trình sau. 
+Quy trình làm việc bao gồm nhiều bước. [Nhập nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md),[làm giàu](enrichment-hub.md), và [xuất khẩu](export-destinations.md) dữ liệu. Tất cả các bước đó có thể chạy riêng lẻ hoặc được tổ chức với các quy trình sau.
 
 #### <a name="operation-types"></a>Các loại hoạt động
 
@@ -215,7 +215,7 @@ Quy trình làm việc bao gồm nhiều bước. [Nhập nguồn dữ liệu](d
 | `time`          | Dấu thời gian | Bắt buộc          | Dấu thời gian của sự kiện (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Bắt buộc          | ResourceId của phiên bản phát ra sự kiện.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Bắt buộc          | Tên của hoạt động được đại diện bởi sự kiện này. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Xem [Các loại hoạt động](#operation-types) để tham khảo. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Bắt buộc          | Ghi danh mục của sự kiện. Luôn luôn`Operational` cho các sự kiện Quy trình làm việc                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Bắt buộc          | Ghi danh mục của sự kiện. Luôn luôn`Operational` cho các sự kiện Quy trình làm việc                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Bắt buộc          | Tình trạng của sự kiện. `Running`,`Skipped`,`Successful`,`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Dài      | Không bắt buộc          | Thời lượng của hoạt động tính bằng mili giây.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Không bắt buộc          | Đối tượng JSON với nhiều thuộc tính hơn cho danh mục sự kiện cụ thể.                                                                                        | Xem phần phụ [Thuộc tính quy trình làm việc](#workflow-properties-schema)                                                                                                       |

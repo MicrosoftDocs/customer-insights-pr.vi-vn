@@ -66,12 +66,18 @@
   items:
     - name: Tổng quan về hợp nhất dữ liệu
       href: data-unification.md
-    - name: Ánh xạ thực thể và thuộc tính
+    - name: Chọn các trường nguồn
       href: map-entities.md
-    - name: So khớp thực thể
+    - name: Loại bỏ các bản ghi trùng lặp
+      href: remove-duplicates.md
+    - name: Điều kiện phù hợp
       href: match-entities.md
-    - name: Hợp nhất thực thể
+    - name: Hợp nhất các trường khách hàng
       href: merge-entities.md
+    - name: Xem xét hợp nhất dữ liệu
+      href: review-unification.md
+    - name: Cập nhật cài đặt hợp nhất
+      href: data-unification-update.md
 - name: Tăng cường dữ liệu
   items:
     - name: Tăng cường thông tin hồ sơ khách hàng
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Tham chiếu API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Truy vấn mẫu OData
+      href: odata-examples.md
 - name: Quản lý sự đồng ý (Xem trước)
   items:
     - name: Trung tâm trợ giúp

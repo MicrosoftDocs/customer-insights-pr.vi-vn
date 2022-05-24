@@ -1,19 +1,19 @@
 ---
 title: Hướng dẫn mẫu dự đoán rời bỏ giao dịch
 description: Sử dụng hướng dẫn mẫu này để thử mô hình dự đoán rời bỏ giao dịch dùng ngay.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644134"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741345"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Hướng dẫn mẫu dự đoán rời bỏ giao dịch
 
@@ -86,69 +86,13 @@ Xem lại các bài báo [về việc nhập dữ liệu](data-sources.md) và [
 
 1. Lưu nguồn dữ liệu.
 
-
 ## <a name="task-2---data-unification"></a>Nhiệm vụ 2 - Hợp nhất dữ liệu
 
-Sau khi nhập dữ liệu, bây giờ chúng ta bắt đầu quy trình **Ánh xạ, So khớp, Hợp nhất** để tạo hồ sơ khách hàng hợp nhất. Để biết thêm thông tin, hãy xem [Hợp nhất dữ liệu](data-unification.md).
-
-### <a name="map"></a>Bản đồ
-
-1. Sau khi nhập dữ liệu, hãy ánh xạ các địa chỉ liên hệ từ dữ liệu Thương mại điện tử và Mức độ trung thành thành các loại dữ liệu phổ biến. Chuyển đến **Dữ liệu** > **Hợp nhất** > **Ánh xạ**.
-
-1. Chọn các thực thể đại diện cho hồ sơ khách hàng – **eCommerceContacts** và **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="hợp nhất nguồn dữ liệu thương mại điện tử và khách hàng thân thiết.":::
-
-1. Chọn **ContactId** làm khóa chính cho **eCommerceContacts** và **LoyaltyID** làm khóa chính cho **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Hợp nhất LoyaltyId làm khóa chính.":::
-
-### <a name="match"></a>Kết quả khớp
-
-1. Đi đến tab **So khớp** và chọn **Đặt thứ tự**.
-
-1. Trong danh sách thả xuống **Chính**, chọn **eCommerceContacts: eCommerce** là nguồn chính và bao gồm tất cả các bản ghi.
-
-1. Trong danh sách thả xuống **Thực thể 2**, chọn **loyCustomers: LoyaltyScheme** và bao gồm tất cả các bản ghi.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Hợp nhất so khớp thương mại điện tử và khách hàng thân thiết.":::
-
-1. Chọn **Tạo quy tắc mới**
-
-1. Thêm điều kiện đầu tiên của bạn bằng FullName.
-
-   * Đối với eCommerceContacts, chọn **FullName** trong danh sách thả xuống.
-   * Đối với loyCustomers, chọn **FullName** trong danh sách thả xuống.
-   * Chọn danh sách thả xuống **Chuẩn hóa** rồi chọn **Loại (Số điện thoại, Tên, Địa chỉ,...)**.
-   * Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
-
-1. Nhập tên **FullName, Email** cho quy tắc mới.
-
-   * Thêm điều kiện thứ hai cho địa chỉ email bằng cách chọn **Thêm điều kiện**
-   * Đối với thực thể eCommerceContacts, chọn **EMail** trong danh sách thả xuống.
-   * Đối với thực thể loyCustomers, chọn **EMail** trong danh sách thả xuống. 
-   * Để trống trường Chuẩn hóa. 
-   * Đặt **Mức độ chính xác**: **Cơ bản** và **Giá trị**: **Cao**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Hợp nhất quy tắc so khớp cho tên và email.":::
-
-7. Chọn **Lưu** và **Chạy**.
-
-### <a name="merge"></a>Hợp nhất
-
-1. Đi đến tab **Hợp nhất**.
-
-1. Trên thực thể **ContactId** cho **loyCustomers**, thay đổi tên hiển thị thành **ContactIdLOYALTY** để phân biệt nó với các ID khác đã nhập.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="đổi tên contactid từ id khách hàng thân thiết.":::
-
-1. Chọn **Lưu** và **Chạy** để bắt đầu quy trình Hợp nhất.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Nhiệm vụ 3 - Định cấu hình dự đoán rời bỏ giao dịch
 
-Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy dự đoán rời bỏ đăng ký. Để biết các bước chi tiết, hãy xem [Đăng ký churn dự đoán](predict-subscription-churn.md) điều. 
+Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có thể chạy giao dịch churn dự đoán. Để biết các bước chi tiết, hãy xem [Giao dịch churn dự đoán](predict-transactional-churn.md) điều. 
 
 1. Đi đến **Thông tin** > **Khám phá** và chọn để sử dụng **Mô hình khách hàng rời đi**.
 
@@ -180,7 +124,7 @@ Với hồ sơ khách hàng hợp nhất đã có, giờ đây chúng tôi có t
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Nhiệm vụ 4 - Xem xét kết quả và giải thích mô hình
 
-Để mô hình hoàn thành việc đào tạo và chấm điểm dữ liệu. Bây giờ bạn có thể xem lại giải thích mô hình rời bỏ đăng ký. Để biết thêm thông tin, hãy xem [Xem lại dự đoán trạng thái và kết quả](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Để mô hình hoàn thành việc đào tạo và chấm điểm dữ liệu. Bây giờ bạn có thể xem lại các giải thích mô hình churn. Để biết thêm thông tin, hãy xem [Xem lại dự đoán trạng thái và kết quả](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Nhiệm vụ 5 - Tạo một phân khúc khách hàng có nguy cơ rời bỏ cao
 
@@ -188,18 +132,16 @@ Việc chạy mô hình sản xuất sẽ tạo ra một thực thể mới mà 
 
 Bạn có thể tạo một phân khúc mới dựa trên thực thể được tạo bởi mô hình.
 
-1.  Đi đến **Phân khúc**. Chọn **Mới** và chọn **Tạo từ** > **Thông tin**. 
+1.  Đi đến **Phân khúc**. Chọn **Mới** rồi chọn **Tạo từ** > **Thông tin**. 
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Tạo một phân khúc với đầu ra mô hình.":::
 
-1. Chọn điểm cuối **OOBSubscriptionChurnPrediction** và xác định phân khúc: 
+1. Chọn **OOBeCommerceChurnPrediction** endpoint và xác định phân đoạn: 
    - Trường: ChurnScore
    - Toán tử: lớn hơn
    - Giá trị: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Thiết lập phân khúc rời bỏ đăng ký.":::
 
-Giờ đây, bạn có một phân khúc được cập nhật động để xác định những khách hàng có nguy cơ rời bỏ cao cho doanh nghiệp đăng ký này.
+Giờ đây, bạn có một phân đoạn được cập nhật động để xác định những khách hàng có nguy cơ bỏ trốn cao.
 
 Để biết thêm thông tin, hãy xem [Tạo và quản lý phân khúc](segments.md).
 

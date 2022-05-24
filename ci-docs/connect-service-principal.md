@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644053"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739188"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 
@@ -40,7 +40,7 @@ Trước khi tạo dịch vụ chính mới cho Thông tin chi tiết về khác
 
 3. Trong **Quản lý**, chọn **Ứng dụng doanh nghiệp**.
 
-4. Tìm kiếm ID ứng dụng Microsoft`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` với cái tên `Dynamics 365 AI for Customer Insights`.
+4. Thêm bộ lọc cho **ID ứng dụng bắt đầu bằng**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` hoặc tìm kiếm tên `Dynamics 365 AI for Customer Insights`.
 
 5. Nếu bạn tìm thấy một bản ghi phù hợp, điều đó có nghĩa là tên dịch vụ chính đã tồn tại. 
    

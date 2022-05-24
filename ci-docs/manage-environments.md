@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644109"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741067"
 ---
 # <a name="manage-environments"></a>Quản lý môi trường
 
@@ -44,7 +44,7 @@ Bạn có thể chỉnh sửa một số thông tin của các môi trường hi
    
 Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights với môi trường Dataverse. 
 
-Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo mô hình trong Power Apps.
+Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo hướng mô hình trong Power Apps.
 
 Để sử dụng [mô hình dự đoán sẵn dùng](predictions-overview.md#out-of-box-models), đặt cấu hình chia sẻ dữ liệu với Dataverse. Hoặc bạn có thể bật tính năng nhập dữ liệu từ các nguồn dữ liệu tại chỗ, cung cấp URL môi trường Microsoft Dataverse mà tổ chức của bạn quản lý.
 
@@ -127,10 +127,10 @@ Bạn sẽ nhìn thấy danh sách tất cả các môi trường có sẵn tron
 Các thiết đặt cấu hình sau được sao chép:
 
 - Nguồn dữ liệu được nhập/thu nạp
-- Cấu hình hợp nhất dữ liệu (Bản đồ, kết hợp, hợp nhất)
+- Cấu hình hợp nhất dữ liệu
 - Phân khúc
-- Biện pháp
-- Mối quan hệ
+- Measures
+- Quan hệ
 - Hoạt động
 - Chỉ mục tìm kiếm & lọc
 - Đích xuất
@@ -176,7 +176,7 @@ Mặc dù một số người dùng có thể có quyền quản trị trong Th�
 
 ## <a name="claim-ownership-of-an-environment"></a>Yêu cầu quyền sở hữu môi trường
 
-Nếu chủ sở hữu của một môi trường rời khỏi tổ chức hoặc tài khoản người dùng của họ bị xóa, thì môi trường đó sẽ không có chủ sở hữu. Người dùng có quyền quản trị có thể xác nhận quyền sở hữu và trở thành chủ sở hữu mới. Họ có thể tiếp tục sở hữu môi trường hoặc [thay đổi quyền sở hữu cho một quản trị viên khác](#change-the-owner-of-an-environment). 
+Nếu chủ sở hữu của một môi trường rời khỏi tổ chức hoặc tài khoản người dùng của họ bị xóa, thì môi trường đó sẽ không có chủ sở hữu. Người dùng có quyền quản trị có thể xác nhận quyền sở hữu và trở thành chủ sở hữu mới. Họ có thể tiếp tục sở hữu môi trường hoặc [thay đổi quyền sở hữu thành quản trị viên khác](#change-the-owner-of-an-environment). 
 
 Để xác nhận quyền sở hữu, hãy chọn **Lấy quyền sở hữu** nút hiển thị ở đầu mỗi trang trong Thông tin chi tiết về khách hàng khi chủ sở hữu ban đầu rời tổ chức.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643991"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739234"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -35,9 +35,6 @@ Bạn có thể thêm các nguồn dữ liệu sau:
 - [Từ thư mục Common Data Model](connect-common-data-model.md)
 - [Từ kho lưu trữ Microsoft Dataverse của riêng bạn](connect-dataverse-managed-lake.md)
 - [Từ một Azure Synapse Analytics cơ sở dữ liệu](connect-synapse.md)
-
-> [!NOTE]
-> Nếu bạn đang sử dụng phiên bản dùng thử, phần phương pháp nhập bao gồm **Thư viện dữ liệu Thông tin chi tiết về khách hàng** lựa chọn. Chọn tùy chọn này để chọn một tập dữ liệu mẫu có sẵn cho các ngành khác nhau. Để biết thêm thông tin, hãy xem [Dynamics 365 Customer Insights sự thử nghiệm](trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Thêm dữ liệu từ nguồn dữ liệu tại chỗ
 

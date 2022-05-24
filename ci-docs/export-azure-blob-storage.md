@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644070"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757412"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang Azure Blob Storage (bản xem trước)
 
@@ -44,7 +44,7 @@ Lưu trữ dữ liệu Customer Insights của bạn trong bộ lưu trữ Blob 
 Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Nếu bạn đã bật cài đặt xóa mềm cho tài khoản Azure Blob Storage, quá trình xuất sẽ không thành công. Tắt tính năng xóa mềm để xuất dữ liệu thành các blob. Để biết thêm thông tin, hãy xem [Bật xóa mềm blob](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Nếu bạn đã bật cài đặt xóa mềm cho tài khoản Azure Blob Storage, quá trình xuất sẽ không thành công. Tắt tính năng xóa mềm để xuất dữ liệu thành các blob. Để biết thêm thông tin, hãy xem [Bật xóa mềm blob](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 

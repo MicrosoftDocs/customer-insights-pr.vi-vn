@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653594"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740929"
 ---
 # <a name="user-permissions"></a>Quyền người dùng
 
@@ -41,7 +41,7 @@ Có ba loại vai trò:
 
 - Tất cả các quyền có sẵn cho Người xem.
 - Tải và chuyển đổi dữ liệu bằng cách dùng trang **Nguồn dữ liệu**.
-- Hoàn thành các phần *Hợp nhất dữ liệu* (**Ánh xạ**, **So khớp** và **Trộn**) để có thực thể hồ sơ khách hàng hợp nhất.
+- Hoàn thành ***Hợp nhất dữ liệu** dẫn đến thực thể hồ sơ khách hàng hợp nhất.
 - Xác định **Các mối quan hệ** và **Hoạt động**.
 - Tạo phân khúc bằng cách sử dụng trang **Phân khúc**.
 - Tạo các giá trị đo sử dụng trang **Giá trị đo**.

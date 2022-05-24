@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644106"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740745"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Hoàn thành từng phần dữ liệu của bạn với các dự đoán (không được dùng nữa)
 
@@ -37,13 +37,13 @@ Trước khi tổ chức của bạn có thể sử dụng tính năng dự đo�
 
 1. Tổ chức của bạn có một phiên bản [thiết lập trong Microsoft Dataverse](/ai-builder/build-model#prerequisites) và nằm trong cùng một tổ chức với Customer Insights.
 
-2. Môi trường thông tin chi tiết về đối tượng của bạn được liên kết với phiên bản Dataverse.
+2. Môi trường Customer Insights của bạn được đính kèm với phiên bản Dataverse.
 
 Để biết thêm thông tin, hãy xem [Tạo môi trường mới](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Tạo dự đoán trong thực thể Khách hàng
 
-1. Đi đến **Dữ liệu** > **Thực thể**.
+1. Đi đến **Dữ liệu** > **Các thực thể**.
 
 2. Chọn thực thể **Khách hàng**.
 

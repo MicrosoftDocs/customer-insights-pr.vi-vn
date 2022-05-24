@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643990"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755712"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (xem trước)
 
@@ -26,7 +26,7 @@ Bạn phải có quyền Người đóng góp hoặc Quản trị viên để t�
 1. Đi đến **Dữ liệu** > **Hợp nhất**. Chọn đối tượng bạn muốn làm giàu và chọn một thuộc tính làm khóa chính cho đối tượng. Để biết thêm thông tin, hãy xem [Chọn khóa chính](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
- 
+
 1. Chọn dấu ba chấm dọc bên cạnh nguồn dữ liệu mà bạn muốn bổ sung và chọn **Làm giàu**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Trang làm giàu nguồn dữ liệu.":::

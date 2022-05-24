@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644049"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755335"
 ---
 # <a name="connections-preview-overview"></a>Tổng quan về kết nối (bản xem trước)
 
@@ -24,15 +24,15 @@ Kết nối là chìa khóa để cho phép chia sẻ dữ liệu với và từ
 
 Đi đến **Quản trị viên** > **Kết nối** để tạo và xem các kết nối.
 
-Tab **Kết nối** hiển thị cho bạn tất cả các kết nối hiện hoạt. Danh sách hiển thị một hàng cho mỗi kết nối. 
+Tab **Kết nối** hiển thị cho bạn tất cả các kết nối hiện hoạt. Danh sách hiển thị một hàng cho mỗi kết nối.
 
 Xem tổng quan nhanh, nội dung mô tả và tìm hiểu những gì bạn có thể làm với từng tùy chọn khả năng mở rộng trên tab **Khám phá**.
 
-### <a name="exports"></a>Nội dung xuất
+## <a name="exports"></a>Nội dung xuất
 
 Chỉ quản trị viên là có thể đặt cấu hình các kết nối mới, nhưng họ có thể cấp quyền truy cập cho những người đóng góp để sử dụng các kết nối hiện có. Quản trị viên kiểm soát nơi dữ liệu có thể đến, những người đóng góp xác định tải trọng và tần suất phù hợp với nhu cầu của họ. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Nội dung tăng cường
+## <a name="enrichments"></a>Nội dung tăng cường
 
 Chỉ quản trị viên là có thể đặt cấu hình các kết nối mới nhưng các kết nối đã tạo luôn có sẵn cho cả quản trị viên và người đóng góp. Quản trị viên quản lý thông tin xác thực và cho phép chuyển dữ liệu. Sau đó, cả quản trị viên và người đóng góp đều có thể dùng các kết nối cho những nội dung bổ sung.
 
@@ -46,7 +46,7 @@ Chỉ quản trị viên là có thể đặt cấu hình các kết nối mới
 
 1. Chọn **Thêm kết nối** để tạo kết nối mới. Chọn loại kết nối bạn muốn tạo từ menu thả xuống.
 
-1. Trong ngăn **Thiết lập kết nối**, hãy cung cấp thông tin chi tiết được yêu cầu. 
+1. Trong ngăn **Thiết lập kết nối**, hãy cung cấp thông tin chi tiết được yêu cầu.
    1. **Tên hiển thị** và loại kết nối mô tả một kết nối. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối này.
    1. Các trường chính xác phụ thuộc vào dịch vụ bạn đang kết nối. Bạn có thể tìm hiểu về thông tin chi tiết của một loại kết nối cụ thể trong bài viết về dịch vụ mục tiêu.
    1. Nếu bạn [sử dụng Key Vault của riêng bạn](use-azure-key-vault.md) để lưu trữ bí mật, kích hoạt **Sử dụng Key Vault** và chọn bí mật từ danh sách.
@@ -59,7 +59,7 @@ Bạn cũng có thể chọn **Thiết lập** trên một lát ở tab **Khám 
 
 Khi thiết lập hoặc chỉnh sửa kết nối xuất, bạn hãy chọn người dùng nào được phép sử dụng kết nối cụ thể này để xác định [các nội dung xuất](export-destinations.md). Theo mặc định, một kết nối có sẵn cho người dùng có vai trò quản trị viên. Bạn có thể thay đổi thiết đặt này trong **Chọn người có thể sử dụng kết nối này** và cho phép người dùng có vai trò người đóng góp sử dụng kết nối này.
 
-- Những người đóng góp sẽ không thể xem hoặc chỉnh sửa kết nối. Họ sẽ chỉ thấy tên hiển thị và loại kết nối khi tạo một nội dung xuất.
+- Những người đóng góp sẽ không thể xem hoặc chỉnh sửa kết nối. Họ sẽ chỉ thấy tên hiển thị và loại của nó khi tạo một bản xuất.
 - Bằng cách chia sẻ kết nối, bạn cho phép những người đóng góp sử dụng kết nối. Những người đóng góp sẽ thấy các kết nối được chia sẻ khi họ thiết lập chế độ xuất. Họ có thể quản lý mọi lần xuất sử dụng kết nối cụ thể này.
 - Bạn có thể thay đổi thiết đặt này trong khi vẫn giữ nội dung xuất đo những người đóng góp xác định.
 
@@ -77,7 +77,7 @@ Khi thiết lập hoặc chỉnh sửa kết nối xuất, bạn hãy chọn ng�
 
 ## <a name="remove-a-connection"></a>Loại bỏ kết nối
 
-Nếu kết nối mà bạn đang loại bỏ được dùng cho các nội dung bổ sung hoặc nội dung xuất, thì trước tiên, bạn cần gỡ bỏ hoặc loại bỏ các nội dung bổ sung hoặc nội dung xuất đó. Hộp thoại loại bỏ sẽ hướng dẫn bạn chuyển đến các nội dung bổ sung hoặc nội dung xuất có liên quan. 
+Nếu kết nối bạn đang xóa được sử dụng bởi tính năng bổ sung hoặc xuất khẩu, trước tiên bạn cần tách hoặc loại bỏ chúng. Hộp thoại loại bỏ sẽ hướng dẫn bạn chuyển đến các nội dung bổ sung hoặc nội dung xuất có liên quan.
 
 Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang chế độ không hoạt động. Bạn hãy kích hoạt lại các nội dung bổ sung và nội dung xuất đã gỡ bỏ bằng cách thêm một kết nối khác vào chúng trên trang [Nội dung bổ sung](enrichment-hub.md) hoặc [Nội dung xuất](export-destinations.md).
 
@@ -91,11 +91,11 @@ Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang ch�
 
    1. Nếu có các nội dung bổ sung hoặc nội dung xuất sử dụng kết nối này, hãy chọn nút để xem những gì đang sử dụng kết nối.
       - **Nội dung xuất:** Bạn có thể chọn loại bỏ hoặc ngắt kết nối các nội dung xuất để có thể loại bỏ kết nối. Để ngắt kết nối nội dung xuất, quản trị viên có thể sử dụng thao tác **Ngắt kết nối**. Hành động này có thể áp dụng cho từng nội dung xuất và nhiều nội dung xuất đã chọn. Bằng cách ngắt kết nối, bạn vẫn giữ được cấu hình xuất, nhưng cấu hình này sẽ không chạy cho đến khi bạn thêm một kết nối khác.
-      - **Phiên tăng cường:** Bạn có thể chọn loại bỏ hoặc vô hiệu hóa các nội dung bổ sung để có thể loại bỏ kết nối. 
+      - **Phiên tăng cường:** Bạn có thể chọn loại bỏ hoặc vô hiệu hóa các nội dung bổ sung để có thể loại bỏ kết nối.
    1. Khi kết nối không còn thành phần phụ thuộc nữa, hãy quay lại **Quản trị viên** > **Kết nối** và thử loại bỏ kết nối một lần nữa.
 
 1. Để xác nhận xóa, hãy chọn **Loại bỏ**.
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Thiết lập kết nối với các bí mật do Key Vault của riêng bạn quản lý
 
-Một số kết nối cần bí mật như khóa API hoặc mật khẩu. Một số kết nối hỗ trợ bí mật được lưu trữ trong Key Vault của riêng bạn. Tìm hiểu thêm về các kết nối được hỗ trợ và cách thiết lập trên [Kho chìa khóa của riêng bạn cho Thông tin chi tiết về khách hàng](use-azure-key-vault.md).
+Một số kết nối cần bí mật như khóa API hoặc mật khẩu. Một số kết nối hỗ trợ bí mật được lưu trữ trong Key Vault của riêng bạn. Tìm hiểu thêm về các kết nối được hỗ trợ và cách thiết lập trên [Kho lưu trữ chính của riêng bạn cho Thông tin chi tiết về khách hàng](use-azure-key-vault.md).

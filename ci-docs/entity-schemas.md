@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644057"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757458"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Lược đồ thực thể trong Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8644057"
 
 Đây là mô hình dữ liệu chung cung cấp định nghĩa thống nhất về dữ liệu, nhờ đó cho phép các ứng dụng và trình tích hợp dữ liệu dễ dàng cộng tác hơn. Common Data Model bao gồm một hệ thống siêu dữ liệu phong phú với các thực thể, mối quan hệ, cấp bậc, xu hướng và nhiều dữ liệu tiêu chuẩn khác. Mô hình này bắt nguồn từ ứng dụng Dynamics 365 và là nguồn mở trên GitHub với hơn 260 thực thể tiêu chuẩn. Một hệ thống rộng lớn gồm các đối tác nội bộ lẫn bên ngoài sẽ đóng góp các khái niệm cụ thể theo ngành cho Common Data Model.
 
-Ngày nay, nhiều hệ thống và nền tảng đã áp dụng Common Data Model, trong đó có các luồng dữ liệu Power BI và các dịch vụ dữ liệu của Azure. Nó đã được hỗ trợ trong Microsoft Dataverse, Dynamics 365, Power Apps, Power BI và các dịch vụ dữ liệu Azure sắp tới, trực tiếp tích lũy giá trị cho [Sáng kiến dữ liệu mở](https://www.microsoft.com/open-data-initiative).
+Ngày nay, nhiều hệ thống và nền tảng đã áp dụng Common Data Model, trong đó có các luồng dữ liệu Power BI và các dịch vụ dữ liệu của Azure. Nó đã được hỗ trợ trong Microsoft Dataverse, Dynamics 365, Power Apps, Power BI và các dịch vụ dữ liệu Azure sắp tới, trực tiếp tích lũy giá trị cho [Sáng kiến dữ liệu mở](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Lược đồ thực thể Customer Insights
 

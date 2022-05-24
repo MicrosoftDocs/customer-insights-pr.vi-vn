@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644010"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741529"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (Xem trước)
 
@@ -34,11 +34,11 @@ Trong Azure:
 
 - Đăng ký Azure hiện hoạt.
 
-- Nếu sử dụng một cái mới Azure Data Lake Storage Tài khoản Gen2, *dịch vụ chính cho Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền. Tìm hiểu thêm về [cách kết nối với tài khoản Azure Data Lake Storage Thế hệ 2 với tên dịch vụ chính Azure để có thông tin chuyên sâu về đối tượng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
+- Nếu sử dụng một cái mới Azure Data Lake Storage Tài khoản Gen2, *dịch vụ chính cho Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền. Tìm hiểu thêm về [kết nối với một Azure Data Lake Storage Tài khoản Gen2 với chính dịch vụ Azure cho Thông tin chi tiết về khách hàng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
 
 - Trên nhóm tài nguyên, nơi Azure Synapse không gian làm việc được đặt, *dịch vụ chính* và *Azure AD người dùng có quyền quản trị trong Thông tin chi tiết về khách hàng* ít nhất cần được chỉ định **Người đọc** quyền. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- Các *Azure AD người dùng có quyền quản trị trong Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền trên Azure Data Lake Storage Tài khoản Gen2 nơi đặt dữ liệu và được liên kết với Azure Synapse không gian làm việc. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- Các *Azure AD người dùng có quyền quản trị trong Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền trên Azure Data Lake Storage Tài khoản Gen2 nơi dữ liệu được đặt và liên kết với Azure Synapse không gian làm việc. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Danh tính có quản lý trong không gian làm việc Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob** trên tài khoản Azure Data Lake Storage Thế hệ 2, nơi đặt và liên kết dữ liệu với không gian làm việc Azure Synapse. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
@@ -70,7 +70,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.
 
-1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ **Azure Synapse Analytics** tiết diện. Nếu bạn không thấy tên phần này, tức là không có [kết nối](connections.md) nào thuộc loại này dành cho bạn.
+1. Bên trong **Kết nối để xuất** trường, chọn một kết nối từ **Azure Synapse Analytics** tiết diện. Nếu bạn không thấy tên phần này, tức là không có [kết nối](connections.md) nào thuộc loại này dành cho bạn.
 
 1. Đặt một **Tên hiển thị** dễ nhận biết cho việc xuất dữ liệu và **Tên cơ sở dữ liệu** của bạn.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644034"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755476"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights cung cấp các API để bạn xây dựng ứng
 > [!IMPORTANT]
 > Thông tin chi tiết về các API này được liệt kê trên [Tham chiếu API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Những thông tin này bao gồm thông tin bổ sung về hoạt động, tham số và phản hồi.
 
-Bài viết này mô tả cách tiếp cận API Customer Insights, tạo Đăng ký ứng dụng Azure và bắt đầu dùng các thư viện máy khách có sẵn.
+Bài viết này mô tả cách truy cập API thông tin chi tiết về khách hàng, tạo Đăng ký ứng dụng Azure và bắt đầu với thư viện khách hàng.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Bắt đầu dùng thử các API Customer Insights
 
@@ -83,13 +83,13 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 Để biết thêm thông tin về MSAL, hãy xem [Tổng quan về Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Để biết thêm thông tin về đăng ký ứng dụng trong Azure, hãy xem [Đăng ký ứng dụng](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Để biết thêm thông tin về đăng ký ứng dụng trong Azure, hãy xem [Đăng ký ứng dụng](/graph/auth-register-app-v2).
 
 Để biết thông tin về cách sử dụng API trong thư viện máy khách của chúng tôi, hãy xem [Thư viện máy khách Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Quyền của ứng dụng giữa các máy chủ
 
-[Phần đăng ký ứng dụng](#create-a-new-app-registration-in-the-azure-portal) cho biết cách đăng ký ứng dụng cần người dùng đăng nhập để xác thực. Tìm hiểu cách tạo đăng ký ứng dụng không cần người dùng tương tác và có thể chạy trên máy chủ.
+[Phần đăng ký ứng dụng](#create-a-new-app-registration-in-the-azure-portal) cho biết cách đăng ký ứng dụng cần người dùng đăng nhập để xác thực. Tìm hiểu cách tạo đăng ký ứng dụng không cần sự tương tác của người dùng và có thể chạy trên máy chủ.
 
 1. Khi đăng ký ứng dụng của bạn trong cổng Azure, hãy đi tới **Quyền API**.
 
@@ -112,6 +112,10 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
    Mở Customer Insights, đi tới **Quản trị viên** > **Quyền** và chọn **Thêm người dùng**.
 
 1. Tìm kiếm tên đăng ký ứng dụng của bạn, chọn tên đó từ kết quả tìm kiếm và chọn **Lưu**.
+
+## <a name="sample-queries"></a>Truy vấn mẫu
+
+Chúng tôi đã biên soạn một danh sách ngắn các truy vấn mẫu OData để làm việc với các API: [Ví dụ về truy vấn OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Thư viện máy khách Customer Insights
 
@@ -137,7 +141,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 
 1. Sử dụng [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) để nhận `AccessToken` bằng cách sử dụng [đăng ký ứng dụng Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng`HttpClient` với phần bổ sung **DefaultRequestHeaders "Ủy quyền"** đặt thành **Mang "mã thông báo truy cập"** và **Ocp-Apim-Đăng ký-Khóa** đặt thành [**khóa đăng ký** từ môi trường Thông tin chi tiết về khách hàng của bạn](#get-started-trying-the-customer-insights-apis).   
+1. Sau khi xác thực thành công và có được mã thông báo, hãy tạo mã mới hoặc sử dụng`HttpClient` với **DefaultRequestHeaders "Ủy quyền"** đặt thành **Mang "mã thông báo truy cập"** và **Ocp-Apim-Đăng ký-Khóa** đặt thành [**khóa đăng ký** từ môi trường Thông tin chi tiết về khách hàng của bạn](#get-started-trying-the-customer-insights-apis).   
  
    Đặt lại tiêu đề **Ủy quyền** khi thích hợp. Ví dụ: khi mã thông báo hết hạn.
 
@@ -147,7 +151,7 @@ Tìm hiểu cách bắt đầu sử dụng thư viện máy khách C# từ NuGet
 
 1. Thực hiện cuộc gọi với máy khách đến "phương pháp mở rộng", ví dụ: `GetAllInstancesAsync`. Nếu truy cập vào `Microsoft.Rest.HttpOperationResponse` cơ sở được ưu tiên, hãy sử dụng "phương thức thông báo http", ví dụ: `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Phản hồi sẽ có thể thuộc loại `object` vì phương thức này có thể trả về nhiều loại (ví dụ: `IList<InstanceInfo>` và `ApiErrorResult`). Để kiểm tra loại trả về, bạn có thể truyền an toàn các đối tượng vào các loại phản hồi được chỉ định trên [Trang chi tiết API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) cho hoạt động đó.    
+1. Phản hồi sẽ có thể thuộc loại `object` vì phương thức này có thể trả về nhiều loại (ví dụ: `IList<InstanceInfo>` và `ApiErrorResult`). Để kiểm tra kiểu trả về, bạn sử dụng các đối tượng trong kiểu phản hồi được chỉ định trên [Trang chi tiết API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) cho hoạt động đó.    
    
    Nếu cần thêm thông tin về yêu cầu, hãy sử dụng **phương thức thông báo http** để truy cập đối tượng phản hồi thô.
 

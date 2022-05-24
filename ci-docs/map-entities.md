@@ -1,110 +1,83 @@
 ---
-title: Ánh xạ thực thể và thuộc tính để hợp nhất dữ liệu
-description: Chọn các thực thể, thuộc tính, khóa chính và loại ngữ nghĩa để ánh xạ dữ liệu vào hồ sơ khách hàng hợp nhất.
-ms.date: 10/18/2020
+title: Chọn các trường nguồn để hợp nhất dữ liệu
+description: Bước đầu tiên trong quá trình hợp nhất là chọn các thực thể, thuộc tính, khóa chính và loại ngữ nghĩa để ánh xạ dữ liệu vào hồ sơ khách hàng hợp nhất.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644013"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741021"
 ---
-# <a name="map-entities-and-attributes"></a>Ánh xạ thực thể và thuộc tính
+# <a name="select-source-fields-for-data-unification"></a>Chọn các trường nguồn để hợp nhất dữ liệu
 
-**Bản đồ** là giai đoạn đầu tiên trong quá trình hợp nhất dữ liệu. Ánh xạ bao gồm ba giai đoạn:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Lựa chọn thực thể*: Xác định các thực thể có thể kết hợp dẫn đến tập dữ liệu có thông tin đầy đủ hơn về khách hàng của bạn.
-- *Lựa chọn thuộc tính*: Đối với mỗi thực thể, xác định các cột bạn muốn kết hợp và hợp nhất trong giai đoạn *so khớp* và *hợp nhất*. Các cột này có tên là *Thuộc tính*.
-- *Khóa chính và lựa chọn kiểu ngữ nghĩa*: Đối với mỗi thực thể, hãy xác định một thuộc tính bạn muốn xác định làm khóa chính cho thực thể đó và đối với mỗi thuộc tính, hãy xác định một loại ngữ nghĩa mô tả tốt nhất thuộc tính đó.
+Bước đầu tiên trong quá trình hợp nhất là chọn các thực thể và trường trong tập dữ liệu mà bạn muốn hợp nhất. Chọn các thực thể chứa thông tin chi tiết liên quan đến khách hàng như tên, địa chỉ, số điện thoại và email. Bạn có thể chọn một hoặc nhiều thực thể.
 
-Để biết thêm thông tin về quy trình hợp nhất dữ liệu chung, hãy xem [Hợp nhất](data-unification.md).
+## <a name="select-entities-and-fields"></a>Chọn thực thể và trường
 
-## <a name="select-the-first-entities"></a>Chọn thực thể đầu tiên
+1. Đi đến **Dữ liệu** > **Hợp nhất**.
 
-1. Chuyển đến **Dữ liệu** > **Hợp nhất** > **Ánh xạ**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Ảnh chụp màn hình của trang đích thống nhất cho trải nghiệm chạy lần đầu tiên với Bắt đầu được đánh dấu.":::
 
-2. Bắt đầu giai đoạn ánh xạ bằng cách chọn **Chọn thực thể**.
+1. Chọn **Bắt đầu**.
 
-3. Chọn các thực thể và thuộc tính bạn muốn sử dụng trong giai đoạn *khớp* và *hợp nhất*. Bạn có thể chọn các thuộc tính bắt buộc riêng lẻ từ một thực thể hoặc bao gồm tất cả các thuộc tính từ một thực thể bằng cách chọn hộp kiểm **Bao gồm tất cả các trường** ở cấp thực thể. Chúng tôi khuyên bạn nên chọn ít nhất hai thực thể để hưởng lợi từ quá trình thống nhất dữ liệu.
+1. Trên **Các trường nguồn** trang, chọn **Chọn các thực thể và trường**. Các **Chọn các thực thể và trường** bảng hiển thị.
 
-   > [!div class="mx-imgBorder"]
-   > ![Ví dụ về thêm thực thể.](media/data-manager-configure-map-add-entities-example.png "Ví dụ về thêm thực thể")
+1. Chọn ít nhất một thực thể.
 
-   Trong ví dụ này, chúng tôi đang thêm thực thể **eCommerceContacts** và **loyCustomers**. Bằng cách chọn những thực thể này, bạn có thể có được thông tin chi tiết về khách hàng kinh doanh trực tuyến nào là thành viên của chương trình khách hàng thân thiết.
-   
-   Bạn có thể tìm kiếm từ khóa trên tất cả các thuộc tính và thực thể để chọn các thuộc tính bắt buộc mà bạn muốn ánh xạ.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Ví dụ về trường tìm kiếm.](media/data-manager-configure-map-search-fields-example.png "Ví dụ về trường tìm kiếm")
+1. Đối với mỗi thực thể đã chọn, hãy xác định các trường bạn muốn sử dụng để khớp với hồ sơ khách hàng và các trường để đưa vào hồ sơ hợp nhất. Các trường này được gọi là *Thuộc tính*. Bạn có thể chọn các thuộc tính bắt buộc riêng lẻ từ một thực thể hoặc bao gồm tất cả các thuộc tính từ một thực thể bằng cách chọn hộp kiểm ở cấp thực thể. Bạn có thể tìm kiếm từ khóa trên tất cả các thuộc tính và thực thể để chọn các thuộc tính bắt buộc mà bạn muốn ánh xạ.
 
-4. Lựa chọn **Áp dụng** để xác nhận lựa chọn của bạn.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Ảnh chụp màn hình của các thực thể và thuộc tính đã chọn.":::
+
+   Trong ví dụ này, chúng tôi đang thêm **Liên lạc** và **Khách hàng** các thực thể. Bằng cách chọn những thực thể này, bạn có thể có được thông tin chi tiết về khách hàng kinh doanh trực tuyến nào là thành viên của chương trình khách hàng thân thiết.
+
+1. Lựa chọn **Áp dụng** để xác nhận lựa chọn của bạn. Các thực thể và thuộc tính đã chọn sẽ hiển thị.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Chọn khóa chính và loại ngữ nghĩa cho các thuộc tính
 
-Sau khi chọn các thực thể của bạn, trang **Bản đồ** sẽ liệt kê các thực thể đã chọn để bạn xem xét. Xác định khóa chính cho một thực thể và xác định kiểu ngữ nghĩa cho một thuộc tính trong thực thể.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Ảnh chụp màn hình của các thực thể đã chọn với khóa chính chưa được chọn." lightbox="media/m3_select_primary.png":::
 
-- **Khóa chính**: Chọn một thuộc tính làm khóa chính cho từng thực thể của bạn. Để một thuộc tính là khóa chính hợp lệ, thuộc tính đó không được bao gồm các giá trị trùng lặp, giá trị bị thiếu hoặc giá trị rỗng. Các thuộc tính kiểu dữ liệu chuỗi, số nguyên và GUID được hỗ trợ làm khóa chính và sẽ được hiển thị trong một trường để bạn chọn.
+Đối với mỗi thực thể, hãy thực hiện các bước sau.
 
-- **Loại ngữ nghĩa thuộc tính**: Danh mục các thuộc tính của bạn, chẳng hạn như địa chỉ email hoặc tên. Để sử dụng mô hình trí tuệ nhân tạo cho dự đoán thông minh về ngữ nghĩa, tiết kiệm thời gian và cải thiện độ chính xác, hãy đặt **Ánh xạ thông minh** thành **BẬT**. Ánh xạ thông minh làm nổi bật các đề xuất ngữ nghĩa dựa trên AI trong trường **Loại**. Nếu bạn đặt nó thành **TẮT**, bạn sẽ thấy các đề xuất ánh xạ thông thường của chúng tôi. Bạn có thể chọn bất kỳ kiểu ngữ nghĩa nào từ danh sách tùy chọn có sẵn và ghi đè lựa chọn được gợi ý.
+1. Chọn **Khóa chính**. Khóa chính là một thuộc tính duy nhất của thực thể. Để một thuộc tính là khóa chính hợp lệ, thuộc tính đó không được bao gồm các giá trị trùng lặp, giá trị bị thiếu hoặc giá trị rỗng. Các thuộc tính kiểu dữ liệu chuỗi, số nguyên và GUID được hỗ trợ làm khóa chính.
 
-> [!div class="mx-imgBorder"]
-> ![Loại thuộc tính và ngữ nghĩa dự đoán.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Loại thuộc tính và ngữ nghĩa dự đoán")
+1. Để sử dụng mô hình AI cho dự đoán thông minh về ngữ nghĩa, tiết kiệm thời gian và cải thiện độ chính xác, hãy đảm bảo **Lập bản đồ thông minh** đang bật. Ánh xạ thông minh làm nổi bật các đề xuất ngữ nghĩa dựa trên AI trong trường **Loại**. Bạn có thể ghi đè lựa chọn được đề xuất bằng cách chọn bất kỳ loại ngữ nghĩa nào từ danh sách tùy chọn có sẵn.
 
-Cũng có thể thêm một loại ngữ nghĩa tùy chỉnh. Chọn trường loại cho thuộc tính đó và nhập tên loại ngữ nghĩa tùy chỉnh của bạn. Như vậy, bạn cũng có thể thay đổi các loại thuộc tính được xác định bởi hệ thống.
+1. Đối với mỗi thuộc tính, hãy chọn một ngữ nghĩa **Gõ phím** mô tả tốt nhất thuộc tính đó, chẳng hạn như tên, thành phố hoặc địa chỉ email.
 
-Tất cả các thuộc tính mà một loại ngữ nghĩa được nhận dạng tự động được nhóm lại trong phần **Xem lại các trường được ánh xạ**. Xem lại các thuộc tính này và các loại ngữ nghĩa của chúng vì chúng sẽ được sử dụng để kết hợp các thực thể của bạn trong bước hợp nhất của hợp nhất dữ liệu.
+   > [!NOTE]
+   > Một trường nên ánh xạ đến kiểu ngữ nghĩa *Person.FullName* để điền tên khách hàng vào thẻ khách hàng. Nếu không, thẻ khách hàng sẽ xuất hiện không tên.
 
-Các thuộc tính không được ánh xạ tự động đến một loại ngữ nghĩa được nhóm lại trong phần **Xác định dữ liệu trong các trường chưa được ánh xạ**. Chọn trường loại ngữ nghĩa cho các thuộc tính chưa được ánh xạ hoặc nhập tên loại thuộc tính tùy chỉnh của bạn.
+   1. Để thay đổi một loại thuộc tính được hệ thống xác định, hãy chọn một loại khác. Nếu loại không tồn tại, hãy tạo một loại ngữ nghĩa tùy chỉnh bằng cách chọn **Gõ phím** cho thuộc tính và nhập tên loại ngữ nghĩa tùy chỉnh của bạn.
 
-> [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính.](media/data-manager-configure-map-add-attributes.png "Khóa chính và loại thuộc tính")
+   1. Để thêm thuộc tính chứa URL vào hình ảnh hoặc biểu trưng hồ sơ có sẵn công khai, hãy chọn thực thể và trường chứa URL. Bên trong **Gõ phím**, hãy nhập như sau:
+      - Đối với một người: Person.ProfileImage
+      - Đối với một tổ chức: Organisation.LogoImage
 
-> [!NOTE]
-> Một trường nên ánh xạ đến kiểu ngữ nghĩa Person.FullName để điền tên khách hàng vào thẻ khách hàng. Nếu không, thẻ khách hàng sẽ xuất hiện không tên. 
+   1. Đối với thuộc tính tên tài khoản, hãy nhập "Organization.Name" trong **Gõ phím** đồng ruộng.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Thêm và xóa các thuộc tính và thực thể
+1. Xem lại các thuộc tính nơi loại ngữ nghĩa được tự động xác định. Các thuộc tính này được liệt kê dưới **Xem lại các trường được ánh xạ**. Chỉ các thuộc tính có cùng loại mới có thể được kết hợp trong **Các trường khách hàng hợp nhất** bước chân. Các loại ngữ nghĩa được sử dụng để tự động đề xuất thông tin chi tiết. Đảm bảo các loại bạn đã chọn nhất quán trên tất cả các thực thể đã chọn.
 
-1. Trên **Hợp nhất** > **Bản đồ**, chọn **Chỉnh sửa các trường**.
+1. Đối với các thuộc tính không được ánh xạ tự động đến một loại ngữ nghĩa, hãy chọn trường loại ngữ nghĩa, nhập tên loại thuộc tính tùy chỉnh của bạn hoặc để chúng không được ánh xạ. Các thuộc tính này được liệt kê dưới **Xác định dữ liệu trong các trường chưa được ánh xạ**.
 
-2. Trong ngăn **Chỉnh sửa các trường**, thêm hoặc xóa các thuộc tính và thực thể. Sử dụng tìm kiếm hoặc cuộn để tìm và chọn các thuộc tính và thực thể bạn quan tâm. Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chúng đã được đối sánh.
+1. Sau khi hoàn thành các bước cho từng thực thể, hãy chọn **Lưu các trường nguồn**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Thêm hoặc loại bỏ thuộc tính.](media/configure-data-map-edit.png "Thêm hoặc loại bỏ thuộc tính")
+1. Chọn **Tiếp theo**.
 
-3. Chọn **Áp dụng**.
-
-## <a name="add-images-to-profiles"></a>Thêm hình ảnh vào hồ sơ
-
-Nếu một thực thể chứa URL tới logo hoặc hình ảnh hồ sơ sẵn có công khai, bạn có thể thêm chúng vào hồ sơ khách hàng hợp nhất.
-
-Chọn thực thể và tìm trường có chứa URL tới hình ảnh hồ sơ. Trong trường nhập **Loại**, hãy nhập giá trị sau: 
-- Đối với một người: Person.ProfileImage
-- Đối với một tổ chức: Organisation.LogoImage
-
-Tiếp tục với các bước hợp nhất và đảm bảo thuộc tính chứa URL hình ảnh cũng được thêm vào bước [Hợp nhất](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Đặt thuộc tính cho tổ chức
-
-Đối với tổ chức (Xem trước), loại thuộc tính sẽ được ánh xạ tới "Organization.Name"
-> [!div class="mx-imgBorder"]
-> ![Khóa chính và loại thuộc tính B2B.](media/configure-data-map-edit-b2b.png "Khóa chính và loại thuộc tính B2B")
-
-## <a name="next-step"></a>Bước tiếp theo
-
-Là một phần của quá trình thống nhất dữ liệu, hãy chuyển đến trang **So khớp**. Truy cập phần [**So khớp**](match-entities.md) để tìm hiểu về giai đoạn này.
-
-> [!TIP]
-> Xem video sau: [Bắt đầu: Tạo hồ sơ khách hàng hợp nhất](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Bước tiếp theo: Xóa các bản sao](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

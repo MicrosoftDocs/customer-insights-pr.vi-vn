@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644125"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741205"
 ---
 # <a name="power-automate-connector-preview"></a>Trình kết nối Power Automate (xem trước)
 
@@ -25,14 +25,14 @@ Kích hoạt các sự kiện cụ thể xảy ra tự động khi dữ liệu c
 
 ## <a name="power-automate-triggers"></a>Trình kích hoạt Power Automate
 
-Sử dụng trình kích hoạt để tạo luồng đám mây và tự động hóa các tác vụ lặp lại, chẳng hạn như thông báo hoặc các hành động nâng cao hơn. 
+Sử dụng trình kích hoạt để tạo luồng đám mây và tự động hóa các tác vụ lặp lại, chẳng hạn như thông báo hoặc các hành động nâng cao hơn.
 
-- Kích hoạt khi làm mới nguồn dữ liệu không thành công. 
+- Kích hoạt khi làm mới nguồn dữ liệu không thành công.
 - Kích hoạt khi làm mới nguồn dữ liệu thành công.
 - Kích hoạt khi ngưỡng vượt quá trên một phân khúc. Kích hoạt bị giới hạn để vượt quá ngưỡng.
 - Kích hoạt khi ngưỡng vượt quá trên một giá trị đo kinh doanh. Chỉ hỗ trợ giá trị đo công việc không có kích thước. Kích hoạt bị giới hạn để vượt quá ngưỡng.
 - Kích hoạt khi hoàn thành quá trình làm mới đầy đủ (nguồn dữ liệu, phân khúc, đo lường,...).
-- Kích hoạt khi hoàn tất quá trình làm mới quy trình hợp nhất (ánh xạ, khớp, hợp nhất).
+- Kích hoạt khi quá trình làm mới hoàn tất.
 
 [Định cấu hình trình kích hoạt trong Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

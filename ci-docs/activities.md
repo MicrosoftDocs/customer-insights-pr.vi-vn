@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644037"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755524"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
-Kết hợp các hoạt động của khách hàng từ [những nguồn dữ liệu khác nhau](data-sources.md) trong Dynamics 365 Customer Insights để tạo dòng thời gian liệt kê các hoạt động theo thứ tự thời gian. Bao gồm dòng thời gian trong các ứng dụng Dynamics 365 với giải pháp [phần bổ trợ Thẻ khách hàng](customer-card-add-in.md) hoặc trong một bảng điều khiển Power BI.
+Kết hợp các hoạt động của khách hàng từ [nguồn dữ liệu khác nhau](data-sources.md) trong Dynamics 365 Customer Insights. Tạo một dòng thời gian liệt kê các hoạt động theo thứ tự thời gian. Bao gồm tiến trình trong các ứng dụng Dynamics 365 với [Phần bổ trợ Thẻ khách hàng](customer-card-add-in.md) sự hòa tan.
 
 ## <a name="define-an-activity"></a>Xác định hoạt động
 
@@ -78,7 +78,7 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. Bạn có thể chọn **Kết thúc và xem xét** để lưu hoạt động ngay bây giờ khi loại hoạt động được đặt thành **Khác**. 
 
-1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, các loại hoạt động *Phản hồi*, *Khách hàng thân thiết*, *SalesOrder*, *SalesOrderLine* và *Đăng ký* có thể được ánh xạ theo ngữ nghĩa sau khi bạn đồng ý ánh xạ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
+1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, *Phản hồi*, *trung thành*, *đặt hàng*, *·*, và *Đăng ký* các loại hoạt động hỗ trợ ngữ nghĩa sau khi đồng ý lập bản đồ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
 
 1. Chọn **Tiếp** để chuyển sang bước tiếp theo. 
 
@@ -110,7 +110,7 @@ Sau khi bạn đặt cấu hình các hoạt động của khách hàng, hãy ch
 
 Để mở dòng thời gian cho khách hàng, hãy truy cập **Khách hàng** và chọn hồ sơ khách hàng mà bạn muốn xem.
 
-Nếu một khách hàng đã tham gia vào một hoạt động mà bạn đã đặt cấu hình, bạn sẽ tìm thấy nó trong phần **Dòng thời gian hoạt động**.
+Nếu khách hàng đã tham gia vào một hoạt động đã định cấu hình, bạn sẽ tìm thấy nó trong **Dòng thời gian hoạt động** tiết diện.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Xem các hoạt động đã đặt cấu hình trong Hồ sơ khách hàng.":::
 

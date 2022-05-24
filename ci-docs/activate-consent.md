@@ -1,23 +1,22 @@
 ---
 title: Kích hoạt các quy tắc về sự đồng ý cho các phân đoạn
 description: Làm theo các bước sau để liên kết dữ liệu về sự đồng ý và kích hoạt tính năng kiểm tra sự đồng ý Dynamics 365 Customer Insights. Quản trị viên cũng có thể tắt kiểm tra sự đồng ý.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644001"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755196"
 ---
 # <a name="activate-consent-rules"></a>Kích hoạt các quy tắc về sự đồng ý
 
-Các [Trung tâm đồng ý (xem trước)](consent-management/overview.md) giúp bạn hài hòa dữ liệu về sự đồng ý từ nhiều nguồn khác nhau. Sử dụng hợp nhất *Bằng lòng* pháp nhân để áp dụng kiểm tra sự đồng ý mặc định. Sau khi nhập dữ liệu về sự đồng ý vào Trung tâm đồng ý và định cấu hình các quy tắc cho dữ liệu, *Bằng lòng* thực thể được tự động đồng bộ hóa với Dynamics 365 Customer Insights.
+Các [Trung tâm đồng ý (xem trước)](consent-management/overview.md) giúp bạn hài hòa dữ liệu về sự đồng ý từ nhiều nguồn khác nhau. Sử dụng hợp nhất *Bằng lòng* pháp nhân để áp dụng kiểm tra sự đồng ý mặc định. Sau khi nhập dữ liệu về sự đồng ý và định cấu hình các quy tắc bản đồ, *Bằng lòng* thực thể được tự động đồng bộ hóa với Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Bật kiểm tra sự chấp thuận
 

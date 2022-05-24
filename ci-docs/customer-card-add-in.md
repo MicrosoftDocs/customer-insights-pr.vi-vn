@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643994"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755662"
 ---
 # <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
-
-
 
 Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Với phần bổ trợ Thẻ khách hàng được cài đặt trong ứng dụng Dynamics 365 được hỗ trợ, bạn có thể chọn hiển thị các trường hồ sơ khách hàng, thông tin chi tiết và tiến trình hoạt động. Phần bổ trợ sẽ truy xuất dữ liệu từ Customer Insights mà không ảnh hưởng đến dữ liệu trong ứng dụng Dynamics 365 được kết nối.
 
@@ -31,9 +29,9 @@ Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamic
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Phần bổ trợ này chỉ hoạt động với các ứng dụng dựa trên mô hình Dynamics 365, chẳng hạn như ứng dụng Sales hoặc Customer Service, phiên bản 9.0 trở lên.
-- Để dữ liệu Dynamics 365 của bạn liên kết với hồ sơ khách hàng Customer Insights, chúng tôi khuyên bạn nên [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Microsoft Dataverse tư nối](connect-power-query.md). Nếu bạn sử dụng một phương pháp khác để nhập địa chỉ liên hệ (hoặc tài khoản) Dynamics 365, bạn cần đảm bảo`contactid` (hoặc`accountid`) trường được đặt là [khóa chính cho nguồn dữ liệu đó trong bước bản đồ của quy trình hợp nhất dữ liệu](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Để dữ liệu Dynamics 365 của bạn liên kết với hồ sơ khách hàng Customer Insights, chúng tôi khuyên bạn nên [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Microsoft Dataverse tư nối](connect-power-query.md). Nếu bạn sử dụng một phương pháp khác để nhập địa chỉ liên hệ (hoặc tài khoản) Dynamics 365, bạn cần đảm bảo`contactid` (hoặc`accountid`) trường được đặt là [khóa chính cho nguồn dữ liệu đó trong bước bản đồ của quy trình hợp nhất dữ liệu](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tất cả người dùng Dynamics 365 của Phần bổ trợ Thẻ Khách hàng phải [được thêm vào với tư cách là người dùng](permissions.md) trong Thông tin chi tiết về khách hàng để xem dữ liệu.
-- [Khả năng lọc và tìm kiếm đã định cấu hình](search-filter-index.md) trong Thông tin chi tiết về khách hàng là bắt buộc để tra cứu dữ liệu hoạt động.
+- [Các khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md) trong Thông tin chi tiết về khách hàng là bắt buộc để tra cứu dữ liệu hoạt động.
 - Mỗi kiểm soát bổ trợ dựa trên dữ liệu cụ thể trong Thông tin chi tiết về khách hàng. Một số dữ liệu và điều khiển chỉ có sẵn trong các môi trường thuộc các loại cụ thể. Cấu hình bổ trợ sẽ thông báo cho bạn nếu điều khiển không khả dụng do loại môi trường đã chọn. Tìm hiểu thêm về [trường hợp sử dụng môi trường](work-with-business-accounts.md).
   - **Kiểm soát đo lường**: Yêu cầu [các biện pháp được đặt cấu hình](measures.md) của thuộc tính của loại khách hàng.
   - **Kiểm soát thông minh** : Yêu cầu dữ liệu được tạo bằng cách sử dụng [dự đoán hoặc mô hình tùy chỉnh](predictions-overview.md).
@@ -132,16 +130,16 @@ Ngay cả với các trường ID được định cấu hình chính xác, các
 
 **Cách giải quyết:**
 
-1. Đảm bảo rằng bạn đã định cấu hình Phần bổ trợ Thẻ theo hướng dẫn: [Định cấu hình bổ trợ Thẻ khách hàng](#configure-the-customer-card-add-in) 
+1. Đảm bảo rằng bạn đã định cấu hình Phần bổ trợ Thẻ theo hướng dẫn: [Định cấu hình bổ trợ Thẻ khách hàng](#configure-the-customer-card-add-in)
 
-1. Xem lại cấu hình nhập dữ liệu. Chỉnh sửa nguồn dữ liệu cho hệ thống Dynamics 365 có chứa GUID ID liên hệ. Nếu GUID ID liên hệ được hiển thị với các ký tự viết hoa trong Power Query trình chỉnh sửa, hãy thử những cách sau: 
+1. Xem lại cấu hình nhập dữ liệu. Chỉnh sửa nguồn dữ liệu cho hệ thống Dynamics 365 có chứa GUID ID liên hệ. Nếu GUID ID liên hệ được hiển thị với các ký tự viết hoa trong Power Query trình chỉnh sửa, hãy thử các bước sau:
     1. Chỉnh sửa nguồn dữ liệu để mở nguồn dữ liệu trong Power Query Người biên tập.
     1. Chọn cột ID liên hệ.
     1. Lựa chọn **Biến đổi** trong thanh tiêu đề để xem các hành động khả dụng.
     1. Lựa chọn **chữ thường**. Xác thực nếu GUID trong bảng bây giờ là chữ thường.
     1. Lưu nguồn dữ liệu.
-    1. Chạy các quy trình nhập, hợp nhất và hạ nguồn dữ liệu để phổ biến các thay đổi đối với GUID. 
+    1. Chạy các quy trình nhập, hợp nhất và hạ nguồn dữ liệu để phổ biến các thay đổi đối với GUID.
 
-Sau khi hoàn tất quá trình làm mới đầy đủ, các điều khiển của Phần bổ trợ Thẻ Khách hàng sẽ hiển thị dữ liệu mong đợi. 
+Sau khi hệ thống hoàn tất việc làm mới toàn bộ, các điều khiển của Phần bổ trợ Thẻ Khách hàng sẽ hiển thị dữ liệu dự kiến.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

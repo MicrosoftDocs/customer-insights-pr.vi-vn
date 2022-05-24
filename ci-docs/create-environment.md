@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643997"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712928"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Tạo môi trường trong Thông tin chi tiết về khách hàng
 
@@ -63,8 +63,7 @@ Bạn sẽ có hai lựa chọn: **Bộ nhớ Customer Insights** (một kho d�
 Bằng cách lưu dữ liệu vào Azure Data Lake Storage, bạn đồng ý rằng dữ liệu sẽ được chuyển đến và lưu trữ ở vị trí địa lý thích hợp cho tài khoản lưu trữ Azure đó. Vị trí này có thể khác với nơi dữ liệu được lưu trữ trong Dynamics 365 Customer Insights. Hãy tìm hiểu thêm tại [Trung tâm tin cậy Microsoft](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights hiện hỗ trợ:
-> - Các thực thể được nhập từ luồng dữ liệu Power BI được lưu trữ trong Microsoft Dataverse - Data Lake được quản lý.  
+> Customer Insights hiện hỗ trợ:  
 > - Tài khoản Azure Data Lake Storage từ cùng một vùng Azure mà bạn đã chọn khi tạo môi trường.
 > - Azure Data Lake Storage tài khoản Gen2 và có *không gian tên phân cấp* đã được kích hoạt. Tài khoản lưu trữ Azure Data Lake Gen1 không được hỗ trợ.
 
@@ -78,16 +77,16 @@ Nếu bạn tạo nhiều môi trường Customer Insights và chọn lưu các 
    
 Bước **Microsoft Dataverse** cho phép bạn kết nối Customer Insights với môi trường Dataverse.
 
-Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo mô hình trong Power Apps. Để trống trường này nếu bạn không có Dataverse môi trường và chúng tôi sẽ cung cấp một môi trường cho bạn.
+Cung cấp của riêng bạn Microsoft Dataverse môi trường để chia sẻ dữ liệu (hồ sơ và thông tin chi tiết) với các ứng dụng kinh doanh dựa trên Dataverse, như Dynamics 365 Marketing hoặc các ứng dụng theo hướng mô hình trong Power Apps. Để trống trường này nếu bạn không có Dataverse môi trường và chúng tôi sẽ cung cấp một môi trường cho bạn.
 
-Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và các cổng](data-sources.md#add-data-from-on-premises-data-sources). Bạn cũng có thể dùng [mô hình xuất xưởng dự đoán](predictions-overview.md?tabs=b2c#out-of-box-models) bằng cách kết nối với một Dataverse môi trường.
+Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và các cổng](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Thông tin chi tiết về khách hàng và Dataverse phải ở trong cùng một khu vực để cho phép chia sẻ dữ liệu.
 > 1. Bạn phải có vai trò quản trị viên toàn cầu trong Dataverse môi trường. Xác minh nếu điều này [Dataverse môi trường được liên kết](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) vào các nhóm bảo mật nhất định và đảm bảo rằng bạn được thêm vào các nhóm bảo mật đó.
 > 1. Không có môi trường Thông tin chi tiết về khách hàng hiện tại nào được liên kết với môi trường đó Dataverse môi trường. Học cách [loại bỏ một kết nối hiện có với một Dataverse môi trường](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="chia sẻ dữ liệu với Microsoft Dataverse tự động được bật cho các phiên bản mới thuần.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="chia sẻ dữ liệu với Microsoft Dataverse tự động bật cho các phiên bản mới thuần.":::
 
 Để biết thêm thông tin về cách bật chia sẻ dữ liệu với Microsoft Dataverse từ của riêng bạn Azure Data Lake Storage, xem [Kết nối với Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
 

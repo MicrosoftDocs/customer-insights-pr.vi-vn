@@ -3,16 +3,16 @@ title: Quản lý các quy tắc đồng ý mặc định trên các phân đo�
 description: Với khả năng quản lý sự đồng ý, bạn có thể tắt hoặc thay đổi các quy tắc đồng ý mặc định nếu tính năng ghi đè được bật.
 ms.date: 12/01/2021
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 43f03ea97765e112a8ea2a7da97cc548c8c84dfc
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 764eeca9d99c95a34d9bd4c11d79f8b8e90701e2
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644021"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755242"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Tắt hoặc thay đổi các quy tắc đồng ý mặc định
 
