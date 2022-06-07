@@ -1,7 +1,7 @@
 ---
 title: Kết nối dữ liệu Common Data Model với tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644046"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833424"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 
@@ -44,32 +44,32 @@ Bài viết này cung cấp thông tin về cách nhập dữ liệu vào Dynami
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**, nhập **Tên** cho nguồn dữ liệu, sau đó chọn **Kế tiếp**.
+1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**, nhập **Tên** cho nguồn dữ liệu, sau đó chọn **Tiếp theo**.
 
-   - Nếu được nhắc, hãy chọn một trong các bộ dữ liệu mẫu liên quan đến ngành của bạn, sau đó chọn **Kế tiếp**. 
+   - Nếu được nhắc, hãy chọn một trong các bộ dữ liệu mẫu liên quan đến ngành của bạn, sau đó chọn **Tiếp theo**.
 
-1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md). Nhập **Địa chỉ máy chủ**, lựa chọn **đăng nhập**, sau đó chọn **Kế tiếp**.
+1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md). Nhập **Địa chỉ máy chủ**, lựa chọn **đăng nhập**, sau đó chọn **Tiếp theo**.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại để nhập chi tiết kết nối mới cho Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Bạn cần một trong các vai trò sau đối với vùng chứa hoặc tài khoản lưu trữ được đề cập ở trên để có thể kết nối và tạo nguồn dữ liệu:
-   >  - Bộ đọc dữ liệu khối lưu trữ
-   >  - Chủ sở hữu dữ liệu khối lưu trữ
-   >  - Người đóng góp dữ liệu khối lưu trữ
+   > Bạn cần một trong các vai trò sau đối với vùng chứa trên tài khoản lưu trữ và tạo nguồn dữ liệu:
+   >
+   >  - Storage Blob Data Reader đủ để đọc từ tài khoản lưu trữ và nhập dữ liệu vào Thông tin chi tiết về khách hàng. 
+   >  - Người đóng góp hoặc chủ sở hữu dữ liệu Storage Blob là bắt buộc nếu bạn muốn chỉnh sửa tệp kê khai trực tiếp trong Thông tin chi tiết về khách hàng.
 
 1. Trong hộp thoại **Chọn thư mục Common Data Model**, chọn tệp model.json hoặc manifest.json để nhập dữ liệu từ đó và chọn **Tiếp theo**.
    > [!NOTE]
    > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách.
 
-1. Bạn sẽ thấy danh sách các thực thể có sẵn trong tệp model.json hoặc tệp manifest.json đã chọn. Xem lại và chọn từ danh sách các thực thể có sẵn, sau đó chọn **Cứu**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
+1. Bạn sẽ thấy danh sách các thực thể có sẵn trong tệp model.json hoặc tệp manifest.json đã chọn. Xem lại và chọn từ danh sách các thực thể có sẵn, sau đó chọn **Tiết kiệm**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại hiển thị danh sách thực thể từ tệp model.json.](media/review-entities.png)
 
-8. Cho biết thực thể dữ liệu nào bạn muốn bật cấu hình dữ liệu, sau đó chọn **Cứu**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
+1. Cho biết thực thể dữ liệu nào bạn muốn bật cấu hình dữ liệu, sau đó chọn **Tiết kiệm**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
    > [!div class="mx-imgBorder"]
    > ![Hộp thoại hiển thị phân tích chất lượng dữ liệu.](media/dataprofiling-entities.png)
 
-9. Sau khi bạn lưu các lựa chọn, trang **Nguồn dữ liệu** sẽ mở ra. Lúc này, bạn sẽ thấy kết nối thư mục Common Data Model dưới dạng nguồn dữ liệu.
+1. Sau khi bạn lưu các lựa chọn, trang **Nguồn dữ liệu** sẽ mở ra. Lúc này, bạn sẽ thấy kết nối thư mục Common Data Model dưới dạng nguồn dữ liệu.
 
 > [!NOTE]
 > Tệp model.json hoặc manifest.json chỉ có thể liên kết với một nguồn dữ liệu trong cùng một môi trường. Tuy nhiên, cùng một tệp model.json hoặc manifest.json có thể được sử dụng cho các nguồn dữ liệu trong nhiều môi trường.
@@ -80,7 +80,7 @@ Bạn có thể cập nhật khóa truy cập cho tài khoản lưu trữ có ch
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
 
-2. Cạnh nguồn dữ liệu mà bạn muốn thay đổi, hãy chọn dấu chấm lửng.
+2. Bên cạnh nguồn dữ liệu bạn muốn cập nhật, hãy chọn dấu chấm lửng dọc (&vellip;).
 
 3. Nhấp vào tùy chọn **Chỉnh sửa** trong danh sách.
 
@@ -93,13 +93,6 @@ Bạn có thể cập nhật khóa truy cập cho tài khoản lưu trữ có ch
 
    > ![Hộp thoại để nhập chi tiết kết nối cho Azure Data Lake với tài khoản lưu trữ hiện có.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Bạn cần một trong các vai trò sau đối với vùng chứa hoặc tài khoản lưu trữ được đề cập ở trên để có thể kết nối và tạo nguồn dữ liệu:
-   >  - Bộ đọc dữ liệu khối lưu trữ
-   >  - Chủ sở hữu dữ liệu khối lưu trữ
-   >  - Người đóng góp dữ liệu khối lưu trữ
-
-
 6. Tùy chọn, hãy chọn tệp model.json hoặc tệp manifest.json khác với một nhóm thực thể khác từ vùng chứa.
 
 7. Theo tùy chọn, bạn có thể chọn các thực thể bổ sung để nhập. Bạn cũng có thể xóa mọi thực thể đã chọn nếu không có phụ thuộc.
@@ -107,7 +100,6 @@ Bạn có thể cập nhật khóa truy cập cho tài khoản lưu trữ có ch
    > [!IMPORTANT]
    > Nếu có các phần phụ thuộc vào tệp model.json hoặc tệp manifest.json hiện có và tập hợp các thực thể, bạn sẽ thấy thông báo lỗi và không thể chọn tệp model.json hoặc tệp manifest.json khác. Hãy xóa các phần phụ thuộc đó trước khi thay đổi tệp model.json hoặc tệp manifest.json hoặc tạo một nguồn dữ liệu mới với tệp model.json hoặc tệp manifest.json mà bạn muốn sử dụng để tránh xóa các phần phụ thuộc.
 
-8. Theo tùy chọn, bạn có thể chọn các thuộc tính hoặc thực thể bổ sung để bật hoặc tắt phân tích chất lượng dữ liệu đã được chọn.   
-
+8. Theo tùy chọn, bạn có thể chọn các thuộc tính hoặc thực thể bổ sung để bật hoặc tắt phân tích chất lượng dữ liệu đã được chọn.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755476"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808553"
 ---
 # <a name="work-with-customer-insights-apis"></a>Làm việc với API Customer Insights
 
@@ -31,11 +31,11 @@ Bài viết này mô tả cách truy cập API thông tin chi tiết về khách
 
 1. [Đăng nhập](https://home.ci.ai.dynamics.com) vào Customer Insights. Nếu bạn chưa có đăng ký, [hãy đăng ký phiên bản dùng thử của Customer Insights](https://aka.ms/tryci).
 
-1. Để bật API trên môi trường Customer Insights của bạn, hãy truy cập **Quản trị viên** > **Quyền hạn**. Bạn sẽ cần quyền quản trị viên để làm như vậy.
+1. Để bật API trên môi trường Thông tin chi tiết về khách hàng của bạn, hãy truy cập **Quản trị viên** > **Bảo vệ**. Bạn sẽ cần quyền quản trị viên để làm như vậy.
 
 1. Đi đến **API** và chọn nút **Bật**.    
  
-   Việc bật API sẽ tạo khóa đăng ký chính và phụ cho phiên bản của bạn, khóa này được sử dụng trong các yêu cầu API. Bạn có thể tạo lại các khóa bằng cách chọn **Tạo lại khóa chính** hoặc **Tạo lại khóa phụ** trên **Quản trị viên** > **Quyền** > **API**.
+   Việc bật API sẽ tạo khóa đăng ký chính và phụ cho phiên bản của bạn, khóa này được sử dụng trong các yêu cầu API. Bạn có thể tạo lại các phím bằng cách chọn **Tạo lại chính** hoặc **Tạo lại thứ cấp** trên **Quản trị viên** > **Bảo vệ** > **API**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Các bước này giúp bạn bắt đầu dùng API Customer Insights trong ứ
 1. Ở bên trái, hãy chọn **Đăng ký ứng dụng**.
 
 1. Chọn **Đăng ký mới** để cung cấp tên ứng dụng và chọn loại tài khoản.
- 
+
    Theo tùy chọn, thêm URL chuyển hướng. http://localhost là đủ để phát triển một ứng dụng trên máy tính cục bộ của bạn.
 
 1. Trên đăng ký ứng dụng mới, hãy đi tới **Quyền API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Chọn **Thêm quyền** và chọn **Customer Insights** trong ngăn bên.
+1. Lựa chọn **Thêm một quyền** và chọn **Dynamics 365 AI cho thông tin chi tiết về khách hàng** trong ngăn bên.
 
 1. Đối với **Loại quyền**, chọn **Quyền được ủy thác** và sau đó chọn quyền **user_impersonation**.
 
@@ -109,7 +107,7 @@ Bạn có thể sử dụng ID ứng dụng/máy khách cho đăng ký ứng d�
 
 1. Để kết thúc, chúng tôi phải thêm tên đăng ký ứng dụng làm người dùng trong Customer Insights.  
    
-   Mở Customer Insights, đi tới **Quản trị viên** > **Quyền** và chọn **Thêm người dùng**.
+   Mở Thông tin chi tiết về khách hàng, truy cập **Quản trị viên** > **Bảo vệ** và chọn **Thêm người dùng**.
 
 1. Tìm kiếm tên đăng ký ứng dụng của bạn, chọn tên đó từ kết quả tìm kiếm và chọn **Lưu**.
 

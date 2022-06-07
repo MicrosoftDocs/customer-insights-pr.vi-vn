@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641542"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808593"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR
 
@@ -41,7 +41,7 @@ Quản trị viên Customer Insights có thể làm theo các bước sau để 
 1. Đăng nhập vào Dynamics 365 Customer Insights.
 2. Đi đến **Dữ liệu** > **Nguồn dữ liệu**
 3. Đối với từng nguồn dữ liệu trong danh sách chứa dữ liệu khách hàng đã xóa:
-   1. Chọn (...) rồi chọn **Làm mới**.
+   1. Chọn dấu chấm lửng dọc (&vellip;) và sau đó chọn **Làm mới**.
    2. Kiểm tra trạng thái nguồn dữ liệu trong **Trạng thái**. Một dấu kiểm có nghĩa là làm mới đã thành công. Một tam giác cảnh báo có nghĩa là đã có vấn đề. Nếu hình tam giác cảnh báo được hiển thị, hãy liên hệ với D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Quản trị viên Customer Insights có thể làm theo các bước sau để 
 Quản trị viên Customer Insights có thể làm theo các bước sau để xóa dữ liệu người dùng Customer Insights:
 
 1. Đăng nhập vào Dynamics 365 Customer Insights.
-2. Đi đến **Quản trị viên** > **Quyền hạn**.
+2. Đi đến **Quản trị viên** > **Bảo vệ** > **Quyền**.
 3. Chọn hộp kiểm tương ứng với người dùng bạn muốn xóa.
 4. Chọn **Loại bỏ**.
 

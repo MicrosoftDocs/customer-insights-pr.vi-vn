@@ -1,19 +1,19 @@
 ---
 title: Nguồn dữ liệu làm giàu
 description: Làm phong phú nguồn dữ liệu trước khi trải qua quá trình hợp nhất dữ liệu.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755712"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800307"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (xem trước)
 
@@ -27,7 +27,7 @@ Bạn phải có quyền Người đóng góp hoặc Quản trị viên để t�
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
 
-1. Chọn dấu ba chấm dọc bên cạnh nguồn dữ liệu mà bạn muốn bổ sung và chọn **Làm giàu**.
+1. Chọn dấu chấm lửng dọc (&vellip;) bên cạnh nguồn dữ liệu bạn muốn bổ sung và chọn **Làm giàu**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Trang làm giàu nguồn dữ liệu.":::
 
@@ -37,15 +37,16 @@ Bạn phải có quyền Người đóng góp hoặc Quản trị viên để t�
 
 ## <a name="supported-data-source-enrichments"></a>Các cách làm giàu nguồn dữ liệu được hỗ trợ
 
-Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lại các bước chi tiết cho phần bổ sung để tìm hiểu cách định cấu hình nó.
+Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lại các bước chi tiết của phần bổ sung để tìm hiểu cách định cấu hình nó.
 
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md)
 - [Dữ liệu công ty nâng cao](enrichment-enhanced-company-data.md)
+- [Dữ liệu nhận dạng từ LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Quản lý bổ sung nguồn dữ liệu hiện có
 
 Đi đến tab **Dữ liệu tăng cường của tôi** để xem tất cả thông tin bổ sung đã đặt cấu hình.
 
-Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng (...) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã đặt cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
+Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng dọc (&vellip;) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã đặt cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
 
 Bạn có thể xem, chỉnh sửa, chạy hoặc xóa phần bổ sung nguồn dữ liệu. Để biết thêm thông tin, hãy xem [Quản lý các nội dung phong phú hiện có](enrichment-hub.md).

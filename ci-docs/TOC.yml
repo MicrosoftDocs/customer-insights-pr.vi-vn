@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Danh mục học tập
   items:
-    - name: Bắt đầu
+    - name: Chứng nhận là Chuyên gia Nền tảng Dữ liệu Khách hàng của Microsoft
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Bắt đầu với Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Thu thập dữ liệu
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Bắt đầu với giấy phép trả phí
       href: paid-license.md
-    - name: Tạo môi trường mới
-      href: create-environment.md
     - name: Khám phá thông tin chi tiết về khách hàng
       href: home.md
     - name: Làm việc với các thẻ và cột
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Xem lại lược đồ thực thể trong Common Data Model
       href: entity-schemas.md
-    - name: Dữ liệu Customer Insights trong Dataverse
-      href: customer-insights-dataverse.md
     - name: Xây dựng mối quan hệ và các thực thể được kết nối
       href: relationships.md
     - name: Xác định ánh xạ ngữ nghĩa
       href: semantic-mappings.md
+- name: Môi trường
+  items:
+    - name: Tạo môi trường mới
+      href: create-environment.md
+    - name: Kết nối với Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: Tự dùng cái của bạn đi Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Quản lý thiết đặt môi trường
+      href: manage-environments.md
+    - name: Kết nối với tài khoản lưu trữ bằng Service chính
+      href: connect-service-principal.md
 - name: Quản trị
   items:
     - name: Thiết lập cấu hình hệ thống
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Chỉ định quyền của người dùng
       href: permissions.md
-    - name: Tổng quan về kết nối
-      href: connections.md
-    - name: Quản lý nhiều môi trường
-      href: manage-environments.md
     - name: Mang Key Vault của riêng bạn
       href: use-azure-key-vault.md
-    - name: Kết nối với tài khoản lưu trữ bằng Service chính
-      href: connect-service-principal.md
     - name: Xuất nhật ký chẩn đoán
       href: diagnostics.md
-    - name: Giới hạn dịch vụ
-      href: service-limits.md
-    - name: Quyền và yêu cầu DSR
-      href: dsr-rights-requests.md
+    - name: Tổng quan về kết nối
+      href: connections.md
 - name: API
   items:
     - name: Làm việc với API
@@ -324,5 +328,9 @@
       items:
         - name: Tạo dự đoán với dữ liệu về sự đồng ý
           href: consent-management/predictions-consent-data.md
+- name: Giới hạn dịch vụ
+  href: service-limits.md
+- name: Quyền và yêu cầu DSR
+  href: dsr-rights-requests.md
 - name: Nhận hỗ trợ
   href: /power-platform/admin/get-help-support

@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641834"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833794"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Câu hỏi thường gặp về bản dùng thử Dynamics 365 Customer Insights
 
@@ -42,7 +42,7 @@ Khi đăng ký bản dùng thử, bạn sẽ nhận được email chứa thông
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Làm cách nào để thêm người dùng khác vào bản dùng thử?
 
-Để thêm người dùng, hãy truy cập [trung tâm quản trị Microsoft 365](https://admin.microsoft.com) bằng tài khoản quản trị cho bản dùng thử. Làm theo [hướng dẫn của trung tâm quản trị](/microsoft-365/admin/add-users/add-users) để thêm người dùng tới giới hạn của giấy phép dùng thử. Nếu người dùng bạn đang thêm đã có Microsoft 365, hãy chỉ định cho họ một vai trò bảo mật thích hợp trong tổ chức dùng thử. Để biết thêm thông tin, hãy xem [Gán vai trò bảo mật cho người dùng](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Để thêm người dùng, hãy truy cập [trung tâm quản trị Microsoft 365](https://admin.microsoft.com) bằng tài khoản quản trị cho bản dùng thử. Làm theo [hướng dẫn của trung tâm quản trị](/microsoft-365/admin/add-users/add-users) để thêm người dùng tới giới hạn của giấy phép dùng thử. Nếu người dùng bạn đang thêm đã có một Microsoft 365, hãy chỉ định cho họ một vai trò bảo mật thích hợp trong tổ chức dùng thử. Để biết thêm thông tin, hãy xem [Gán vai trò bảo mật cho người dùng](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Tôi có thể thêm bao nhiêu người dùng vào môi trường dùng thử của mình?
 
@@ -62,9 +62,9 @@ Bạn có thể kéo dài thời gian dùng thử ngay trong ứng dụng. Bạn
 
 Nói chung, chúng tôi khuyên bạn nên bắt đầu làm mới với dữ liệu của chính mình khi nâng cấp lên phiên bản trả phí của Customer Insights. 
 
-Theo tùy chọn, nếu bạn chỉ sử dụng Thông tin chi tiết về khách hàng, bạn có thể sao chép dữ liệu của mình từ môi trường dùng thử nếu bạn mua Thông tin chi tiết về khách hàng. Bạn phải là quản trị viên của bản dùng thử Customer Insights và là quản trị viên toàn cầu của Microsoft 365 người thuê hoặc quản trị viên Dynamics 365 trong tổ chức của bạn để di chuyển cài đặt từ môi trường dùng thử sang môi trường trả phí. 
+Theo tùy chọn, nếu bạn chỉ sử dụng Thông tin chi tiết về khách hàng, bạn có thể sao chép dữ liệu của mình từ môi trường dùng thử nếu bạn mua Thông tin chi tiết về khách hàng. Bạn phải là quản trị viên của bản dùng thử Customer Insights và là quản trị viên toàn cầu của Microsoft 365 người thuê hoặc quản trị viên Dynamics 365 trong tổ chức của bạn để di chuyển cài đặt từ môi trường dùng thử sang môi trường trả phí.
 
-Sau khi đăng nhập vào phiên bản trả phí của Customer Insights lần đầu tiên, bạn sẽ được yêu cầu tạo một môi trường mới. Trong quá trình này, bạn có thể chọn sao chép cấu hình từ môi trường hiện có và di chuyển hầu hết các cài đặt. Nếu bạn có các quyền được đề cập ở trên, môi trường dùng thử sẽ hiển thị trong danh sách này. Để biết thêm thông tin, hãy xem [Sao chép cấu hình môi trường](manage-environments.md#copy-the-environment-configuration).
+Sau khi đăng nhập vào phiên bản trả phí của Customer Insights lần đầu tiên, bạn sẽ được yêu cầu tạo một môi trường mới. Trong quá trình này, bạn có thể chọn sao chép cấu hình từ môi trường hiện có và di chuyển hầu hết các cài đặt. Nếu bạn có các quyền được đề cập ở trên, môi trường dùng thử sẽ hiển thị trong danh sách này. Để biết thêm thông tin, hãy xem [Sao chép cấu hình môi trường](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Bản dùng thử có các giới hạn và hạn mức như thế nào?
 
@@ -81,9 +81,10 @@ Sau khi đăng ký dùng thử, bạn sẽ đến màn hình chính của ứng 
 
 Hầu hết các tính năng của Customer Insights đều có trong bản dùng thử.
 
-Các tính năng sau đây là **Không có sẵn**: 
+Các tính năng sau đây là **Không có sẵn**:
+
 - Bạn không thể tạo môi trường mới sử dụng tài khoản Azure Data Lake Storage.
-- Bạn không thể xóa môi trường dùng thử. 
+- Bạn không thể xóa môi trường dùng thử.
 
 ### <a name="how-long-does-the-trial-last"></a>Thời gian dùng thử kéo dài bao lâu?
 

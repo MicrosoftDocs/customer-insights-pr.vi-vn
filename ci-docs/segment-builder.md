@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644097"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800122"
 ---
 # <a name="create-segments"></a>Tạo phân khúc
 
@@ -134,8 +134,9 @@ Trong khi tạo phân khúc, bạn có thể lưu bản nháp. Trong giai đoạ
 > - Trình tạo phân khúc sẽ không đề xuất các giá trị hợp lệ từ các thực thể khi đặt toán tử cho các điều kiện. Bạn có thể chuyển đến phần **Dữ liệu** > **Thực thể** và tải xuống dữ liệu thực thể để xem những giá trị nào có sẵn.
 > - Các điều kiện dựa trên ngày cho phép bạn chuyển đổi giữa các ngày cố định và một phạm vi ngày thực.
 > - Nếu bạn có nhiều quy tắc cho phân khúc của mình, quy tắc bạn đang chỉnh sửa có một đường thẳng đứng màu xanh lam bên cạnh.
-> - Bạn có thể di chuyển các quy tắc và điều kiện đến các vị trí khác trong định nghĩa phân khúc. Chọn [...] bên cạnh một quy tắc hoặc điều kiện và chọn cách thức và vị trí để di chuyển nó.
+> - Bạn có thể di chuyển các quy tắc và điều kiện đến các vị trí khác trong định nghĩa phân khúc. Chọn dấu chấm lửng dọc (&vellip;) bên cạnh một quy tắc hoặc điều kiện và chọn cách thức và vị trí để di chuyển nó.
 > - Các điều khiển **Hoàn tác** và **Làm lại** trong thanh lệnh cho phép bạn khôi phục các thay đổi.
+> - Sau khi tạo phân đoạn, một số phân đoạn cho phép bạn [theo dõi việc sử dụng phân đoạn](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Phân khúc nhanh
 

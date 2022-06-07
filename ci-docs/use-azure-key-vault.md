@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653503"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763605"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Mang Azure key vault của riêng bạn (bản xem trước)
 
@@ -89,9 +89,9 @@ Các quyền sau đây được cấp cho Thông tin chi tiết về khách hàn
 
 | Loại        | Quyền          |
 | ----------- | -------------------- |
-| Khóa         | [Nhận chìa khóa](/rest/api/keyvault/get-keys), [Nhận chìa khóa](/rest/api/keyvault/get-key)                                 |
-| Mã bí mật      | [Nhận bí mật](/rest/api/keyvault/get-secrets), [Nhận bí mật](/rest/api/keyvault/get-secret)                     |
-| Chứng chỉ | [Nhận chứng chỉ](/rest/api/keyvault/get-certificates), [Nhận chứng chỉ](/rest/api/keyvault/get-certificate) |
+| Khóa         | [Nhận chìa khóa](/rest/api/keyvault/keys/get-keys/get-keys), [Nhận chìa khóa](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Mã bí mật      | [Nhận bí mật](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Nhận bí mật](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Chứng chỉ | [Nhận chứng chỉ](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Nhận chứng chỉ](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Các giá trị trước là giá trị tối thiểu để liệt kê và đọc trong quá trình thực thi.
 

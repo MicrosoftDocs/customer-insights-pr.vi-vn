@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644018"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800446"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
 
@@ -92,7 +92,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 ## <a name="edit-a-workflow"></a>Chỉnh sửa quy trình
 
-1. Trên trang **Mô hình tùy chỉnh**, chọn dấu 3 chấm dọc trong cột **Hành động** cạnh quy trình bạn đã tạo trước đó rồi chọn **Chính sửa**.
+1. Trên **Mô hình tùy chỉnh** trang, chọn dấu chấm lửng dọc (&vellip;) bên trong **Hành động** bên cạnh dòng công việc bạn đã tạo trước đó và chọn **Chỉnh sửa**.
 
 1. Bạn có thể cập nhật tên dễ nhận biết của quy trình làm việc của mình trong trường **Tên hiển thị** nhưng bạn không thể thay đổi quy trình hoặc dịch vụ web đã định cấu hình. Chọn **Tiếp theo**.
 
@@ -108,7 +108,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 ## <a name="run-a-workflow"></a>Chạy quy trình
 
-1. Trên trang **Mô hình tùy chỉnh**, chọn dấu 3 chấm dọc trong cột **Hành động** cạnh quy trình bạn vừa tạo trước đó.
+1. Trên **Mô hình tùy chỉnh** trang, chọn dấu chấm lửng dọc (&vellip;) bên trong **Hành động** bên cạnh dòng công việc bạn đã tạo trước đó.
 
 1. Chọn **Chạy**.
 
@@ -116,7 +116,7 @@ Quy trình làm việc cũng chạy tự động với mỗi lần làm mới th
 
 ## <a name="delete-a-workflow"></a>Xóa quy trình
 
-1. Trên trang **Mô hình tùy chỉnh**, chọn dấu 3 chấm dọc trong cột **Hành động** cạnh quy trình bạn vừa tạo trước đó.
+1. Trên **Mô hình tùy chỉnh** trang, chọn dấu chấm lửng dọc (&vellip;) bên trong **Hành động** bên cạnh dòng công việc bạn đã tạo trước đó.
 
 1. Chọn **Xóa** rồi xác nhận tác vụ xóa của bạn.
 

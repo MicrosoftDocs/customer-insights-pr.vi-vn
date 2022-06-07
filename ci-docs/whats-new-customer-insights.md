@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700963"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833656"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nội dung mới trong Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp cung cấp giải pháp nhận dạng và hợp nhất dữ liệu khá
 Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ khách hàng với dữ liệu nhận dạng từ LiveRamp (Xem trước)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Tổ chức các phân đoạn và thước đo bằng các thẻ và bộ lọc
+
 Nếu tổ chức của bạn duy trì nhiều phân đoạn hoặc biện pháp, việc tìm kiếm phân khúc phù hợp đôi khi có thể cảm thấy khó khăn. Tính năng mới này cho phép bạn tổ chức danh sách bằng cách sử dụng thẻ và cột. Nó giúp tìm kiếm dữ liệu nhanh chóng và dễ dàng và tùy chỉnh các chế độ xem.
 
 Để biết thêm thông tin, hãy xem [Làm việc với các thẻ và cột](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Nếu tổ chức của bạn duy trì nhiều phân đoạn hoặc biện pháp
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Bật chia sẻ dữ liệu với Dataverse khi sử dụng tài khoản lưu trữ của riêng bạn
 
 Nếu môi trường của bạn sử dụng Azure Data Lake Storage để lưu trữ dữ liệu Thông tin chi tiết về khách hàng, chia sẻ dữ liệu với Microsoft Dataverse cần một số cấu hình bổ sung.
-Trước đó, bạn chỉ có thể bật chia sẻ dữ liệu với Dataverse khi dữ liệu của bạn được lưu trữ trong hồ dữ liệu được quản lý của chúng tôi. 
+Trước đó, bạn chỉ có thể bật chia sẻ dữ liệu với Dataverse khi dữ liệu của bạn được lưu trữ trong hồ dữ liệu được quản lý của chúng tôi.
 
-Để biết thêm thông tin, hãy xem [Bật chia sẻ dữ liệu với Dataverse từ của riêng bạn Azure Data Lake Storage (Xem trước)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Để biết thêm thông tin, hãy xem [Bật chia sẻ dữ liệu với Dataverse từ của riêng bạn Azure Data Lake Storage (Xem trước)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Các điểm đến xuất khẩu mới: Có thể lặp lại và Braze
 
@@ -82,8 +83,7 @@ Việc thay đổi API trong các dịch vụ được kết nối dẫn đến 
 - Google Ads: Phiên bản mới của trình kết nối xuất Google Ads đơn giản hóa trải nghiệm xác thực và giờ đây cho phép bạn tự động tạo các đối tượng Google Ads mới. 
 - Marketo: Phiên bản mới của trình kết nối xuất Marketo cung cấp hỗ trợ cho ID Marketo, cho phép bạn tránh trùng lặp dữ liệu, cập nhật các bản ghi hiện có và tạo bản ghi mới trong Marketo. 
 
-
-## <a name="february-2022-updates"></a>Cập nhật tháng 2 năm 2022
+## <a name="february-2022-updates"></a>Bản cập nhật tháng 2 năm 2022
 
 Các bản cập nhật vào tháng 2 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
 
@@ -121,7 +121,7 @@ Mặc dù một số người dùng có thể có quyền quản trị trong Th�
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Quá trình chuẩn bị dữ liệu liệt kê lý do hỏng cho các bản ghi bị hỏng
 
-Việc chuẩn bị dữ liệu bây giờ cho thấy lý do gây ra lỗi cho tất cả các trường có dữ liệu bị hỏng. Thông tin được cung cấp ở cấp độ hồ sơ cá nhân để dễ dàng xác định. 
+Việc chuẩn bị dữ liệu bây giờ cho thấy lý do gây ra hỏng cho tất cả các lĩnh vực có dữ liệu bị hỏng. Thông tin được cung cấp ở cấp độ hồ sơ cá nhân để dễ dàng xác định. 
 
 Để biết thêm thông tin, hãy xem [Nguồn dữ liệu bị hỏng](entities.md#corrupted-data-sources).
 
@@ -138,7 +138,7 @@ Trong thời gian chuyển tiếp, những người tham gia xem trước hiện
 - Xem sự kiện và thuộc tính sự kiện 
 - Nâng cao hồ sơ hợp nhất với các sự kiện được nhập và tinh chỉnh để hưởng lợi từ toàn bộ giá trị dữ liệu khách hàng của họ
   
-Trong giai đoạn chuyển tiếp, các sự kiện đã ghi vẫn được truyền trực tuyến tới Data Lake được kết nối. Sau khi tắt chức năng này, quá trình chia sẻ dữ liệu sẽ ngừng và không có sự kiện mới nào được gửi đến bộ nhớ được kết nối.
+Trong giai đoạn chuyển tiếp, các sự kiện đã ghi vẫn được truyền trực tuyến đến Data Lake được kết nối. Sau khi tắt chức năng này, quá trình chia sẻ dữ liệu sẽ ngừng và không có sự kiện mới nào được gửi đến bộ nhớ được kết nối.
 Liên hệ trực tiếp với nhóm Tài khoản Microsoft của bạn nếu bạn có thắc mắc về phần cuối của bản xem trước khả năng. Nhóm Tài khoản của bạn sẽ cập nhật cho bạn về các lần ra mắt sắp tới. 
 
 ## <a name="january-2022-updates"></a>Cập nhật tháng 1 năm 2022

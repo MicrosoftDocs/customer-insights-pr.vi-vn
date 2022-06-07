@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755335"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800398"
 ---
 # <a name="connections-preview-overview"></a>Tổng quan về kết nối (bản xem trước)
 
@@ -69,7 +69,7 @@ Khi thiết lập hoặc chỉnh sửa kết nối xuất, bạn hãy chọn ng�
 
 1. Đi đến tab **Kết nối**.
 
-1. Chọn dấu ba chấm dọc cho kết nối mà bạn muốn chỉnh sửa.
+1. Chọn dấu chấm lửng dọc (&vellip;) cho kết nối bạn muốn chỉnh sửa.
 
 1. Chọn **Chỉnh sửa**.
 
@@ -85,7 +85,7 @@ Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang ch�
 
 1. Đi đến tab **Kết nối**.
 
-1. Chọn dấu ba chấm dọc cho kết nối mà bạn muốn loại bỏ.
+1. Chọn dấu chấm lửng dọc (&vellip;) cho kết nối bạn muốn xóa.
 
 1. Chọn **Xóa** trong menu thả xuống. Một hộp thoại xác nhận sẽ xuất hiện.
 
@@ -98,4 +98,4 @@ Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang ch�
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Thiết lập kết nối với các bí mật do Key Vault của riêng bạn quản lý
 
-Một số kết nối cần bí mật như khóa API hoặc mật khẩu. Một số kết nối hỗ trợ bí mật được lưu trữ trong Key Vault của riêng bạn. Tìm hiểu thêm về các kết nối được hỗ trợ và cách thiết lập trên [Kho lưu trữ chính của riêng bạn cho Thông tin chi tiết về khách hàng](use-azure-key-vault.md).
+Một số kết nối cần bí mật như khóa API hoặc mật khẩu. Một số kết nối hỗ trợ bí mật được lưu trữ trong Key Vault của riêng bạn. Tìm hiểu thêm về các kết nối được hỗ trợ và cách thiết lập trên [Kho chìa khóa của riêng bạn cho Thông tin chi tiết về khách hàng](use-azure-key-vault.md).

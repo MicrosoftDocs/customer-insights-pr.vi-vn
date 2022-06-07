@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643998"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800206"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Kết nối với dữ liệu trong một kho dữ liệu được quản lý Microsoft Dataverse
 
@@ -28,7 +28,7 @@ Bài viết này cung cấp thông tin về cách Dataverse người dùng có t
 ## <a name="important-considerations"></a>Những điều quan trọng cần cân nhắc
 
 1. Dữ liệu lưu trữ trong các dịch vụ trực tuyến như Azure Data Lake Storage có thể được lưu trữ ở địa điểm khác với nơi xử lý hoặc lưu trữ dữ liệu trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
-2. Chỉ còn Dataverse thực thể với [thay đổi theo dõi](/power-platform/admin/enable-change-tracking-control-data-synchronization) được kích hoạt có thể nhìn thấy. Các thực thể này có thể được xuất sang Dataverse - hồ dữ liệu được quản lý và được sử dụng trong Thông tin chi tiết về khách hàng. Ngoài hộp Dataverse các bảng được bật theo dõi thay đổi theo mặc định. Bạn cần bật theo dõi thay đổi cho các bảng tùy chỉnh. Để kiểm tra xem một Dataverse bảng được bật để theo dõi thay đổi, đi tới [Power Apps](https://make.powerapps.com) > **Dữ liệu** > **Những cái bàn**. Tìm bảng quan tâm của bạn và chọn nó. Đi đến **Cài đặt** > **Tùy chọn nâng cao** và xem xét **Theo dõi các thay đổi** thiết lập.
+2. Chỉ có Dataverse thực thể với [thay đổi theo dõi](/power-platform/admin/enable-change-tracking-control-data-synchronization) được kích hoạt có thể nhìn thấy. Các thực thể này có thể được xuất sang Dataverse - hồ dữ liệu được quản lý và được sử dụng trong Thông tin chi tiết về khách hàng. Ngoài hộp Dataverse các bảng được bật theo dõi thay đổi theo mặc định. Bạn cần bật theo dõi thay đổi cho các bảng tùy chỉnh. Để kiểm tra xem một Dataverse bảng được bật để theo dõi thay đổi, hãy chuyển đến [Power Apps](https://make.powerapps.com) > **Dữ liệu** > **Những cái bàn**. Tìm bảng quan tâm của bạn và chọn nó. Đi đến **Cài đặt** > **Tùy chọn nâng cao** và xem xét **Theo dõi các thay đổi** cài đặt.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Kết nối với kho được quản lý Dataverse
 
@@ -36,7 +36,7 @@ Bài viết này cung cấp thông tin về cách Dataverse người dùng có t
 
 2. Chọn **Thêm nguồn dữ liệu**.
 
-3. Lựa chọn **Microsoft Dataverse** và chọn **Kế tiếp**.
+3. Lựa chọn **Microsoft Dataverse** và chọn **Tiếp theo**.
 
 4. Đặt **Tên** cho nguồn dữ liệu rồi chọn **Tiếp**. 
 
@@ -62,7 +62,7 @@ Bạn chỉ chỉnh sửa lựa chọn thực thể sau khi tạo nguồn dữ l
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
 
-2. Cạnh nguồn dữ liệu mà bạn muốn thay đổi, hãy chọn dấu chấm lửng.
+2. Bên cạnh nguồn dữ liệu bạn muốn cập nhật, hãy chọn dấu chấm lửng dọc (&vellip;).
 
 3. Nhấp vào tùy chọn **Chỉnh sửa** trong danh sách.
 

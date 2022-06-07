@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740745"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800676"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Hoàn thành từng phần dữ liệu của bạn với các dự đoán (không được dùng nữa)
 
@@ -95,7 +95,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 2. Chọn dự đoán bạn muốn xem lại.
 
-3. Chọn dấu ba chấm trong cột **Hành động** và chọn **Xem**.
+3. Chọn dấu chấm lửng dọc (&vellip;) bên trong **Hành động** cột và chọn **Lượt xem**.
 
 4. Bạn sẽ thấy một số điểm dữ liệu trong dạng xem dự đoán của mình.
    > [!div class="mx-imgBorder"]
@@ -116,13 +116,13 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 ## <a name="edit-a-prediction"></a>Chỉnh sửa dự đoán
 
-Sau khi bạn đã tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình của bạn.  
+Sau khi tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình của bạn.  
 
 1. Đi đến **Sự thông minh** > **Phỏng đoán** > **Dự đoán của tôi**.
 
 2. Chọn dự đoán bạn muốn chỉnh sửa.
 
-3. Chọn dấu ba chấm trong cột **Hành động** và chọn **Xem**.
+3. Chọn dấu chấm lửng dọc (&vellip;) bên trong **Hành động** cột và chọn **Lượt xem**.
 
 4. Lựa chọn **Tùy chỉnh trong AI Builder**.
 
@@ -139,7 +139,7 @@ Trong lần chạy tiếp theo, dự đoán sẽ sử dụng mô hình cập nh�
 
 2. Chọn dự đoán bạn muốn xóa.
 
-3. Chọn dấu ba chấm trong cột **Hành động** và chọn **Xóa**.
+3. Chọn dấu chấm lửng dọc (&vellip;) bên trong **Hành động** cột và chọn **Xóa bỏ**.
 
 4. Xác nhận tác vụ xóa này.
 
@@ -153,7 +153,7 @@ Nếu không thể hoàn thành quy trình đính kèm Dataverse do lỗi, bạn
 - Quyền ứng dụng không được cấp.
     1. Truy cập [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Chọn **Môi trường**.
-    1. Chọn dấu chấm lửng bên cạnh môi trường bạn muốn thêm quyền và chọn **Cài đặt**.
+    1. Chọn dấu chấm lửng dọc (&vellip;) bên cạnh môi trường bạn muốn thêm quyền và chọn **Cài đặt**.
     1. Mở rộng **Người dùng + quyền** và chọn **Người dùng**.
     1. Chọn **+ Mới** và chọn **Người dùng**.
     1. Chọn **Người dùng ứng dụng** nếu chưa chọn và nhập thông tin sau:

@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644129"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800585"
 ---
 # <a name="work-with-tags-and-columns"></a>Làm việc với các thẻ và cột
 
 Tổ chức danh sách bằng cách sử dụng thẻ và cột để tìm dữ liệu nhanh chóng, dễ dàng và xem dữ liệu theo cách bạn muốn.
 
-Thẻ và cột hiện được hỗ trợ với **[Phân đoạn](segments.md)** và **[Đo](measures.md)**.
+Các thẻ và cột hiện được hỗ trợ với **[Phân đoạn](segments.md)** và **[Đo](measures.md)**.
 
 ## <a name="manage-tags"></a>Quản lý thẻ
 
@@ -37,11 +37,11 @@ Bạn có thể xem, thêm và xóa thẻ khỏi một mục. Thêm thẻ khi b�
 
 1. Chọn mục có thẻ bạn muốn quản lý.
 
-1. Lựa chọn **Cho xem nhiều hơn (...)** và chọn **Nhãn**.
+1. Chọn dấu chấm lửng dọc (&vellip;) và chọn **Nhãn**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Phân khúc đã chọn với danh sách tùy chọn thả xuống và các tùy chọn có sẵn."lightbox="media/segments_list_tag.png":::
 
-1. Từ **Chỉnh sửa thẻ**, chọn bất kỳ mục nào sau đây:
+1. Từ **Chỉnh sửa thẻ**, hãy chọn bất kỳ mục nào sau đây:
 
    - Để thêm thẻ hiện có vào mặt hàng, hãy nhập một phần tên vào **Thẻ** cho đến khi bạn nhìn thấy thẻ bạn muốn. Chọn thẻ.
    - Để tạo thẻ, hãy nhập tên vào **Thẻ** hộp và chọn **Tạo thẻ mới** hoặc nhấn **đi vào**. Thẻ mới được thêm vào mục.

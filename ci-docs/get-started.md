@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741159"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833601"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Bắt đầu với Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Thông tin chi tiết về khách hàng có thể giúp bạn hiểu sâu hơn v
 
 ## <a name="step-1-create-an-environment"></a>Bước 1: Tạo môi trường
 
-Để bắt đầu, trước tiên bạn phải tạo ra một môi trường để làm việc. Nếu tổ chức của bạn đã mua giấy phép, hãy xem [Tạo môi trường](create-environment.md). Để bắt đầu dùng thử Thông tin chi tiết về khách hàng, hãy xem [Thiết lập môi trường thử nghiệm](trial-signup.md).
+Đầu tiên, hãy tạo một môi trường để làm việc. Nếu tổ chức của bạn đã mua giấy phép, hãy xem [Tạo môi trường](create-environment.md). Để bắt đầu dùng thử Thông tin chi tiết về khách hàng, hãy xem [Thiết lập môi trường thử nghiệm](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>Bước 2: Khám phá thông tin chi tiết về khách hàng
 
-Lần đầu tiên đăng nhập vào Customer Insights, bạn có thể định cấu hình cài đặt và khám phá sản phẩm.
+Lần đầu tiên bạn đăng nhập vào Thông tin chi tiết về khách hàng, định cấu hình cài đặt và khám phá sản phẩm.
 
 1. [đăng nhập vào Thông tin chi tiết về khách hàng](https://home.ci.ai.dynamics.com) sử dụng Microsoft của bạn Azure Active Directory (AAD) tài khoản người dùng.
 
-1. [Thay đổi môi trường](manage-environments.md#switch-environments) để xem dữ liệu demo và [khám phá Thông tin chi tiết về khách hàng](home.md).
+1. Thay đổi môi trường để xem dữ liệu demo và [khám phá Thông tin chi tiết về khách hàng](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Bước 3: Nhập, hợp nhất và thiết lập mối quan hệ cho dữ liệu của bạn
 
-Hồ sơ thống nhất là nền tảng để có được thông tin chi tiết và thực hiện hành động trên dữ liệu. Mang dữ liệu từ nhiều nguồn khác nhau và chạy quy trình hợp nhất dữ liệu để kết hợp các cấu hình thống nhất. Chỉ định mối quan hệ giữa các thực thể được nhập sử dụng các tính năng bổ sung để thêm thông tin vào hồ sơ.
+Hồ sơ thống nhất là nền tảng để có được thông tin chi tiết và thực hiện hành động trên dữ liệu. Mang dữ liệu từ nhiều nguồn khác nhau và chạy quy trình hợp nhất dữ liệu để kết hợp các cấu hình thống nhất. Chỉ định mối quan hệ giữa các thực thể được nhập và sử dụng các tính năng bổ sung để thêm thông tin vào hồ sơ.
 
-1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [Power Query đầu nối](connect-power-query.md), một [Thư mục Mô hình Dữ liệu Chung](connect-common-data-model.md), hoặc [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [Power Query đầu nối](connect-power-query.md), một [Thư mục Mô hình Dữ liệu Chung](connect-common-data-model.md), hoặc [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Chạy [quá trình hợp nhất dữ liệu](data-unification.md) bằng cách xác định [trường nguồn](map-entities.md), loại bỏ [trùng lặp](remove-duplicates.md),[điều kiện phù hợp](match-entities.md), và [thống nhất các lĩnh vực](merge-entities.md).
 
@@ -47,7 +47,7 @@ Hồ sơ thống nhất là nền tảng để có được thông tin chi tiế
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Bước 4: Nâng cao cấu hình thống nhất với các dự đoán, hoạt động và biện pháp
 
-Với các cấu hình hợp nhất được thiết lập, bạn có thể nâng cao dữ liệu của mình và tăng thêm thông tin mà họ cung cấp.
+Với các cấu hình hợp nhất được thiết lập, hãy nâng cao dữ liệu của bạn và tăng thêm thông tin mà họ cung cấp.
 
 1. Chọn từ một thư viện mở rộng của các nhà cung cấp dịch vụ tăng cường để [tăng cường dữ liệu khách hàng của bạn](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Với các cấu hình hợp nhất được thiết lập, bạn có thể nân
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>Bước 5: Tạo phân khúc và kích hoạt dữ liệu thông qua các tùy chọn xuất khác nhau
 
-Bây giờ dữ liệu của bạn đã hoàn tất và chứa nhiều thông tin về khách hàng của bạn, đã đến lúc tìm cách thực hiện hành động đối với dữ liệu đó.
+Bây giờ dữ liệu của bạn đã hoàn tất và chứa nhiều thông tin về khách hàng của bạn, hãy tìm cách thực hiện hành động trên dữ liệu đó.
 
 1. [Tạo phân khúc](segments.md), tập hợp con của cơ sở khách hàng, để đảm bảo hành động của bạn phù hợp với khách hàng mục tiêu.
 
