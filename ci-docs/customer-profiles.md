@@ -1,7 +1,7 @@
 ---
 title: Xem hồ sơ khách hàng
 description: Nhận thông tin kết hợp về dữ liệu khách hàng hợp nhất của bạn.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755808"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947072"
 ---
 # <a name="customer-profiles"></a>Hồ sơ khách hàng
 
@@ -55,9 +55,9 @@ Bạn có thể lọc khách hàng theo các trường thực thể *Khách hàn
 
 Chọn bất kỳ ngăn xếp khách hàng nào để mở **Trang thông tin chi tiết về khách hàng**. Chế độ xem này chứa thông tin hợp nhất cho khách hàng đã chọn. Thông tin chi tiết về khách hàng bao gồm các nội dung sau:
 
-**Ô hồ sơ khách hàng**: Ô này hiển thị các giá trị khác với thực thể hợp nhất *Khách hàng*. Nếu một trường không có giá trị cho hồ sơ khách hàng đã chọn, trường đó sẽ không hiển thị. Ô được cấu trúc thành các phần:
+**Ô hồ sơ khách hàng**: Ô này hiển thị các giá trị khác với thực thể hợp nhất *Khách hàng*. Nếu một trường không có giá trị cho hồ sơ khách hàng đã chọn, nó sẽ không hiển thị ngoại trừ trường địa chỉ. Ô được cấu trúc thành các phần:
 
-- Phần đầu tiên hiển thị một tập hợp các trường được xác định trước, theo sau là tất cả các trường là một phần của tìm kiếm và lọc chỉ mục. Tất cả các trường liên quan đến địa chỉ được kết hợp thành một dòng nếu hồ sơ có chứa các trường như vậy.
+- Phần đầu tiên hiển thị một tập hợp các trường được xác định trước, theo sau là tất cả các trường là một phần của tìm kiếm và lọc chỉ mục. Tất cả các trường liên quan đến địa chỉ được kết hợp thành một dòng duy nhất, hiển thị ngay cả khi hồ sơ không chứa thông tin địa chỉ.
 - **Liên hệ cho khách hàng này**: Trong môi trường dành cho tài khoản doanh nghiệp, bạn sẽ thấy tất cả các liên hệ có liên quan cho khách hàng này dưới dạng phần thứ hai. Mỗi liên hệ được hiển thị với các trường của họ. Các trường trống bị ẩn.
 - **Các trường bổ sung**: Hiển thị các trường còn lại của khách hàng đã chọn, ngoại trừ ID.
 - **ID**: Liệt kê tất cả các ID dưới tên thực thể tương ứng của chúng. Các trường được xác định là ID theo ngữ nghĩa của chúng, phân loại chúng như vậy.

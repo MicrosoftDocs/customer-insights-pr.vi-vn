@@ -1,19 +1,19 @@
 ---
 title: Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR | Microsoft Docs
 description: Trả lời Quyền của chủ thể dữ liệu đối với Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808593"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947394"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR
 
@@ -77,11 +77,5 @@ Quản trị viên đối tượng thuê có thể tuân theo các bước sau �
 1. Gửi email tới D365CI@microsoft.com cho biết địa chỉ email của người dùng trong yêu cầu. Nhóm Customer Insights sẽ gửi email đến địa chỉ email quản trị viên đối tượng thuê đã đăng ký, yêu cầu xác nhận để xuất dữ liệu.
 2. Hãy xác minh để xuất dữ liệu cho người dùng yêu cầu.
 3. Nhận dữ liệu được xuất thông qua địa chỉ email quản trị viên đối tượng thuê.
-
-## <a name="consent-management-preview"></a>Quản lý sự đồng ý (xem trước)
-
-Khả năng quản lý sự đồng ý không trực tiếp thu thập dữ liệu người dùng. Nó chỉ nhập và xử lý dữ liệu về sự đồng ý do người dùng cung cấp trong các ứng dụng khác.
-
-Để xóa dữ liệu về sự đồng ý về những người dùng cụ thể, hãy xóa dữ liệu đó trong các nguồn dữ liệu được nhập vào khả năng quản lý sự đồng ý. Sau khi làm mới nguồn dữ liệu, dữ liệu đã xóa cũng sẽ bị xóa trong Trung tâm đồng ý. Các ứng dụng sử dụng pháp nhân đồng ý cũng sẽ xóa dữ liệu đã bị xóa trên nguồn sau [Làm tươi](system.md#refresh-processes). Chúng tôi khuyên bạn nên nhanh chóng làm mới nguồn dữ liệu sau khi phản hồi yêu cầu chủ thể dữ liệu để xóa dữ liệu của người dùng khỏi tất cả các quy trình và ứng dụng khác.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

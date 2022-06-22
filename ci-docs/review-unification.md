@@ -1,7 +1,7 @@
 ---
 title: Xem xét hợp nhất dữ liệu
 description: Xem lại các bước hợp nhất dữ liệu, tạo hồ sơ khách hàng hợp nhất và xem xét kết quả
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8743027"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844112"
 ---
 # <a name="review-data-unification"></a>Xem xét hợp nhất dữ liệu
 
@@ -30,13 +30,15 @@ Bước cuối cùng trong quy trình hợp nhất này hiển thị tóm tắt 
 
 ## <a name="review-the-data-unification-steps"></a>Xem lại các bước hợp nhất dữ liệu
 
-1. Lựa chọn **Biên tập** trên bất kỳ bước hợp nhất dữ liệu nào để xem xét và thực hiện bất kỳ thay đổi nào.
+1. Lựa chọn **Chỉnh sửa** trên bất kỳ bước hợp nhất dữ liệu nào để xem xét và thực hiện bất kỳ thay đổi nào.
 
-1. Nếu bạn hài lòng với lựa chọn của mình, hãy chọn **Tạo hồ sơ khách hàng**. Các **Thống nhất** trang hiển thị trong khi hồ sơ khách hàng hợp nhất đang được tạo. Thuật toán hợp nhất mất một khoảng thời gian để hoàn thành và bạn không thể thay đổi cấu hình cho đến khi hoàn tất.
+1. Nếu bạn hài lòng với lựa chọn của mình, hãy chọn **Tạo hồ sơ khách hàng**. Các **Thống nhất** trang hiển thị trong khi hồ sơ khách hàng hợp nhất đang được tạo. Tất cả các ô ngoại trừ **Các trường nguồn** buổi bieu diễn **Đã xếp hàng** hoặc **Làm mới** trạng thái.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Ảnh chụp màn hình của trang Unify với các ô hiển thị Đã xếp hàng hoặc Đang làm mới.":::
 
-Khi quá trình hợp nhất hoàn tất, thực thể hồ sơ khách hàng hợp nhất, được gọi là *Khách hàng*, được liệt kê trên **Thực thể** trang trong **Hồ sơ** tiết diện. Lần chạy hợp nhất thành công đầu tiên tạo ra sự hợp nhất *Khách hàng* thực thể. Tất cả các lần chạy tiếp theo sẽ mở rộng thực thể đó.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Thuật toán hợp nhất cần một khoảng thời gian để hoàn thành và bạn không thể thay đổi cấu hình cho đến khi hoàn tất. Khi quá trình hợp nhất hoàn tất, thực thể hồ sơ khách hàng hợp nhất, được gọi là *khách hàng*, được liệt kê trên **Thực thể** trang trong **Hồ sơ** tiết diện. Lần chạy hợp nhất thành công đầu tiên tạo ra sự hợp nhất *khách hàng* thực thể. Tất cả các lần chạy tiếp theo sẽ mở rộng thực thể đó.
 
 ## <a name="review-the-results-of-data-unification"></a>Xem lại kết quả của việc hợp nhất dữ liệu
 

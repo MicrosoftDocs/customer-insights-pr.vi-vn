@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833702"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011583"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
 
 Thông tin chi tiết về khách hàng cung cấp tùy chọn để cung cấp các thực thể đầu ra dưới dạng [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Sự tích hợp này cho phép chia sẻ dữ liệu dễ dàng và phát triển tùy chỉnh thông qua cách tiếp cận mã thấp / không mã. Các [thực thể đầu ra](#output-entities) có sẵn dưới dạng bảng trong một Dataverse Môi trường. Bạn có thể sử dụng dữ liệu cho bất kỳ ứng dụng nào khác dựa trên Dataverse những cái bàn. Các bảng này cho phép các tình huống như quy trình làm việc tự động thông qua Power Automate hoặc xây dựng ứng dụng với Power Apps.
 
-Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và các cổng](data-sources.md#add-data-from-on-premises-data-sources).
+Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và các cổng](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -33,13 +33,13 @@ Thông tin chi tiết về khách hàng cung cấp tùy chọn để cung cấp 
 
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Kết nối một Dataverse môi trường để Thông tin chi tiết về khách hàng
 
-Các **Microsoft Dataverse** bước cho phép bạn kết nối Thông tin chi tiết về khách hàng với Dataverse môi trường trong khi [tạo môi trường Thông tin chi tiết về khách hàng](create-environment.md).
+Các **Microsoft Dataverse** bước này cho phép bạn kết nối Thông tin chi tiết về khách hàng với Dataverse môi trường trong khi [tạo môi trường Thông tin chi tiết về khách hàng](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="chia sẻ dữ liệu với Microsoft Dataverse tự động bật cho môi trường mới thuần.":::
 
 Quản trị viên có thể định cấu hình Thông tin chi tiết về khách hàng để kết nối Dataverse Môi trường. Bằng cách cung cấp URL cho Dataverse môi trường, nó gắn liền với môi trường Thông tin chi tiết về khách hàng mới của họ.
 
-Nếu bạn không muốn sử dụng Dataverse môi trường, hệ thống tạo ra một môi trường mới cho dữ liệu Thông tin chi tiết về khách hàng trong đối tượng thuê của bạn. [Power Platform quản trị viên có thể kiểm soát ai có thể tạo môi trường](/power-platform/admin/control-environment-creation). Khi bạn đang thiết lập môi trường Thông tin chi tiết về khách hàng và quản trị viên đã vô hiệu hóa việc tạo Dataverse môi trường dành cho tất cả mọi người ngoại trừ quản trị viên, bạn có thể không tạo được môi trường mới.
+Nếu bạn không muốn sử dụng Dataverse môi trường, hệ thống tạo ra một môi trường mới cho dữ liệu Thông tin chi tiết về khách hàng trong đối tượng thuê của bạn. [Power Platform quản trị viên có thể kiểm soát ai có thể tạo môi trường](/power-platform/admin/control-environment-creation). Khi bạn thiết lập môi trường Thông tin chi tiết về khách hàng mới và quản trị viên đã vô hiệu hóa việc tạo Dataverse môi trường dành cho tất cả mọi người ngoại trừ quản trị viên, bạn có thể không tạo được môi trường mới.
 
 **Bật chia sẻ dữ liệu** với Dataverse bằng cách chọn hộp kiểm chia sẻ dữ liệu.
 
@@ -57,7 +57,7 @@ Cho phép chia sẻ dữ liệu với Microsoft Dataverse khi môi trường c�
 Có hai hạn chế khi sử dụng Dataverse với riêng của bạn Azure Data Lake Storage tài khoản:
 
 - Có một ánh xạ 1-1 giữa Dataverse tổ chức và một Azure Data Lake Storage tài khoản. Một lần Dataverse tổ chức được kết nối với tài khoản lưu trữ, tổ chức không thể kết nối với tài khoản lưu trữ khác. Hạn chế này ngăn cản rằng một Dataverse không điền nhiều tài khoản lưu trữ.
-- Chia sẻ dữ liệu sẽ không hoạt động nếu cần thiết lập Azure Private Link để truy cập vào tài khoản lưu trữ Azure Data Lake của bạn vì nó nằm sau tường lửa. Dataverse hiện không hỗ trợ kết nối với các điểm cuối riêng tư thông qua Liên kết riêng.
+- Chia sẻ dữ liệu sẽ không hoạt động nếu cần thiết lập Azure Private Link để truy cập Azure Data Lake Storage vì nó nằm sau tường lửa. Dataverse hiện không hỗ trợ kết nối với các điểm cuối riêng tư thông qua Liên kết riêng.
 
 ### <a name="set-up-powershell"></a>Thiết lập PowerShell
 

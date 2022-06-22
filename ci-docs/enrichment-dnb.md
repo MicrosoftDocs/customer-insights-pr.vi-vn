@@ -1,7 +1,7 @@
 ---
 title: Làm giàu hồ sơ công ty với Dun & Bradstreet
 description: Thông tin chung về cách làm giàu của bên thứ ba Dun & Bradstreet.
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755426"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953917"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Làm phong phú hồ sơ công ty với Dun & Bradstreet (Xem trước)
 
@@ -22,16 +22,14 @@ Dun & Bradstreet cung cấp dữ liệu thương mại, số liệu phân tích 
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-Để định cấu hình làm giàu Dun & Bradstreet, bạn phải đáp ứng các điều kiện tiên quyết sau:
+- Một hoạt động [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) giấy phép.
+- [Hồ sơ khách hàng hợp nhất](customer-profiles.md) cho các công ty.
+- A Dun & Bradstreet [dự án](#set-up-your-dun--bradstreet-project) đã thiết lập.
+- A Dun & Bradstreet [sự liên quan](connections.md) Là [đã cấu hình](#configure-a-connection-for-dun--bradstreet) bởi một quản trị viên.
 
-- Bạn có một hoạt động [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) giấy phép.
-- Bạn có [hồ sơ khách hàng hợp nhất](customer-profiles.md) cho các công ty.
-- A Dun & Bradstreet [sự liên quan](connections.md) được định cấu hình bởi quản trị viên. Bạn có thể tạo nó nếu bạn có [người quản lý](permissions.md#admin) quyền và thông tin xác thực từ Dun & Bradstreet Connect.
-
-## <a name="setting-up-your-dun--bradstreet-project"></a>Thiết lập dự án Dun & Bradstreet của bạn
+## <a name="set-up-your-dun--bradstreet-project"></a>Thiết lập dự án Dun & Bradstreet của bạn
 
 Là người dùng được cấp phép của Dun & Bradstreet, bạn có thể thiết lập một dự án trong [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
-
 
 1. đăng nhập vào [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Để truy xuất thông tin đăng nhập, [khôi phục mật khẩu của bạn](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
@@ -41,72 +39,75 @@ Là người dùng được cấp phép của Dun & Bradstreet, bạn có thể 
 
 1. Chọn các dấu chấm ngang dưới liên quan **nguồn** trong dự án Dun & Bradstreet mới được tạo để xem các tùy chọn có sẵn.
 
-   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Ảnh chụp màn hình các chấm trong một dự án Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Ảnh chụp màn hình các chấm trong dự án Dun & Bradstreet.":::
 
 1. Chọn **Nhận thông tin chi tiết về S3**. Lưu trữ thông tin này ở một nơi an toàn. Bạn sẽ cần nó để [thiết lập kết nối để làm giàu](#configure-a-connection-for-dun--bradstreet) trong Thông tin chi tiết về khách hàng.
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Ảnh chụp màn hình lựa chọn thông tin s3 trong một dự án Dun & Bradstreet.":::
 
-## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
-
-1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
-
-1. Lựa chọn **Làm phong phú dữ liệu của tôi** trên ô Dun & Bradstreet và chọn **Bắt đầu**.
-
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Ảnh chụp màn hình lát gạch Dun & Bradstreet.":::
-
-1. Chọn một [kết nối](connections.md) từ danh sách thả xuống. Liên hệ với quản trị viên nếu không có kết nối. Nếu bạn là quản trị viên, bạn có thể tạo kết nối. Lựa chọn **Thêm kết nối** và lựa chọn **Dun & Bradstreet**.
-
-1. Lựa chọn **Kết nối với Dun & Bradstreet** để xác nhận kết nối.
-
-1. Lựa chọn **Kế tiếp** và chọn **Tập dữ liệu khách hàng** bạn muốn làm giàu với dữ liệu công ty từ Dun & Bradstreet. Bạn có thể chọn **Khách hàng** thực thể để làm phong phú tất cả hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để chỉ làm phong phú thêm hồ sơ khách hàng hợp nhất có trong phân khúc đó.
-
-1. Lựa chọn **Kế tiếp** và xác định trường nào từ hồ sơ hợp nhất của bạn được sử dụng để tìm kiếm dữ liệu công ty phù hợp từ Dun & Bradstreet. Hoặc **Số DUNS** hoặc **Tên công ty** và **Quốc gia** Mục này bắt buộc. Trường quốc gia hỗ trợ [mã quốc gia hai hoặc ba chữ cái](https://www.iso.org/iso-3166-country-codes.html), tên quốc gia bằng tiếng Anh, tên quốc gia bằng ngôn ngữ mẹ đẻ và tiền tố số điện thoại. Một số biến thể quốc gia phổ biến bao gồm:
-
-- Hoa Kỳ: Hợp chủng quốc Hoa Kỳ, Hoa Kỳ, Hoa Kỳ, Hoa Kỳ.
-- CA: Canada.
-- GB: Vương quốc Anh, Vương quốc Anh, Vương quốc Anh, GB, Vương quốc Liên hiệp Anh và Bắc Ireland, Vương quốc Liên hiệp Anh.
-- AU: Australia, Khối thịnh vượng chung Australia.
-- FR: Pháp, Cộng hòa Pháp.
-- DE: Đức, Đức, Deutschland, Allemagne, Cộng hòa Liên bang Đức, Cộng hòa Đức.
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Ngăn ánh xạ trường Dun & Bradstreet.":::
-
-1. Chọn **Tiếp** để hoàn thành quá trình ánh xạ trường.
-
-1. Đặt tên cho dữ liệu tăng cường rồi chọn **Lưu dữ liệu tăng cường** sau khi xem xét các lựa chọn của bạn.
-
 ## <a name="configure-a-connection-for-dun--bradstreet"></a>Định cấu hình kết nối cho Dun & Bradstreet
 
-Bạn cần phải là quản trị viên thì mới có thể định cấu hình kết nối. Lựa chọn **Thêm kết nối** khi định cấu hình làm giàu *hoặc* đi đến **Quản trị viên** > **Kết nối** và chọn **Thiết lập** trên ngói Dun & Bradstreet.
+Bạn phải là một [người quản lý](permissions.md#admin) trong Thông tin chi tiết về khách hàng và có bằng chứng xác thực từ Dun & Bradstreet Connect.
 
-1. Chọn **Bắt đầu**.
+1. Lựa chọn **Thêm kết nối** khi định cấu hình phần bổ sung hoặc đi đến **Quản trị viên** > **Kết nối** và chọn **Cài đặt** trên ngói Dun & Bradstreet.
 
-1. Nhập tên cho kết nối trong hộp **Tên hiển thị**.
+1. Nhập tên cho kết nối.
 
-1. Cung cấp thông tin đăng nhập Dun & Bradstreet hợp lệ và thông tin chi tiết về dự án Dun & Bradstreet *Khu vực, đường dẫn thư mục Drop và tên thư mục Drop*. Bạn [lấy thông tin này](#setting-up-your-dun--bradstreet-project) từ dự án Dun & Bradstreet.
+1. Cung cấp thông tin đăng nhập Dun & Bradstreet hợp lệ và chi tiết dự án Dun & Bradstreet *Khu vực, đường dẫn thư mục Drop và tên thư mục Drop*. Bạn [lấy thông tin này](#set-up-your-dun--bradstreet-project) từ dự án Dun & Bradstreet.
 
-1. Xem xét và chấp thuận **Quyền riêng tư dữ liệu và sự tuân thủ** bằng cách chọn **Tôi đồng ý**.
+1. Xem xét và chấp thuận [Quyền riêng tư dữ liệu và sự tuân thủ](#data-privacy-and-compliance) bằng cách chọn **Tôi đồng ý**.
 
-1. Chọn **Xác minh** để xác thực cấu hình.
-
-1. Sau khi hoàn thành xác minh, hãy chọn **Lưu**.
+1. Lựa chọn **Kiểm chứng** để xác thực cấu hình và sau đó chọn **Tiết kiệm**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Trang cấu hình kết nối Dun & Bradstreet.":::
 
+### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
+
+Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
+
+## <a name="supported-countries-or-regions"></a>Các quốc gia hoặc khu vực được hỗ trợ
+
+Chúng tôi hiện hỗ trợ các tùy chọn quốc gia / khu vực sau: Canada (tiếng Anh) hoặc Hoa Kỳ (tiếng Anh).
+
+## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
+
+1. Đi đến **Dữ liệu** > **Tăng cường** rồi chọn tab **Khám phá**.
+
+1. Lựa chọn **Làm phong phú dữ liệu của tôi** trên **Dữ liệu công ty** cho ngói Dun & Bradstreet.
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Ảnh chụp màn hình lát gạch Dun & Bradstreet.":::
+
+1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
+
+1. Chọn kết nối và xác nhận. Liên hệ với quản trị viên nếu không có sẵn.
+
+1. Chọn **Tiếp theo**.
+
+1. Chọn **Tập dữ liệu khách hàng** và chọn hồ sơ hoặc phân đoạn bạn muốn làm phong phú thêm với dữ liệu công ty từ Dun & Bradstreet. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
+
+1. Xác định loại trường nào từ hồ sơ hợp nhất của bạn sẽ sử dụng để khớp với dữ liệu công ty từ Dun & Bradstreet. Ít nhất một trong các trường **Tên và địa chỉ**, **Điện thoại** hoặc **Email** là bắt buộc.
+
+1. Chọn **Tiếp theo**
+
+1. Ánh xạ các trường của bạn với dữ liệu công ty từ Dun & Bradstreet. Một trong hai **Số DUNS** hoặc **Tên công ty** và **Quốc gia** Mục này bắt buộc.
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Ngăn ánh xạ trường Dun & Bradstreet.":::
+
+1. Chọn **Tiếp** để hoàn thành quá trình ánh xạ trường.
+
+1. Cung cấp một **Tên** để làm giàu và **Tên thực thể đầu ra**.
+
+1. Chọn **Lưu dữ liệu tăng cường** sau khi xem xét các lựa chọn của bạn.
+
+1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
+
 ## <a name="enrichment-results"></a>Kết quả tăng cường
 
-Sau khi làm mới dữ liệu tăng cường, bạn có thể xem xét dữ liệu công ty mới được bổ sung trong phần [Dữ liệu tăng cường của tôi](enrichment-hub.md). Bạn có thể tìm thấy thời điểm cập nhật gần đây nhất và số lượng hồ sơ tăng cường.
-
-Bạn có thể truy cập dạng xem chi tiết của từng hồ sơ được tăng cường dữ liệu bằng cách chọn **Xem dữ liệu tăng cường**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
-
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

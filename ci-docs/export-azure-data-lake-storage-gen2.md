@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644030"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947256"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang Azure Data Lake Storage thế hệ 2 (xem trước)
 
@@ -21,11 +21,9 @@ Lưu trữ dữ liệu Customer Insights của bạn trong tài khoản Data Lak
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-1. Đối với Azure Data Lake Storage thế hệ 2, bạn có thể chọn giữa [Bậc Hiệu suất tiêu chuẩn và Hiệu suất cao cấp](/azure/storage/blobs/create-data-lake-storage-account) khi bạn đang tạo tài khoản lưu trữ cho kho dữ liệu của mình. Nếu bạn chọn bậc Hiệu suất cao cấp, hãy chọn các blob khối cao cấp làm loại tài khoản. 
+1. Đối với Azure Data Lake Storage thế hệ 2, bạn có thể chọn giữa [Bậc Hiệu suất tiêu chuẩn và Hiệu suất cao cấp](/azure/storage/blobs/create-data-lake-storage-account) khi bạn đang tạo tài khoản lưu trữ cho kho dữ liệu của mình. Nếu bạn chọn bậc Hiệu suất cao cấp, hãy chọn các blob khối cao cấp làm loại tài khoản.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Thiết lập kết nối với Azure Data Lake Storage thế hệ 2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Thiết lập kết nối với Azure Data Lake Storage thế hệ 2
 
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
@@ -39,7 +37,7 @@ Lưu trữ dữ liệu Customer Insights của bạn trong tài khoản Data Lak
     - Để tìm hiểu cách tạo tài khoản lưu trữ để sử dụng với Azure Data Lake Storage thế hệ 2, hãy xem [Tạo tài khoản lưu trữ](/azure/storage/blobs/create-data-lake-storage-account). 
     - Để tìm hiểu thêm về tên tài khoản lưu trữ Azure Data Lake Thế hệ 2 và khóa tài khoản, hãy xem [Quản lý các thiết đặt tài khoản lưu trữ trong cổng thông tin Azure](/azure/storage/common/storage-account-manage).
 
-1. Chọn **Lưu** để hoàn thành kết nối. 
+1. Chọn **Lưu** để hoàn thành kết nối.
 
 ## <a name="configure-an-export"></a>Đặt cấu hình xuất
 
@@ -57,8 +55,12 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
-Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab).
+Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand).
 
-Dữ liệu đã xuất được lưu trữ trong bộ lưu trữ Azure Data Lake Thế hệ 2 mà bạn đã đặt cấu hình. 
+Dữ liệu đã xuất được lưu trữ trong bộ lưu trữ Azure Data Lake Thế hệ 2 mà bạn đã đặt cấu hình.
+
+> [!TIP]
+> Việc xuất các thực thể chứa một lượng lớn dữ liệu có thể dẫn đến nhiều tệp CSV trong cùng một thư mục cho mỗi lần xuất. Việc chia nhỏ xuất khẩu xảy ra vì lý do hiệu suất để giảm thiểu thời gian hoàn thành xuất khẩu.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

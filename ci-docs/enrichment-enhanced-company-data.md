@@ -1,25 +1,25 @@
 ---
 title: Nâng cao dữ liệu công ty
 description: Làm phong phú và bình thường hóa dữ liệu công ty với các mô hình của Microsoft.
-ms.date: 04/22/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6aa38afa7f92b512d19b4967fc1652b5e43ad094
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643984"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953975"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Làm phong phú hồ sơ công ty với dữ liệu công ty nâng cao
 
 Sử dụng các mô hình của Microsoft và dữ liệu công ty đã biên dịch để chỉnh sửa, bổ sung và chuẩn hóa hồ sơ công ty của bạn. Chúng tôi sẽ sử dụng [Định dạng mô hình dữ liệu chung](/common-data-model/schema/core/applicationcommon/account) để có độ chính xác và thông tin chi tiết tốt hơn.
 
-Bạn cũng có thể [nâng cao dữ liệu của công ty trên các nguồn dữ liệu](data-sources-enrichment.md) để cải thiện độ chính xác đối sánh trong quá trình hợp nhất dữ liệu. 
+Bạn cũng có thể [nâng cao dữ liệu của công ty trên các nguồn dữ liệu](data-sources-enrichment.md) để cải thiện độ chính xác đối sánh trong quá trình hợp nhất dữ liệu.
 
 Đối với các công ty đại chúng ở Hoa Kỳ, các thông tin như doanh thu, mã chứng khoán, ngành, v.v. đều có sẵn.  
 
@@ -27,10 +27,9 @@ Bạn cũng có thể [nâng cao dữ liệu của công ty trên các nguồn d
 
 Mô hình của chúng tôi trải qua quy trình hai bước để nâng cao hồ sơ công ty. Đầu tiên, nó bình thường hóa tên công ty. Ví dụ, *Microsoft Corp* sẽ được sửa chữa và tiêu chuẩn hóa để *Tập đoàn Microsoft*. Nó cố gắng tìm sự trùng khớp trong dữ liệu công ty đã biên dịch của Microsoft. Nếu tìm thấy sự trùng khớp, chúng tôi sẽ làm phong phú thêm hồ sơ công ty với thông tin từ dữ liệu công ty đã tổng hợp của chúng tôi, bao gồm cả tên công ty.
 
-
 ### <a name="example"></a>Ví dụ:
 
-Thông tin công ty của bạn có thể không tuân theo định dạng chuẩn hóa và có lỗi chính tả. Mô hình cố gắng khắc phục những vấn đề này và tạo thông tin nhất quán.
+Thông tin công ty của bạn có thể không tuân theo định dạng chuẩn hóa và có lỗi chính tả. Mô hình cố gắng khắc phục những vấn đề này và tạo ra thông tin nhất quán.
 
 ```Input
 Microsft
@@ -50,52 +49,52 @@ Microsft
 
 ## <a name="limitations"></a>Giới hạn
 
-Có một số hạn chế với dữ liệu nâng cao. Các mục trong danh sách dưới đây không được hỗ trợ bởi mô hình.
+Mô hình không:
 
-1.  Xác nhận danh tính của công ty. Chúng tôi không xác minh xem đầu vào là một tổ chức hiện có hay một công ty sử dụng đầu ra làm tên tiêu chuẩn.
-2.  Bao quát toàn diện các công ty trên toàn cầu. Dữ liệu công ty được biên dịch của Microsoft có phạm vi toàn cầu, nhưng cung cấp hầu hết các phạm vi bao phủ ở Úc, Canada, Vương quốc Anh và Hoa Kỳ.
-3.  Chuẩn hóa địa chỉ công ty trên toàn cầu. Chúng tôi hiện hỗ trợ tiêu chuẩn hóa địa chỉ ở các quốc gia hoặc khu vực sau: Úc, Canada, Pháp, Đức, Ý, Nhật Bản, Vương quốc Anh và Hoa Kỳ.
-4.  Đảm bảo độ chính xác hoặc độ mới của dữ liệu. Vì thông tin doanh nghiệp thường thay đổi, chúng tôi không thể đảm bảo rằng dữ liệu công ty nâng cao được cung cấp luôn chính xác hoặc cập nhật.
+- Xác nhận danh tính của công ty. Chúng tôi không xác minh xem đầu vào là một tổ chức hiện có hay một công ty sử dụng đầu ra làm tên tiêu chuẩn.
+- Bao quát toàn diện các công ty trên toàn cầu. Dữ liệu công ty được biên dịch của Microsoft có phạm vi toàn cầu, nhưng cung cấp hầu hết các phạm vi bao phủ ở Úc, Canada, Vương quốc Anh và Hoa Kỳ.
+- Chuẩn hóa địa chỉ công ty trên toàn cầu. Chúng tôi hiện hỗ trợ tiêu chuẩn hóa địa chỉ ở các quốc gia hoặc khu vực sau: Úc, Canada, Pháp, Đức, Ý, Nhật Bản, Vương quốc Anh và Hoa Kỳ.
+- Đảm bảo độ chính xác hoặc độ mới của dữ liệu. Vì thông tin doanh nghiệp thường thay đổi, chúng tôi không thể đảm bảo rằng dữ liệu công ty nâng cao được cung cấp luôn chính xác hoặc cập nhật.
 
 ## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
 
-1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
+1. Đi đến **Dữ liệu** > **Tăng cường** rồi chọn tab **Khám phá**.
 
 1. Lựa chọn **Làm phong phú dữ liệu của tôi** trên **Dữ liệu công ty nâng cao** ngói.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Ô phong phú trong trung tâm phong phú cho dữ liệu công ty.":::
 
-1. Chọn **Tập hợp dữ liệu khách hàng** rồi chọn thực thể chứa các địa chỉ bạn muốn tăng cường. Bạn có thể chọn thực thể *Khách hàng* để tăng cường địa chỉ có trong tất cả các hồ sơ khách hàng của bạn hoặc chọn một thực thể phân khúc để tăng cường duy nhất địa chỉ có trong hồ sơ khách hàng thuộc phân khúc đó.
+1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
 
-1. Chọn loại trường nào từ hồ sơ công ty của bạn sẽ được sử dụng để khớp với dữ liệu công ty đã biên dịch của Microsoft. Lựa chọn này sẽ ảnh hưởng đến các trường ánh xạ mà bạn có quyền truy cập trong bước tiếp theo.
+1. Chọn **Tập dữ liệu khách hàng** và chọn hồ sơ hoặc phân đoạn bạn muốn làm phong phú thêm. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1.  Ánh xạ các trường của công ty từ thực thể khách hàng hợp nhất của bạn. Bạn càng ánh xạ nhiều số nhận dạng và trường chính, thì khả năng tỷ lệ đối sánh càng cao.
+1. Chọn loại trường từ hồ sơ công ty của bạn để sử dụng để khớp với dữ liệu công ty đã biên dịch của Microsoft. Lựa chọn này sẽ ảnh hưởng đến các trường ánh xạ mà bạn có quyền truy cập trong bước tiếp theo.
+
+1. Chọn **Tiếp theo**.
+
+1. Ánh xạ các trường của công ty bạn với dữ liệu công ty từ Microsoft. Để có độ chính xác đối sánh cao hơn, hãy thêm nhiều trường hơn.
 
     :::image type="content" source="media/enhanced-company-data-mapping.png" alt-text="Bước ánh xạ dữ liệu khi định cấu hình làm giàu cho công ty.":::
 
 1. Chọn **Tiếp** để hoàn thành quá trình ánh xạ trường.
 
-1. Đặt tên cho dữ liệu tăng cường và thực thể đầu ra.
+1. Cung cấp một **Tên** để làm giàu và **Thực thể đầu ra**.
 
 1. Chọn **Lưu dữ liệu tăng cường** sau khi xem xét các lựa chọn của bạn.
 
+1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
+
 ## <a name="enrichment-results"></a>Kết quả tăng cường
 
-Để bắt đầu quá trình tăng cường, hãy chọn **Chạy** từ thanh lệnh. Bạn cũng có thể để hệ thống chạy quá trình tăng cường tự động như một phần của [làm mới theo lịch trình](system.md#schedule-tab). Thời gian xử lý phụ thuộc vào kích thước dữ liệu khách hàng của bạn.
-
-Sau khi quá trình tăng cường hoàn tất, bạn có thể xem xét dữ liệu hồ sơ khách hàng mới được bổ sung trong **Dữ liệu tăng cường của tôi**. Ngoài ra, bạn sẽ tìm thấy thời gian của lần cập nhật gần nhất và số lượng hồ sơ được tăng cường.
-
-Bạn có thể xem một mẫu dữ liệu được bổ sung chi tiết trong **Phong phú khách hàng xem trước** ngói. Lựa chọn **Xem thêm** và chọn **Dữ liệu** để truy cập chế độ xem chi tiết của từng hồ sơ được bổ sung chi tiết.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ### <a name="overview-card"></a>Thẻ tổng quan
 
-Thẻ tổng quan hiển thị chi tiết về phạm vi bổ sung. 
+Các **Tổng quan về các thay đổi của khách hàng** ô hiển thị chi tiết về phạm vi bao phủ của phần làm giàu
 
-* **Các công ty đã xử lý và thay đổi** : Số lượng hồ sơ công ty của khách hàng đã được bổ sung thành công.
-
-* **Các công ty đã xử lý và không thay đổi** : Số lượng hồ sơ công ty của khách hàng đã được công nhận nhưng không thay đổi. Điều này thường xảy ra khi dữ liệu đầu vào hợp lệ và không thể cải thiện bằng cách bổ sung.
-
-* **Các công ty không được xử lý và không thay đổi** : Số lượng hồ sơ công ty của khách hàng không được công nhận. Điều này thường xảy ra đối với dữ liệu đầu vào không hợp lệ hoặc không được bổ sung hỗ trợ.
+- **Các công ty đã xử lý và thay đổi** : Số lượng hồ sơ công ty khách hàng đã được bổ sung thành công.
+- **Các công ty đã xử lý và không thay đổi** : Số lượng hồ sơ công ty của khách hàng đã được công nhận nhưng không thay đổi. Điều này thường xảy ra khi dữ liệu đầu vào hợp lệ và không thể cải thiện bằng cách bổ sung.
+- **Các công ty không được xử lý và không thay đổi** : Số lượng hồ sơ công ty của khách hàng không được nhận dạng. Điều này thường xảy ra đối với dữ liệu đầu vào không hợp lệ hoặc không được bổ sung hỗ trợ.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

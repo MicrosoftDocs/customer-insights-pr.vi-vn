@@ -1,19 +1,19 @@
 ---
-title: Các tính năng mới sắp ra mắt
+title: Tính năng mới và cập nhật
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833656"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843373"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nội dung mới trong Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Cập nhật tháng 5 năm 2022
+
+Các bản cập nhật vào tháng 5 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="updated-data-unification-experience"></a>Cập nhật trải nghiệm hợp nhất dữ liệu
+
+ Hợp nhất dữ liệu cho phép bạn hợp nhất các nguồn dữ liệu riêng biệt một lần thành một tập dữ liệu chính duy nhất cung cấp một cái nhìn thống nhất về dữ liệu đó. Dữ liệu có thể được thống nhất trên một thực thể duy nhất hoặc nhiều thực thể. Bạn đầu tiên [chọn các thực thể và trường nguồn](map-entities.md),[loại bỏ các bản ghi trùng lặp](remove-duplicates.md), chỉ định các quy tắc cho [điều kiện phù hợp](match-entities.md) và xác định cái nào [các trường để đưa vào hồ sơ khách hàng hợp nhất](merge-entities.md).
+
+Để biết thêm thông tin, hãy xem [Tổng quan về hợp nhất dữ liệu](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Trang chủ được làm mới trong Thông tin chi tiết về khách hàng
+
+**Nhà** hướng dẫn bạn qua quy trình cấu hình cho các tính năng chính và cung cấp tổng quan về các phân đoạn, thước đo và dữ liệu bổ sung. Chúng tôi đã làm mới trải nghiệm để cung cấp nhanh hơn thông tin có liên quan.
+
+Để biết thêm thông tin, hãy xem [Khám phá thông tin chi tiết về khách hàng](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Theo dõi việc sử dụng một đoạn
+
+Bây giờ bạn có thể [theo dõi việc sử dụng một phân đoạn](segments.md#track-usage-of-a-segment) trong các ứng dụng, dựa trên Dataverse tổ chức được kết nối với Thông tin chi tiết về khách hàng. Vì [Phân đoạn Thông tin chi tiết về khách hàng được sử dụng trong hành trình của khách hàng của Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), hệ thống sẽ thông báo cho bạn về việc sử dụng phân đoạn đó.
+
+### <a name="export-to-criteo"></a>Xuất sang Criteo
+
+Criteo là một nền tảng trực tuyến giúp người dùng quản lý quảng cáo kỹ thuật số. Giờ đây, bạn có thể xuất các phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến dịch, cung cấp tiếp thị qua email và sử dụng các nhóm khách hàng cụ thể với Criteo.
+
+Để biết thêm thông tin, hãy xem [Xuất phân đoạn sang Criteo (xem trước)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Cấu trúc tài liệu tinh chỉnh để tạo môi trường
+
+Chúng tôi đã xem lại các tài liệu trợ giúp liên quan đến việc tạo và quản lý môi trường trong Thông tin chi tiết về khách hàng. Các bài viết hiện được nhóm lại dưới nút Môi trường trong mục lục. Các bài viết được cấu trúc lại cung cấp thêm hướng dẫn về các cách khác nhau để thiết lập môi trường và có cấu trúc rõ ràng hơn. Nếu bạn có phản hồi muốn chia sẻ, hãy cho chúng tôi biết thông qua các điều khiển ở cuối bài viết trợ giúp.
+
+Để biết thêm thông tin, hãy xem [Cách thực hiện: Tạo môi trường mới](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Bản cập nhật tháng 4 năm 2022
 
@@ -74,7 +105,7 @@ Trước đó, bạn chỉ có thể bật chia sẻ dữ liệu với Dataverse
 
 Chúng tôi đang tiếp tục mở rộng hệ sinh thái các điểm đến xuất khẩu của mình với các kết nối mới. Bây giờ bạn có thể xuất các phân đoạn sang Iterable và Braze để sử dụng các dịch vụ kích hoạt của họ.
 
-Để biết thêm thông tin, hãy xem [Xuất phân đoạn sang Lặp lại (xem trước)](export-iterable.md) và [Xuất phân đoạn sang Braze (xem trước)](export-braze.md).
+Để biết thêm thông tin, hãy xem [Xuất phân đoạn sang Có thể lặp lại (xem trước)](export-iterable.md) và [Xuất phân đoạn sang Braze (xem trước)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Cải tiến Marketo và xuất Google Ads
 
@@ -83,7 +114,7 @@ Việc thay đổi API trong các dịch vụ được kết nối dẫn đến 
 - Google Ads: Phiên bản mới của trình kết nối xuất Google Ads đơn giản hóa trải nghiệm xác thực và giờ đây cho phép bạn tự động tạo các đối tượng Google Ads mới. 
 - Marketo: Phiên bản mới của trình kết nối xuất Marketo cung cấp hỗ trợ cho ID Marketo, cho phép bạn tránh trùng lặp dữ liệu, cập nhật các bản ghi hiện có và tạo bản ghi mới trong Marketo. 
 
-## <a name="february-2022-updates"></a>Bản cập nhật tháng 2 năm 2022
+## <a name="february-2022-updates"></a>Cập nhật tháng 2 năm 2022
 
 Các bản cập nhật vào tháng 2 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
 
@@ -109,7 +140,7 @@ LiveRamp cung cấp giải pháp nhận dạng và hợp nhất dữ liệu khá
 
 ### <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (Xem trước)
 
-Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi thống nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi hợp nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
 
 Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu (Xem trước)](data-sources-enrichment.md).
 

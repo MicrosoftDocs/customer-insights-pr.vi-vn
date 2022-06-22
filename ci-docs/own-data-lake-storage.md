@@ -3,17 +3,17 @@ title: Tự dùng cái của bạn đi Azure Data Lake Storage Tài khoản Gen2
 author: mukeshpo
 description: Tìm hiểu về các yêu cầu để sử dụng của riêng bạn Azure Data Lake Storage tài khoản để lưu trữ dữ liệu Thông tin chi tiết về khách hàng.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833958"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011959"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Tự dùng cái của bạn đi Azure Data Lake Storage Tài khoản Gen2
 
@@ -36,7 +36,8 @@ Khi bạn tạo một môi trường mới, hãy đảm bảo rằng tài khoả
 1. Bên trong **Lưu trữ dữ liệu** bước trong quá trình tạo môi trường, thiết lập **Lưu dữ liệu đầu ra** đến **Azure Data Lake Storage Gen2**.
 1. Chọn cách **Kết nối bộ nhớ của bạn**. Bạn có thể chọn giữa tùy chọn dựa trên tài nguyên và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage tài khoản bằng cách sử dụng Dịch vụ Azure chính](connect-service-principal.md).
    - Vì **Đăng ký Azure**, chọn **Đăng ký**, **tài nguyên**, và **Tài khoản lưu trữ** có chứa`customerinsights` thùng đựng hàng.
-   - Vì **Khóa tài khoản**, cung cấp **Tên tài khoản** và **Khóa tài khoản** cho tài khoản Data Lake Storage. Sử dụng phương pháp xác thực này ngụ ý rằng bạn được thông báo nếu tổ chức của bạn xoay các khóa. Bạn phải [cập nhật cấu hình môi trường](manage-environments.md#edit-an-existing-environment) với phím mới khi nó được xoay.
+   - Vì **Khóa tài khoản**, cung cấp **Tên tài khoản** và **Chìa khóa tài khoản** cho tài khoản Data Lake Storage. Sử dụng phương pháp xác thực này ngụ ý rằng bạn được thông báo nếu tổ chức của bạn xoay các khóa. Bạn phải [cập nhật cấu hình môi trường](manage-environments.md#edit-an-existing-environment) với phím mới khi nó được xoay.
+1. Chọn nếu bạn muốn sử dụng Azure Private Link để kết nối với tài khoản lưu trữ và [tạo kết nối với Liên kết riêng tư](security-overview.md#private-links-tab) với quy trình hai bước.
 
 Khi quá trình hệ thống như nhập dữ liệu hoàn tất, hệ thống sẽ tạo các thư mục tương ứng trong tài khoản lưu trữ. Tệp dữ liệu và tệp *model.json* được tạo và thêm vào các thư mục dựa trên tên quy trình.
 

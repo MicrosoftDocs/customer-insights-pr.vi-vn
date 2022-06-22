@@ -1,105 +1,186 @@
 ---
 title: Kết nối dữ liệu Common Data Model với tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
-ms.date: 05/24/2022
-ms.subservice: audience-insights
+ms.date: 05/30/2022
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: mukeshpo
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833424"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011599"
 ---
-# <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
+# <a name="connect-to-data-in-azure-data-lake-storage"></a>Kết nối với dữ liệu trong Azure Data Lake Storage
 
-Bài viết này cung cấp thông tin về cách nhập dữ liệu vào Dynamics 365 Customer Insights từ một thư mục Mô hình Dữ liệu Chung bằng cách sử dụng Azure Data Lake Storage Tài khoản Gen2.
+Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn Azure Data Lake Storage Tài khoản Gen2. Quá trình nhập dữ liệu có thể đầy đủ hoặc tăng dần.
 
-## <a name="important-considerations"></a>Những điều quan trọng cần cân nhắc
+## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Dữ liệu trong Azure Data Lake của bạn phải theo chuẩn Common Data Model. Hiện các định dạng khác chưa được hỗ trợ.
+- Hỗ trợ nhập dữ liệu Azure Data Lake Storage *Gen2* tài khoản độc quyền. Bạn không thể sử dụng tài khoản Data Lake Storage Gen1 để nhập dữ liệu.
 
-- Nhập dữ liệu chỉ hỗ trợ tài khoản lưu trữ Azure Data Lake *Gen2*. Bạn không thể sử dụng tài khoản lưu trữ Azure Data Lake Gen1 để nhập dữ liệu.
-
-- Tài khoản lưu trữ Azure Data Lake phải có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace).
+- Các Azure Data Lake Storage tài khoản phải có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace). Dữ liệu phải được lưu trữ ở định dạng thư mục phân cấp xác định thư mục gốc và có các thư mục con cho mỗi thực thể. Các thư mục con có thể có đầy đủ dữ liệu hoặc các thư mục dữ liệu gia tăng.
 
 - Để xác thực bằng dịch vụ chính Azure, hãy đảm bảo rằng dịch vụ chính được định cấu hình trong đối tượng thuê của bạn. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md).
 
-- Azure Data Lake mà bạn muốn kết nối và nhập dữ liệu phải ở cùng khu vực Azure với môi trường Dynamics 365 Customer Insights. Không hỗ trợ kết nối với thư mục Common Data Model từ một kho dữ liệu trong một vùng Azure khác. Để biết vùng Azure của môi trường, hãy truy cập **Quản trị viên** > **Hệ thống** > **Về** trong Thông tin chi tiết về khách hàng.
+- Các Azure Data Lake Storage bạn muốn kết nối và nhập dữ liệu từ đó phải ở trong cùng khu vực Azure với Dynamics 365 Customer Insights Môi trường. Không hỗ trợ kết nối với thư mục Common Data Model từ một kho dữ liệu trong một vùng Azure khác. Để biết vùng Azure của môi trường, hãy truy cập **Quản trị viên** > **Hệ thống** > **Về** trong Thông tin chi tiết về khách hàng.
 
-- Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
+- Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm tin cậy của Microsoft](https://www.microsoft.com/trust-center).
 
-## <a name="connect-to-a-common-data-model-folder"></a>Kết nối với thư mục Common Data Model
+- Nhân viên chính của dịch vụ Thông tin chi tiết về khách hàng phải đảm nhiệm một trong các vai trò sau đây để truy cập vào tài khoản lưu trữ. Để biết thêm thông tin, hãy xem [Cấp quyền cho người quản lý dịch vụ để truy cập vào tài khoản lưu trữ](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+  - Bộ đọc dữ liệu khối lưu trữ
+  - Chủ sở hữu dữ liệu khối lưu trữ
+  - Người đóng góp dữ liệu khối lưu trữ
+
+- Dữ liệu trong Data Lake Storage của bạn phải tuân theo tiêu chuẩn Mô hình Dữ liệu Chung để lưu trữ dữ liệu của bạn và có tệp kê khai mô hình dữ liệu chung để đại diện cho lược đồ của các tệp dữ liệu (* .csv hoặc * .parquet). Tệp kê khai phải cung cấp thông tin chi tiết về các đối tượng như cột đối tượng và kiểu dữ liệu cũng như vị trí tệp dữ liệu và loại tệp. Để biết thêm thông tin, hãy xem [Tệp kê khai Mô hình dữ liệu chung](/common-data-model/sdk/manifest). Nếu tệp kê khai không xuất hiện, người dùng quản trị có quyền truy cập Chủ sở hữu dữ liệu Blob lưu trữ hoặc Người đóng góp dữ liệu Blob lưu trữ có thể xác định giản đồ khi nhập dữ liệu.
+
+## <a name="connect-to-azure-data-lake-storage"></a>Kết nối với Azure Data Lake Storage
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
 
 1. Chọn **Thêm nguồn dữ liệu**.
 
-1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**, nhập **Tên** cho nguồn dữ liệu, sau đó chọn **Tiếp theo**.
+1. Lựa chọn **Lưu trữ hồ dữ liệu Azure**.
 
-   - Nếu được nhắc, hãy chọn một trong các bộ dữ liệu mẫu liên quan đến ngành của bạn, sau đó chọn **Tiếp theo**.
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Hộp thoại để nhập chi tiết kết nối cho Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Bạn có thể chọn giữa sử dụng tùy chọn dựa trên nguồn lực và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md). Nhập **Địa chỉ máy chủ**, lựa chọn **đăng nhập**, sau đó chọn **Tiếp theo**.
-   > [!div class="mx-imgBorder"]
-   > ![Hộp thoại để nhập chi tiết kết nối mới cho Azure Data Lake.](media/enter-new-storage-details.png)
+1. Nhập **Tên** cho nguồn dữ liệu và một tùy chọn **Sự mô tả**. Tên xác định duy nhất nguồn dữ liệu và được tham chiếu trong các quy trình hạ lưu và không thể thay đổi.
+
+1. Chọn một trong các tùy chọn sau cho **Kết nối bộ nhớ của bạn bằng**. Để biết thêm thông tin, hãy xem [Kết nối Thông tin chi tiết về khách hàng với Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md).
+
+   - **Tài nguyên Azure** : Nhập **Id tài nguyên** . Theo tùy chọn, nếu bạn muốn nhập dữ liệu từ tài khoản lưu trữ thông qua Liên kết riêng tư Azure, hãy chọn **Bật liên kết riêng tư**. Để biết thêm thông tin, hãy xem [Liên kết riêng tư](security-overview.md#private-links-tab).
+   - **Đăng ký Azure** : Chọn **Đăng ký** và sau đó **Nhóm tài nguyên** và **Tài khoản lưu trữ**. Theo tùy chọn, nếu bạn muốn nhập dữ liệu từ tài khoản lưu trữ thông qua Liên kết riêng tư Azure, hãy chọn **Bật liên kết riêng tư**. Để biết thêm thông tin, hãy xem [Liên kết riêng tư](security-overview.md#private-links-tab).
+  
    > [!NOTE]
-   > Bạn cần một trong các vai trò sau đối với vùng chứa trên tài khoản lưu trữ và tạo nguồn dữ liệu:
+   > Bạn cần một trong các vai trò sau đối với vùng chứa hoặc tài khoản lưu trữ để tạo nguồn dữ liệu:
    >
    >  - Storage Blob Data Reader đủ để đọc từ tài khoản lưu trữ và nhập dữ liệu vào Thông tin chi tiết về khách hàng. 
-   >  - Người đóng góp hoặc chủ sở hữu dữ liệu Storage Blob là bắt buộc nếu bạn muốn chỉnh sửa tệp kê khai trực tiếp trong Thông tin chi tiết về khách hàng.
-
-1. Trong hộp thoại **Chọn thư mục Common Data Model**, chọn tệp model.json hoặc manifest.json để nhập dữ liệu từ đó và chọn **Tiếp theo**.
+   >  - Người đóng góp hoặc chủ sở hữu dữ liệu Storage Blob là bắt buộc nếu bạn muốn chỉnh sửa tệp kê khai trực tiếp trong Thông tin chi tiết về khách hàng.  
+  
+1. Chọn tên của **Thùng đựng hàng** chứa dữ liệu và giản đồ (tệp model.json hoặc tệp manifest.json) để nhập dữ liệu từ đó và chọn **Tiếp theo**.
    > [!NOTE]
-   > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách.
+   > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách. Tuy nhiên, cùng một tệp model.json hoặc manifest.json có thể được sử dụng cho các nguồn dữ liệu trong nhiều môi trường.
 
-1. Bạn sẽ thấy danh sách các thực thể có sẵn trong tệp model.json hoặc tệp manifest.json đã chọn. Xem lại và chọn từ danh sách các thực thể có sẵn, sau đó chọn **Tiết kiệm**. Tất cả thực thể đã chọn sẽ được nhập từ nguồn dữ liệu mới.
-   > [!div class="mx-imgBorder"]
-   > ![Hộp thoại hiển thị danh sách thực thể từ tệp model.json.](media/review-entities.png)
+1. Để tạo một giản đồ mới, hãy chuyển đến [Tạo một tệp giản đồ mới](#create-a-new-schema-file).
 
-1. Cho biết thực thể dữ liệu nào bạn muốn bật cấu hình dữ liệu, sau đó chọn **Tiết kiệm**. Tính năng thu thập dữ liệu cho phép phân tích và các chức năng khác. Bạn có thể chọn toàn bộ thực thể. Thao tác này sẽ chọn tất cả các thuộc tính từ thực thể hoặc chọn một số thuộc tính bạn chọn. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
-   > [!div class="mx-imgBorder"]
-   > ![Hộp thoại hiển thị phân tích chất lượng dữ liệu.](media/dataprofiling-entities.png)
+1. Để sử dụng một lược đồ hiện có, hãy điều hướng đến thư mục chứa tệp model.json hoặc tệp manifest.cdm.json. Bạn có thể tìm kiếm trong một thư mục để tìm tệp.
 
-1. Sau khi bạn lưu các lựa chọn, trang **Nguồn dữ liệu** sẽ mở ra. Lúc này, bạn sẽ thấy kết nối thư mục Common Data Model dưới dạng nguồn dữ liệu.
+1. Chọn tệp json và chọn **Tiếp theo**. Một danh sách các thực thể có sẵn sẽ hiển thị.
 
-> [!NOTE]
-> Tệp model.json hoặc manifest.json chỉ có thể liên kết với một nguồn dữ liệu trong cùng một môi trường. Tuy nhiên, cùng một tệp model.json hoặc manifest.json có thể được sử dụng cho các nguồn dữ liệu trong nhiều môi trường.
+   :::image type="content" source="media/review-entities.png" alt-text="Hộp thoại danh sách các thực thể để chọn":::
 
-## <a name="edit-a-common-data-model-folder-data-source"></a>Chỉnh sửa nguồn dữ liệu thư mục Common Data Model
+1. Chọn các thực thể bạn muốn đưa vào.
 
-Bạn có thể cập nhật khóa truy cập cho tài khoản lưu trữ có chứa thư mục Common Data Model. Bạn cũng có thể thay đổi tệp model.json hoặc tệp manifest.json. Để kết nối với vùng chứa khác từ tài khoản lưu trữ của bạn hoặc đổi tên tài khoản, hãy [tạo một kết nối mới cho nguồn dữ liệu](#connect-to-a-common-data-model-folder).
+   :::image type="content" source="media/ADLS_required.png" alt-text="Hộp thoại hiển thị Bắt buộc đối với Khóa chính":::
+
+   > [!TIP]
+   > Để chỉnh sửa các thực thể trong giao diện chỉnh sửa JSON, hãy chọn **Cho xem nhiều hơn** > **Chỉnh sửa tệp lược đồ**. Thực hiện các thay đổi và chọn **Tiết kiệm**.
+
+1. Đối với các thực thể đã chọn yêu cầu nhập tăng dần, **Yêu cầu** hiển thị dưới **Làm mới gia tăng**. Đối với từng thực thể này, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md).
+
+1. Đối với các thực thể đã chọn mà khóa chính chưa được xác định, **Yêu cầu** hiển thị dưới **Khóa chính**. Đối với mỗi thực thể này:
+   1. Lựa chọn **Yêu cầu**. Các **Chỉnh sửa thực thể** bảng điều khiển hiển thị.
+   1. Chọn **Khóa chính**. Khóa chính là một thuộc tính duy nhất của thực thể. Để một thuộc tính là khóa chính hợp lệ, thuộc tính đó không được bao gồm các giá trị trùng lặp, giá trị bị thiếu hoặc giá trị rỗng. Các thuộc tính kiểu dữ liệu chuỗi, số nguyên và GUID được hỗ trợ làm khóa chính.
+   1. Theo tùy chọn, thay đổi mẫu phân vùng.
+   1. Lựa chọn **Đóng** để lưu và đóng bảng điều khiển.
+
+1. Chọn số lượng **Thuộc tính** cho mỗi thực thể được bao gồm. Các **Quản lý các thuộc tính** hiển thị trang.
+
+   :::image type="content" source="media/dataprofiling-entities.png" alt-text="Hộp thoại để chọn cấu hình dữ liệu.":::
+
+   1. Tạo các thuộc tính mới, chỉnh sửa hoặc xóa các thuộc tính hiện có. Bạn có thể thay đổi tên, định dạng dữ liệu hoặc thêm một loại ngữ nghĩa.
+   1. Để bật phân tích và các khả năng khác, hãy chọn **Lập hồ sơ dữ liệu** cho toàn bộ thực thể hoặc cho các thuộc tính cụ thể. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
+   1. Chọn **Xong**.
+
+1. Chọn **Lưu.** Các **Nguồn dữ liệu** trang mở ra hiển thị nguồn dữ liệu mới trong **Làm mới** trạng thái.
+
+### <a name="create-a-new-schema-file"></a>Tạo một tệp giản đồ mới
+
+1. Lựa chọn **Tệp lược đồ mới**.
+
+1. Nhập tên cho tệp và chọn **Tiết kiệm**.
+
+1. Lựa chọn **Thực thể mới**. Các **Thực thể mới** bảng điều khiển hiển thị.
+
+1. Nhập tên thực thể và chọn **Vị trí tệp dữ liệu**.
+   - **Nhiều tệp .csv hoặc .parquet** : Duyệt đến thư mục gốc, chọn kiểu mẫu và nhập biểu thức.
+   - **Tệp .csv hoặc .parquet đơn lẻ** : Duyệt đến tệp .csv hoặc .parquet và chọn nó.
+
+   :::image type="content" source="media/ADLS_new_entity_location.png" alt-text="Hộp thoại để tạo một thực thể mới với vị trí tệp Dữ liệu được đánh dấu.":::
+
+1. Chọn **Lưu.**
+
+   :::image type="content" source="media/ADLS_new_entity_define_attributes.png" alt-text="Hộp thoại để xác định hoặc tự động tạo các thuộc tính.":::
+
+1. Lựa chọn **xác định các thuộc tính** để thêm các thuộc tính theo cách thủ công hoặc chọn **tự động tạo chúng**. Để xác định các thuộc tính, hãy nhập tên, chọn định dạng dữ liệu và kiểu ngữ nghĩa tùy chọn. Đối với các thuộc tính được tạo tự động:
+
+   1. Sau khi các thuộc tính được tạo tự động, hãy chọn **Xem lại các thuộc tính**. Các **Quản lý các thuộc tính** hiển thị trang.
+
+   1. Đảm bảo định dạng dữ liệu chính xác cho từng thuộc tính.
+
+   1. Để bật phân tích và các khả năng khác, hãy chọn **Lập hồ sơ dữ liệu** cho toàn bộ thực thể hoặc cho các thuộc tính cụ thể. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
+
+      :::image type="content" source="media/dataprofiling-entities.png" alt-text="Hộp thoại để chọn cấu hình dữ liệu.":::
+
+   1. Chọn **Xong**. Các **Chọn các thực thể** hiển thị trang.
+
+1. Tiếp tục thêm các thực thể và thuộc tính, nếu có.
+
+1. Sau khi tất cả các thực thể đã được thêm, hãy chọn **Bao gồm** để bao gồm các thực thể trong quá trình nhập nguồn dữ liệu.
+
+   :::image type="content" source="media/ADLS_required.png" alt-text="Hộp thoại hiển thị Bắt buộc đối với Khóa chính":::
+
+1. Đối với các thực thể đã chọn yêu cầu nhập tăng dần, **Yêu cầu** hiển thị dưới **Làm mới gia tăng**. Đối với từng thực thể này, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md).
+
+1. Đối với các thực thể đã chọn mà khóa chính chưa được xác định, **Yêu cầu** hiển thị dưới **Khóa chính**. Đối với mỗi thực thể này:
+   1. Lựa chọn **Yêu cầu**. Các **Chỉnh sửa thực thể** bảng điều khiển hiển thị.
+   1. Chọn **Khóa chính**. Khóa chính là một thuộc tính duy nhất của thực thể. Để một thuộc tính là khóa chính hợp lệ, thuộc tính đó không được bao gồm các giá trị trùng lặp, giá trị bị thiếu hoặc giá trị rỗng. Các thuộc tính kiểu dữ liệu chuỗi, số nguyên và GUID được hỗ trợ làm khóa chính.
+   1. Theo tùy chọn, thay đổi mẫu phân vùng.
+   1. Lựa chọn **Đóng** để lưu và đóng bảng điều khiển.
+
+1. Chọn **Lưu.** Các **Nguồn dữ liệu** trang mở ra hiển thị nguồn dữ liệu mới trong **Làm mới** trạng thái.
+
+
+## <a name="edit-an-azure-data-lake-storage-data-source"></a>Chỉnh sửa một Azure Data Lake Storage nguồn dữ liệu
+
+Bạn có thể cập nhật *Kết nối với tài khoản lưu trữ bằng* quyền mua. Để biết thêm thông tin, hãy xem [Kết nối Thông tin chi tiết về khách hàng với Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md). Để kết nối với vùng chứa khác từ tài khoản lưu trữ của bạn hoặc đổi tên tài khoản, hãy [tạo một kết nối mới cho nguồn dữ liệu](#connect-to-azure-data-lake-storage).
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
 
-2. Bên cạnh nguồn dữ liệu bạn muốn cập nhật, hãy chọn dấu chấm lửng dọc (&vellip;).
+1. Bên cạnh nguồn dữ liệu bạn muốn cập nhật, hãy chọn **Chỉnh sửa**.
 
-3. Nhấp vào tùy chọn **Chỉnh sửa** trong danh sách.
+   :::image type="content" source="media/data_sources_edit_ADLS.png" alt-text="Hộp thoại để chỉnh sửa Azure Data Lake nguồn dữ liệu.":::
 
-4. Nếu muốn, hãy thay đổi **Mã truy cập** rồi chọn **Tiếp**.
+1. Thay đổi bất kỳ thông tin nào sau đây:
 
-   ![Hộp thoại để chỉnh sửa và cập nhật mã truy cập cho nguồn dữ liệu hiện tại.](media/edit-access-key.png)
+   - **Mô tả**
+   - **Kết nối bộ nhớ của bạn bằng** và thông tin kết nối. Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
+      > [!NOTE]
+      > Một trong các vai trò sau phải được chỉ định cho tài khoản lưu trữ hoặc vùng chứa:
+        > - Bộ đọc dữ liệu khối lưu trữ
+        > - Chủ sở hữu dữ liệu khối lưu trữ
+        > - Người đóng góp dữ liệu khối lưu trữ
 
-5. Theo tùy chọn, bạn có thể cập nhật từ kết nối khóa tài khoản thành kết nối dựa trên tài nguyên hoặc dựa trên đăng ký. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md). Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
-   > [!div class="mx-imgBorder"]
+   - **Bật liên kết riêng tư** nếu bạn muốn nhập dữ liệu từ tài khoản lưu trữ thông qua Liên kết riêng tư Azure. Để biết thêm thông tin, hãy xem [Liên kết riêng tư](security-overview.md#private-links-tab).
 
-   > ![Hộp thoại để nhập chi tiết kết nối cho Azure Data Lake với tài khoản lưu trữ hiện có.](media/enter-existing-storage-details.png)
+1. Chọn **Tiếp theo**.
+1. Thay đổi bất kỳ điều nào sau đây:
+   - Điều hướng đến tệp model.json hoặc tệp manifest.json khác với một nhóm thực thể khác từ vùng chứa.
+   - Để thêm các thực thể bổ sung để nhập, hãy chọn **Thực thể mới**.
+   - Để xóa bất kỳ thực thể nào đã được chọn nếu không có phụ thuộc, hãy chọn thực thể và **Xóa bỏ**.
+      > [!IMPORTANT]
+      > Nếu có các phần phụ thuộc vào tệp model.json hoặc tệp manifest.json hiện có và tập hợp các thực thể, bạn sẽ thấy thông báo lỗi và không thể chọn tệp model.json hoặc tệp manifest.json khác. Hãy xóa các phần phụ thuộc đó trước khi thay đổi tệp model.json hoặc tệp manifest.json hoặc tạo một nguồn dữ liệu mới với tệp model.json hoặc tệp manifest.json mà bạn muốn sử dụng để tránh xóa các phần phụ thuộc.
+   - Để thay đổi vị trí tệp dữ liệu hoặc khóa chính, hãy chọn **Chỉnh sửa**.
+   - Để thay đổi dữ liệu nhập gia tăng, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md)
 
-6. Tùy chọn, hãy chọn tệp model.json hoặc tệp manifest.json khác với một nhóm thực thể khác từ vùng chứa.
+1. Lựa chọn **Thuộc tính** để thêm hoặc thay đổi các thuộc tính hoặc để kích hoạt cấu hình dữ liệu. Sau đó, chọn **Hoàn tất**.
 
-7. Theo tùy chọn, bạn có thể chọn các thực thể bổ sung để nhập. Bạn cũng có thể xóa mọi thực thể đã chọn nếu không có phụ thuộc.
-
-   > [!IMPORTANT]
-   > Nếu có các phần phụ thuộc vào tệp model.json hoặc tệp manifest.json hiện có và tập hợp các thực thể, bạn sẽ thấy thông báo lỗi và không thể chọn tệp model.json hoặc tệp manifest.json khác. Hãy xóa các phần phụ thuộc đó trước khi thay đổi tệp model.json hoặc tệp manifest.json hoặc tạo một nguồn dữ liệu mới với tệp model.json hoặc tệp manifest.json mà bạn muốn sử dụng để tránh xóa các phần phụ thuộc.
-
-8. Theo tùy chọn, bạn có thể chọn các thuộc tính hoặc thực thể bổ sung để bật hoặc tắt phân tích chất lượng dữ liệu đã được chọn.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Nhấp chuột **Tiết kiệm** để áp dụng các thay đổi của bạn và quay lại **Nguồn dữ liệu** trang.

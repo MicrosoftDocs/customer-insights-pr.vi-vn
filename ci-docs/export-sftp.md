@@ -1,19 +1,19 @@
 ---
 title: Xuất dữ liệu Thông tin chi tiết về khách hàng sang máy chủ SFTP (chứa video)
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang vị trí SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644026"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947210"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Xuất phân khúc và dữ liệu khác sang SFTP (xem trước)
 
@@ -28,8 +28,8 @@ Sử dụng dữ liệu khách hàng của bạn trong các ứng dụng của b
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
 - Các điểm đến SFTP sau tường lửa hiện không được hỗ trợ. 
-- Thời gian chạy của một lần xuất phụ thuộc vào hiệu suất hệ thống của bạn. Chúng tôi khuyên bạn nên sử dụng máy chủ có tối thiểu hai lõi CPU và bộ nhớ 1 Gb. 
-- Việc xuất các thực thể với tối đa 100 triệu hồ sơ khách hàng có thể mất 90 phút khi sử dụng cấu hình tối thiểu được khuyến nghị gồm CPU 2 lõi và 1 Gb bộ nhớ. 
+- Thời gian chạy của một lần xuất phụ thuộc vào hiệu suất hệ thống của bạn. Chúng tôi khuyên bạn nên sử dụng máy chủ có tối thiểu hai lõi CPU và bộ nhớ 1 Gb.
+- Việc xuất các thực thể với tối đa 100 triệu hồ sơ khách hàng có thể mất 90 phút khi sử dụng cấu hình tối thiểu được khuyến nghị gồm CPU 2 lõi và 1 Gb bộ nhớ.
 
 ## <a name="set-up-connection-to-sftp"></a>Thiết lập kết nối với SFTP
 
@@ -64,17 +64,21 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 1. Chọn các thực thể, ví dụ như phân khúc, bạn muốn xuất.
 
    > [!NOTE]
-   > Mỗi thực thể đã chọn sẽ được chia thành tối đa năm tệp đầu ra khi xuất. 
+   > Mỗi thực thể đã chọn sẽ được chia thành tối đa năm tệp đầu ra khi xuất.
 
 1. Chọn **Lưu**.
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 
-Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
+Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab).
+Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Việc xuất các thực thể chứa một lượng lớn dữ liệu có thể dẫn đến nhiều tệp CSV trong cùng một thư mục cho mỗi lần xuất. Việc chia nhỏ xuất khẩu xảy ra vì lý do hiệu suất để giảm thiểu thời gian hoàn thành xuất khẩu.
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
-Khi bật Dynamics 365 Customer Insights để truyền dữ liệu qua SFTP, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ truyền những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng điểm đến xuất đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Khi bật Dynamics 365 Customer Insights để truyền dữ liệu qua SFTP, bạn cho phép truyền dữ liệu ra ngoài phạm vi tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu có khả năng là thông tin nhạy cảm, chẳng hạn như Dữ liệu cá nhân. Microsoft sẽ truyền những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng điểm đến xuất đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

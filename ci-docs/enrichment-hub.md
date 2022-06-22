@@ -1,7 +1,7 @@
 ---
 title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
 description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800631"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954067"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
 
@@ -35,29 +35,29 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tă
 
 # <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
+- [Nhận dạng AbiliTec](enrichment-liveramp.md) được cung cấp bởi LiveRamp AbiliTec
 - [Thương hiệu](enrichment-microsoft.md) do Microsoft cung cấp
-- [Sở thích](enrichment-microsoft.md) do Microsoft cung cấp
-- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp 
 - [Dữ liệu nhân khẩu học](enrichment-experian.md) do Experian cung cấp
-- [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
-- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp 
-- [Xác thực](enrichment-liveramp.md) được cung cấp bởi LiveRamp AbiliTec
+- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp
+- [Sở thích](enrichment-microsoft.md) do Microsoft cung cấp
+- [Dữ liệu vị trí](enrichment-azure-maps.md) cung cấp bởi Microsoft Azure Bản đồ
+- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp
+- [Dữ liệu tùy chỉnh SFTP](enrichment-SFTP-custom-import.md) thông qua Giao thức truyền tệp an toàn (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
-- [Dữ liệu công ty](enrichment-leadspace.md) do Leadspace cung cấp
-- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp 
-- [Dữ liệu công ty nâng cao](enrichment-enhanced-company-data.md) do Microsoft cung cấp
-- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp 
-- [Dữ liệu tùy chỉnh](enrichment-SFTP-custom-import.md) thông qua Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) được cung cấp bởi Microsoft
-- [Dữ liệu công ty](enrichment-dnb.md) cung cấp bởi Dun & Bradstreet
 - [Dữ liệu tương tác tài khoản](enrichment-office.md) do Microsoft cung cấp
+- [Dữ liệu công ty](enrichment-dnb.md) cung cấp bởi Dun & Bradstreet
+- [Dữ liệu công ty](enrichment-leadspace.md) do Leadspace cung cấp
+- [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp
+- [Dữ liệu công ty nâng cao](enrichment-enhanced-company-data.md) do Microsoft cung cấp
+- [Dữ liệu vị trí](enrichment-azure-maps.md) cung cấp bởi Microsoft Azure Bản đồ
+- [Dữ liệu vị trí](enrichment-here.md) do HERE Technologies cung cấp
+- [Dữ liệu tùy chỉnh SFTP](enrichment-SFTP-custom-import.md) thông qua Giao thức truyền tệp an toàn (SFTP)
 
 ---
 
-Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông tin bổ sung mà mình đã đặt cấu hình và chỉnh sửa thuộc tính.
+Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông tin bổ sung mà mình đã đặt cấu hình và chỉnh sửa thuộc tính. Bạn cũng có thể tạo [phân đoạn](segments.md) hoặc [đo](measures.md) từ làm giàu.
 
 ## <a name="manage-existing-enrichments"></a>Quản lý dữ liệu tăng cường hiện có
 
@@ -81,36 +81,45 @@ Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình 
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Nhiều dữ liệu tăng cường thuộc cùng loại
 
-Thực thể cần tăng cường sẽ được chỉ định trong quá trình đặt cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể đặt cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Bạn có thể xem các giới hạn và việc sử dụng hiện tại trên trang **Dữ liệu tăng cường**.
+Thực thể cần tăng cường sẽ được chỉ định trong quá trình đặt cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể đặt cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Các giới hạn và việc sử dụng hiện tại có thể được nhìn thấy trên mỗi ô trên **Phát hiện** tab của **Làm giàu** trang.
 
 ## <a name="enrich-data-sources-before-unification"></a>Làm phong phú nguồn dữ liệu trước khi hợp nhất
 
 Bạn có thể làm giàu dữ liệu khách hàng của mình trước khi hợp nhất dữ liệu để giúp tăng chất lượng của đối sánh dữ liệu. Để biết thêm thông tin, hãy xem [nguồn dữ liệu làm giàu](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
+## <a name="run-or-refresh-enrichments"></a>Chạy hoặc làm mới phần bổ sung
+
+1. Để bắt đầu quá trình làm giàu, hãy chọn **Chạy**. Hoặc, để hệ thống chạy phần bổ sung tự động như một phần của [làm mới theo lịch trình](system.md#schedule-tab). Thời gian xử lý phụ thuộc vào kích thước dữ liệu khách hàng của bạn.
+
+1. Tùy ý, [xem tiến trình của quá trình làm giàu](#see-the-progress-of-the-enrichment-process).
+
+1. Sau khi quá trình làm giàu hoàn tất, hãy chuyển đến **Sự làm giàu của tôi** để xem lại dữ liệu hồ sơ khách hàng mới được bổ sung, thời gian cập nhật lần cuối và số lượng hồ sơ được bổ sung.
+
+1. Chọn phần bổ sung để xem [kết quả làm giàu](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
 
 Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
 
-Để xem tình trạng của quy trình tăng cường
-
-1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. 
-1. Trong tab **Nội dung tăng cường của tôi**, chọn trạng thái bổ sung để mở ngăn bên. 
-1. Trong ngăn **Chi tiết tiến trình**, hãy bung rộng phần **Nội dung tăng cường**. 
-1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**. 
-1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng. 
+1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
+1. Bên trong **Sự làm giàu của tôi**, chọn trạng thái bổ sung để mở ngăn bên.
+1. Trong ngăn **Chi tiết tiến trình**, hãy bung rộng phần **Nội dung tăng cường**.
+1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**.
+1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng.
 
 ## <a name="enrichment-results"></a>Kết quả tăng cường
 
-Sau khi hoàn thành quá trình làm giàu, bạn có thể xem lại kết quả làm giàu.
+Sau khi hoàn thành quá trình làm giàu, hãy xem lại kết quả làm giàu.
 
-1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. 
-1. Chọn phần bổ sung mà bạn muốn có thông tin.
+1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
+1. Bên trong **Sự làm giàu của tôi**, chọn phần bổ sung mà bạn muốn có thông tin.
 
-Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung, bản xem trước của thực thể làm giàu đã tạo và số lượng các cấu hình được bổ sung theo thời gian. Nếu có, **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
+Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung và số lượng cấu hình được bổ sung theo thời gian. Các **Phong phú khách hàng xem trước** ô hiển thị một mẫu của thực thể làm giàu được tạo. Để xem chế độ xem chi tiết, hãy chọn **Xem thêm** và chọn **Dữ liệu** chuyển hướng.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Trang kết quả làm giàu.":::
 
-Một số làm giàu cũng hiển thị thông tin cụ thể cho loại làm giàu. Tham khảo tài liệu về cách làm giàu có liên quan để biết thêm thông tin.
+Nếu có, **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
 
+Một số làm giàu cũng hiển thị thông tin cụ thể cho loại làm giàu. Để biết thêm thông tin, hãy xem tài liệu liên quan.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

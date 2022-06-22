@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833427"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011867"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 
@@ -27,7 +27,7 @@ Các công cụ tự động sử dụng dịch vụ Azure luôn phải có các
 > [!IMPORTANT]
 >
 > - Tài khoản Data Lake Storage sẽ sử dụng dịch vụ chính phải là Gen2 và có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace). Tài khoản lưu trữ Azure Data Lake Gen1 không được hỗ trợ.
-> - Bạn cần có quyền quản trị viên đối với Azure Tenant của mình để tạo dịch vụ chính.
+> - Bạn cần quyền quản trị viên cho Azure Tenant của mình để tạo dịch vụ chính.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Tạo một tên dịch vụ chính Azure cho Customer Insights
 
@@ -51,7 +51,13 @@ Trước khi tạo dịch vụ chính mới cho Thông tin chi tiết về khác
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Cấp quyền cho dịch vụ chính để truy cập vào tài khoản lưu trữ
 
-Truy cập cổng Azure để cấp quyền cho người quản lý dịch vụ đối với tài khoản lưu trữ bạn muốn sử dụng trong Thông tin chi tiết về khách hàng.
+Truy cập cổng Azure để cấp quyền cho người điều hành dịch vụ đối với tài khoản lưu trữ bạn muốn sử dụng trong Thông tin chi tiết về khách hàng. Một trong các vai trò sau phải được chỉ định cho tài khoản lưu trữ hoặc vùng chứa:
+
+|Chứng chỉ|Yêu cầu|
+|----------|------------|
+|Người dùng hiện đã đăng nhập|**Vai diễn** : Bộ đọc dữ liệu khối lưu trữ, Người đóng góp khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.<br>**Mức độ** : Quyền có thể được cấp trên tài khoản lưu trữ hoặc vùng chứa.</br>|
+|Khách hàng chính của dịch vụ thông tin chi tiết -<br>Sử dụng Azure Data Lake Storage với tư cách là nguồn dữ liệu</br>|Tùy chọn 1<ul><li>**Vai diễn** : Trình đọc dữ liệu Blob lưu trữ, Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>Lựa chọn 2 *(không chia sẻ quyền truy cập Chính của Dịch vụ vào tài khoản lưu trữ)*<ul><li>**Vai trò 1** : Trình đọc dữ liệu Blob lưu trữ, Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên vùng chứa.</li><li>**Vai trò 2** : Bộ xóa dữ liệu khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>|
+|Khách hàng chính của dịch vụ thông tin chi tiết - <br>Sử dụng Azure Data Lake Storage như một đầu ra hoặc điểm đến</br>|Tùy chọn 1<ul><li>**Vai diễn** : Người đóng góp dữ liệu khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>Lựa chọn 2 *(không chia sẻ quyền truy cập Chính của Dịch vụ vào tài khoản lưu trữ)*<ul><li>**Vai diễn** : Người đóng góp dữ liệu khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên vùng chứa.</li><li>**Vai trò 2** : Bộ lưu trữ Blob Delegator.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>|
 
 1. Đi tới [Cổng quản trị Azure](https://portal.azure.com) và đăng nhập vào tổ chức của bạn.
 
@@ -62,7 +68,7 @@ Truy cập cổng Azure để cấp quyền cho người quản lý dịch vụ 
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Ảnh chụp màn hình hiển thị cổng thông tin Azure trong khi thêm gán vai trò.":::
 
 1. Trên ngăn **Thêm gán vai trò**, đặt các thuộc tính sau:
-   - Vai trò: **Người đóng góp dữ liệu Storage Blob**
+   - Vai trò: Trình đọc dữ liệu khối lưu trữ, Người đóng góp khối lưu trữ hoặc Chủ sở hữu khối lưu trữ dựa trên thông tin đăng nhập được liệt kê ở trên.
    - Gán quyền truy cập cho: **Người dùng, nhóm hoặc dịch vụ chính**
    - Chọn thành viên: **Dynamics 365 AI cho thông tin chi tiết về khách hàng** (các [dịch vụ chính](#create-a-new-service-principal) bạn đã tra cứu trước đó trong quy trình này)
 

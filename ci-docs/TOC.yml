@@ -48,14 +48,14 @@
   items:
     - name: Tổng quan về nguồn dữ liệu
       href: data-sources.md
+    - name: Kết nối với dữ liệu trong Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Kết nối với Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Kết nối với dữ liệu trong một kho dữ liệu được quản lý Microsoft Dataverse
+      href: connect-dataverse-managed-lake.md
     - name: Thêm nguồn dữ liệu qua Power Query đầu nối
       href: connect-power-query.md
-    - name: Thêm thư mục Common Data Model làm nguồn dữ liệu
-      href: connect-common-data-model.md
-    - name: Thêm kho dữ liệu được quản lý Dataverse
-      href: connect-dataverse-managed-lake.md
-    - name: Thêm Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Làm giàu cho các nguồn dữ liệu
       href: data-sources-enrichment.md
     - name: Làm mới tăng dần cho các nguồn dữ liệu
@@ -82,27 +82,27 @@
   items:
     - name: Tăng cường thông tin hồ sơ khách hàng
       href: enrichment-hub.md
+    - name: Tài khoản từ Office 365 dữ liệu
+      href: enrichment-office.md
     - name: Thương hiệu và mối quan tâm
       href: enrichment-microsoft.md
+    - name: Dữ liệu công ty từ Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Dữ liệu công ty từ Leadspace
+      href: enrichment-leadspace.md
+    - name: Nhân khẩu học với Experian
+      href: enrichment-experian.md
     - name: Địa chỉ nâng cao
       href: enrichment-enhanced-addresses.md
     - name: Dữ liệu công ty nâng cao
       href: enrichment-enhanced-company-data.md
-    - name: Tăng cường với Azure Maps
-      href: enrichment-azure-maps.md
-    - name: Làm giàu với Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Tăng cường dữ liệu bằng HERE Technologies
-      href: enrichment-here.md
-    - name: Tăng cường dữ liệu bằng Leadspace
-      href: enrichment-leadspace.md
-    - name: Làm giàu với LiveRamp
+    - name: Nhận dạng với LiveRamp
       href: enrichment-liveramp.md
-    - name: Tăng cường dữ liệu bằng Experian
-      href: enrichment-experian.md
-    - name: Làm giàu với Office 365 dữ liệu
-      href: enrichment-office.md
-    - name: Tăng cường dữ liệu bằng tính năng nhập tùy chỉnh SFTP
+    - name: Vị trí từ Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Vị trí từ HERE Technologies
+      href: enrichment-here.md
+    - name: Nhập tùy chỉnh SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Hồ sơ đã hợp nhất
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Xác định các hoạt động của khách hàng
       href: activities.md
+    - name: Quản lý sự đồng ý cho Thông tin chi tiết về khách hàng
+      href: consent-management.md
 - name: Phân khúc
   items:
     - name: Tổng quan về phân khúc
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Truy vấn mẫu OData
       href: odata-examples.md
-- name: Quản lý sự đồng ý (Xem trước)
-  items:
-    - name: Trung tâm trợ giúp
-      href: consent-management/index.yml
-    - name: Tổng quan về khả năng
-      href: consent-management/overview.md
-    - name: Bắt đầu
-      items:
-        - name: Bắt đầu
-          href: consent-management/get-started.md
-        - name: Các khái niệm và thuật ngữ
-          href: consent-management/glossary.md
-    - name: Nhập dữ liệu chấp thuận
-      items:
-        - name: Nhập dữ liệu chấp thuận
-          href: consent-management/import-consent-data.md
-        - name: Đặt dữ liệu về sự đồng ý và áp dụng các tùy chọn về sự đồng ý
-          href: consent-management/set-consent-rules.md
-    - name: Quản lý dữ liệu về sự đồng ý
-      items:
-        - name: Bật quy tắc về sự đồng ý trong Thông tin chi tiết về khách hàng
-          href: activate-consent.md
-        - name: Quản lý các quy tắc đồng ý mặc định trong phân đoạn Thông tin chi tiết về khách hàng
-          href: change-default-consent-rules.md
-    - name: Quản lý cài đặt và người dùng
-      items:
-        - name: Định cấu hình cài đặt hệ thống
-          href: consent-management/system-settings.md
-        - name: Quản lý người dùng và quyền
-          href: consent-management/manage-users.md
-    - name: Sử dụng dữ liệu về sự đồng ý
-      items:
-        - name: Tạo dự đoán với dữ liệu về sự đồng ý
-          href: consent-management/predictions-consent-data.md
 - name: Giới hạn dịch vụ
   href: service-limits.md
 - name: Quyền và yêu cầu DSR

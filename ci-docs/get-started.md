@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833601"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012005"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Bắt đầu với Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Lần đầu tiên bạn đăng nhập vào Thông tin chi tiết về khách h�
 
 Hồ sơ thống nhất là nền tảng để có được thông tin chi tiết và thực hiện hành động trên dữ liệu. Mang dữ liệu từ nhiều nguồn khác nhau và chạy quy trình hợp nhất dữ liệu để kết hợp các cấu hình thống nhất. Chỉ định mối quan hệ giữa các thực thể được nhập và sử dụng các tính năng bổ sung để thêm thông tin vào hồ sơ.
 
-1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [Power Query đầu nối](connect-power-query.md), một [Thư mục Mô hình Dữ liệu Chung](connect-common-data-model.md), hoặc [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [Azure Data Lake Storage, bao gồm cả Mô hình dữ liệu chung](connect-common-data-model.md),[Azure Synapse Analytics](connect-synapse.md),[Microsoft Dataverse](connect-dataverse-managed-lake.md), hoặc [Power Query đầu nối](connect-power-query.md).
 
 1. Chạy [quá trình hợp nhất dữ liệu](data-unification.md) bằng cách xác định [trường nguồn](map-entities.md), loại bỏ [trùng lặp](remove-duplicates.md),[điều kiện phù hợp](match-entities.md), và [thống nhất các lĩnh vực](merge-entities.md).
 

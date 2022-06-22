@@ -1,19 +1,19 @@
 ---
 title: Xuất dữ liệu Customer Insights sang Snapchat
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644110"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947302"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Xuất phân khúc sang Snapchat (xem trước)
 
@@ -21,7 +21,8 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Snapchat và s�
 
 ## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
--   Bạn có một [Tài khoản Snapchat Business](https://business.snapchat.com/), một [Tài khoản Snapchat Ads](https://ads.snapchat.com/) và thông tin xác thực tương ứng của quản trị viên.
+-   Bạn có một [Tài khoản Snapchat Business](https://business.snapchat.com/), một [Tài khoản Snapchat Ads](https://ads.snapchat.com/) và thông tin xác thực tương ứng của quản trị viên. YOu ít nhất phải là thành viên của Tài khoản tổ chức và Người quản lý dữ liệu của một Tài khoản quảng cáo cụ thể. 
+-   Bạn có ít nhất một đối tượng trong Trình quản lý đối tượng của Snapchat thuộc loại SAM (Đối sánh đối tượng trên Snap). 
 -   Bạn có [phân đoạn được định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
 -   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
@@ -60,7 +61,7 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Snapchat. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.
 
-1. Nhập [**ID đối tượng Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Nhập [**Phân khúc Snapchat / ID đối tượng**](https://businesshelp.snapchat.com/s/article/custom-audiences). Bạn có thể tìm thấy ID của đối tượng trong URL sau khi chọn đối tượng trong Trình quản lý đối tượng của Snapchat. 
 
 1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bạn phải xuất các phân khúc sang Snapchat.
 
