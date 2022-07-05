@@ -12,14 +12,14 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8022563f8994400b88389c20d7d661d9ea82bab1
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833748"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054918"
 ---
-# <a name="user-permissions"></a>Quyền người dùng
+# <a name="manage-user-permissions"></a>Quản lý quyền của người dùng
 
 Các **Quyền** là nơi bạn sẽ thiết lập vai trò và quyền sử dụng Thông tin chi tiết về khách hàng.
 
@@ -69,7 +69,7 @@ Có ba loại vai trò:
 
 ## <a name="assign-roles-and-permissions"></a>Gán vai trò và quyền
 
-1. Đi đến **Quản trị viên** > **Bảo vệ** > **Người dùng**.
+1. Đi đến **Quản trị viên** > **Bảo vệ** > ** Người dùng ***.
 
 1. Chọn **Thêm người dùng** để mở ngăn **Thêm/chỉnh sửa quyền**.
 

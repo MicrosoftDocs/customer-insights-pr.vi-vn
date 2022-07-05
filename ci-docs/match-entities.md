@@ -1,5 +1,5 @@
 ---
-title: So khớp các thực thể để hợp nhất dữ liệu
+title: Khớp các điều kiện để hợp nhất dữ liệu
 description: So khớp các thực thể để tạo hồ sơ khách hàng hợp nhất.
 recommendations: false
 ms.date: 05/05/2022
@@ -14,29 +14,29 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740975"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082419"
 ---
-# <a name="match-conditions"></a>Điều kiện phù hợp
+# <a name="match-conditions-for-data-unification"></a>Khớp các điều kiện để hợp nhất dữ liệu
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Bước hợp nhất này xác định thứ tự đối sánh và các quy tắc để đối sánh nhiều thực thể. Bước này yêu cầu ít nhất hai thực thể.
 
 > [!NOTE]
-> Sau khi bạn tạo điều kiện đối sánh và chọn **Kế tiếp**, bạn không thể xóa một thực thể hoặc thuộc tính đã chọn. Nếu cần, hãy chọn **Mặt sau** để xem xét các thực thể và thuộc tính đã chọn trước khi tiếp tục.
+> Sau khi bạn tạo điều kiện đối sánh và chọn **Tiếp theo**, bạn không thể xóa một thực thể hoặc thuộc tính đã chọn. Nếu cần, hãy chọn **Mặt sau** để xem xét các thực thể và thuộc tính đã chọn trước khi tiếp tục.
 
 ## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
 
-Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp** trang, bạn không cần phải chọn lại chúng.
+Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp** trang, bạn không cần phải chọn lại chúng.
 
 1. Trên **Điều kiện phù hợp** trang, chọn **Sử dụng các thực thể được bổ sung chi tiết** trên đầu của trang.
 
-1. Từ **Sử dụng các thực thể được bổ sung chi tiết**, hãy chọn một hoặc nhiều thực thể được bổ sung.
+1. Từ **Sử dụng các thực thể được bổ sung chi tiết**, chọn một hoặc nhiều thực thể được bổ sung.
 
 1. Chọn **Xong**.
 
@@ -90,7 +90,7 @@ Cảnh báo bên cạnh tên thực thể có nghĩa là không có quy tắc đ
 
    - **Tên** : Đặt tên cho quy tắc.
 
-1. Để đối sánh các thực thể chỉ khi các thuộc tính đáp ứng nhiều điều kiện, hãy chọn **Thêm vào** > **Thêm điều kiện** để thêm nhiều điều kiện hơn vào quy tắc đối sánh. Các điều kiện được kết nối với một toán tử logic AND và do đó chỉ được thực thi nếu tất cả các điều kiện được đáp ứng.
+1. Để đối sánh các thực thể chỉ khi các thuộc tính đáp ứng nhiều điều kiện, hãy chọn **cộng** > **Thêm điều kiện** để thêm nhiều điều kiện hơn vào quy tắc đối sánh. Các điều kiện được kết nối với một toán tử logic AND và do đó chỉ được thực thi nếu tất cả các điều kiện được đáp ứng.
 
 1. Theo tùy chọn, hãy xem xét các tùy chọn nâng cao như [ngoại lệ](#add-exceptions-to-a-rule) hoặc [điều kiện đối sánh tùy chỉnh](#specify-custom-match-conditions).
 
@@ -122,7 +122,7 @@ Trong hầu hết các trường hợp, đối sánh pháp nhân dẫn đến h�
 
 Ví dụ: nếu quy tắc đối sánh của bạn kết hợp họ, thành phố và ngày sinh, hệ thống sẽ xác định các cặp song sinh có cùng họ sống trong cùng một thị trấn với cùng một hồ sơ. Bạn có thể chỉ định một ngoại lệ không khớp với các cấu hình nếu tên trong các thực thể bạn kết hợp không giống nhau.
 
-1. Bên trong **Chỉnh sửa quy tắc** ngăn, chọn **Thêm vào** > **Thêm ngoại lệ**.
+1. Bên trong **Chỉnh sửa quy tắc** ngăn, chọn **cộng** > **Thêm ngoại lệ**.
 
 1. Chỉ định các tiêu chí ngoại lệ.
 
@@ -137,7 +137,7 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 |Luôn khớp     | Xác định các giá trị luôn được so khớp.         |  Luôn phù hợp *Mike* và *MikeR*.       |
 |Không khớp     | Xác định các giá trị không bao giờ khớp.        | Không bao giờ phù hợp *John* và *Jonathan*.        |
 |Bỏ qua tùy chỉnh     | Xác định các giá trị mà hệ thống luôn phải bỏ qua trong giai đoạn đối sánh. |  Bỏ qua các giá trị *11111* và *không xác định* trong trận đấu.        |
-|Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Coi như *Joe* ngang bằng với *Joseph*.        |
+|Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Xem xét *Joe* ngang bằng với *Joseph*.        |
 
 1. Chọn **Tùy chỉnh**.
 
@@ -159,16 +159,16 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
 1. Đi tới **Dữ liệu** > **Nguồn dữ liệu** và nhập các tệp mẫu dưới dạng thực thể mới.
 
-1. Sau khi tải lên các tệp, hãy chọn **Tập quán** tùy chọn một lần nữa. Chọn các thực thể bắt buộc từ menu thả xuống và chọn **Xong**.
+1. Sau khi tải lên các tệp, hãy chọn **Phong tục** tùy chọn một lần nữa. Chọn các thực thể bắt buộc từ menu thả xuống và chọn **Xong**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Ảnh chụp màn hình hộp thoại để chọn ghi đè cho tình huống so khớp tùy chỉnh.":::
 
 1. Việc áp dụng đối sánh tùy chỉnh phụ thuộc vào tùy chọn đối sánh bạn muốn sử dụng.
 
    - Vì **Luôn phù hợp** hoặc **Không bao giờ phù hợp**, tiến hành bước tiếp theo.
-   - Vì **Đường vòng** hoặc **Lập bản đồ bí danh**, lựa chọn **Biên tập** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh** tùy chọn và chọn **Xong**.
+   - Vì **Đường vòng** hoặc **Lập bản đồ bí danh**, lựa chọn **Chỉnh sửa** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh** tùy chọn và chọn **Xong**.
 
-1. Lựa chọn **Xong** trên **Tập quán** để áp dụng cấu hình đối sánh tùy chỉnh.
+1. Lựa chọn **Xong** trên **Phong tục** để áp dụng cấu hình đối sánh tùy chỉnh.
 
 > [!div class="nextstepaction"]
 > [Bước tiếp theo: Hợp nhất các trường](merge-entities.md)

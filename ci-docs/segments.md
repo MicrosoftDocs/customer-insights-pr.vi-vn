@@ -1,5 +1,5 @@
 ---
-title: Các phân đoạn trong Thông tin chi tiết về khách hàng
+title: Tổng quan về phân khúc
 description: Tổng quan, cách tạo và quản lý phân khúc.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800768"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050973"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -101,9 +101,9 @@ Bạn có thể xuất một phân khúc từ trang phân khúc hoặc [trang n�
 
 ## <a name="track-usage-of-a-segment"></a>Theo dõi việc sử dụng một đoạn
 
-Nếu bạn sử dụng các phân đoạn trong ứng dụng, dựa trên cùng một Microsoft Dataverse tổ chức được kết nối với Thông tin chi tiết về khách hàng, bạn có thể theo dõi việc sử dụng một phân khúc. Vì [Phân đoạn Thông tin chi tiết về khách hàng được sử dụng trong hành trình của khách hàng của Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), hệ thống sẽ thông báo cho bạn về việc sử dụng phân đoạn đó.
+Nếu bạn sử dụng các phân đoạn trong ứng dụng, dựa trên cùng một Microsoft Dataverse tổ chức được kết nối với Thông tin chi tiết về khách hàng, bạn có thể theo dõi việc sử dụng một phân khúc. Vì [Phân đoạn Thông tin chi tiết về khách hàng được sử dụng trong hành trình của khách hàng của Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), hệ thống thông báo cho bạn về việc sử dụng phân đoạn đó.
 
-Khi chỉnh sửa phân đoạn đang được sử dụng trong môi trường Thông tin chi tiết về khách hàng hoặc trong hành trình của khách hàng trong Tiếp thị, một biểu ngữ trong [người xây dựng phân đoạn](segment-builder.md) thông báo cho bạn về các phụ thuộc. Bạn có thể kiểm tra chi tiết phụ thuộc trực tiếp từ biểu ngữ hoặc bằng cách chọn **Cách sử dụng** trong trình tạo phân đoạn.
+Khi chỉnh sửa phân đoạn đang được sử dụng trong môi trường Thông tin chi tiết về khách hàng hoặc trong hành trình của khách hàng trong Tiếp thị, một biểu ngữ trong [trình tạo phân đoạn](segment-builder.md) thông báo cho bạn về các phụ thuộc. Bạn có thể kiểm tra chi tiết phụ thuộc trực tiếp từ biểu ngữ hoặc bằng cách chọn **Cách sử dụng** trong trình tạo phân đoạn.
 
 Các **Phân đoạn sử dụng** ngăn hiển thị chi tiết về việc sử dụng phân đoạn này trong Dataverse ứng dụng dựa trên. Đối với các phân đoạn được sử dụng trong hành trình của khách hàng, bạn sẽ tìm thấy một liên kết để kiểm tra hành trình trong Tiếp thị nơi phân đoạn này được sử dụng. Nếu bạn có quyền truy cập ứng dụng Tiếp thị, bạn có thể truy cập thêm thông tin chi tiết tại đó.
 

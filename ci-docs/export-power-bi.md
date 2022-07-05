@@ -1,5 +1,5 @@
 ---
-title: Trình kết nối Power BI
+title: Trình kết nối Power BI (xem trước)
 description: Tìm hiểu về cách dùng trình kết nối Dynamics 365 Customer Insights trong Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644113"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051295"
 ---
-# <a name="connector-for-power-bi-preview"></a>Trình kết nối cho Power BI (xem trước)
+# <a name="power-bi-connector-preview"></a>Trình kết nối Power BI (xem trước)
 
-Tạo trực quan hóa cho dữ liệu của bạn với Power BI Desktop. Tạo thông tin chi tiết bổ sung và xây dựng báo cáo với dữ liệu khách hàng hợp nhất của bạn.
+Tạo hình ảnh trực quan cho dữ liệu của bạn với Microsoft Power BI Máy tính để bàn. Tạo thông tin chi tiết bổ sung và xây dựng báo cáo với dữ liệu khách hàng hợp nhất của bạn.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -56,7 +56,7 @@ Cân nhắc làm việc với một tập hợp con dữ liệu của bạn. Ví
 
 ### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Môi trường Customer Insights không hiển thị trong Power BI
 
-Môi trường có nhiều hơn một [mối quan hệ](relationships.md) được xác định giữa hai thực thể giống nhau trong Thông tin chi tiết về khách hàng sẽ không có sẵn trong Power BI tư nối.
+Môi trường có nhiều hơn một [mối quan hệ](relationships.md) được xác định giữa hai thực thể giống nhau trong Thông tin chi tiết về khách hàng sẽ không có sẵn trong Power BI kết nối.
 
 Bạn có thể xác định và loại bỏ các mối quan hệ trùng lặp.
 

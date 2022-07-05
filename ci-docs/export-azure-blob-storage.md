@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Customer Insights sang Azure Blob Storage
+title: Xuất dữ liệu sang Bộ nhớ Azure Blob (xem trước)
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang bộ lưu trữ Blob.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947164"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055516"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang Azure Blob Storage (bản xem trước)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Xuất dữ liệu sang Bộ nhớ Azure Blob (xem trước)
 
 Lưu trữ dữ liệu Customer Insights của bạn trong bộ lưu trữ Blob hoặc sử dụng bộ lưu trữ đó để chuyển dữ liệu của bạn sang các ứng dụng khác.
 

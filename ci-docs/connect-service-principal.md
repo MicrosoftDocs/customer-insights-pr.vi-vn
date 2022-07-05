@@ -1,5 +1,5 @@
 ---
-title: Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính
+title: Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 description: Sử dụng tên dịch vụ chính Azure để kết nối với kho dữ liệu của riêng bạn.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011867"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082251"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Kết nối với một tài khoản Azure Data Lake Storage bằng cách sử dụng tên dịch vụ chính Azure
 
@@ -56,8 +56,8 @@ Truy cập cổng Azure để cấp quyền cho người điều hành dịch v�
 |Chứng chỉ|Yêu cầu|
 |----------|------------|
 |Người dùng hiện đã đăng nhập|**Vai diễn** : Bộ đọc dữ liệu khối lưu trữ, Người đóng góp khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.<br>**Mức độ** : Quyền có thể được cấp trên tài khoản lưu trữ hoặc vùng chứa.</br>|
-|Khách hàng chính của dịch vụ thông tin chi tiết -<br>Sử dụng Azure Data Lake Storage với tư cách là nguồn dữ liệu</br>|Tùy chọn 1<ul><li>**Vai diễn** : Trình đọc dữ liệu Blob lưu trữ, Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>Lựa chọn 2 *(không chia sẻ quyền truy cập Chính của Dịch vụ vào tài khoản lưu trữ)*<ul><li>**Vai trò 1** : Trình đọc dữ liệu Blob lưu trữ, Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên vùng chứa.</li><li>**Vai trò 2** : Bộ xóa dữ liệu khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>|
-|Khách hàng chính của dịch vụ thông tin chi tiết - <br>Sử dụng Azure Data Lake Storage như một đầu ra hoặc điểm đến</br>|Tùy chọn 1<ul><li>**Vai diễn** : Người đóng góp dữ liệu khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>Lựa chọn 2 *(không chia sẻ quyền truy cập Chính của Dịch vụ vào tài khoản lưu trữ)*<ul><li>**Vai diễn** : Người đóng góp dữ liệu khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên vùng chứa.</li><li>**Vai trò 2** : Bộ lưu trữ Blob Delegator.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>|
+|Khách hàng Chính của Dịch vụ Thông tin chi tiết -<br>Sử dụng Azure Data Lake Storage với tư cách là nguồn dữ liệu</br>|Tùy chọn 1<ul><li>**Vai diễn** : Trình đọc dữ liệu Blob lưu trữ, Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>Lựa chọn 2 *(không chia sẻ quyền truy cập Chính của Dịch vụ vào tài khoản lưu trữ)*<ul><li>**Vai trò 1** : Trình đọc dữ liệu Blob lưu trữ, Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên vùng chứa.</li><li>**Vai trò 2** : Bộ xóa dữ liệu khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>|
+|Khách hàng Chính của Dịch vụ Thông tin chi tiết - <br>Sử dụng Azure Data Lake Storage như một đầu ra hoặc điểm đến</br>|Tùy chọn 1<ul><li>**Vai diễn** : Người đóng góp dữ liệu khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>Lựa chọn 2 *(không chia sẻ quyền truy cập Chính của Dịch vụ vào tài khoản lưu trữ)*<ul><li>**Vai diễn** : Người đóng góp dữ liệu khối lưu trữ hoặc Chủ sở hữu khối khối lưu trữ.</li><li>**Mức độ** : Quyền nên được cấp trên vùng chứa.</li><li>**Vai trò 2** : Bộ lưu trữ Blob Delegator.</li><li>**Mức độ** : Quyền nên được cấp trên tài khoản lưu trữ.</li></ul>|
 
 1. Đi tới [Cổng quản trị Azure](https://portal.azure.com) và đăng nhập vào tổ chức của bạn.
 

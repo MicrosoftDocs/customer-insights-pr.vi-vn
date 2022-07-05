@@ -1,5 +1,5 @@
 ---
-title: Làm giàu dữ liệu nhận dạng LiveRamp
+title: Làm phong phú hồ sơ khách hàng với dữ liệu nhận dạng từ LiveRamp (xem trước)
 description: Làm phong phú hồ sơ khách hàng với dữ liệu LiveRamp.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954021"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082209"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu nhận dạng từ LiveRamp (xem trước)
 
@@ -65,7 +65,7 @@ Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới 
 
 1. Chọn **Tập dữ liệu khách hàng** và chọn hồ sơ hoặc phân đoạn bạn muốn làm giàu bằng dữ liệu nhận dạng từ LiveRamp. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Xác định loại trường nào từ các cấu hình hợp nhất của bạn để sử dụng để khớp dữ liệu nhận dạng từ LiveRamp. Ít nhất một trong các trường **Tên và địa chỉ**, **-mail**, hoặc **Điện thoại** bắt buộc. Để có độ chính xác đối sánh cao hơn, hãy thêm các trường khác. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ hồ sơ hợp nhất của bạn để sử dụng để khớp dữ liệu nhận dạng từ LiveRamp. Ít nhất một trong các trường **Tên và địa chỉ**, **-mail**, hoặc **Điện thoại** bắt buộc. Để có độ chính xác đối sánh cao hơn, hãy thêm các trường khác. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu nhận dạng từ LiveRamp.
 
@@ -79,7 +79,7 @@ Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới 
 
 1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

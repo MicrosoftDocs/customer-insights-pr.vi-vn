@@ -1,5 +1,5 @@
 ---
-title: Hiểu và quản lý các biện pháp
+title: Tổng quan về các biện pháp
 description: Tìm hiểu cách các biện pháp giúp phân tích và phản ánh hiệu quả hoạt động của doanh nghiệp bạn.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 84a3a10a2517258c1f895800882b9c67391ec3de
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644042"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083133"
 ---
 # <a name="measures-overview"></a>Tổng quan về các biện pháp
 
@@ -41,7 +41,7 @@ Các hành động sau đây khả dụng khi bạn chọn một thước đo:
 
 - **Chỉnh sửa** cấu hình của giá trị đo.
 - **Nhân bản** một biện pháp. Bạn có thể chọn chỉnh sửa các thuộc tính của nó ngay lập tức hoặc chỉ cần lưu bản sao.
-- **Làm mới** giá trị đo dựa trên dữ liệu mới nhất. Để làm mới tất cả các biện pháp của bạn cùng một lúc, hãy chọn tất cả các biện pháp và sau đó **Làm cho khỏe lại**.
+- **Làm mới** giá trị đo dựa trên dữ liệu mới nhất. Để làm mới tất cả các biện pháp của bạn cùng một lúc, hãy chọn tất cả các biện pháp và sau đó **Làm mới**.
 - **Đổi tên** giá trị đo.
 - **Kích hoạt** hoặc **hủy kích hoạt**. Các giá trị đo không hoạt động sẽ không được làm mới trong [quá trình làm mới theo lịch trình](system.md#schedule-tab).
 - **Nhãn** đến [quản lý thẻ](work-with-tags-columns.md#manage-tags) cho phân khúc.

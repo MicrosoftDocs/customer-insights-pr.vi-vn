@@ -1,5 +1,5 @@
 ---
-title: Các ví dụ về OData cho Dynamics 365 Customer Insights API
+title: Ví dụ về truy vấn OData cho API thông tin chi tiết về khách hàng
 description: Các ví dụ thường được sử dụng về Giao thức dữ liệu mở (OData) để truy vấn API thông tin chi tiết về khách hàng để xem xét dữ liệu.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808487"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083175"
 ---
-# <a name="odata-query-examples"></a>Ví dụ về truy vấn OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Ví dụ về truy vấn OData cho API thông tin chi tiết về khách hàng
 
 Giao thức Dữ liệu Mở (OData) là một giao thức truy cập dữ liệu được xây dựng trên các giao thức cốt lõi như HTTP. Nó sử dụng các phương pháp luận thường được chấp nhận như REST cho web. Có nhiều loại thư viện và công cụ khác nhau có thể được sử dụng để sử dụng các dịch vụ OData.
 
@@ -74,5 +74,5 @@ Các truy vấn sau không được Customer Insights hỗ trợ:
 - `$filter` trên các thực thể nguồn được nhập. Bạn chỉ có thể chạy các truy vấn $ filter trên các thực thể hệ thống mà Customer Insights tạo.
 - `$expand` từ một`$search` truy vấn. Ví dụ: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
 - `$expand` từ`$select` nếu chỉ một tập hợp con các thuộc tính được chọn. Ví dụ: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
-- `$expand` làm phong phú thêm thương hiệu hoặc mối quan tâm cho một khách hàng nhất định. Ví dụ: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- `$expand` làm giàu thương hiệu hoặc sở thích cho một khách hàng nhất định. Ví dụ: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
 - Truy vấn dự đoán các thực thể xuất mô hình thông qua khóa thay thế. Ví dụ: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

@@ -1,5 +1,5 @@
 ---
-title: Tìm khách hàng tương tự bằng AI (có video)
+title: Tìm khách hàng tương tự bằng AI (xem trước) (chứa video)
 description: Tìm phân khúc khách hàng tương tự nhờ trí tuệ nhân tạo.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644061"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054838"
 ---
-# <a name="similar-customers-preview"></a>Khách hàng tương tự (xem trước)
+# <a name="find-similar-customers-with-ai-preview"></a>Tìm khách hàng tương tự bằng AI (xem trước)
 
 Tính năng này cho phép bạn tìm thấy những khách hàng tương tự trong cơ sở khách hàng của mình bằng cách sử dụng trí tuệ nhân tạo. Bạn cần phải có ít nhất một phân khúc được tạo để sử dụng tính năng này. Mở rộng các tiêu chí của một phân đoạn hiện có sẽ giúp tìm kiếm các khách hàng tương tự với phân khúc đó.
 

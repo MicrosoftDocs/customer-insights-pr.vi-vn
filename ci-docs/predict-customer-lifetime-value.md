@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644150"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055240"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Dự đoán giá trị trọn đời của khách hàng (CLV)
 
-Dự đoán giá trị tiềm năng (doanh thu) mà các khách hàng cá nhân đang hoạt động sẽ mang lại cho doanh nghiệp của bạn trong suốt khoảng thời gian xác định trong tương lai. Tính năng này có thể giúp bạn đạt được nhiều mục tiêu: 
+Dự đoán giá trị tiềm năng (doanh thu) mà các khách hàng cá nhân đang hoạt động sẽ mang lại cho doanh nghiệp của bạn trong suốt khoảng thời gian xác định trong tương lai. Tính năng này có thể giúp bạn đạt được nhiều mục tiêu:
 - Xác định những khách hàng có giá trị cao và xử lý thông tin chi tiết này
 - Tạo phân khúc khách hàng chiến lược dựa trên giá trị tiềm năng của họ để chạy các chiến dịch cá nhân hóa với các nỗ lực bán hàng, tiếp thị và hỗ trợ được nhắm mục tiêu
 - Hướng dẫn phát triển sản phẩm bằng cách tập trung vào các tính năng làm tăng giá trị khách hàng

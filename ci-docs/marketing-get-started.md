@@ -6,14 +6,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833334"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054458"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Làm việc với hồ sơ khách hàng thống nhất trong Dynamics 365 Marketing
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>Sử dụng hồ sơ khách hàng hợp nhất trong Dynamics 365 Marketing
 
 [Tiếp thị Dynamics 365](/dynamics365/marketing/overview) nâng cao trải nghiệm của khách hàng, cho phép bạn sắp xếp các hành trình được cá nhân hóa trên tất cả các điểm tiếp xúc để tăng cường mối quan hệ và kiếm được lòng trung thành. Ứng dụng Tiếp thị Dynamics 365 hoạt động liền mạch với Bán hàng Dynamics 365,Dynamics 365 Customer Insights,Microsoft Teams và các sản phẩm khác, đồng thời cho phép bạn đưa ra quyết định nhanh hơn và tốt hơn bằng cách sử dụng sức mạnh của dữ liệu và AI.
 
@@ -26,7 +26,7 @@ Bằng cách kết nối dữ liệu Thông tin chi tiết về khách hàng v�
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Sử dụng hồ sơ khách hàng phong phú trong tiếp thị thời gian thực
 
-Tiếp thị thời gian thực cho phép bạn tạo [trình kích hoạt tùy chỉnh](/dynamics365/marketing/real-time-marketing-custom-triggers) khởi động hành trình của khách hàng dựa trên bất kỳ hành động nào của khách hàng. Dữ liệu của bạn càng được cá nhân hóa thì hành trình của bạn càng phù hợp và được cá nhân hóa. Đây là điều làm cho việc kết hợp Tiếp thị và Thông tin chi tiết về khách hàng trở nên mạnh mẽ như vậy. Bạn có thể [thống nhất dữ liệu](data-unification.md) từ bất kỳ nguồn nào, sau đó sử dụng nó để thúc đẩy hành trình của khách hàng siêu cá nhân hóa.
+Tiếp thị thời gian thực cho phép bạn tạo [trình kích hoạt tùy chỉnh](/dynamics365/marketing/real-time-marketing-custom-triggers) khởi động hành trình của khách hàng dựa trên bất kỳ hành động nào của khách hàng. Dữ liệu của bạn càng được cá nhân hóa thì hành trình của bạn càng phù hợp và được cá nhân hóa. Đây là điều làm cho việc kết hợp Tiếp thị và Thông tin chi tiết về khách hàng trở nên mạnh mẽ. Bạn có thể [thống nhất dữ liệu](data-unification.md) từ bất kỳ nguồn nào, sau đó sử dụng nó để cung cấp nhiên liệu cho các hành trình của khách hàng được siêu cá nhân hóa.
 
 Tìm hiểu thêm: [Sử dụng hồ sơ và phân đoạn Thông tin chi tiết về khách hàng trong tiếp thị thời gian thực](/dynamics365/marketing/real-time-marketing-ci-profile)
 

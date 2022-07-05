@@ -1,5 +1,5 @@
 ---
-title: Hoàn thành dữ liệu từng phần bằng cách sử dụng dự đoán
+title: Hoàn thành một phần dữ liệu của bạn bằng tính năng dự đoán
 description: Sử dụng dự đoán để điền vào dữ liệu khách hàng không đầy đủ.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800676"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082524"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Hoàn thành từng phần dữ liệu của bạn với các dự đoán (không được dùng nữa)
 
@@ -43,7 +43,7 @@ Trước khi tổ chức của bạn có thể sử dụng tính năng dự đo�
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Tạo dự đoán trong thực thể Khách hàng
 
-1. Đi đến **Dữ liệu** > **Các thực thể**.
+1. Đi đến **Dữ liệu** > **Thực thể**.
 
 2. Chọn thực thể **Khách hàng**.
 
@@ -116,7 +116,7 @@ Trong quy trình này, bạn chọn một thuộc tính cụ thể để căn c�
 
 ## <a name="edit-a-prediction"></a>Chỉnh sửa dự đoán
 
-Sau khi tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình của bạn.  
+Sau khi bạn đã tạo dự đoán, bạn có thể tùy chỉnh mô hình trong AI Builder để tăng hiệu quả của mô hình của bạn.  
 
 1. Đi đến **Sự thông minh** > **Phỏng đoán** > **Dự đoán của tôi**.
 

@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Customer Insights sang Azure Data Lake Storage thế hệ 2
+title: Xuất dữ liệu sang Azure Data Lake Storage Gen2 (xem trước)
 description: Tìm hiểu cách định cấu hình kết nối với Azure Data Lake Storage thế hệ 2.
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947256"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082671"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Xuất danh sách phân khúc và dữ liệu khác sang Azure Data Lake Storage thế hệ 2 (xem trước)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Xuất dữ liệu sang Azure Data Lake Storage Gen2 (xem trước)
 
 Lưu trữ dữ liệu Customer Insights của bạn trong tài khoản Data Lake Storage thế hệ 2 hoặc sử dụng kho lưu trữ đó để chuyển dữ liệu của bạn sang các ứng dụng khác.
 

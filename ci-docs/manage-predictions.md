@@ -1,5 +1,5 @@
 ---
-title: Các tác vụ chung cho kịch bản dự đoán
+title: Quản lý dự đoán
 description: Tìm hiểu cách quản lý, khắc phục sự cố và tinh chỉnh dự đoán.
 ms.date: 11/01/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c4d269e1b542e84ade8c6e63c1dadace51ddde32
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644158"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082860"
 ---
 # <a name="manage-predictions"></a>Quản lý dự đoán
 
@@ -50,8 +50,8 @@ Các cột sau trong báo cáo chứa thông tin hữu ích để cải thiện 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Ví dụ về một báo cáo khả năng sử dụng dữ liệu đầu vào hiển thị một bảng có lỗi, cảnh báo và đề xuất.":::
 
 - **Tên:** Tên mô tả của lỗi, cảnh báo hoặc khuyến nghị.
-- **Bước chân:** Giai đoạn mô hình, đào tạo hoặc điểm số, thông tin đề cập đến.
-- **Trạng thái:** Mức độ nghiêm trọng của thông tin (lỗi, cảnh báo, khuyến nghị).
+- **Bươc:** Giai đoạn mô hình, đào tạo hoặc điểm số, thông tin đề cập đến.
+- **Tiểu bang:** Mức độ nghiêm trọng của thông tin (lỗi, cảnh báo, khuyến nghị).
 - **Tên cột dọc:** Cột trong một thực thể cần được sửa đổi để cải thiện hiệu suất mô hình.
 - **Tên thực thể:** Tên của thực thể cần được sửa đổi để cải thiện hiệu suất của mô hình.
 - **Thông tin chi tiết:** Thông tin chi tiết về lỗi, cảnh báo hoặc khuyến nghị.

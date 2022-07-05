@@ -1,5 +1,5 @@
 ---
-title: Tăng cường dữ liệu bằng tính năng nhập tùy chỉnh SFTP
+title: Làm phong phú hồ sơ khách hàng với tính năng nhập tùy chỉnh SFTP (xem trước)
 description: Thông tin chung về tính năng nhập tùy chỉnh SFTP để tăng cường dữ liệu.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953745"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082335"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Tăng cường thông tin hồ sơ khách hàng bằng dữ liệu tùy chỉnh (bản xem trước)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Làm phong phú hồ sơ khách hàng với tính năng nhập tùy chỉnh SFTP (xem trước)
 
 Nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP) cho phép bạn nhập dữ liệu mà không phải trải qua quá trình hợp nhất dữ liệu. Đó là một cách linh hoạt, bảo mật và dễ dàng để đưa dữ liệu của bạn vào. Tính năng nhập tùy chỉnh SFTP có thể được sử dụng kết hợp với [Xuất SFTP](export-sftp.md) cho phép bạn xuất dữ liệu hồ sơ khách hàng cần thiết để tăng cường. Sau đó, dữ liệu có thể được xử lý và bổ sung chi tiết đồng thời có thể sử dụng tính năng nhập tùy chỉnh SFTP để chuyển dữ liệu đã được bổ sung chi tiết trở lại Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

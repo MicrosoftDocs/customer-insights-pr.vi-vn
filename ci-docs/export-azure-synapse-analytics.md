@@ -1,21 +1,21 @@
 ---
-title: Xuất dữ liệu Customer Insights sang Azure Synapse Analytics
+title: Xuất dữ liệu sang Azure Synapse Analytics (xem trước)
 description: Tìm hiểu cách định cấu hình kết nối tới Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741529"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082881"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (Xem trước)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (xem trước)
 
 Azure Synapse là một dịch vụ phân tích giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn. Bạn có thể nhập và sử dụng dữ liệu Customer Insights của mình trong [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -52,7 +52,7 @@ Trong Azure:
 
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
-1. Lựa chọn **Thêm kết nối** và lựa chọn **Azure Synapse Analytics** hoặc chọn **Thiết lập** trên **Azure Synapse Analytics** để định cấu hình kết nối.
+1. Lựa chọn **Thêm kết nối** và lựa chọn **Azure Synapse Analytics** hoặc chọn **Cài đặt** trên **Azure Synapse Analytics** để định cấu hình kết nối.
 
 1. Đặt tên dễ nhận biết cho kết nối trong trường Tên hiển thị. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
 
@@ -70,15 +70,15 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.
 
-1. Bên trong **Kết nối để xuất** trường, chọn một kết nối từ **Azure Synapse Analytics** tiết diện. Nếu bạn không thấy tên phần này, tức là không có [kết nối](connections.md) nào thuộc loại này dành cho bạn.
+1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ **Azure Synapse Analytics** tiết diện. Nếu bạn không thấy tên phần này, tức là không có [kết nối](connections.md) nào thuộc loại này dành cho bạn.
 
-1. Đặt một **Tên hiển thị** dễ nhận biết cho việc xuất dữ liệu và **Tên cơ sở dữ liệu** của bạn.
+1. Đặt một **Tên hiển thị** dễ nhận biết cho việc xuất dữ liệu và **Tên cơ sở dữ liệu** của bạn. Việc xuất sẽ tạo ra một [Azure Synapse cơ sở dữ liệu hồ](/azure/synapse-analytics/database-designer/concepts-lake-database) trong không gian làm việc được xác định trong kết nối.
 
 1. Chọn thực thể bạn muốn xuất sang Azure Synapse Analytics.
    > [!NOTE]
    > Nguồn dữ liệu dựa trên [Thư mục Common Data Model](connect-common-data-model.md) không được hỗ trợ.
 
-2. Chọn **Lưu**.
+1. Chọn **Lưu**.
 
 Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
 

@@ -1,6 +1,6 @@
 ---
-title: Mang Azure Key Vault của riêng bạn để quản lý bí mật
-description: Tìm hiểu cách đặt cấu hình Customer Insights để sử dụng Azure key vault của riêng bạn.
+title: Mang Azure key vault của riêng bạn (bản xem trước)
+description: Tìm hiểu cách định cấu hình Thông tin chi tiết về khách hàng để sử dụng kho khóa Azure của riêng bạn nhằm quản lý bí mật.
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763605"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082650"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Mang Azure key vault của riêng bạn (bản xem trước)
 
@@ -121,7 +121,7 @@ Tùy thuộc vào việc [chính sách truy cập Key Vault](/azure/key-vault/ge
 
 ### <a name="a-secret-thats-used-in-a-connection-got-removed-from-the-key-vault-what-can-i-do"></a>Một bí mật được sử dụng trong một kết nối đã bị xóa khỏi key vault. Tôi có thể làm gì?
 
-Thông báo xuất hiện trong Thông tin chi tiết về khách hàng khi bí mật được định cấu hình từ kho khóa không thể truy cập được nữa. Cho phép [xóa mềm](/azure/key-vault/general/soft-delete-overview) trên key vault để khôi phục bí mật nếu chúng vô tình bị xóa.
+Một thông báo xuất hiện trong Thông tin chi tiết về khách hàng khi không thể truy cập bí mật đã định cấu hình từ kho chìa khóa nữa. Cho phép [xóa mềm](/azure/key-vault/general/soft-delete-overview) trên key vault để khôi phục bí mật nếu chúng vô tình bị xóa.
 
 ### <a name="a-connection-doesnt-work-but-my-secret-is-in-the-key-vault-what-might-be-the-cause"></a>Một kết nối không hoạt động, nhưng bí mật của tôi nằm trong key vault. Nguyên nhân có thể là gì?
 

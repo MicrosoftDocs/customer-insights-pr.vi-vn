@@ -1,5 +1,5 @@
 ---
-title: Lược đồ thực thể Customer Insights trong Common Data Model
+title: Lược đồ thực thể trong Common Data Model
 description: Làm việc với các thực thể trong Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757458"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054780"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Lược đồ thực thể trong Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) là một thông số khai báo, đồng thời là định nghĩa của các thực thể tiêu chuẩn, đại diện cho những khái niệm và hoạt động thông dụng trên các ứng dụng năng suất và kinh doanh. Mô hình này cũng mở rộng cho cả dữ liệu phân tích và dữ liệu quan sát. Common Data Model cung cấp các thực thể kinh doanh rõ ràng, theo cấu trúc và có thể mở rộng—chẳng hạn như Tài khoản, Đơn vị kinh doanh, Trường hợp, Người liên hệ, Khách hàng tiềm năng, Cơ hội và Sản phẩm—cũng như các hình thức tương tác với đối tác, người lao động và khách hàng— chẳng hạn như các thỏa thuận ở cấp độ dịch vụ và các hoạt động. Bất cứ ai cũng có thể xây dựng và mở rộng định nghĩa Common Data Model để nắm bắt thêm các ý tưởng kinh doanh cụ thể.
 

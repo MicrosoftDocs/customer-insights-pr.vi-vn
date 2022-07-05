@@ -1,5 +1,5 @@
 ---
-title: Kiểm toán Dynamics 365 Customer Insights với Azure Monitor
+title: Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (xem trước)
 description: Tìm hiểu cách gửi nhật ký tới Microsoft Azure Màn hình.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,20 +11,20 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807607"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052679"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (Xem trước)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Đăng nhập chuyển tiếp Dynamics 365 Customer Insights với Azure Monitor (xem trước)
 
 Dynamics 365 Customer Insights cung cấp tích hợp trực tiếp với Azure Monitor. Nhật ký tài nguyên Azure Monitor cho phép bạn theo dõi và gửi nhật ký tới [Kho lưu trữ Azure](https://azure.microsoft.com/services/storage/),[Phân tích nhật ký Azure](/azure/azure-monitor/logs/log-analytics-overview) hoặc truyền chúng tới [Trung tâm sự kiện Azure](https://azure.microsoft.com/services/event-hubs/).
 
-Thông tin chi tiết về khách hàng sẽ gửi các nhật ký sự kiện sau:
+Thông tin chi tiết về khách hàng sẽ gửi nhật ký sự kiện sau:
 
-- **Sự kiện kiểm tra**
+- **Sự kiện kiểm toán**
   - **APIEvent** - cho phép theo dõi thay đổi được thực hiện thông qua Dynamics 365 Customer Insights Giao diện người dùng.
 - **Sự kiện hoạt động**
   - **WorkflowEvent** - Quy trình làm việc cho phép bạn thiết lập [Nguồn dữ liệu](data-sources.md),[thống nhất](data-unification.md),[làm giàu](enrichment-hub.md), và cuối cùng [xuất khẩu](export-destinations.md) dữ liệu vào các hệ thống khác. Tất cả các bước đó có thể được thực hiện riêng lẻ (ví dụ: kích hoạt một lần xuất). Quá trình này cũng có thể chạy được sắp xếp (ví dụ: làm mới dữ liệu từ các nguồn dữ liệu kích hoạt quá trình hợp nhất, quá trình này sẽ kéo thêm các phần bổ sung và sau khi hoàn thành xuất dữ liệu sang một hệ thống khác). Để biết thêm thông tin, hãy xem [Lược đồ WorkflowEvent](#workflow-event-schema).
@@ -118,7 +118,7 @@ Bên dưới **Truy vấn** cửa sổ, mở rộng **Kiểm toán** giải phá
 
 ## <a name="event-schemas"></a>Lược đồ sự kiện
 
-Các sự kiện API và sự kiện quy trình làm việc có cấu trúc chung và chi tiết chúng khác nhau ở điểm nào, hãy xem [Lược đồ sự kiện API](#api-event-schema) hoặc [giản đồ sự kiện quy trình làm việc](#workflow-event-schema).
+Sự kiện API và sự kiện quy trình làm việc có cấu trúc chung và chi tiết chúng khác nhau, xem [Lược đồ sự kiện API](#api-event-schema) hoặc [giản đồ sự kiện quy trình làm việc](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Lược đồ sự kiện API
 
@@ -161,7 +161,7 @@ Các`identity` Đối tượng JSON có cấu trúc sau
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Đã chỉ định vai trò cho người dùng hoặc ứng dụng. Để biết thêm thông tin, hãy xem [Quyền Người dùng](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Các vai trò cần thiết để thực hiện hoạt động. `Admin` vai trò được phép làm tất cả các hoạt động.                                                    |
-| `Claims`                      | Khiếu nại về mã thông báo web JSON của người dùng hoặc ứng dụng (JWT). Các thuộc tính xác nhận quyền sở hữu khác nhau tùy theo tổ chức và Azure Active Directory cấu hình. |
+| `Claims`                      | Khiếu nại về mã thông báo web JSON của người dùng hoặc ứng dụng (JWT). Thuộc tính xác nhận quyền sở hữu khác nhau tùy theo tổ chức và Azure Active Directory cấu hình. |
 
 #### <a name="api-properties-schema"></a>Lược đồ thuộc tính API
 
@@ -241,7 +241,7 @@ Các sự kiện quy trình làm việc có các thuộc tính sau.
 | `properties.submittedTimestamp`              | Có      | Có  | Dấu thời gian UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.instanceId`                      | Có      | Có  | Thấu hiểu khách hàng`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Có  | - Đối với OperationType =`Export`, số nhận dạng là hướng dẫn của cấu hình xuất. <br> - Đối với OperationType =`Enrichment`, đó là phương châm làm giàu <br> - Đối với OperationType`Measures` và`Segmentation`, định danh là tên thực thể. |
-| `properties.friendlyName`                    | No       | Có  | Tên thân thiện với người dùng của quá trình xuất hoặc đối tượng được xử lý.                                                                                                                                                                                           |
+| `properties.friendlyName`                    | No       | Có  | Tên thân thiện với người dùng của quá trình xuất hoặc thực thể được xử lý.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Có  | Tùy chọn. Thông báo lỗi với nhiều chi tiết hơn.                                                                                                                                                                                                                  |
 | `properties.additionalInfo.Kind`             | No       | Có  | Tùy chọn. Đối với OperationType`Export` chỉ có. Xác định loại xuất. Để biết thêm thông tin, hãy xem [tổng quan về các điểm đến xuất khẩu](export-destinations.md).                                                                                          |
 | `properties.additionalInfo.AffectedEntities` | No       | Có  | Tùy chọn. Đối với OperationType`Export` chỉ có. Chứa danh sách các thực thể được định cấu hình trong quá trình xuất.                                                                                                                                                            |

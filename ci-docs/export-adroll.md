@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Customer Insights sang AdRoll
+title: Xuất phân khúc sang AdRoll (xem trước)
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644014"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082839"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Xuất phân khúc sang AdRoll (xem trước)
 
@@ -21,9 +21,9 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang AdRoll và sử dụn
 
 ## <a name="prerequisites-for-a-connection"></a>Điều kiện tiên quyết để kết nối
 
--   Bạn có một [tài khoản AdRoll](https://www.adroll.com/) và thông tin đăng nhập tương ứng của quản trị viên.
--   Bạn có [phân đoạn được định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
--   Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
+- Bạn có một [tài khoản AdRoll](https://www.adroll.com/) và thông tin đăng nhập tương ứng của quản trị viên.
+- Bạn có [phân đoạn được định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
+- Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 

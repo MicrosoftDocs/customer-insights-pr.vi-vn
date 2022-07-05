@@ -1,5 +1,5 @@
 ---
-title: Làm giàu hồ sơ công ty với Dun & Bradstreet
+title: Làm phong phú hồ sơ công ty với Dun & Bradstreet (xem trước)
 description: Thông tin chung về cách làm giàu của bên thứ ba Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953917"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082566"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Làm phong phú hồ sơ công ty với Dun & Bradstreet (Xem trước)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Làm phong phú hồ sơ công ty với Dun & Bradstreet (xem trước)
 
 Dun & Bradstreet cung cấp dữ liệu thương mại, số liệu phân tích và thông tin chi tiết cho các doanh nghiệp. Công ty này hỗ trợ hồ sơ khách hàng hợp nhất cho các công ty để tăng cường dữ liệu của họ. Sự phong phú bao gồm các thuộc tính như số DUNS, quy mô công ty, vị trí, ngành, v.v.
 
@@ -39,7 +39,7 @@ Là người dùng được cấp phép của Dun & Bradstreet, bạn có thể 
 
 1. Chọn các dấu chấm ngang dưới liên quan **nguồn** trong dự án Dun & Bradstreet mới được tạo để xem các tùy chọn có sẵn.
 
-   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Ảnh chụp màn hình các chấm trong dự án Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Ảnh chụp màn hình các chấm trong một dự án Dun & Bradstreet.":::
 
 1. Chọn **Nhận thông tin chi tiết về S3**. Lưu trữ thông tin này ở một nơi an toàn. Bạn sẽ cần nó để [thiết lập kết nối để làm giàu](#configure-a-connection-for-dun--bradstreet) trong Thông tin chi tiết về khách hàng.
 
@@ -63,7 +63,7 @@ Bạn phải là một [người quản lý](permissions.md#admin) trong Thông 
 
 ### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu đến Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
 
 ## <a name="supported-countries-or-regions"></a>Các quốc gia hoặc khu vực được hỗ trợ
@@ -102,7 +102,7 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia / khu vực sau: Canad
 
 1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

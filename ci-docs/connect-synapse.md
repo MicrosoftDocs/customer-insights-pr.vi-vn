@@ -1,5 +1,5 @@
 ---
-title: Nhập dữ liệu từ Azure Synapse Analytics
+title: Kết nối một Azure Synapse nguồn dữ liệu (xem trước)
 description: Sử dụng cơ sở dữ liệu trong Azure Synapse với tư cách là nguồn dữ liệu trong Dynamics 365 Customer Insights.
 ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011453"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052725"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Kết nối một Azure Synapse Analytics nguồn dữ liệu (xem trước)
 
@@ -59,7 +59,7 @@ Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp t
 
 1. Chọn một [kết nối có sẵn](connections.md) đến Azure Synapse Analytics hoặc tạo một cái mới.
 
-1. Chọn một **Cơ sở dữ liệu** từ không gian làm việc được kết nối trong Azure Synapse Analytics kết nối và chọn **Tiếp theo**.
+1. Chọn một **Cơ sở dữ liệu** từ không gian làm việc được kết nối trong Azure Synapse Analytics kết nối và chọn **Tiếp theo**. Hiện tại, chúng tôi chỉ hỗ trợ loại cơ sở dữ liệu *Cơ sở dữ liệu hồ*.
 
 1. Chọn các thực thể để nhập từ cơ sở dữ liệu được kết nối và chọn **Tiếp theo**.
 

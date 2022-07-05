@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Customer Insights sang Adobe Campaign Standard
+title: Xuất phân đoạn Thông tin chi tiết về khách hàng sang Adobe Tiêu chuẩn Chiến dịch (xem trước)
 description: Tìm hiểu cách sử dụng phân đoạn Thông tin chi tiết về khách hàng trong Adobe Tiêu chuẩn Chiến dịch.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644074"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082356"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Sử dụng các phân đoạn Customer Insights trong Adobe Campaign Standard (bản xem trước)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Xuất phân đoạn Thông tin chi tiết về khách hàng sang Adobe Tiêu chuẩn Chiến dịch (xem trước)
 
-Với tư cách là một người dùng Dynamics 365 Customer Insights, bạn có thể đã tạo các phân đoạn để làm cho các chiến dịch tiếp thị của mình hiệu quả hơn bằng cách nhắm mục tiêu các đối tượng có liên quan. Để sử dụng một phân đoạn từ Thông tin chi tiết về khách hàng trong Adobe Experience Platform và các ứng dụng như Adobe Tiêu chuẩn Chiến dịch, bạn cần thực hiện theo một số bước được nêu trong bài viết này.
+Với tư cách là người dùng của Dynamics 365 Customer Insights, bạn có thể đã tạo các phân đoạn để làm cho các chiến dịch tiếp thị của mình hiệu quả hơn bằng cách nhắm mục tiêu các đối tượng có liên quan. Để sử dụng một phân đoạn từ Thông tin chi tiết về khách hàng trong Adobe Experience Platform và các ứng dụng như Adobe Tiêu chuẩn Chiến dịch, bạn cần thực hiện theo một số bước được nêu trong bài viết này.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Sơ đồ quy trình các bước nêu trong bài viết này.":::
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
--   Giấy phép Dynamics 365 Customer Insights
--   Giấy phép Adobe Campaign Standard
--   Tài khoản Azure Blob Storage
+- Giấy phép Dynamics 365 Customer Insights
+- Giấy phép Adobe Campaign Standard
+- Tài khoản Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Tổng quan về chiến dịch
 
@@ -125,7 +125,7 @@ Nếu không có hồ sơ nào khác trong Adobe Campaign Standard, ngoài nhữ
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Nhập dữ liệu vào Adobe Campaign Standard
 
-Bây giờ mọi thứ đã sẵn sàng, chúng tôi cần nhập dữ liệu đối tượng đã chuẩn bị từ Thông tin chi tiết về khách hàng vào Adobe Tiêu chuẩn Chiến dịch để tạo hồ sơ. Tìm hiểu [cách nhập hồ sơ trong Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) sử dụng một quy trình làm việc.
+Bây giờ mọi thứ đã sẵn sàng, chúng tôi cần nhập dữ liệu đối tượng đã chuẩn bị từ Thông tin chi tiết về khách hàng vào Adobe Tiêu chuẩn Chiến dịch để tạo cấu hình. Tìm hiểu [cách nhập hồ sơ trong Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) sử dụng một quy trình làm việc.
 
 Quy trình nhập trong hình ảnh bên dưới đã được định cấu hình để chạy tám giờ một lần và tìm kiếm các phân đoạn Thông tin chi tiết về khách hàng đã xuất (tệp .csv trong Azure Blob Storage). Quy trình này trích xuất nội dung tệp .csv theo thứ tự cột được chỉ định. Quy trình làm việc này đã được xây dựng để thực hiện xử lý lỗi cơ bản và đảm bảo rằng mỗi hồ sơ có một địa chỉ email trước khi cung cấp dữ liệu trong Adobe Campaign Standard. Quy trình này cũng trích xuất tên phân đoạn từ tên tệp trước khi bổ sung vào dữ liệu hồ sơ Adobe Campaign Standard.
 

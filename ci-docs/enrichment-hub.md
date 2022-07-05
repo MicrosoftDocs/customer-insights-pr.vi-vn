@@ -1,6 +1,6 @@
 ---
-title: Tăng cường dữ liệu hồ sơ khách hàng hợp nhất
-description: Sử dụng các khả năng để tăng cường dữ liệu khách hàng của bạn.
+title: Tổng quan về làm giàu dữ liệu (xem trước)
+description: Sử dụng các khả năng từ Microsoft và các dịch vụ của bên thứ ba khác để làm phong phú thêm dữ liệu khách hàng của bạn.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954067"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053906"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng (bản xem trước)
+# <a name="data-enrichment-preview-overview"></a>Tổng quan về làm giàu dữ liệu (xem trước)
 
-Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để tăng cường dữ liệu khách hàng của bạn.
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để tăng cường dữ liệu khách hàng của bạn. Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình bằng cách sử dụng [kết nối](connections.md) do quản trị viên thiết lập bằng thông tin xác thực và cho phép truyền dữ liệu. Quản trị viên và người đóng góp có thể sử dụng kết nối này để đặt cấu hình nội dung tăng cường.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Nhiều dữ liệu tăng cường thuộc cùng loại
+
+Thực thể cần tăng cường sẽ được chỉ định trong quá trình đặt cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể đặt cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Các giới hạn và việc sử dụng hiện tại có thể được nhìn thấy trên mỗi ô trên **Phát hiện** tab của **Làm giàu** trang.
+
+## <a name="enrich-data-sources-before-unification"></a>Làm phong phú nguồn dữ liệu trước khi hợp nhất
+
+Bạn có thể làm giàu dữ liệu khách hàng của mình trước khi hợp nhất dữ liệu để giúp tăng chất lượng của đối sánh dữ liệu. Để biết thêm thông tin, hãy xem [nguồn dữ liệu làm giàu](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Tạo nội dung tăng cường
+
+Bạn cần có Người đóng góp hoặc Quản trị viên [sự cho phép](permissions.md) để tạo hoặc chỉnh sửa các phần bổ sung.
+
+Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. Các **Phát hiện** tab hiển thị tất cả các tùy chọn bổ sung được hỗ trợ.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Trang trung tâm tăng cường.":::
-
-Đi đến **Dữ liệu** > **Làm giàu** để làm việc với các tùy chọn làm giàu.  
-
-Bạn cần có quyền của Người đóng góp hoặc Quản trị viên để tạo hoặc chỉnh sửa phần dữ liệu tăng cường. Để biết thêm thông tin, hãy xem [Quyền](permissions.md).
-
-Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tăng cường được hỗ trợ.
 
 # <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Trên tab **Khám phá**, bạn sẽ tìm thấy tất cả các tùy chọn tă
 
 ---
 
-Trên tab **Dữ liệu tăng cường của tôi**, bạn có thể xem thông tin bổ sung mà mình đã đặt cấu hình và chỉnh sửa thuộc tính. Bạn cũng có thể tạo [phân đoạn](segments.md) hoặc [đo](measures.md) từ làm giàu.
-
 ## <a name="manage-existing-enrichments"></a>Quản lý dữ liệu tăng cường hiện có
 
-Đi đến tab **Dữ liệu tăng cường của tôi** để xem tất cả thông tin bổ sung đã đặt cấu hình. Mỗi dữ liệu tăng cường được biểu thị bằng một hàng bao gồm thông tin bổ sung về dữ liệu tăng cường đó.
+Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. Trên **Sự làm giàu của tôi**, xem các phần bổ sung đã định cấu hình, trạng thái của họ, số lượng khách hàng đã bổ sung và lần cuối cùng dữ liệu được làm mới. Bạn có thể sắp xếp danh sách bổ sung theo bất kỳ cột nào hoặc sử dụng hộp tìm kiếm để tìm kiếm bổ sung mà bạn muốn quản lý.
 
-Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng dọc (&vellip;) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã đặt cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
+Chọn phần bổ sung để xem các hành động có sẵn.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Các tùy chọn quản lý dữ liệu tăng cường trong danh sách dữ liệu tăng cường.":::
 
 - **Xem** thông tin chi tiết về dữ liệu tăng cường với số hồ sơ khách hàng được tăng cường.
 - **Chỉnh sửa** cấu hình dữ liệu tăng cường.
-- **Chạy** sự dữ liệu tăng cường để cập nhật hồ sơ khách hàng với dữ liệu mới nhất.
-- **Vô hiệu hóa** dữ liệu tăng cường hiện có để thông tin đó không làm mới tự động với mỗi lần làm mới theo lịch. Dữ liệu từ lần làm mới thành công gần nhất sẽ tiếp tục hiển thị. **Kích hoạt** dữ liệu tăng cường không hoạt động để khởi động lại tính năng làm mới tự động với mỗi lần làm mới theo lịch.
+- [**Chạy**](#run-or-refresh-enrichments) sự phong phú để cập nhật hồ sơ khách hàng với dữ liệu mới nhất. Chạy nhiều phần bổ sung cùng một lúc bằng cách chọn chúng trong danh sách.
+- **Hoạt động** hoặc **Hủy kích hoạt** một sự làm giàu. Các phần bổ sung không hoạt động sẽ không được làm mới trong thời gian [làm mới theo lịch trình](system.md#schedule-tab).
 - **Xóa** dữ liệu tăng cường.
 
-Chạy hoặc hủy kích hoạt nhiều dữ liệu tăng cường cùng lúc bằng cách chọn chúng trong danh sách. Các tùy chọn xem và chỉnh sửa không khả dụng dưới dạng hành động hàng loạt. Chúng chỉ phù hợp với một dữ liệu tăng cường tại một thời điểm.
+Bạn cũng có thể tạo [phân đoạn](segments.md) hoặc [đo](measures.md) từ làm giàu.
 
-## <a name="enrichments-and-connections"></a>Dữ liệu tăng cường và kết nối
+## <a name="run-or-refresh-enrichments"></a>Chạy hoặc làm mới tính năng bổ sung
 
-Các dữ liệu tăng cường của bên thứ ba được đặt cấu hình bằng cách sử dụng [kết nối](connections.md) do quản trị viên thiết lập bằng thông tin xác thực và cho phép truyền dữ liệu. Quản trị viên và người đóng góp có thể sử dụng kết nối này để đặt cấu hình nội dung tăng cường.  
+Sau khi chạy, các phần bổ sung có thể được làm mới theo lịch trình tự động hoặc làm mới theo cách thủ công theo yêu cầu.
 
-## <a name="multiple-enrichments-of-the-same-type"></a>Nhiều dữ liệu tăng cường thuộc cùng loại
-
-Thực thể cần tăng cường sẽ được chỉ định trong quá trình đặt cấu hình dữ liệu tăng cường. Nhờ đó, bạn có thể chỉ cần tăng cường một tập hợp con các cấu hình của mình. Ví dụ: chỉ tăng cường dữ liệu cho một phân khúc cụ thể. Bạn có thể đặt cấu hình một số dữ liệu tăng cường thuộc cùng loại và sử dụng lại cùng một kết nối. Một số dữ liệu tăng cường sẽ có giới hạn về số lượng dữ liệu tăng cường thuộc cùng loại có thể được tạo ra. Các giới hạn và việc sử dụng hiện tại có thể được nhìn thấy trên mỗi ô trên **Phát hiện** tab của **Làm giàu** trang.
-
-## <a name="enrich-data-sources-before-unification"></a>Làm phong phú nguồn dữ liệu trước khi hợp nhất
-
-Bạn có thể làm giàu dữ liệu khách hàng của mình trước khi hợp nhất dữ liệu để giúp tăng chất lượng của đối sánh dữ liệu. Để biết thêm thông tin, hãy xem [nguồn dữ liệu làm giàu](data-sources-enrichment.md).
-
-## <a name="run-or-refresh-enrichments"></a>Chạy hoặc làm mới phần bổ sung
-
-1. Để bắt đầu quá trình làm giàu, hãy chọn **Chạy**. Hoặc, để hệ thống chạy phần bổ sung tự động như một phần của [làm mới theo lịch trình](system.md#schedule-tab). Thời gian xử lý phụ thuộc vào kích thước dữ liệu khách hàng của bạn.
+1. Để làm mới một hoặc nhiều bổ sung theo cách thủ công, hãy chọn chúng và chọn **Chạy**. Đến [lên lịch làm mới tự động](system.md#schedule-tab), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**. Thời gian xử lý phụ thuộc vào kích thước dữ liệu khách hàng của bạn.
 
 1. Tùy ý, [xem tiến trình của quá trình làm giàu](#see-the-progress-of-the-enrichment-process).
 
 1. Sau khi quá trình làm giàu hoàn tất, hãy chuyển đến **Sự làm giàu của tôi** để xem lại dữ liệu hồ sơ khách hàng mới được bổ sung, thời gian cập nhật lần cuối và số lượng hồ sơ được bổ sung.
 
-1. Chọn phần bổ sung để xem [kết quả làm giàu](#enrichment-results).
+1. Chọn phần bổ sung để xem [kết quả làm giàu](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
 
@@ -107,14 +103,14 @@ Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường
 1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**.
 1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 Sau khi hoàn thành quá trình làm giàu, hãy xem lại kết quả làm giàu.
 
 1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
-1. Bên trong **Sự làm giàu của tôi**, chọn phần bổ sung mà bạn muốn có thông tin.
+1. Bên trong **Sự làm giàu của tôi**, chọn phần bổ sung mà bạn muốn xem.
 
-Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung và số lượng cấu hình được bổ sung theo thời gian. Các **Phong phú khách hàng xem trước** ô hiển thị một mẫu của thực thể làm giàu được tạo. Để xem chế độ xem chi tiết, hãy chọn **Xem thêm** và chọn **Dữ liệu** chuyển hướng.
+Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung và số lượng cấu hình được bổ sung theo thời gian. Các **Phong phú khách hàng xem trước** ô hiển thị một mẫu của thực thể làm giàu được tạo. Để xem một chế độ xem chi tiết, hãy chọn **Xem thêm** và chọn **Dữ liệu** chuyển hướng.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Trang kết quả làm giàu.":::
 

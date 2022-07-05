@@ -1,5 +1,5 @@
 ---
-title: Cách - Quản lý môi trường
+title: 'Cách thực hiện: Quản lý môi trường'
 description: Tìm hiểu cách quản lý môi trường Thông tin chi tiết về khách hàng hiện tại với tư cách là quản trị viên. "
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 62a5856edac5e66e5e42c93313d78fa6826469b3
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833518"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083070"
 ---
 # <a name="how-to-manage-environments"></a>Cách thực hiện: Quản lý môi trường
 
@@ -38,7 +38,7 @@ Bạn có thể chỉnh sửa một số thông tin của các môi trường hi
 
 ## <a name="change-the-owner-of-an-environment"></a>Thay đổi chủ sở hữu của một môi trường
 
-Một số người dùng có thể có quyền quản trị nhưng chỉ một người dùng là chủ sở hữu của môi trường. Theo mặc định, quản trị viên là người tạo môi trường ban đầu. Với tư cách là quản trị viên của một môi trường, bạn có thể chỉ định quyền sở hữu cho người dùng khác với quyền quản trị viên.
+Một số người dùng có thể có quyền quản trị nhưng chỉ một người dùng là chủ sở hữu của một môi trường. Theo mặc định, quản trị viên là người tạo môi trường ban đầu. Với tư cách là quản trị viên của một môi trường, bạn có thể chỉ định quyền sở hữu cho người dùng khác với quyền quản trị viên.
 
 1. Chọn bộ chọn **Môi trường** trong tiêu đề của ứng dụng.
 
@@ -52,7 +52,7 @@ Một số người dùng có thể có quyền quản trị nhưng chỉ một 
 
 ## <a name="claim-ownership-of-an-environment"></a>Yêu cầu quyền sở hữu môi trường
 
-Nếu tài khoản người dùng của chủ sở hữu bị xóa hoặc bị tạm ngưng, môi trường sẽ không có chủ sở hữu. Mọi người dùng quản trị đều có thể xác nhận quyền sở hữu và trở thành chủ sở hữu mới. Họ có thể tiếp tục sở hữu môi trường hoặc [thay đổi quyền sở hữu thành quản trị viên khác](#change-the-owner-of-an-environment).
+Nếu tài khoản người dùng của chủ sở hữu bị xóa hoặc bị tạm ngưng, môi trường sẽ không có chủ sở hữu. Mọi người dùng quản trị đều có thể xác nhận quyền sở hữu và trở thành chủ sở hữu mới. Họ có thể tiếp tục sở hữu môi trường hoặc [thay đổi quyền sở hữu cho một quản trị viên khác](#change-the-owner-of-an-environment).
 
 Để xác nhận quyền sở hữu, hãy chọn **Lấy quyền sở hữu** nút hiển thị ở đầu mỗi trang trong Thông tin chi tiết về khách hàng khi chủ sở hữu ban đầu rời tổ chức.
 

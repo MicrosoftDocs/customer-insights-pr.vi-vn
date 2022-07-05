@@ -1,5 +1,5 @@
 ---
-title: Phần bổ trợ Thẻ khách hàng cho các ứng dụng Dynamics 365 (có video)
+title: Phần bổ trợ Thẻ khách hàng cho các ứng dụng Dynamics 365 (xem trước) (chứa video)
 description: Hiển thị dữ liệu hồ sơ khách hàng từ Thông tin chi tiết về khách hàng trong ứng dụng Dynamics 365 với tiện ích bổ sung này.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755662"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082146"
 ---
-# <a name="customer-card-add-in-preview"></a>Trình bổ sung thẻ khách hàng (xem trước)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Tiện ích bổ sung Thẻ khách hàng cho các ứng dụng Dynamics 365 (xem trước)
 
 Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamics 365. Với phần bổ trợ Thẻ khách hàng được cài đặt trong ứng dụng Dynamics 365 được hỗ trợ, bạn có thể chọn hiển thị các trường hồ sơ khách hàng, thông tin chi tiết và tiến trình hoạt động. Phần bổ trợ sẽ truy xuất dữ liệu từ Customer Insights mà không ảnh hưởng đến dữ liệu trong ứng dụng Dynamics 365 được kết nối.
 
@@ -29,9 +29,9 @@ Nhận thông tin toàn diện về khách hàng ngay trong ứng dụng Dynamic
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Phần bổ trợ này chỉ hoạt động với các ứng dụng dựa trên mô hình Dynamics 365, chẳng hạn như ứng dụng Sales hoặc Customer Service, phiên bản 9.0 trở lên.
-- Để dữ liệu Dynamics 365 của bạn liên kết với hồ sơ khách hàng Customer Insights, chúng tôi khuyên bạn nên [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Microsoft Dataverse tư nối](connect-power-query.md). Nếu bạn sử dụng một phương pháp khác để nhập địa chỉ liên hệ (hoặc tài khoản) Dynamics 365, bạn cần đảm bảo`contactid` (hoặc`accountid`) trường được đặt là [khóa chính cho nguồn dữ liệu đó trong bước bản đồ của quy trình hợp nhất dữ liệu](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Để dữ liệu Dynamics 365 của bạn liên kết với hồ sơ khách hàng Customer Insights, chúng tôi khuyên bạn nên [nhập từ ứng dụng Dynamics 365 bằng cách sử dụng Microsoft Dataverse kết nối](connect-power-query.md). Nếu bạn sử dụng một phương pháp khác để nhập địa chỉ liên hệ (hoặc tài khoản) Dynamics 365, bạn cần đảm bảo`contactid` (hoặc`accountid`) trường được đặt là [khóa chính cho nguồn dữ liệu đó trong bước bản đồ của quy trình hợp nhất dữ liệu](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Tất cả người dùng Dynamics 365 của Phần bổ trợ Thẻ Khách hàng phải [được thêm vào với tư cách là người dùng](permissions.md) trong Thông tin chi tiết về khách hàng để xem dữ liệu.
-- [Các khả năng tìm kiếm và lọc đã định cấu hình](search-filter-index.md) trong Thông tin chi tiết về khách hàng là bắt buộc để tra cứu dữ liệu hoạt động.
+- [Khả năng lọc và tìm kiếm đã định cấu hình](search-filter-index.md) trong Thông tin chi tiết về khách hàng là bắt buộc để tra cứu dữ liệu hoạt động.
 - Mỗi kiểm soát bổ trợ dựa trên dữ liệu cụ thể trong Thông tin chi tiết về khách hàng. Một số dữ liệu và điều khiển chỉ có sẵn trong các môi trường thuộc các loại cụ thể. Cấu hình bổ trợ sẽ thông báo cho bạn nếu điều khiển không khả dụng do loại môi trường đã chọn. Tìm hiểu thêm về [trường hợp sử dụng môi trường](work-with-business-accounts.md).
   - **Kiểm soát đo lường**: Yêu cầu [các biện pháp được đặt cấu hình](measures.md) của thuộc tính của loại khách hàng.
   - **Kiểm soát thông minh** : Yêu cầu dữ liệu được tạo bằng cách sử dụng [dự đoán hoặc mô hình tùy chỉnh](predictions-overview.md).

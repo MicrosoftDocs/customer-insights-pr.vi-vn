@@ -1,5 +1,5 @@
 ---
-title: Kết nối dữ liệu Common Data Model với tài khoản Azure Data Lake
+title: Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011599"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082272"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Kết nối với dữ liệu trong Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
 - Các Azure Data Lake Storage bạn muốn kết nối và nhập dữ liệu từ đó phải ở trong cùng khu vực Azure với Dynamics 365 Customer Insights Môi trường. Không hỗ trợ kết nối với thư mục Common Data Model từ một kho dữ liệu trong một vùng Azure khác. Để biết vùng Azure của môi trường, hãy truy cập **Quản trị viên** > **Hệ thống** > **Về** trong Thông tin chi tiết về khách hàng.
 
-- Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm tin cậy của Microsoft](https://www.microsoft.com/trust-center).
+- Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
 
 - Nhân viên chính của dịch vụ Thông tin chi tiết về khách hàng phải đảm nhiệm một trong các vai trò sau đây để truy cập vào tài khoản lưu trữ. Để biết thêm thông tin, hãy xem [Cấp quyền cho người quản lý dịch vụ để truy cập vào tài khoản lưu trữ](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Bộ đọc dữ liệu khối lưu trữ
@@ -65,7 +65,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
    >  - Storage Blob Data Reader đủ để đọc từ tài khoản lưu trữ và nhập dữ liệu vào Thông tin chi tiết về khách hàng. 
    >  - Người đóng góp hoặc chủ sở hữu dữ liệu Storage Blob là bắt buộc nếu bạn muốn chỉnh sửa tệp kê khai trực tiếp trong Thông tin chi tiết về khách hàng.  
   
-1. Chọn tên của **Thùng đựng hàng** chứa dữ liệu và giản đồ (tệp model.json hoặc tệp manifest.json) để nhập dữ liệu từ đó và chọn **Tiếp theo**.
+1. Chọn tên của **Thùng đựng hàng** chứa dữ liệu và giản đồ (tệp model.json hoặc tệp kê khai.json) để nhập dữ liệu từ đó và chọn **Tiếp theo**.
    > [!NOTE]
    > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách. Tuy nhiên, cùng một tệp model.json hoặc manifest.json có thể được sử dụng cho các nguồn dữ liệu trong nhiều môi trường.
 
@@ -82,7 +82,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
    :::image type="content" source="media/ADLS_required.png" alt-text="Hộp thoại hiển thị Bắt buộc đối với Khóa chính":::
 
    > [!TIP]
-   > Để chỉnh sửa các thực thể trong giao diện chỉnh sửa JSON, hãy chọn **Cho xem nhiều hơn** > **Chỉnh sửa tệp lược đồ**. Thực hiện các thay đổi và chọn **Tiết kiệm**.
+   > Để chỉnh sửa các thực thể trong giao diện chỉnh sửa JSON, hãy chọn **Cho xem nhiều hơn** > **Chỉnh sửa tệp giản đồ**. Thực hiện các thay đổi và chọn **Tiết kiệm**.
 
 1. Đối với các thực thể đã chọn yêu cầu nhập tăng dần, **Yêu cầu** hiển thị dưới **Làm mới gia tăng**. Đối với từng thực thể này, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md).
 

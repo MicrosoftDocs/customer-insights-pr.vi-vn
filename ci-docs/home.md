@@ -1,5 +1,5 @@
 ---
-title: Trang chủ trong Thông tin chi tiết về khách hàng
+title: Khám phá thông tin chi tiết về khách hàng
 description: Bắt đầu khám phá ứng dụng trên trang chủ.
 ms.date: 05/11/2022
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
-ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.openlocfilehash: 13b4bfa2f0b0cd69454c025e2f59de3dd6bb75a3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "8768402"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053323"
 ---
 # <a name="explore-customer-insights"></a>Khám phá thông tin chi tiết về khách hàng
 
@@ -48,9 +48,9 @@ Các **Cài đặt** điều khiển, được biểu thị bằng biểu tượ
 
 Phần này chứa các thẻ giúp bạn thực hiện quá trình thiết lập môi trường Thông tin chi tiết về khách hàng của mình.
 
-1. Các **Thêm dữ liệu** thẻ hỗ trợ bạn nhập dữ liệu. Hỗ trợ thông tin chi tiết về khách hàng [một số tùy chọn để mang lại dữ liệu về khách hàng của bạn](data-sources.md). Lựa chọn **Thêm nguồn dữ liệu** để bắt đầu.
+1. Các **Thêm dữ liệu** thẻ hỗ trợ bạn nhập dữ liệu. Hỗ trợ Customer Insights [một số tùy chọn để mang lại dữ liệu về khách hàng của bạn](data-sources.md). Lựa chọn **Thêm nguồn dữ liệu** để bắt đầu.
 1. Khi quá trình nhập dữ liệu ban đầu hoàn tất thành công, bạn có thể sử dụng **Hợp nhất dữ liệu** để hài hòa dữ liệu và [tạo hồ sơ khách hàng hợp nhất](data-unification.md) từ các nguồn khác nhau. 
-1. Với hồ sơ khách hàng hợp nhất đã có sẵn, đã đến lúc xem xét **Phân tích dữ liệu** các tùy chọn và nhận thêm thông tin chi tiết. Hãy thử để tạo [các biện pháp kinh doanh](measures.md) để theo dõi KPI, [xác định các phân đoạn](segments.md) để tiếp cận các đối tượng cụ thể, hoặc [định cấu hình dự đoán](predictions-overview.md) với sự trợ giúp của AI.
+1. Với hồ sơ khách hàng thống nhất đã có sẵn, đã đến lúc xem xét **Phân tích dữ liệu** các tùy chọn và nhận thêm thông tin chi tiết. Hãy thử để tạo [các biện pháp kinh doanh](measures.md) để theo dõi KPI, [xác định các phân đoạn](segments.md) để tiếp cận các đối tượng cụ thể, hoặc [định cấu hình dự đoán](predictions-overview.md) với sự trợ giúp của AI.
 1. Giờ đây, dữ liệu khách hàng của bạn đã được nhập, thống nhất và có cấu trúc gọn gàng, bạn sử dụng [các điểm đến xuất khẩu khác nhau](export-destinations.md) để thực hiện hành động trên dữ liệu. Lựa chọn **Thêm kết nối** để kết nối các dịch vụ yêu thích của bạn. Ví dụ: xuất dữ liệu sang Dynamics 365 Marketing để tạo các chiến dịch tiếp thị ra nước ngoài hoặc xây dựng hành trình của khách hàng. 
 
 ## <a name="your-customer-insights-section"></a>Phần thông tin chi tiết về khách hàng của bạn

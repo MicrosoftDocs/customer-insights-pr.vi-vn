@@ -1,5 +1,5 @@
 ---
-title: Tăng cường các hồ sơ khách hàng với dữ liệu vị trí từ Azure Maps
+title: Làm phong phú hồ sơ khách hàng với dữ liệu vị trí từ Azure Maps (xem trước)
 description: Thông tin chung về dịch vụ tăng cường dữ liệu của bên thứ nhất Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953654"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052633"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng Azure Maps (bản xem trước)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu vị trí từ Azure Maps (xem trước)
 
 Azure Maps cung cấp dữ liệu và dịch vụ tập trung vào vị trí để mang lại trải nghiệm dựa trên dữ liệu không gian địa lý với thông tin vị trí tích hợp sẵn. Dịch vụ tăng cường dữ liệu Azure Maps cải thiện độ chính xác của thông tin vị trí về khách hàng của bạn. Dịch vụ này mang lại các khả năng như chuẩn hóa địa chỉ và trích xuất vĩ độ cũng như kinh độ cho Dynamics 365 Customer Insights.
 
@@ -60,7 +60,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tí
 
 1. Chọn **Tập dữ liệu khách hàng** và chọn cấu hình hoặc phân đoạn bạn muốn bổ sung thêm dữ liệu từ Microsoft. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Xác định loại trường nào từ các cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu vị trí từ Bản đồ Azure. Các trường **Đường 1** và **Mã zip/bưu chính** là bắt buộc cho địa chỉ chính và/hoặc phụ đã chọn. Để có độ chính xác đối sánh cao hơn, hãy thêm nhiều trường hơn.
 
@@ -82,7 +82,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tí
 
 1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

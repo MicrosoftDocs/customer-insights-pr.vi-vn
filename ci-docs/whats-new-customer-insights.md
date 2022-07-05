@@ -1,5 +1,5 @@
 ---
-title: Tính năng mới và cập nhật
+title: Nội dung mới trong Dynamics 365 Customer Insights
 description: Thông tin về các tính năng mới, cải tiến và sửa lỗi.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843373"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054044"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nội dung mới trong Dynamics 365 Customer Insights
 
@@ -42,7 +42,7 @@ Các bản cập nhật vào tháng 5 năm 2022 bao gồm các tính năng mới
 
 ### <a name="track-usage-of-a-segment"></a>Theo dõi việc sử dụng một đoạn
 
-Bây giờ bạn có thể [theo dõi việc sử dụng một phân đoạn](segments.md#track-usage-of-a-segment) trong các ứng dụng, dựa trên Dataverse tổ chức được kết nối với Thông tin chi tiết về khách hàng. Vì [Phân đoạn Thông tin chi tiết về khách hàng được sử dụng trong hành trình của khách hàng của Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), hệ thống sẽ thông báo cho bạn về việc sử dụng phân đoạn đó.
+Bây giờ bạn có thể [theo dõi việc sử dụng một phân đoạn](segments.md#track-usage-of-a-segment) trong các ứng dụng, dựa trên Dataverse tổ chức được kết nối với Thông tin chi tiết về khách hàng. Vì [Phân đoạn Thông tin chi tiết về khách hàng được sử dụng trong hành trình của khách hàng của Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), hệ thống thông báo cho bạn về việc sử dụng phân đoạn đó.
 
 ### <a name="export-to-criteo"></a>Xuất sang Criteo
 
@@ -72,7 +72,7 @@ Giờ đây, bạn có thể phân biệt giữa các thước đo cho hồ sơ 
 
 Để biết thêm thông tin, hãy xem [Sử dụng trình tạo thước đo để tạo các thước đo từ đầu](measure-builder.md).
 
-### <a name="consolidation-of-customer-insights-documentation"></a>Tổng hợp tài liệu Thông tin chi tiết về khách hàng
+### <a name="consolidation-of-customer-insights-documentation"></a>Hợp nhất tài liệu Thông tin chi tiết về khách hàng
 
 Chúng tôi đã xem lại các bài viết tài liệu của mình và xóa các đề cập về thông tin chi tiết về mức độ tương tác và khả năng thông tin chi tiết về đối tượng. Trong tương lai, chúng tôi sẽ đề cập nhất quán đến tên sản phẩm Customer Insights khi chúng tôi viết về các tính năng cốt lõi của ứng dụng. Thay đổi này cũng dẫn đến việc tái cấu trúc đáng kể mục lục, cấu trúc URL và đường dẫn tệp trong kho tài liệu cơ bản. Tất cả các dấu trang hoặc các liên kết hiện có của bạn tiếp tục hoạt động và chuyển hướng đến các URL được cập nhật.
 
@@ -140,7 +140,7 @@ LiveRamp cung cấp giải pháp nhận dạng và hợp nhất dữ liệu khá
 
 ### <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (Xem trước)
 
-Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi hợp nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi thống nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
 
 Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu (Xem trước)](data-sources-enrichment.md).
 

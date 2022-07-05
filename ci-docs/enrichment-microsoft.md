@@ -1,6 +1,6 @@
 ---
-title: Làm phong phú hồ sơ khách hàng với dữ liệu thương hiệu và sở thích từ Microsoft
-description: Sử dụng dữ liệu độc quyền từ Microsoft để làm phong phú thêm dữ liệu khách hàng của bạn với các mối quan hệ và chia sẻ tiếng nói.
+title: Làm phong phú hồ sơ khách hàng với dữ liệu thương hiệu và sở thích từ Microsoft (xem trước)
+description: Sử dụng dữ liệu độc quyền của Microsoft để làm phong phú thêm dữ liệu khách hàng của bạn với các mối quan tâm và chia sẻ tiếng nói.
 ms.date: 03/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,16 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953791"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082713"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Làm phong phú hồ sơ khách hàng với sở thích và chia sẻ tiếng nói (xem trước)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu thương hiệu và sở thích từ Microsoft (xem trước)
 
-Sử dụng dữ liệu độc quyền của Microsoft để làm phong phú thêm dữ liệu khách hàng của bạn với mối quan tâm thương hiệu, mối quan tâm và sự chia sẻ tiếng nói (SoV). Những mối quan hệ và SoV này dựa trên dữ liệu từ những người có nhân khẩu học tương tự như khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và phân khúc khách hàng của mình dựa trên sở thích của họ hoặc SoV với các thương hiệu và sở thích cụ thể.
+Sử dụng dữ liệu độc quyền của Microsoft để làm phong phú thêm dữ liệu khách hàng của bạn với mối quan tâm thương hiệu, mối quan tâm và chia sẻ tiếng nói (SoV). Những mối quan hệ và SoV này dựa trên dữ liệu từ những người có nhân khẩu học tương tự như khách hàng của bạn. Thông tin này giúp bạn hiểu rõ hơn và phân khúc khách hàng của mình dựa trên sở thích của họ hoặc SoV với các thương hiệu và sở thích cụ thể.
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Cách chúng tôi xác định mối quan hệ và SoV
 
@@ -104,7 +104,7 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia/vùng sau đây: Úc, 
 
    Khi tăng cường dữ liệu hồ sơ, chúng tôi sẽ bổ sung thông tin cho tất cả hồ sơ khách hàng mà chúng tôi lấy dữ liệu cho thương hiệu và sở thích đã chọn, bao gồm cả các hồ sơ không thuộc quốc gia hoặc khu vực đã chọn. Ví dụ: nếu bạn đã chọn Đức, chúng tôi sẽ tăng cường dữ liệu cho hồ sơ ở Hoa Kỳ nếu có sẵn dữ liệu về các thương hiệu và sở thích đã chọn ở Hoa Kỳ.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
@@ -112,7 +112,7 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia/vùng sau đây: Úc, 
 
 Kết quả bao gồm **Mức độ chung sở thích** hoặc **Chia sẻ giọng nói** các biểu đồ.
 
-Các thực thể được tạo ra từ phần bổ sung được liệt kê trong **Làm giàu** nhóm trong **Dữ liệu** > **Thực thể**. Dữ liệu phong phú cho các thương hiệu được chuyển đến **BrandAffinityFromMicrosoft** và **BrandShareOfVoiceFromMicrosoft** các thực thể. Dữ liệu cho sở thích nằm trong **Sở thíchAffinityFromMicrosoft** và **InterestShareOfVoiceFromMicrosoft** các thực thể.
+Các thực thể được tạo ra từ các phần bổ sung được liệt kê trong **Làm giàu** nhóm trong **Dữ liệu** > **Thực thể**. Dữ liệu phong phú cho các thương hiệu được chuyển đến **BrandAffinityFromMicrosoft** và **BrandShareOfVoiceFromMicrosoft** các thực thể. Dữ liệu cho sở thích nằm trong **Sở thíchAffinityFromMicrosoft** và **InterestShareOfVoiceFromMicrosoft** các thực thể.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu tăng cường trên thẻ khách hàng
 

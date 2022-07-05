@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800352"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083028"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Sử dụng trình tạo thước đo để tạo các thước đo từ đầu
+# <a name="create-new-measures-with-the-measure-builder"></a>Tạo các thước đo mới với trình tạo thước đo
 
-Bài viết này giải thích cách tạo [đo lường](measures.md) từ đầu. Trình tạo số đo cho phép bạn xác định các phép tính bằng cách sử dụng toán tử, hàm tổng hợp và bộ lọc. Bạn có thể xây dựng một thước đo với các thuộc tính từ các thực thể có liên quan đến hợp nhất *khách hàng* thực thể.
+Bài viết này giải thích cách tạo [đo lường](measures.md) từ đầu. Trình tạo thước đo cho phép bạn xác định các phép tính bằng cách sử dụng các toán tử toán học, hàm tổng hợp và bộ lọc. Bạn có thể xây dựng một thước đo với các thuộc tính từ các thực thể có liên quan đến hợp nhất *khách hàng* thực thể.
 
 Tạo các thước đo trong môi trường B-to-C và B-to-B hoạt động theo cùng một cách. Tuy nhiên, nếu bạn là môi trường B-to-B [sử dụng tài khoản có phân cấp](relationships.md#set-up-account-hierarchies), bạn có thể chọn tổng hợp số đo trên các tài khoản phụ có liên quan.
 
@@ -104,7 +104,7 @@ Bạn có thể tạo các thước đo ở cấp độ khách hàng cá nhân (
 
 Bạn có thể tạo các thước đo ở cấp độ tài khoản cá nhân (thước đo khách hàng) hoặc ở cấp độ tất cả các tài khoản (thước đo kinh doanh).
 
-- Đo lường khách hàng: Tạo ra sản lượng như thực thể của chính nó. Các thước đo khách hàng không hiển thị trong thẻ hồ sơ khách hàng.
+- Thước đo khách hàng: Tạo ra sản lượng như thực thể của chính nó. Các thước đo khách hàng không hiển thị trong thẻ hồ sơ khách hàng.
 
 - Biện pháp kinh doanh: Tạo đầu ra dưới dạng thực thể riêng và hiển thị trên trang chủ của môi trường Thông tin chi tiết về khách hàng của bạn.
 

@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Thông tin chi tiết về khách hàng sang Facebook Trình quản lý quảng cáo (chứa video)
+title: Xuất phân đoạn sang Facebook Trình quản lý quảng cáo (xem trước) (chứa video)
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Trình quản lý quảng cáo Facebook.
 ms.date: 04/15/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f610ab1af83bfd512ec1861e7dc76ebb2eecfcbb
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644142"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082986"
 ---
-# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Xuất danh sách phân khúc sang Trình quản lý quảng cáo Facebook (bản xem trước)
+# <a name="export-segments-to-facebook-ads-manager-preview"></a>Xuất phân đoạn sang Facebook Trình quản lý quảng cáo (xem trước)
 
 Xuất phân khúc hồ sơ khách hàng hợp nhất sang Trình quản lý quảng cáo Facebook để tạo chiến dịch trên Facebook và Instagram.
 

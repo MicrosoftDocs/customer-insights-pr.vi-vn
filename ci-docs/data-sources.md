@@ -1,7 +1,7 @@
 ---
-title: Sử dụng nguồn dữ liệu để nhập dữ liệu
-description: Tìm hiểu cách nhập dữ liệu từ nhiều nguồn khác nhau.
-ms.date: 05/31/2022
+title: Tổng quan về nguồn dữ liệu
+description: Tìm hiểu cách nhập hoặc nhập dữ liệu từ nhiều nguồn khác nhau.
+ms.date: 05/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e22977107565a0b28b74f41576a1c7ccc74f6dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011775"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051479"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -62,7 +62,7 @@ Quá trình tải dữ liệu có thể mất một khoảng thời gian. Sau kh
 
 Nguồn dữ liệu có thể được làm mới theo lịch trình tự động hoặc được làm mới theo cách thủ công theo yêu cầu. [Nguồn dữ liệu tại chỗ](connect-power-query.md#add-data-from-on-premises-data-sources) làm mới lịch biểu của riêng họ được thiết lập trong quá trình nhập dữ liệu. Đối với các nguồn dữ liệu đính kèm, quá trình nhập dữ liệu sẽ sử dụng dữ liệu mới nhất có sẵn từ nguồn dữ liệu đó.
 
-Đi đến **Quản trị viên** > **Hệ thống** > [**Lịch trình**](system.md#schedule-tab) để định cấu hình các lần làm mới theo lịch trình của hệ thống đối với các nguồn dữ liệu đã nhập của bạn.
+Đi đến **Quản trị viên** > **Hệ thống** > [**Lịch trình**](system.md#schedule-tab) để định cấu hình làm mới theo lịch trình của hệ thống đối với các nguồn dữ liệu đã nhập của bạn.
 
 Để làm mới nguồn dữ liệu theo yêu cầu, hãy làm theo các bước sau:
 

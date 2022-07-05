@@ -1,5 +1,5 @@
 ---
-title: Hợp nhất các trường tài khoản hoặc khách hàng
+title: Hợp nhất các trường khách hàng để hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740883"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082965"
 ---
-# <a name="unify-customer-fields"></a>Hợp nhất các trường khách hàng
+# <a name="unify-customer-fields-for-data-unification"></a>Hợp nhất các trường khách hàng để hợp nhất dữ liệu
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
@@ -56,7 +56,7 @@ Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ 
 
 ### <a name="edit-a-merged-field"></a>Chỉnh sửa trường đã hợp nhất
 
-1. Chọn một trường đã hợp nhất và chọn **Biên tập**. Ngăn Kết hợp các trường hiển thị.
+1. Chọn một trường đã hợp nhất và chọn **Chỉnh sửa**. Ngăn Kết hợp các trường hiển thị.
 
 1. Chỉ định cách kết hợp hoặc hợp nhất các trường từ một trong ba tùy chọn:
     - **Quan trọng**: Xác định giá trị chiến thắng dựa trên xếp hạng quan trọng được chỉ định cho các trường tham gia. Đây là tùy chọn phối mặc định. Chọn **Di chuyển lên/xuống** để thiết lập xếp hạng mức độ quan trọng.
@@ -133,7 +133,7 @@ Coi một nhóm trường như một đơn vị duy nhất. Ví dụ: nếu bả
 
 1. Chỉ định chính sách hợp nhất người chiến thắng trong **Xếp hạng các nhóm theo** trình đơn thả xuống.
 
-1. Lựa chọn **Thêm vào** và chọn nếu bạn muốn thêm nhiều trường hoặc nhóm vào các trường.
+1. Lựa chọn **cộng** và chọn nếu bạn muốn thêm nhiều trường hoặc nhóm vào các trường.
 
 1. Cung cấp một **Tên** và một **Tên đầu ra** cho mọi trường kết hợp.
 
@@ -143,7 +143,7 @@ Coi một nhóm trường như một đơn vị duy nhất. Ví dụ: nếu bả
 
 ## <a name="configure-customer-id-generation"></a>Định cấu hình tạo ID khách hàng
 
-Xác định cách tạo giá trị ID khách hàng, giá trị nhận dạng hồ sơ khách hàng duy nhất. Bước hợp nhất các trường trong quy trình hợp nhất dữ liệu tạo ra mã nhận dạng hồ sơ khách hàng duy nhất. Định danh là *ID khách hàng* bên trong *Khách hàng* thực thể là kết quả của quá trình hợp nhất dữ liệu.
+Xác định cách tạo giá trị ID khách hàng, giá trị nhận dạng hồ sơ khách hàng duy nhất. Bước hợp nhất các trường trong quy trình hợp nhất dữ liệu tạo ra mã nhận dạng hồ sơ khách hàng duy nhất. Định danh là *ID khách hàng* bên trong *khách hàng* thực thể là kết quả của quá trình hợp nhất dữ liệu.
 
 Các *ID khách hàng*  dựa trên một hàm băm của giá trị đầu tiên của các khóa chính chiến thắng không rỗng. Các khóa này đến từ các thực thể được sử dụng trong hợp nhất dữ liệu và chịu ảnh hưởng của thứ tự đối sánh.Vì vậy, ID khách hàng đã tạo có thể thay đổi khi giá trị khóa chính thay đổi trong thực thể chính của đơn hàng đối sánh. Giá trị khóa chính có thể không phải lúc nào cũng đại diện cho cùng một khách hàng.
 
@@ -162,7 +162,7 @@ Khi đặt cấu hình ID khách hàng ổn định, bạn có thể tránh đư
 
 Bạn có thể xác định các quy tắc để nhóm các cấu hình liên quan thành một cụm. Hiện tại có 2 loại cụm – cụm hộ gia đình và cụm tùy chỉnh. Hệ thống tự động chọn một gia đình có các quy tắc định sẵn nếu thực thể *Khách hàng* chứa trường ngữ nghĩa *Person.LastName* và *Location.Address*. Bạn cũng có thể tạo một cụm có các quy tắc và điều kiện của riêng mình, tương tự như [quy tắc so khớp](match-entities.md#define-rules-for-match-pairs).
 
-1. Lựa chọn **Trình độ cao** > **Tạo cụm**.
+1. Lựa chọn **Nâng cao** > **Tạo cụm**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Điều khiển để tạo một cụm mới.":::
 
@@ -174,7 +174,7 @@ Bạn có thể xác định các quy tắc để nhóm các cấu hình liên q
 
 1. Chỉ định các quy tắc và điều kiện để xác định cụm của bạn.
 
-1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm dưới dạng các trường mới vào *Khách hàng* thực thể.
+1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm dưới dạng các trường mới vào *khách hàng* thực thể.
 
 > [!div class="nextstepaction"]
 > [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)

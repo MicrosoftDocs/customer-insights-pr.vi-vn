@@ -1,5 +1,5 @@
 ---
-title: Ánh xạ ngữ nghĩa (Bản xem trước)
+title: Ánh xạ ngữ nghĩa (bản xem trước)
 description: Tổng quan về ánh xạ ngữ nghĩa và cách sử dụng chúng.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644093"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083154"
 ---
-# <a name="semantic-mappings-preview"></a>Ánh xạ ngữ nghĩa (Bản xem trước)
+# <a name="semantic-mappings-preview"></a>Ánh xạ ngữ nghĩa (bản xem trước)
 
 Ánh xạ ngữ nghĩa cho phép bạn ánh xạ dữ liệu không hoạt động của mình tới các lược đồ được xác định trước. Các lược đồ này giúp Thông tin chi tiết về khách hàng hiểu rõ hơn về các thuộc tính dữ liệu của bạn. Lập bản đồ ngữ nghĩa và dữ liệu được cung cấp cho phép hiểu biết sâu sắc và các tính năng mới trong Thông tin chi tiết về khách hàng. Để ánh xạ dữ liệu hoạt động của bạn vào lược đồ, hãy xem lại tài liệu [hoạt động](activities.md).
 
@@ -95,10 +95,10 @@ Trên **Dữ liệu** > **Ánh xạ ngữ nghĩa (bản xem trước)**, bạn c
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Sử dụng ánh xạ thực thể ngữ nghĩa ContactProfile để tạo các hoạt động cấp liên hệ
 
-Sau khi tạo một *ContactProfile* ánh xạ thực thể ngữ nghĩa, bạn có thể nắm bắt các hoạt động của các liên hệ. Nó cho phép bạn xem trong dòng thời gian hoạt động cho tài khoản mà người liên hệ chịu trách nhiệm cho mỗi hoạt động. Hầu hết các bước tuân theo cấu hình lập bản đồ hoạt động điển hình.
+Sau khi tạo một *ContactProfile* ánh xạ thực thể ngữ nghĩa, bạn có thể nắm bắt các hoạt động của các liên hệ. Nó cho phép bạn xem trong dòng thời gian hoạt động cho một tài khoản mà người liên hệ chịu trách nhiệm cho mỗi hoạt động. Hầu hết các bước tuân theo cấu hình lập bản đồ hoạt động điển hình.
 
    > [!NOTE]
-   > Để các hoạt động cấp liên hệ hoạt động, bạn phải có cả hai **ID tài khoản** và **ID liên hệ** thuộc tính cho mỗi bản ghi trong dữ liệu hoạt động của bạn.
+   > Để các hoạt động cấp liên hệ hoạt động, bạn phải có cả hai **ID tài khoản** và **ID liên hệ** thuộc tính cho từng bản ghi trong dữ liệu hoạt động của bạn.
 
 1. [Xác định một *ContactProfile* ánh xạ thực thể ngữ nghĩa.](#define-a-contactprofile-semantic-entity-mapping) Và chạy ánh xạ ngữ nghĩa.
 
@@ -113,9 +113,9 @@ Sau khi tạo một *ContactProfile* ánh xạ thực thể ngữ nghĩa, bạn 
       - **Dữ liệu hoạt động nguồn mua hàng** > **Dữ liệu liên hệ** trên thuộc tính **ID liên hệ**
       - **Dữ liệu liên hệ** > **Dữ liệu tài khoản** trên thuộc tính **ID tài khoản**
 
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ví dụ về thiết lập mối quan hệ.":::
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Thiết lập mối quan hệ mẫu.":::
 
-1. Sau khi thiết lập các mối quan hệ, hãy chọn **Kế tiếp** và hoàn thành cấu hình lập bản đồ hoạt động của bạn. Để biết các bước chi tiết về tạo hoạt động, hãy xem [xác định một hoạt động](activities.md).
+1. Sau khi thiết lập các mối quan hệ, hãy chọn **Tiếp theo** và hoàn thành cấu hình lập bản đồ hoạt động của bạn. Để biết các bước chi tiết về tạo hoạt động, hãy xem [xác định một hoạt động](activities.md).
 
 1. Chạy bản đồ hoạt động của bạn.
 

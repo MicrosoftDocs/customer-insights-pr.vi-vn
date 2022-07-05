@@ -1,6 +1,6 @@
 ---
-title: Tạo phân khúc bằng trình tạo phân khúc
-description: Tạo phân khúc khách hàng để nhóm họ lại dựa trên các đặc điểm khác nhau.
+title: Tạo phân khúc
+description: Tạo phân khúc khách hàng để nhóm họ dựa trên các thuộc tính khác nhau bằng cách sử dụng trình tạo phân khúc hoặc phân khúc nhanh.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800122"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053998"
 ---
 # <a name="create-segments"></a>Tạo phân khúc
 

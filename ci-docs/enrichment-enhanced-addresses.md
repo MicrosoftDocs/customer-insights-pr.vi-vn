@@ -1,5 +1,5 @@
 ---
-title: Làm giàu nâng cao địa chỉ (chứa video)
+title: Làm phong phú hồ sơ khách hàng với địa chỉ nâng cao (chứa video)
 description: Tăng cường và chuẩn hóa thông tin địa chỉ của hồ sơ khách hàng bằng các mô hình của Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953837"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082083"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Tăng cường hồ sơ khách hàng với các địa chỉ nâng cao
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Làm phong phú hồ sơ khách hàng với địa chỉ nâng cao
 
 Địa chỉ trong dữ liệu của bạn có thể phi cấu trúc, không đầy đủ hoặc không chính xác. Sử dụng các mô hình của Microsoft để chuẩn hóa và tăng cường các địa chỉ của bạn tại [định dạng Common Data Model](/common-data-model/schema/core/applicationcommon/address) để có thông tin chi tiết và độ chính xác cao hơn.
 
@@ -101,7 +101,7 @@ Chúng tôi hiện hỗ trợ tăng cường địa chỉ ở các quốc gia ho
 
 1. Chọn **Lưu dữ liệu tăng cường** sau khi xem xét các lựa chọn của bạn.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
@@ -109,7 +109,7 @@ Các **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thôn
 
 ### <a name="overview-card"></a>Thẻ tổng quan
 
-Các **Tổng quan về các thay đổi của khách hàng** thẻ hiển thị chi tiết về phạm vi làm giàu:
+Các **Tổng quan về các thay đổi của khách hàng** thẻ hiển thị thông tin chi tiết về phạm vi làm giàu:
 
 - **Địa chỉ được xử lý và thay đổi** : Số lượng hồ sơ khách hàng có địa chỉ đã được bổ sung thành công.
 - **Địa chỉ được xử lý và không thay đổi** : Số lượng hồ sơ khách hàng có địa chỉ đã được nhận dạng nhưng không thay đổi. Điều này thường xảy ra khi dữ liệu đầu vào hợp lệ và không thể cải thiện bằng cách bổ sung.

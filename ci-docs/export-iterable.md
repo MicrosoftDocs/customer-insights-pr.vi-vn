@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Thông tin chi tiết về khách hàng sang Có thể lặp lại
+title: Xuất phân đoạn sang Lặp lại (xem trước)
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Có thể lặp lại.
 ms.date: 03/29/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 714a1323521be7d2f29ccaacd7799b2174e2937d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 98d5aeab6b0e932d291213053d509ec72da82e47
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644165"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052261"
 ---
-# <a name="export-segment-lists-to-iterable-preview"></a>Xuất danh sách phân đoạn sang Lặp lại (xem trước)
+# <a name="export-segments-to-iterable-preview"></a>Xuất phân đoạn sang Lặp lại (xem trước)
 
-Xuất các phân đoạn của hồ sơ khách hàng hợp nhất sang Lặp lại và sử dụng chúng cho các hoạt động tiếp thị.
+Xuất phân đoạn hồ sơ khách hàng hợp nhất sang Lặp lại và sử dụng chúng cho các hoạt động tiếp thị.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -35,7 +35,7 @@ Xuất các phân đoạn của hồ sơ khách hàng hợp nhất sang Lặp l�
 
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
-1. Lựa chọn **Thêm kết nối** và lựa chọn **Có thể lặp lại** để cấu hình kết nối.
+1. Lựa chọn **Thêm kết nối** và lựa chọn **Có thể lặp lại** để định cấu hình kết nối.
 
 1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
 
@@ -45,7 +45,7 @@ Xuất các phân đoạn của hồ sơ khách hàng hợp nhất sang Lặp l�
 
 1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ**.
 
-1. Lựa chọn **Kết nối** để khởi tạo kết nối tới Iterable.
+1. Lựa chọn **Liên kết** để khởi tạo kết nối tới Iterable.
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
@@ -72,6 +72,6 @@ Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](syste
 
 ## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Iterable, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Iterable đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu đến Iterable, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Iterable đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.

@@ -1,5 +1,5 @@
 ---
-title: Câu hỏi thường gặp về bản dùng thử - Dynamics 365 Customer Insights
+title: Câu hỏi thường gặp về bản dùng thử Dynamics 365 Customer Insights
 description: Giải pháp cho các câu hỏi thường gặp liên quan đến việc thiết lập và quản lý bản dùng thử Customer Insights. Tìm hiểu cách giải quyết các vấn đề riêng theo nền tảng và ứng dụng.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011913"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051525"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Câu hỏi thường gặp về bản dùng thử Dynamics 365 Customer Insights
 

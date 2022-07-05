@@ -1,34 +1,35 @@
 ---
-title: Xuất dữ liệu Thông tin chi tiết về khách hàng sang Braze
+title: Xuất phân đoạn sang Braze (xem trước)
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Braze.
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644009"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082692"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>Xuất danh sách phân đoạn sang Braze (xem trước)
+# <a name="export-segments-to-braze-preview"></a>Xuất phân đoạn sang Braze (xem trước)
 
 Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang Braze và sử dụng chúng cho các hoạt động tiếp thị.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
--   Bạn có một [Braze tài khoản](https://www.braze.com/) và thông tin đăng nhập quản trị viên tương ứng.
--   Bạn có [phân đoạn được định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
--   Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa trường đại diện cho địa chỉ email và ID khách hàng Braze. 
+- Một [Braze tài khoản](https://www.braze.com/) và thông tin đăng nhập quản trị viên tương ứng.
+- Hiện có [phân đoạn trong Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- [Các phân đoạn đã định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
+- Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa trường đại diện cho địa chỉ email và ID khách hàng Braze.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
 - Xuất sang Braze bị giới hạn ở các phân đoạn.
-- Quá trình xuất lên đến 1 triệu hồ sơ khách hàng sang Braze có thể mất tới 40 phút để hoàn thành. 
+- Quá trình xuất lên đến 1 triệu hồ sơ khách hàng sang Braze có thể mất tới 40 phút để hoàn thành.
 - Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Braze phụ thuộc và bị giới hạn vào hợp đồng của bạn với Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Thiết lập kết nối với Braze
@@ -41,11 +42,11 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang Braze và sử
 
 1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Cung cấp của bạn [Khóa API Braze](https://www.braze.com/docs/api/basics/) để tiếp tục đăng nhập. 
+1. Cung cấp của bạn [Khóa API Braze](https://www.braze.com/docs/api/basics/) để tiếp tục đăng nhập.
 
 1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ**.
 
-1. Lựa chọn **Kết nối** để khởi tạo kết nối với Braze.
+1. Lựa chọn **Liên kết** để khởi tạo kết nối với Braze.
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
@@ -59,9 +60,13 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Để tạo một nội dung xuất mới, hãy chọn **Thêm đích**.
 
-1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ phần Braze. Nếu bạn không thấy tên phần này, tức là không có kết nối nào thuộc loại này dành cho bạn.  
+1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ phần Braze. Nếu bạn không thấy phần này, thì không có kết nối nào thuộc loại này dành cho bạn.  
 
-3. Bên trong **Đối sánh dữ liệu** phần, trong **E-mail**, hãy chọn trường đại diện cho địa chỉ email của khách hàng, trong trường "ID khách hàng", hãy chọn trường đại diện cho Braze ID của khách hàng. Bắt buộc phải xuất các phân đoạn sang Braze. Các phân đoạn trong Braze sẽ được tạo với cùng tên của phân đoạn như trong Dynamics 365 Customer Insights. Bạn có thể chọn các trường bổ sung, tùy chọn để phù hợp với dữ liệu. 
+1. Thêm một **Tên hiển thị** để xuất khẩu của bạn.
+
+1. Thêm mã định danh API của phân đoạn Braze mà bạn muốn xuất sang **Mã định danh API phân đoạn Braze** đồng ruộng. Bạn có thể tìm thấy số nhận dạng trong chi tiết phân đoạn trên nền tảng Braze.
+
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bên trong **ID khách hàng**, hãy chọn trường đại diện cho Braze ID của khách hàng. Bắt buộc phải xuất các phân đoạn sang Braze. Bạn có thể chọn thêm các trường tùy ý.
 
 1. Chọn **Lưu.**
 

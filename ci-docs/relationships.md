@@ -21,14 +21,14 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: a7b10d985d5cba64b25595a3d7c101d6cb5c62a5
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644146"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082587"
 ---
-# <a name="relationships-between-entities"></a>Mối quan hệ giữa các thực thể
+# <a name="relationships-between-entities-and-entity-paths"></a>Mối quan hệ giữa các thực thể và đường dẫn thực thể
 
 Mối quan hệ kết nối các thực thể và xác định một biểu đồ dữ liệu của bạn khi các thực thể có cùng một khóa ngoại, mã định danh chung. Khóa ngoại này có thể được tham chiếu từ thực thể này sang thực thể khác. Các thực thể được kết nối cho phép bạn xác định các phân khúc và giá trị đo dựa trên nhiều nguồn dữ liệu.
 

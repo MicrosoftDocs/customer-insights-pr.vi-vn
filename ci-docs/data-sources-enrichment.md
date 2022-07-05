@@ -1,5 +1,5 @@
 ---
-title: Nguồn dữ liệu làm giàu
+title: Làm giàu cho nguồn dữ liệu (xem trước)
 description: Làm phong phú nguồn dữ liệu trước khi trải qua quá trình hợp nhất dữ liệu.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011499"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082125"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (xem trước)
 
-Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi hợp nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình. Ví dụ: sử dụng định dạng chuẩn hóa và chuẩn hóa cho các địa chỉ sẽ làm tăng chất lượng của kết quả đối sánh. Để biết danh sách các cách làm giàu được hỗ trợ, hãy xem [các tùy chọn làm giàu nguồn dữ liệu được hỗ trợ](#supported-data-source-enrichments).
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi thống nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình. Ví dụ: sử dụng định dạng chuẩn hóa và chuẩn hóa cho các địa chỉ sẽ làm tăng chất lượng của kết quả đối sánh. Để biết danh sách các cách làm giàu được hỗ trợ, hãy xem [các tùy chọn làm giàu nguồn dữ liệu được hỗ trợ](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Làm giàu nguồn dữ liệu
 

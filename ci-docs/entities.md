@@ -1,5 +1,5 @@
 ---
-title: Thực thể và tập hợp dữ liệu
+title: Các thực thể trong Customer Insights
 description: Xem dữ liệu trên trang Thực thể.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644069"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082734"
 ---
 # <a name="entities-in-customer-insights"></a>Các thực thể trong Customer Insights
 
@@ -27,7 +27,7 @@ Các **Thực thể** trang liệt kê các thực thể và bao gồm các cộ
 - **Tên** : Tên của thực thể dữ liệu. Nếu bạn thấy biểu tượng cảnh báo bên cạnh tên thực thể, điều đó có nghĩa là dữ liệu cho thực thể đó không tải thành công.
 - **Nguồn** : Loại nguồn dữ liệu đã nhập thực thể.
 - **Đã cập nhật** : Thời gian thực thể được cập nhật lần cuối.
-- **Tình trạng** : Thông tin chi tiết về lần cập nhật cuối cùng của thực thể.
+- **Trạng thái** : Thông tin chi tiết về lần cập nhật cuối cùng của thực thể.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
@@ -43,7 +43,7 @@ Các **Thực thể** trang liệt kê các thực thể và bao gồm các cộ
 > ![Bảng trường.](media/data-manager-entities-fields.PNG "Bảng trường")
 
 > [!NOTE]
-> Trang này chỉ hiển thị một mẫu dữ liệu của tổ chức của bạn. Để xem toàn bộ tập dữ liệu, hãy chuyển đến **Nguồn dữ liệu** trang, chọn một thực thể, chọn **Biên tập** và sau đó xem dữ liệu của thực thể này với Power Query biên tập viên như được giải thích trong [Nguồn dữ liệu](data-sources.md).
+> Trang này chỉ hiển thị một mẫu dữ liệu của tổ chức của bạn. Để xem toàn bộ tập dữ liệu, hãy chuyển đến **Nguồn dữ liệu** trang, chọn một thực thể, chọn **Chỉnh sửa**, và sau đó xem dữ liệu của thực thể này với Power Query biên tập viên như được giải thích trong [Nguồn dữ liệu](data-sources.md).
 
 Để tìm hiểu thêm về dữ liệu được nhập vào thực thể, cột **Tóm tắt** cung cấp cho bạn một số đặc điểm quan trọng của dữ liệu, chẳng hạn như giá trị rỗng, các giá trị còn thiếu, giá trị duy nhất, số lượng và phân phối, như áp dụng cho dữ liệu của bạn. Chọn biểu tượng biểu đồ để xem tóm tắt dữ liệu.
 

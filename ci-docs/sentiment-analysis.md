@@ -1,5 +1,5 @@
 ---
-title: Phân tích cảm xúc cho phản hồi của khách hàng
+title: Phân tích tình cảm đối với phản hồi của khách hàng (xem trước)
 description: Tìm hiểu cách sử dụng mô hình phân tích tình cảm trên phản hồi của khách hàng trong Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: e51225bbfcd445180b12661cba12256c3f042045
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af1afd3eff8a795a9e199b1c1d411b79dc2841b4
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644090"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055562"
 ---
-# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Phân tích tình cảm trong phản hồi của khách hàng (Xem trước)
+# <a name="analyze-sentiment-in-customer-feedback-preview"></a>Phân tích tình cảm trong phản hồi của khách hàng (xem trước)
 
-Ngày nay, khách hàng mong đợi những sản phẩm, dịch vụ và trải nghiệm chất lượng cao. Đặc biệt là những khách hàng đã chia sẻ phản hồi của họ. Rất khó khăn cho các tổ chức khi phân tích khối lượng dữ liệu ngày càng tăng mà không làm giảm độ chính xác và chi phí lao động cao hơn. Dynamics 365 Customer Insights đưa ra mô hình phân tích tình cảm cho phản hồi của khách hàng cho phép các tổ chức phân tích dữ liệu của họ chính xác hơn và với chi phí thấp hơn.
+Ngày nay, khách hàng mong đợi những sản phẩm, dịch vụ và trải nghiệm chất lượng cao. Đặc biệt là những khách hàng chia sẻ phản hồi của họ. Rất khó khăn cho các tổ chức khi phân tích khối lượng dữ liệu ngày càng tăng mà không làm giảm độ chính xác và chi phí lao động cao hơn. Dynamics 365 Customer Insights đưa ra mô hình phân tích tình cảm đối với phản hồi của khách hàng cho phép các tổ chức phân tích dữ liệu của họ chính xác hơn và với chi phí thấp hơn.
 
 Phân tích tình cảm cho phép bạn tổng hợp tình cảm của khách hàng và xác định các khía cạnh kinh doanh là cơ hội để cải thiện. Tính năng Thông tin chi tiết về khách hàng này giúp bạn hiểu những gì hoạt động tốt và những gì bạn cần giải quyết. Tập trung vào các lĩnh vực kinh doanh có tác động và có liên quan nhất để cải thiện trải nghiệm cho khách hàng của bạn. Cuối cùng, nó có thể giúp bạn thúc đẩy các hành động kinh doanh mang lại trải nghiệm mang lại sự hài lòng và lòng trung thành cao của khách hàng.
 
@@ -27,13 +27,13 @@ Tính năng phân tích tình cảm tạo ra hai thông tin chi tiết có đư�
 
 Thông tin này có thể giúp bạn đạt được các kết quả sau: 
 - Xem tổng quan về tình cảm của khách hàng đối với thương hiệu hoặc tổ chức
-- Xác định những khách hàng có tâm lý tiêu cực để tập trung vào các chiến dịch và mức độ tương tác của bạn và tối ưu hóa để đạt được lợi nhuận cao hơn  
+- Xác định những khách hàng có tâm lý tiêu cực để tập trung vào các chiến dịch và mức độ tương tác của bạn và tối ưu hóa để thu được lợi nhuận cao hơn  
 - Xác định các khía cạnh kinh doanh với các vấn đề được khách hàng chỉ ra  
 - Phân khúc khách hàng dựa trên cảm tính của họ để chạy các chiến dịch được cá nhân hóa với các nỗ lực bán hàng, tiếp thị và hỗ trợ được nhắm mục tiêu
 - Tối ưu hóa hoạt động kinh doanh bằng cách giải quyết các lĩnh vực quan tâm hoặc cơ hội đã được khách hàng đề cập
 - Ghi nhận các khía cạnh kinh doanh đang hoạt động tốt và thưởng cho những khách hàng hài lòng thông qua các chương trình khuyến mãi và khách hàng thân thiết
 
-Để đảm bảo rằng bạn có thể tin tưởng vào kết quả của các mô hình, chúng tôi cung cấp thông tin minh bạch về cách các mô hình đưa ra quyết định. Bạn sẽ nhận được danh sách các từ ảnh hưởng đến quyết định của các mô hình trong việc chỉ định một điểm số cảm xúc cụ thể hoặc khía cạnh kinh doanh cho các nhận xét phản hồi.  
+Để đảm bảo rằng bạn có thể tin tưởng vào kết quả của các mô hình, chúng tôi cung cấp thông tin minh bạch về cách các mô hình đưa ra quyết định. Bạn sẽ nhận được danh sách các từ đã ảnh hưởng đến quyết định của các mô hình trong việc chỉ định một điểm số cảm xúc cụ thể hoặc khía cạnh kinh doanh cho các nhận xét phản hồi.  
 
 Chúng tôi sử dụng hai **Các mô hình Xử lý Ngôn ngữ Tự nhiên (NLP)** : Đầu tiên chỉ định cho mỗi nhận xét phản hồi một điểm tình cảm. Mô hình thứ hai liên kết mỗi phản hồi với tất cả các khía cạnh kinh doanh có thể áp dụng. Các mô hình được đào tạo dựa trên dữ liệu công khai từ các nguồn trên mạng xã hội, bán lẻ, nhà hàng, sản phẩm tiêu dùng và ngành công nghiệp ô tô.    
   
@@ -84,19 +84,19 @@ Các thuộc tính dữ liệu sau là bắt buộc:
 
 1. Bên trong **Tên mô hình** bước, cung cấp một **Tên** cho phân tích của bạn. 
 
-1. Cung cấp **Tên thực thể đầu ra khía cạnh kinh doanh** và **Tên thực thể đầu ra điểm tình cảm**, sau đó chọn **Kế tiếp**.
+1. Cung cấp **Tên thực thể đầu ra khía cạnh kinh doanh** và **Tên thực thể đầu ra điểm tình cảm**, sau đó chọn **Tiếp theo**.
 
 1. Bên trong **Dữ liệu bắt buộc** bước, chọn **Thêm dữ liệu**.
 
    :::image type="content" source="media/sentiment-add-data.png" alt-text="Thêm luồng dữ liệu trong mô hình phân tích tình cảm.":::
 
-1. Bên trong **Thêm dữ liệu** ngăn, chọn kiểu ngữ nghĩa **Phản hồi** khỏi danh sách.
+1. Bên trong **Thêm dữ liệu** ngăn, chọn kiểu ngữ nghĩa **Nhận xét** khỏi danh sách.
 
    :::image type="content" source="media/sentiment-add-feedback-activities.png" alt-text="Bước cấu hình để lựa chọn các hoạt động phản hồi để phân tích tình cảm.":::
 
-1. Chọn các hoạt động để sử dụng cho phân tích tình cảm này, sau đó chọn **Kế tiếp**.
+1. Chọn các hoạt động để sử dụng cho phân tích tình cảm này, sau đó chọn **Tiếp theo**.
  
-1. Ánh xạ các thuộc tính trong dữ liệu của bạn với các thuộc tính mô hình. Lựa chọn **Cứu** để áp dụng các lựa chọn của bạn. 
+1. Ánh xạ các thuộc tính trong dữ liệu của bạn với các thuộc tính mô hình. Lựa chọn **Tiết kiệm** để áp dụng các lựa chọn của bạn. 
 
 1. Bạn thấy trạng thái của ánh xạ dữ liệu. Chọn **Tiếp** để tiếp tục. 
 
@@ -157,7 +157,7 @@ Có bốn phần dữ liệu chính trong trang kết quả.
   Chọn tên của một khía cạnh kinh doanh để xem thông tin bổ sung về cách một khía cạnh kinh doanh được xác định bởi mô hình. Có hai phần trong ngăn này: 
 
   - **Những từ có ảnh hưởng** : Hiển thị các từ hàng đầu ảnh hưởng đến việc xác định khía cạnh kinh doanh của mô hình AI trong phản hồi của khách hàng. 
-    **Hiển thị các từ xúc phạm** : Cho phép bạn đưa các từ xúc phạm vào danh sách từ dữ liệu phản hồi ban đầu của khách hàng. Theo mặc định, nó bị tắt.  Mặt nạ từ xúc phạm được hỗ trợ bởi một mô hình AI và có thể không phát hiện tất cả các từ xúc phạm. Chúng tôi tiếp tục lặp lại và đào tạo bộ phân loại để có hiệu suất tối ưu. Nếu bạn phát hiện một từ xúc phạm không được lọc như mong đợi, hãy cho chúng tôi biết. 
+    **Hiển thị các từ xúc phạm** : Cho phép bạn đưa các từ xúc phạm vào danh sách từ dữ liệu phản hồi ban đầu của khách hàng. Theo mặc định, nó bị tắt.  Mặt nạ từ xúc phạm được hỗ trợ bởi một mô hình AI và có thể không phát hiện tất cả các từ xúc phạm. Chúng tôi tiếp tục lặp lại và đào tạo bộ phân loại để có hiệu suất tối ưu. Nếu bạn phát hiện thấy một từ xúc phạm không được lọc như mong đợi, hãy cho chúng tôi biết. 
     
     :::image type="content" source="media/offensive-words-sentiment.png" alt-text="Danh sách các từ có ảnh hưởng với nút chuyển đổi để hiển thị hoặc ẩn các từ xúc phạm.":::
  
@@ -175,7 +175,7 @@ Có ba phần thông tin bổ sung giải thích cách hoạt động của mô 
    
    :::image type="content" source="media/sentiment-feedback-samples.png" alt-text="Ví dụ về phân tích tình cảm trên phản hồi của khách hàng.":::
  
-**Hiển thị các từ xúc phạm** : Cho phép bạn đưa các từ xúc phạm vào danh sách từ dữ liệu phản hồi ban đầu của khách hàng. Theo mặc định, nó bị tắt.  Mặt nạ từ xúc phạm được hỗ trợ bởi một mô hình AI và có thể không phát hiện tất cả các từ xúc phạm. Chúng tôi tiếp tục lặp lại và đào tạo bộ phân loại để có hiệu suất tối ưu. Nếu bạn phát hiện một từ xúc phạm không được lọc như mong đợi, hãy cho chúng tôi biết. 
+**Hiển thị các từ xúc phạm** : Cho phép bạn đưa các từ xúc phạm vào danh sách từ dữ liệu phản hồi ban đầu của khách hàng. Theo mặc định, nó bị tắt.  Mặt nạ từ xúc phạm được hỗ trợ bởi một mô hình AI và có thể không phát hiện tất cả các từ xúc phạm. Chúng tôi tiếp tục lặp lại và đào tạo bộ phân loại để có hiệu suất tối ưu. Nếu bạn phát hiện thấy một từ xúc phạm không được lọc như mong đợi, hãy cho chúng tôi biết. 
 
 ## <a name="act-on-analysis-results"></a>Hành động dựa trên kết quả phân tích
 
@@ -185,7 +185,7 @@ Bạn có thể dễ dàng bắt đầu tạo các phân khúc khách hàng mớ
  
 ## <a name="potential-bias"></a>Sự thiên vị tiềm ẩn
 
-Như với bất kỳ tính năng nào sử dụng trí thông minh nhân tạo dự đoán, bạn nên biết về sự thiên vị tiềm ẩn trong dữ liệu bạn sử dụng để dự đoán tâm lý khách hàng. Ví dụ: nếu bạn chỉ thu thập phản hồi kỹ thuật số, bạn có thể bỏ lỡ phản hồi từ những khách hàng chủ yếu giao dịch trực tiếp với bạn, điều này có thể ảnh hưởng đến kết quả đầu ra của tính năng.
+Như với bất kỳ tính năng nào sử dụng trí thông minh nhân tạo dự đoán, bạn nên biết về sự thiên vị tiềm ẩn trong dữ liệu bạn sử dụng để dự đoán tâm lý khách hàng. Ví dụ: nếu bạn chỉ thu thập phản hồi bằng kỹ thuật số, bạn có thể bỏ lỡ phản hồi từ những khách hàng chủ yếu giao dịch trực tiếp với bạn, điều này có thể ảnh hưởng đến kết quả đầu ra của tính năng.
 
 Vì tính năng này sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó, do đó, tính năng này có khả năng được sử dụng như một phương pháp lập hồ sơ, vì thuật ngữ đó được xác định bởi Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc bạn sử dụng tính năng này để xử lý dữ liệu có thể tuân theo GDPR hoặc các luật hoặc quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm cả phân tích tình cảm, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
 

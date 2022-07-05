@@ -1,5 +1,5 @@
 ---
-title: Xuất dữ liệu Customer Insights sang Dynamics 365 Sales
+title: Xuất phân đoạn sang Bán hàng Dynamics 365 (xem trước)
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644045"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082398"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Sử dụng các phân khúc trong Dynamics 365 Sales (bản xem trước)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Xuất phân đoạn sang Bán hàng Dynamics 365 (xem trước)
 
 Sử dụng dữ liệu khách hàng của bạn để tạo danh sách khách hàng tiếp thị, theo dõi quy trình làm việc và gửi thư quảng cáo với Dynamics 365 Sales.
 
@@ -34,7 +32,7 @@ Sử dụng dữ liệu khách hàng của bạn để tạo danh sách khách h
 1. Hồ sơ liên hệ phải có trong Dynamics 365 Sales trước khi bạn có thể xuất một phân đoạn từ Customer Insights sang Sales. Đọc thêm về cách nhập danh bạ từ [Sử dụng Dynamics 365 Sales Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
-   > Việc xuất các phân đoạn từ Thông tin chi tiết về khách hàng sang Bán hàng sẽ không tạo hồ sơ liên hệ mới trong các phiên bản Bán hàng. Hồ sơ liên hệ từ Bán hàng phải được nhập trong Thông tin chi tiết về khách hàng và được sử dụng làm nguồn dữ liệu. Chúng cũng cần được đưa vào thực thể Khách hàng hợp nhất để ánh xạ ID khách hàng với ID liên hệ trước khi có thể xuất phân đoạn.
+   > Việc xuất các phân đoạn từ Thông tin chi tiết về khách hàng sang Bán hàng sẽ không tạo hồ sơ liên hệ mới trong các trường hợp Bán hàng. Hồ sơ liên hệ từ Bán hàng phải được nhập trong Thông tin chi tiết về khách hàng và được sử dụng làm nguồn dữ liệu. Chúng cũng cần được đưa vào thực thể Khách hàng hợp nhất để ánh xạ ID khách hàng với ID liên hệ trước khi có thể xuất phân đoạn.
 
 ## <a name="set-up-the-connection-to-sales"></a>Thiết lập kết nối với Sales
 

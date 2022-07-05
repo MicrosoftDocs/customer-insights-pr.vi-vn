@@ -1,5 +1,5 @@
 ---
-title: Tăng cường thông tin bằng dịch vụ cung cấp dữ liệu của bên thứ ba HERE Technologies
+title: Làm phong phú hồ sơ khách hàng với Công nghệ HERE (xem trước)
 description: Thông tin chung về dịch vụ tăng cường dữ liệu của bên thứ ba HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953699"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052077"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Tăng cường dữ liệu hồ sơ khách hàng bằng HERE Technologies (bản xem trước)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Làm phong phú hồ sơ khách hàng với Công nghệ HERE (xem trước)
 
 HERE Technologies là một công ty nền tảng vị trí cung cấp dữ liệu và dịch vụ tập trung vào vị trí. Các dịch vụ làm giàu dữ liệu của HERE Technologies cải thiện độ chính xác của thông tin vị trí về khách hàng của bạn. Nó cung cấp tính năng chuẩn hóa địa chỉ, trích xuất vĩ độ và kinh độ, v.v.
 
@@ -60,7 +60,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 1. Chọn **Tập dữ liệu khách hàng** và chọn hồ sơ hoặc phân đoạn bạn muốn làm giàu bằng dữ liệu từ Công nghệ HERE. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Xác định loại trường nào từ các cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu từ Công nghệ HERE. Các trường **Đường 1** và **Mã zip/bưu chính** là bắt buộc cho địa chỉ chính và/hoặc phụ đã chọn. Để có độ chính xác đối sánh cao hơn, hãy thêm nhiều trường hơn.
 
@@ -72,7 +72,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

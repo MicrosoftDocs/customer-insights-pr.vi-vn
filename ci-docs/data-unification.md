@@ -1,5 +1,5 @@
 ---
-title: Tạo dạng xem hợp nhất về khách hàng của bạn
+title: Tổng quan về hợp nhất dữ liệu
 description: Thực hiện quy trình hợp nhất dữ liệu với dữ liệu của bạn để tạo một tập dữ liệu duy nhất về hồ sơ khách hàng hợp nhất.
 ms.date: 05/10/2022
 ms.reviewer: v-wendysmith
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755760"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082230"
 ---
 # <a name="data-unification-overview"></a>Tổng quan về hợp nhất dữ liệu
 
@@ -34,7 +34,7 @@ Dữ liệu có thể được thống nhất trên một thực thể duy nhấ
 
 1. [Các trường khách hàng hợp nhất](merge-entities.md) (trước đây được gọi là Hợp nhất): Trong bước trường khách hàng hợp nhất, hãy xác định trường nguồn nào nên được bao gồm, loại trừ hoặc hợp nhất thành một hồ sơ khách hàng hợp nhất.  
 
-1. [Xét lại](review-unification.md) và tạo hồ sơ thống nhất.
+1. [Kiểm tra lại](review-unification.md) và tạo hồ sơ thống nhất.
 
 Sau khi hoàn thành hợp nhất dữ liệu, bạn có thể tùy chọn:
 

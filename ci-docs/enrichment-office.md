@@ -1,5 +1,5 @@
 ---
-title: Làm phong phú hồ sơ khách hàng với dữ liệu từ Microsoft Office 365
+title: Làm phong phú hồ sơ khách hàng với dữ liệu từ Microsoft Office 365 (xem trước)
 description: Sử dụng dữ liệu độc quyền từ Microsoft Office để làm phong phú hồ sơ khách hàng của bạn với dữ liệu tương tác.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954159"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055700"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Làm phong phú hồ sơ khách hàng bằng dữ liệu tương tác (xem trước)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu từ Microsoft Office 365 (xem trước)
 
 Sử dụng dữ liệu từ Microsoft Office 365 để làm phong phú thêm hồ sơ tài khoản khách hàng của bạn với thông tin chi tiết về các cam kết thông qua Office 365 ứng dụng. Dữ liệu tương tác bao gồm email và hoạt động cuộc họp, được tổng hợp ở cấp tài khoản. Ví dụ: số lượng email từ tài khoản doanh nghiệp hoặc số cuộc họp với tài khoản. Không có dữ liệu về người dùng cá nhân được cung cấp.
 
@@ -75,7 +75,7 @@ Lựa chọn **Chạy** để bắt đầu quá trình làm giàu.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Đây là *Văn phòng* thực thể. Các *Office_UserEntity* chứa các ID Active Directory cho các địa chỉ email đã được chọn trong quá trình cấu hình bổ sung.
 
@@ -89,7 +89,7 @@ Tất cả dữ liệu được tổng hợp đến cấp tài khoản. Hệ th�
 | Số lượng email đến tài khoản                                                       |  NoOfEmails_ToAccount                    |
 | Số lượng email từ tài khoản                                                     |  NoOfEmails_FromAccount                  |
 | Số cuộc họp do tài khoản khởi xướng                                           |  NoOfMeetings_FromAccount                |
-| Số cuộc họp do tổ chức của bạn bắt đầu                                 |  NoOfMeetings_ToAccount                  |
+| Số lượng cuộc họp do tổ chức của bạn bắt đầu                                 |  NoOfMeetings_ToAccount                  |
 | Số người từ tổ chức của bạn trong các cuộc họp có tài khoản                  |  NoOfContactsInvolved_Meetings           |
 | Số người từ tổ chức của bạn trong các cuộc trò chuyện qua email với tài khoản       |  NoOfContactsInvolved_Emails             |
 | Số người từ tài khoản trong các cuộc họp với tổ chức của bạn                  |  NoOfAccountContactsInvolved_Meetings    |
@@ -104,7 +104,7 @@ Tất cả dữ liệu được tổng hợp đến cấp tài khoản. Hệ th�
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Xem dữ liệu tăng cường trên thẻ khách hàng
 
-Tương tác tài khoản cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** rồi chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy điểm tương tác của tài khoản, tổng số email và tổng số cuộc họp được tổng hợp trong năm qua. Bạn cũng tìm thấy các biểu đồ hiển thị email và lịch sử cuộc họp.
+Tương tác tài khoản cũng có thể được xem trên thẻ khách hàng cá nhân. Đi đến **Khách hàng** rồi chọn một hồ sơ khách hàng. Trong thẻ khách hàng, bạn sẽ tìm thấy điểm tương tác của tài khoản, tổng số email và tổng số cuộc họp được tổng hợp trong năm qua. Bạn cũng tìm thấy các biểu đồ hiển thị lịch sử email và cuộc họp.
 
 :::image type="content" source="media/enrichment-office-customer-card.png" alt-text="Thẻ khách hàng với dữ liệu tăng cường.":::
 

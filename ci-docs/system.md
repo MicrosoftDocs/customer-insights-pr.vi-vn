@@ -1,5 +1,5 @@
 ---
-title: Cấu hình hệ thống trong Thông tin chi tiết về khách hàng
+title: Cấu hình hệ thống
 description: Tìm hiểu về cài đặt hệ thống trong Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,12 +15,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653642"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050697"
 ---
 # <a name="system-configuration"></a>Cấu hình hệ thống
 
@@ -41,7 +41,7 @@ Các **Tab trạng thái** cho phép bạn theo dõi tiến trình của các t�
 
 Tab này bao gồm các bảng với trạng thái và thông tin xử lý cho các quy trình khác nhau. Mỗi bảng theo dõi **Tên** của nhiệm vụ và thực thể tương ứng, **Trạng thái** của lần chạy gần đây nhất và thời điểm **Cập nhật gần đây nhất**. Bạn có thể xem chi tiết của vài lần chạy gần đây nhất bằng cách chọn tác vụ hoặc tên quy trình. 
 
-Chọn trạng thái bên cạnh nhiệm vụ hoặc quy trình trong **Tình trạng** cột để mở **Chi tiết tiến độ** ngăn.
+Chọn trạng thái bên cạnh nhiệm vụ hoặc quy trình trong **Trạng thái** cột để mở **Chi tiết tiến độ** ngăn.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Ngăn chi tiết tiến trình hệ thống":::
 
@@ -53,13 +53,13 @@ Hệ thống sử dụng các trạng thái sau cho các tác vụ và quy trìn
 |---------|---------|
 |Đã huỷ |Người dùng đã hủy quá trình xử lý trước khi quá trình kết thúc.   |
 |Không thành công   |Phiên nhập dữ liệu gặp lỗi.         |
-|Thất bại  |Xử lý không thành công.  |
+|Thất bại  |Quá trình xử lý không thành công.  |
 |Chưa bắt đầu   |Nguồn dữ liệu chưa nhập dữ liệu nào hoặc vẫn ở chế độ nháp.         |
 |Đang xử lý  |Nhiệm vụ hoặc quy trình đang được thực hiện.  |
 |Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
 |Đã bỏ qua  |Tác vụ hoặc quy trình đã bị bỏ qua. Một hoặc nhiều quá trình xuôi dòng mà nhiệm vụ này phụ thuộc vào bị lỗi hoặc bị bỏ qua.|
 |Thành công  |Tác vụ hoặc quy trình đã hoàn thành thành công. Đối với nguồn dữ liệu, cho biết dữ liệu đã được nhập thành công nếu thời gian được đề cập trong **Làm mới** cột.|
-|Đã xếp hàng đợi | Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi tất cả các tác vụ và quy trình ngược dòng được hoàn thành. Để biết thêm thông tin, hãy xem [Làm mới quy trình](#refresh-processes).|
+|Đã xếp hàng đợi | Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi hoàn thành tất cả các tác vụ và quy trình ngược dòng. Để biết thêm thông tin, hãy xem [Làm mới quy trình](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Làm mới quy trình
 

@@ -1,5 +1,5 @@
 ---
-title: Tăng cường dữ liệu hồ sơ công ty bằng dịch vụ tăng cường dữ liệu của bên thứ ba Leadspace
+title: Làm phong phú hồ sơ công ty với Leadspace (xem trước)
 description: Thông tin chung về dịch vụ tăng cường dữ liệu của bên thứ ba Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954205"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082377"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Tăng cường dữ liệu hồ sơ công ty bằng Leadspace (bản xem trước)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Làm phong phú hồ sơ công ty với Leadspace (xem trước)
 
 Leadspace là một công ty khoa học dữ liệu cung cấp Nền tảng dữ liệu khách hàng B2B. Nó cho phép các môi trường có hồ sơ khách hàng hợp nhất dựa trên các tài khoản để làm phong phú thêm dữ liệu của họ. Làm phong phú *Hồ sơ khách hàng* với các thuộc tính như vị trí, ngành hoặc quy mô công ty. Làm phong phú *Hồ sơ liên hệ* với các thuộc tính như chức danh, chân dung hoặc xác minh email.
 
@@ -62,7 +62,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Ảnh chụp màn hình khi chọn tập dữ liệu khách hàng.":::
 
-1. Xác định loại trường nào từ các cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu công ty từ Leadspace. Trường **Tên công ty** là bắt buộc. Để có độ chính xác so khớp cao hơn, có thể thêm tối đa 2 trường khác, **Trang web công ty** và **Vị trí công ty**.
 
@@ -82,7 +82,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 1. Lựa chọn **Chạy** để bắt đầu quá trình làm giàu hoặc đóng để quay lại **Làm giàu** trang.
 
-## <a name="enrichment-results"></a>Kết quả tăng cường
+## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
