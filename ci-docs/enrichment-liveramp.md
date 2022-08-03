@@ -8,16 +8,16 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082209"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196374"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu nhận dạng từ LiveRamp (xem trước)
 
-LiveRamp cung cấp giải pháp nhận dạng ngoại tuyến xác định và hợp nhất dữ liệu khách hàng. Bạn có thể ánh xạ các số nhận dạng cá nhân trong dữ liệu khách hàng của mình với biểu đồ nhận dạng AbiliTec và nhận các ID AbiliTec. Sau đó, bạn có thể sử dụng các ID này để thống nhất dữ liệu khách hàng của mình tốt hơn.
+LiveRamp cung cấp giải pháp nhận dạng ngoại tuyến xác định và hợp nhất dữ liệu khách hàng. Bạn có thể ánh xạ các số nhận dạng cá nhân trong dữ liệu khách hàng của mình vào biểu đồ nhận dạng AbiliTec và nhận các ID AbiliTec. Sau đó, bạn có thể sử dụng các ID này để thống nhất dữ liệu khách hàng của mình tốt hơn.
 
 ## <a name="supported-countriesregions"></a>Quốc gia/khu vực được hỗ trợ
 
@@ -59,7 +59,7 @@ Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới 
 
 1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
 
-1. Chọn kết nối. Liên hệ với quản trị viên nếu không có sẵn.
+1. Chọn kết nối. Liên hệ với quản trị viên nếu không có kết nối.
 
 1. Chọn **Tiếp theo**.
 
@@ -83,7 +83,7 @@ Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới 
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Các **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
+Các **Số lượng khách hàng làm giàu theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644149"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171075"
 ---
 # <a name="subscription-churn-prediction"></a>Dự đoán khả năng rời bỏ đăng ký
 
@@ -121,7 +121,7 @@ Dự đoán khả năng rời bỏ đăng ký giúp dự đoán xem khách hàng
    - **Tên dự đoán:** Tên của dự đoán được cung cấp khi tạo.
    - **Loại dự đoán:** Loại mô hình dùng cho dự đoán
    - **Thực thể đầu ra:** Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.    
-     Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-new-segment) với ngưỡng bạn muốn.
+     Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-segment) với ngưỡng bạn muốn.
    - **Trường dự đoán:** Trường này chỉ được điền cho một số loại dự đoán và không được sử dụng trong dự đoán khả năng rời bỏ đăng ký.
    - **Trạng thái:** Trạng thái hiện tại của lần chạy dự đoán.
         - **Xếp hàng đợi:"** Dự đoán hiện đang chờ quá trình khác chạy.

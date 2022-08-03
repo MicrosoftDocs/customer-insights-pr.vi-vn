@@ -1,7 +1,7 @@
 ---
 title: Kết nối một Azure Synapse nguồn dữ liệu (xem trước)
 description: Sử dụng cơ sở dữ liệu trong Azure Synapse với tư cách là nguồn dữ liệu trong Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052725"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206933"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Kết nối một Azure Synapse Analytics nguồn dữ liệu (xem trước)
 
-Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn. Azure Synapse Analytics tập hợp những công nghệ SQL tốt nhất được sử dụng trong kho dữ liệu doanh nghiệp, công nghệ Spark được sử dụng cho dữ liệu lớn, Data Explorer để phân tích nhật ký và chuỗi thời gian, Đường ống để tích hợp dữ liệu và ETL / ELT, đồng thời tích hợp sâu với các dịch vụ Azure khác như Power BI,Cosmos DB và AzureML.
+Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn. Azure Synapse Analytics tập hợp những công nghệ SQL tốt nhất được sử dụng trong kho dữ liệu doanh nghiệp, công nghệ Spark được sử dụng cho dữ liệu lớn, Data Explorer để phân tích chuỗi thời gian và nhật ký, Đường ống để tích hợp dữ liệu và ETL / ELT, đồng thời tích hợp sâu với các dịch vụ Azure khác như Power BI,Cosmos DB và AzureML.
 
 Để biết thêm thông tin, hãy xem [Azure Synapse tổng quát](/azure/synapse-analytics/overview-what-is).
 
@@ -35,7 +35,7 @@ Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp t
 
 - Đăng ký Azure hiện hoạt.
 
-- Nếu sử dụng một cái mới Azure Data Lake Storage Tài khoản Gen2, *dịch vụ chính cho Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền. Học nhiều hơn về [kết nối với một Azure Data Lake Storage với một dịch vụ chính cho Thông tin chi tiết về khách hàng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
+- Nếu sử dụng một Azure Data Lake Storage Tài khoản Gen2, *dịch vụ chính cho Thông tin chi tiết về khách hàng* nhu cầu **Người đóng góp dữ liệu khối lưu trữ** quyền. Học nhiều hơn về [kết nối với một Azure Data Lake Storage với một dịch vụ chính cho Thông tin chi tiết về khách hàng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
 
 - Trên nhóm tài nguyên,Azure Synapse không gian làm việc được đặt, *dịch vụ chính* và *người dùng cho Thông tin chi tiết về khách hàng* ít nhất cần được chỉ định **Người đọc** quyền. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -66,3 +66,9 @@ Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp t
 1. Theo tùy chọn, hãy chọn các thực thể dữ liệu để cho phép lập hồ sơ dữ liệu.
 
 1. Lựa chọn **Tiết kiệm** để áp dụng lựa chọn của bạn và bắt đầu nhập dữ liệu từ nguồn dữ liệu mới tạo của bạn được liên kết với các bảng cơ sở dữ liệu Lake trong Azure Synapse Analytics. Các **Nguồn dữ liệu** trang mở ra hiển thị nguồn dữ liệu mới trong **Làm mới** trạng thái.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Quá trình tải dữ liệu có thể mất một khoảng thời gian. Sau khi làm mới thành công, dữ liệu đã nhập có thể được xem xét từ [**Thực thể**](entities.md) trang.
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

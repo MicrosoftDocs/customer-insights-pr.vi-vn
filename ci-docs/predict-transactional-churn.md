@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8644181"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171121"
 ---
 # <a name="transaction-churn-prediction"></a>Dự đoán khách hàng rời khỏi giao dịch
 
@@ -24,7 +24,7 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 Đối với các môi trường dựa trên tài khoản doanh nghiệp, chúng ta có thể dự đoán tỷ lệ rời khỏi giao dịch cho một tài khoản, ngoài ra còn có thông tin khác như danh mục sản phẩm. Việc thêm thông số có thể giúp tìm hiểu khả năng tài khoản "Contoso" sẽ dừng mua danh mục sản phẩm "văn phòng phẩm". Ngoài ra, đối với tài khoản doanh nghiệp, chúng ta cũng có thể sử dụng AI để tạo danh sách những lý do tại sao một tài khoản có thể rời khỏi đối với một danh mục hoặc cấp thông tin thứ hai.
 
 > [!TIP]
-> Hãy thử hướng dẫn cho một giao dịch churn dự đoán bằng cách sử dụng dữ liệu mẫu: [Hướng dẫn mẫu churn dự đoán giao dịch](sample-guide-predict-transactional-churn.md).
+> Hãy thử hướng dẫn churn giao dịch dự đoán bằng cách sử dụng dữ liệu mẫu: [Hướng dẫn mẫu churn dự đoán giao dịch](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -128,7 +128,7 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 
 1. Chọn **Thêm dữ liệu** và chọn loại hoạt động trong ngăn bên có chứa thông tin lịch sử giao dịch hoặc mua hàng được yêu cầu.
 
-1. Ở dưới **Chọn các hoạt động**, chọn các hoạt động cụ thể từ loại hoạt động đã chọn mà bạn muốn tính toán tập trung vào.
+1. Dưới **Chọn các hoạt động**, chọn các hoạt động cụ thể từ loại hoạt động đã chọn mà bạn muốn tính toán tập trung vào.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Ngăn bên hiển thị việc chọn các hoạt động cụ thể theo loại ngữ nghĩa.":::
 
@@ -136,7 +136,7 @@ Dự đoán Khả năng rời bỏ giao dịch giúp dự đoán liệu khách h
 
 1. Ánh xạ các thuộc tính ngữ nghĩa đến các trường được yêu cầu để chạy mô hình. Nếu các trường bên dưới chưa điền, hãy đặt cấu hình mối quan hệ từ thực thể nhật ký mua hàng cho thực thể *Khách hàng*. Chọn **Lưu.**
 
-1. Bên trong **Thêm dữ liệu bắt buộc** bước, chọn **Kế tiếp** để tiếp tục nếu bạn không muốn thêm các hoạt động khác.
+1. Bên trong **Thêm dữ liệu bắt buộc** bước, chọn **Tiếp theo** để tiếp tục nếu bạn không muốn thêm các hoạt động khác.
 
 
 # <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
@@ -240,7 +240,7 @@ Thêm danh sách các tài khoản và khách hàng doanh nghiệp mà bạn mu�
    - **Tên dự đoán**: Tên của dự đoán được cung cấp khi tạo.
    - **Loại dự đoán**: Loại mô hình được sử dụng cho dự đoán
    - **Thực thể đầu ra**: Tên của thực thể để lưu trữ đầu ra của dự đoán. Bạn có thể tìm thấy thực thể có tên này trên **Dữ liệu** > **Thực thể**.
-     Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-new-segment) với ngưỡng bạn muốn.
+     Trong thực thể đầu ra, *ChurnScore* là xác suất dự đoán về khả năng khách hàng ngừng sử dụng gói đăng ký và *IsChurn* là một nhãn nhị phân dựa trên *ChurnScore* với ngưỡng 0,5. Ngưỡng mặc định có thể không hoạt động trong trường hợp của bạn. [Tạo một phân khúc mới](segments.md#create-a-segment) với ngưỡng bạn muốn.
      Không phải khách hàng nào cũng nhất thiết phải là khách hàng hiện hoạt. Một số khách hàng có thể không có bất kỳ hoạt động nào trong một thời gian dài và được coi là đã ngừng giao dịch, dựa trên sự xác định của bạn về khách hàng ngừng giao dịch. Việc dự đoán rủi ro rời khỏi đối với những khách hàng đã rời khỏi sẽ không hữu ích vì họ không phải là đối tượng quan tâm.
    - **Trường được dự đoán**: Trường này chỉ được điền đối với một số loại dự báo và không được dùng trong dự đoán rời khỏi.
    - **Trạng thái**: Trạng thái chạy dự đoán.

@@ -1,7 +1,7 @@
 ---
 title: Dự đoán giá trị trọn đời của khách hàng (CLV)
 description: Dự đoán doanh thu tiềm năng cho những khách hàng đang hoạt động trong tương lai.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055240"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186466"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Dự đoán giá trị trọn đời của khách hàng (CLV)
 
 Dự đoán giá trị tiềm năng (doanh thu) mà các khách hàng cá nhân đang hoạt động sẽ mang lại cho doanh nghiệp của bạn trong suốt khoảng thời gian xác định trong tương lai. Tính năng này có thể giúp bạn đạt được nhiều mục tiêu:
+
 - Xác định những khách hàng có giá trị cao và xử lý thông tin chi tiết này
 - Tạo phân khúc khách hàng chiến lược dựa trên giá trị tiềm năng của họ để chạy các chiến dịch cá nhân hóa với các nỗ lực bán hàng, tiếp thị và hỗ trợ được nhắm mục tiêu
 - Hướng dẫn phát triển sản phẩm bằng cách tập trung vào các tính năng làm tăng giá trị khách hàng
 - Tối ưu hóa chiến lược bán hàng hoặc tiếp thị và phân bổ ngân sách chính xác hơn để tiếp cận khách hàng
-- Ghi nhận và tặng thưởng những khách hàng có giá trị cao thông qua các chương trình phần thưởng hoặc khách hàng thân thiết 
+- Ghi nhận và tặng thưởng những khách hàng có giá trị cao thông qua các chương trình phần thưởng hoặc khách hàng thân thiết
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -35,7 +36,7 @@ Trước khi bắt đầu, hãy suy nghĩ xem CLV có ý nghĩa như thế nào 
 
 Vì việc định cấu hình và chạy mô hình CLV không mất nhiều thời gian, hãy cân nhắc tạo một số mô hình với các tùy chọn đầu vào khác nhau và so sánh kết quả của các mô hình để xem kịch bản mô hình nào phù hợp nhất với nhu cầu kinh doanh của bạn.
 
-###  <a name="data-requirements"></a>Các yêu cầu về dữ liệu
+### <a name="data-requirements"></a>Các yêu cầu về dữ liệu
 
 Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh dấu là tùy chọn, bạn nên sử dụng để tăng hiệu suất mô hình. Mô hình có thể xử lý càng nhiều dữ liệu, thì dự đoán sẽ càng chính xác. Do đó, bạn nên nhập thêm dữ liệu hoạt động của khách hàng, nếu có.
 
@@ -52,11 +53,12 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
     - Hoạt động web: lịch sử truy cập trang web, lịch sử email
     - Hoạt động khách hàng thân thiết: tích lũy điểm thưởng và lịch sử đổi điểm
     - Bản ghi dịch vụ khách hàng, cuộc gọi dịch vụ, khiếu nại hoặc lịch sử trả lại
+    - Thông tin hồ sơ khách hàng
 - Dữ liệu về các hoạt động của khách hàng (tùy chọn):
     - Mã định danh hoạt động để phân biệt các hoạt động cùng loại
     - Mã định danh khách hàng để ánh xạ hoạt động với khách hàng
     - Thông tin về hoạt động chứa tên và ngày của hoạt động
-    - Lược đồ dữ liệu ngữ nghĩa cho các hoạt động bao gồm: 
+    - Lược đồ dữ liệu ngữ nghĩa cho các hoạt động bao gồm:
         - **Khóa chính**: Mã định danh duy nhất cho một hoạt động
         - **Dấu thời gian**: Ngày và giờ của sự kiện do khóa chính xác định
         - **Sự kiện (tên hoạt động)**: Tên sự kiện bạn muốn sử dụng
@@ -66,7 +68,7 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
     - Đủ dữ liệu lịch sử: Ít nhất một năm dữ liệu giao dịch. Tốt nhất là từ hai đến ba năm dữ liệu giao dịch để dự đoán CLV trong một năm.
     - Nhiều giao dịch mua trên mỗi khách hàng: Lý tưởng là tối thiểu hai đến ba giao dịch trên mỗi ID khách hàng, tốt nhất là trong nhiều ngày.
     - Số lượng khách hàng: Tối thiểu 100 khách hàng duy nhất, tốt nhất là 10.000 khách hàng. Mô hình sẽ không thành công nếu dưới 100 khách hàng và không đủ dữ liệu lịch sử
-    - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường bắt buộc thuộc dữ liệu đầu vào   
+    - Tính đầy đủ của dữ liệu: Ít hơn 20% giá trị bị thiếu trong trường bắt buộc thuộc dữ liệu đầu vào
 
 > [!NOTE]
 > - Mô hình yêu cầu phải có lịch sử giao dịch của khách hàng. Hiện chỉ có thể đặt cấu hình một thực thể lịch sử giao dịch. Nếu có nhiều thực thể mua hàng / giao dịch, bạn có thể kết hợp chúng thành Power Query trước khi nhập dữ liệu.
@@ -122,11 +124,11 @@ Dữ liệu sau đây là bắt buộc và ở những vị trí được đánh
 
 1. Chọn **Tiếp theo**.
 
-### <a name="add-optional-data"></a>Thêm dữ liệu tùy chọn
+### <a name="add-optional-activity-data"></a>Thêm dữ liệu hoạt động tùy chọn
 
-Dữ liệu phản ánh các tương tác chính của khách hàng (như web, dịch vụ khách hàng và bản ghi sự kiện) bổ sung thêm ngữ cảnh vào hồ sơ giao dịch. Dữ liệu hoạt động khách hàng của bạn có càng nhiều mẫu thì càng cải thiện độ chính xác của các dự đoán. 
+Dữ liệu phản ánh các tương tác chính của khách hàng (như web, dịch vụ khách hàng và bản ghi sự kiện) bổ sung thêm ngữ cảnh vào hồ sơ giao dịch. Dữ liệu hoạt động khách hàng của bạn có càng nhiều mẫu thì càng cải thiện độ chính xác của các dự đoán.
 
-1. Trong bước **Dữ liệu bổ sung (tùy chọn)**, hãy chọn **Thêm dữ liệu**. Chọn thực thể hoạt động khách hàng cung cấp thông tin hoạt động của khách hàng như được mô tả trong [điều kiện tiên quyết](#prerequisites).
+1. Bên trong **Dữ liệu bổ sung (tùy chọn)** bước, chọn **Thêm dữ liệu** Dưới **Nâng cao thông tin chi tiết về mô hình với dữ liệu hoạt động bổ sung**. Chọn thực thể hoạt động khách hàng cung cấp thông tin hoạt động của khách hàng như được mô tả trong [điều kiện tiên quyết](#prerequisites).
 
 1. Ánh xạ các trường ngữ nghĩa với các thuộc tính trong thực thể hoạt động của khách hàng và chọn **Tiếp theo**.
 
@@ -135,15 +137,34 @@ Dữ liệu phản ánh các tương tác chính của khách hàng (như web, d
 1. Chọn loại hoạt động phù hợp với loại hoạt động của khách hàng mà bạn đang thêm. Chọn từ các loại hoạt động hiện có hoặc thêm một loại hoạt động mới.
 
 1. Định cấu hình mối quan hệ từ thực thể hoạt động khách hàng của bạn thành thực thể *Khách hàng*.
-    
+
     1. Chọn trường xác định khách hàng trong bảng hoạt động của khách hàng. Nó có thể liên quan trực tiếp đến ID khách hàng chính của thực thể *Khách hàng* của bạn.
     1. Chọn thực thể *Khách hàng* khớp với thực thể *Khách hàng* chính của bạn.
     1. Nhập tên mô tả mối quan hệ.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Hình ảnh về bước trong quy trình cấu hình để thêm dữ liệu bổ sung và định cấu hình hoạt động với các ví dụ được điền đầy đủ.":::
 
-1. Chọn **Lưu**.    
+1. Chọn **Lưu**.
     Thêm nhiều dữ liệu hơn nếu có các hoạt động khác của khách hàng mà bạn muốn đưa vào.
+
+1. Thêm dữ liệu khách hàng tùy chọn hoặc chọn **Tiếp theo**.
+
+### <a name="add-optional-customer-data"></a>Thêm dữ liệu khách hàng tùy chọn
+
+Chọn từ 18 thuộc tính hồ sơ khách hàng thường được sử dụng để đưa vào làm đầu vào cho mô hình. Các thuộc tính này có thể dẫn đến các kết quả mô hình được cá nhân hóa, phù hợp và dễ hành động hơn cho các trường hợp sử dụng kinh doanh của bạn.
+
+Ví dụ: Contoso Coffee muốn dự đoán giá trị lâu dài của khách hàng để nhắm mục tiêu đến những khách hàng có giá trị cao với ưu đãi được cá nhân hóa liên quan đến việc ra mắt máy pha cà phê espresso mới của họ. Contoso sử dụng mô hình CLV và thêm tất cả 18 thuộc tính hồ sơ khách hàng để xem yếu tố nào ảnh hưởng đến những khách hàng có giá trị cao nhất của họ. Họ nhận thấy vị trí của khách hàng là yếu tố ảnh hưởng nhiều nhất đến những khách hàng này.
+Với thông tin này, họ tổ chức một sự kiện địa phương để ra mắt máy pha cà phê espresso và hợp tác với các nhà cung cấp địa phương để nhận các ưu đãi cá nhân hóa và trải nghiệm đặc biệt tại sự kiện. Nếu không có thông tin này, Contoso có thể chỉ gửi email tiếp thị chung chung và bỏ lỡ cơ hội cá nhân hóa cho phân khúc khách hàng giá trị cao tại địa phương này.
+
+1. Bên trong **Dữ liệu bổ sung (tùy chọn)** bước, chọn **Thêm dữ liệu** Dưới **Nâng cao thông tin chi tiết hơn nữa về mô hình với dữ liệu khách hàng bổ sung**.
+
+1. Vì **Thực thể**, chọn **Khách hàng: CustomerInsights** để chọn bảng hồ sơ khách hàng hợp nhất ánh xạ tới dữ liệu thuộc tính khách hàng. Vì **ID khách hàng**, chọn **System.Customer.CustomerId**.
+
+1. Ánh xạ nhiều trường hơn nếu dữ liệu có sẵn trong hồ sơ khách hàng hợp nhất của bạn.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Ví dụ về các trường được ánh xạ cho dữ liệu hồ sơ khách hàng.":::
+
+1. Lựa chọn **Tiết kiệm** sau khi ánh xạ các thuộc tính mà mô hình sẽ sử dụng để giúp dự đoán giá trị lâu dài của khách hàng.
 
 1. Chọn **Tiếp theo**.
 

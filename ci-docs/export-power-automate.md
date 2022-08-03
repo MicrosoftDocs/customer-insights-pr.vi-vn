@@ -1,19 +1,19 @@
 ---
-title: Power Automate trình kết nối (xem trước) | Tài liệu Microsoft
+title: Power Automate kết nối (xem trước) | Tài liệu Microsoft
 description: Tạo quy trình trong Microsoft Power Automate từ Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082461"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196144"
 ---
 # <a name="power-automate-connector-preview"></a>Trình kết nối Power Automate (xem trước)
 
@@ -21,18 +21,18 @@ Kích hoạt các sự kiện cụ thể xảy ra tự động khi dữ liệu c
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Bạn có thể thực hiện tối đa 100 cuộc gọi mỗi 60 giây. Bạn có thể gọi điểm cuối API nhiều lần bằng cách sử dụng tham số $ bỏ qua. [Tìm hiểu thêm về thông số $ bỏ qua](/connectors/customerinsights/#get-items-from-an-entity).
+- Tối đa 100 cuộc gọi mỗi 60 giây. Sử dụng [$ bỏ qua tham số](/connectors/customerinsights/#get-items-from-an-entity) để gọi điểm cuối API nhiều lần.
 
 ## <a name="power-automate-triggers"></a>Trình kích hoạt Power Automate
 
-Sử dụng trình kích hoạt để tạo luồng đám mây và tự động hóa các tác vụ lặp lại, chẳng hạn như thông báo hoặc các hành động nâng cao hơn.
+Sử dụng trình kích hoạt để tạo luồng đám mây và tự động hóa các tác vụ lặp lại, chẳng hạn như thông báo hoặc các hành động nâng cao hơn. Sử dụng trình kích hoạt khi:
 
-- Kích hoạt khi làm mới nguồn dữ liệu không thành công.
-- Kích hoạt khi làm mới nguồn dữ liệu thành công.
-- Kích hoạt khi ngưỡng vượt quá trên một phân khúc. Kích hoạt bị giới hạn để vượt quá ngưỡng.
-- Kích hoạt khi ngưỡng vượt quá trên một giá trị đo kinh doanh. Chỉ hỗ trợ giá trị đo công việc không có kích thước. Kích hoạt bị giới hạn để vượt quá ngưỡng.
-- Kích hoạt khi hoàn thành quá trình làm mới đầy đủ (nguồn dữ liệu, phân khúc, đo lường,...).
-- Kích hoạt khi quá trình làm mới hoàn tất.
+- Làm mới nguồn dữ liệu không thành công.
+- Làm mới nguồn dữ liệu thành công.
+- Một ngưỡng được vượt qua trên một đoạn. Kích hoạt bị giới hạn để vượt quá ngưỡng.
+- Một ngưỡng được vượt qua trên một biện pháp kinh doanh. Chỉ hỗ trợ giá trị đo công việc không có kích thước. Kích hoạt bị giới hạn để vượt quá ngưỡng.
+- Quá trình làm mới đầy đủ theo lịch đã hoàn tất. Trình kích hoạt này không hoạt động đối với các lần làm mới được bắt đầu theo cách thủ công.
+- Quá trình hợp nhất được làm mới đã hoàn tất.
 
 [Định cấu hình trình kích hoạt trong Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Trình kết nối Power Automate cung cấp các hành động khác ngoài tr�
 
 ## <a name="create-a-power-automate-flow"></a>Tạo một Dòng Power Automate
 
-1. Đi tới **Quản trị viên** > **Đích xuất**.
+1. Đi đến **Quản trị viên** > **Kết nối**.
 
 1. Trên lát **Power Automate**, chọn **Thiết lập**.
 
@@ -53,7 +53,5 @@ Trình kết nối Power Automate cung cấp các hành động khác ngoài tr�
 Ví dụ về cách sử dụng các quy trình: 
 - Đăng tin nhắn lên một kênh Microsoft Teams nếu làm mới nguồn dữ liệu không thành công. 
 - Gửi email cho chủ sở hữu dữ liệu khi vượt qua ngưỡng trên một phân khúc.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,22 +8,22 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082125"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207209"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (xem trước)
 
-Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi thống nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình. Ví dụ: sử dụng định dạng chuẩn hóa và chuẩn hóa cho các địa chỉ sẽ làm tăng chất lượng của kết quả đối sánh. Để biết danh sách các cách làm giàu được hỗ trợ, hãy xem [các tùy chọn làm giàu nguồn dữ liệu được hỗ trợ](#supported-data-source-enrichments).
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi hợp nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình. Ví dụ: sử dụng định dạng chuẩn hóa và chuẩn hóa cho các địa chỉ sẽ làm tăng chất lượng của kết quả đối sánh. Để biết danh sách các phương pháp làm giàu được hỗ trợ, hãy xem [các tùy chọn làm giàu nguồn dữ liệu được hỗ trợ](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Làm giàu nguồn dữ liệu
 
-Bạn phải có quyền Người đóng góp hoặc Quản trị viên để tạo hoặc chỉnh sửa các nội dung phong phú. Để biết thêm thông tin, hãy xem [Quyền](permissions.md).  
+Bạn phải có Người đóng góp hoặc Quản trị viên [sự cho phép](permissions.md) để tạo hoặc chỉnh sửa các nội dung phong phú.  
 
-1. Đi đến **Dữ liệu** > **Hợp nhất**. Chọn đối tượng bạn muốn làm giàu và chọn một thuộc tính làm khóa chính cho đối tượng. Để biết thêm thông tin, hãy xem [Chọn khóa chính](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Đi đến **Dữ liệu** > **Hợp nhất**. Chọn thực thể bạn muốn làm giàu và chọn một thuộc tính làm [khóa chính](map-entities.md#select-primary-key-and-semantic-type-for-attributes) cho thực thể.
 
 1. Chuyển tới **Dữ liệu** > **Nguồn dữ liệu**.
 
@@ -39,7 +39,7 @@ Bạn phải có quyền Người đóng góp hoặc Quản trị viên để t�
 
 ## <a name="supported-data-source-enrichments"></a>Các cách làm giàu nguồn dữ liệu được hỗ trợ
 
-Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lại các bước chi tiết của phần bổ sung để tìm hiểu cách định cấu hình nó.
+Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lại các bước chi tiết cho phần bổ sung để tìm hiểu cách định cấu hình nó.
 
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md)
 - [Dữ liệu công ty nâng cao](enrichment-enhanced-company-data.md)
@@ -47,8 +47,8 @@ Các bổ sung sau đây hiện có sẵn cho các nguồn dữ liệu. Xem lạ
 
 ## <a name="manage-existing-data-source-enrichments"></a>Quản lý bổ sung nguồn dữ liệu hiện có
 
-Đi đến tab **Dữ liệu tăng cường của tôi** để xem tất cả thông tin bổ sung đã đặt cấu hình.
+Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. Trên **Sự làm giàu của tôi**, xem các phần bổ sung đã định cấu hình, trạng thái của họ, số lượng khách hàng đã bổ sung và lần cuối cùng dữ liệu được làm mới. Bạn có thể sắp xếp danh sách bổ sung theo bất kỳ cột nào hoặc sử dụng hộp tìm kiếm để tìm kiếm bổ sung mà bạn muốn quản lý.
 
-Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng dọc (&vellip;) trên một mục danh sách để xem các tùy chọn. Nếu bạn đã đặt cấu hình một số phần tăng cường, bạn có thể sử dụng hộp tìm kiếm để tìm nhanh.
+Chọn phần tăng cường để xem các tùy chọn có sẵn. Bạn cũng có thể chọn dấu chấm lửng dọc (&vellip;) trên một mục danh sách để xem các tùy chọn.
 
-Bạn có thể xem, chỉnh sửa, chạy hoặc xóa phần bổ sung nguồn dữ liệu. Để biết thêm thông tin, hãy xem [Quản lý các nội dung phong phú hiện có](enrichment-hub.md).
+Bạn có thể xem, chỉnh sửa, chạy hoặc xóa phần bổ sung nguồn dữ liệu. Để biết thêm thông tin, hãy xem [Quản lý các nội dung phong phú hiện có](enrichment-hub.md#manage-existing-enrichments).

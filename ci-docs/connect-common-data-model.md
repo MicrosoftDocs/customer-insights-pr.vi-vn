@@ -1,7 +1,7 @@
 ---
 title: Kết nối với thư mục Common Data Model sử dụng tài khoản Azure Data Lake
 description: Làm việc với dữ liệu Common Data Model bằng cách sử dụng Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082272"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207025"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Kết nối với dữ liệu trong Azure Data Lake Storage
 
@@ -35,7 +35,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
 - Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm Tin cậy của Microsoft](https://www.microsoft.com/trust-center).
 
-- Nhân viên chính của dịch vụ Thông tin chi tiết về khách hàng phải đảm nhiệm một trong các vai trò sau đây để truy cập vào tài khoản lưu trữ. Để biết thêm thông tin, hãy xem [Cấp quyền cho người quản lý dịch vụ để truy cập vào tài khoản lưu trữ](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+- Nhân viên chính của dịch vụ Customer Insights phải có một trong các vai trò sau để truy cập vào tài khoản lưu trữ. Để biết thêm thông tin, hãy xem [Cấp quyền cho người quản lý dịch vụ để truy cập vào tài khoản lưu trữ](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Bộ đọc dữ liệu khối lưu trữ
   - Chủ sở hữu dữ liệu khối lưu trữ
   - Người đóng góp dữ liệu khối lưu trữ
@@ -65,13 +65,13 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
    >  - Storage Blob Data Reader đủ để đọc từ tài khoản lưu trữ và nhập dữ liệu vào Thông tin chi tiết về khách hàng. 
    >  - Người đóng góp hoặc chủ sở hữu dữ liệu Storage Blob là bắt buộc nếu bạn muốn chỉnh sửa tệp kê khai trực tiếp trong Thông tin chi tiết về khách hàng.  
   
-1. Chọn tên của **Thùng đựng hàng** chứa dữ liệu và giản đồ (tệp model.json hoặc tệp kê khai.json) để nhập dữ liệu từ đó và chọn **Tiếp theo**.
+1. Chọn tên của **Thùng đựng hàng** chứa dữ liệu và giản đồ (tệp model.json hoặc tệp manifest.json) để nhập dữ liệu từ đó và chọn **Tiếp theo**.
    > [!NOTE]
    > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách. Tuy nhiên, cùng một tệp model.json hoặc manifest.json có thể được sử dụng cho các nguồn dữ liệu trong nhiều môi trường.
 
 1. Để tạo một giản đồ mới, hãy chuyển đến [Tạo một tệp giản đồ mới](#create-a-new-schema-file).
 
-1. Để sử dụng một lược đồ hiện có, hãy điều hướng đến thư mục chứa tệp model.json hoặc tệp manifest.cdm.json. Bạn có thể tìm kiếm trong một thư mục để tìm tệp.
+1. Để sử dụng lược đồ hiện có, hãy điều hướng đến thư mục chứa tệp model.json hoặc tệp manifest.cdm.json. Bạn có thể tìm kiếm trong một thư mục để tìm tệp.
 
 1. Chọn tệp json và chọn **Tiếp theo**. Một danh sách các thực thể có sẵn sẽ hiển thị.
 
@@ -82,11 +82,11 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
    :::image type="content" source="media/ADLS_required.png" alt-text="Hộp thoại hiển thị Bắt buộc đối với Khóa chính":::
 
    > [!TIP]
-   > Để chỉnh sửa các thực thể trong giao diện chỉnh sửa JSON, hãy chọn **Cho xem nhiều hơn** > **Chỉnh sửa tệp giản đồ**. Thực hiện các thay đổi và chọn **Tiết kiệm**.
+   > Để chỉnh sửa một đối tượng trong giao diện chỉnh sửa JSON, hãy chọn đối tượng và sau đó **Chỉnh sửa tệp giản đồ**. Thực hiện các thay đổi và chọn **Tiết kiệm**.
 
 1. Đối với các thực thể đã chọn yêu cầu nhập tăng dần, **Yêu cầu** hiển thị dưới **Làm mới gia tăng**. Đối với từng thực thể này, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md).
 
-1. Đối với các thực thể đã chọn mà khóa chính chưa được xác định, **Yêu cầu** hiển thị dưới **Khóa chính**. Đối với mỗi thực thể này:
+1. Đối với các thực thể đã chọn mà khóa chính chưa được xác định, **Yêu cầu** hiển thị dưới **Khóa chính**. Đối với mỗi thực thể sau:
    1. Lựa chọn **Yêu cầu**. Các **Chỉnh sửa thực thể** bảng điều khiển hiển thị.
    1. Chọn **Khóa chính**. Khóa chính là một thuộc tính duy nhất của thực thể. Để một thuộc tính là khóa chính hợp lệ, thuộc tính đó không được bao gồm các giá trị trùng lặp, giá trị bị thiếu hoặc giá trị rỗng. Các thuộc tính kiểu dữ liệu chuỗi, số nguyên và GUID được hỗ trợ làm khóa chính.
    1. Theo tùy chọn, thay đổi mẫu phân vùng.
@@ -96,11 +96,15 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
    :::image type="content" source="media/dataprofiling-entities.png" alt-text="Hộp thoại để chọn cấu hình dữ liệu.":::
 
-   1. Tạo các thuộc tính mới, chỉnh sửa hoặc xóa các thuộc tính hiện có. Bạn có thể thay đổi tên, định dạng dữ liệu hoặc thêm một loại ngữ nghĩa.
+   1. Tạo các thuộc tính mới, chỉnh sửa hoặc xóa các thuộc tính hiện có. Bạn có thể thay đổi tên, định dạng dữ liệu hoặc thêm một kiểu ngữ nghĩa.
    1. Để bật phân tích và các khả năng khác, hãy chọn **Lập hồ sơ dữ liệu** cho toàn bộ thực thể hoặc cho các thuộc tính cụ thể. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
    1. Chọn **Xong**.
 
 1. Chọn **Lưu.** Các **Nguồn dữ liệu** trang mở ra hiển thị nguồn dữ liệu mới trong **Làm mới** trạng thái.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Quá trình tải dữ liệu có thể mất một khoảng thời gian. Sau khi làm mới thành công, dữ liệu đã nhập có thể được xem xét từ [**Thực thể**](entities.md) trang.
 
 ### <a name="create-a-new-schema-file"></a>Tạo một tệp giản đồ mới
 
@@ -130,7 +134,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
       :::image type="content" source="media/dataprofiling-entities.png" alt-text="Hộp thoại để chọn cấu hình dữ liệu.":::
 
-   1. Chọn **Xong**. Các **Chọn các thực thể** hiển thị trang.
+   1. Chọn **Xong**. Các **Chọn thực thể** hiển thị trang.
 
 1. Tiếp tục thêm các thực thể và thuộc tính, nếu có.
 
@@ -140,7 +144,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
 1. Đối với các thực thể đã chọn yêu cầu nhập tăng dần, **Yêu cầu** hiển thị dưới **Làm mới gia tăng**. Đối với từng thực thể này, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md).
 
-1. Đối với các thực thể đã chọn mà khóa chính chưa được xác định, **Yêu cầu** hiển thị dưới **Khóa chính**. Đối với mỗi thực thể này:
+1. Đối với các thực thể đã chọn mà khóa chính chưa được xác định, **Yêu cầu** hiển thị dưới **Khóa chính**. Đối với mỗi thực thể sau:
    1. Lựa chọn **Yêu cầu**. Các **Chỉnh sửa thực thể** bảng điều khiển hiển thị.
    1. Chọn **Khóa chính**. Khóa chính là một thuộc tính duy nhất của thực thể. Để một thuộc tính là khóa chính hợp lệ, thuộc tính đó không được bao gồm các giá trị trùng lặp, giá trị bị thiếu hoặc giá trị rỗng. Các thuộc tính kiểu dữ liệu chuỗi, số nguyên và GUID được hỗ trợ làm khóa chính.
    1. Theo tùy chọn, thay đổi mẫu phân vùng.
@@ -148,6 +152,9 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
 1. Chọn **Lưu.** Các **Nguồn dữ liệu** trang mở ra hiển thị nguồn dữ liệu mới trong **Làm mới** trạng thái.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Quá trình tải dữ liệu có thể mất một khoảng thời gian. Sau khi làm mới thành công, dữ liệu đã nhập có thể được xem xét từ [**Thực thể**](entities.md) trang.
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Chỉnh sửa một Azure Data Lake Storage nguồn dữ liệu
 
@@ -179,8 +186,16 @@ Bạn có thể cập nhật *Kết nối với tài khoản lưu trữ bằng* 
       > [!IMPORTANT]
       > Nếu có các phần phụ thuộc vào tệp model.json hoặc tệp manifest.json hiện có và tập hợp các thực thể, bạn sẽ thấy thông báo lỗi và không thể chọn tệp model.json hoặc tệp manifest.json khác. Hãy xóa các phần phụ thuộc đó trước khi thay đổi tệp model.json hoặc tệp manifest.json hoặc tạo một nguồn dữ liệu mới với tệp model.json hoặc tệp manifest.json mà bạn muốn sử dụng để tránh xóa các phần phụ thuộc.
    - Để thay đổi vị trí tệp dữ liệu hoặc khóa chính, hãy chọn **Chỉnh sửa**.
-   - Để thay đổi dữ liệu nhập gia tăng, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md)
+   - Để thay đổi dữ liệu nhập gia tăng, hãy xem [Định cấu hình làm mới gia tăng cho các nguồn dữ liệu Azure Data Lake](incremental-refresh-data-sources.md).
+   - Chỉ thay đổi tên thực thể để khớp với tên thực thể trong tệp .json.
+
+     > [!NOTE]
+     > Luôn giữ tên thực thể trong Thông tin chi tiết về khách hàng giống với tên thực thể bên trong tệp model.json hoặc tệp manifest.json sau khi nhập. Thông tin chi tiết về khách hàng xác thực tất cả các tên thực thể bằng model.json hoặc manifest.json trong mỗi lần làm mới hệ thống. Nếu tên thực thể được thay đổi bên trong Thông tin chi tiết về khách hàng hoặc bên ngoài, thì sẽ xảy ra lỗi vì Thông tin chi tiết về khách hàng không thể tìm thấy tên thực thể mới trong tệp .json. Nếu tên thực thể đã nhập vô tình bị thay đổi, hãy chỉnh sửa tên thực thể trong Thông tin chi tiết về khách hàng để khớp với tên trong tệp .json.
 
 1. Lựa chọn **Thuộc tính** để thêm hoặc thay đổi các thuộc tính hoặc để kích hoạt cấu hình dữ liệu. Sau đó, chọn **Hoàn tất**.
 
 1. Nhấp chuột **Tiết kiệm** để áp dụng các thay đổi của bạn và quay lại **Nguồn dữ liệu** trang.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

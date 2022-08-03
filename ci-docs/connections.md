@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082104"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195200"
 ---
 # <a name="connections-preview-overview"></a>Tổng quan về kết nối (bản xem trước)
 
@@ -27,6 +27,12 @@ Kết nối là chìa khóa để cho phép chia sẻ dữ liệu với và từ
 Tab **Kết nối** hiển thị cho bạn tất cả các kết nối hiện hoạt. Danh sách hiển thị một hàng cho mỗi kết nối.
 
 Xem tổng quan nhanh, nội dung mô tả và tìm hiểu những gì bạn có thể làm với từng tùy chọn khả năng mở rộng trên tab **Khám phá**.
+
+## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
+
+Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu cho bên thứ ba hoặc các sản phẩm khác của Microsoft, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo hướng dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng bên thứ ba đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Của bạn Dynamics 365 Customer Insights quản trị viên có thể xóa kết nối bất kỳ lúc nào để ngừng sử dụng chức năng.
 
 ## <a name="exports"></a>Nội dung xuất
 
@@ -41,8 +47,6 @@ Chỉ quản trị viên là có thể đặt cấu hình các kết nối mới
 Để thêm kết nối, bạn cần có [quyền của quản trị viên](permissions.md). Nếu bạn kết nối với các dịch vụ khác của Microsoft, chúng tôi giả định rằng cả hai dịch vụ đều nằm trong cùng một tổ chức.
 
 1. Đi đến **Quản trị viên** > **Kết nối (bản xem trước)**.
-
-1. Đi đến tab **Kết nối**.
 
 1. Chọn **Thêm kết nối** để tạo kết nối mới. Chọn loại kết nối bạn muốn tạo từ menu thả xuống.
 
@@ -77,7 +81,7 @@ Khi thiết lập hoặc chỉnh sửa kết nối xuất, bạn hãy chọn ng�
 
 ## <a name="remove-a-connection"></a>Loại bỏ kết nối
 
-Nếu kết nối bạn đang xóa được sử dụng bởi tính năng bổ sung hoặc xuất khẩu, trước tiên bạn cần tách hoặc loại bỏ chúng. Hộp thoại loại bỏ sẽ hướng dẫn bạn chuyển đến các nội dung bổ sung hoặc nội dung xuất có liên quan.
+Nếu kết nối bạn đang xóa được sử dụng bởi tính năng bổ sung hoặc xuất khẩu, trước tiên bạn cần tách hoặc xóa chúng. Hộp thoại loại bỏ sẽ hướng dẫn bạn chuyển đến các nội dung bổ sung hoặc nội dung xuất có liên quan.
 
 Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang chế độ không hoạt động. Bạn hãy kích hoạt lại các nội dung bổ sung và nội dung xuất đã gỡ bỏ bằng cách thêm một kết nối khác vào chúng trên trang [Nội dung bổ sung](enrichment-hub.md) hoặc [Nội dung xuất](export-destinations.md).
 
@@ -99,3 +103,5 @@ Các nội dung bổ sung và nội dung xuất đã gỡ bỏ chuyển sang ch�
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Thiết lập kết nối với các bí mật do Key Vault của riêng bạn quản lý
 
 Một số kết nối cần bí mật như khóa API hoặc mật khẩu. Một số kết nối hỗ trợ bí mật được lưu trữ trong Key Vault của riêng bạn. Tìm hiểu thêm về các kết nối được hỗ trợ và cách thiết lập trên [Kho chìa khóa của riêng bạn cho Thông tin chi tiết về khách hàng](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

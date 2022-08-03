@@ -14,25 +14,23 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082419"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139729"
 ---
 # <a name="match-conditions-for-data-unification"></a>Khớp các điều kiện để hợp nhất dữ liệu
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
-
-Bước hợp nhất này xác định thứ tự đối sánh và các quy tắc để đối sánh nhiều thực thể. Bước này yêu cầu ít nhất hai thực thể.
+Bước hợp nhất này xác định thứ tự đối sánh và các quy tắc cho đối sánh thực thể chéo. Bước này yêu cầu ít nhất hai thực thể.
 
 > [!NOTE]
 > Sau khi bạn tạo điều kiện đối sánh và chọn **Tiếp theo**, bạn không thể xóa một thực thể hoặc thuộc tính đã chọn. Nếu cần, hãy chọn **Mặt sau** để xem xét các thực thể và thuộc tính đã chọn trước khi tiếp tục.
 
 ## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
 
-Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp** trang, bạn không cần phải chọn lại chúng.
+Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp**, bạn không cần phải chọn lại chúng.
 
 1. Trên **Điều kiện phù hợp** trang, chọn **Sử dụng các thực thể được bổ sung chi tiết** trên đầu của trang.
 
@@ -52,9 +50,9 @@ Mỗi quy tắc hợp nhất hai hoặc nhiều thực thể thành một thực
 > - Chọn pháp nhân có dữ liệu hồ sơ đầy đủ và đáng tin cậy nhất về khách hàng của bạn làm pháp nhân chính.
 > - Chọn đối tượng có một số thuộc tính chung với các đối tượng khác (ví dụ: tên, số điện thoại hoặc địa chỉ email) làm đối tượng chính.
 
-1. Trên **Điều kiện phù hợp**, sử dụng mũi tên di chuyển lên và xuống để di chuyển các thực thể theo thứ tự bạn muốn hoặc kéo và thả chúng. Ví dụ: chọn **Liên hệ: Thương mại điện tử** là thực thể chính và **CustomerLoyalty: Sự trung thành** như thực thể thứ hai.
+1. Trên **Điều kiện phù hợp**, sử dụng mũi tên di chuyển lên và xuống để di chuyển các thực thể theo thứ tự bạn muốn hoặc kéo và thả chúng. Ví dụ, chọn **Liên hệ: Thương mại điện tử** là thực thể chính và **CustomerLoyalty: Sự trung thành** như thực thể thứ hai.
 
-1. Để có mọi bản ghi trong thực thể dưới dạng khách hàng duy nhất bất kể có tìm thấy kết quả trùng khớp hay không, hãy chọn **Bao gồm tất cả các bản ghi**. Bất kỳ hồ sơ nào trong thực thể này không khớp với hồ sơ trong bất kỳ thực thể nào khác đều được đưa vào hồ sơ hợp nhất. Bản ghi không có khớp được gọi là đĩa đơn.
+1. Để có mọi bản ghi trong thực thể dưới dạng một khách hàng duy nhất bất kể có tìm thấy kết quả trùng khớp hay không, hãy chọn **Bao gồm tất cả các bản ghi**. Bất kỳ hồ sơ nào trong thực thể này không khớp với hồ sơ trong bất kỳ thực thể nào khác đều được đưa vào hồ sơ hợp nhất. Các bản ghi không có khớp được gọi là đĩa đơn.
   
 Thực thể chính *Liên hệ: Thương mại điện tử* được đối sánh với thực thể tiếp theo *CustomerLoyalty: Sự trung thành*. Tập dữ liệu là kết quả của bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
 
@@ -112,13 +110,13 @@ Các quy tắc so khớp đại diện cho các tập hợp các điều kiện.
 1. Làm theo các bước trong [Xác định quy tắc cho các cặp so khớp](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Thứ tự của các quy tắc quan trọng. Thuật toán đối sánh cố gắng đối sánh hồ sơ khách hàng nhất định trên cơ sở quy tắc đầu tiên của bạn và chỉ tiếp tục với quy tắc thứ hai nếu không có kết quả phù hợp nào được xác định với quy tắc đầu tiên.
+> Thứ tự của các quy tắc quan trọng. Thuật toán đối sánh cố gắng đối sánh một bản ghi khách hàng nhất định trên cơ sở quy tắc đầu tiên của bạn và chỉ tiếp tục với quy tắc thứ hai nếu không có kết quả phù hợp nào được xác định với quy tắc đầu tiên.
 
 ## <a name="advanced-options"></a>Tùy chọn nâng cao
 
 ### <a name="add-exceptions-to-a-rule"></a>Thêm ngoại lệ vào quy tắc
 
-Trong hầu hết các trường hợp, đối sánh pháp nhân dẫn đến hồ sơ khách hàng duy nhất với dữ liệu tổng hợp. Để giải quyết động các trường hợp hiếm hoi về dương tính giả và âm tính giả, bạn có thể xác định các ngoại lệ cho quy tắc đối sánh. Các ngoại lệ được áp dụng sau khi xử lý các quy tắc đối sánh và tránh đối sánh tất cả các bản ghi đáp ứng các tiêu chí ngoại lệ.
+Trong hầu hết các trường hợp, đối sánh pháp nhân dẫn đến hồ sơ khách hàng duy nhất với dữ liệu tổng hợp. Để giải quyết động các trường hợp hiếm hoi về dương tính giả và âm tính giả, bạn có thể xác định các ngoại lệ cho quy tắc đối sánh. Các ngoại lệ được áp dụng sau khi xử lý các quy tắc đối sánh và tránh trùng khớp của tất cả các bản ghi đáp ứng các tiêu chí ngoại lệ.
 
 Ví dụ: nếu quy tắc đối sánh của bạn kết hợp họ, thành phố và ngày sinh, hệ thống sẽ xác định các cặp song sinh có cùng họ sống trong cùng một thị trấn với cùng một hồ sơ. Bạn có thể chỉ định một ngoại lệ không khớp với các cấu hình nếu tên trong các thực thể bạn kết hợp không giống nhau.
 

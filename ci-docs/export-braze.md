@@ -1,19 +1,19 @@
 ---
 title: Xuất phân đoạn sang Braze (xem trước)
 description: Tìm hiểu cách định cấu hình kết nối và xuất sang Braze.
-ms.date: 06/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082692"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195133"
 ---
 # <a name="export-segments-to-braze-preview"></a>Xuất phân đoạn sang Braze (xem trước)
 
@@ -22,31 +22,32 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang Braze và sử
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Một [Braze tài khoản](https://www.braze.com/) và thông tin đăng nhập quản trị viên tương ứng.
-- Hiện có [phân đoạn trong Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- Một [Khóa API Braze](https://www.braze.com/docs/api/basics/)
 - [Các phân đoạn đã định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
 - Hồ sơ khách hàng hợp nhất trong các phân đoạn đã xuất chứa trường đại diện cho địa chỉ email và ID khách hàng Braze.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Xuất sang Braze bị giới hạn ở các phân đoạn.
-- Quá trình xuất lên đến 1 triệu hồ sơ khách hàng sang Braze có thể mất tới 40 phút để hoàn thành.
-- Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Braze phụ thuộc và bị giới hạn vào hợp đồng của bạn với Braze.
+- Lên 1 triệu hồ sơ khách hàng cho Braze, có thể mất tới 40 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Braze tùy thuộc vào hợp đồng của bạn với Braze.
+- Chỉ phân đoạn.
 
 ## <a name="set-up-connection-to-braze"></a>Thiết lập kết nối với Braze
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Đi đến **Quản trị viên** > **Kết nối**.
 
-1. Lựa chọn **Thêm kết nối** và lựa chọn **Braze** để cấu hình kết nối.
+1. Lựa chọn **Thêm kết nối** và lựa chọn **Phanh**.
 
 1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
 
-1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Chọn người có thể sử dụng kết nối này. Theo mặc định, giá trị này là quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Cung cấp của bạn [Khóa API Braze](https://www.braze.com/docs/api/basics/) để tiếp tục đăng nhập.
+1. Cung cấp khóa API Braze của bạn để tiếp tục đăng nhập.
 
-1. Chọn **Tôi đồng ý** để xác nhận **Quyền riêng tư về dữ liệu và sự tuân thủ**.
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
-1. Lựa chọn **Liên kết** để khởi tạo kết nối với Braze.
+1. Lựa chọn **Liên kết** để khởi tạo kết nối.
 
 1. Chọn **Thêm chính bạn là người dùng xuất** và cung cấp thông tin xác thực Customer Insights.
 
@@ -54,29 +55,22 @@ Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang Braze và sử
 
 ## <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
-1. Để tạo một nội dung xuất mới, hãy chọn **Thêm đích**.
+1. Lựa chọn **Thêm xuất khẩu**.
 
-1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ phần Braze. Nếu bạn không thấy phần này, thì không có kết nối nào thuộc loại này dành cho bạn.  
+1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ phần Braze. Liên hệ với quản trị viên nếu không có kết nối.
 
-1. Thêm một **Tên hiển thị** để xuất khẩu của bạn.
+1. Nhập tên cho lần xuất.
 
-1. Thêm mã định danh API của phân đoạn Braze mà bạn muốn xuất sang **Mã định danh API phân đoạn Braze** đồng ruộng. Bạn có thể tìm thấy số nhận dạng trong chi tiết phân đoạn trên nền tảng Braze.
+1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bên trong **ID khách hàng**, chọn trường đại diện cho Braze ID của khách hàng. Các phân đoạn trong Braze sẽ được tạo với cùng tên của phân đoạn như trong Dynamics 365 Customer Insights. Bạn có thể chọn thêm, các trường tùy chọn để khớp dữ liệu.
 
-1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng. Bên trong **ID khách hàng**, hãy chọn trường đại diện cho Braze ID của khách hàng. Bắt buộc phải xuất các phân đoạn sang Braze. Bạn có thể chọn thêm các trường tùy ý.
+1. Chọn các thực thể hoặc phân đoạn bạn muốn xuất.
 
 1. Chọn **Lưu.**
 
-Việc lưu một nội dung xuất sẽ không chạy nội dung xuất đó ngay lập tức.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Nội dung xuất chạy trong mỗi lần [làm mới theo lịch trình](system.md#schedule-tab). Bạn cũng có thể [xuất dữ liệu theo yêu cầu](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
-
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Braze, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Braze đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa đích xuất này bất cứ lúc nào để ngừng việc sử dụng chức năng này.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

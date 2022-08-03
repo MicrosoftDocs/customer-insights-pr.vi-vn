@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083175"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121588"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Ví dụ về truy vấn OData cho API thông tin chi tiết về khách hàng
 
@@ -23,7 +23,7 @@ Bài viết này liệt kê một số truy vấn mẫu được yêu cầu thư
 
 Bạn phải sửa đổi các mẫu truy vấn để làm cho chúng hoạt động trên các môi trường đích: 
 
-- {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` ở đâu{instanceId} là HƯỚNG DẪN của môi trường Thông tin chi tiết về khách hàng mà bạn muốn truy vấn. Các [Hoạt động ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) cho phép bạn tìm thấy{InstanceId} bạn có quyền truy cập vào.
+- {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` ở đâu{instanceId} là HƯỚNG DẪN của môi trường Thông tin chi tiết về khách hàng mà bạn muốn truy vấn. Các [Hoạt động ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) cho phép bạn tìm thấy{InstanceId} bạn có quyền truy cập vào.
 - {CID}: HƯỚNG DẪN của một hồ sơ khách hàng thống nhất. Ví dụ: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Định danh của khóa chính của hồ sơ khách hàng trong nguồn dữ liệu. Ví dụ: `CNTID_1002`
 - {DSname}: Chuỗi với tên thực thể của nguồn dữ liệu được nhập vào Thông tin chi tiết về khách hàng. Ví dụ: `Website_contacts`.
@@ -31,7 +31,7 @@ Bạn phải sửa đổi các mẫu truy vấn để làm cho chúng hoạt đ�
 
 ## <a name="customer"></a>Quý khách hàng
 
-Bảng sau đây chứa một tập hợp các truy vấn mẫu cho *khách hàng* thực thể.
+Bảng sau chứa một tập hợp các truy vấn mẫu cho *khách hàng* thực thể.
 
 |Loại truy vấn |Ví dụ:  | Lưu ý  |
 |---------|---------|---------|
@@ -39,13 +39,14 @@ Bảng sau đây chứa một tập hợp các truy vấn mẫu cho *khách hàn
 |Khóa thay thế    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Các khóa thay thế vẫn tồn tại trong thực thể khách hàng hợp nhất       |
 |Chọn   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Vào    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Khóa thay thế + Trong   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Khóa thay thế + Trong   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Tìm kiếm  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Trả về 10 kết quả hàng đầu cho một chuỗi tìm kiếm      |
-|Thành viên phân khúc  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Trả về số hàng đặt trước từ thực thể phân đoạn.      |
+|Thành viên phân khúc  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Trả về một số hàng đặt trước từ thực thể phân đoạn.      |
+|Tư cách thành viên phân khúc cho một khách hàng | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Trả về hồ sơ khách hàng nếu họ là thành viên của phân khúc nhất định     |
 
 ## <a name="unified-activity"></a>Hoạt động hợp nhất
 
-Bảng sau đây chứa một tập hợp các truy vấn mẫu cho *UnifiedActivity* thực thể.
+Bảng sau chứa một tập hợp các truy vấn mẫu cho *UnifiedActivity* thực thể.
 
 |Loại truy vấn |Ví dụ:  | Lưu ý  |
 |---------|---------|---------|
@@ -74,5 +75,5 @@ Các truy vấn sau không được Customer Insights hỗ trợ:
 - `$filter` trên các thực thể nguồn được nhập. Bạn chỉ có thể chạy các truy vấn $ filter trên các thực thể hệ thống mà Customer Insights tạo.
 - `$expand` từ một`$search` truy vấn. Ví dụ: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
 - `$expand` từ`$select` nếu chỉ một tập hợp con các thuộc tính được chọn. Ví dụ: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
-- `$expand` làm giàu thương hiệu hoặc sở thích cho một khách hàng nhất định. Ví dụ: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- `$expand` làm phong phú thêm thương hiệu hoặc mối quan tâm cho một khách hàng nhất định. Ví dụ: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
 - Truy vấn dự đoán các thực thể xuất mô hình thông qua khóa thay thế. Ví dụ: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

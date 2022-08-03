@@ -1,31 +1,31 @@
 ---
 title: Xuất phân đoạn Thông tin chi tiết về khách hàng sang Adobe Tiêu chuẩn Chiến dịch (xem trước)
 description: Tìm hiểu cách sử dụng phân đoạn Thông tin chi tiết về khách hàng trong Adobe Tiêu chuẩn Chiến dịch.
-ms.date: 03/29/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 834880cac9c5023157983081ff2513d9b051491f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082356"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195546"
 ---
 # <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Xuất phân đoạn Thông tin chi tiết về khách hàng sang Adobe Tiêu chuẩn Chiến dịch (xem trước)
 
-Với tư cách là người dùng của Dynamics 365 Customer Insights, bạn có thể đã tạo các phân đoạn để làm cho các chiến dịch tiếp thị của mình hiệu quả hơn bằng cách nhắm mục tiêu các đối tượng có liên quan. Để sử dụng một phân đoạn từ Thông tin chi tiết về khách hàng trong Adobe Experience Platform và các ứng dụng như Adobe Tiêu chuẩn Chiến dịch, bạn cần thực hiện theo một số bước được nêu trong bài viết này.
+Xuất các phân đoạn nhắm mục tiêu đến các đối tượng có liên quan sang Adobe Tiêu chuẩn Chiến dịch.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Sơ đồ quy trình các bước nêu trong bài viết này.":::
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Giấy phép Dynamics 365 Customer Insights
-- Giấy phép Adobe Campaign Standard
-- Tài khoản Azure Blob Storage
+- Một Adobe Giấy phép Chiến dịch Chuẩn.
+- Một [Tài khoản lưu trữ Azure Blob](/azure/storage/blobs/create-data-lake-storage-account) tên và khóa tài khoản. Để tìm tên và khóa, hãy xem [Quản lý cài đặt tài khoản lưu trữ trong cổng Azure](/azure/storage/common/storage-account-manage).
+- Một [Hộp chứa Azure Blob Storage](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 ## <a name="campaign-overview"></a>Tổng quan về chiến dịch
 
@@ -33,13 +33,13 @@ Với tư cách là người dùng của Dynamics 365 Customer Insights, bạn c
 
 Giả sử rằng công ty của bạn cung cấp dịch vụ dựa trên đăng ký hàng tháng cho khách hàng của bạn ở Hoa Kỳ. Bạn muốn xác định những khách hàng có đăng ký sẽ đến hạn gia hạn trong 8 ngày tới nhưng chưa gia hạn đăng ký của họ. Để giữ chân những khách hàng này, bạn cần gửi cho họ một ưu đãi khuyến mại qua email, sử dụng Adobe Campaign Standard.
 
-Trong ví dụ này, chúng tôi muốn chạy chiến dịch email quảng cáo một lần. Bài viết này không đề cập đến trường hợp sử dụng của việc chạy chiến dịch nhiều lần. Tuy nhiên, Thông tin chi tiết về khách hàng và Adobe Tiêu chuẩn Chiến dịch cũng có thể được định cấu hình để hoạt động cho một tình huống chiến dịch lặp lại.
+Trong ví dụ này, chúng tôi muốn chạy chiến dịch email quảng cáo một lần. Bài viết này không đề cập đến trường hợp sử dụng của việc chạy chiến dịch nhiều lần. Tuy nhiên, Thông tin chi tiết về khách hàng và Adobe Tiêu chuẩn chiến dịch cũng có thể được định cấu hình để hoạt động cho một kịch bản chiến dịch lặp lại.
 
 ## <a name="identify-your-target-audience"></a>Xác định đối tượng mục tiêu của bạn
 
-Trong kịch bản của chúng tôi, chúng tôi giả định rằng địa chỉ email của khách hàng có sẵn và các sở thích khuyến mại của họ đã được phân tích để xác định các thành viên của phân khúc.
+Trong kịch bản của chúng tôi, chúng tôi giả định rằng địa chỉ email của khách hàng có sẵn trong Thông tin chi tiết về khách hàng và các sở thích khuyến mại của họ đã được phân tích để xác định các thành viên của phân khúc.
 
-Các [phân đoạn bạn đã xác định trong Thông tin chi tiết về khách hàng](segments.md) được gọi là **ChurnProneCustomers** và bạn có kế hoạch gửi email quảng cáo cho những khách hàng này.
+Các [phân đoạn bạn đã xác định trong Thông tin chi tiết về khách hàng](segments.md) được gọi là **ChurnProneCustomers** và bạn dự định gửi cho những khách hàng này chương trình khuyến mãi qua email.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Ảnh chụp màn hình của trang phân khúc đã tạo phân khúc ChurnProneCustomers.":::
 
@@ -47,39 +47,37 @@ Email ưu đãi mà bạn muốn gửi sẽ chứa tên, họ, và ngày kết t
 
 ## <a name="export-your-target-audience"></a>Xuất đối tượng mục tiêu của bạn
 
-### <a name="configure-a-connection"></a>Định cấu hình kết nối
+### <a name="set-up-connection-to-adobe-campaign"></a>Thiết lập kết nối với Adobe Chiến dịch
 
-Với đối tượng mục tiêu của chúng tôi được xác định, chúng tôi có thể định cấu hình xuất sang tài khoản Azure Blob Storage.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
-1. Trong Thông tin chi tiết về khách hàng, hãy chuyển đến **Quản trị viên** > **Kết nối**.
+1. Đi đến **Quản trị viên** > **Kết nối**.
 
-1. Chọn **Thêm kết nối** và chọn **Adobe Campaign** để định cấu hình kết nối hoặc chọn **Thiết lập** trong ngăn xếp **Adobe Campaign**.
-
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Ngăn xếp cấu hình cho Adobe Campaign Standard.":::
+1. Lựa chọn **Thêm kết nối** và lựa chọn **Adobe Chiến dịch**.
 
 1. Đặt tên dễ nhận biết cho kết nối trong trường **Tên hiển thị**. Tên và loại kết nối mô tả kết nối này. Bạn nên chọn một tên giải thích mục đích và mục tiêu của kết nối.
 
-1. Chọn người có thể sử dụng kết nối này. Nếu bạn không thực hiện hành động nào, giá trị mặc định sẽ là Quản trị viên. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
+1. Chọn người có thể sử dụng kết nối này. Theo mặc định, giá trị này là quản trị viên. Để biết thêm thông tin, hãy xem [Cho phép người đóng góp sử dụng một kết nối cho các lần xuất](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Nhập **Tên tài khoản**, **Khóa tài khoản** và **Bộ chứa** của tài khoản Azure Blob Storage mà bạn muốn xuất phân khúc sang.  
-      
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Ảnh chụp màn hình cấu hình tài khoản lưu trữ. "::: 
+1. Nhập **Tên tài khoản**, **khóa tài khoản**, và **Thùng đựng hàng** cho tài khoản Blob Storage của bạn.  
 
-   - Để biết cách tìm tên tài khoản và khóa tài khoản Azure Blob Storage, hãy xem [Quản lý tùy chọn cài đặt của tài khoản lưu trữ trong cổng Azure](/azure/storage/common/storage-account-manage).
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Ảnh chụp màn hình cấu hình tài khoản lưu trữ. ":::
 
-   - Để tìm hiểu cách tạo vùng chứa, hãy xem [Tạo vùng chứa](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
 1. Chọn **Lưu** để hoàn thành kết nối.
 
 ### <a name="configure-an-export"></a>Định cấu hình xuất
 
-Bạn có thể định cấu hình lần xuất này nếu bạn có quyền truy cập vào kết nối thuộc loại này. Để biết thêm thông tin, hãy xem [Các quyền cần thiết để định cấu hình xuất](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
-1. Để tạo nội dung xuất mới, hãy chọn **Thêm nội dung xuất**.
+1. Lựa chọn **Thêm xuất khẩu**.
 
-1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Adobe Campaign. Nếu bạn không thấy tên phần này thì có nghĩa là không có kết nối nào thuộc loại này khả dụng cho bạn.
+1. Trong trường **Kết nối để xuất**, hãy chọn một kết nối từ phần Adobe Campaign. Liên hệ với quản trị viên nếu không có kết nối.
+
+1. Nhập tên cho lần xuất.
 
 1. Chọn phân khúc mà bạn muốn xuất. Trong ví dụ này, phân khúc đó là **ChurnProneCustomers**.
 
@@ -87,45 +85,39 @@ Bạn có thể định cấu hình lần xuất này nếu bạn có quyền tr
 
 1. Chọn **Tiếp theo**.
 
-1. Bây giờ chúng tôi lập bản đồ **Nguồn** từ phân đoạn Thông tin chi tiết về khách hàng đến **Mục tiêu** tên trường trong Adobe Lược đồ cấu hình Tiêu chuẩn của Chiến dịch.
+1. Lập bản đồ **Nguồn** từ phân đoạn Thông tin chi tiết về khách hàng đến **Mục tiêu** tên trường trong Adobe Lược đồ cấu hình Tiêu chuẩn của Chiến dịch.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Ánh xạ trường cho trình kết nối Adobe Campaign Standard.":::
 
-   Nếu bạn muốn thêm nhiều thuộc tính, hãy chọn **Thêm thuộc tính**. Tên mục tiêu có thể khác với tên trường nguồn để bạn vẫn có thể ánh xạ đầu ra của phân đoạn từ Thông tin chi tiết về khách hàng tới Adobe Tiêu chuẩn Chiến dịch nếu các trường không có cùng tên trong hai hệ thống.
+   Nếu bạn muốn thêm nhiều thuộc tính, hãy chọn **Thêm thuộc tính**. Tên mục tiêu có thể khác với tên trường nguồn để bạn vẫn có thể ánh xạ đầu ra của phân đoạn từ Thông tin chi tiết về khách hàng đến Adobe Tiêu chuẩn Chiến dịch nếu các trường không có cùng tên trong hai hệ thống.
 
    > [!NOTE]
    > Địa chỉ email được sử dụng làm trường nhận dạng, nhưng bạn có thể sử dụng bất kỳ số nhận dạng nào khác từ hồ sơ khách hàng để ánh xạ dữ liệu tới Adobe Tiêu chuẩn Chiến dịch.
 
 1. Chọn **Lưu.**
 
-Sau khi lưu đích xuất, bạn sẽ thấy đích này trên **Dữ liệu** > **Nội dung xuất**.
-
-Bây giờ, bạn có thể [xuất phân khúc theo yêu cầu](export-destinations.md#run-exports-on-demand). Mỗi lần [làm mới theo lịch](system.md), tác vụ xuất cũng sẽ chạy.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!NOTE]
 > Đảm bảo rằng số lượng bản ghi trong phân đoạn đã xuất nằm trong giới hạn cho phép của giấy phép Adobe Campaign Standard.
 
-Dữ liệu đã xuất được lưu trữ trong vùng chứa Azure Blob Storage mà bạn đã định cấu hình ở trên. Đường dẫn thư mục sau được tạo tự động trong vùng chứa của bạn:
-
-*%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
+Dữ liệu đã xuất được lưu trữ trong vùng chứa Azure Blob Storage mà bạn đã định cấu hình ở trên. Đường dẫn thư mục sau được tạo tự động trong vùng chứa của bạn: *%ContainerName% /Thấu hiểu khách hàng_%instanceID% /% exportdestination-name%_%segmentname%_%timestamp% .csv*
 
 Ví dụ: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo_ChurnProneCustomers_1613059542.csv
 
 ## <a name="configure-adobe-campaign-standard"></a>Định cấu hình Adobe Campaign Standard
 
-Các phân đoạn đã xuất chứa các cột bạn đã chọn trong khi xác định đích xuất ở bước trước. Dữ liệu này có thể được sử dụng để [tạo hồ sơ trong Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
+Các phân đoạn đã xuất chứa các cột bạn đã chọn trong khi định cấu hình xuất. Dữ liệu này có thể được sử dụng để [tạo hồ sơ trong Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Để sử dụng phân đoạn trong Adobe Campaign Standard, chúng tôi cần mở rộng sơ đồ hồ sơ trong Adobe Campaign Standard để bao gồm hai trường bổ sung. Tìm hiểu cách [mở rộng tài nguyên hồ sơ](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) với các trường mới trong Adobe Campaign Standard.
+Để sử dụng phân đoạn trong Adobe Tiêu chuẩn Chiến dịch, [mở rộng lược đồ hồ sơ](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) Trong Adobe Tiêu chuẩn Chiến dịch để bao gồm hai trường bổ sung.
 
-Trong ví dụ của chúng tôi, các trường này là *Tên phân khúc và Ngày phân khúc (tùy chọn)*.
+Trong ví dụ của chúng tôi, các trường này là Tên phân đoạn và Ngày phân đoạn. Chúng tôi sẽ sử dụng những trường này để xác định các hồ sơ trong Adobe Campaign Standard mà chúng tôi muốn nhắm mục tiêu cho chiến dịch này.
 
-Chúng tôi sẽ sử dụng những trường này để xác định các hồ sơ trong Adobe Campaign Standard mà chúng tôi muốn nhắm mục tiêu cho chiến dịch này.
-
-Nếu không có hồ sơ nào khác trong Adobe Campaign Standard, ngoài những gì bạn sẽ nhập, bạn có thể bỏ qua bước này.
+Nếu không có hồ sơ nào khác trong Adobe Chiến dịch Chuẩn, ngoài những gì bạn sẽ nhập, hãy bỏ qua bước này.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Nhập dữ liệu vào Adobe Campaign Standard
 
-Bây giờ mọi thứ đã sẵn sàng, chúng tôi cần nhập dữ liệu đối tượng đã chuẩn bị từ Thông tin chi tiết về khách hàng vào Adobe Tiêu chuẩn Chiến dịch để tạo cấu hình. Tìm hiểu [cách nhập hồ sơ trong Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) sử dụng một quy trình làm việc.
+Nhập dữ liệu đối tượng đã chuẩn bị từ Thông tin chi tiết về khách hàng vào Adobe Tiêu chuẩn Chiến dịch để [tạo hồ sơ bằng quy trình làm việc](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences).
 
 Quy trình nhập trong hình ảnh bên dưới đã được định cấu hình để chạy tám giờ một lần và tìm kiếm các phân đoạn Thông tin chi tiết về khách hàng đã xuất (tệp .csv trong Azure Blob Storage). Quy trình này trích xuất nội dung tệp .csv theo thứ tự cột được chỉ định. Quy trình làm việc này đã được xây dựng để thực hiện xử lý lỗi cơ bản và đảm bảo rằng mỗi hồ sơ có một địa chỉ email trước khi cung cấp dữ liệu trong Adobe Campaign Standard. Quy trình này cũng trích xuất tên phân đoạn từ tên tệp trước khi bổ sung vào dữ liệu hồ sơ Adobe Campaign Standard.
 
@@ -133,10 +125,12 @@ Quy trình nhập trong hình ảnh bên dưới đã được định cấu hì
 
 ## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Thu hút đối tượng trong Adobe Campaign Standard
 
-Sau khi dữ liệu được nhập vào Adobe Campaign Standard, bạn [có thể tạo một quy trình làm việc](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) và [truy vấn](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) khách hàng dựa trên *Tên phân đoạn* và *Ngày phân đoạn* để chọn hồ sơ được xác định cho chiến dịch mẫu của chúng tôi.
+Sau khi dữ liệu được nhập vào Adobe Tiêu chuẩn Chiến dịch, [tạo quy trình làm việc](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) và [truy vấn](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) khách hàng dựa trên Tên phân đoạn và Ngày phân đoạn để chọn các cấu hình đã được xác định cho chiến dịch mẫu của chúng tôi.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Tạo và gửi email bằng Adobe Campaign Standard
 
 Tạo nội dung email rồi [thử nghiệm và gửi](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) email của bạn.
 
 :::image type="content" source="media/contoso-sample-email.jpg" alt-text="Email mẫu với ưu đãi gia hạn từ Adobe Campaign Standard.":::
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

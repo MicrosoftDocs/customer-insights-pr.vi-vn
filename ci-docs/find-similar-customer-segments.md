@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054838"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170753"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Tìm khách hàng tương tự bằng AI (xem trước)
 
-Tính năng này cho phép bạn tìm thấy những khách hàng tương tự trong cơ sở khách hàng của mình bằng cách sử dụng trí tuệ nhân tạo. Bạn cần phải có ít nhất một phân khúc được tạo để sử dụng tính năng này. Mở rộng các tiêu chí của một phân đoạn hiện có sẽ giúp tìm kiếm các khách hàng tương tự với phân khúc đó.
+Tìm khách hàng tương tự trong cơ sở khách hàng của bạn bằng trí tuệ nhân tạo. Bạn cần tạo ít nhất một phân đoạn để sử dụng tính năng này. Mở rộng tiêu chí của một phân khúc hiện tại giúp tìm kiếm những khách hàng tương tự với phân khúc đó.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Tìm khách hàng tương tự* sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó và do đó có khả năng được sử dụng làm phương pháp lập hồ sơ, theo định nghĩa về thuật ngữ đó trong Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
+> *Tìm khách hàng tương tự* sử dụng các phương tiện tự động để đánh giá dữ liệu và đưa ra dự đoán dựa trên dữ liệu đó. Do đó, nó có khả năng được sử dụng như một phương pháp lập hồ sơ, vì thuật ngữ đó được xác định bởi Quy định chung về bảo vệ dữ liệu ("GDPR"). Việc khách hàng sử dụng tính năng này để xử lý dữ liệu phải tuân theo GDPR hoặc các luật/quy định khác. Bạn có trách nhiệm đảm bảo rằng việc sử dụng Dynamics 365 Customer Insights, bao gồm các dự đoán, tuân thủ tất cả các luật và quy định hiện hành, bao gồm các luật liên quan đến quyền riêng tư, dữ liệu cá nhân, dữ liệu sinh trắc học, bảo vệ dữ liệu và bảo mật thông tin liên lạc.
 
-## <a name="finding-similar-customers"></a>Tìm khách hàng tương tự
+## <a name="find-similar-customers"></a>Tìm khách hàng tương tự
 
 1. Đi đến **Phân đoạn** và chọn phân đoạn bạn muốn làm cơ sở cho phân đoạn mới của mình. Đó là *phân khúc nguồn* của bạn.
 
-1. Trên thanh hành động, chọn **Tìm khách hàng tương tự**.
+1. Lựa chọn **Tìm những khách hàng tương tự**.
 
 1. Xem lại tên được gợi ý cho phân khúc mới của bạn và đổi tên nếu cần.
 
 1. Tùy chọn, thêm [thẻ](work-with-tags-columns.md#manage-tags) sang phân khúc mới.
 
-1. Xem lại các trường xác định phân khúc mới của bạn. Các trường này xác định cơ sở mà hệ thống sẽ cố gắng tìm khách hàng tương tự với phân khúc nguồn của bạn. Hệ thống sẽ chọn các trường được đề xuất theo mặc định.
+1. Xem lại các trường xác định phân khúc mới của bạn. Các trường này xác định cơ sở mà hệ thống sẽ cố gắng tìm khách hàng tương tự với phân khúc nguồn của bạn. Hệ thống chọn các trường được đề xuất theo mặc định. Nếu cần, hãy thêm các trường khác.
   Các trường có thể làm giảm đáng kể hiệu suất mô hình sẽ tự động bị loại trừ:
   
    - Các trường có các kiểu dữ liệu sau: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Các trường có lượng số (số thành phần trong một trường) ít hơn 2 hoặc nhiều hơn 30
 
-1. Chọn xem bạn muốn thêm **Tất cả khách hàng** hay chỉ khách hàng trong **Phân khúc cụ thể hiện có** vào phân khúc mới của mình.
+1. Chọn nếu bạn muốn bao gồm **Tất cả khách hàng** ngoại trừ phân khúc nguồn hoặc chỉ những khách hàng trong **phân khúc khác nhau** trong phân khúc mới của bạn.
 
 1. Theo mặc định, hệ thống gợi ý chỉ nên bao gồm 20% kích thước đối tượng mục tiêu trong đầu ra của bạn. Chỉnh sửa ngưỡng này nếu cần. Tăng ngưỡng sẽ làm giảm độ chính xác.
 
 1. Bao gồm khách hàng trong phân khúc nguồn của bạn bằng cách chọn **Bao gồm các thành viên từ phân khúc nguồn ngoài những khách hàng có các thuộc tính tương tự** hộp kiểm.
 
-1. Lựa chọn **Chạy** ở dưới cùng của trang để bắt đầu nhiệm vụ phân loại nhị phân (một phương thức máy học) để phân tích tập dữ liệu.
+1. Lựa chọn **Chạy** ở cuối trang để bắt đầu [nhiệm vụ phân loại nhị phân](#about-similarity-scores) (một phương pháp của máy học) phân tích tập dữ liệu.
 
 ## <a name="view-the-similar-segment"></a>Xem phân khúc tương tự
 
-Sau khi xử lý phân khúc tương tự, bạn sẽ tìm thấy phân khúc mới được liệt kê trên trang **Phân khúc**.
+Sau khi xử lý phân đoạn tương tự, bạn sẽ tìm thấy phân đoạn mới được liệt kê trên **Phân đoạn** trang có loại **Sự bành trướng**.
 
-> [!div class="mx-imgBorder"]
-> ![Phân khúc khách hàng tương tự.](media/expanded-segment.png "Phân khúc khách hàng tương tự")
+Lựa chọn **Lượt xem** để xem phân phối kết quả trên [điểm tương tự](#about-similarity-scores) và các giá trị điểm tương tự dưới **Xem trước thành viên phân khúc**.
 
-Chọn **Xem** trên thành hành động để mở chi tiết phân khúc. Dạng xem này chứa thông tin về phân phối kết quả trên [điểm tương đồng](#about-similarity-scores). Bạn cũng sẽ tìm thấy các giá trị điểm tương đồng trong **Xem trước thành phần phân khúc**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Phân khúc khách hàng tương tự.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Sử dụng đầu ra của phân khúc tương tự
+## <a name="manage-a-similar-segment"></a>Quản lý một phân đoạn tương tự
 
-Bạn có thể [làm việc với đầu ra của phân khúc tương tự](segments.md) như với các phân khúc khác. Ví dụ: xuất phân khúc hoặc xây dựng một giá trị đo.
+[Làm việc với và quản lý một phân đoạn tương tự](segments.md#manage-existing-segments) như bạn làm với các phân đoạn khác. Ví dụ: xuất phân khúc hoặc xây dựng một giá trị đo.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Làm mới và chỉnh sửa phân khúc tương tự
-
-Để làm mới phân khúc tương tự, hãy chọn phân khúc đó trên trang **Phân khúc** rồi chọn **Làm mới** trên thanh hành động.
-
-Thao tác chỉnh sửa phân khúc tương tự sẽ xử lý lại dữ liệu của bạn. Phân khúc đã tạo trước đó được cập nhật dữ liệu làm mới.
-Để chỉnh sửa phân khúc tương tự, hãy chọn phân khúc đó trên trang **Phân khúc** rồi chọn **Chỉnh sửa** trên thanh hành động. Áp dụng thay đổi của bạn và chọn **Chạy** để bắt đầu xử lý.
-
-## <a name="delete-a-similar-segment"></a>Xóa phân khúc tương tự
-
-Chọn phân khúc trên trang **Phân khúc** rồi chọn **Xóa** trên thanh hành động. Sau đó, xác nhận xóa.
+Chỉnh sửa, làm mới, đổi tên, tải xuống và xóa một phân đoạn tương tự. Việc chỉnh sửa một phân đoạn tương tự sẽ xử lý lại dữ liệu của bạn. Phân khúc đã tạo trước đó được cập nhật dữ liệu làm mới.
 
 ## <a name="about-similarity-scores"></a>Giới thiệu về điểm tương đồng
 

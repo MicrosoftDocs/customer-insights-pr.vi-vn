@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Danh mục học tập
   items:
-    - name: Chứng nhận là Chuyên gia Nền tảng Dữ liệu Khách hàng của Microsoft
+    - name: Chứng nhận là Chuyên gia nền tảng dữ liệu khách hàng của Microsoft
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Bắt đầu với Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -98,28 +98,32 @@
       href: enrichment-enhanced-company-data.md
     - name: Nhận dạng với LiveRamp
       href: enrichment-liveramp.md
-    - name: Vị trí từ Bản đồ Azure
+    - name: Vị trí từ Azure Maps
       href: enrichment-azure-maps.md
     - name: Vị trí từ HERE Technologies
       href: enrichment-here.md
     - name: Nhập tùy chỉnh SFTP
       href: enrichment-SFTP-custom-import.md
-- name: Hồ sơ đã hợp nhất
+- name: Hồ sơ khách hàng và hoạt động
   items:
-    - name: Xem xét hồ sơ khách hàng hợp nhất
+    - name: Xem hồ sơ khách hàng
       href: customer-profiles.md
-    - name: Lọc hồ sơ khách hàng hợp nhất
+    - name: Quản lý chỉ mục tìm kiếm và lọc
       href: search-filter-index.md
     - name: Xác định các hoạt động của khách hàng
       href: activities.md
     - name: Sử dụng quản lý sự đồng ý
       href: consent-management.md
+    - name: Sử dụng dữ liệu web để cá nhân hóa
+      href: unknown-to-known.md
 - name: Phân khúc
   items:
     - name: Tổng quan về phân khúc
       href: segments.md
-    - name: Tạo phân khúc
+    - name: Tạo bằng trình tạo phân đoạn
       href: segment-builder.md
+    - name: Tạo với các phân đoạn nhanh
+      href: segment-quick.md
     - name: Các phân khúc được đề xuất dựa trên giá trị đo
       href: suggested-segments.md
     - name: Các phân khúc được đề xuất dựa trên hoạt động
@@ -132,9 +136,9 @@
   items:
     - name: Tổng quan về các biện pháp
       href: measures.md
-    - name: Tạo một thước đo mới
+    - name: Tạo bằng trình tạo thước đo
       href: measure-builder.md
-    - name: Sử dụng một mẫu đo lường
+    - name: Tạo với các mẫu
       href: measure-templates.md
 - name: Dự đoán
   items:
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Chiến dịch hiện hoạt
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Campaign Monitor
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks

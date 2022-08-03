@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012051"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207163"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Làm mới gia tăng cho Power Query và nguồn dữ liệu Azure Data Lake
 
-Bài viết này thảo luận về cách định cấu hình làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query hoặc Azure Data Lake.
-
-Làm mới gia tăng cho các nguồn dữ liệu cung cấp các lợi ích sau:
+Làm mới gia tăng cho các nguồn dữ liệu dựa trên Power Query hoặc Azure Data Lake cung cấp những ưu điểm sau:
 
 - **Làm mới nhanh hơn** - Chỉ dữ liệu đã thay đổi được làm mới. Ví dụ: bạn có thể chỉ làm mới năm ngày qua của bộ dữ liệu lịch sử.
 - **Tăng độ tin cậy** - Với các lần làm mới nhỏ hơn, bạn không cần duy trì kết nối với các hệ thống nguồn hay thay đổi trong thời gian dài, giảm nguy cơ xảy ra sự cố kết nối.
@@ -61,7 +59,7 @@ Thông tin chi tiết về khách hàng cho phép làm mới gia tăng các ngu�
 Thông tin chi tiết về khách hàng cho phép làm mới gia tăng các nguồn dữ liệu được kết nối với Azure Data Lake Storage. Để sử dụng tính năng nhập và làm mới gia tăng cho một thực thể, hãy định cấu hình thực thể đó khi thêm Azure Data Lake nguồn dữ liệu trở lên khi chỉnh sửa nguồn dữ liệu. Thư mục dữ liệu thực thể phải chứa các thư mục sau:
 
 - **FullData** : Thư mục chứa các tệp dữ liệu chứa các bản ghi ban đầu
-- **Dữ liệu tăng dần** : Thư mục với các thư mục phân cấp ngày / giờ trong **yyyy / mm / dd / hh** định dạng có chứa các bản cập nhật gia tăng. **hh** đại diện cho giờ UTC của các bản cập nhật và chứa **Uperts** và **Xóa** thư mục. **Uperts** chứa các tệp dữ liệu với các cập nhật cho các bản ghi hiện có hoặc các bản ghi mới. **Xóa** chứa các tệp dữ liệu với các bản ghi cần loại bỏ.
+- **Dữ liệu tăng dần** : Thư mục với các thư mục phân cấp ngày / giờ trong **yyyy / mm / dd / hh** định dạng có chứa các bản cập nhật gia tăng. **hh** đại diện cho giờ UTC của các bản cập nhật và chứa **Cảnh báo** và **Xóa** thư mục. **Cảnh báo** chứa các tệp dữ liệu với các cập nhật cho các bản ghi hiện có hoặc các bản ghi mới. **Xóa** chứa các tệp dữ liệu với các bản ghi cần loại bỏ.
 
 1. Khi thêm hoặc chỉnh sửa nguồn dữ liệu, hãy điều hướng đến **Thuộc tính** ngăn cho thực thể.
 
@@ -71,8 +69,9 @@ Thông tin chi tiết về khách hàng cho phép làm mới gia tăng các ngu�
 
    :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Định cấu hình các thực thể trong nguồn dữ liệu để làm mới gia tăng.":::
 
-   1. Duyệt đến thư mục gốc chứa tệp .csv hoặc .parquet để có dữ liệu đầy đủ, bổ sung dữ liệu gia tăng và xóa dữ liệu gia tăng.
+   1. Duyệt đến thư mục gốc có chứa các tệp .csv hoặc .parquet để có dữ liệu đầy đủ, bổ sung dữ liệu gia tăng và xóa dữ liệu gia tăng.
    1. Nhập phần mở rộng cho toàn bộ dữ liệu và cả hai tệp gia tăng (\. csv hoặc\. sàn gỗ).
+   1. Đối với tệp .csv, hãy chọn dấu phân cách cột và nếu bạn muốn hàng đầu tiên của tệp làm tiêu đề cột.
    1. Chọn **Lưu.**
 
 1. Vì **Cập nhật mới nhất**, chọn thuộc tính dấu thời gian ngày.

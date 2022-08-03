@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082566"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196052"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Làm phong phú hồ sơ công ty với Dun & Bradstreet (xem trước)
 
-Dun & Bradstreet cung cấp dữ liệu thương mại, số liệu phân tích và thông tin chi tiết cho các doanh nghiệp. Công ty này hỗ trợ hồ sơ khách hàng hợp nhất cho các công ty để tăng cường dữ liệu của họ. Sự phong phú bao gồm các thuộc tính như số DUNS, quy mô công ty, vị trí, ngành, v.v.
+Dun & Bradstreet cung cấp dữ liệu thương mại, phân tích và thông tin chi tiết cho các doanh nghiệp. Công ty này hỗ trợ hồ sơ khách hàng hợp nhất cho các công ty để tăng cường dữ liệu của họ. Sự phong phú bao gồm các thuộc tính như số DUNS, quy mô công ty, vị trí, ngành, v.v.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -63,7 +63,7 @@ Bạn phải là một [người quản lý](permissions.md#admin) trong Thông 
 
 ### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
 
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu đến Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
 
 ## <a name="supported-countries-or-regions"></a>Các quốc gia hoặc khu vực được hỗ trợ
@@ -76,11 +76,11 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia / khu vực sau: Canad
 
 1. Lựa chọn **Làm phong phú dữ liệu của tôi** trên **Dữ liệu công ty** cho ngói Dun & Bradstreet.
 
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Ảnh chụp màn hình lát gạch Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Ảnh chụp màn hình của ô Dun & Bradstreet.":::
 
 1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
 
-1. Chọn kết nối và xác nhận. Liên hệ với quản trị viên nếu không có sẵn.
+1. Chọn kết nối và xác nhận. Liên hệ với quản trị viên nếu không có kết nối.
 
 1. Chọn **Tiếp theo**.
 

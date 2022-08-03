@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947394"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146721"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Yêu cầu theo Quyền của chủ thể dữ liệu (DSR) phù hợp với GDPR
 
@@ -31,18 +31,22 @@ Chúng tôi cam kết giúp khách hàng của mình đáp ứng các yêu cầu
 
 Thông tin chi tiết về khách hàng cung cấp các trải nghiệm trong sản phẩm sau để xóa dữ liệu cá nhân cho một khách hàng hoặc người dùng cụ thể:
 
-- **Quản lý yêu cầu xóa đối với dữ liệu khách hàng**: Dữ liệu khách hàng trong Customer Insights được nhập từ các nguồn dữ liệu ban đầu bên ngoài Customer Insights. Tất cả yêu cầu xóa theo GDPR phải được thực hiện trong nguồn dữ liệu gốc.
+- **Quản lý yêu cầu xóa đối với dữ liệu khách hàng**: Dữ liệu khách hàng trong Customer Insights được nhập từ các nguồn dữ liệu ban đầu bên ngoài Customer Insights. Trước tiên, hãy thực hiện các yêu cầu xóa GDPR trong nguồn dữ liệu gốc.
 - **Quản lý yêu cầu xóa đối với dữ liệu người dùng Customer Insights**: Dữ liệu cho người dùng được tạo bởi Customer Insights. Tất cả yêu cầu xóa GDPR phải được thực hiện trong Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Quản lý yêu cầu xóa dữ liệu khách hàng
 
-Quản trị viên Customer Insights có thể làm theo các bước sau để xóa dữ liệu khách hàng đã bị xóa trong nguồn dữ liệu:
+Quản trị viên Customer Insights có thể làm theo các bước sau để xóa dữ liệu khách hàng đã bị xóa trong nguồn dữ liệu. Đảm bảo rằng yêu cầu xóa đã được thực hiện trong nguồn dữ liệu của bạn trước khi tiếp tục các bước được liệt kê bên dưới. 
 
 1. Đăng nhập vào Dynamics 365 Customer Insights.
-2. Đi đến **Dữ liệu** > **Nguồn dữ liệu**
-3. Đối với từng nguồn dữ liệu trong danh sách chứa dữ liệu khách hàng đã xóa:
+1. Đi đến **Dữ liệu** > **Nguồn dữ liệu**
+1. Đối với từng nguồn dữ liệu trong danh sách chứa dữ liệu khách hàng đã xóa:
    1. Chọn dấu chấm lửng dọc (&vellip;) và sau đó chọn **Làm mới**.
-   2. Kiểm tra trạng thái nguồn dữ liệu trong **Trạng thái**. Một dấu kiểm có nghĩa là làm mới đã thành công. Một tam giác cảnh báo có nghĩa là đã có vấn đề. Nếu hình tam giác cảnh báo được hiển thị, hãy liên hệ với D365CI@microsoft.com.
+   1. Kiểm tra trạng thái nguồn dữ liệu trong **Trạng thái**. Một dấu kiểm có nghĩa là làm mới đã thành công. Một tam giác cảnh báo có nghĩa là đã có vấn đề. Nếu hình tam giác cảnh báo được hiển thị, hãy liên hệ với D365CI@microsoft.com.
+1. Sau khi làm mới nguồn dữ liệu thành công, hãy chạy quá trình làm mới xuôi dòng. Đặc biệt, nếu bạn không lập lịch làm mới đầy đủ định kỳ Thông tin chi tiết về khách hàng. 
+
+> [!IMPORTANT]
+> Các phân đoạn tĩnh không được bao gồm trong quá trình làm mới toàn bộ hoặc chạy làm mới xuống dòng sau khi có yêu cầu xóa. Để đảm bảo rằng dữ liệu khách hàng cũng bị xóa khỏi các phân đoạn tĩnh, hãy tạo lại các phân đoạn tĩnh bằng dữ liệu nguồn được làm mới.
 
 > [!div class="mx-imgBorder"]
 > ![Xử lý yêu cầu xóa dữ liệu khách hàng theo GDPR.](media/gdpr-data-sources.png "Xử lý yêu cầu xóa dữ liệu khách hàng theo GDPR")
@@ -77,5 +81,10 @@ Quản trị viên đối tượng thuê có thể tuân theo các bước sau �
 1. Gửi email tới D365CI@microsoft.com cho biết địa chỉ email của người dùng trong yêu cầu. Nhóm Customer Insights sẽ gửi email đến địa chỉ email quản trị viên đối tượng thuê đã đăng ký, yêu cầu xác nhận để xuất dữ liệu.
 2. Hãy xác minh để xuất dữ liệu cho người dùng yêu cầu.
 3. Nhận dữ liệu được xuất thông qua địa chỉ email quản trị viên đối tượng thuê.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Xử lý xóa dữ liệu trong Dynamics 365 Customer Insights
+
+1. Dữ liệu sẽ bị xóa (phân vùng dữ liệu và ảnh chụp nhanh dữ liệu) nếu phân vùng dữ liệu và ảnh chụp nhanh dữ liệu không hoạt động trong hơn 30 ngày, có nghĩa là chúng đã được thay thế bằng phân vùng dữ liệu mới và ảnh chụp nhanh thông qua việc làm mới nguồn dữ liệu.
+2. Không phải tất cả dữ liệu và ảnh chụp nhanh đều bị xóa. Theo định nghĩa, phân vùng dữ liệu và ảnh chụp nhanh dữ liệu gần đây nhất đang hoạt động vì chúng được sử dụng trong Thông tin chi tiết về khách hàng. Đối với dữ liệu gần đây nhất, không quan trọng nếu các nguồn dữ liệu không được làm mới trong vòng 30 ngày qua.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

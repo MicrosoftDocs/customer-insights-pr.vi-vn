@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082377"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196236"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Làm phong phú hồ sơ công ty với Leadspace (xem trước)
 
@@ -54,7 +54,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
 
-1. Chọn kết nối. Liên hệ với quản trị viên nếu không có sẵn.
+1. Chọn kết nối. Liên hệ với quản trị viên nếu không có kết nối.
 
 1. Chọn **Tiếp theo**.
 
@@ -62,7 +62,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Ảnh chụp màn hình khi chọn tập dữ liệu khách hàng.":::
 
-1. Xác định loại trường nào từ cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ cấu hình hợp nhất của bạn để sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu công ty từ Leadspace. Trường **Tên công ty** là bắt buộc. Để có độ chính xác so khớp cao hơn, có thể thêm tối đa 2 trường khác, **Trang web công ty** và **Vị trí công ty**.
 

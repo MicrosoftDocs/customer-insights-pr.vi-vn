@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052077"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196282"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Làm phong phú hồ sơ khách hàng với Công nghệ HERE (xem trước)
 
@@ -54,13 +54,13 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
 
-1. Chọn kết nối. Liên hệ với quản trị viên nếu không có sẵn.
+1. Chọn kết nối. Liên hệ với quản trị viên nếu không có kết nối.
 
 1. Chọn **Tiếp theo**.
 
 1. Chọn **Tập dữ liệu khách hàng** và chọn hồ sơ hoặc phân đoạn bạn muốn làm giàu bằng dữ liệu từ Công nghệ HERE. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Xác định loại trường nào từ cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ cấu hình hợp nhất của bạn để sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu từ Công nghệ HERE. Các trường **Đường 1** và **Mã zip/bưu chính** là bắt buộc cho địa chỉ chính và/hoặc phụ đã chọn. Để có độ chính xác đối sánh cao hơn, hãy thêm nhiều trường hơn.
 
@@ -76,7 +76,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại b
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Các **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
+Các **Số lượng khách hàng làm giàu theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

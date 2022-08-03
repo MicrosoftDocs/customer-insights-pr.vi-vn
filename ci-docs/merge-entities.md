@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
-ms.translationtype: MT
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082965"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139697"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Hợp nhất các trường khách hàng để hợp nhất dữ liệu
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ các thuộc tính để hợp nhất trong thực thể hồ sơ hợp nhất của bạn. Ví dụ: nếu ba thực thể có dữ liệu email, bạn có thể muốn giữ cả ba trường email riêng biệt hoặc hợp nhất chúng thành một trường email duy nhất cho cấu hình hợp nhất. Một số thuộc tính được hệ thống tự động kết hợp. Bạn có thể tạo ID khách hàng ổn định và duy nhất và nhóm các hồ sơ liên quan thành một cụm.
 
@@ -52,7 +50,7 @@ Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ 
 1. Tùy ý, [nhóm hồ sơ thành các hộ gia đình hoặc cụm](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
-> [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)
+> [Bước tiếp theo: Xem xét sự hợp nhất](review-unification.md)
 
 ### <a name="edit-a-merged-field"></a>Chỉnh sửa trường đã hợp nhất
 
@@ -127,11 +125,11 @@ Kết hợp các trường đã tách để tạo thuộc tính được hợp n
 
 ### <a name="combine-a-group-of-fields"></a>Kết hợp một nhóm trường
 
-Coi một nhóm trường như một đơn vị duy nhất. Ví dụ: nếu bản ghi của chúng tôi chứa các trường Address1, Address2, City, State và Zip, chúng tôi không muốn hợp nhất Address2 của một bản ghi khác, vì nghĩ rằng nó sẽ làm cho dữ liệu của chúng tôi đầy đủ hơn.
+Coi một nhóm trường như một đơn vị duy nhất. Ví dụ: nếu bản ghi của chúng tôi chứa các trường Address1, Address2, City, State và Zip, chúng tôi không muốn hợp nhất trong Address2 của một bản ghi khác, vì nghĩ rằng nó sẽ làm cho dữ liệu của chúng tôi đầy đủ hơn.
 
 1. Lựa chọn **Kết hợp** > **Nhóm lĩnh vực**.
 
-1. Chỉ định chính sách hợp nhất người chiến thắng trong **Xếp hạng các nhóm theo** trình đơn thả xuống.
+1. Chỉ định chính sách hợp nhất người chiến thắng trong **Xếp hạng các nhóm theo** thả xuống.
 
 1. Lựa chọn **cộng** và chọn nếu bạn muốn thêm nhiều trường hoặc nhóm vào các trường.
 
@@ -143,9 +141,9 @@ Coi một nhóm trường như một đơn vị duy nhất. Ví dụ: nếu bả
 
 ## <a name="configure-customer-id-generation"></a>Định cấu hình tạo ID khách hàng
 
-Xác định cách tạo giá trị ID khách hàng, giá trị nhận dạng hồ sơ khách hàng duy nhất. Bước hợp nhất các trường trong quy trình hợp nhất dữ liệu tạo ra mã nhận dạng hồ sơ khách hàng duy nhất. Định danh là *ID khách hàng* bên trong *khách hàng* thực thể là kết quả của quá trình hợp nhất dữ liệu.
+Xác định cách tạo giá trị ID khách hàng, giá trị nhận dạng hồ sơ khách hàng duy nhất. Bước hợp nhất các trường trong quy trình hợp nhất dữ liệu tạo ra mã định danh hồ sơ khách hàng duy nhất. Định danh là *ID khách hàng* bên trong *khách hàng* thực thể là kết quả của quá trình hợp nhất dữ liệu.
 
-Các *ID khách hàng*  dựa trên một hàm băm của giá trị đầu tiên của các khóa chính chiến thắng không rỗng. Các khóa này đến từ các thực thể được sử dụng trong hợp nhất dữ liệu và chịu ảnh hưởng của thứ tự đối sánh.Vì vậy, ID khách hàng đã tạo có thể thay đổi khi giá trị khóa chính thay đổi trong thực thể chính của đơn hàng đối sánh. Giá trị khóa chính có thể không phải lúc nào cũng đại diện cho cùng một khách hàng.
+Các *ID khách hàng*  dựa trên một băm của giá trị đầu tiên của khóa chính chiến thắng không rỗng. Các khóa này đến từ các thực thể được sử dụng trong hợp nhất dữ liệu và chịu ảnh hưởng của thứ tự đối sánh.Vì vậy, ID khách hàng đã tạo có thể thay đổi khi giá trị khóa chính thay đổi trong thực thể chính của đơn hàng đối sánh. Giá trị khóa chính có thể không phải lúc nào cũng đại diện cho cùng một khách hàng.
 
 Khi đặt cấu hình ID khách hàng ổn định, bạn có thể tránh được hành vi đó.
 
@@ -174,9 +172,9 @@ Bạn có thể xác định các quy tắc để nhóm các cấu hình liên q
 
 1. Chỉ định các quy tắc và điều kiện để xác định cụm của bạn.
 
-1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm dưới dạng các trường mới vào *khách hàng* thực thể.
+1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm vào dưới dạng các trường mới vào *khách hàng* thực thể.
 
 > [!div class="nextstepaction"]
-> [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)
+> [Bước tiếp theo: Xem xét sự hợp nhất](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

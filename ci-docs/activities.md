@@ -1,7 +1,7 @@
 ---
 title: Hoạt động của khách hàng
 description: Xác định các hoạt động của khách hàng và xem các hoạt động đó theo dòng thời gian trên hồ sơ khách hàng.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
@@ -17,51 +17,51 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755524"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188165"
 ---
 # <a name="customer-activities"></a>Hoạt động của khách hàng
 
-Kết hợp các hoạt động của khách hàng từ [nguồn dữ liệu khác nhau](data-sources.md) trong Dynamics 365 Customer Insights. Tạo một dòng thời gian liệt kê các hoạt động theo thứ tự thời gian. Bao gồm tiến trình trong các ứng dụng Dynamics 365 với [Phần bổ trợ Thẻ khách hàng](customer-card-add-in.md) sự hòa tan.
+Hoạt động của khách hàng là những hành động hoặc sự kiện được thực hiện bởi khách hàng. Ví dụ: giao dịch, thời lượng cuộc gọi hỗ trợ, đánh giá trang web, mua hàng hoặc trả hàng. Các hoạt động này được chứa trong một hoặc nhiều nguồn dữ liệu. Với Thông tin chi tiết về khách hàng, hãy củng cố các hoạt động khách hàng của bạn từ những [nguồn dữ liệu](data-sources.md) và liên kết chúng với hồ sơ khách hàng. Các hoạt động này xuất hiện theo thứ tự thời gian trong một dòng thời gian trên hồ sơ khách hàng. Bao gồm tiến trình trong các ứng dụng Dynamics 365 với [Tiện ích bổ sung Thẻ khách hàng](customer-card-add-in.md) dung dịch.
 
 ## <a name="define-an-activity"></a>Xác định hoạt động
 
-Nguồn dữ liệu của bạn có thể bao gồm các thực thể có dữ liệu giao dịch và hoạt động từ nhiều nguồn dữ liệu. Xác định các thực thể này và chọn các hoạt động bạn muốn xem trên dòng thời gian của khách hàng. Chọn thực thể bao gồm hoạt động mục tiêu hoặc hoạt động của bạn.
-
-Một thực thể phải có ít nhất một thuộc tính loại **Ngày** để được đưa vào dòng thời gian của khách hàng và bạn không thể thêm các thực thể mà không có trường **Ngày**. Kiểm soát **Thêm hoạt động** bị vô hiệu hóa nếu không tìm thấy thực thể đó.
+Một thực thể phải có ít nhất một thuộc tính loại **Ngày** được đưa vào dòng thời gian của khách hàng. Kiểm soát **Thêm hoạt động** bị vô hiệu hóa nếu không tìm thấy thực thể đó.
 
 1. Đi đến **Dữ liệu** > **Các hoạt động**.
 
-1. Chọn **Thêm hoạt động** để bắt đầu trải nghiệm có hướng dẫn cho quá trình thiết lập hoạt động.
+1. Lựa chọn **Thêm hoạt động** để bắt đầu trải nghiệm được hướng dẫn.
 
-1. Trong bước **Dữ liệu hoạt động**, hãy đặt giá trị cho các trường sau:
+1. Bên trong **Dữ liệu hoạt động** bước, nhập thông tin sau:
 
-   - **Tên hoạt động**: Chọn tên cho hoạt động của bạn.
-   - **Thực thể**: Chọn một thực thể bao gồm dữ liệu giao dịch hoặc hoạt động.
-   - **Khóa chính**: Chọn trường xác định duy nhất một bản ghi. Nó không nên chứa bất kỳ giá trị trùng lặp, giá trị trống hoặc giá trị thiếu nào.
+   - **Tên hoạt động** : Tên cho hoạt động của bạn.
+   - **Thực thể hoạt động** : Thực thể bao gồm dữ liệu giao dịch hoặc hoạt động.
+   - **Khóa chính** : Trường xác định duy nhất một bản ghi. Nó không nên chứa bất kỳ giá trị trùng lặp, giá trị trống hoặc giá trị thiếu nào.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Thiết lập dữ liệu hoạt động với tên, thực thể và khóa chính.":::
 
-1. Chọn **Tiếp** để chuyển sang bước tiếp theo.
+1. Chọn **Tiếp theo**.
 
-1. Trong bước **Mối quan hệ**, đặt cấu hình chi tiết để kết nối dữ liệu hoạt động của bạn với hồ sơ khách hàng tương ứng. Bước này trực quan hóa kết nối giữa các thực thể.  
+1. Bên trong **Mối quan hệ** bước, chọn **Thêm mối quan hệ** để kết nối dữ liệu hoạt động của bạn với hồ sơ khách hàng tương ứng. Bước này trực quan hóa kết nối giữa các thực thể.  
 
-   - **Đầu tiên**: Trường ngoại trong thực thể hoạt động của bạn sẽ được dùng để thiết lập mối quan hệ với một thực thể khác.
-   - **Thứ hai**: Thực thể khách hàng nguồn tương ứng mà thực thể hoạt động của bạn sẽ có mối quan hệ. Bạn chỉ có thể liên kết với các thực thể khách hàng nguồn được dùng trong quá trình hợp nhất dữ liệu.
-   - **Thứ ba** : Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn được chọn đã tồn tại, thì tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ nào như vậy tồn tại, một mối quan hệ mới sẽ được tạo theo tên mà bạn cung cấp trong hộp này.
+   - **Khóa ngoại từ thực thể** : Trường trong thực thể hoạt động của bạn sẽ được sử dụng để thiết lập mối quan hệ với một thực thể khác.
+   - **Tới tên thực thể** : Thực thể khách hàng nguồn tương ứng mà thực thể hoạt động của bạn sẽ có mối quan hệ. Bạn chỉ có thể liên kết với các thực thể khách hàng nguồn được dùng trong quá trình hợp nhất dữ liệu.
+   - **Tên mối quan hệ** : Tên xác định mối quan hệ giữa các thực thể. Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn đã chọn đã tồn tại, thì tên mối quan hệ ở chế độ chỉ đọc.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Xác định mối quan hệ của thực thể.":::
 
    > [!TIP]
    > Trong môi trường B2B, bạn có thể chọn giữa các thực thể tài khoản và các thực thể khác. Nếu bạn chọn một thực thể tài khoản, đường dẫn mối quan hệ sẽ tự động được đặt. Đối với các thực thể khác, bạn phải xác định đường dẫn mối quan hệ trên một hoặc nhiều thực thể trung gian cho đến khi bạn tiếp cận thực thể tài khoản.
 
-1. Chọn **Tiếp** để chuyển sang bước tiếp theo. 
+1. Lựa chọn **Ứng dụng** để tạo mối quan hệ.
 
-1. Trong bước **Hợp nhất hoạt động**, hãy chọn sự kiện hoạt động và thời gian bắt đầu hoạt động của bạn. 
+1. Chọn **Tiếp theo**.
+
+1. Trong bước **Hợp nhất hoạt động**, hãy chọn sự kiện hoạt động và thời gian bắt đầu hoạt động của bạn.
    - **Trường bắt buộc**
       - **Hoạt động của sự kiện**: Trường về sự kiện cho hoạt động này.
       - **Dấu thời gian**: Trường đại diện cho thời gian bắt đầu hoạt động của bạn.
@@ -76,59 +76,47 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
       :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Chỉ định dữ liệu hoạt động của khách hàng trong thực thể Hoạt động đã hợp nhất.":::
 
-1. Chọn **Tiếp** để chuyển sang bước tiếp theo. Bạn có thể chọn **Kết thúc và xem xét** để lưu hoạt động ngay bây giờ khi loại hoạt động được đặt thành **Khác**. 
+1. Lựa chọn **Tiếp theo** để chọn loại hoạt động hoặc chọn **Kết thúc và xem xét** để lưu hoạt động với loại hoạt động được đặt thành **Khác**.
 
-1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện tại, *Phản hồi*, *trung thành*, *đặt hàng*, *·*, và *Đăng ký* các loại hoạt động hỗ trợ ngữ nghĩa sau khi đồng ý lập bản đồ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
+1. Trong bước **Loại hoạt động**, hãy chọn loại hoạt động và tùy ý chọn nếu bạn muốn ánh xạ theo ngữ nghĩa một số loại hoạt động để sử dụng trong các khu vực khác của Customer Insights. Hiện nay, *Nhận xét*, *trung thành*, *đặt hàng*, *·*, và *Đăng ký* các loại hoạt động hỗ trợ ngữ nghĩa sau khi đồng ý lập bản đồ các trường. Nếu một loại hoạt động không phù hợp với hoạt động mới, bạn có thể chọn *Khác* hoặc *Tạo mới* cho một loại hoạt động tùy chỉnh.
 
-1. Chọn **Tiếp** để chuyển sang bước tiếp theo. 
+1. Chọn **Tiếp theo**.
 
 1. Trong bước **Xem lại**, hãy xác minh lựa chọn của bạn. Quay lại bất kỳ bước nào trước đó và cập nhật thông tin nếu cần.
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Xem lại các trường được chỉ định cho một hoạt động.":::
-   
-1. Chọn **Lưu hoạt động** để áp dụng các thay đổi của bạn và chọn **Xong** để quay lại **Dữ liệu** > **Hoạt động**. Tại đây, bạn sẽ thấy những hoạt động nào được thiết lập để hiển thị trong dòng thời gian. 
+1. Chọn **Lưu hoạt động** để áp dụng các thay đổi của bạn và chọn **Xong** để quay lại **Dữ liệu** > **Hoạt động**. Hoạt động đã tạo hiển thị.
 
-1. Trên trang **Hoạt động**, hãy chọn **Chạy** để xử lý hoạt động. 
+1. Sau khi tạo tất cả các hoạt động của bạn, hãy chọn **Chạy** để xử lý chúng.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Quản lý các hoạt động hiện có
 
-Trên **Dữ liệu** > **Hoạt động**, bạn có thể xem và quản lý tất cả các hoạt động mà mình đã lưu. Mỗi hoạt động được thể hiện bằng một hàng cũng bao gồm thông tin chi tiết về nguồn, thực thể và loại hoạt động.
+Đi đến **Dữ liệu** > **Các hoạt động** để xem các hoạt động đã lưu của bạn, thực thể nguồn của chúng, loại hoạt động và liệu chúng có được đưa vào dòng thời gian của khách hàng hay không. Bạn có thể sắp xếp danh sách hoạt động theo bất kỳ cột nào hoặc sử dụng hộp tìm kiếm để tìm hoạt động bạn muốn quản lý.
 
-Các hành động sau đây khả dụng khi bạn chọn một hoạt động. 
+Chọn một hoạt động để xem các hành động có sẵn.
 
-- **Chỉnh sửa**: Mở hoạt động được thiết lập ở bước đánh giá. Bạn có thể thay đổi bất kỳ hoặc tất cả cấu hình hiện tại từ bước này. Sau khi thay đổi cấu hình, hãy chọn **Lưu hoạt động** rồi chọn **Chạy** để xử lý các thay đổi.
-
-- **Đổi tên**: Mở hộp thoại nơi bạn có thể nhập tên khác cho hoạt động đã chọn. Chọn **Lưu** để áp dụng thay đổi.
-
-- **Xóa**: Mở hộp thoại để xác nhận việc xóa hoạt động đã chọn. Bạn cũng có thể xóa nhiều hoạt động cùng một lúc bằng cách chọn các hoạt động rồi chọn biểu tượng xóa. Chọn **Xóa** để xác nhận thao tác xóa.
+- **Chỉnh sửa** hoạt động để thay đổi cấu hình của nó. Cấu hình sẽ mở ở bước xem xét. Sau khi thay đổi cấu hình, hãy chọn **Lưu hoạt động** rồi chọn **Chạy** để xử lý các thay đổi.
+- **Đổi tên** hoạt động. Chọn **Lưu** để áp dụng thay đổi.
+- **Xóa bỏ** hoạt động. Để xóa nhiều hoạt động cùng một lúc, hãy chọn các hoạt động và sau đó **Xóa bỏ**. Xác nhận tác vụ xóa này.
 
 ## <a name="view-activity-timelines-on-customer-profiles"></a>Xem tiến trình hoạt động trên hồ sơ khách hàng
 
-Sau khi bạn đặt cấu hình các hoạt động của khách hàng, hãy chọn **Hiển thị trong dòng thời gian hoạt động** trong cấu hình hoạt động để tìm tất cả các hoạt động của khách hàng của bạn trên hồ sơ khách hàng của họ.
+1. Nếu bạn đã chọn **Hiển thị trong dòng thời gian hoạt động** trong cấu hình hoạt động, hãy chuyển đến **Khách hàng** và chọn hồ sơ khách hàng để xem các hoạt động của khách hàng trong **Dòng thời gian hoạt động** tiết diện.
 
-Để mở dòng thời gian cho khách hàng, hãy truy cập **Khách hàng** và chọn hồ sơ khách hàng mà bạn muốn xem.
+   :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Xem các hoạt động đã đặt cấu hình trong Hồ sơ khách hàng.":::
 
-Nếu khách hàng đã tham gia vào một hoạt động đã định cấu hình, bạn sẽ tìm thấy nó trong **Dòng thời gian hoạt động** tiết diện.
+1. Để lọc các hoạt động trong dòng thời gian hoạt động:
 
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Xem các hoạt động đã đặt cấu hình trong Hồ sơ khách hàng.":::
+   - Chọn một hoặc nhiều biểu tượng hoạt động để tinh chỉnh kết quả của bạn để chỉ bao gồm các loại đã chọn.
 
-Có một số cách để lọc các hoạt động trong dòng thời gian hoạt động:
+     :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Lọc các hoạt động theo loại bằng cách sử dụng các biểu tượng.":::
 
-- Bạn có thể chọn một hoặc nhiều biểu tượng hoạt động để tinh chỉnh kết quả của mình để chỉ bao gồm các loại đã chọn.
+   - Lựa chọn **Lọc** để mở bảng điều khiển bộ lọc để định cấu hình bộ lọc dòng thời gian của bạn. Lọc bởi *ActivityType* và / hoặc *Ngày*. Chọn **Áp dụng**.
 
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Lọc các hoạt động theo loại bằng cách sử dụng các biểu tượng.":::
+     :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Sử dụng bảng điều khiển bộ lọc để đặt cấu hình các điều kiện bộ lọc.":::
 
-- Bạn có thể chọn **Lọc** để mở bảng điều khiển bộ lọc để đặt cấu hình bộ lọc dòng thời gian của bạn.
-
-   1. Bạn có thể lọc theo *ActivityType* và *Date*
-   1. Chọn **Áp dụng** để sử dụng các bộ lọc trong dòng thời gian hoạt động.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Sử dụng bảng điều khiển bộ lọc để đặt cấu hình các điều kiện bộ lọc.":::
-
-Để xóa bộ lọc, hãy chọn **x** bên cạnh mỗi bộ lọc được áp dụng cho dòng thời gian hoặc chọn **Xóa bộ lọc**.
-
+1. Để xóa bộ lọc, hãy chọn **Xóa bộ lọc** hoặc chọn **Lọc** và xóa hộp kiểm bộ lọc.
 
 > [!NOTE]
 > Bộ lọc hoạt động bị xóa khi bạn rời khỏi hồ sơ khách hàng. Bạn phải áp dụng chúng mỗi khi mở hồ sơ khách hàng.

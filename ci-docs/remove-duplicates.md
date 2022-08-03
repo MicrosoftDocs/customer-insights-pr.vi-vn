@@ -13,26 +13,24 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: MT
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742983"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139455"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Loại bỏ các bản sao trước khi hợp nhất dữ liệu
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
-
-Bước hợp nhất này tùy ý cho phép bạn thiết lập các quy tắc để xử lý các bản ghi trùng lặp trong một thực thể. *Sự trùng lặp* xác định các bản ghi trùng lặp và hợp nhất chúng thành một bản ghi. Bản ghi nguồn được liên kết với bản ghi đã hợp nhất bằng các ID thay thế. Nếu các quy tắc không được định cấu hình, các quy tắc do hệ thống xác định sẽ được áp dụng.
+Bước hợp nhất này tùy ý cho phép bạn thiết lập các quy tắc để xử lý các bản ghi trùng lặp trong một thực thể. *Sao chép* xác định các bản ghi trùng lặp và hợp nhất chúng thành một bản ghi. Bản ghi nguồn được liên kết với bản ghi đã hợp nhất bằng các ID thay thế. Nếu các quy tắc không được định cấu hình, các quy tắc do hệ thống xác định sẽ được áp dụng.
 
 ## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
 
-Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md).
+Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md).
 
 1. Trên **Bản ghi trùng lặp** trang, chọn **Sử dụng các thực thể được bổ sung chi tiết** trên đầu của trang.
 
-1. Từ **Sử dụng các thực thể được bổ sung chi tiết**, hãy chọn một hoặc nhiều thực thể được bổ sung.
+1. Từ **Sử dụng các thực thể được bổ sung chi tiết**, chọn một hoặc nhiều thực thể được bổ sung.
 
 1. Chọn **Xong**.
 
@@ -58,9 +56,9 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
 
       :::image type="content" source="media/m3_duplicates_add.png" alt-text="Ảnh chụp màn hình của ngăn Thêm quy tắc để xóa các bản sao.":::
 
-   1. Tùy ý, chọn **Thêm vào** > **Thêm điều kiện** để thêm nhiều điều kiện hơn vào quy tắc. Các điều kiện được kết nối với một toán tử logic AND và do đó chỉ được thực thi nếu tất cả các điều kiện được đáp ứng.
+   1. Tùy ý, chọn **cộng** > **Thêm điều kiện** để thêm nhiều điều kiện hơn vào quy tắc. Các điều kiện được kết nối với một toán tử logic AND và do đó chỉ được thực thi nếu tất cả các điều kiện được đáp ứng.
 
-   1. Tùy ý, **Thêm vào** > **Thêm ngoại lệ** đến [thêm ngoại lệ vào quy tắc](match-entities.md#add-exceptions-to-a-rule). Các trường hợp ngoại lệ được sử dụng để giải quyết các trường hợp hiếm hoi về dương tính giả và âm tính giả.
+   1. Tùy ý, **cộng** > **Thêm ngoại lệ** đến [thêm ngoại lệ vào quy tắc](match-entities.md#add-exceptions-to-a-rule). Các trường hợp ngoại lệ được sử dụng để giải quyết các trường hợp hiếm hoi về dương tính giả và âm tính giả.
 
    1. Lựa chọn **Xong** để tạo quy tắc.
 
@@ -74,15 +72,15 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
       - **Gần đây nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập gần đây nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
       - **Cách đây xa nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập cách đây xa nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
       
-      Trong trường hợp hòa, bản ghi chiến thắng là bản ghi có giá trị MAX (PK) hoặc khóa chính lớn hơn.
+      Trong trường hợp hòa, bản ghi người chiến thắng là bản ghi có giá trị MAX (PK) hoặc khóa chính lớn hơn.
       
-   1. Theo tùy chọn, để xác định tùy chọn hợp nhất trên các thuộc tính riêng lẻ của một thực thể, hãy chọn **Trình độ cao** ở cuối ngăn. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng thực thể để xem tất cả các thuộc tính của nó và xác định tùy chọn nào sẽ sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây.
+   1. Theo tùy chọn, để xác định tùy chọn hợp nhất trên các thuộc tính riêng lẻ của một thực thể, hãy chọn **Nâng cao** ở cuối ngăn. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng đối tượng để xem tất cả các thuộc tính của nó và xác định tùy chọn nào để sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Ngăn tùy chọn hợp nhất nâng cao hiển thị email gần đây và địa chỉ đầy đủ":::
 
    1. Lựa chọn **Xong** để áp dụng các tùy chọn hợp nhất của bạn.
 
-1. Sau khi xác định các quy tắc loại bỏ trùng lặp và các tùy chọn hợp nhất, hãy chọn **Kế tiếp**.
+1. Sau khi xác định các quy tắc loại bỏ trùng lặp và các tùy chọn hợp nhất, hãy chọn **Tiếp theo**.
   
 > [!div class="nextstepaction"]
 > [Bước tiếp theo cho một thực thể: Hợp nhất các trường](merge-entities.md)
@@ -92,7 +90,7 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
 
 ## <a name="deduplication-output-as-an-entity"></a>Đầu ra khử trùng lặp dưới dạng một thực thể
 
-Quá trình khử trùng lặp tạo ra một thực thể được khử trùng lặp mới cho mỗi thực thể nguồn. Có thể tìm thấy các thực thể cùng với **ConflationMatchPairs:CustomerInsights** trong phần **Hệ thống** trên trang **Thực thể**, với tên **Deduplication_DataSource_Entity**.
+Quá trình loại bỏ trùng lặp tạo ra một thực thể được khử trùng lặp mới cho mỗi thực thể nguồn. Có thể tìm thấy các thực thể cùng với **ConflationMatchPairs:CustomerInsights** trong phần **Hệ thống** trên trang **Thực thể**, với tên **Deduplication_DataSource_Entity**.
 
 Thực thể đầu ra loại bỏ trùng lặp chứa thông tin sau:
 
