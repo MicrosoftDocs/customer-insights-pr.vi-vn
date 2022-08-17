@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Danh mục học tập
   items:
-    - name: Chứng nhận là Chuyên gia nền tảng dữ liệu khách hàng của Microsoft
+    - name: Chứng nhận là Chuyên gia Nền tảng Dữ liệu Khách hàng của Microsoft
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Bắt đầu với Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Quản trị
   items:
-    - name: Thiết lập cấu hình hệ thống
-      href: system.md
-    - name: Định cấu hình cài đặt bảo mật
-      href: security-overview.md
     - name: Chỉ định quyền của người dùng
       href: permissions.md
     - name: Mang Key Vault của riêng bạn
       href: use-azure-key-vault.md
+    - name: Định cấu hình cài đặt bảo mật
+      href: security-overview.md
     - name: Xuất nhật ký chẩn đoán
       href: diagnostics.md
-    - name: Tổng quan về kết nối
+    - name: Quản lý kết nối
       href: connections.md
+    - name: Lên lịch làm mới hệ thống
+      href: schedule-refresh.md
+    - name: Xem cấu hình hệ thống
+      href: system.md
 - name: API
   items:
     - name: Làm việc với API

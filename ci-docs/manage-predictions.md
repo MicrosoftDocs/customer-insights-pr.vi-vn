@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082860"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245491"
 ---
 # <a name="manage-predictions"></a>Quản lý dự đoán
 
@@ -58,7 +58,7 @@ Các cột sau trong báo cáo chứa thông tin hữu ích để cải thiện 
 
 ## <a name="refresh-a-prediction"></a>Làm mới một dự đoán
 
-Các dự đoán sẽ tự động làm mới trên cùng một [trình làm mới dữ liệu](system.md#schedule-tab) như định cấu hình trong thiết đặt. Bạn cũng có thể làm mới chúng theo cách thủ công.
+Các dự đoán sẽ tự động làm mới trên cùng một [trình làm mới dữ liệu](schedule-refresh.md) như định cấu hình trong thiết đặt. Bạn cũng có thể làm mới chúng theo cách thủ công.
 
 1. Đi đến **Thông tin** > **Dự đoán** và chọn tab **Dự đoán của tôi**.
 

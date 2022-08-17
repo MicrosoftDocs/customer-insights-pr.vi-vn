@@ -1,7 +1,7 @@
 ---
 title: Làm phong phú hồ sơ công ty với Dun & Bradstreet (xem trước)
 description: Thông tin chung về cách làm giàu của bên thứ ba Dun & Bradstreet.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196052"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237930"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Làm phong phú hồ sơ công ty với Dun & Bradstreet (xem trước)
 
@@ -39,7 +39,7 @@ Là người dùng được cấp phép của Dun & Bradstreet, bạn có thể 
 
 1. Chọn các dấu chấm ngang dưới liên quan **nguồn** trong dự án Dun & Bradstreet mới được tạo để xem các tùy chọn có sẵn.
 
-   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Ảnh chụp màn hình các chấm trong một dự án Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Ảnh chụp màn hình các dấu chấm trong một dự án Dun & Bradstreet.":::
 
 1. Chọn **Nhận thông tin chi tiết về S3**. Lưu trữ thông tin này ở một nơi an toàn. Bạn sẽ cần nó để [thiết lập kết nối để làm giàu](#configure-a-connection-for-dun--bradstreet) trong Thông tin chi tiết về khách hàng.
 
@@ -55,16 +55,11 @@ Bạn phải là một [người quản lý](permissions.md#admin) trong Thông 
 
 1. Cung cấp thông tin đăng nhập Dun & Bradstreet hợp lệ và chi tiết dự án Dun & Bradstreet *Khu vực, đường dẫn thư mục Drop và tên thư mục Drop*. Bạn [lấy thông tin này](#set-up-your-dun--bradstreet-project) từ dự án Dun & Bradstreet.
 
-1. Xem xét và chấp thuận [Quyền riêng tư dữ liệu và sự tuân thủ](#data-privacy-and-compliance) bằng cách chọn **Tôi đồng ý**.
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
 1. Lựa chọn **Kiểm chứng** để xác thực cấu hình và sau đó chọn **Tiết kiệm**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Trang cấu hình kết nối Dun & Bradstreet.":::
-
-### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
-
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu tới Dun & Bradstreet, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Dun & Bradstreet đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
 
 ## <a name="supported-countries-or-regions"></a>Các quốc gia hoặc khu vực được hỗ trợ
 
@@ -76,7 +71,7 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia / khu vực sau: Canad
 
 1. Lựa chọn **Làm phong phú dữ liệu của tôi** trên **Dữ liệu công ty** cho ngói Dun & Bradstreet.
 
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Ảnh chụp màn hình của ô Dun & Bradstreet.":::
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Ảnh chụp màn hình lát gạch Dun & Bradstreet.":::
 
 1. Xem lại tổng quan và sau đó chọn **Tiếp theo**.
 
@@ -86,7 +81,7 @@ Chúng tôi hiện hỗ trợ các tùy chọn quốc gia / khu vực sau: Canad
 
 1. Chọn **Tập dữ liệu khách hàng** và chọn hồ sơ hoặc phân đoạn bạn muốn làm phong phú thêm với dữ liệu công ty từ Dun & Bradstreet. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Xác định loại trường nào từ hồ sơ hợp nhất của bạn sẽ sử dụng để khớp với dữ liệu công ty từ Dun & Bradstreet. Ít nhất một trong các trường **Tên và địa chỉ**, **Điện thoại** hoặc **Email** là bắt buộc.
+1. Xác định loại trường nào từ hồ sơ hợp nhất của bạn để sử dụng để khớp với dữ liệu công ty từ Dun & Bradstreet. Ít nhất một trong các trường **Tên và địa chỉ**, **Điện thoại** hoặc **Email** là bắt buộc.
 
 1. Chọn **Tiếp theo**
 

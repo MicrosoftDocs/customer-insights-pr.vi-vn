@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188074"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245721"
 ---
 # <a name="use-customer-consent"></a>Sử dụng sự đồng ý của khách hàng
 
@@ -22,7 +22,7 @@ Các quy định về quyền riêng tư và bảo vệ dữ liệu cung cấp c
 
 Khách hàng có thể chọn rút lại hoặc từ chối sự đồng ý của họ đối với các hình thức liên hệ cụ thể. Họ cũng có thể yêu cầu bạn không cho họ thu thập, lưu trữ, sử dụng hoặc bán dữ liệu cá nhân của họ. Điều quan trọng là tổ chức của bạn tôn trọng tất cả sự đồng ý và sở thích riêng tư của khách hàng.  
 
-Dynamics 365 Customer Insights giúp bạn đáp ứng các yêu cầu của khách hàng bằng cách nhập và lưu trữ các sở thích của họ như một phần của hồ sơ khách hàng thống nhất.
+Dynamics 365 Customer Insights giúp bạn đáp ứng các yêu cầu của khách hàng bằng cách nhập và lưu trữ các sở thích của họ như một phần của hồ sơ khách hàng hợp nhất.
 
 Nếu dữ liệu về sự đồng ý được lưu trữ riêng biệt với hồ sơ khách hàng của bạn, [thêm dữ liệu về sự đồng ý của bạn dưới dạng nguồn dữ liệu mới](#import-and-unify-consent-data). Nguồn dữ liệu chứa dữ liệu về sự đồng ý được thêm vào quy trình hợp nhất dữ liệu. Sau đó, hợp nhất thành công dữ liệu đồng ý và hồ sơ khách hàng dẫn đến hồ sơ khách hàng hợp nhất có chứa thông tin về sự đồng ý. Đối với hồ sơ khách hàng đã chứa thông tin về sự đồng ý, hãy truy cập trực tiếp vào [sử dụng dữ liệu về sự đồng ý](#use-consent-data) tiết diện.
 
@@ -56,9 +56,9 @@ Nhập dữ liệu về sự đồng ý giống như cách bạn nhập các ngu
 
 ## <a name="use-consent-data"></a>Sử dụng dữ liệu về sự đồng ý
 
-Sau khi dữ liệu về sự đồng ý của bạn là một phần của hồ sơ khách hàng hợp nhất, bạn có thể sử dụng dữ liệu đó trong Thông tin chi tiết về khách hàng. Ví dụ: tạo một phân đoạn có quy tắc để đảm bảo rằng bạn tôn trọng quyền riêng tư và các tùy chọn bảo vệ dữ liệu của khách hàng. Các quy tắc hỗ trợ tùy chọn đồng ý được sử dụng để loại trừ người dùng khỏi một phân khúc dựa trên các thuộc tính hồ sơ. Thêm quy tắc vào một phân đoạn loại trừ hồ sơ khách hàng không cung cấp sự đồng ý để liên hệ.
+Sau khi dữ liệu về sự đồng ý của bạn là một phần của hồ sơ khách hàng hợp nhất, bạn có thể sử dụng dữ liệu đó trong Thông tin chi tiết về khách hàng. Ví dụ: tạo một phân đoạn có quy tắc để đảm bảo rằng bạn tôn trọng quyền riêng tư và các tùy chọn bảo vệ dữ liệu của khách hàng. Các quy tắc hỗ trợ tùy chọn đồng ý được sử dụng để loại trừ người dùng khỏi một phân khúc dựa trên các thuộc tính của hồ sơ. Thêm quy tắc vào một phân đoạn loại trừ hồ sơ khách hàng không cung cấp sự đồng ý để liên hệ.
 
-Tham chiếu đến bảng mẫu ở trên, một phân đoạn có thể chứa quy tắc sau:`Consent option=Newsletter & Consent value=True`. Cấu hình này dẫn đến một phân đoạn tôn trọng các tùy chọn liên hệ để gửi bản tin.
+Tham chiếu đến bảng mẫu ở trên, một phân đoạn có thể chứa quy tắc này:`Consent option=Newsletter & Consent value=True`. Cấu hình này dẫn đến một phân đoạn tôn trọng các tùy chọn liên hệ để gửi bản tin.
 
 Để biết thêm thông tin về các phân đoạn xây dựng, hãy xem [Tạo phân đoạn](segment-builder.md).
 
@@ -66,10 +66,10 @@ Khi phân đoạn được tạo, bạn có thể sử dụng một trong nhiề
 
 ## <a name="ensure-updated-consent-status"></a>Đảm bảo cập nhật trạng thái đồng ý
 
-Điều quan trọng là phải cập nhật trạng thái đồng ý cho khách hàng của bạn. Quá trình làm mới theo lịch trình trong Thông tin chi tiết về khách hàng luôn nhập trạng thái mới nhất của các nguồn dữ liệu của bạn. Thông tin này sau đó được xử lý thông qua thống nhất dữ liệu và dẫn đến hồ sơ khách hàng được cập nhật. Sau đó, các cấu hình cập nhật này được sử dụng để làm mới các phân đoạn nhằm đảm bảo rằng bạn làm việc với thông tin cập nhật nhất.
+Điều quan trọng là phải cập nhật trạng thái đồng ý cho khách hàng của bạn. Làm mới theo lịch trình trong Thông tin chi tiết về khách hàng luôn nhập trạng thái mới nhất của các nguồn dữ liệu của bạn. Thông tin này sau đó được xử lý thông qua thống nhất dữ liệu và dẫn đến hồ sơ khách hàng được cập nhật. Sau đó, các cấu hình cập nhật này được sử dụng để làm mới các phân đoạn nhằm đảm bảo rằng bạn làm việc với thông tin cập nhật nhất.
 
 Nói cách khác, hãy đảm bảo dữ liệu nguồn được nhập vào Thông tin chi tiết về khách hàng luôn có thông tin mới nhất.
 
-Để biết thêm thông tin, hãy xem [Làm mới phân đoạn theo cách thủ công](segments.md#refresh-segments) hoặc [định cấu hình làm mới theo lịch trình](system.md#schedule-tab).
+Để biết thêm thông tin, hãy xem [Làm mới các phân đoạn theo cách thủ công](segments.md#refresh-segments) hoặc [định cấu hình làm mới theo lịch trình](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

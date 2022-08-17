@@ -1,49 +1,52 @@
 ---
-title: Cài đặt bảo mật trong Thông tin chi tiết về khách hàng
+title: Định cấu hình cài đặt bảo mật
 description: Tìm hiểu về cài đặt bảo mật trong Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947441"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246088"
 ---
-# <a name="security-settings-in-customer-insights"></a>Cài đặt bảo mật trong Thông tin chi tiết về khách hàng
+# <a name="configure-security-settings"></a>Định cấu hình cài đặt bảo mật
 
-Các **Bảo vệ** trang liệt kê các tùy chọn để định cấu hình quyền của người dùng và các tính năng giúp tạo Dynamics 365 Customer Insights an toàn hơn. Chỉ quản trị viên mới có thể truy cập trang này.
+Quản lý khóa API, truy cập dữ liệu khách hàng và thiết lập Liên kết riêng Azure.
 
-Đi đến **Quản trị viên** > **Bảo vệ** để định cấu hình cài đặt.
+## <a name="manage-api-keys"></a>Quản lý khóa API
 
-Các **Bảo vệ** trang bao gồm các tab sau:
+Xem và quản lý các khóa để sử dụng [API thông tin chi tiết về khách hàng](apis.md) với dữ liệu trong môi trường của bạn.
 
-- [Người dùng](#users-tab)
-- [API](#apis-tab)
-- [Liên kết Riêng tư](#private-links-tab)
-- [Kho lưu trữ khóa](#key-vault-tab)
-- [Truy cập an toàn vào dữ liệu khách hàng với Hộp khóa khách hàng (Xem trước)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Đi đến **Hệ thống** > **Bảo vệ** và chọn **API** chuyển hướng.
 
-## <a name="users-tab"></a>Tab Người dùng
+1. Nếu quyền truy cập API vào môi trường chưa được thiết lập, hãy chọn **Cho phép**. Hoặc, để chặn quyền truy cập API vào môi trường, hãy chọn **Vô hiệu hóa** Và xác nhận.
 
-Quyền truy cập vào Thông tin chi tiết về khách hàng bị hạn chế đối với người dùng trong tổ chức của bạn đã được quản trị viên thêm vào ứng dụng. Các **Người dùng** cho phép bạn quản lý quyền truy cập của người dùng và quyền của họ. Để biết thêm thông tin, hãy xem [Quyền Người dùng](permissions.md).
+1. Quản lý các khóa API chính và phụ:
 
-## <a name="apis-tab"></a>Tab API
+   1. Để hiển thị khóa API chính hoặc phụ, hãy chọn **Trình diễn** Biểu tượng.
 
-Xem và quản lý các khóa để sử dụng [API thông tin chi tiết về khách hàng](apis.md) với dữ liệu của môi trường của bạn.
+   1. Để sao chép khóa API chính hoặc phụ, hãy chọn **Sao chép** Biểu tượng.
 
-Bạn có thể tạo khóa chính và khóa phụ mới bằng cách chọn **Tạo lại chính** hoặc **Tạo lại thứ cấp**. 
+   1. Để tạo khóa API chính hoặc phụ mới, hãy chọn **Tạo lại chính** hoặc **Tạo lại thứ cấp**.
 
-Để chặn quyền truy cập API vào môi trường, hãy chọn **Vô hiệu hóa**. Nếu các API bị tắt, bạn có thể chọn **Cho phép** để cấp lại quyền truy cập.
+## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Truy cập dữ liệu khách hàng một cách an toàn với Hộp khóa khách hàng (Xem trước)
 
-## <a name="private-links-tab"></a>Tab Liên kết Riêng tư
+Thông tin chi tiết về khách hàng sử dụng Power Platform Khả năng của Hộp khóa khách hàng. Khách hàng Lockbox cung cấp một giao diện để xem xét và phê duyệt (hoặc từ chối) các yêu cầu truy cập dữ liệu. Các yêu cầu này xảy ra khi cần truy cập dữ liệu vào dữ liệu khách hàng để giải quyết một trường hợp hỗ trợ. Để sử dụng tính năng này, Thông tin chi tiết về khách hàng phải có kết nối hiện có với Microsoft Dataverse môi trường trong người thuê nhà của bạn.
 
-[Liên kết riêng Azure](/azure/private-link/private-link-overview) hãy để Thông tin chi tiết về khách hàng kết nối với Azure Data Lake Storage tài khoản qua một điểm cuối riêng trong mạng ảo của bạn. Đối với dữ liệu trong tài khoản lưu trữ không được tiếp xúc với internet công cộng, Liên kết riêng tư cho phép kết nối với mạng bị hạn chế đó.
+Để biết thêm thông tin về Hộp khóa khách hàng, hãy xem [bản tóm tắt](/power-platform/admin/about-lockbox#summary) của Power Platform Hộp khóa khách hàng. Bài báo cũng mô tả [quy trình làm việc](/power-platform/admin/about-lockbox#workflow) và yêu cầu [thành lập](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) để bật Hộp khóa khách hàng.
+
+> [!IMPORTANT]
+> Quản trị viên toàn cầu cho Power Platform hoặc Power Platform quản trị viên có thể phê duyệt các yêu cầu Hộp khóa khách hàng được cấp cho Thông tin chi tiết về khách hàng.
+
+## <a name="set-up-an-azure-private-link"></a>Thiết lập liên kết riêng Azure
+
+[Liên kết cá nhân Azure](/azure/private-link/private-link-overview) hãy để Thông tin chi tiết về khách hàng kết nối với Azure Data Lake Storage tài khoản qua một điểm cuối riêng trong mạng ảo của bạn. Đối với dữ liệu trong tài khoản lưu trữ không được tiếp xúc với internet công cộng, Liên kết riêng tư cho phép kết nối với mạng bị hạn chế đó.
 
 > [!IMPORTANT]
 > Yêu cầu vai trò tối thiểu để thiết lập kết nối Private Link:
@@ -51,26 +54,22 @@ Bạn có thể tạo khóa chính và khóa phụ mới bằng cách chọn **T
 > - Thông tin chi tiết về khách hàng: Quản trị viên
 > - Vai trò tích hợp Azure: [Người đóng góp tài khoản lưu trữ](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
 > - Quyền cho vai trò Azure tùy chỉnh: [Microsoft.Storage/storageAccounts/read và Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
 
-Thiết lập Liên kết riêng trong Thông tin chi tiết về khách hàng là một quy trình gồm hai bước. Trước tiên, bạn bắt đầu tạo Liên kết riêng từ **Quản trị viên** > **Bảo vệ** > **Liên kết riêng tư** trong Thông tin chi tiết về khách hàng. Các **Thêm liên kết riêng tư** ngăn liệt kê các tài khoản lưu trữ từ người thuê của bạn mà bạn có quyền xem. Chọn tài khoản lưu trữ và cung cấp sự đồng ý để tạo Liên kết riêng tư.
+1. Trong Thông tin chi tiết về khách hàng, hãy chuyển đến **Quản trị viên** > **Bảo vệ** và chọn **Liên kết riêng tư** chuyển hướng.
 
-Tiếp theo, bạn cần phê duyệt Liên kết Riêng tư ở phía tài khoản Data Lake Storage. Mở liên kết hiển thị trên màn hình để phê duyệt Liên kết Riêng tư mới.
+1. Lựa chọn **Thêm liên kết riêng tư**.
 
-## <a name="key-vault-tab"></a>Tab Key Vault
+   Các **Thêm liên kết riêng tư** ngăn liệt kê các tài khoản lưu trữ từ người thuê của bạn mà bạn có quyền xem.
 
-Các **Kho chìa khóa** tab cho phép bạn liên kết và quản lý của riêng bạn [Kho tiền khóa Azure](/azure/key-vault/general/basic-concepts) cho môi trường.
-Có thể dùng Key vault chuyên dụng để chia giai đoạn và sử dụng bí mật trong ranh giới tuân thủ của một tổ chức. Thông tin chi tiết về khách hàng có thể sử dụng các bí mật trong Azure Key Vault để [thiết lập kết nối](connections.md) cho các hệ thống của bên thứ ba.
+1. Chọn đăng ký, nhóm tài nguyên và tài khoản lưu trữ.
 
-Để biết thêm thông tin, hãy xem [Mang tín liệu khóa Azure của riêng bạn](use-azure-key-vault.md).
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
-## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Truy cập an toàn vào dữ liệu khách hàng với Hộp khóa khách hàng (Xem trước)
+1. Chọn **Lưu.**
 
-Thông tin chi tiết về khách hàng đang sử dụng Power Platform Khả năng của Hộp khóa khách hàng. Khách hàng Lockbox cung cấp một giao diện để xem xét và phê duyệt (hoặc từ chối) các yêu cầu truy cập dữ liệu. Các yêu cầu này xảy ra khi cần truy cập dữ liệu vào dữ liệu khách hàng để giải quyết một trường hợp hỗ trợ. Để sử dụng tính năng này, Thông tin chi tiết về khách hàng phải có kết nối hiện có với Microsoft Dataverse môi trường trong người thuê nhà của bạn.
+1. Truy cập tài khoản Data Lake Storage của bạn và mở liên kết hiển thị trên màn hình.
 
-Để biết thêm thông tin về Hộp khóa khách hàng, hãy xem [bản tóm tắt](/power-platform/admin/about-lockbox#summary) của Power Platform Hộp khóa khách hàng. Bài báo cũng mô tả [quy trình làm việc](/power-platform/admin/about-lockbox#workflow) và yêu cầu [thành lập](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) để bật Hộp khóa khách hàng.
+1. Phê duyệt Liên kết Riêng tư.
 
-> [!IMPORTANT]
-> Quản trị viên toàn cầu cho Power Platform hoặc Power Platform quản trị viên có thể phê duyệt các yêu cầu Hộp khóa khách hàng được cấp cho Thông tin chi tiết về khách hàng.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Làm phong phú hồ sơ khách hàng với dữ liệu vị trí từ Azure Maps (xem trước)
 description: Thông tin chung về dịch vụ tăng cường dữ liệu của bên thứ nhất Azure Maps.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052633"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238068"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Làm phong phú hồ sơ khách hàng với dữ liệu vị trí từ Azure Maps (xem trước)
 
@@ -35,14 +35,9 @@ Bạn phải là một [người quản lý](permissions.md#admin) trong Thông 
 
 1. Nhập tên cho kết nối và khóa API Azure Maps hợp lệ.
 
-1. Xem xét và chấp thuận [Quyền riêng tư dữ liệu và sự tuân thủ](#data-privacy-and-compliance) bằng cách chọn **Tôi đồng ý**.
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
 1. Lựa chọn **Kiểm chứng** để xác thực cấu hình và sau đó chọn **Tiết kiệm**.
-
-### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
-
-Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới Azure Maps, bạn cho phép truyền dữ liệu ra ngoài phạm vi tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu có khả năng là thông tin nhạy cảm, chẳng hạn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng Azure Maps đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy chuyển đến phần [Điều khoản về quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tính năng tăng cường này bất kỳ lúc nào để ngừng sử dụng chức năng này.
 
 ## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
 
@@ -60,7 +55,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tí
 
 1. Chọn **Tập dữ liệu khách hàng** và chọn cấu hình hoặc phân đoạn bạn muốn bổ sung thêm dữ liệu từ Microsoft. Các *khách hàng* thực thể làm phong phú tất cả hồ sơ khách hàng của bạn trong khi một phân khúc chỉ làm phong phú thêm hồ sơ khách hàng có trong phân khúc đó.
 
-1. Xác định loại trường nào từ cấu hình hợp nhất của bạn sẽ sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
+1. Xác định loại trường nào từ cấu hình hợp nhất của bạn để sử dụng để đối sánh: địa chỉ chính và / hoặc địa chỉ phụ. Bạn có thể chỉ định kiểu ánh xạ trường cho cả hai địa chỉ và tăng cường dữ liệu hồ sơ cho cả hai địa chỉ một cách riêng biệt. Ví dụ: đối với địa chỉ nhà riêng và địa chỉ doanh nghiệp. Chọn **Tiếp theo**.
 
 1. Ánh xạ các trường của bạn với dữ liệu vị trí từ Bản đồ Azure. Các trường **Đường 1** và **Mã zip/bưu chính** là bắt buộc cho địa chỉ chính và/hoặc phụ đã chọn. Để có độ chính xác đối sánh cao hơn, hãy thêm nhiều trường hơn.
 
@@ -86,7 +81,7 @@ Quản trị viên Dynamics 365 Customer Insights của bạn có thể xóa tí
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Các **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
+Các **Số lượng khách hàng làm giàu theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
 
 ## <a name="next-steps"></a>Các bước tiếp theo
 

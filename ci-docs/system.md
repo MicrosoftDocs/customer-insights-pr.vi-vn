@@ -1,7 +1,7 @@
 ---
-title: Cấu hình hệ thống
+title: Xem cấu hình hệ thống
 description: Tìm hiểu về cài đặt hệ thống trong Dynamics 365 Customer Insights.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,40 +10,78 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050697"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246273"
 ---
-# <a name="system-configuration"></a>Cấu hình hệ thống
+# <a name="view-system-configuration"></a>Xem cấu hình hệ thống
 
-Để truy cập cấu hình hệ thống, hãy truy cập **Quản trị viên** > **Hệ thống** để xem danh sách các tác vụ và quy trình của hệ thống.
+Xem thông tin hệ thống, trạng thái hệ thống và sử dụng API.
 
-Trang **Hệ thống** bao gồm các tab sau:
-- [Trạng thái](#status-tab)
-- [Lịch trình](#schedule-tab)
-- [Sử dụng API](#api-usage-tab)
-- [Giới thiệu](#about-tab)
-- [Chung](#general-tab)
+## <a name="view-api-usage"></a>Xem mức sử dụng API
 
-:::image type="content" source="media/system-tabs.png" alt-text="Các tab thiết đặt trên trang hệ thống.":::
+Xem chi tiết về việc sử dụng API thời gian thực và xem sự kiện nào đã xảy ra trong một khung thời gian nhất định.
 
-## <a name="status-tab"></a>Tab Trạng thái
+1. Đi đến **Quản trị viên** > **Hệ thống** và chọn **Sử dụng API** chuyển hướng.
 
-Các **Tab trạng thái** cho phép bạn theo dõi tiến trình của các tác vụ, quá trình nhập dữ liệu, xuất dữ liệu và một số quy trình sản phẩm quan trọng khác. Xem lại thông tin trên tab này để đảm bảo tính hoàn chỉnh của các tác vụ và quy trình đang hoạt động của bạn.
+1. **Chọn khung thời gian** xem.
 
-Tab này bao gồm các bảng với trạng thái và thông tin xử lý cho các quy trình khác nhau. Mỗi bảng theo dõi **Tên** của nhiệm vụ và thực thể tương ứng, **Trạng thái** của lần chạy gần đây nhất và thời điểm **Cập nhật gần đây nhất**. Bạn có thể xem chi tiết của vài lần chạy gần đây nhất bằng cách chọn tác vụ hoặc tên quy trình. 
+   Các **Sử dụng API** trang có ba phần:
 
-Chọn trạng thái bên cạnh nhiệm vụ hoặc quy trình trong **Trạng thái** cột để mở **Chi tiết tiến độ** ngăn.
+   - **Lệnh gọi API** - biểu đồ hiển thị tổng số cuộc gọi đến API trong khung thời gian đã chọn.
+   - **Truyền dữ liệu** - biểu đồ hiển thị lượng dữ liệu đã được chuyển qua API trong khung thời gian đã chọn.
+   - **Hoạt động** - một bảng với các hàng cho mỗi hoạt động API có sẵn và thông tin chi tiết về việc sử dụng các hoạt động. Chọn một tên hoạt động để truy cập [tham chiếu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Các hoạt động sử dụng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một biểu tượng hai mắt để xem việc sử dụng API trong thời gian thực.
+
+   1. Chọn ống nhòm để mở **Sử dụng API thời gian thực** ngăn chứa chi tiết sử dụng cho hoạt động.
+   1. **Chọn khung thời gian** xem.
+   1. Sử dụng **Nhóm theo** để chọn cách trình bày tốt nhất các tương tác trong thời gian thực của bạn. Nhóm dữ liệu theo API **Phương pháp**, **thực thể đủ điều kiện** (thực thể đã nhập), **Được tạo bởi** (nguồn của sự kiện), **Kết quả** (thành công hay thất bại) hoặc **Mã lỗi**. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
+
+## <a name="view-system-information"></a>Xem thông tin hệ thống
+
+Xem tên hiển thị môi trường, ID, khu vực, loại và ID phiên.
+
+1. Đi đến **Quản trị viên** > **Hệ thống** và chọn **Về** chuyển hướng.
+
+1. Để xem ngôn ngữ và quốc gia / khu vực, hãy chọn **Chung** chuyển hướng.
+
+### <a name="update-preferred-language-or-countryregion"></a>Cập nhật ngôn ngữ ưa thích hoặc quốc gia / khu vực
+
+Thấu hiểu khách hàng [hỗ trợ nhiều ngôn ngữ](/dynamics365/get-started/availability). Ứng dụng này sử dụng tùy chọn ngôn ngữ của bạn để hiển thị các thành phần như menu, văn bản nhãn và thông báo hệ thống bằng ngôn ngữ ưa thích của bạn.
+
+Dữ liệu đã nhập và thông tin bạn đã nhập theo cách thủ công sẽ không được dịch.
+
+1. Đi đến **Quản trị viên** > **Hệ thống** và chọn **Chung** chuyển hướng.
+
+1. Để thay đổi ngôn ngữ ưa dùng của bạn, hãy chọn một **Ngôn ngữ** từ mục thả xuống.
+
+1. Để thay đổi định dạng ưa dùng của bạn cho ngày, thời gian và số, hãy sử dụng mục thả xuống **Định dạng quốc gia/khu vực**. Bản xem trước định dạng được hiển thị. Hệ thống tự động gợi ý lựa chọn khi bạn chọn ngôn ngữ mới.
+
+1. Chọn **Lưu.**
+
+## <a name="view-system-status"></a>Xem trạng thái hệ thống
+
+Theo dõi tiến trình của các tác vụ, nhập dữ liệu, xuất dữ liệu và một số quy trình sản phẩm quan trọng khác. Xem lại thông tin để đảm bảo tính đầy đủ của các nhiệm vụ và quy trình đang hoạt động của bạn.
+
+1. Đi đến **Quản trị viên** > **Hệ thống** và chọn **Trạng thái** chuyển hướng.
+
+   Trạng thái và thông tin xử lý cho các quy trình khác nhau hiển thị. Xem **Tên** của nhiệm vụ, **Trạng thái** lần chạy gần đây nhất và khi **Cập nhật mới nhất**.
+
+1. Để xem chi tiết của vài lần chạy gần đây nhất, hãy chọn tác vụ hoặc tên quy trình.
+
+1. Để xem chi tiết tiến độ cho một nhiệm vụ, hãy chọn trạng thái. Các **Chi tiết tiến độ** bảng hiển thị.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Ngăn chi tiết tiến trình hệ thống":::
+
+1. Để xem chi tiết tiến độ cho tất cả các nhiệm vụ, hãy chọn **Toàn bộ quy trình làm việc**.
 
 ### <a name="status-definitions"></a>Định nghĩa trạng thái
 
@@ -51,19 +89,19 @@ Hệ thống sử dụng các trạng thái sau cho các tác vụ và quy trìn
 
 |Trạng thái  |Định nghĩa  |
 |---------|---------|
-|Đã huỷ |Người dùng đã hủy quá trình xử lý trước khi quá trình kết thúc.   |
-|Không thành công   |Phiên nhập dữ liệu gặp lỗi.         |
-|Thất bại  |Quá trình xử lý không thành công.  |
-|Chưa bắt đầu   |Nguồn dữ liệu chưa nhập dữ liệu nào hoặc vẫn ở chế độ nháp.         |
+|Đã huỷ |Tác vụ hoặc quy trình đã bị người dùng hủy bỏ trước khi hoàn thành.   |
+|Không thành công   |Tác vụ hoặc quy trình gặp lỗi.         |
+|Thất bại  |Tác vụ hoặc quy trình không thành công.  |
+|Chưa bắt đầu   |Nguồn dữ liệu chưa nhập dữ liệu nào hoặc tác vụ vẫn ở chế độ nháp.         |
 |Đang xử lý  |Nhiệm vụ hoặc quy trình đang được thực hiện.  |
-|Làm mới    |Đang nhập dữ liệu. Bạn có thể hủy thao tác này bằng cách chọn **Ngừng làm mới** trong cột **Hành động**. Dừng việc làm mới nguồn dữ liệu sẽ hoàn nguyên nguồn dữ liệu về trạng thái làm mới cuối cùng.       |
+|Làm mới    |Nhiệm vụ hoặc quy trình đang được thực hiện. Để hủy thao tác này, hãy chọn **Làm mới** và **Hủy bỏ công việc**. Dừng làm mới một nhiệm vụ hoặc quy trình sẽ hoàn nguyên nó về trạng thái làm mới cuối cùng.       |
 |Đã bỏ qua  |Tác vụ hoặc quy trình đã bị bỏ qua. Một hoặc nhiều quá trình xuôi dòng mà nhiệm vụ này phụ thuộc vào bị lỗi hoặc bị bỏ qua.|
 |Thành công  |Tác vụ hoặc quy trình đã hoàn thành thành công. Đối với nguồn dữ liệu, cho biết dữ liệu đã được nhập thành công nếu thời gian được đề cập trong **Làm mới** cột.|
 |Đã xếp hàng đợi | Quá trình xử lý được xếp hàng đợi và sẽ bắt đầu sau khi hoàn thành tất cả các tác vụ và quy trình ngược dòng. Để biết thêm thông tin, hãy xem [Làm mới quy trình](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Làm mới quy trình
 
-Làm mới cho các tác vụ và quy trình được chạy theo [lịch trình đã định cấu hình](#schedule-tab). 
+Làm mới cho các tác vụ và quy trình được chạy theo [lịch trình đã định cấu hình](schedule-refresh.md).
 
 |Quá trình  |Description  |
 |---------|---------|
@@ -86,58 +124,6 @@ Làm mới cho các tác vụ và quy trình được chạy theo [lịch trình
 |Người dùng  |Chạy thủ công (làm mới một lần). Phụ thuộc vào các thực thể.  |
 
 Chọn trạng thái của một quá trình để xem chi tiết tiến độ của toàn bộ công việc mà nó đã thực hiện. Các quy trình làm mới ở trên có thể giúp hiểu những gì bạn có thể làm để giải quyết **Đã bỏ qua** hoặc **Đã xếp hàng** nhiệm vụ hoặc quy trình.
-
-## <a name="schedule-tab"></a>Tab Lập lịch trình
-
-Sử dụng tab **Lịch trình** để lên lịch làm mới tự động tất cả [nguồn dữ liệu đã nhập](data-sources.md). Tự động làm mới giúp đảm bảo rằng cập nhật từ các nguồn dữ liệu được phản ánh trong hồ sơ khách hàng hợp nhất.
-
-> [!NOTE]
-> Các nguồn dữ liệu do bạn quản lý làm mới theo lịch trình của riêng chúng. Để lên lịch làm mới các nguồn dữ liệu do bạn quản lý, hãy định cấu hình cài đặt làm mới trên nguồn dữ liệu cụ thể đó từ **Nguồn dữ liệu** trang.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Cài đặt làm mới luồng dữ liệu.":::
-
-1. Đi đến **Quản trị viên** > **Hệ thống** và chọn **Lịch trình** chuyển hướng.
-
-2. Trạng thái mặc định cho làm mới theo lịch trình là **Tắt**. Để bật làm mới theo lịch trình, thay chuyển nút ở đầu màn hình thành **Bật**.
-
-3. Chọn tùy chọn làm mới **Hàng tuần** (mặc định) và **Hàng ngày**. Nếu bạn có ý định lên lịch làm mới hàng tuần, hãy chọn một hoặc nhiều ngày mà bạn muốn chạy quy trình làm mới.
-
-4. Đặt **Múi giờ**, sau đó sử dụng mục thả xuống **Thời gian** để đặt thời gian làm mới. Khi bạn đã hoàn tất, chọn **Đặt**. Nếu bạn muốn lên lịch nhiều lần làm mới trong một ngày, hãy chọn **Thêm thời gian khác**.
-
-5. Chọn **Lưu** để áp dụng thay đổi.
-
-## <a name="about-tab"></a>Giới thiệu về tab
-
-Tab **Giới thiệu** chứa **Tên hiển thị**, **ID môi trường** hiện hoạt, **Vùng** và **ID phiên** của tổ chức bạn. Nếu bạn có nhiều môi trường làm việc, bạn nên đặt cho mỗi môi trường một tên hiển thị dễ nhận dạng.
-
-## <a name="general-tab"></a>Tab Tổng quát
-
-Bạn có thể thay đổi ngôn ngữ và định dạng quốc gia/khu vực trên tab **Tổng quát**.
-
-Thấu hiểu khách hàng [hỗ trợ nhiều ngôn ngữ](/dynamics365/get-started/availability). Ứng dụng này sử dụng tùy chọn ngôn ngữ của bạn để hiển thị các thành phần như menu, văn bản nhãn và thông báo hệ thống bằng ngôn ngữ ưa thích của bạn.
-
-Dữ liệu đã nhập và thông tin bạn đã nhập theo cách thủ công sẽ không được dịch.
-
-### <a name="update-the-settings"></a>Cập nhật thiết đặt
-
-Để thay đổi ngôn ngữ ưa dùng của bạn, hãy chọn một **Ngôn ngữ** từ mục thả xuống.
-
-Để thay đổi định dạng ưa dùng của bạn cho ngày, thời gian và số, hãy sử dụng mục thả xuống **Định dạng quốc gia/khu vực**. Một bản xem trước định dạng được hiển thị trong trường này. Hệ thống sẽ tự động đề xuất lựa chọn khi bạn chọn ngôn ngữ mới.
-
-Chọn **Lưu** để xác nhận lựa chọn của bạn.
-
-## <a name="api-usage-tab"></a>Tab sử dụng API
-
-Tìm chi tiết về việc sử dụng API thời gian thực và xem sự kiện nào đã xảy ra trong một khung thời gian nhất định. Bạn chọn khung thời gian trong menu thả xuống **Chọn khung thời gian**. 
-
-**Sử dụng API** chứa ba phần: 
-- **Lệnh gọi API** - biểu đồ hiển thị tổng số cuộc gọi đến API trong khung thời gian đã chọn.
-
-- **Truyền dữ liệu** - biểu đồ hiển thị lượng dữ liệu đã được chuyển qua API trong khung thời gian đã chọn.
-
--  **Hoạt động** - một bảng với các hàng cho mỗi hoạt động API có sẵn và thông tin chi tiết về việc sử dụng các hoạt động. Bạn có thể chọn một tên hoạt động để truy cập [tham chiếu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Các hoạt động sử dụng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một nút có biểu tượng ống nhòm để xem việc sử dụng API trong thời gian thực. Chọn nút để mở ngăn bên chứa chi tiết sử dụng cho việc sử dụng API thời gian thực trong môi trường hiện tại.   
-   Sử dụng hộp **Nhóm theo** trong ngăn **Sử dụng API thời gian thực** để chọn cách tốt nhất để trình bày các tương tác trong thời gian thực của bạn. Bạn có thể nhóm dữ liệu theo phương pháp API, tên đủ điều kiện của thực thể (thực thể được nhập), tạo bởi (nguồn sự kiện), kết quả (thành công hay thất bại) hoặc mã lỗi. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

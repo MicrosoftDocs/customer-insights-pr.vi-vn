@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139697"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213608"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Hợp nhất các trường khách hàng để hợp nhất dữ liệu
 
@@ -50,7 +50,7 @@ Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ 
 1. Tùy ý, [nhóm hồ sơ thành các hộ gia đình hoặc cụm](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
-> [Bước tiếp theo: Xem xét sự hợp nhất](review-unification.md)
+> [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)
 
 ### <a name="edit-a-merged-field"></a>Chỉnh sửa trường đã hợp nhất
 
@@ -58,6 +58,9 @@ Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ 
 
 1. Chỉ định cách kết hợp hoặc hợp nhất các trường từ một trong ba tùy chọn:
     - **Quan trọng**: Xác định giá trị chiến thắng dựa trên xếp hạng quan trọng được chỉ định cho các trường tham gia. Đây là tùy chọn phối mặc định. Chọn **Di chuyển lên/xuống** để thiết lập xếp hạng mức độ quan trọng.
+
+      > [!NOTE]
+      > Thông tin chi tiết về khách hàng sử dụng giá trị không rỗng đầu tiên. Ví dụ: các thực thể A, B và C đã cho được xếp hạng theo thứ tự đó, nếu A.Name và B.Name là rỗng thì giá trị từ C.Name sẽ được sử dụng.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Tùy chọn quan trọng trong hộp thoại hợp nhất các trường.":::
 
@@ -172,9 +175,9 @@ Bạn có thể xác định các quy tắc để nhóm các cấu hình liên q
 
 1. Chỉ định các quy tắc và điều kiện để xác định cụm của bạn.
 
-1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm vào dưới dạng các trường mới vào *khách hàng* thực thể.
+1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm dưới dạng các trường mới vào *khách hàng* thực thể.
 
 > [!div class="nextstepaction"]
-> [Bước tiếp theo: Xem xét sự hợp nhất](review-unification.md)
+> [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

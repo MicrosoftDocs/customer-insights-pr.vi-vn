@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196420"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259870"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Xuất dữ liệu sang Azure Synapse Analytics (xem trước)
 
@@ -24,7 +24,7 @@ Azure Synapse là một dịch vụ phân tích giúp tăng tốc thời gian đ
 > [!NOTE]
 > Đảm bảo bạn đặt tất cả các phép **gán vai trò** giống như mô tả.
 
-- Trong Thông tin chi tiết về khách hàng,Azure Active Directory (AD) tài khoản người dùng phải có [Vai trò quản trị viên](permissions.md#assign-roles-and-permissions).
+- Trong Thông tin chi tiết về khách hàng,Azure Active Directory (AD) tài khoản người dùng phải có [Vai trò quản trị viên](permissions.md#add-users).
 
 Trong Azure:
 
@@ -39,6 +39,8 @@ Trong Azure:
 - Các *[Azure Synapse không gian làm việc được quản lý danh tính](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* có **Người đóng góp dữ liệu khối lưu trữ** quyền trên Azure Data Lake Storage Tài khoản Gen2 nơi dữ liệu được đặt và liên kết với Azure Synapse không gian làm việc. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Trên Azure Synapse không gian làm việc, *dịch vụ chính cho Thông tin chi tiết về khách hàng* có **Quản trị viên Synapse**[vai trò được giao](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Nếu môi trường Thông tin chi tiết về khách hàng của bạn lưu trữ dữ liệu trong [riêng Azure Data Lake Storage](own-data-lake-storage.md), người dùng thiết lập kết nối với Azure Synapse Analytics cần ít nhất là cài sẵn **Người đọc** trên tài khoản Data Lake Storage. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Thiết lập kết nối với Azure Synapse
 
@@ -66,7 +68,7 @@ Trong Azure:
 
 1. Lựa chọn **Thêm xuất khẩu**.
 
-1. Bên trong **Kết nối để xuất**, hãy chọn một kết nối từ Azure Synapse Analytics tiết diện. Liên hệ với quản trị viên nếu không có kết nối.
+1. Bên trong **Kết nối để xuất** trường, chọn một kết nối từ Azure Synapse Analytics tiết diện. Liên hệ với quản trị viên nếu không có kết nối.
 
 1. Đặt một **Tên hiển thị** dễ nhận biết cho việc xuất dữ liệu và **Tên cơ sở dữ liệu** của bạn. Việc xuất sẽ tạo ra một [Azure Synapse cơ sở dữ liệu hồ](/azure/synapse-analytics/database-designer/concepts-lake-database) trong không gian làm việc được xác định trong kết nối.
 
@@ -78,7 +80,7 @@ Trong Azure:
 
 [!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Để truy vấn dữ liệu đã được xuất sang Synapse Analytics, bạn cần **Bộ đọc dữ liệu khối lưu trữ** truy cập vào bộ nhớ đích trên không gian làm việc của các tệp xuất.
+Để truy vấn dữ liệu đã được xuất sang Synapse Analytics, bạn cần **Bộ đọc dữ liệu khối lưu trữ** quyền truy cập vào bộ nhớ đích trên không gian làm việc của các tệp xuất.
 
 ## <a name="update-an-export"></a>Cập nhật việc xuất dữ liệu
 

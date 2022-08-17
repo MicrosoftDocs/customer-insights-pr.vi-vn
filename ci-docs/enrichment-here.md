@@ -1,23 +1,23 @@
 ---
 title: Làm phong phú hồ sơ khách hàng với Công nghệ HERE (xem trước)
 description: Thông tin chung về dịch vụ tăng cường dữ liệu của bên thứ ba HERE Technologies.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 26de9fce863c9832b70adf3ce39cb2ae0ce43d0e
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 86a070342193dd7afda38823d90f4bd28c8b862e
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196282"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237884"
 ---
 # <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Làm phong phú hồ sơ khách hàng với Công nghệ HERE (xem trước)
 
-HERE Technologies là một công ty nền tảng vị trí cung cấp dữ liệu và dịch vụ tập trung vào vị trí. Các dịch vụ làm giàu dữ liệu của HERE Technologies cải thiện độ chính xác của thông tin vị trí về khách hàng của bạn. Nó cung cấp tính năng chuẩn hóa địa chỉ, trích xuất vĩ độ và kinh độ, v.v.
+HERE Technologies là một công ty nền tảng vị trí cung cấp dữ liệu và dịch vụ tập trung vào vị trí. Các dịch vụ làm giàu dữ liệu của HERE Technologies cải thiện độ chính xác của thông tin vị trí về khách hàng của bạn. Nó cung cấp chuẩn hóa địa chỉ, trích xuất vĩ độ và kinh độ, v.v.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -33,16 +33,11 @@ Bạn phải là một [người quản lý](permissions.md#admin) trong Thông 
 
 1. Nhập tên cho kết nối và khóa API HERE Technologies hợp lệ.
 
-1. Xem xét và chấp thuận [Quyền riêng tư dữ liệu và sự tuân thủ](#data-privacy-and-compliance) bằng cách chọn **Tôi đồng ý**.
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
 1. Lựa chọn **Kiểm chứng** để xác thực cấu hình và sau đó chọn **Tiết kiệm**.
 
    :::image type="content" source="media/enrichment-HERE-connection.png" alt-text="Trang cấu hình kết nối cho HERE Technologies.":::
-
-### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
-
-Khi bật Dynamics 365 Customer Insights để truyền dữ liệu tới HERE Technologies, bạn cho phép truyền dữ liệu ra ngoài phạm vi tuân thủ cho Dynamics 365 Customer Insights, bao gồm dữ liệu có khả năng là thông tin nhạy cảm, chẳng hạn như Dữ liệu cá nhân. Microsoft sẽ truyền những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng HERE Technologies đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
 
 ## <a name="configure-the-enrichment"></a>Đặt cấu hình dữ liệu tăng cường
 

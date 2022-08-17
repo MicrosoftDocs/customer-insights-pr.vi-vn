@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170707"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246319"
 ---
 # <a name="segments-overview"></a>Tổng quan về phân khúc
 
@@ -33,7 +33,7 @@ Chọn cách tạo phân khúc dựa trên đối tượng mục tiêu của b�
 
 # <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
-- Phân đoạn phức tạp với trình tạo phân đoạn: [Xây dựng của riêng bạn](segment-builder.md)
+- Các phân đoạn phức tạp với trình tạo phân đoạn: [Xây dựng của riêng bạn](segment-builder.md)
 - Các phân khúc đơn giản với một toán tử: [Phân khúc nhanh](segment-quick.md)
 - Cách thức được hỗ trợ bởi AI để tìm những khách hàng tương tự: [Khách hàng tương tự](find-similar-customer-segments.md)
 - Đề xuất do AI hỗ trợ dựa trên các biện pháp hoặc thuộc tính: [Các phân đoạn được đề xuất dựa trên các thước đo](suggested-segments.md)
@@ -58,12 +58,12 @@ Chọn một phân đoạn để xem các hành động có sẵn.
 - **Chỉnh sửa** phân khúc để thay đổi các thuộc tính của phân khúc đó.
 - **Tạo bản sao** của một phân khúc. Bạn có thể chọn chỉnh sửa các thuộc tính của nó ngay lập tức hoặc lưu bản sao.
 - [**Làm mới**](#refresh-segments) phân đoạn để bao gồm dữ liệu mới nhất.
-- **Kích hoạt** hoặc **Hủy kích hoạt** phân khúc. Các phân đoạn không hoạt động sẽ không được làm mới trong [làm mới theo lịch trình](system.md#schedule-tab) và có **Trạng thái** được liệt kê là **Đã bỏ qua**, cho thấy rằng việc làm mới thậm chí còn chưa được thử. Các phân đoạn đang hoạt động được làm mới dựa trên loại của chúng: tĩnh hoặc động.
+- **Kích hoạt** hoặc **Hủy kích hoạt** phân khúc. Các phân đoạn không hoạt động sẽ không được làm mới trong [làm mới theo lịch trình](schedule-refresh.md) và có **Trạng thái** được liệt kê là **Đã bỏ qua**, cho thấy rằng việc làm mới thậm chí còn chưa được thử. Các phân đoạn đang hoạt động được làm mới dựa trên loại của chúng: tĩnh hoặc động.
 - **Tạo tĩnh** hoặc **Làm cho năng động** loại phân đoạn. Các phân đoạn tĩnh phải được làm mới theo cách thủ công. Các phân đoạn động được tự động làm mới trong quá trình làm mới hệ thống.
 - [**Tìm khách hàng tương tự**](find-similar-customer-segments.md) khỏi phân khúc.
 - **Đổi tên** phân khúc.
 - **Nhãn** đến [quản lý thẻ](work-with-tags-columns.md#manage-tags) cho phân khúc.
-- [**Quản lý xuất**](#export-segments) để xem các phân đoạn liên quan đến xuất và quản lý chúng. [Tìm hiểu thêm về nội dung xuất.](export-destinations.md)
+- [**Quản lý xuất**](#export-segments) để xem các phân đoạn liên quan đến xuất khẩu và quản lý chúng. [Tìm hiểu thêm về nội dung xuất.](export-destinations.md)
 - **Xóa** phân khúc.
 - **Cột** đến [tùy chỉnh các cột](work-with-tags-columns.md#customize-columns) màn hình đó.
 - **Lọc** đến [lọc trên các thẻ](work-with-tags-columns.md#filter-on-tags).
@@ -88,7 +88,7 @@ Phần dưới chứa danh sách các thành phần phân khúc.
 
 Các phân đoạn có thể được làm mới theo lịch trình tự động hoặc được làm mới theo cách thủ công theo yêu cầu. Để làm mới một hoặc nhiều phân đoạn theo cách thủ công, hãy chọn chúng và chọn **Làm mới**.
 
-Đến [lên lịch làm mới tự động](system.md#schedule-tab), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**. Các quy tắc sau được áp dụng:
+Đến [lên lịch làm mới tự động](schedule-refresh.md), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**. Các quy tắc sau được áp dụng:
 
 - Tất cả các phân đoạn với loại **Năng động** hoặc **Sự bành trướng** sẽ được tự động làm mới theo nhịp đã đặt. Khi quá trình làm mới hoàn tất, **Trạng thái** cho biết nếu có bất kỳ vấn đề nào khi làm mới phân đoạn. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần làm mới thành công gần đây nhất. Nếu xảy ra lỗi, hãy chọn lỗi để xem chi tiết về những gì đã xảy ra.
 - Phân đoạn có loại **Tĩnh** *sẽ không* được làm mới tự động. Các **Làm mới lần cuối** hiển thị dấu thời gian của lần cuối cùng phân khúc tĩnh được chạy hoặc làm mới theo cách thủ công.
@@ -109,11 +109,11 @@ Xuất phân đoạn sang các ứng dụng khác để sử dụng thêm dữ l
 
 1. Chọn **Quay lại** để quay lại trang chính cho các phân khúc.
 
-## <a name="track-usage-of-a-segment"></a>Theo dõi việc sử dụng một đoạn
+## <a name="track-usage-of-a-segment"></a>Theo dõi việc sử dụng một phân đoạn
 
 Nếu bạn sử dụng các phân đoạn trong các ứng dụng dựa trên cùng một Microsoft Dataverse tổ chức được kết nối với Thông tin chi tiết về khách hàng, bạn có thể theo dõi việc sử dụng một phân khúc. Vì [Các phân đoạn Thông tin chi tiết về khách hàng được sử dụng trong hành trình của khách hàng của Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), hệ thống thông báo cho bạn về việc sử dụng phân đoạn đó.
 
-Khi chỉnh sửa phân đoạn đang được sử dụng trong môi trường Thông tin chi tiết về khách hàng hoặc trong hành trình của khách hàng trong Tiếp thị, một biểu ngữ trong [trình tạo phân đoạn](segment-builder.md) thông báo cho bạn về các phụ thuộc. Kiểm tra chi tiết phụ thuộc trực tiếp từ biểu ngữ hoặc bằng cách chọn **Cách sử dụng** trong trình tạo phân đoạn.
+Khi chỉnh sửa phân đoạn đang được sử dụng trong môi trường Thông tin chi tiết về khách hàng hoặc trong hành trình của khách hàng trong Tiếp thị, một biểu ngữ trong [người xây dựng phân đoạn](segment-builder.md) thông báo cho bạn về các phụ thuộc. Kiểm tra chi tiết phụ thuộc trực tiếp từ biểu ngữ hoặc bằng cách chọn **Cách sử dụng** trong trình tạo phân đoạn.
 
 Các **Sử dụng đoạn đường** ngăn hiển thị chi tiết về việc sử dụng phân đoạn này trong Dataverse ứng dụng dựa trên. Đối với các phân đoạn được sử dụng trong hành trình của khách hàng, bạn sẽ tìm thấy một liên kết để kiểm tra hành trình trong Tiếp thị nơi phân đoạn này được sử dụng. Nếu bạn có quyền truy cập ứng dụng Tiếp thị, hãy xem thêm chi tiết tại đó.
 
@@ -121,11 +121,11 @@ Các **Sử dụng đoạn đường** ngăn hiển thị chi tiết về việc
 
 Hệ thống thông báo cho bạn về việc sử dụng phân đoạn được theo dõi khi bạn cố gắng xóa nó. Nếu phân khúc bạn sắp xóa được sử dụng trong hành trình của khách hàng trong Tiếp thị, hành trình đó sẽ dừng lại đối với tất cả người dùng trong phân khúc. Nếu hành trình là một phần của chiến dịch tiếp thị, việc xóa sẽ ảnh hưởng đến chính chiến dịch đó. Tuy nhiên, bạn vẫn có thể xóa phân đoạn bất chấp các cảnh báo.
 
-:::image type="content" source="media/segment-usage-delete.png" alt-text="Hộp thoại để xác nhận việc xóa phân đoạn khi một phân đoạn được sử dụng trong Dataverse đăng kí.":::
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Hộp thoại để xác nhận xóa phân đoạn khi một phân đoạn được sử dụng trong Dataverse đăng kí.":::
 
 ### <a name="supported-apps"></a>Các ứng dụng được hỗ trợ
 
-Việc sử dụng hiện được theo dõi trong phần sau Dataverse ứng dụng dựa trên:
+Việc sử dụng hiện được theo dõi như sau Dataverse ứng dụng dựa trên:
 
 - [Hành trình của khách hàng trong Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 

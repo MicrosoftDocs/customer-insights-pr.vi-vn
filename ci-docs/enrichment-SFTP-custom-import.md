@@ -1,29 +1,29 @@
 ---
 title: Làm phong phú hồ sơ khách hàng với tính năng nhập tùy chỉnh SFTP (xem trước)
 description: Thông tin chung về tính năng nhập tùy chỉnh SFTP để tăng cường dữ liệu.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195822"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237792"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Làm phong phú hồ sơ khách hàng với tính năng nhập tùy chỉnh SFTP (xem trước)
 
-Nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP) cho phép bạn nhập dữ liệu mà không phải trải qua quá trình hợp nhất dữ liệu. Đó là một cách linh hoạt, bảo mật và dễ dàng để đưa dữ liệu của bạn vào. Tính năng nhập tùy chỉnh SFTP có thể được sử dụng kết hợp với [Xuất SFTP](export-sftp.md) cho phép bạn xuất dữ liệu hồ sơ khách hàng cần thiết để tăng cường. Sau đó, dữ liệu có thể được xử lý và bổ sung chi tiết đồng thời có thể sử dụng tính năng nhập tùy chỉnh SFTP để đưa dữ liệu đã được bổ sung chi tiết trở lại Dynamics 365 Customer Insights.
+Nhập tùy chỉnh Giao thức truyền tệp bảo mật (SFTP) cho phép bạn nhập dữ liệu mà không phải trải qua quá trình hợp nhất dữ liệu. Đó là một cách linh hoạt, bảo mật và dễ dàng để đưa dữ liệu của bạn vào. Tính năng nhập tùy chỉnh SFTP có thể được sử dụng kết hợp với [Xuất SFTP](export-sftp.md) cho phép bạn xuất dữ liệu hồ sơ khách hàng cần thiết để tăng cường. Sau đó, dữ liệu có thể được xử lý và bổ sung chi tiết, đồng thời có thể sử dụng tính năng nhập tùy chỉnh SFTP để đưa dữ liệu đã được bổ sung chi tiết trở lại Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Đã biết tên tệp và vị trí (đường dẫn) của tệp sẽ được nhập trên máy chủ SFTP.
 
-- Một *model.json* tệp chỉ định lược đồ Mô hình Dữ liệu Chung cho dữ liệu được nhập sẵn có. Tệp này phải nằm trong cùng thư mục với tệp để nhập.
+- Một *model.json* tệp chỉ định lược đồ Mô hình dữ liệu chung cho dữ liệu được nhập sẵn có. Tệp này phải nằm trong cùng thư mục với tệp để nhập.
 
 - SFTP [sự liên quan](connections.md) Là [đã cấu hình](#configure-the-connection-for-sftp-custom-import).
 
@@ -85,14 +85,9 @@ Bạn phải là một [người quản lý](permissions.md#admin) trong Thông 
 
 1. Nhập tên người dùng, mật khẩu và URL máy chủ hợp lệ cho máy chủ SFTP chứa dữ liệu được nhập.
 
-1. Xem xét và chấp thuận [Quyền riêng tư dữ liệu và sự tuân thủ](#data-privacy-and-compliance) bằng cách chọn **Tôi đồng ý**.
+1. Xem lại [quyền riêng tư và tuân thủ dữ liệu](connections.md#data-privacy-and-compliance) và chọn **tôi đồng ý**.
 
 1. Lựa chọn **Kiểm chứng** để xác thực cấu hình và sau đó chọn **Tiết kiệm**.
-
-### <a name="data-privacy-and-compliance"></a>Quyền riêng tư về dữ liệu và sự tuân thủ
-
-Khi bạn bật Dynamics 365 Customer Insights để truyền dữ liệu bằng Nhập tùy chỉnh, bạn cho phép chuyển dữ liệu ra bên ngoài ranh giới tuân thủ đối với Dynamics 365 Customer Insights, bao gồm dữ liệu nhạy cảm tiềm ẩn như Dữ liệu cá nhân. Microsoft sẽ chuyển những dữ liệu đó theo chỉ dẫn của bạn, nhưng bạn có trách nhiệm đảm bảo rằng dữ liệu đáp ứng mọi nghĩa vụ về quyền riêng tư hoặc bảo mật mà bạn có thể có. Để biết thêm thông tin, hãy xem [Tuyên bố về Quyền riêng tư của Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Quản trị viên Dynamics 365 Customer Insights của bạn có thể loại bỏ dịch vụ tăng cường này bất kỳ lúc nào để ngừng sử dụng tính năng đó.
 
 ## <a name="configure-the-import"></a>Định cấu hình dữ liệu nhập
 

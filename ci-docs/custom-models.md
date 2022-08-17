@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800446"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245829"
 ---
 # <a name="custom-machine-learning-models"></a>Mô hình máy học tùy chỉnh
 
@@ -60,7 +60,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 1. Chọn **Không gian làm việc** được liên kết với dịch vụ web của bạn. 
 
-1. Chọn đường dẫn Azure máy học trong **Dịch vụ web chứa mô hình của bạn** trình đơn thả xuống. Sau đó, chọn **Tiếp**.    
+1. Chọn đường dẫn Azure máy học trong **Dịch vụ web chứa mô hình của bạn** thả xuống. Sau đó, chọn **Tiếp**.    
    Tìm hiểu thêm về [phát hành một quy trình trong Azure Machine Learning bằng cách sử dụng trình thiết kế](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) hoặc [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Quy trình của bạn phải được thiết kế theo [điểm cuối quy trình](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Đối với từng **Đầu vào dịch vụ web**, hãy chọn **Thực thể** phù hợp từ Customer Insights rồi chọn **Tiếp**.
@@ -84,7 +84,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
    > ![Liên kết kết quả với ngăn Dữ liệu khách hàng.](media/intelligence-screen4-relatetocustomer.png "Liên kết kết quả với ngăn Dữ liệu khách hàng")
 
 1. Bạn sẽ nhìn thấy màn hình **Quy trình làm việc được lưu** có thông tin chi tiết về quy trình làm việc.    
-   Nếu bạn đã định cấu hình quy trình làm việc cho đường dẫn Azure máy học, thì Customer Insights sẽ đính kèm vào không gian làm việc có chứa đường dẫn đó. Thông tin chi tiết về khách hàng sẽ nhận được một **Người đóng góp** vai trò trên không gian làm việc Azure.
+   Nếu bạn đã định cấu hình quy trình làm việc cho đường dẫn Azure máy học, thì Customer Insights sẽ đính kèm vào không gian làm việc chứa đường dẫn. Thông tin chi tiết về khách hàng sẽ nhận được một **Người đóng góp** vai trò trên không gian làm việc Azure.
 
 1. Chọn **Xong**.
 
@@ -112,7 +112,7 @@ Dự đoán cung cấp các khả năng để tạo ra trải nghiệm khách h�
 
 1. Chọn **Chạy**.
 
-Quy trình làm việc cũng chạy tự động với mỗi lần làm mới theo lịch trình. Tìm hiểu thêm về [cách thiết lập các lần làm mới theo lịch](system.md#schedule-tab).
+Quy trình làm việc cũng chạy tự động với mỗi lần làm mới theo lịch trình. Tìm hiểu thêm về [cách thiết lập các lần làm mới theo lịch](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Xóa quy trình
 

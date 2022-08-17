@@ -1,6 +1,6 @@
 ---
 title: Tổng quan về các biện pháp
-description: Tìm hiểu cách các thước đo giúp phân tích và phản ánh hiệu quả hoạt động của doanh nghiệp bạn.
+description: Tìm hiểu cách các biện pháp giúp phân tích và phản ánh hiệu quả hoạt động của doanh nghiệp bạn.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170876"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245399"
 ---
 # <a name="measures-overview"></a>Tổng quan về các biện pháp
 
@@ -53,7 +53,7 @@ Chọn bên cạnh một biện pháp để xem các hành động có sẵn. Ch
 - **Chỉnh sửa** các biện pháp để thay đổi các thuộc tính của nó.
 - **Làm mới** biện pháp bao gồm dữ liệu mới nhất.
 - **Đổi tên** giá trị đo.
-- **Hoạt động** hoặc **Hủy kích hoạt** các biện pháp. Các biện pháp không hoạt động sẽ không được làm mới trong một [làm mới theo lịch trình](system.md#schedule-tab) và có **Trạng thái** được liệt kê là **Đã bỏ qua**, cho thấy rằng việc làm mới thậm chí còn chưa được thử.
+- **Hoạt động** hoặc **Hủy kích hoạt** các biện pháp. Các biện pháp không hoạt động sẽ không được làm mới trong thời gian [làm mới theo lịch trình](schedule-refresh.md) và có **Trạng thái** được liệt kê là **Đã bỏ qua**, cho thấy rằng việc làm mới thậm chí còn chưa được thử.
 - **Nhãn** đến [quản lý thẻ](work-with-tags-columns.md#manage-tags) cho các biện pháp.
 - **Xóa** giá trị đo.
 - **Cột** đến [tùy chỉnh các cột](work-with-tags-columns.md#customize-columns) màn hình đó.
@@ -62,7 +62,7 @@ Chọn bên cạnh một biện pháp để xem các hành động có sẵn. Ch
 
 ## <a name="refresh-measures"></a>Làm mới các biện pháp
 
-Các phép đo có thể được làm mới theo lịch trình tự động hoặc được làm mới theo cách thủ công theo yêu cầu. Để làm mới một hoặc nhiều biện pháp theo cách thủ công, hãy chọn chúng và chọn **Làm mới**. Đến [lên lịch làm mới tự động](system.md#schedule-tab), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**.
+Các phép đo có thể được làm mới theo lịch trình tự động hoặc được làm mới theo cách thủ công theo yêu cầu. Để làm mới một hoặc nhiều biện pháp theo cách thủ công, hãy chọn chúng và chọn **Làm mới**. Đến [lên lịch làm mới tự động](schedule-refresh.md), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

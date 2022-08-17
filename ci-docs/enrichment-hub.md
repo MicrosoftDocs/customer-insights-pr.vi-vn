@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053906"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245905"
 ---
 # <a name="data-enrichment-preview-overview"></a>Tổng quan về làm giàu dữ liệu (xem trước)
 
@@ -35,7 +35,7 @@ Bạn có thể làm giàu dữ liệu khách hàng của mình trước khi h�
 
 ## <a name="create-an-enrichment"></a>Tạo nội dung tăng cường
 
-Bạn cần có Người đóng góp hoặc Quản trị viên [sự cho phép](permissions.md) để tạo hoặc chỉnh sửa các phần bổ sung.
+Bạn cần có Người đóng góp hoặc Quản trị viên [sự cho phép](permissions.md) để tạo hoặc chỉnh sửa các nội dung phong phú.
 
 Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. Các **Phát hiện** tab hiển thị tất cả các tùy chọn bổ sung được hỗ trợ.
 
@@ -76,7 +76,7 @@ Chọn phần bổ sung để xem các hành động có sẵn.
 - **Xem** thông tin chi tiết về dữ liệu tăng cường với số hồ sơ khách hàng được tăng cường.
 - **Chỉnh sửa** cấu hình dữ liệu tăng cường.
 - [**Chạy**](#run-or-refresh-enrichments) sự phong phú để cập nhật hồ sơ khách hàng với dữ liệu mới nhất. Chạy nhiều phần bổ sung cùng một lúc bằng cách chọn chúng trong danh sách.
-- **Hoạt động** hoặc **Hủy kích hoạt** một sự làm giàu. Các phần bổ sung không hoạt động sẽ không được làm mới trong thời gian [làm mới theo lịch trình](system.md#schedule-tab).
+- **Hoạt động** hoặc **Hủy kích hoạt** một sự làm giàu. Các phần bổ sung không hoạt động sẽ không được làm mới trong một [làm mới theo lịch trình](schedule-refresh.md).
 - **Xóa** dữ liệu tăng cường.
 
 Bạn cũng có thể tạo [phân đoạn](segments.md) hoặc [đo](measures.md) từ làm giàu.
@@ -85,7 +85,7 @@ Bạn cũng có thể tạo [phân đoạn](segments.md) hoặc [đo](measures.m
 
 Sau khi chạy, các phần bổ sung có thể được làm mới theo lịch trình tự động hoặc làm mới theo cách thủ công theo yêu cầu.
 
-1. Để làm mới một hoặc nhiều bổ sung theo cách thủ công, hãy chọn chúng và chọn **Chạy**. Đến [lên lịch làm mới tự động](system.md#schedule-tab), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**. Thời gian xử lý phụ thuộc vào kích thước dữ liệu khách hàng của bạn.
+1. Để làm mới một hoặc nhiều bổ sung theo cách thủ công, hãy chọn chúng và chọn **Chạy**. Đến [lên lịch làm mới tự động](schedule-refresh.md), đi đến **Quản trị viên** > **Hệ thống** > **Lịch trình**. Thời gian xử lý phụ thuộc vào kích thước dữ liệu khách hàng của bạn.
 
 1. Tùy ý, [xem tiến trình của quá trình làm giàu](#see-the-progress-of-the-enrichment-process).
 
@@ -98,10 +98,12 @@ Sau khi chạy, các phần bổ sung có thể được làm mới theo lịch 
 Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
 
 1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
-1. Bên trong **Sự làm giàu của tôi**, chọn trạng thái bổ sung để mở ngăn bên.
+1. Bên trong **Sự làm giàu của tôi**, chọn trạng thái của phần bổ sung để mở một ngăn bên.
 1. Trong ngăn **Chi tiết tiến trình**, hãy bung rộng phần **Nội dung tăng cường**.
 1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**.
 1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Xem kết quả bổ sung
 
@@ -110,11 +112,11 @@ Sau khi hoàn thành quá trình làm giàu, hãy xem lại kết quả làm gi�
 1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
 1. Bên trong **Sự làm giàu của tôi**, chọn phần bổ sung mà bạn muốn xem.
 
-Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung và số lượng cấu hình được bổ sung theo thời gian. Các **Phong phú khách hàng xem trước** ô hiển thị một mẫu của thực thể làm giàu được tạo. Để xem một chế độ xem chi tiết, hãy chọn **Xem thêm** và chọn **Dữ liệu** chuyển hướng.
+Tất cả các phần bổ sung hiển thị thông tin cơ bản như số lượng cấu hình được bổ sung và số lượng cấu hình được bổ sung theo thời gian. Các **Phong phú khách hàng xem trước** ô hiển thị một mẫu của thực thể làm giàu được tạo. Để xem chế độ xem chi tiết, hãy chọn **Xem thêm** và chọn **Dữ liệu** chuyển hướng.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Trang kết quả làm giàu.":::
 
-Nếu có, **Số lượng khách hàng phong phú theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
+Nếu có, **Số lượng khách hàng làm giàu theo lĩnh vực** cung cấp thông tin chi tiết về phạm vi bao phủ của từng trường được bổ sung chi tiết.
 
 Một số làm giàu cũng hiển thị thông tin cụ thể cho loại làm giàu. Để biết thêm thông tin, hãy xem tài liệu liên quan.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
-ms.translationtype: MT
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194994"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245353"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
@@ -33,7 +33,7 @@ Có hai loại xuất chính:
 ### <a name="export-segments"></a>Xuất phân khúc
 
 **Xuất phân khúc trong môi trường dành cho tài khoản doanh nghiệp (B2B) hoặc khách hàng cá nhân (B2C)**  
-Hầu hết các tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất khẩu các phân đoạn sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. 
+Hầu hết các tùy chọn xuất hỗ trợ cả hai loại môi trường. Xuất khẩu các phân đoạn sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. 
 
 **Xuất phân khúc trong môi trường dành cho người tiêu dùng cá nhân (B2C)**  
 - Các phân khúc trong bối cảnh môi trường dành cho khách hàng cá nhân được xây dựng dựa trên thực thể *hồ sơ khách hàng hợp nhất*. Mọi phân khúc đáp ứng yêu cầu của hệ thống mục tiêu (ví dụ: địa chỉ email) đều có thể được xuất.
@@ -79,7 +79,7 @@ Chọn một bản xuất để xem các hành động có sẵn.
 
 ## <a name="schedule-and-run-exports"></a>Lên lịch và chạy nội dung xuất
 
-Mỗi nội dung xuất bạn đặt cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](system.md#schedule-tab). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
+Mỗi nội dung xuất bạn đặt cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](schedule-refresh.md). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
 
 Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu đang tiến hành cập nhật [yếu tố phụ thuộc](system.md#refresh-processes) khi quy trình xuất theo lịch trình chuẩn bị bắt đầu, trước tiên hệ thống sẽ hoàn thành việc cập nhật đó rồi mới chạy quy trình xuất. Các **Làm mới** cột hiển thị khi lần xuất được làm mới lần cuối.
 
@@ -101,7 +101,7 @@ Xác định lịch trình làm mới tùy chỉnh cho từng lần xuất hoặ
 
 Khi chỉnh sửa lịch biểu cho một số lần xuất, hãy lựa chọn trong **Giữ hoặc ghi đè lịch biểu**:
 
-- **Giữ lịch trình cá nhân** : Giữ lịch trình đã xác định trước đó cho các lần xuất đã chọn và chỉ tắt hoặc bật chúng.
+- **Giữ lịch trình cá nhân** : Giữ lịch đã xác định trước đó cho các lần xuất đã chọn và chỉ tắt hoặc bật chúng.
 - **Xác định lịch trình mới cho tất cả nội dung xuất đã chọn**: Ghi đè lên lịch trình hiện có của các nội dung xuất đã chọn.
 
 ### <a name="run-exports-on-demand"></a>Chạy nội dung xuất theo yêu cầu

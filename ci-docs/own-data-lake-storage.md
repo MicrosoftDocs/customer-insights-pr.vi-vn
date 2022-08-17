@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
-ms.translationtype: MT
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011959"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246227"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Tự dùng cái của bạn đi Azure Data Lake Storage Tài khoản Gen2
 
@@ -27,7 +27,7 @@ Quản trị viên trong Thông tin chi tiết về khách hàng có thể [tạ
 
 - Azure Data Lake Storage tài khoản phải ở trong cùng khu vực Azure mà bạn đã chọn khi tạo môi trường Thông tin chi tiết về khách hàng. Bạn có thể kiểm tra khu vực của môi trường Thông tin chi tiết về khách hàng trong **Quản trị viên** > **Hệ thống** > **Về**.
 - Bộ nhớ Data Lake phải là Gen2 và có [không gian tên phân cấp được bật](/azure/storage/blobs/create-data-lake-storage-account). Tài khoản bộ nhớ Gen1 không được hỗ trợ.
-- Một vùng chứa có tên`customerinsights` phải tồn tại trên tài khoản lưu trữ. Bạn phải tạo nó trước khi sử dụng Bộ nhớ Data Lake của riêng mình trong Thông tin chi tiết về khách hàng. Quản trị viên thiết lập môi trường Thông tin chi tiết về khách hàng cần có vai trò Người đóng góp dữ liệu của Storage Blob hoặc Chủ sở hữu dữ liệu của Storage Blob trên tài khoản lưu trữ hoặc`customerinsights` thùng đựng hàng. Để biết thêm thông tin về cách chỉ định quyền trong tài khoản lưu trữ, hãy xem [Tạo tài khoản lưu trữ](/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
+- Một vùng chứa có tên`customerinsights` phải tồn tại trên tài khoản lưu trữ. Bạn phải tạo nó trước khi sử dụng Bộ nhớ Data Lake của riêng mình trong Thông tin chi tiết về khách hàng. Quản trị viên thiết lập môi trường Thông tin chi tiết về khách hàng cần có vai trò Người đóng góp dữ liệu Blob lưu trữ hoặc Chủ sở hữu dữ liệu Blob lưu trữ trên tài khoản lưu trữ hoặc`customerinsights` thùng đựng hàng. Để biết thêm thông tin về cách chỉ định quyền trong tài khoản lưu trữ, hãy xem [Tạo tài khoản lưu trữ](/azure/storage/common/storage-account-create?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal).
 
 ## <a name="connect-customer-insights-with-your-storage-account"></a>Kết nối Thông tin chi tiết về khách hàng với tài khoản lưu trữ của bạn
 
@@ -36,8 +36,8 @@ Khi bạn tạo một môi trường mới, hãy đảm bảo rằng tài khoả
 1. Bên trong **Lưu trữ dữ liệu** bước trong quá trình tạo môi trường, thiết lập **Lưu dữ liệu đầu ra** đến **Azure Data Lake Storage Gen2**.
 1. Chọn cách **Kết nối bộ nhớ của bạn**. Bạn có thể chọn giữa tùy chọn dựa trên tài nguyên và tùy chọn dựa trên đăng ký để xác thực. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage tài khoản bằng cách sử dụng Dịch vụ Azure chính](connect-service-principal.md).
    - Vì **Đăng ký Azure**, chọn **Đăng ký**, **tài nguyên**, và **Tài khoản lưu trữ** có chứa`customerinsights` thùng đựng hàng.
-   - Vì **Khóa tài khoản**, cung cấp **Tên tài khoản** và **Chìa khóa tài khoản** cho tài khoản Data Lake Storage. Sử dụng phương pháp xác thực này ngụ ý rằng bạn được thông báo nếu tổ chức của bạn xoay các khóa. Bạn phải [cập nhật cấu hình môi trường](manage-environments.md#edit-an-existing-environment) với phím mới khi nó được xoay.
-1. Chọn nếu bạn muốn sử dụng Azure Private Link để kết nối với tài khoản lưu trữ và [tạo kết nối với Liên kết riêng tư](security-overview.md#private-links-tab) với quy trình hai bước.
+   - Vì **Chìa khóa tài khoản**, cung cấp **Tên tài khoản** và **Chìa khóa tài khoản** cho tài khoản Data Lake Storage. Sử dụng phương pháp xác thực này ngụ ý rằng bạn được thông báo nếu tổ chức của bạn xoay các khóa. Bạn phải [cập nhật cấu hình môi trường](manage-environments.md#edit-an-existing-environment) với phím mới khi nó được xoay.
+1. Chọn nếu bạn muốn sử dụng Azure Private Link để kết nối với tài khoản lưu trữ và [tạo kết nối với Liên kết riêng tư](security-overview.md#set-up-an-azure-private-link) với quy trình hai bước.
 
 Khi quá trình hệ thống như nhập dữ liệu hoàn tất, hệ thống sẽ tạo các thư mục tương ứng trong tài khoản lưu trữ. Tệp dữ liệu và tệp *model.json* được tạo và thêm vào các thư mục dựa trên tên quy trình.
 

@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139637"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245620"
 ---
 # <a name="update-the-unification-settings"></a>Cập nhật cài đặt hợp nhất
 
@@ -42,7 +42,7 @@ ms.locfileid: "9139637"
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Ảnh chụp màn hình của trang Thống nhất dữ liệu với các tùy chọn Hợp nhất được đánh dấu.":::
 
    - [Chạy các điều kiện phù hợp](#run-matching-conditions) để nhanh chóng đánh giá chất lượng của các điều kiện đối sánh của bạn (quy tắc trùng lặp và đối sánh) mà không cần cập nhật hồ sơ hợp nhất. Các **Chỉ chạy các điều kiện phù hợp** tùy chọn không hiển thị cho một thực thể.
-   - [Hợp nhất hồ sơ khách hàng](#run-updates-to-the-unified-customer-profile) để chạy các điều kiện phù hợp và cập nhật thực thể hồ sơ khách hàng hợp nhất mà không ảnh hưởng đến các yếu tố phụ thuộc (chẳng hạn như bổ sung, phân đoạn hoặc đo lường). Các quy trình phụ thuộc không được chạy, nhưng sẽ được làm mới dưới dạng [được xác định trong lịch trình làm mới](system.md#schedule-tab).
+   - [Hợp nhất hồ sơ khách hàng](#run-updates-to-the-unified-customer-profile) để chạy các điều kiện phù hợp và cập nhật thực thể hồ sơ khách hàng hợp nhất mà không ảnh hưởng đến các yếu tố phụ thuộc (chẳng hạn như bổ sung, phân đoạn hoặc đo lường). Các quy trình phụ thuộc không được chạy, nhưng sẽ được làm mới dưới dạng [được xác định trong lịch trình làm mới](schedule-refresh.md).
    - [Hợp nhất hồ sơ khách hàng và sự phụ thuộc](#run-updates-to-the-unified-customer-profile) để chạy các điều kiện phù hợp và cập nhật thực thể hồ sơ khách hàng hợp nhất và tất cả các yếu tố phụ thuộc (chẳng hạn như bổ sung, phân đoạn hoặc đo lường). Tất cả các quá trình được chạy lại tự động.
 
 ## <a name="edit-source-fields"></a>Chỉnh sửa trường nguồn
@@ -57,9 +57,9 @@ Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chú
 
 1. Lựa chọn **Chọn các thực thể và trường** để thêm các thuộc tính hoặc thực thể khác. Sử dụng tìm kiếm hoặc cuộn để tìm và chọn các thuộc tính và thực thể bạn quan tâm. Chọn **Áp dụng**.
 
-1. Theo tùy chọn, bạn có thể thay đổi khóa chính cho một thực thể, các loại thuộc tính và chuyển đổi **Lập bản đồ thông minh** bật hoặc tắt. Để biết thêm thông tin, hãy xem [Chọn khóa chính và kiểu ngữ nghĩa cho các thuộc tính](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Theo tùy chọn, bạn có thể thay đổi khóa chính cho một thực thể, các loại thuộc tính và chuyển đổi **Lập bản đồ thông minh** bật hoặc tắt. Để biết thêm thông tin, hãy xem [Chọn khóa chính và loại ngữ nghĩa cho các thuộc tính](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
-1. Lựa chọn **Tiếp theo** để thực hiện các thay đổi đối với các quy tắc loại bỏ trùng lặp hoặc chọn **Lưu và đóng** và trở lại [Cập nhật cài đặt hợp nhất](#update-the-unification-settings).
+1. Lựa chọn **Tiếp theo** để thực hiện các thay đổi đối với các quy tắc loại bỏ trùng lặp hoặc chọn **Lưu và đóng** và quay trở lại [Cập nhật cài đặt hợp nhất](#update-the-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Quản lý các quy tắc chống trùng lặp
 
@@ -69,11 +69,11 @@ Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chú
 
    Số lượng bản ghi trùng lặp được tìm thấy hiển thị trong **Trùng lặp**. Các **Hồ sơ được loại bỏ trùng lặp** cột hiển thị thực thể nào có bản ghi trùng lặp và tỷ lệ phần trăm bản ghi trùng lặp.
 
-1. Nếu bạn đã thêm một thực thể được bổ sung chi tiết, hãy chọn **Sử dụng các thực thể được bổ sung chi tiết**. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md).
+1. Nếu bạn đã thêm một thực thể được bổ sung chi tiết, hãy chọn **Sử dụng các thực thể được bổ sung chi tiết**. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md).
 
 1. Để quản lý các quy tắc chống trùng lặp, hãy chọn bất kỳ tùy chọn nào sau đây:
    - **Tạo quy tắc mới** : Lựa chọn **Thêm quy tắc** dưới thực thể thích hợp. Để biết thêm thông tin, hãy xem [Xác định quy tắc khử trùng lặp](remove-duplicates.md#define-deduplication-rules).
-   - **Thay đổi điều kiện quy tắc** : Chọn quy tắc và sau đó **Chỉnh sửa**. Thay đổi các trường, thêm hoặc bớt các điều kiện hoặc thêm hoặc bớt các trường hợp ngoại lệ.
+   - **Thay đổi điều kiện quy tắc** : Chọn quy tắc và sau đó **Chỉnh sửa**. Thay đổi trường, thêm hoặc loại bỏ điều kiện, hoặc thêm hoặc loại bỏ ngoại lệ.
    - **Xem trước** : Chọn quy tắc và sau đó **Xem trước** để xem kết quả chạy cuối cùng cho quy tắc này.
    - **Hủy kích hoạt quy tắc** : Chọn quy tắc và sau đó **Hủy kích hoạt** để giữ lại quy tắc loại trừ trùng lặp trong khi loại trừ nó khỏi quy trình đối sánh.
    - **Sao chép một quy tắc** : Chọn quy tắc và sau đó **Nhân bản** để tạo một quy tắc tương tự với các sửa đổi.
@@ -110,17 +110,17 @@ Bạn có thể định cấu hình lại và tinh chỉnh hầu hết các thô
 
    :::image type="content" source="media/m3_match_condition_preview.png" alt-text="Biểu diễn đồ họa của các bản ghi chưa khớp và đã khớp bao gồm danh sách dữ liệu.":::
 
-1. Nếu bạn đã thêm một thực thể được bổ sung chi tiết, hãy chọn **Sử dụng các thực thể được bổ sung chi tiết**. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md).
+1. Nếu bạn đã thêm một thực thể được bổ sung chi tiết, hãy chọn **Sử dụng các thực thể được bổ sung chi tiết**. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md).
 
 1. Để quản lý các quy tắc, hãy chọn bất kỳ tùy chọn nào sau đây:
    - **Tạo quy tắc mới** : Lựa chọn **Thêm quy tắc** dưới thực thể thích hợp. Để biết thêm thông tin, hãy xem [Xác định quy tắc cho các cặp đối sánh](match-entities.md#define-rules-for-match-pairs).
    - **Thay đổi thứ tự các quy tắc của bạn** nếu bạn đã xác định nhiều quy tắc: Kéo và thả các quy tắc vào thứ tự bạn muốn. Để biết thêm thông tin, hãy xem [Chỉ định thứ tự khớp](match-entities.md#specify-the-match-order).
-   - **Thay đổi điều kiện quy tắc** : Chọn quy tắc và sau đó **Chỉnh sửa**. Thay đổi các trường, thêm hoặc bớt các điều kiện hoặc thêm hoặc bớt các trường hợp ngoại lệ.
+   - **Thay đổi điều kiện quy tắc** : Chọn quy tắc và sau đó **Chỉnh sửa**. Thay đổi trường, thêm hoặc loại bỏ điều kiện, hoặc thêm hoặc loại bỏ ngoại lệ.
    - **Hủy kích hoạt quy tắc** : Chọn quy tắc và sau đó **Hủy kích hoạt** để giữ lại quy tắc đối sánh trong khi loại trừ nó khỏi quy trình đối sánh.
    - **Sao chép một quy tắc** : Chọn quy tắc và sau đó **Nhân bản** để tạo một quy tắc tương tự với các sửa đổi.
    - **Xóa quy tắc** : Chọn quy tắc và sau đó **Xóa bỏ**.
 
-1. Lựa chọn **Tiếp theo** để thực hiện các thay đổi đối với các trường hợp nhất hoặc chọn **Lưu và đóng** và trở lại [Cập nhật cài đặt hợp nhất](#update-the-unification-settings).
+1. Lựa chọn **Tiếp theo** để thực hiện các thay đổi đối với các trường hợp nhất hoặc chọn **Lưu và đóng** và quay trở lại [Cập nhật cài đặt hợp nhất](#update-the-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Quản lý các trường hợp nhất
 
@@ -128,7 +128,7 @@ Bạn có thể định cấu hình lại và tinh chỉnh hầu hết các thô
 
     :::image type="content" source="media/m3_merge_edit.png" alt-text="Ảnh chụp màn hình các trường khách hàng hợp nhất":::
 
-1. Xem lại các trường được kết hợp và bị loại trừ và thực hiện bất kỳ thay đổi nào nếu cần. Thêm hoặc chỉnh sửa khóa CustomerID hoặc nhóm cấu hình thành các cụm. Để biết thêm thông tin, hãy xem [Hợp nhất các trường khách hàng](merge-entities.md).
+1. Xem lại các trường được kết hợp và bị loại trừ, đồng thời thực hiện bất kỳ thay đổi nào nếu cần. Thêm hoặc chỉnh sửa khóa CustomerID hoặc nhóm cấu hình thành các cụm. Để biết thêm thông tin, hãy xem [Hợp nhất các trường khách hàng](merge-entities.md).
 
 1. Lựa chọn **Tiếp theo** để xem lại cài đặt hợp nhất và [cập nhật hồ sơ hợp nhất và các phụ thuộc](#run-updates-to-the-unified-customer-profile) hoặc chọn **Lưu và đóng** và trở lại [Cập nhật cài đặt hợp nhất](#update-the-unification-settings) để thực hiện nhiều thay đổi hơn.
 
@@ -154,7 +154,7 @@ Chạy các điều kiện đối sánh chỉ chạy các quy tắc trùng lặp
 
 1. Từ **Dữ liệu** > **Thống nhất** trang, chọn:
 
-   - **Hợp nhất hồ sơ khách hàng** : Chạy các điều kiện phù hợp và cập nhật thực thể hồ sơ khách hàng hợp nhất mà không ảnh hưởng đến các yếu tố phụ thuộc (chẳng hạn như bổ sung, phân đoạn hoặc đo lường). Các quy trình phụ thuộc không được chạy, nhưng sẽ được làm mới dưới dạng [được xác định trong lịch trình làm mới](system.md#schedule-tab).
+   - **Hợp nhất hồ sơ khách hàng** : Chạy các điều kiện phù hợp và cập nhật thực thể hồ sơ khách hàng hợp nhất mà không ảnh hưởng đến các yếu tố phụ thuộc (chẳng hạn như bổ sung, phân đoạn hoặc đo lường). Các quy trình phụ thuộc không được chạy, nhưng sẽ được làm mới dưới dạng [được xác định trong lịch trình làm mới](schedule-refresh.md).
 
    - **Hợp nhất hồ sơ khách hàng và sự phụ thuộc** : Chạy các điều kiện phù hợp và cập nhật cấu hình hợp nhất và tất cả các phần phụ thuộc. Tất cả các quá trình được chạy lại tự động. Sau khi tất cả các quy trình hạ nguồn đã hoàn tất, hồ sơ khách hàng phản ánh dữ liệu được cập nhật.
 

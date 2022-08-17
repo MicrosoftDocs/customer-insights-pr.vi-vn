@@ -2,7 +2,7 @@
 title: Loại bỏ các bản sao trước khi hợp nhất dữ liệu
 description: Bước thứ hai trong quá trình hợp nhất là chọn bản ghi nào sẽ giữ lại khi tìm thấy các bản sao.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,20 +13,29 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139455"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213653"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Loại bỏ các bản sao trước khi hợp nhất dữ liệu
 
-Bước hợp nhất này tùy ý cho phép bạn thiết lập các quy tắc để xử lý các bản ghi trùng lặp trong một thực thể. *Sao chép* xác định các bản ghi trùng lặp và hợp nhất chúng thành một bản ghi. Bản ghi nguồn được liên kết với bản ghi đã hợp nhất bằng các ID thay thế. Nếu các quy tắc không được định cấu hình, các quy tắc do hệ thống xác định sẽ được áp dụng.
+Bước tùy chọn này trong hợp nhất cho phép bạn thiết lập các quy tắc để loại bỏ các bản ghi trùng lặp **ở trong** một thực thể. Phép trùng lặp xác định nhiều bản ghi cho một khách hàng và chọn bản ghi tốt nhất để giữ (dựa trên các tùy chọn hợp nhất cơ bản) hoặc hợp nhất các bản ghi thành một (dựa trên tùy chọn hợp nhất nâng cao). Bản ghi nguồn được liên kết với bản ghi đã hợp nhất bằng các ID thay thế. Nếu các quy tắc không được định cấu hình, các quy tắc do hệ thống xác định sẽ được áp dụng.
+
+## <a name="default-deduplication"></a>Khử trùng lặp mặc định
+
+Các quy tắc do hệ thống xác định được áp dụng nếu không có quy tắc nào được thêm vào.
+
+- Khóa chính được loại bỏ trùng lặp.
+  Đối với bất kỳ bản ghi nào có cùng khóa chính, **Được lấp đầy nhiều nhất** kỷ lục (kỷ lục có ít giá trị rỗng nhất) là người chiến thắng.
+- Mọi quy tắc đối sánh giữa nhiều thực thể đều được áp dụng cho thực thể.
+  Ví dụ: Trong bước đối sánh, nếu đối tượng A được đối sánh với đối tượng B trên *Họ và tên* và *Ngày sinh*, thì thực thể A cũng được loại bỏ trùng lặp bởi *Họ và tên* và *Ngày sinh*. Tại vì *Họ và tên* và *Ngày sinh* là các khóa hợp lệ để xác định khách hàng trong thực thể A, các khóa này cũng hợp lệ để xác định các khách hàng trùng lặp trong thực thể A.
 
 ## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
 
-Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md).
+Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md).
 
 1. Trên **Bản ghi trùng lặp** trang, chọn **Sử dụng các thực thể được bổ sung chi tiết** trên đầu của trang.
 
@@ -72,7 +81,7 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
       - **Gần đây nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập gần đây nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
       - **Cách đây xa nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập cách đây xa nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
       
-      Trong trường hợp hòa, bản ghi người chiến thắng là bản ghi có giá trị MAX (PK) hoặc khóa chính lớn hơn.
+      Trong trường hợp hòa, bản ghi chiến thắng là bản ghi có giá trị MAX (PK) hoặc khóa chính lớn hơn.
       
    1. Theo tùy chọn, để xác định tùy chọn hợp nhất trên các thuộc tính riêng lẻ của một thực thể, hãy chọn **Nâng cao** ở cuối ngăn. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng đối tượng để xem tất cả các thuộc tính của nó và xác định tùy chọn nào để sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây.
 
@@ -90,7 +99,7 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
 
 ## <a name="deduplication-output-as-an-entity"></a>Đầu ra khử trùng lặp dưới dạng một thực thể
 
-Quá trình loại bỏ trùng lặp tạo ra một thực thể được khử trùng lặp mới cho mỗi thực thể nguồn. Có thể tìm thấy các thực thể cùng với **ConflationMatchPairs:CustomerInsights** trong phần **Hệ thống** trên trang **Thực thể**, với tên **Deduplication_DataSource_Entity**.
+Quá trình khử trùng lặp tạo ra một thực thể được khử trùng lặp mới cho mỗi thực thể nguồn. Có thể tìm thấy các thực thể cùng với **ConflationMatchPairs:CustomerInsights** trong phần **Hệ thống** trên trang **Thực thể**, với tên **Deduplication_DataSource_Entity**.
 
 Thực thể đầu ra loại bỏ trùng lặp chứa thông tin sau:
 

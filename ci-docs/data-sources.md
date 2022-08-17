@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207117"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245675"
 ---
 # <a name="data-sources-overview"></a>Tổng quan về nguồn dữ liệu
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights cung cấp các kết nối để mang dữ liệ
 
 ## <a name="add-or-edit-data-sources"></a>Thêm hoặc chỉnh sửa nguồn dữ liệu
 
-Bạn có thể đính kèm hoặc nhập các nguồn dữ liệu vào Thông tin chi tiết về khách hàng. Các liên kết bên dưới cung cấp hướng dẫn về cách thêm và chỉnh sửa nguồn dữ liệu.
+Bạn có thể đính kèm hoặc nhập nguồn dữ liệu vào Thông tin chi tiết về khách hàng. Các liên kết bên dưới cung cấp hướng dẫn về cách thêm và chỉnh sửa nguồn dữ liệu.
 
 **Đính kèm nguồn dữ liệu**
 
@@ -42,13 +42,13 @@ Nếu bạn sử dụng nguồn dữ liệu tại chỗ, Microsoft hoặc dữ l
 ## <a name="review-data-sources"></a>Xem lại các nguồn dữ liệu
 
 Nếu môi trường của bạn được định cấu hình để sử dụng bộ nhớ Thông tin chi tiết về khách hàng và bạn sử dụng các nguồn dữ liệu tại chỗ, bạn sẽ sử dụng Power Platform luồng dữ liệu. Với Power Platform luồng dữ liệu, bạn có thể xem các nguồn dữ liệu được chia sẻ và các nguồn dữ liệu do người khác quản lý. Các **Nguồn dữ liệu** trang liệt kê các nguồn dữ liệu trong ba phần:
-- **Được chia sẻ** : Các nguồn dữ liệu có thể được quản lý bởi tất cả các quản trị viên Thông tin chi tiết về khách hàng. Power Platform luồng dữ liệu, tài khoản lưu trữ của riêng bạn và đính kèm vào Dataverse hồ dữ liệu được quản lý là những ví dụ về nguồn dữ liệu được chia sẻ.
-- **Do tôi quản lý** :Power Platform luồng dữ liệu chỉ do bạn tạo và quản lý. Các quản trị viên Thông tin chi tiết khác về khách hàng chỉ có thể xem các luồng dữ liệu này nhưng không thể chỉnh sửa, làm mới hoặc xóa chúng.
+- **Được chia sẻ** : Nguồn dữ liệu có thể được quản lý bởi tất cả các quản trị viên Thông tin chi tiết về khách hàng. Power Platform luồng dữ liệu, tài khoản lưu trữ của riêng bạn và đính kèm vào Dataverse hồ dữ liệu được quản lý là những ví dụ về các nguồn dữ liệu được chia sẻ.
+- **Do tôi quản lý** :Power Platform luồng dữ liệu chỉ do bạn tạo và quản lý. Các quản trị viên Thông tin chi tiết về khách hàng khác chỉ có thể xem các luồng dữ liệu này nhưng không thể chỉnh sửa, làm mới hoặc xóa chúng.
 - **Do người khác quản lý** :Power Platform luồng dữ liệu do quản trị viên khác tạo. Bạn chỉ có thể xem chúng. Nó liệt kê chủ sở hữu của luồng dữ liệu cần liên hệ để được hỗ trợ.
 > [!NOTE]
 > Tất cả các thực thể có thể được xem và sử dụng bởi những người dùng khác. Mặc dù các nguồn dữ liệu thuộc sở hữu của người dùng đã tạo chúng, nhưng mọi người dùng Thông tin chi tiết về khách hàng đều có thể sử dụng các thực thể kết quả từ quá trình nhập dữ liệu.
 
-Nếu môi trường của bạn không sử dụng Power Platform luồng dữ liệu, **Nguồn dữ liệu** trang chỉ chứa danh sách tất cả các nguồn dữ liệu. Không có phần hiển thị.
+Nếu môi trường của bạn không sử dụng Power Platform luồng dữ liệu, **Nguồn dữ liệu** trang chỉ chứa danh sách tất cả các nguồn dữ liệu. Không có phần nào hiển thị.
 
 ## <a name="manage-existing-data-sources"></a>Quản lý các nguồn dữ liệu hiện có
 
@@ -67,7 +67,7 @@ Chọn nguồn dữ liệu để xem các hành động có sẵn.
 
 Nguồn dữ liệu có thể được làm mới theo lịch trình tự động hoặc được làm mới theo cách thủ công theo yêu cầu. [Nguồn dữ liệu tại chỗ](connect-power-query.md#add-data-from-on-premises-data-sources) làm mới lịch biểu của riêng họ được thiết lập trong quá trình nhập dữ liệu. Đối với các nguồn dữ liệu đính kèm, quá trình nhập dữ liệu sẽ sử dụng dữ liệu mới nhất có sẵn từ nguồn dữ liệu đó.
 
-Đi đến **Quản trị viên** > **Hệ thống** > [**Lịch trình**](system.md#schedule-tab) để định cấu hình làm mới theo lịch trình của hệ thống đối với các nguồn dữ liệu đã nhập của bạn.
+Đi đến **Quản trị viên** > **Hệ thống** > [**Lịch trình**](schedule-refresh.md) để định cấu hình các lần làm mới theo lịch trình của hệ thống đối với các nguồn dữ liệu đã nhập của bạn.
 
 Để làm mới nguồn dữ liệu theo yêu cầu:
 

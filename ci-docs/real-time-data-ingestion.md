@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195684"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246134"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Nhập dữ liệu trong thời gian thực (xem trước)
 
 Chức năng gần thời gian thực cho phép bạn xem, trong vài giây, các tương tác mới nhất mà khách hàng của bạn đã thực hiện với các sản phẩm hoặc dịch vụ của bạn.
 
-[Làm mới theo lịch trình](system.md#schedule-tab) bao gồm số lượng lớn các bản ghi và một số hoạt động phức tạp. Đầu tiên, dữ liệu được lấy từ nguồn dữ liệu. Tiếp theo, dữ liệu được hợp nhất, và sau đó được làm giàu với thông tin bổ sung. Mỗi lần chạy của quá trình này có thể mất vài phút đến vài giờ.
+[Làm mới theo lịch trình](schedule-refresh.md) bao gồm số lượng lớn các bản ghi và một số hoạt động phức tạp. Đầu tiên, dữ liệu được lấy từ nguồn dữ liệu. Tiếp theo, dữ liệu được hợp nhất, và sau đó được làm giàu với thông tin bổ sung. Mỗi lần chạy của quá trình này có thể mất vài phút đến vài giờ.
 
 Chức năng thời gian thực cung cấp dữ liệu ngay lập tức để sử dụng, cho đến khi quá trình làm mới theo lịch trình tiếp theo kéo dữ liệu này từ nguồn dữ liệu.
 
@@ -85,7 +85,7 @@ Thông tin chi tiết về API này, bao gồm các thông số và phản hồi
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Tìm hiểu cách sử dụng trong thời gian thực với phương pháp đo từ xa
 
-Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập máy đo từ xa thời gian thực](system.md#api-usage-tab). 
+Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập máy đo từ xa thời gian thực](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,18 +12,18 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142845"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245629"
 ---
 # <a name="how-to-create-a-new-environment"></a>Cách thực hiện: Tạo môi trường mới
 
 Sau [mua giấy phép đăng ký cho Dynamics 365 Customer Insights](paid-license.md), quản trị viên toàn cầu của Microsoft 365 người thuê nhận được một email mời họ tạo môi trường. Đi tới [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) để bắt đầu. Trong trường hợp này, bạn có thể truy cập trực tiếp vào [Bước 1: Cung cấp thông tin cơ bản](#step-1-provide-basic-information).
 
-Sau khi môi trường đầu tiên được tạo, quản trị viên toàn cầu của Microsoft 365 người thuê có thể [thêm người dùng vào tổ chức của họ với tư cách là quản trị viên](permissions.md). Về sau, những quản trị viên này có thể quản lý người dùng và môi trường. Nếu tổ chức của bạn mua nhiều giấy phép cho Thông tin chi tiết về khách hàng, [liên hệ với nhóm hỗ trợ của chúng tôi](https://go.microsoft.com/fwlink/?linkid=2079641) để tăng số lượng môi trường có sẵn. Để biết thêm thông tin về dung lượng và dung lượng bổ sung, hãy xem lại [Hướng dẫn cấp phép Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+Sau khi môi trường đầu tiên được tạo, quản trị viên toàn cầu của Microsoft 365 người thuê có thể [thêm người dùng vào tổ chức của họ với tư cách là quản trị viên](permissions.md). Trong tương lai, những quản trị viên này có thể quản lý người dùng và môi trường. Nếu tổ chức của bạn mua nhiều giấy phép cho Thông tin chi tiết về khách hàng, [liên hệ với nhóm hỗ trợ của chúng tôi](https://go.microsoft.com/fwlink/?linkid=2079641) để tăng số lượng môi trường có sẵn. Để biết thêm thông tin về dung lượng và dung lượng bổ sung, hãy xem lại [Hướng dẫn cấp phép Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 > [!TIP]
 > Nếu bạn đang muốn dùng thử dịch vụ, hãy xem [Thiết lập môi trường dùng thử](trial-signup.md).
@@ -48,7 +48,7 @@ Trong bước **Thông tin cơ bản**, chọn xem bạn muốn tạo một môi
 
 Cung cấp các chi tiết sau đây:
 
-- **Tên**: Tên cho môi trường này. Trường này đã được điền nếu bạn sao chép một môi trường hiện có, nhưng bạn có thể thay đổi trường này.
+- **Tên**: Tên cho môi trường này. Trường này đã được điền nếu bạn sao chép một môi trường hiện có, nhưng bạn có thể thay đổi trường này. Nếu bạn có nhiều môi trường làm việc, hãy đặt cho mỗi môi trường một cái tên dễ nhận biết.
 - **Chọn doanh nghiệp của bạn**: Chọn đối tượng chính cho môi trường mới. Bạn có thể làm việc với người tiêu dùng cá nhân (B2C) hoặc [tài khoản kinh doanh](work-with-business-accounts.md) (B2B). Nếu tổ chức của bạn chủ yếu kinh doanh với các cá nhân, chẳng hạn như cửa hàng bán lẻ hoặc quán cà phê, hãy chọn người tiêu dùng cá nhân. Trong trường hợp đối tượng chính của bạn là các công ty khác, chẳng hạn như nhà sản xuất ô tô hoặc công ty giấy, hãy chọn tài khoản doanh nghiệp.
 - **Loại**: Chọn xem bạn muốn tạo môi trường sản xuất hay hộp cát. Môi trường hộp cát không cho phép làm mới dữ liệu theo lịch trình và dành cho việc triển khai và thử nghiệm trước. Môi trường hộp cát sử dụng cùng một đối tượng chính như môi trường sản xuất hiện được chọn.
 - **Vùng**: Vùng triển khai và lưu trư dịch vụ. Đến [Tự dùng cái của bạn đi Azure Data Lake Storage tài khoản](own-data-lake-storage.md) hoặc [kết nối với một hiện tại Microsoft Dataverse cơ quan](customer-insights-dataverse.md), môi trường Thông tin chi tiết về khách hàng phải trong cùng một khu vực.
@@ -108,7 +108,7 @@ Các thiết đặt cấu hình sau được sao chép:
 - Hoạt động
 - Chỉ mục tìm kiếm và lọc
 - Nội dung xuất
-- Làm mới lịch biểu
+- Làm mới lịch trình
 - Nội dung tăng cường
 - Dự đoán người mẫu
 - Chỉ định vai trò
@@ -117,9 +117,9 @@ Các thiết đặt cấu hình sau được sao chép:
 
 Khi bạn sao chép cấu hình môi trường, bạn phải trải qua một số bước bổ sung để xác nhận thông tin đăng nhập:
 
-- Hồ sơ khách hàng. Trước tiên, xác thực và nhập các nguồn dữ liệu của bạn và chạy hợp nhất dữ liệu để tạo lại hồ sơ khách hàng.
+- Hồ sơ khách hàng. Đầu tiên, xác thực và nhập các nguồn dữ liệu của bạn và chạy hợp nhất dữ liệu để tạo lại hồ sơ khách hàng.
 - Thông tin xác thực nguồn dữ liệu. Bạn phải cung cấp thông tin đăng nhập cho mỗi nguồn dữ liệu để xác thực và làm mới nguồn dữ liệu theo cách thủ công.
-- Nguồn dữ liệu từ thư mục Mô hình Dữ liệu Chung và Dataverse. Bạn phải tạo các nguồn dữ liệu đó theo cách thủ công với cùng tên như trong môi trường nguồn.
+- Nguồn dữ liệu từ thư mục Mô hình Dữ liệu Chung và Dataverse. Bạn phải tạo các nguồn dữ liệu đó theo cách thủ công với tên giống như trong môi trường nguồn.
 - Bí mật kết nối được sử dụng để xuất khẩu và làm giàu. Bạn phải xác thực lại các kết nối và sau đó kích hoạt lại tính năng bổ sung và xuất khẩu.
 
 Bạn sẽ thấy thông báo xác nhận khi môi trường sao chép đã được tạo. Chọn **Chuyển đến nguồn dữ liệu** để xem danh sách các nguồn dữ liệu.
