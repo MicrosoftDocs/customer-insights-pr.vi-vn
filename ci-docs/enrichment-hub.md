@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245905"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304545"
 ---
 # <a name="data-enrichment-preview-overview"></a>Tổng quan về làm giàu dữ liệu (xem trước)
 
@@ -43,7 +43,7 @@ Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. Các **Phát hi
 
 # <a name="individual-consumers-b-to-c"></a>[Người tiêu dùng cá nhân (B2C)](#tab/b2c)
 
-- [Nhận dạng AbiliTec](enrichment-liveramp.md) được cung cấp bởi LiveRamp AbiliTec
+- [Nhận dạng AbiliTec](enrichment-liveramp.md) cung cấp bởi LiveRamp AbiliTec
 - [Thương hiệu](enrichment-microsoft.md) do Microsoft cung cấp
 - [Dữ liệu nhân khẩu học](enrichment-experian.md) do Experian cung cấp
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp
@@ -55,7 +55,7 @@ Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**. Các **Phát hi
 # <a name="business-accounts-b-to-b"></a>[Tài khoản doanh nghiệp (B2B)](#tab/b2b)
 
 - [Dữ liệu tương tác tài khoản](enrichment-office.md) do Microsoft cung cấp
-- [Dữ liệu công ty](enrichment-dnb.md) cung cấp bởi Dun & Bradstreet
+- [Dữ liệu công ty](enrichment-dnb.md) do Dun & Bradstreet cung cấp
 - [Dữ liệu công ty](enrichment-leadspace.md) do Leadspace cung cấp
 - [Địa chỉ nâng cao](enrichment-enhanced-addresses.md) do Microsoft cung cấp
 - [Dữ liệu công ty nâng cao](enrichment-enhanced-company-data.md) do Microsoft cung cấp
@@ -76,7 +76,7 @@ Chọn phần bổ sung để xem các hành động có sẵn.
 - **Xem** thông tin chi tiết về dữ liệu tăng cường với số hồ sơ khách hàng được tăng cường.
 - **Chỉnh sửa** cấu hình dữ liệu tăng cường.
 - [**Chạy**](#run-or-refresh-enrichments) sự phong phú để cập nhật hồ sơ khách hàng với dữ liệu mới nhất. Chạy nhiều phần bổ sung cùng một lúc bằng cách chọn chúng trong danh sách.
-- **Hoạt động** hoặc **Hủy kích hoạt** một sự làm giàu. Các phần bổ sung không hoạt động sẽ không được làm mới trong một [làm mới theo lịch trình](schedule-refresh.md).
+- **Hoạt động** hoặc **Hủy kích hoạt** một sự làm giàu. Các phần bổ sung không hoạt động sẽ không được làm mới trong thời gian [làm mới theo lịch trình](schedule-refresh.md).
 - **Xóa** dữ liệu tăng cường.
 
 Bạn cũng có thể tạo [phân đoạn](segments.md) hoặc [đo](measures.md) từ làm giàu.
@@ -95,10 +95,10 @@ Sau khi chạy, các phần bổ sung có thể được làm mới theo lịch 
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Xem tiến trình của quy trình tăng cường
 
-Bạn có thể tìm thấy thông tin chi tiết về quy trình tăng cường, bao gồm trạng thái của quy trình và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành quy trình làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
+Bạn có thể tìm thấy thông tin chi tiết về quá trình làm giàu, bao gồm trạng thái và các vấn đề tiềm ẩn trong khi làm mới hoặc sau khi hoàn thành làm mới. Hiểu các quy trình nào có liên quan để làm mới quy trình tăng cường và mất bao lâu để chạy các quy trình đó. Trạng thái tăng cường được hỗ trợ cho Experian, Leadspace, HERE Technologies, SFTP Import và Azure Maps.
 
 1. Chuyển tới **Dữ liệu** > **Dữ liệu tăng cường**.
-1. Bên trong **Sự làm giàu của tôi**, chọn trạng thái của phần bổ sung để mở một ngăn bên.
+1. Bên trong **Sự làm giàu của tôi**, chọn trạng thái bổ sung để mở một ngăn bên.
 1. Trong ngăn **Chi tiết tiến trình**, hãy bung rộng phần **Nội dung tăng cường**.
 1. Trong phần tăng cường bạn muốn xem tiến trình, hãy chọn **Xem chi tiết**.
 1. Trong ngăn **Chi tiết công việc**, chọn **Hiển thị chi tiết** để xem các quy trình có liên quan đến việc cập nhật nội dung tăng cường và trạng thái của chúng.

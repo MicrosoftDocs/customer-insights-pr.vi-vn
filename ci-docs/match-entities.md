@@ -2,7 +2,7 @@
 title: Khớp các điều kiện để hợp nhất dữ liệu
 description: So khớp các thực thể để tạo hồ sơ khách hàng hợp nhất.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139729"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304683"
 ---
 # <a name="match-conditions-for-data-unification"></a>Khớp các điều kiện để hợp nhất dữ liệu
 
@@ -28,9 +28,11 @@ Bước hợp nhất này xác định thứ tự đối sánh và các quy tắ
 > [!NOTE]
 > Sau khi bạn tạo điều kiện đối sánh và chọn **Tiếp theo**, bạn không thể xóa một thực thể hoặc thuộc tính đã chọn. Nếu cần, hãy chọn **Mặt sau** để xem xét các thực thể và thuộc tính đã chọn trước khi tiếp tục.
 
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
+
 ## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
 
-Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp**, bạn không cần phải chọn lại chúng.
+Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp**, bạn không cần phải chọn lại chúng.
 
 1. Trên **Điều kiện phù hợp** trang, chọn **Sử dụng các thực thể được bổ sung chi tiết** trên đầu của trang.
 
@@ -43,18 +45,18 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
 Mỗi quy tắc hợp nhất hai hoặc nhiều thực thể thành một thực thể hợp nhất. Đồng thời, nó lưu giữ hồ sơ khách hàng duy nhất. Thứ tự khớp cho biết thứ tự mà hệ thống cố gắng khớp các bản ghi.
 
 > [!IMPORTANT]
-> Thực thể đầu tiên trong danh sách được gọi là thực thể chính. Thực thể chính đóng vai trò là cơ sở cho tập dữ liệu cấu hình hợp nhất của bạn. Thực thể bổ sung được chọn sẽ được thêm vào thực thể này.
+> Thực thể đầu tiên được gọi là thực thể chính, đóng vai trò là cơ sở cho các cấu hình hợp nhất của bạn. Thực thể bổ sung được chọn sẽ được thêm vào thực thể này.
 >
 > Cân nhắc quan trọng:
 >
 > - Chọn pháp nhân có dữ liệu hồ sơ đầy đủ và đáng tin cậy nhất về khách hàng của bạn làm pháp nhân chính.
 > - Chọn đối tượng có một số thuộc tính chung với các đối tượng khác (ví dụ: tên, số điện thoại hoặc địa chỉ email) làm đối tượng chính.
 
-1. Trên **Điều kiện phù hợp**, sử dụng mũi tên di chuyển lên và xuống để di chuyển các thực thể theo thứ tự bạn muốn hoặc kéo và thả chúng. Ví dụ, chọn **Liên hệ: Thương mại điện tử** là thực thể chính và **CustomerLoyalty: Sự trung thành** như thực thể thứ hai.
+1. Trên **Điều kiện phù hợp**, sử dụng mũi tên di chuyển lên và xuống để di chuyển các thực thể theo thứ tự bạn muốn hoặc kéo và thả chúng. Ví dụ, chọn **Thương mại điện tử** là thực thể chính và **loyCustomers** như thực thể thứ hai.
 
 1. Để có mọi bản ghi trong thực thể dưới dạng một khách hàng duy nhất bất kể có tìm thấy kết quả trùng khớp hay không, hãy chọn **Bao gồm tất cả các bản ghi**. Bất kỳ hồ sơ nào trong thực thể này không khớp với hồ sơ trong bất kỳ thực thể nào khác đều được đưa vào hồ sơ hợp nhất. Các bản ghi không có khớp được gọi là đĩa đơn.
   
-Thực thể chính *Liên hệ: Thương mại điện tử* được đối sánh với thực thể tiếp theo *CustomerLoyalty: Sự trung thành*. Tập dữ liệu là kết quả của bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
+Thực thể chính *Liên hệ: Thương mại điện tử* được đối sánh với thực thể tiếp theo *CustomerLoyalty: Sự trung thành*. Tập dữ liệu là kết quả từ bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
 
 :::image type="content" source="media/m3_match.png" alt-text="Ảnh chụp màn hình của thứ tự khớp đã chọn cho các thực thể." lightbox="media/m3_match.png":::
 
@@ -70,7 +72,7 @@ Cảnh báo bên cạnh tên thực thể có nghĩa là không có quy tắc đ
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Ảnh chụp màn hình của ngăn Thêm quy tắc.":::
 
-   - **Chọn Thực thể / Trường (hàng đầu tiên)** : Chọn một thực thể có liên quan và một thuộc tính để chỉ định một thuộc tính bản ghi có khả năng là duy nhất đối với khách hàng. Ví dụ: số điện thoại hoặc địa chỉ email. Tránh trùng khớp theo thuộc tính loại hoạt động. Ví dụ: ID mua hàng có thể sẽ không khớp trong các loại bản ghi khác.
+   - **Chọn Thực thể / Trường (hàng đầu tiên)** : Chọn một thực thể và một thuộc tính có thể là duy nhất đối với khách hàng. Ví dụ: số điện thoại hoặc địa chỉ email. Tránh trùng khớp theo thuộc tính loại hoạt động. Ví dụ: ID mua hàng có thể sẽ không khớp trong các loại bản ghi khác.
 
    - **Chọn Thực thể / Trường (hàng thứ hai)** : Chọn một thuộc tính có liên quan đến thuộc tính của thực thể được chỉ định trong hàng đầu tiên.
 
@@ -116,7 +118,7 @@ Các quy tắc so khớp đại diện cho các tập hợp các điều kiện.
 
 ### <a name="add-exceptions-to-a-rule"></a>Thêm ngoại lệ vào quy tắc
 
-Trong hầu hết các trường hợp, đối sánh pháp nhân dẫn đến hồ sơ khách hàng duy nhất với dữ liệu tổng hợp. Để giải quyết động các trường hợp hiếm hoi về dương tính giả và âm tính giả, bạn có thể xác định các ngoại lệ cho quy tắc đối sánh. Các ngoại lệ được áp dụng sau khi xử lý các quy tắc đối sánh và tránh trùng khớp của tất cả các bản ghi đáp ứng các tiêu chí ngoại lệ.
+Trong hầu hết các trường hợp, đối sánh pháp nhân dẫn đến hồ sơ khách hàng duy nhất với dữ liệu tổng hợp. Để giải quyết các trường hợp hiếm hoi về dương tính giả và âm tính giả, hãy xác định các ngoại lệ cho quy tắc đối sánh. Các ngoại lệ được áp dụng sau khi xử lý các quy tắc đối sánh và tránh đối sánh tất cả các bản ghi đáp ứng các tiêu chí ngoại lệ.
 
 Ví dụ: nếu quy tắc đối sánh của bạn kết hợp họ, thành phố và ngày sinh, hệ thống sẽ xác định các cặp song sinh có cùng họ sống trong cùng một thị trấn với cùng một hồ sơ. Bạn có thể chỉ định một ngoại lệ không khớp với các cấu hình nếu tên trong các thực thể bạn kết hợp không giống nhau.
 
@@ -134,7 +136,7 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 |---------|---------|---------|
 |Luôn khớp     | Xác định các giá trị luôn được so khớp.         |  Luôn phù hợp *Mike* và *MikeR*.       |
 |Không khớp     | Xác định các giá trị không bao giờ khớp.        | Không bao giờ phù hợp *John* và *Jonathan*.        |
-|Bỏ qua tùy chỉnh     | Xác định các giá trị mà hệ thống luôn phải bỏ qua trong giai đoạn đối sánh. |  Bỏ qua các giá trị *11111* và *không xác định* trong trận đấu.        |
+|Bỏ qua            | Xác định các giá trị mà hệ thống luôn phải bỏ qua trong giai đoạn đối sánh. |  Bỏ qua các giá trị *11111* và *không xác định* trong trận đấu.        |
 |Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Xem xét *Joe* ngang bằng với *Joseph*.        |
 
 1. Chọn **Tùy chỉnh**.
@@ -161,7 +163,7 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Ảnh chụp màn hình hộp thoại để chọn ghi đè cho tình huống so khớp tùy chỉnh.":::
 
-1. Việc áp dụng đối sánh tùy chỉnh phụ thuộc vào tùy chọn đối sánh bạn muốn sử dụng.
+1. Việc áp dụng đối sánh tùy chỉnh tùy thuộc vào tùy chọn đối sánh bạn muốn sử dụng.
 
    - Vì **Luôn phù hợp** hoặc **Không bao giờ phù hợp**, tiến hành bước tiếp theo.
    - Vì **Đường vòng** hoặc **Lập bản đồ bí danh**, lựa chọn **Chỉnh sửa** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh** tùy chọn và chọn **Xong**.

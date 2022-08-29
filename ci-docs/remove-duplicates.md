@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213653"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304499"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Loại bỏ các bản sao trước khi hợp nhất dữ liệu
 
@@ -47,7 +47,7 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
 
 1. Trên **Bản ghi trùng lặp** trang, chọn một thực thể và chọn **Thêm quy tắc** để xác định các quy tắc trùng lặp.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Ảnh chụp màn hình của các trang bản ghi trùng lặp với Hiển thị thêm được đánh dấu":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Ảnh chụp màn hình của trang Bản ghi trùng lặp với thực thể được đánh dấu và Thêm quy tắc được hiển thị"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. Bên trong **Thêm quy tắc**, nhập thông tin sau:
       - **Chọn lĩnh vực** : Chọn từ danh sách các trường có sẵn từ thực thể mà bạn muốn kiểm tra các trường trùng lặp. Chọn các trường có thể là duy nhất cho mọi khách hàng. Ví dụ: địa chỉ email hoặc sự kết hợp của tên, thành phố và số điện thoại.
@@ -80,10 +80,10 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
       - **Điền nhiều nhất**: Xác định bản ghi có các trường thuộc tính được điền nhiều nhất là bản ghi được chọn. Đây là tùy chọn phối mặc định.
       - **Gần đây nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập gần đây nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
       - **Cách đây xa nhất**: Xác định bản ghi chiến thắng dựa trên lần truy cập cách đây xa nhất. Yêu cầu ngày hoặc trường số để xác định lần truy cập gần đây.
-      
+
       Trong trường hợp hòa, bản ghi chiến thắng là bản ghi có giá trị MAX (PK) hoặc khóa chính lớn hơn.
-      
-   1. Theo tùy chọn, để xác định tùy chọn hợp nhất trên các thuộc tính riêng lẻ của một thực thể, hãy chọn **Nâng cao** ở cuối ngăn. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng đối tượng để xem tất cả các thuộc tính của nó và xác định tùy chọn nào để sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây.
+
+   1. Theo tùy chọn, để xác định tùy chọn hợp nhất trên các thuộc tính riêng lẻ của một thực thể, hãy chọn **Nâng cao** ở cuối ngăn. Ví dụ: bạn có thể chọn giữ lại email mới nhất VÀ địa chỉ đầy đủ nhất từ các bản ghi khác nhau. Mở rộng thực thể để xem tất cả các thuộc tính của nó và xác định tùy chọn nào sẽ sử dụng cho các thuộc tính riêng lẻ. Nếu bạn chọn tùy chọn dựa trên lần truy cập gần đây, bạn cũng cần chỉ định trường ngày / giờ xác định lần truy cập gần đây.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Ngăn tùy chọn hợp nhất nâng cao hiển thị email gần đây và địa chỉ đầy đủ":::
 
@@ -96,18 +96,5 @@ Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu đ�
 
 > [!div class="nextstepaction"]
 > [Bước tiếp theo cho nhiều thực thể: Điều kiện đối sánh](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Đầu ra khử trùng lặp dưới dạng một thực thể
-
-Quá trình khử trùng lặp tạo ra một thực thể được khử trùng lặp mới cho mỗi thực thể nguồn. Có thể tìm thấy các thực thể cùng với **ConflationMatchPairs:CustomerInsights** trong phần **Hệ thống** trên trang **Thực thể**, với tên **Deduplication_DataSource_Entity**.
-
-Thực thể đầu ra loại bỏ trùng lặp chứa thông tin sau:
-
-- ID/Khóa
-  - Trường khóa chính và ID thay thế. Trường ID thay thế bao gồm tất cả các ID thay thế được xác định cho một bản ghi.
-  - Trường Deduplication_GroupId hiển thị nhóm hoặc cụm được xác định trong một thực thể sẽ nhóm tất cả các bản ghi tương tự dựa trên các trường loại bỏ trùng lặp được chỉ định. Tính năng này được sử dụng cho mục đích xử lý hệ thống. Nếu không có quy tắc khử trùng lặp thủ công nào được chỉ định và áp dụng quy tắc khử trùng lặp do hệ thống xác định, bạn có thể không tìm thấy trường này trong thực thể đầu ra khử trùng lặp.
-  - Deduplication_WinnerId: Trường này chứa ID chiến thắng từ các nhóm hoặc cụm đã xác định. Nếu Deduplication_WinnerId giống với giá trị Khóa chính của một bản ghi, điều đó có nghĩa là bản ghi đó là bản ghi chiến thắng.
-- Các trường được sử dụng để xác định các quy tắc khử trùng lặp.
-- Các trường Quy tắc và Điểm để biểu thị quy tắc khử trùng lặp đã được áp dụng và điểm mà thuật toán so khớp trả về.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Xuất phân khúc sang LinkedIn Ads (xem trước)
 description: Tìm hiểu cách đặt cấu hình kết nối và xuất sang LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196834"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304729"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Xuất phân khúc sang LinkedIn Ads (xem trước)
 
@@ -24,7 +24,7 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang LinkedIn Ads để t�
 - Một [LinkedIn Campaign Manager tài khoản](https://business.linkedin.com/marketing-solutions/ads) và thông tin đăng nhập quản trị viên tương ứng.
 - Một [LinkedIn Campaign Manager ID tài khoản](https://www.linkedin.com/help/lms/answer/a424270).
 - [Các phân đoạn đã định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
-- Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
+- Các phân đoạn đã xuất cần ít nhất một trường cụ thể tùy thuộc vào việc bạn chọn [nhắm mục tiêu liên hệ](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) hoặc [nhắm mục tiêu công ty](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) Trên Linkedin. Các trường có thể được liệt kê trong **Đối sánh dữ liệu** bước khi [định cấu hình xuất](#configure-an-export).
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 

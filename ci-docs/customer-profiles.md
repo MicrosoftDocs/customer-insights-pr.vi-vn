@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188119"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303809"
 ---
 # <a name="view-customer-profiles"></a>Xem hồ sơ khách hàng
 
@@ -78,7 +78,7 @@ Thông tin chi tiết về khách hàng bao gồm:
 **Ô hồ sơ khách hàng** hiển thị các giá trị khác với giá trị hợp nhất *khách hàng* thực thể. Nếu một trường không có giá trị cho hồ sơ khách hàng đã chọn, nó sẽ không hiển thị ngoại trừ trường địa chỉ. Ô được cấu trúc thành các phần:
 
 - Phần đầu tiên hiển thị một tập hợp các trường được xác định trước, theo sau là tất cả các trường là một phần của tìm kiếm và lọc chỉ mục. Tất cả các trường liên quan đến địa chỉ được kết hợp thành một dòng duy nhất, hiển thị ngay cả khi hồ sơ không chứa thông tin địa chỉ.
-- **Địa chỉ liên hệ cho khách hàng này** hiển thị trong môi trường dành cho tài khoản doanh nghiệp. Mỗi liên hệ được hiển thị với các trường của họ. Các trường trống bị ẩn.
+- **Địa chỉ liên hệ cho khách hàng này** hiển thị trong môi trường dành cho tài khoản doanh nghiệp (B-to-B). Mỗi liên hệ được hiển thị với các trường của họ. Các trường trống bị ẩn.
 - **Các trường bổ sung** hiển thị các trường còn lại của khách hàng đã chọn, ngoại trừ ID.
 - **ID** liệt kê tất cả các ID dưới tên thực thể tương ứng của chúng. Các trường được xác định là ID theo ngữ nghĩa của chúng.
 

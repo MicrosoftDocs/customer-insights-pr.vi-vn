@@ -2,7 +2,7 @@
 title: Hợp nhất các trường khách hàng để hợp nhất dữ liệu
 description: Trộn các thực thể để tạo hồ sơ khách hàng hợp nhất.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213608"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304039"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Hợp nhất các trường khách hàng để hợp nhất dữ liệu
+# <a name="unify-customer-fields"></a>Hợp nhất các trường khách hàng
 
-Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ các thuộc tính để hợp nhất trong thực thể hồ sơ hợp nhất của bạn. Ví dụ: nếu ba thực thể có dữ liệu email, bạn có thể muốn giữ cả ba trường email riêng biệt hoặc hợp nhất chúng thành một trường email duy nhất cho cấu hình hợp nhất. Một số thuộc tính được hệ thống tự động kết hợp. Bạn có thể tạo ID khách hàng ổn định và duy nhất và nhóm các hồ sơ liên quan thành một cụm.
+Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ các thuộc tính để hợp nhất trong thực thể hồ sơ hợp nhất của bạn. Ví dụ: nếu ba thực thể có dữ liệu email, bạn có thể muốn giữ cả ba trường email riêng biệt hoặc hợp nhất chúng thành một trường email duy nhất cho cấu hình hợp nhất. Một số thuộc tính được hệ thống tự động kết hợp. Bạn có thể tạo ID khách hàng ổn định và duy nhất. Đối với khách hàng cá nhân, bạn có thể nhóm các hồ sơ liên quan thành một cụm.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Khi phối trang trong quá trình hợp nhất dữ liệu, một bảng với các trường đã hợp nhất xác định hồ sơ khách hàng hợp nhất sẽ xuất hiện.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Trang thống nhất các trường khách hàng trong quy trình hợp nhất dữ liệu hiển thị bảng với các trường được hợp nhất xác định hồ sơ khách hàng hợp nhất.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Xem xét và cập nhật các trường khách hàng
 
@@ -47,10 +47,10 @@ Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ 
 
 1. Tùy ý, [tạo cấu hình ID khách hàng](#configure-customer-id-generation).
 
-1. Tùy ý, [nhóm hồ sơ thành các hộ gia đình hoặc cụm](#group-profiles-into-households-or-clusters).
+1. Tùy chọn cho B-to-C, [nhóm hồ sơ thành các hộ gia đình hoặc cụm](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
-> [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)
+> [Bước tiếp theo: Xem xét sự hợp nhất](review-unification.md)
 
 ### <a name="edit-a-merged-field"></a>Chỉnh sửa trường đã hợp nhất
 
@@ -60,7 +60,7 @@ Trong bước này của quá trình hợp nhất, hãy chọn và loại trừ 
     - **Quan trọng**: Xác định giá trị chiến thắng dựa trên xếp hạng quan trọng được chỉ định cho các trường tham gia. Đây là tùy chọn phối mặc định. Chọn **Di chuyển lên/xuống** để thiết lập xếp hạng mức độ quan trọng.
 
       > [!NOTE]
-      > Thông tin chi tiết về khách hàng sử dụng giá trị không rỗng đầu tiên. Ví dụ: các thực thể A, B và C đã cho được xếp hạng theo thứ tự đó, nếu A.Name và B.Name là rỗng thì giá trị từ C.Name sẽ được sử dụng.
+      > Thông tin chi tiết về khách hàng sử dụng giá trị không rỗng đầu tiên. Ví dụ: các thực thể A, B và C đã cho được xếp hạng theo thứ tự đó, nếu A.Name và B.Name là rỗng, thì giá trị từ C.Name sẽ được sử dụng.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Tùy chọn quan trọng trong hộp thoại hợp nhất các trường.":::
 
@@ -161,7 +161,7 @@ Khi đặt cấu hình ID khách hàng ổn định, bạn có thể tránh đư
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Nhóm hồ sơ thành các hộ gia đình hoặc cụm
 
-Bạn có thể xác định các quy tắc để nhóm các cấu hình liên quan thành một cụm. Hiện tại có 2 loại cụm – cụm hộ gia đình và cụm tùy chỉnh. Hệ thống tự động chọn một gia đình có các quy tắc định sẵn nếu thực thể *Khách hàng* chứa trường ngữ nghĩa *Person.LastName* và *Location.Address*. Bạn cũng có thể tạo một cụm có các quy tắc và điều kiện của riêng mình, tương tự như [quy tắc so khớp](match-entities.md#define-rules-for-match-pairs).
+Đối với khách hàng cá nhân, bạn có thể xác định các quy tắc để nhóm các cấu hình liên quan thành một cụm. Hiện tại có 2 loại cụm – cụm hộ gia đình và cụm tùy chỉnh. Hệ thống tự động chọn một gia đình có các quy tắc định sẵn nếu thực thể *Khách hàng* chứa trường ngữ nghĩa *Person.LastName* và *Location.Address*. Bạn cũng có thể tạo một cụm có các quy tắc và điều kiện của riêng mình, tương tự như [quy tắc so khớp](match-entities.md#define-rules-for-match-pairs).
 
 1. Lựa chọn **Nâng cao** > **Tạo cụm**.
 
@@ -175,9 +175,9 @@ Bạn có thể xác định các quy tắc để nhóm các cấu hình liên q
 
 1. Chỉ định các quy tắc và điều kiện để xác định cụm của bạn.
 
-1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm dưới dạng các trường mới vào *khách hàng* thực thể.
+1. Chọn **Xong**. Cụm được tạo khi quá trình hợp nhất hoàn tất. Các số nhận dạng cụm được thêm vào dưới dạng các trường mới vào *khách hàng* thực thể.
 
 > [!div class="nextstepaction"]
-> [Bước tiếp theo: Xem xét hợp nhất](review-unification.md)
+> [Bước tiếp theo: Xem xét sự hợp nhất](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

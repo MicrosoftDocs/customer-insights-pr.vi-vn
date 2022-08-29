@@ -4,25 +4,25 @@ description: Tìm hiểu về tài khoản doanh nghiệp với tư cách là đ
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053139"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303942"
 ---
 # <a name="work-with-business-accounts"></a>Làm việc với tài khoản công việc
 
-Các Dynamics 365 Customer Insights cho phép bạn định cấu hình môi trường của mình cho các đối tượng mục tiêu chính khác nhau: người tiêu dùng cá nhân (B-to-C) và tài khoản doanh nghiệp (B-to-B). Trong các tình huống B2C, dữ liệu tập trung xung quanh các cá nhân. Đối với B2B, đối tượng mục tiêu chính là tài khoản – tổ chức hoặc công ty – và các liên hệ. Bài viết này giúp bạn bắt đầu với một môi trường dành cho tài khoản doanh nghiệp. Nó liệt kê sự khác biệt của các khu vực tính năng trong Thông tin chi tiết về khách hàng, tùy thuộc vào trọng tâm môi trường của bạn. Để biết thêm thông tin về sự khác biệt, hãy xem lại tài liệu về các khía cạnh tính năng. 
+Các Dynamics 365 Customer Insights cho phép bạn định cấu hình môi trường của mình cho các đối tượng mục tiêu chính khác nhau: người tiêu dùng cá nhân (B-to-C) và tài khoản doanh nghiệp (B-to-B). Trong các tình huống B2C, dữ liệu tập trung xung quanh các cá nhân. Đối với B2B, đối tượng mục tiêu chính là tài khoản – tổ chức hoặc công ty – và các liên hệ. Bài viết này giúp bạn bắt đầu với một môi trường dành cho tài khoản doanh nghiệp. Nó liệt kê sự khác biệt cho các khu vực tính năng trong Thông tin chi tiết về khách hàng, tùy thuộc vào trọng tâm môi trường của bạn. Để biết thêm thông tin về sự khác biệt, hãy xem lại tài liệu về các khía cạnh tính năng. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Tạo môi trường cho tài khoản kinh doanh
 
@@ -30,7 +30,7 @@ Quản trị viên có thể [tạo môi trường trong tổ chức hiện có]
 
 Sau đó, bạn có thể [nhập dữ liệu](data-sources.md) cho các tài khoản doanh nghiệp và liên hệ liên quan làm nguồn dữ liệu từ tất cả các nguồn được hỗ trợ.
 
-Sau khi hợp nhất dữ liệu, hãy [chỉ định hệ thống phân cấp tài khoản](relationships.md#set-up-account-hierarchies) trong quá trình đặt cấu hình mối quan hệ. Bạn cũng có thể [đặt cấu hình ánh xạ ngữ nghĩa](semantic-mappings.md) để kết nối thực thể liên hệ và tài khoản. 
+ [Thống nhất](data-unification.md) dữ liệu tài khoản của bạn, sau đó là dữ liệu liên hệ của bạn để kết nối các thực thể liên hệ và tài khoản.
 
 ## <a name="switch-between-primary-target-audience"></a>Chuyển đổi giữa đối tượng mục tiêu chính
 
@@ -43,11 +43,12 @@ Nếu tổ chức của bạn duy trì các môi trường cho tài khoản doan
 - [Hoạt động](activities.md): Hỗ trợ cho tài khoản và liên hệ liên quan để tạo hoạt động và hiển thị trong tiến trình.
 - [Mối quan hệ](relationships.md): Trình hướng dẫn hoạt động giúp tạo các mối quan hệ giữa các thực thể, để dạng xem tài khoản có thể hiển thị tất cả hoạt động của liên hệ. Địa chỉ liên hệ có thể xem chi tiết để xem chế độ xem liên hệ và hệ thống phân cấp có thể được sử dụng để tổng hợp hoạt động tài khoản.
 - [Giá trị đo](measures.md): Hỗ trợ giá trị đo được tạo từ trình dựng giá trị đo với một phép tính. Thiết đặt tùy chọn cho phép tổng hợp các tài khoản phụ khi tạo các giá trị đo.
-- [Phân khúc](segments.md): Hỗ trợ các phân khúc được tạo từ đầu bằng trình dựng phân khúc. Các toán tử mới cho phép kết hợp hệ thống phân cấp tài khoản khi xây dựng phân khúc.
+- [Phân khúc](segments.md): Hỗ trợ các phân khúc được tạo từ đầu bằng trình dựng phân khúc. Các phân đoạn có thể dựa trên tài khoản hoặc địa chỉ liên hệ.
 - [Nhập dữ liệu](data-sources.md): Tất cả các tính năng trong khía cạnh này đều giống nhau đối với tài khoản doanh nghiệp và khách hàng cá nhân.
-- [Hợp nhất dữ liệu](data-unification.md): Tất cả tính năng trong khía cạnh này đều giống nhau đối với tài khoản doanh nghiệp và khách hàng cá nhân.
+- Hợp nhất dữ liệu B-to-B rất giống với hợp nhất dữ liệu B-to-C nhưng có thêm một bước để thống nhất danh bạ sau khi hợp nhất tài khoản. Nhìn thấy [Tài khoản doanh nghiệp (B-to-B)](data-unification.md).
 - [Làm phong phú](enrichment-hub.md): Một số loại làm phong phú chỉ có đối với kịch bản khách hàng cá nhân, trong khi các loại khác chỉ có đối với tài khoản kinh doanh.
 - [Dự đoán và mô hình xuất xưởng](predictions-overview.md): Dự đoán khả năng rời khỏi giao dịch chứa các bước bổ sung cho tài khoản doanh nghiệp. Các dự đoán khác chỉ dành cho khách hàng cá nhân.
 - [Kích hoạt và xuất](export-destinations.md): Tính năng xuất chỉ có cho các tài khoản doanh nghiệp và khách hàng cá nhân. Một số bản xuất yêu cầu cấu hình bổ sung và thông tin liên hệ được chiếu trong các phân khúc cơ bản để hợp lệ cho tài khoản doanh nghiệp.
 - [Thiết đặt hệ thống](system.md) và [quản lý người dùng](permissions.md): Tất cả các tính năng trong khía cạnh này đều giống nhau cho tài khoản doanh nghiệp và khách hàng cá nhân.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

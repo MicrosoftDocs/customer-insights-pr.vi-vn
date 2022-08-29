@@ -1,23 +1,23 @@
 ---
 title: Bắt đầu với Dynamics 365 Customer Insights
 description: Tổng quan về Thông tin chi tiết về khách hàng giúp các tài nguyên bắt đầu nhanh chóng.
-ms.reviewer: v-wendysmith
+ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
-ms.date: 04/12/2022
-ms.subservice: engagement-insights
+ms.date: 08/31/2021
+ms.subservice: audience-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: ce0336c4bf853bc81ec01c45410169a63b69eb03
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012005"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304637"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Bắt đầu với Dynamics 365 Customer Insights
 
@@ -29,7 +29,7 @@ Thông tin chi tiết về khách hàng có thể giúp bạn hiểu sâu hơn v
 
 ## <a name="step-2-explore-customer-insights"></a>Bước 2: Khám phá thông tin chi tiết về khách hàng
 
-Lần đầu tiên bạn đăng nhập vào Thông tin chi tiết về khách hàng, định cấu hình cài đặt và khám phá sản phẩm.
+Lần đầu tiên bạn đăng nhập vào Customer Insights, định cấu hình cài đặt và khám phá sản phẩm.
 
 1. [đăng nhập vào Thông tin chi tiết về khách hàng](https://home.ci.ai.dynamics.com) sử dụng Microsoft của bạn Azure Active Directory (AAD) tài khoản người dùng.
 
@@ -37,7 +37,7 @@ Lần đầu tiên bạn đăng nhập vào Thông tin chi tiết về khách h�
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>Bước 3: Nhập, hợp nhất và thiết lập mối quan hệ cho dữ liệu của bạn
 
-Hồ sơ thống nhất là nền tảng để có được thông tin chi tiết và thực hiện hành động trên dữ liệu. Mang dữ liệu từ nhiều nguồn khác nhau và chạy quy trình hợp nhất dữ liệu để kết hợp các cấu hình thống nhất. Chỉ định mối quan hệ giữa các thực thể được nhập và sử dụng các tính năng bổ sung để thêm thông tin vào hồ sơ.
+Hồ sơ thống nhất là nền tảng để có được thông tin chi tiết và thực hiện hành động trên dữ liệu. Mang dữ liệu từ nhiều nguồn khác nhau và chạy quy trình hợp nhất dữ liệu để kết hợp các cấu hình thống nhất. Chỉ định mối quan hệ giữa các thực thể đã nhập và sử dụng các tính năng bổ sung để thêm thông tin vào hồ sơ.
 
 1. Nhập dữ liệu bằng cách tạo nguồn dữ liệu từ nhiều tùy chọn. Chọn giữa [Azure Data Lake Storage, bao gồm cả Mô hình dữ liệu chung](connect-common-data-model.md),[Azure Synapse Analytics](connect-synapse.md),[Microsoft Dataverse](connect-dataverse-managed-lake.md), hoặc [Power Query đầu nối](connect-power-query.md).
 
@@ -47,7 +47,7 @@ Hồ sơ thống nhất là nền tảng để có được thông tin chi tiế
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>Bước 4: Nâng cao cấu hình thống nhất với các dự đoán, hoạt động và biện pháp
 
-Với các cấu hình hợp nhất được thiết lập, hãy nâng cao dữ liệu của bạn và tăng thêm thông tin mà họ cung cấp.
+Với các cấu hình hợp nhất được thiết lập, hãy nâng cao dữ liệu của bạn và tăng thêm thông tin mà chúng cung cấp.
 
 1. Chọn từ một thư viện mở rộng của các nhà cung cấp dịch vụ tăng cường để [tăng cường dữ liệu khách hàng của bạn](enrichment-hub.md).
 

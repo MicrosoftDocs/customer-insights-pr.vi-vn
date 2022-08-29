@@ -1,7 +1,7 @@
 ---
 title: Tạo phân đoạn phức tạp với trình tạo phân đoạn
 description: Sử dụng trình tạo phân khúc để tạo các phân khúc khách hàng phức tạp bằng cách nhóm họ dựa trên các thuộc tính khác nhau.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170661"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304775"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Tạo phân đoạn phức tạp với trình tạo phân đoạn
 
-Xác định các bộ lọc phức hợp xung quanh thực thể khách hàng hợp nhất và các thực thể có liên quan. Mỗi phân khúc, sau khi xử lý, sẽ tạo một bộ hồ sơ khách hàng mà bạn có thể xuất và hành động.
+Xác định các bộ lọc phức tạp xung quanh khách hàng hợp nhất hoặc liên hệ hợp nhất và các thực thể có liên quan. Mỗi phân đoạn, sau khi xử lý, sẽ tạo một tập hợp các bản ghi khách hàng hoặc liên hệ mà bạn có thể xuất và thực hiện hành động.
 
 > [!TIP]
-> Phân khúc dựa trên **khách hàng cá nhân** tự động bao gồm thông tin liên hệ có sẵn cho các thành phần phân khúc. Trong môi trường cho **tài khoản doanh nghiệp**, các phân khúc được dựa trên tài khoản (công ty hoặc đại lý). Để bao gồm thông tin liên hệ trong phân khúc, hãy sử dụng chức năng **Thuộc tính dự án** trong trình dựng phân khúc. Đảm bảo rằng các nguồn dữ liệu liên hệ là [ánh xạ ngữ nghĩa tới ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) thực thể.
+> Phân khúc dựa trên **khách hàng cá nhân** tự động bao gồm thông tin liên hệ có sẵn cho các thành phần phân khúc. Trong **tài khoản kinh doanh**, nếu bạn [thống nhât](data-unification.md) cả tài khoản và địa chỉ liên hệ, chọn phân đoạn dựa trên tài khoản hoặc địa chỉ liên hệ công việc. Để xuất đến một điểm đến cần thông tin liên hệ, hãy sử dụng một phân đoạn các địa chỉ liên hệ. Để xuất thông tin tài khoản đến đích, hãy sử dụng một phân đoạn tài khoản.
 
 ## <a name="segment-builder"></a>Trình tạo phân khúc
 
@@ -57,6 +57,11 @@ Ví dụ trên minh họa khả năng phân khúc. Chúng tôi đã xác định
 
 1. Chọn **Mới** > **Xây dựng phân khúc của riêng bạn**. Trên trang trình dựng phân khúc, bạn xác định hoặc soạn các quy tắc. Quy tắc bao gồm một hoặc nhiều điều kiện xác định một tập khách hàng.
 
+   > [!NOTE]
+   > Đối với môi trường dựa trên tài khoản doanh nghiệp, hãy chọn **Mới** > **Phân đoạn tài khoản** hoặc **Phân đoạn Danh bạ (xem trước)** dựa trên loại phân đoạn bạn muốn tạo. Nếu một [phân cấp tài khoản](relationships.md#set-up-account-hierarchies) đã được xác định và bạn muốn tạo quy tắc để lọc ra dữ liệu dựa trên mối quan hệ con và mẹ, hãy chọn **Sử dụng hệ thống phân cấp? (xem trước)**, chọn hệ thống phân cấp, sau đó **Ứng dụng**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Phân đoạn chọn ngăn phân cấp tài khoản.":::
+
 1. Lựa chọn **Chỉnh sửa chi tiết** bên cạnh Phân đoạn không có tiêu đề. Cung cấp tên cho phân khúc và cập nhật **Tên thực thể đầu ra** đã đề xuất cho phân khúc. Theo tùy chọn, thêm mô tả và [thẻ](work-with-tags-columns.md#manage-tags) đến phân khúc.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Hộp thoại chỉnh sửa chi tiết.":::
@@ -65,11 +70,11 @@ Ví dụ trên minh họa khả năng phân khúc. Chúng tôi đã xác định
    - Xem lại danh sách các thực thể và thuộc tính có sẵn trong ngăn **Thêm vào quy tắc** và chọn biểu tượng **+** bên cạnh thuộc tính cần thêm. Chọn nếu bạn muốn thêm thuộc tính vào quy tắc hiện có hoặc sử dụng thuộc tính đó để tạo quy tắc mới.
    - Nhập tên của thuộc tính vào phần quy tắc để xem các đề xuất phù hợp.
 
-1. Chọn các toán tử để chỉ định các giá trị phù hợp của điều kiện. Thuộc tính có thể có một trong bốn kiểu dữ liệu dưới dạng giá trị: số, chuỗi, ngày tháng hoặc Boolean. Tùy thuộc vào kiểu dữ liệu của thuộc tính, các toán tử khác nhau có sẵn để chỉ định điều kiện. Đối với các phân khúc có tài khoản doanh nghiệp, hai toán tử đặc biệt có sẵn để bao gồm phân cấp tiềm năng giữa các tài khoản đã nhập. Sử dụng toán tử *child of* và *parent of* để bao gồm các tài khoản liên quan.
+1. Chọn các toán tử để chỉ định các giá trị phù hợp của điều kiện. Thuộc tính có thể có một trong bốn kiểu dữ liệu dưới dạng giá trị: số, chuỗi, ngày tháng hoặc Boolean. Tùy thuộc vào kiểu dữ liệu của thuộc tính, các toán tử khác nhau có sẵn để chỉ định điều kiện.
 
 1. Chọn **Thêm điều kiện** để thêm nhiều điều kiện hơn vào quy tắc. Để tạo quy tắc theo quy tắc hiện tại, hãy chọn **Thêm quy tắc phụ**.
 
-1. Nếu một quy tắc sử dụng các thực thể khác với *khách hàng* thực thể, chọn **Đặt đường dẫn mối quan hệ** để ánh xạ thực thể đã chọn với thực thể khách hàng hợp nhất. Nếu chỉ có một đường dẫn mối quan hệ khả thi, hệ thống sẽ tự động chọn đường dẫn đó. Khác nhau [con đường quan hệ](relationships.md#relationship-paths) có thể mang lại các kết quả khác nhau. Mọi quy tắc đều có thể có đường dẫn mối quan hệ riêng.
+1. Nếu một quy tắc sử dụng các thực thể khác với *khách hàng* thực thể (hoặc *ContactProfile* thực thể cho B-to-B), chọn **Đặt đường dẫn mối quan hệ** để ánh xạ thực thể đã chọn với thực thể khách hàng hợp nhất. Nếu chỉ có một đường dẫn mối quan hệ khả thi, hệ thống sẽ tự động chọn đường dẫn đó. Khác nhau [con đường quan hệ](relationships.md#relationship-paths) có thể mang lại các kết quả khác nhau. Mọi quy tắc đều có thể có đường dẫn mối quan hệ riêng.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Đường dẫn mối quan hệ tiềm năng khi tạo quy tắc dựa trên một thực thể được ánh xạ tới thực thể khách hàng hợp nhất.":::
 
@@ -81,7 +86,7 @@ Ví dụ trên minh họa khả năng phân khúc. Chúng tôi đã xác định
 
    Khi sử dụng toán tử HOẶC, tất cả các điều kiện phải dựa trên các thực thể có trong đường dẫn mối quan hệ.
 
-1. Để tạo các bộ hồ sơ khách hàng khác nhau, hãy tạo nhiều quy tắc. Để bao gồm những khách hàng cần thiết cho trường hợp kinh doanh của bạn, hãy kết hợp các nhóm. Cụ thể, nếu bạn không thể bao gồm một thực thể trong một quy tắc vì đường dẫn mối quan hệ đã chỉ định, hãy tạo một quy tắc mới để chọn các thuộc tính từ nó.
+1. Để tạo các bộ hồ sơ khách hàng khác nhau, hãy tạo nhiều quy tắc. Để bao gồm những khách hàng cần thiết cho trường hợp kinh doanh của bạn, hãy kết hợp các nhóm. Cụ thể, nếu bạn không thể bao gồm một thực thể trong một quy tắc do đường dẫn mối quan hệ đã chỉ định, hãy tạo một quy tắc mới để chọn các thuộc tính từ nó.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Thêm quy tắc mới vào một phân khúc và chọn toán tử đặt.":::
 
@@ -92,24 +97,22 @@ Ví dụ trên minh họa khả năng phân khúc. Chúng tôi đã xác định
       - **Giao nhau** sẽ chồng chéo hai nhóm với nhau. Chỉ dữ liệu mà cả hai nhóm *có chung* vẫn nằm trong nhóm hợp nhất.
       - **Trừ** kết hợp hai nhóm với nhau. Chỉ dữ liệu trong nhóm A mà *không có chung* với dữ liệu trong nhóm B được giữ lại.
 
-1. Theo mặc định, thực thể đầu ra sẽ tự động chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Nếu một phân đoạn dựa trên các thực thể khác với *khách hàng* thực thể, chọn **Thuộc tính dự án** để thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra.
-
-   > [!IMPORTANT]
-   > Đối với các phân đoạn dựa trên tài khoản doanh nghiệp, thông tin chi tiết về một hoặc nhiều địa chỉ liên hệ của từng tài khoản từ *ContactProfile* thực thể phải được đưa vào phân đoạn để cho phép phân đoạn đó được kích hoạt hoặc xuất sang các đích yêu cầu thông tin liên hệ. Để biết thêm thông tin về thực thể *ContactProfile*, xem [Ánh xạ ngữ nghĩa](semantic-mappings.md).
-   > Đầu ra mẫu cho một phân khúc dựa trên tài khoản doanh nghiệp với các thuộc tính dự kiến của địa chỉ liên hệ sẽ có dạng như thế này:
-   >
-   > |ID  |Tên Khách hàng  |Doanh thu  |Tên liên hệ  | Vai trò liên hệ|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Quản lý thu mua]
+1. Theo mặc định, thực thể đầu ra sẽ tự động chứa tất cả các thuộc tính của hồ sơ khách hàng phù hợp với các bộ lọc đã xác định. Trong B-to-B khi sử dụng *ContactProfile* thực thể, ID tài khoản được tự động bao gồm. Nếu một phân đoạn dựa trên các thực thể khác với *khách hàng* thực thể hoặc bao gồm nhiều thuộc tính hơn từ *ContactProfile*, lựa chọn **Thuộc tính dự án** để thêm nhiều thuộc tính hơn từ các thực thể này vào thực thể đầu ra.
+ 
+   Ví dụ: Một phân khúc được dựa trên thực thể chứa dữ liệu mua hàng, liên quan đến thực thể *Khách hàng*. Phân khúc này dành cho tất cả khách hàng đến từ Tây Ban Nha đã mua hàng trong năm hiện tại. Bạn có thể chọn thêm các thuộc tính như giá hàng hóa hoặc ngày mua hàng vào tất cả các bản ghi khách hàng phù hợp trong thực thể đầu ra. Thông tin này có thể hữu ích để phân tích mối tương quan giữa mùa vụ với tổng chi tiêu.
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Ví dụ về các thuộc tính dự kiến được chọn trong ngăn bên để được thêm vào thực thể đầu ra.":::
-  
-   Ví dụ: Một phân khúc được dựa trên thực thể chứa dữ liệu mua hàng, liên quan đến thực thể *Khách hàng*. Phân khúc này dành cho tất cả khách hàng đến từ Tây Ban Nha đã mua hàng trong năm hiện tại. Bạn có thể chọn thêm các thuộc tính như giá hàng hóa hoặc ngày mua hàng vào tất cả các hồ sơ khách hàng phù hợp trong thực thể đầu ra. Thông tin này có thể hữu ích để phân tích mối tương quan giữa mùa vụ với tổng chi tiêu.
+ 
+   Đầu ra mẫu cho một phân khúc dựa trên tài khoản doanh nghiệp với các thuộc tính dự kiến của địa chỉ liên hệ sẽ có dạng như thế này:
+
+   |ID  |Tên Khách hàng  |Doanh thu  |Tên liên hệ  | Vai trò liên hệ|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Quản lý thu mua]
 
    > [!NOTE]
-   > - **Thuộc tính dự án** chỉ hoạt động cho các thực thể có mối quan hệ một-nhiều với thực thể khách hàng. Ví dụ: một khách hàng có thể có nhiều gói đăng ký.
-   > - Nếu thuộc tính bạn muốn chiếu xa hơn một bước so với thực thể *Khách hàng*, như xác định theo mối quan hệ, rằng thuộc tính đó nên được sử dụng trong mọi quy tắc của truy vấn phân khúc mà bạn đang xây dựng.
-   > - Nếu thuộc tính bạn muốn chiếu chỉ cách thực thể *Khách hàng* một bước, thuộc tính đó không cần xuất hiện trong mọi quy tắc của truy vấn phân khúc mà bạn đang xây dựng.
+   > - **Thuộc tính dự án** chỉ hoạt động cho các thực thể có mối quan hệ một-nhiều với *khách hàng* hoặc *ContactProfile* thực thể. Ví dụ: một khách hàng có thể có nhiều gói đăng ký.
+   > - Nếu thuộc tính bạn muốn chiếu xa hơn một bước so với *khách hàng* hoặc *ContactProfile* thực thể, như được xác định bởi mối quan hệ, thuộc tính đó nên được sử dụng trong mọi quy tắc của truy vấn phân đoạn mà bạn đang tạo.
+   > - Nếu thuộc tính bạn muốn chiếu chỉ còn cách *khách hàng* hoặc *ContactProfile* thực thể, thuộc tính đó không cần phải có trong mọi quy tắc của truy vấn phân đoạn mà bạn đang tạo.
    > - **Các thuộc tính dự kiến** được coi như yếu tố khi sử dụng các toán tử tập hợp.
 
 1. Lựa chọn **Chạy** để tạo phân khúc. Lựa chọn **Tiết kiệm** nếu bạn muốn giữ cấu hình hiện tại và chạy phân đoạn sau. Các **Phân đoạn** hiển thị trang.

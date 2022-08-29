@@ -1,7 +1,7 @@
 ---
 title: Tổng quan về trang Nội dung xuất (xem trước)
 description: Quản lý nội dung xuất để chia sẻ dữ liệu.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245353"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304085"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
@@ -27,25 +27,26 @@ ms.locfileid: "9245353"
 
 Có hai loại xuất chính:  
 
-- **Xuất dữ liệu ra ngoài** : xuất bất kỳ loại thực thể nào có sẵn trong Thông tin chi tiết về khách hàng. Các thực thể mà bạn chọn để xuất được xuất với tất cả các trường dữ liệu, siêu dữ liệu, lược đồ và chi tiết ánh xạ.
-- **Xuất khẩu phân đoạn** : xuất các thực thể phân đoạn từ Thông tin chi tiết về khách hàng. Các phân khúc đại diện cho một danh sách các hồ sơ khách hàng. Khi định cấu hình xuất, bạn chọn các trường dữ liệu được bao gồm, tùy thuộc vào hệ thống đích mà bạn đang xuất dữ liệu.
+- **Xuất dữ liệu ra ngoài** cho phép bạn xuất bất kỳ loại thực thể nào có sẵn trong Thông tin chi tiết về khách hàng. Các thực thể mà bạn chọn để xuất được xuất với tất cả các trường dữ liệu, siêu dữ liệu, lược đồ và chi tiết ánh xạ.
+- **Xuất khẩu phân đoạn** cho phép bạn xuất các thực thể phân đoạn từ Thông tin chi tiết về khách hàng. Đối với người tiêu dùng cá nhân (B-to-C), các phân đoạn thể hiện danh sách hồ sơ khách hàng. Đối với doanh nghiệp (B-to-B), [phân đoạn có thể đại diện cho một danh sách các tài khoản hoặc địa chỉ liên hệ](segment-builder.md#create-a-new-segment-with-segment-builder). Khi định cấu hình xuất, bạn chọn các trường dữ liệu được bao gồm, tùy thuộc vào hệ thống đích mà bạn đang xuất dữ liệu.
 
 ### <a name="export-segments"></a>Xuất phân khúc
 
 **Xuất phân khúc trong môi trường dành cho tài khoản doanh nghiệp (B2B) hoặc khách hàng cá nhân (B2C)**  
-Hầu hết các tùy chọn xuất hỗ trợ cả hai loại môi trường. Xuất khẩu các phân đoạn sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. 
+Hầu hết các tùy chọn xuất hỗ trợ cả hai loại môi trường. Việc xuất khẩu các phân đoạn sang các hệ thống mục tiêu khác nhau có các yêu cầu cụ thể. 
 
 **Xuất phân khúc trong môi trường dành cho người tiêu dùng cá nhân (B2C)**  
 - Các phân khúc trong bối cảnh môi trường dành cho khách hàng cá nhân được xây dựng dựa trên thực thể *hồ sơ khách hàng hợp nhất*. Mọi phân khúc đáp ứng yêu cầu của hệ thống mục tiêu (ví dụ: địa chỉ email) đều có thể được xuất.
 
-**Môi trường xuất phân khúc cho tài khoản doanh nghiệp (B2B)**  
-- Các phân khúc trong bối cảnh môi trường dành cho tài khoản doanh nghiệp được xây dựng dựa trên thực thể *tài khoản*. Để xuất các phân khúc tài khoản như hiện tại, hệ thống mục tiêu cần hỗ trợ các phân khúc tài khoản thuần túy. Đây là trường hợp cho [LinkedIn](export-linkedin-ads.md) khi bạn chọn tùy chọn **công ty** trong khi xác định xuất.
-- Tất cả các hệ thống đích khác đều yêu cầu các trường từ thực thể liên hệ. Để đảm bảo các phân khúc tài khoản có thể truy xuất dữ liệu từ các liên hệ có liên quan, định nghĩa phân khúc của bạn cần phải chiếu các thuộc tính của thực thể liên hệ. Tìm hiểu thêm về cách [đặt cấu hình các phân khúc và chiếu thuộc tính](segment-builder.md).
+**Phân đoạn xuất khẩu trong môi trường cho tài khoản doanh nghiệp (B-to-B)**  
+- Các phân đoạn trong bối cảnh môi trường dành cho tài khoản doanh nghiệp được xây dựng dựa trên *tài khoản* thực thể hoặc *tiếp xúc* thực thể. Để xuất các phân khúc tài khoản như hiện tại, hệ thống mục tiêu cần hỗ trợ các phân khúc tài khoản thuần túy. Đây là trường hợp cho [LinkedIn](export-linkedin-ads.md) khi bạn chọn tùy chọn **công ty** trong khi xác định xuất.
+- Tất cả các hệ thống đích khác đều yêu cầu các trường từ thực thể liên hệ.
+- Với hai loại phân đoạn (địa chỉ liên hệ và tài khoản), Customer Insights tự động xác định loại phân đoạn nào đủ điều kiện để xuất dựa trên hệ thống mục tiêu. Ví dụ: đối với hệ thống nhắm mục tiêu tập trung vào địa chỉ liên hệ như Mailchimp, Thông tin chi tiết về khách hàng chỉ cho phép bạn chọn các phân đoạn liên hệ để xuất.
 
 **Giới hạn đối với xuất phân khúc**  
 - Hệ thống mục tiêu của bên thứ ba có thể giới hạn số lượng hồ sơ khách hàng mà bạn có thể xuất. 
-- Đối với khách hàng cá nhân, bạn sẽ thấy số lượng thành phần phân khúc thực tế khi chọn phân khúc để xuất. Bạn sẽ nhận được cảnh báo nếu một phân khúc quá lớn. 
-- Đối với tài khoản doanh nghiệp, bạn sẽ thấy số lượng tài khoản trong một phân khúc; tuy nhiên, số lượng liên hệ có thể được chiếu không hiển thị. Trong một số trường hợp, điều này có thể dẫn đến phân khúc đã xuất thực sự chứa nhiều hồ sơ khách hàng hơn hệ thống mục tiêu chấp nhận. Nếu vượt quá giới hạn của hệ thống đích, quá trình xuất sẽ bị bỏ qua.
+- Đối với khách hàng cá nhân, bạn sẽ thấy số lượng thành phần phân khúc thực tế khi chọn phân khúc để xuất. Bạn sẽ nhận được cảnh báo nếu một phân đoạn quá lớn. 
+- Đối với tài khoản doanh nghiệp, bạn sẽ thấy số lượng tài khoản hoặc địa chỉ liên hệ tùy thuộc vào phân khúc. Bạn sẽ nhận được cảnh báo nếu phân đoạn quá lớn. Vượt quá giới hạn của kết quả hệ thống đích sẽ bỏ qua quá trình xuất.
 
 ## <a name="set-up-a-new-export"></a>Thiết lập một nội dung xuất mới
 
@@ -101,15 +102,29 @@ Xác định lịch trình làm mới tùy chỉnh cho từng lần xuất hoặ
 
 Khi chỉnh sửa lịch biểu cho một số lần xuất, hãy lựa chọn trong **Giữ hoặc ghi đè lịch biểu**:
 
-- **Giữ lịch trình cá nhân** : Giữ lịch đã xác định trước đó cho các lần xuất đã chọn và chỉ tắt hoặc bật chúng.
+- **Giữ lịch trình cá nhân** : Giữ lịch trình đã xác định trước đó cho các lần xuất đã chọn và chỉ tắt hoặc bật chúng.
 - **Xác định lịch trình mới cho tất cả nội dung xuất đã chọn**: Ghi đè lên lịch trình hiện có của các nội dung xuất đã chọn.
 
 ### <a name="run-exports-on-demand"></a>Chạy nội dung xuất theo yêu cầu
 
 Để xuất dữ liệu mà không cần đợi làm mới theo lịch trình, hãy đi đến **Dữ liệu** > **Nội dung xuất**.
 
-- Để chạy tất cả các nội dung xuất, hãy chọn **Chạy tất cả** trong thanh lệnh. Chỉ các bản xuất có lịch biểu đang hoạt động mới được chạy. Để chạy một lần xuất không hoạt động, hãy chạy một lần xuất.
+- Để chạy tất cả các nội dung xuất, hãy chọn **Chạy tất cả** trong thanh lệnh. Chỉ các bản xuất có lịch biểu hoạt động mới được chạy. Để chạy một lần xuất không hoạt động, hãy chạy một lần xuất.
 - Để chạy một nội dung xuất, hãy chọn nội dung xuất đó trong danh sách rồi chọn **Chạy** trên thanh lệnh.
+
+## <a name="troubleshooting"></a>Gỡ rối
+
+### <a name="segment-not-eligible-for-export"></a>Phân đoạn không đủ điều kiện xuất khẩu
+
+**Vấn đề** Trong môi trường tài khoản doanh nghiệp, quá trình xuất của bạn không thành công với thông báo lỗi: "Phân đoạn sau không đủ điều kiện cho điểm đến xuất này: '{ tên của phân khúc} '. Vui lòng chỉ chọn các phân đoạn thuộc loại ContactProfile và thử lại. "
+
+**Nghị quyết** Môi trường Customer Insights dành cho tài khoản doanh nghiệp đã được cập nhật để hỗ trợ các phân đoạn liên hệ ngoài các phân đoạn tài khoản. Do sự thay đổi đó, các mục xuất cần chi tiết liên hệ chỉ hoạt động với các phân đoạn dựa trên địa chỉ liên hệ.
+
+1. [Tạo phân đoạn dựa trên danh bạ](segment-builder.md) phù hợp với phân đoạn đã sử dụng trước đây của bạn.
+
+1. Khi phân đoạn liên hệ đó được chạy, hãy chỉnh sửa bản xuất tương ứng và chọn phân đoạn mới.
+
+1. Lựa chọn **Tiết kiệm** để lưu cấu hình hoặc **Lưu và chạy** để kiểm tra việc xuất này ngay lập tức.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

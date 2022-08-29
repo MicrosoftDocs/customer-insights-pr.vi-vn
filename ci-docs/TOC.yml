@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Danh mục học tập
   items:
-    - name: Chứng nhận là Chuyên gia Nền tảng Dữ liệu Khách hàng của Microsoft
+    - name: Chứng nhận là Chuyên gia nền tảng dữ liệu khách hàng của Microsoft
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Bắt đầu với Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Xem xét hợp nhất dữ liệu
       href: review-unification.md
+    - name: Tạo một hồ sơ liên hệ thống nhất
+      href: data-unification-contacts.md
     - name: Cập nhật cài đặt hợp nhất
       href: data-unification-update.md
 - name: Tăng cường dữ liệu
