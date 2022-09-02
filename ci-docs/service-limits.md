@@ -1,23 +1,23 @@
 ---
 title: Giới hạn dịch vụ trong Thông tin chi tiết về khách hàng
 description: Hiểu các giới hạn và hạn chế trong dịch vụ SaaS Thông tin chi tiết về khách hàng.
-ms.date: 05/28/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d1b761a5c9f67bfdc7c5b152132c618db3ea36a
-ms.sourcegitcommit: 78ef22cd39a1ebd7525f96829cd79d95f34438b9
+ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "8940694"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387182"
 ---
 # <a name="service-limits-in-customer-insights"></a>Giới hạn dịch vụ trong Thông tin chi tiết về khách hàng
 
-Bài viết này mô tả các giới hạn tích hợp đối với dịch vụ Customer Insights, được thiết kế để bảo đảm độ tin cậy và ổn định của dịch vụ. Mọi yêu cầu thay đổi có thể được đưa ra thông qua [Diễn đàn ý tưởng](https://go.microsoft.com/fwlink/?linkid=2074172).
+ Thông tin chi tiết về khách hàng có các giới hạn tích hợp được thiết kế để đảm bảo độ tin cậy và ổn định của dịch vụ. Mọi yêu cầu thay đổi có thể được đưa ra thông qua [Diễn đàn ý tưởng](https://go.microsoft.com/fwlink/?linkid=2074172).
 
 ## <a name="customer-insights"></a>Customer Insights
 
@@ -28,6 +28,6 @@ Bài viết này mô tả các giới hạn tích hợp đối với dịch vụ
 
 ## <a name="fair-scheduling-of-jobs"></a>Lập kế hoạch công việc hợp lý
 
-Thông tin chi tiết về khách hàng là một dịch vụ SaaS sử dụng tài nguyên Azure được chia sẻ. Khách hàng có xu hướng có khối lượng công việc với cường độ thay đổi và theo các lịch trình khác nhau. Để đảm bảo quyền truy cập hợp lý vào các tài nguyên cơ bản, chúng tôi đảm bảo các quy trình hệ thống được thực thi theo thứ tự hợp lý. Ví dụ về quy trình hệ thống là các công việc liên quan đến hợp nhất dữ liệu, cập nhật phân đoạn hoặc tính toán đo lường. Việc lập lịch trình hợp lý bảo vệ bạn khỏi phải xếp hàng chờ đợi các nguồn lực nếu có lượng công việc được yêu cầu tăng đột biến. Đồng thời, Customer Insights không đảm bảo tất cả các công việc bạn xếp hàng được xử lý song song.
+Thông tin chi tiết về khách hàng là một dịch vụ SaaS sử dụng tài nguyên Azure được chia sẻ. Khách hàng có xu hướng có khối lượng công việc với cường độ thay đổi và theo các lịch trình khác nhau. Để đảm bảo quyền truy cập hợp lý vào các tài nguyên cơ bản, chúng tôi đảm bảo các quy trình hệ thống được thực thi theo thứ tự hợp lý. Ví dụ về quy trình hệ thống là các công việc liên quan đến hợp nhất dữ liệu, cập nhật phân đoạn hoặc tính toán đo lường. Việc lập lịch trình hợp lý bảo vệ bạn khỏi phải xếp hàng đợi các nguồn lực nếu có lượng công việc được yêu cầu tăng đột biến. Đồng thời, Customer Insights không đảm bảo tất cả các công việc bạn xếp hàng được xử lý song song.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,27 +1,27 @@
 ---
 title: Ví dụ về truy vấn OData cho API thông tin chi tiết về khách hàng
 description: Các ví dụ thường được sử dụng về Giao thức dữ liệu mở (OData) để truy vấn API thông tin chi tiết về khách hàng để xem xét dữ liệu.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121588"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387228"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Ví dụ về truy vấn OData cho API thông tin chi tiết về khách hàng
 
 Giao thức Dữ liệu Mở (OData) là một giao thức truy cập dữ liệu được xây dựng trên các giao thức cốt lõi như HTTP. Nó sử dụng các phương pháp luận thường được chấp nhận như REST cho web. Có nhiều loại thư viện và công cụ khác nhau có thể được sử dụng để sử dụng các dịch vụ OData.
 
-Bài viết này liệt kê một số truy vấn mẫu được yêu cầu thường xuyên để giúp bạn xây dựng các triển khai của riêng mình dựa trên [API thông tin chi tiết về khách hàng](apis.md).
+Để giúp bạn xây dựng các triển khai của riêng mình dựa trên [API thông tin chi tiết về khách hàng](apis.md) , xem lại một số truy vấn mẫu được yêu cầu thường xuyên.
 
-Bạn phải sửa đổi các mẫu truy vấn để làm cho chúng hoạt động trên các môi trường đích: 
+Sửa đổi các mẫu truy vấn để làm cho chúng hoạt động trên các môi trường đích:
 
 - {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` ở đâu{instanceId} là HƯỚNG DẪN của môi trường Thông tin chi tiết về khách hàng mà bạn muốn truy vấn. Các [Hoạt động ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) cho phép bạn tìm thấy{InstanceId} bạn có quyền truy cập vào.
 - {CID}: HƯỚNG DẪN của một hồ sơ khách hàng thống nhất. Ví dụ: `ce759201f786d590bf2134bff576c369`.
@@ -31,22 +31,22 @@ Bạn phải sửa đổi các mẫu truy vấn để làm cho chúng hoạt đ�
 
 ## <a name="customer"></a>Quý khách hàng
 
-Bảng sau chứa một tập hợp các truy vấn mẫu cho *khách hàng* thực thể.
+Các truy vấn mẫu cho *khách hàng* thực thể.
 
 |Loại truy vấn |Ví dụ:  | Lưu ý  |
 |---------|---------|---------|
 |ID khách hàng duy nhất     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Khóa thay thế    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Các khóa thay thế vẫn tồn tại trong thực thể khách hàng hợp nhất       |
+|khóa thay thế    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Các khóa thay thế vẫn tồn tại trong thực thể khách hàng hợp nhất       |
 |Chọn   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |Vào    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Khóa thay thế + Trong   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|khóa thay thế + Trong   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Tìm kiếm  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Trả về 10 kết quả hàng đầu cho một chuỗi tìm kiếm      |
 |Thành viên phân khúc  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Trả về một số hàng đặt trước từ thực thể phân đoạn.      |
 |Tư cách thành viên phân khúc cho một khách hàng | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Trả về hồ sơ khách hàng nếu họ là thành viên của phân khúc nhất định     |
 
 ## <a name="unified-activity"></a>Hoạt động hợp nhất
 
-Bảng sau chứa một tập hợp các truy vấn mẫu cho *UnifiedActivity* thực thể.
+Các truy vấn mẫu cho *UnifiedActivity* thực thể.
 
 |Loại truy vấn |Ví dụ:  | Lưu ý  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Bảng sau chứa một tập hợp các truy vấn mẫu cho *UnifiedActivity* 
 
 ## <a name="other-examples"></a>Ví dụ khác
 
-Bảng sau đây chứa một tập hợp các truy vấn mẫu cho các thực thể khác.
+Các truy vấn mẫu cho các thực thể khác.
 
 |Loại truy vấn |Ví dụ:  | Lưu ý  |
 |---------|---------|---------|
