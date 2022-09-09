@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246273"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396027"
 ---
 # <a name="view-system-configuration"></a>Xem cấu hình hệ thống
 
@@ -27,23 +27,17 @@ Xem thông tin hệ thống, trạng thái hệ thống và sử dụng API.
 
 ## <a name="view-api-usage"></a>Xem mức sử dụng API
 
-Xem chi tiết về việc sử dụng API thời gian thực và xem sự kiện nào đã xảy ra trong một khung thời gian nhất định.
+Xem chi tiết về việc sử dụng API trong thời gian thực và xem những sự kiện nào đã xảy ra trong một khung thời gian nhất định.
 
 1. Đi đến **Quản trị viên** > **Hệ thống** và chọn **Sử dụng API** chuyển hướng.
 
 1. **Chọn khung thời gian** xem.
 
-   Các **Sử dụng API** trang có ba phần:
+   Các **Sử dụng API** trang chứa ba phần:
 
    - **Lệnh gọi API** - biểu đồ hiển thị tổng số cuộc gọi đến API trong khung thời gian đã chọn.
    - **Truyền dữ liệu** - biểu đồ hiển thị lượng dữ liệu đã được chuyển qua API trong khung thời gian đã chọn.
    - **Hoạt động** - một bảng với các hàng cho mỗi hoạt động API có sẵn và thông tin chi tiết về việc sử dụng các hoạt động. Chọn một tên hoạt động để truy cập [tham chiếu API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Các hoạt động sử dụng [nhập dữ liệu thời gian thực](real-time-data-ingestion.md) chứa một biểu tượng hai mắt để xem việc sử dụng API trong thời gian thực.
-
-   1. Chọn ống nhòm để mở **Sử dụng API thời gian thực** ngăn chứa chi tiết sử dụng cho hoạt động.
-   1. **Chọn khung thời gian** xem.
-   1. Sử dụng **Nhóm theo** để chọn cách trình bày tốt nhất các tương tác trong thời gian thực của bạn. Nhóm dữ liệu theo API **Phương pháp**, **thực thể đủ điều kiện** (thực thể đã nhập), **Được tạo bởi** (nguồn của sự kiện), **Kết quả** (thành công hay thất bại) hoặc **Mã lỗi**. Dữ liệu có sẵn dưới dạng biểu đồ lịch sử và dưới dạng bảng.
 
 ## <a name="view-system-information"></a>Xem thông tin hệ thống
 

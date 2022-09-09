@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245859"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396117"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Kết nối với dữ liệu trong Azure Data Lake Storage
 
@@ -27,7 +27,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
 - Hỗ trợ nhập dữ liệu Azure Data Lake Storage *Gen2* tài khoản độc quyền. Bạn không thể sử dụng tài khoản Data Lake Storage Gen1 để nhập dữ liệu.
 
-- Các Azure Data Lake Storage tài khoản phải có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace). Dữ liệu phải được lưu trữ ở định dạng thư mục phân cấp xác định thư mục gốc và có các thư mục con cho mỗi thực thể. Các thư mục con có thể có dữ liệu đầy đủ hoặc các thư mục dữ liệu gia tăng.
+- Các Azure Data Lake Storage tài khoản phải có [không gian tên phân cấp được bật](/azure/storage/blobs/data-lake-storage-namespace). Dữ liệu phải được lưu trữ ở định dạng thư mục phân cấp xác định thư mục gốc và có các thư mục con cho mỗi thực thể. Các thư mục con có thể có đầy đủ dữ liệu hoặc các thư mục dữ liệu gia tăng.
 
 - Để xác thực bằng dịch vụ chính Azure, hãy đảm bảo rằng dịch vụ chính được định cấu hình trong đối tượng thuê của bạn. Để biết thêm thông tin, hãy xem [Kết nối với một Azure Data Lake Storage Tài khoản Gen2 có gốc dịch vụ Azure](connect-service-principal.md).
 
@@ -35,10 +35,12 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
 - Dữ liệu được lưu trữ trong các dịch vụ trực tuyến có thể được lưu trữ ở một vị trí khác với nơi dữ liệu được xử lý hoặc lưu trữ trong Dynamics 365 Customer Insights.Bằng cách nhập hoặc kết nối với dữ liệu được lưu trữ trong các dịch vụ trực tuyến, bạn đồng ý rằng dữ liệu có thể được chuyển đến và lưu trữ bằng Dynamics 365 Customer Insights . [Tìm hiểu thêm tại Trung tâm tin cậy của Microsoft](https://www.microsoft.com/trust-center).
 
-- Nhân viên chính của dịch vụ Thông tin chi tiết về khách hàng phải có một trong các vai trò sau đây để truy cập vào tài khoản lưu trữ. Để biết thêm thông tin, hãy xem [Cấp quyền cho người điều hành dịch vụ để truy cập vào tài khoản lưu trữ](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
+- Nhân viên chính của dịch vụ Customer Insights phải có một trong các vai trò sau để truy cập vào tài khoản lưu trữ. Để biết thêm thông tin, hãy xem [Cấp quyền cho người quản lý dịch vụ để truy cập vào tài khoản lưu trữ](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Bộ đọc dữ liệu khối lưu trữ
   - Chủ sở hữu dữ liệu khối lưu trữ
   - Người đóng góp dữ liệu khối lưu trữ
+
+- Người dùng thiết lập kết nối nguồn dữ liệu cần ít quyền nhất của Storage Blob Data Contributor trên tài khoản lưu trữ.
 
 - Dữ liệu trong Data Lake Storage của bạn phải tuân theo tiêu chuẩn Mô hình Dữ liệu Chung để lưu trữ dữ liệu của bạn và có tệp kê khai mô hình dữ liệu chung để đại diện cho lược đồ của các tệp dữ liệu (* .csv hoặc * .parquet). Tệp kê khai phải cung cấp thông tin chi tiết về các đối tượng như cột đối tượng và kiểu dữ liệu cũng như vị trí tệp dữ liệu và loại tệp. Để biết thêm thông tin, hãy xem [Tệp kê khai Mô hình dữ liệu chung](/common-data-model/sdk/manifest). Nếu tệp kê khai không xuất hiện, người dùng quản trị có quyền truy cập Chủ sở hữu dữ liệu Blob lưu trữ hoặc Người đóng góp dữ liệu Blob lưu trữ có thể xác định giản đồ khi nhập dữ liệu.
 
@@ -62,16 +64,16 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
    > [!NOTE]
    > Bạn cần một trong các vai trò sau đối với vùng chứa hoặc tài khoản lưu trữ để tạo nguồn dữ liệu:
    >
-   >  - Storage Blob Data Reader đủ để đọc từ tài khoản lưu trữ và nhập dữ liệu vào Customer Insights. 
+   >  - Storage Blob Data Reader đủ để đọc từ tài khoản lưu trữ và nhập dữ liệu vào Thông tin chi tiết về khách hàng.
    >  - Người đóng góp hoặc chủ sở hữu dữ liệu Storage Blob là bắt buộc nếu bạn muốn chỉnh sửa tệp kê khai trực tiếp trong Thông tin chi tiết về khách hàng.  
   
 1. Chọn tên của **Thùng đựng hàng** chứa dữ liệu và giản đồ (tệp model.json hoặc tệp manifest.json) để nhập dữ liệu từ đó và chọn **Tiếp theo**.
    > [!NOTE]
    > Mọi tệp model.json hoặc manifest.json được liên kết với nguồn dữ liệu khác trong môi trường sẽ không hiển thị trong danh sách. Tuy nhiên, cùng một tệp model.json hoặc manifest.json có thể được sử dụng cho các nguồn dữ liệu trong nhiều môi trường.
 
-1. Để tạo một giản đồ mới, hãy truy cập [Tạo một tệp giản đồ mới](#create-a-new-schema-file).
+1. Để tạo một giản đồ mới, hãy chuyển đến [Tạo một tệp giản đồ mới](#create-a-new-schema-file).
 
-1. Để sử dụng một lược đồ hiện có, hãy điều hướng đến thư mục chứa tệp model.json hoặc tệp manifest.cdm.json. Bạn có thể tìm kiếm trong một thư mục để tìm tệp.
+1. Để sử dụng lược đồ hiện có, hãy điều hướng đến thư mục chứa tệp model.json hoặc tệp manifest.cdm.json. Bạn có thể tìm kiếm trong một thư mục để tìm tệp.
 
 1. Chọn tệp json và chọn **Tiếp theo**. Một danh sách các thực thể có sẵn sẽ hiển thị.
 
@@ -96,7 +98,7 @@ Nhập dữ liệu vào Dynamics 365 Customer Insights sử dụng của bạn A
 
    :::image type="content" source="media/dataprofiling-entities.png" alt-text="Hộp thoại để chọn cấu hình dữ liệu.":::
 
-   1. Tạo các thuộc tính mới, chỉnh sửa hoặc xóa các thuộc tính hiện có. Bạn có thể thay đổi tên, định dạng dữ liệu hoặc thêm một loại ngữ nghĩa.
+   1. Tạo các thuộc tính mới, chỉnh sửa hoặc xóa các thuộc tính hiện có. Bạn có thể thay đổi tên, định dạng dữ liệu hoặc thêm một kiểu ngữ nghĩa.
    1. Để bật phân tích và các khả năng khác, hãy chọn **Lập hồ sơ dữ liệu** cho toàn bộ thực thể hoặc cho các thuộc tính cụ thể. Theo mặc định, không có thực thể nào được bật cho phân tích chất lượng dữ liệu.
    1. Chọn **Xong**.
 
@@ -171,12 +173,12 @@ Bạn có thể cập nhật *Kết nối với tài khoản lưu trữ bằng* 
    - **Mô tả**
    - **Kết nối bộ nhớ của bạn bằng** và thông tin kết nối. Bạn không thể thay đổi thông tin **Vùng chứa** khi cập nhật kết nối.
       > [!NOTE]
-      > Một trong các vai trò sau đây phải được chỉ định cho tài khoản lưu trữ hoặc vùng chứa:
+      > Một trong các vai trò sau phải được chỉ định cho tài khoản lưu trữ hoặc vùng chứa:
         > - Bộ đọc dữ liệu khối lưu trữ
         > - Chủ sở hữu dữ liệu khối lưu trữ
         > - Người đóng góp dữ liệu khối lưu trữ
 
-   - **Bật liên kết riêng tư** nếu bạn muốn nhập dữ liệu từ tài khoản lưu trữ thông qua Liên kết cá nhân Azure. Để biết thêm thông tin, hãy xem [Liên kết riêng tư](security-overview.md#set-up-an-azure-private-link).
+   - **Bật liên kết riêng tư** nếu bạn muốn nhập dữ liệu từ tài khoản lưu trữ thông qua Liên kết riêng tư Azure. Để biết thêm thông tin, hãy xem [Liên kết riêng tư](security-overview.md#set-up-an-azure-private-link).
 
 1. Chọn **Tiếp theo**.
 1. Thay đổi bất kỳ điều nào sau đây:

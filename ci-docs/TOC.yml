@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Sử dụng các mô hình tùy chỉnh của Azure Machine Learning
           href: custom-models.md
-        - name: Hoàn thành dữ liệu chưa hoàn chỉnh
-          href: predictions.md
     - name: Hướng dẫn mẫu
       items:
         - name: Hướng dẫn mẫu cho dự đoán CLV

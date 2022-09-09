@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246134"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396099"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Nhập dữ liệu trong thời gian thực (xem trước)
 
@@ -82,10 +82,5 @@ Bạn có thể sử dụng các khả năng thời gian thực bằng cách xâ
 Bạn có thể đăng một hoạt động ở định dạng của hệ thống nguồn của bạn hoặc ở định dạng UnifiedActivity. Lấy định dạng bằng cách thực hiện cuộc gọi API tới /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Thông tin chi tiết về API này, bao gồm các thông số và phản hồi, có thể được tìm thấy trong phần **EntityData** trên [Tham chiếu API Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Để biết thêm thông tin, hãy xem [Làm việc với API Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Tìm hiểu cách sử dụng trong thời gian thực với phương pháp đo từ xa
-
-Xem tổng quan về khối lượng yêu cầu tới API thời gian thực và thông tin về các vấn đề mà hệ thống có thể gặp phải. Bạn có thể [truy cập máy đo từ xa thời gian thực](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

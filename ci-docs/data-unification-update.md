@@ -1,7 +1,7 @@
 ---
 title: Cập nhật cài đặt hợp nhất khách hàng, tài khoản hoặc liên hệ
 description: Cập nhật các quy tắc trùng lặp, quy tắc đối sánh hoặc các trường hợp nhất trong cài đặt hợp nhất tài khoản hoặc khách hàng.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304361"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392497"
 ---
 # <a name="update-unification-settings"></a>Cập nhật cài đặt hợp nhất
 
@@ -30,7 +30,7 @@ ms.locfileid: "9304361"
 
    :::image type="content" source="media/m3_unified.png" alt-text="Ảnh chụp màn hình của trang Data Unify sau khi dữ liệu được thống nhất." lightbox="media/m3_unified.png":::
 
-   Đối với tài khoản doanh nghiệp (B-to-B), **Thống nhất** trang hiển thị số lượng hồ sơ tài khoản hợp nhất và các ô cho mỗi bước hợp nhất tài khoản. Nếu các địa chỉ liên hệ được hợp nhất, số lượng cấu hình liên hệ thống nhất và các ô cho mỗi bước hợp nhất địa chỉ liên hệ sẽ hiển thị. Chọn ô thích hợp bên dưới **Hợp nhất các tài khoản** hoặc **Hợp nhất Danh bạ (xem trước)** tùy thuộc vào những gì bạn muốn cập nhật.
+   Đối với tài khoản doanh nghiệp (B-to-B), **Thống nhất** trang hiển thị số lượng hồ sơ tài khoản hợp nhất và các ô cho mỗi bước hợp nhất tài khoản. Nếu địa chỉ liên hệ được hợp nhất, số lượng cấu hình liên hệ hợp nhất và ô cho mỗi bước hợp nhất địa chỉ liên hệ sẽ hiển thị. Chọn ô thích hợp dưới **Hợp nhất các tài khoản** hoặc **Hợp nhất Danh bạ (xem trước)** tùy thuộc vào những gì bạn muốn cập nhật.
 
    :::image type="content" source="media/b2b_unified.png" alt-text="Ảnh chụp màn hình của trang Thống nhất dữ liệu sau khi dữ liệu tài khoản và liên hệ được hợp nhất." lightbox="media/b2b_unified.png":::
 
@@ -38,7 +38,7 @@ ms.locfileid: "9304361"
    > Các **Điều kiện phù hợp** chỉ hiển thị nếu nhiều thực thể đã được chọn.
 
 1. Chọn những gì bạn muốn cập nhật:
-   - [Các trường nguồn](#edit-source-fields) để thêm thực thể hoặc thuộc tính hoặc thay đổi loại thuộc tính.
+   - [Các trường nguồn](#edit-source-fields) để thêm thuộc tính hoặc thực thể hoặc thay đổi loại thuộc tính. Để xóa một thuộc tính, hãy xem [Xóa trường hợp nhất](#remove-a-unified-field). Để xóa một thực thể, hãy xem [Xóa một thực thể hợp nhất](#remove-a-unified-entity).
    - [Bản ghi trùng lặp](#manage-deduplication-rules) để quản lý các quy tắc chống trùng lặp hoặc hợp nhất các tùy chọn.
    - [Điều kiện phù hợp](#manage-match-rules) để cập nhật các quy tắc phù hợp trên hai hoặc nhiều thực thể.
    - [Các trường khách hàng hợp nhất](#manage-unified-fields) để kết hợp hoặc loại trừ các trường. Bạn cũng có thể nhóm các cấu hình liên quan thành các cụm.
@@ -47,13 +47,11 @@ ms.locfileid: "9304361"
 
 1. Sau khi thực hiện các thay đổi, hãy chọn tùy chọn tiếp theo của bạn:
 
-   - [Chạy các điều kiện phù hợp](#run-matching-conditions) để nhanh chóng đánh giá chất lượng của các điều kiện đối sánh của bạn (quy tắc trùng lặp và đối sánh) mà không cần cập nhật hồ sơ hợp nhất. Các **Chỉ chạy các điều kiện phù hợp** tùy chọn không hiển thị cho một thực thể.
+   - [Chạy các điều kiện phù hợp](#run-matching-conditions) để nhanh chóng đánh giá chất lượng của các điều kiện đối sánh của bạn (quy tắc loại bỏ trùng lặp và đối sánh) mà không cần cập nhật hồ sơ hợp nhất. Các **Chỉ chạy các điều kiện phù hợp** tùy chọn không hiển thị cho một thực thể.
    - [Hợp nhất hồ sơ](#run-updates-to-the-unified-profile) để chạy các điều kiện phù hợp và cập nhật thực thể hồ sơ hợp nhất mà không ảnh hưởng đến các yếu tố phụ thuộc (chẳng hạn như bổ sung, phân đoạn hoặc đo lường). Các quy trình phụ thuộc không được chạy, nhưng sẽ được làm mới dưới dạng [được xác định trong lịch trình làm mới](schedule-refresh.md).
    - [Hợp nhất hồ sơ và phụ thuộc](#run-updates-to-the-unified-profile) để chạy các điều kiện phù hợp, cập nhật thực thể cấu hình hợp nhất và cập nhật tất cả các phần phụ thuộc (chẳng hạn như phần bổ sung, phân đoạn hoặc số đo). Tất cả các quá trình được chạy lại tự động. Trong B-to-B, quá trình hợp nhất được chạy trên cả tài khoản và các thực thể liên hệ cập nhật cấu hình hợp nhất.
 
 ## <a name="edit-source-fields"></a>Chỉnh sửa trường nguồn
-
-Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chúng đã được hợp nhất.
 
 1. Lựa chọn **Chỉnh sửa** trên **Các trường nguồn** ngói.
 
@@ -66,6 +64,80 @@ Bạn không thể xóa một thuộc tính hoặc một thực thể nếu chú
 1. Theo tùy chọn, bạn có thể thay đổi khóa chính cho một thực thể, các loại thuộc tính và chuyển đổi **Lập bản đồ thông minh** bật hoặc tắt. Để biết thêm thông tin, hãy xem [Chọn các trường nguồn](map-entities.md).
 
 1. Lựa chọn **Tiếp theo** để thực hiện các thay đổi đối với các quy tắc loại bỏ trùng lặp hoặc chọn **Lưu và đóng** và trở lại [Cập nhật cài đặt hợp nhất](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Xóa trường hợp nhất
+
+Để xóa một trường đã được hợp nhất, trường đó phải được xóa khỏi bất kỳ phần phụ thuộc nào như phân đoạn, thước đo, phần bổ sung hoặc mối quan hệ.
+
+1. Khi tất cả các phụ thuộc cho trường đã được xóa, hãy chuyển đến **Dữ liệu** > **Thống nhất**.
+
+1. Lựa chọn **Chỉnh sửa** trên **Các trường khách hàng hợp nhất** ngói.
+
+1. Chọn tất cả các lần xuất hiện của trường và sau đó chọn **Loại trừ**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Ảnh chụp màn hình trang Các trường hợp nhất hiển thị các trường đã chọn và nút Loại trừ":::
+
+1. Lựa chọn **Xong** để xác nhận và sau đó chọn **Lưu và đóng**.
+
+   > [!TIP]
+   > Nếu bạn thấy thông báo "Không thể lưu hợp nhất. Không thể sửa đổi hoặc xóa tài nguyên đã chỉ định do phụ thuộc hạ lưu ", khi đó trường vẫn được sử dụng trong phụ thuộc hạ lưu.
+
+1. Nếu trường được sử dụng trong quy tắc cho các bản ghi trùng lặp hoặc các điều kiện phù hợp, hãy thực hiện các bước sau. Nếu không, đi đến bước tiếp theo.
+   1. Lựa chọn **Chỉnh sửa** trên **Bản ghi trùng lặp** ngói.
+   1. Xóa trường khỏi tất cả các quy tắc mà trường được sử dụng, nếu có, rồi chọn **Tiếp theo**.
+   1. Trên **Điều kiện phù hợp**, xóa trường khỏi tất cả các quy tắc mà trường được sử dụng, nếu có, rồi chọn **Lưu và đóng**.
+   1. Lựa chọn **Thống nhất** > **Hợp nhất hồ sơ khách hàng và sự phụ thuộc**. Chờ quá trình thống nhất hoàn tất trước khi chuyển sang bước tiếp theo.
+
+1. Lựa chọn **Chỉnh sửa** trên **Các trường nguồn** ngói.
+
+1. Lựa chọn **Chọn các thực thể và trường** và xóa hộp kiểm bên cạnh mỗi lần xuất hiện của trường.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Ảnh chụp màn hình hộp thoại Chọn thực thể và trường hiển thị các hộp kiểm đã xóa":::
+
+1. Chọn **Áp dụng**.
+
+1. Chọn **Lưu và đóng**.
+
+1. Lựa chọn **Thống nhất** > **Hợp nhất hồ sơ khách hàng và sự phụ thuộc** để cập nhật hồ sơ hợp nhất.
+
+### <a name="remove-a-unified-entity"></a>Xóa một thực thể hợp nhất
+
+Để loại bỏ một thực thể đã được hợp nhất, thực thể đó phải được xóa khỏi bất kỳ phụ thuộc nào như phân đoạn, thước đo, bổ sung hoặc mối quan hệ.
+
+1. Sau khi tất cả các phụ thuộc cho thực thể đã được xóa, hãy chuyển đến **Dữ liệu** > **Thống nhất**.
+
+1. Lựa chọn **Chỉnh sửa** trên **Các trường khách hàng hợp nhất** ngói.
+
+1. Chọn tất cả các trường cho thực thể và sau đó chọn **Loại trừ**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Ảnh chụp màn hình các trường Hợp nhất với tất cả các trường cho một thực thể được chọn và nút Loại trừ":::
+
+1. Lựa chọn **Xong** để xác nhận và sau đó chọn **Lưu và đóng**.
+
+   > [!TIP]
+   > Nếu bạn thấy thông báo "Không thể lưu hợp nhất. Không thể sửa đổi hoặc xóa tài nguyên được chỉ định do phụ thuộc hạ lưu ", khi đó thực thể vẫn được sử dụng trong phụ thuộc hạ lưu.
+
+1. Lựa chọn **Chỉnh sửa** trên **Bản ghi trùng lặp** ngói.
+
+1. Xóa tất cả các quy tắc khỏi thực thể, nếu có, rồi chọn **Tiếp theo**.
+
+1. Trên **Điều kiện phù hợp** trang, chọn thực thể và sau đó chọn **Xóa bỏ**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Ảnh chụp màn hình của Điều kiện phù hợp với thực thể được chọn và nút Xóa":::
+
+1. Chọn **Lưu và đóng**.
+
+1. Lựa chọn **Chỉnh sửa** trên **Các trường nguồn** ngói.
+
+1. Lựa chọn **Chọn các thực thể và trường** và xóa hộp kiểm bên cạnh thực thể.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Ảnh chụp màn hình hộp thoại Chọn thực thể và trường với hộp kiểm thực thể bị xóa":::
+
+1. Chọn **Áp dụng**.
+
+1. Chọn **Lưu và đóng**.
+
+1. Lựa chọn **Thống nhất** > **Hợp nhất hồ sơ khách hàng và sự phụ thuộc** để cập nhật hồ sơ hợp nhất.
 
 ## <a name="manage-deduplication-rules"></a>Quản lý các quy tắc chống trùng lặp
 
@@ -142,7 +214,7 @@ Bạn có thể định cấu hình lại và tinh chỉnh hầu hết các thô
 
 1. Lựa chọn **Chỉnh sửa** trên **Trường ngữ nghĩa** ngói.
 
-1. Để thay đổi kiểu ngữ nghĩa cho một trường thống nhất, hãy chọn một kiểu mới. Để biết thêm thông tin, hãy xem [Xác định các trường ngữ nghĩa cho các liên hệ hợp nhất](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts).
+1. Để thay đổi kiểu ngữ nghĩa cho một trường hợp nhất, hãy chọn một kiểu mới. Để biết thêm thông tin, hãy xem [Xác định các trường ngữ nghĩa cho các liên hệ hợp nhất](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts).
 
 1. Lựa chọn **Tiếp theo** để quản lý tài khoản và mối quan hệ liên hệ, hoặc chọn **Lưu và đóng** và trở lại [Cập nhật cài đặt hợp nhất](#update-unification-settings) để thực hiện nhiều thay đổi hơn.
 

@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387320"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409383"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nội dung mới trong Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Giờ đây, bạn có thể hợp nhất các địa chỉ liên hệ ngoài t�
 Nhờ hợp nhất địa chỉ liên hệ mới, bạn có thể tạo các phân đoạn địa chỉ liên hệ bằng cách sử dụng các tiêu chí từ địa chỉ liên hệ, tài khoản hoặc cả hai. Các phân đoạn này có thể được xuất để kích hoạt trong các dịch vụ khác.
 
 Để biết thêm thông tin, hãy xem [Tổng quan về xuất khẩu](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Các khu vực triển khai phù hợp với Microsoft Dataverse
+
+Khi tạo môi trường Thông tin chi tiết về khách hàng mới, bạn có thể chọn khu vực mà bạn muốn dịch vụ được triển khai và lưu trữ. Chúng tôi đã cập nhật lựa chọn khu vực để phù hợp với Microsoft Dataverse và Power Platform.
+
+Giờ đây, bạn có thể dễ dàng chọn cùng một khu vực với khu vực hiện có của mình Microsoft Dataverse môi trường hoặc tài khoản lưu trữ Azure Data Lake của bạn (nếu bạn chọn tùy chọn đó), tùy thuộc vào tính sẵn có của Thông tin chi tiết về khách hàng ở khu vực đó.
+
+Để biết thêm thông tin, hãy xem [Tạo một môi trường mới](create-environment.md) và [Tính khả dụng của sản phẩm theo khu vực địa lý](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Bản cập nhật tháng 7 năm 2022
 
@@ -132,7 +140,7 @@ Các bản cập nhật vào tháng 4 năm 2022 bao gồm các tính năng mới
 
 Dun & Bradstreet cung cấp dữ liệu thương mại, phân tích và thông tin chi tiết cho các doanh nghiệp. Công ty này hỗ trợ hồ sơ khách hàng hợp nhất cho các công ty để tăng cường dữ liệu của họ. Sự phong phú bao gồm các thuộc tính như số DUNS, quy mô công ty, vị trí, ngành, v.v.
 
-Để biết thêm thông tin, hãy xem [Làm giàu hồ sơ công ty với Dun & Bradstreet (Xem trước)](enrichment-dnb.md).
+Để biết thêm thông tin, hãy xem [Làm phong phú hồ sơ công ty với Dun & Bradstreet (Xem trước)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Xác định loại thước đo khi tạo một thước đo mới
 
@@ -142,7 +150,7 @@ Giờ đây, bạn có thể phân biệt giữa các thước đo cho hồ sơ 
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>Hợp nhất tài liệu Thông tin chi tiết về khách hàng
 
-Chúng tôi đã xem lại các bài viết tài liệu của mình và xóa các đề cập về thông tin chi tiết về mức độ tương tác và khả năng thông tin chi tiết về đối tượng. Trong tương lai, chúng tôi sẽ đề cập nhất quán đến tên sản phẩm Customer Insights khi chúng tôi viết về các tính năng cốt lõi của ứng dụng. Thay đổi này cũng dẫn đến việc tái cấu trúc đáng kể mục lục, cấu trúc URL và đường dẫn tệp trong kho tài liệu cơ bản. Tất cả các dấu trang hoặc các liên kết hiện có của bạn tiếp tục hoạt động và chuyển hướng đến các URL được cập nhật.
+Chúng tôi đã xem lại các bài viết tài liệu của mình và xóa các đề cập về thông tin chi tiết về mức độ tương tác và khả năng thông tin chi tiết về đối tượng. Trong tương lai, chúng tôi sẽ đề cập nhất quán đến tên sản phẩm Customer Insights khi chúng tôi viết về các tính năng cốt lõi của ứng dụng. Thay đổi này cũng dẫn đến việc tái cấu trúc đáng kể mục lục, cấu trúc URL và đường dẫn tệp trong kho tài liệu cơ bản. Tất cả các dấu trang hoặc các liên kết hiện có của bạn tiếp tục hoạt động và chuyển hướng đến các URL đã cập nhật.
 
 Nếu bạn muốn cho chúng tôi biết cách bạn nhận thấy sự thay đổi đó hoặc phát hiện ra điều gì đó không hoạt động như mong đợi, hãy cho chúng tôi biết bằng cách [gửi phản hồi cho trang này](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
@@ -167,13 +175,13 @@ Nếu tổ chức của bạn duy trì nhiều phân đoạn hoặc biện pháp
 Nếu môi trường của bạn sử dụng Azure Data Lake Storage để lưu trữ dữ liệu Thông tin chi tiết về khách hàng, chia sẻ dữ liệu với Microsoft Dataverse cần một số cấu hình bổ sung.
 Trước đó, bạn chỉ có thể bật chia sẻ dữ liệu với Dataverse khi dữ liệu của bạn được lưu trữ trong hồ dữ liệu được quản lý của chúng tôi.
 
-Để biết thêm thông tin, hãy xem [Bật chia sẻ dữ liệu với Dataverse từ của riêng bạn Azure Data Lake Storage (Xem trước)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview) .
+Để biết thêm thông tin, hãy xem [Bật chia sẻ dữ liệu với Dataverse từ của riêng bạn Azure Data Lake Storage (Xem trước)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Các điểm đến xuất khẩu mới: Có thể lặp lại và Braze
 
 Chúng tôi đang tiếp tục mở rộng hệ sinh thái các điểm đến xuất khẩu của mình với các kết nối mới. Bây giờ bạn có thể xuất các phân đoạn sang Iterable và Braze để sử dụng các dịch vụ kích hoạt của họ.
 
-Để biết thêm thông tin, hãy xem [Xuất phân đoạn sang Có thể lặp lại (xem trước)](export-iterable.md) và [Xuất phân đoạn sang Braze (xem trước)](export-braze.md) .
+Để biết thêm thông tin, hãy xem [Xuất phân đoạn sang Có thể lặp lại (xem trước)](export-iterable.md) và [Xuất phân đoạn sang Braze (xem trước)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Cải tiến Marketo và xuất Google Ads
 
@@ -190,15 +198,15 @@ Các bản cập nhật vào tháng 2 năm 2022 bao gồm các tính năng mới
 
 Các mẫu dự đoán xuất xưởng, bao gồm **đăng ký churn**, **dịch churn**, và **giá trị lâu dài của khách hàng (CLV)** nói chung trở nên khả dụng như một phần của Thông tin chi tiết về khách hàng. 
 
-Để biết thêm thông tin, hãy xem [Tổng quan về dự đoán](predictions-overview.md) .
+Để biết thêm thông tin, hãy xem [Tổng quan về dự đoán](predictions-overview.md).
 
-### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>nguồn dữ liệu mới: Tích hợp với Azure Synapse Analytics (Xem trước)
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nguồn dữ liệu mới: Tích hợp với Azure Synapse Analytics (Xem trước)
 
 Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn.
 
 Các tổ chức đã sử dụng Azure Synapse Analytics có thể nhập dữ liệu đó vào Thông tin chi tiết về khách hàng. 
 
-Để biết thêm thông tin, hãy xem [Kết nối một Azure Synapse nguồn dữ liệu (Xem trước)](connect-synapse.md) .
+Để biết thêm thông tin, hãy xem [Kết nối một Azure Synapse nguồn dữ liệu (Xem trước)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Làm giàu LiveRamp (Xem trước)
 
@@ -208,28 +216,28 @@ LiveRamp cung cấp giải pháp nhận dạng và hợp nhất dữ liệu khá
 
 ### <a name="enrichment-for-data-sources-preview"></a>Làm giàu cho nguồn dữ liệu (Xem trước)
 
-Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi hợp nhất dữ liệu. nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
+Sử dụng dữ liệu từ các nguồn như Microsoft và các đối tác khác để làm phong phú thêm dữ liệu khách hàng của bạn trước khi hợp nhất dữ liệu. Nguồn dữ liệu làm giàu giúp tạo ra chất lượng và độ hoàn chỉnh của dữ liệu cao hơn có thể giúp đạt được kết quả tốt hơn sau khi bạn thống nhất dữ liệu của mình.
 
-Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu (Xem trước)](data-sources-enrichment.md) .
+Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu (Xem trước)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Thay đổi chủ sở hữu môi trường
 
 Mặc dù một số người dùng có thể có quyền quản trị trong Thông tin chi tiết về khách hàng, nhưng chỉ một người dùng là chủ sở hữu của môi trường. Trải nghiệm được cải thiện cho phép bạn thay đổi chủ sở hữu của môi trường và xác nhận quyền sở hữu nếu chủ sở hữu cũ rời khỏi tổ chức. 
 
-Để biết thêm thông tin, hãy xem [Thay đổi chủ sở hữu của một môi trường](manage-environments.md#change-the-owner-of-an-environment) .
+Để biết thêm thông tin, hãy xem [Thay đổi chủ sở hữu của một môi trường](manage-environments.md#change-the-owner-of-an-environment).
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Quá trình chuẩn bị dữ liệu liệt kê lý do hỏng cho các bản ghi bị hỏng
 
 Việc chuẩn bị dữ liệu bây giờ cho thấy lý do gây ra lỗi cho tất cả các lĩnh vực có dữ liệu bị hỏng. Thông tin được cung cấp ở cấp độ hồ sơ cá nhân để dễ dàng xác định. 
 
-Để biết thêm thông tin, hãy xem [Nguồn dữ liệu bị hỏng](entities.md#corrupted-data-sources) .
+Để biết thêm thông tin, hãy xem [Nguồn dữ liệu bị hỏng](entities.md#corrupted-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kết thúc bản xem trước cho các tính năng báo cáo trong khả năng thông tin chi tiết về mức độ tương tác
 
 Các Dynamics 365 Customer Insights bản xem trước khả năng thông tin chi tiết về mức độ tương tác đã kết thúc vào ngày 15 tháng 2 năm 2022.  
 Thay đổi này có nghĩa là trải nghiệm dùng thử Customer Insights không còn bao gồm khả năng tạo kênh cũng như chức năng báo cáo khác.
 
-Chúng tôi mời bạn khám phá và đánh giá nhiều tính năng khác của [Thấu hiểu khách hàng](https://dynamics.microsoft.com/ai/customer-insights/) , nền tảng dữ liệu khách hàng của Microsoft (CDP).    
+Chúng tôi mời bạn khám phá và đánh giá nhiều tính năng khác của [Thấu hiểu khách hàng](https://dynamics.microsoft.com/ai/customer-insights/), nền tảng dữ liệu khách hàng của Microsoft (CDP).    
  
 Trong thời gian chuyển tiếp, những người tham gia xem trước hiện tại vẫn có quyền truy cập vào một số chức năng và chức năng xem trước:
 

@@ -1,7 +1,7 @@
 ---
 title: Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
 description: Tìm hiểu cách kết nối Thông tin chi tiết về khách hàng và Microsoft Dataverse và hiểu các thực thể đầu ra được xuất sang Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303855"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424335"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
 
@@ -31,7 +31,7 @@ Customer Insights cung cấp tùy chọn để hiển thị các thực thể đ
 - Không có môi trường Thông tin chi tiết về khách hàng nào khác đã được liên kết với Dataverse môi trường bạn muốn kết nối. Học cách [loại bỏ một kết nối hiện có với một Dataverse Môi trường](#remove-an-existing-connection-to-a-dataverse-environment).
 - Một Microsoft Dataverse môi trường được kết nối với một tài khoản lưu trữ nếu bạn định cấu hình môi trường để [sử dụng của bạn Azure Data Lake Storage](own-data-lake-storage.md).
 
-## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse quyền lưu trữ
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse quyền dung lượng lưu trữ
 
 Đăng ký Thông tin chi tiết về khách hàng cho phép bạn tăng thêm dung lượng cho tổ chức của bạn hiện có [Dataverse khả năng lưu trữ](/power-platform/admin/capacity-storage). Dung lượng thêm vào phụ thuộc vào số lượng cấu hình mà thuê bao của bạn sử dụng.
 
@@ -45,7 +45,7 @@ Dung lượng nhật ký không gia tăng và cố định cho tổ chức của
 
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Kết nối một Dataverse môi trường để Thông tin chi tiết về khách hàng
 
-Các **Microsoft Dataverse** bước này cho phép bạn kết nối Thông tin chi tiết về khách hàng với Dataverse môi trường trong khi [tạo môi trường Thông tin chi tiết về khách hàng](create-environment.md).
+Các **Microsoft Dataverse** bước cho phép bạn kết nối Thông tin chi tiết về khách hàng với Dataverse môi trường trong khi [tạo môi trường Thông tin chi tiết về khách hàng](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="chia sẻ dữ liệu với Microsoft Dataverse tự động bật cho môi trường mới.":::
 
@@ -93,9 +93,9 @@ Thiết lập PowerShell để thực thi các tập lệnh PowerShell.
 
 1. Tải xuống hai tập lệnh PowerShell bạn cần để chạy từ kỹ sư của chúng tôi [GitHub repo](https://github.com/trin-msft/byol).
    - `CreateSecurityGroups.ps1`: Yêu cầu quyền quản trị của người thuê.
-   - `ByolSetup.ps1`: Yêu cầu quyền của Chủ sở hữu dữ liệu Blob lưu trữ ở cấp tài khoản lưu trữ / vùng chứa. Tập lệnh này sẽ tạo ra sự cho phép dành cho bạn. Nhiệm vụ của bạn có thể được xóa theo cách thủ công sau khi chạy thành công tập lệnh.
+   - `ByolSetup.ps1`: Yêu cầu quyền của Chủ sở hữu dữ liệu khối lưu trữ ở cấp tài khoản lưu trữ / vùng chứa. Tập lệnh này sẽ tạo ra sự cho phép dành cho bạn. Nhiệm vụ của bạn có thể được xóa theo cách thủ công sau khi chạy thành công tập lệnh.
 
-1. Hành hình`CreateSecurityGroups.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem xét thông tin bổ sung và logic được triển khai.
+1. Hành hình`CreateSecurityGroups.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem lại thông tin bổ sung và logic được triển khai.
 
    Tập lệnh này tạo hai nhóm bảo mật trên đăng ký Azure của bạn: một cho nhóm Người đọc và một nhóm khác cho nhóm Cộng tác viên. Microsoft Dataverse dịch vụ là chủ sở hữu cho cả hai nhóm bảo mật này.
 
@@ -104,7 +104,7 @@ Thiết lập PowerShell để thực thi các tập lệnh PowerShell.
    > [!NOTE]
    > Đối tượng thuê của bạn có thể tắt tính năng tạo nhóm bảo mật. Trong trường hợp đó, cần thiết lập thủ công và Azure AD quản trị viên sẽ phải [cho phép tạo nhóm bảo mật](/azure/active-directory/enterprise-users/groups-self-service-management).
 
-1. Hành hình`ByolSetup.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage, tên tài khoản lưu trữ, tên nhóm tài nguyên và các giá trị ID nhóm bảo mật Reader và Contributor. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem xét thông tin bổ sung và logic được triển khai.
+1. Hành hình`ByolSetup.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage, tên tài khoản lưu trữ, tên nhóm tài nguyên và các giá trị ID nhóm bảo mật Reader và Contributor. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem lại thông tin bổ sung và logic được triển khai.
 
    Tập lệnh này thêm kiểm soát truy cập dựa trên vai trò bắt buộc cho Microsoft Dataverse dịch vụ và bất kỳ Dataverse ứng dụng kinh doanh dựa trên cơ sở. Nó cũng cập nhật Danh sách kiểm soát truy cập (ACL) trên`customerinsights` vùng chứa cho các nhóm bảo mật được tạo bằng`CreateSecurityGroups.ps1` script. Nhóm Contributor được cung cấp *rwx* quyền và nhóm độc giả được cấp *rx* chỉ sự cho phép.
 
@@ -116,7 +116,7 @@ Thiết lập PowerShell để thực thi các tập lệnh PowerShell.
 
 ## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Xóa kết nối hiện có với một Dataverse Môi trường
 
-Khi kết nối với một Dataverse môi trường, thông báo lỗi **Tổ chức CDS này đã được đính kèm với một phiên bản Thông tin chi tiết về khách hàng khác** có nghĩa là Dataverse môi trường đã được sử dụng trong môi trường Thông tin chi tiết về khách hàng. Bạn có thể xóa kết nối hiện có với tư cách là quản trị viên toàn cầu trên Dataverse Môi trường. Có thể mất vài giờ để điền các thay đổi.
+Khi kết nối với một Dataverse môi trường, thông báo lỗi **Tổ chức CDS này đã được gắn với một phiên bản Thông tin chi tiết về khách hàng khác** có nghĩa là Dataverse môi trường đã được sử dụng trong môi trường Thông tin chi tiết về khách hàng. Bạn có thể xóa kết nối hiện có với tư cách là quản trị viên toàn cầu trên Dataverse Môi trường. Có thể mất vài giờ để điền các thay đổi.
 
 1. Truy cập [Power Apps](https://make.powerapps.com).
 1. Chọn môi trường từ bộ chọn môi trường.
@@ -136,6 +136,7 @@ Nếu việc loại bỏ kết nối không thành công do các phần phụ th
 Một số thực thể đầu ra từ Thông tin chi tiết về khách hàng có sẵn dưới dạng bảng trong Dataverse. Các phần dưới đây mô tả sơ đồ dự kiến của các bảng này.
 
 - [CustomerProfile](#customerprofile)
+- [Hồ sơ liên hệ](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Một số thực thể đầu ra từ Thông tin chi tiết về khách hàng c
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Bảng này chứa hồ sơ khách hàng hợp nhất từ Customer Insights. Lược đồ cho hồ sơ khách hàng hợp nhất phụ thuộc vào các thực thể và thuộc tính được sử dụng trong quá trình hợp nhất dữ liệu. Sơ đồ hồ sơ khách hàng thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Common Data Model CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Bảng này chứa hồ sơ khách hàng hợp nhất từ Customer Insights. Lược đồ cho hồ sơ khách hàng hợp nhất phụ thuộc vào các thực thể và thuộc tính được sử dụng trong quá trình hợp nhất dữ liệu. Sơ đồ hồ sơ khách hàng thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Common Data Model CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Đối với kịch bản B-to-B, hồ sơ khách hàng chứa các tài khoản hợp nhất và giản đồ thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Mô hình Dữ liệu Chung về Tài khoản](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>Hồ sơ liên hệ
+
+Một ContactProfile chứa thông tin hợp nhất về một số liên lạc. Liên hệ là [các cá nhân được ánh xạ tới một tài khoản](data-unification-contacts.md) trong kịch bản B-to-B.
+
+| Column                       | Loại                | Description     |
+| ---------------------------- | ------------------- | --------------- |
+|  Ngày sinh            | Ngày giờ       |  Ngày sinh của liên hệ               |
+|  Thành phố                 | Văn bản |  Thành phố của địa chỉ liên hệ               |
+|  ContactId            | Văn bản |  ID của hồ sơ liên hệ               |
+|  ContactProfileId     | Mã định danh duy nhất   |  HƯỚNG DẪN cho số liên lạc               |
+|  CountryOrRegion      | Văn bản |  Quốc gia / Khu vực của địa chỉ liên hệ               |
+|  CustomerId           | Văn bản |  ID của tài khoản mà liên hệ được ánh xạ tới               |
+|  EntityName           | Văn bản |  Thực thể mà từ đó dữ liệu đến từ                |
+|  FirstName            | Văn bản |  Tên của liên hệ               |
+|  Giới tính               | Văn bản |  Giới tính của người liên hệ               |
+|  ID                   | Văn bản |  GUID xác định dựa trên`Identifier`               |
+|  Identifier           | Văn bản |  ID nội bộ của hồ sơ liên hệ:`ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Văn bản |  Chức vụ của người liên hệ               |
+|  LastName             | Văn bản |  Họ của địa chỉ liên hệ               |
+|  PostalCode           | Văn bản |  Mã ZIP của địa chỉ liên hệ               |
+|  Email chính         | Văn bản |  Địa chỉ email của liên hệ               |
+|  Điện thoại chính         | Văn bản |  Số điện thoại của người liên hệ               |
+|  Bang hoặc tỉnh      | Văn bản |  Tiểu bang hoặc tỉnh của địa chỉ liên hệ               |
+|  StreetAddress        | Văn bản |  Đường của địa chỉ liên hệ               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 Bảng AlternateKey chứa khóa của các thực thể đã tham gia vào quá trình hợp nhất.
 
-|Cột  |Loại  |Mô tả  |
+|Column  |Loại  |Description  |
 |---------|---------|---------|
-|DataSourceName    |Chuỗi         | Tên nguồn dữ liệu. Ví dụ: `datasource5`        |
-|EntityName        | String        | Tên của pháp nhân trong Thông tin chi tiết về khách hàng. Ví dụ: `contact1`        |
-|AlternateValue    |String         |ID thay thế được ánh xạ tới ID khách hàng. Ví dụ: `cntid_1078`         |
-|KeyRing           | Văn bản nhiều dòng        | Giá trị JSON  </br> Ví dụ: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | Chuỗi        | ID của hồ sơ khách hàng hợp nhất.         |
-|AlternateKeyId     | GUID         |  GUID tất định của AlternateKey dựa trên msdynci_identifier       |
-|msdynci_identifier |   Chuỗi      |   `DataSourceName|EntityName|AlternateValue`  </br> Ví dụ: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Văn bản         | Tên nguồn dữ liệu. Ví dụ: `datasource5`        |
+|EntityName        | Văn bản        | Tên của pháp nhân trong Thông tin chi tiết về khách hàng. Ví dụ: `contact1`        |
+|AlternateValue    |Văn bản         |ID thay thế được ánh xạ tới ID khách hàng. Ví dụ: `cntid_1078`         |
+|KeyRing           | Văn bản        | Giá trị JSON  </br> Ví dụ: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Văn bản        | ID của hồ sơ khách hàng hợp nhất.         |
+|AlternateKeyId     | Mã định danh duy nhất        |  HƯỚNG DẪN xác định AlternateKey dựa trên`Identifier`      |
+|Identifier |   Văn bản      |   `DataSourceName|EntityName|AlternateValue`  </br> Ví dụ: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Bảng này chứa các hoạt động của người dùng có trong Customer I
 
 | Column            | Loại        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | ID hồ sơ khách hàng                                                                      |
-| ActivityId        | String      | ID nội bộ của hoạt động khách hàng (khóa chính)                                       |
-| SourceEntityName  | Chuỗi      | Tên của thực thể nguồn                                                                |
-| SourceActivityId  | Chuỗi      | Khóa chính từ thực thể nguồn                                                       |
-| ActivityType      | Chuỗi      | Loại hoạt động ngữ nghĩa hoặc tên của hoạt động tùy chỉnh                                        |
-| ActivityTimeStamp | DATETIME    | Dấu thời gian hoạt động                                                                      |
-| Title             | String      | Tiêu đề hoặc tên của hoạt động                                                               |
-| Description       | Chuỗi      | Nội dung mô tả hoạt động                                                                     |
-| URL               | Chuỗi      | Liên kết đến một URL bên ngoài cụ thể cho hoạt động                                         |
-| SemanticData      | Chuỗi JSON | Bao gồm danh sách các cặp khóa-giá trị cho các trường ánh xạ ngữ nghĩa cụ thể cho loại hoạt động |
-| RangeIndex        | Chuỗi      | Dấu thời gian Unix dùng để sắp xếp dòng thời gian hoạt động và truy vấn phạm vi hiệu quả |
-| mydynci_unifiedactivityid   | GUID | ID nội bộ của hoạt động khách hàng (ActivityId) |
+| CustomerId        | Văn bản      | ID hồ sơ khách hàng                                                                      |
+| ActivityId        | Văn bản      | ID nội bộ của hoạt động khách hàng (khóa chính)                                       |
+| SourceEntityName  | Văn bản      | Tên của thực thể nguồn                                                                |
+| SourceActivityId  | Văn bản      | Khóa chính từ thực thể nguồn                                                       |
+| ActivityType      | Văn bản      | Loại hoạt động ngữ nghĩa hoặc tên của hoạt động tùy chỉnh                                        |
+| ActivityTimeStamp | Ngày giờ    | Dấu thời gian hoạt động                                                                      |
+| Title             | Văn bản      | Tiêu đề hoặc tên của hoạt động                                                               |
+| Description       | Văn bản      | Nội dung mô tả hoạt động                                                                     |
+| URL               | Văn bản      | Liên kết đến một URL bên ngoài cụ thể cho hoạt động                                         |
+| SemanticData      | Văn bản | Bao gồm danh sách các cặp khóa-giá trị cho các trường ánh xạ ngữ nghĩa cụ thể cho loại hoạt động |
+| RangeIndex        | Văn bản      | Dấu thời gian Unix dùng để sắp xếp dòng thời gian hoạt động và truy vấn phạm vi hiệu quả |
+| UnifiedActivityId   | Mã định danh duy nhất | ID nội bộ của hoạt động khách hàng (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Bảng này chứa dữ liệu đầu ra của các giá trị đo dựa trên thuộc tính khách hàng.
 
-| Cột             | Loại             | Mô tả                 |
+| Column             | Loại             | Description                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | Chuỗi           | ID hồ sơ khách hàng        |
-| Measures           | Chuỗi JSON      | Bao gồm danh sách các cặp khóa-giá trị cho tên giá trị đo và các giá trị cho khách hàng nhất định | 
-| msdynci_identifier | Chuỗi           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID hồ sơ khách hàng |
-
+| CustomerId         | Văn bản           | ID hồ sơ khách hàng        |
+| Measures           | Văn bản      | Bao gồm danh sách các cặp khóa-giá trị cho tên giá trị đo và các giá trị cho khách hàng nhất định |
+| Identifier | Văn bản           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Mã định danh duy nhất     | ID hồ sơ khách hàng |
 
 ### <a name="enrichment"></a>Enrichment
 
 Bảng này chứa kết quả đầu ra của quá trình tăng cường.
 
-| Cột               | Loại             |  Mô tả                                          |
+| Column               | Loại             |  Description                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | Chuỗi           | ID hồ sơ khách hàng                                 |
-| EnrichmentProvider   | Chuỗi           | Tên nhà cung cấp cho quá trình tăng cường                                  |
-| EnrichmentType       | Chuỗi           | Loại tăng cường                                      |
-| Values               | Chuỗi JSON      | Danh sách các thuộc tính do quá trình tăng cường tạo ra |
-| msdynci_enrichmentid | GUID             | GUID tất định được tạo từ msdynci_identifier |
-| msdynci_identifier   | Chuỗi           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Văn bản           | ID hồ sơ khách hàng                                 |
+| EnrichmentProvider   | Văn bản           | Tên nhà cung cấp cho quá trình tăng cường                                  |
+| EnrichmentType       | Văn bản           | Loại tăng cường                                      |
+| Values               | Văn bản      | Danh sách các thuộc tính do quá trình tăng cường tạo ra |
+| EnrichmentId | Mã định danh duy nhất            | GUID xác định được tạo từ`Identifier` |
+| Identifier   | Văn bản           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Prediction
 
@@ -211,12 +236,12 @@ Bảng này chứa kết quả đầu ra của lượt dự đoán mô hình.
 
 | Column               | Loại        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | ID hồ sơ khách hàng                                  |
-| ModelProvider        | String      | Tên nhà cung cấp mô hình                                      |
-| Model                | Chuỗi      | Tên mô hình                                                |
-| Values               | Chuỗi JSON | Danh sách các thuộc tính do mô hình tạo ra |
-| msdynci_predictionid | GUID        | GUID tất định được tạo từ msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Văn bản      | ID hồ sơ khách hàng                                  |
+| ModelProvider        | Văn bản      | Tên nhà cung cấp mô hình                                      |
+| Model                | Văn bản      | Tên mô hình                                                |
+| Values               | Văn bản | Danh sách các thuộc tính do mô hình tạo ra |
+| Dự đoánId | Mã định danh duy nhất       | GUID xác định được tạo từ`Identifier` |
+| Identifier   | Văn bản      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Thành viên phân khúc
 
@@ -224,12 +249,11 @@ Bảng này chứa thông tin thành viên phân khúc của hồ sơ khách hà
 
 | Column        | Loại | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID hồ sơ khách hàng        |
-| SegmentProvider      | String       | Ứng dụng xuất bản các phân đoạn.      |
-| SegmentMembershipType | String       | Loại khách hàng cho hồ sơ thành viên phân khúc này. Hỗ trợ nhiều loại như Khách hàng, Liên hệ hoặc Tài khoản. Mặc định: Khách hàng  |
-| Phân khúc       | Chuỗi JSON  | Danh sách các phân đoạn duy nhất mà hồ sơ khách hàng là thành viên của      |
-| msdynci_identifier  | String   | Định danh duy nhất của bản ghi thành viên phân khúc. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID xác định được tạo từ`msdynci_identifier`          |
-
+| CustomerId        | Văn bản       | ID hồ sơ khách hàng        |
+| SegmentProvider      | Văn bản       | Ứng dụng xuất bản các phân đoạn.      |
+| SegmentMembershipType | Văn bản       | Loại khách hàng cho hồ sơ thành viên phân khúc này. Hỗ trợ nhiều loại như Khách hàng, Liên hệ hoặc Tài khoản. Mặc định: Khách hàng  |
+| Phân khúc       | Văn bản  | Danh sách các phân đoạn duy nhất mà hồ sơ khách hàng là thành viên của      |
+| Identifier  | Văn bản   | Định danh duy nhất của bản ghi thành viên phân khúc. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Mã định danh duy nhất      | GUID xác định được tạo từ`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
