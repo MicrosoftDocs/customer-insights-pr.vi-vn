@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207071"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463291"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Kết nối với một Power Query nguồn dữ liệu
 
@@ -63,7 +63,9 @@ Thêm nguồn dữ liệu dựa trên Power Query trình kết nối thường t
 Quá trình tải dữ liệu có thể mất một khoảng thời gian. Sau khi làm mới thành công, dữ liệu đã nhập có thể được xem xét từ [**Thực thể**](entities.md) trang.
 
 > [!CAUTION]
-> Nguồn dữ liệu dựa trên Power Query tạo ra một [luồng dữ liệu trong Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Không thay đổi tên của luồng dữ liệu trong Power Platform trung tâm quản trị được sử dụng trong Thông tin chi tiết về khách hàng. Đổi tên luồng dữ liệu gây ra sự cố với các tham chiếu giữa Thông tin chi tiết về khách hàng nguồn dữ liệu và Dataverse dòng dữ liệu.
+>
+> - Nguồn dữ liệu dựa trên Power Query tạo ra một [luồng dữ liệu trong Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Không thay đổi tên của luồng dữ liệu trong Power Platform trung tâm quản trị được sử dụng trong Thông tin chi tiết về khách hàng. Đổi tên luồng dữ liệu gây ra sự cố với các tham chiếu giữa Thông tin chi tiết về khách hàng nguồn dữ liệu và Dataverse dòng dữ liệu.
+> - Đánh giá đồng thời cho Power Query các nguồn dữ liệu trong Thông tin chi tiết về khách hàng có cùng [làm mới các giới hạn như Luồng dữ liệu trong PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Nếu quá trình làm mới dữ liệu không thành công do đã đạt đến giới hạn đánh giá, chúng tôi khuyên bạn nên điều chỉnh lịch làm mới cho từng luồng dữ liệu để đảm bảo các nguồn dữ liệu không được xử lý cùng một lúc.
 
 ### <a name="available-power-query-data-sources"></a>Có sẵn Power Query nguồn dữ liệu
 
@@ -75,12 +77,12 @@ Các trình kết nối có dấu kiểm trong **Thông tin chi tiết về khá
 
 Việc thay đổi dữ liệu từ nguồn dữ liệu tại chỗ được hỗ trợ dựa trên Microsoft Power Platform luồng dữ liệu (PPDF). Bạn có thể bật luồng dữ liệu trong Thông tin chi tiết về khách hàng bằng cách [cung cấp Microsoft Dataverse URL môi trường](create-environment.md) khi thiết lập môi trường.
 
-Nguồn dữ liệu được tạo sau khi liên kết Dataverse môi trường sử dụng Thông tin chi tiết về khách hàng [Power Platform luồng dữ liệu](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Bạn có thể xóa và tạo lại các nguồn dữ liệu đã tồn tại trước Dataverse môi trường được liên kết [sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
+Nguồn dữ liệu được tạo sau khi liên kết Dataverse môi trường sử dụng Thông tin chi tiết về khách hàng [Power Platform luồng dữ liệu](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) theo mặc định. Luồng dữ liệu hỗ trợ kết nối tại chỗ bằng cách sử dụng cổng dữ liệu. Bạn có thể xóa và tạo lại các nguồn dữ liệu đã tồn tại trước Dataverse môi trường được liên kết [bằng cách sử dụng cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-app).
 
-Cổng dữ liệu từ một cổng hiện có Power BI hoặc Power Apps môi trường sẽ hiển thị và bạn có thể sử dụng lại chúng trong Thông tin chi tiết về khách hàng. Trang nguồn dữ liệu hiển thị các liên kết đi đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
+Cổng dữ liệu từ một cổng hiện có Power BI hoặc Power Apps môi trường sẽ hiển thị và bạn có thể sử dụng lại chúng trong Thông tin chi tiết về khách hàng nếu cổng dữ liệu và môi trường Thông tin chi tiết về khách hàng ở cùng Vùng Azure. Trang nguồn dữ liệu hiển thị các liên kết đi đến môi trường Microsoft Power Platform nơi bạn có thể xem và định cấu hình cổng dữ liệu tại chỗ.
 
 > [!IMPORTANT]
-> Đảm bảo rằng các cổng của bạn được cập nhật lên phiên bản mới nhất. Bạn có thể cài đặt bản cập nhật và định cấu hình lại cổng từ lời nhắc hiển thị trực tiếp trên màn hình cổng hoặc [tải xuống phiên bản mới nhất](https://powerapps.microsoft.com/downloads/). Nếu bạn không sử dụng phiên bản cổng mới nhất, quá trình làm mới luồng dữ liệu không thành công với các thông báo lỗi như **Từ khóa không được hỗ trợ: thuộc tính cấu hình. Tên tham số: từ khóa**.
+> Đảm bảo rằng các cổng của bạn được cập nhật lên phiên bản mới nhất. Bạn có thể cài đặt bản cập nhật và định cấu hình lại cổng từ lời nhắc hiển thị trực tiếp trên màn hình cổng hoặc [tải xuống phiên bản mới nhất](https://powerapps.microsoft.com/downloads/). Nếu bạn không sử dụng phiên bản cổng mới nhất, quá trình làm mới luồng dữ liệu không thành công với các thông báo lỗi như **Từ khóa không được hỗ trợ: thuộc tính cấu hình. Tên thông số: từ khóa**.
 >
 > Lỗi với cổng dữ liệu tại chỗ trong Thông tin chi tiết về khách hàng thường do sự cố cấu hình gây ra. Để biết thêm thông tin về cách khắc phục sự cố cổng dữ liệu, hãy xem [Khắc phục sự cố cổng dữ liệu tại chỗ](/data-integration/gateway/service-gateway-tshoot).
 

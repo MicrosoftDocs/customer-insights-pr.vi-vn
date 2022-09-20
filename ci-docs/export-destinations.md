@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304085"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460216"
 ---
 # <a name="exports-preview-overview"></a>Tổng quan về trang Nội dung xuất (xem trước)
 
@@ -38,7 +38,7 @@ Hầu hết các tùy chọn xuất hỗ trợ cả hai loại môi trường. V
 **Xuất phân khúc trong môi trường dành cho người tiêu dùng cá nhân (B2C)**  
 - Các phân khúc trong bối cảnh môi trường dành cho khách hàng cá nhân được xây dựng dựa trên thực thể *hồ sơ khách hàng hợp nhất*. Mọi phân khúc đáp ứng yêu cầu của hệ thống mục tiêu (ví dụ: địa chỉ email) đều có thể được xuất.
 
-**Phân đoạn xuất khẩu trong môi trường cho tài khoản doanh nghiệp (B-to-B)**  
+**Xuất phân đoạn trong môi trường dành cho tài khoản doanh nghiệp (B-to-B)**  
 - Các phân đoạn trong bối cảnh môi trường dành cho tài khoản doanh nghiệp được xây dựng dựa trên *tài khoản* thực thể hoặc *tiếp xúc* thực thể. Để xuất các phân khúc tài khoản như hiện tại, hệ thống mục tiêu cần hỗ trợ các phân khúc tài khoản thuần túy. Đây là trường hợp cho [LinkedIn](export-linkedin-ads.md) khi bạn chọn tùy chọn **công ty** trong khi xác định xuất.
 - Tất cả các hệ thống đích khác đều yêu cầu các trường từ thực thể liên hệ.
 - Với hai loại phân đoạn (địa chỉ liên hệ và tài khoản), Customer Insights tự động xác định loại phân đoạn nào đủ điều kiện để xuất dựa trên hệ thống mục tiêu. Ví dụ: đối với hệ thống nhắm mục tiêu tập trung vào địa chỉ liên hệ như Mailchimp, Thông tin chi tiết về khách hàng chỉ cho phép bạn chọn các phân đoạn liên hệ để xuất.
@@ -82,6 +82,11 @@ Chọn một bản xuất để xem các hành động có sẵn.
 
 Mỗi nội dung xuất bạn đặt cấu hình đều có lịch làm mới. Trong quá trình làm mới, hệ thống sẽ tìm dữ liệu mới hoặc dữ liệu cập nhật để đưa vào nội dung xuất. Theo mặc định, các nội dung xuất được chạy trong mỗi lần [làm mới hệ thống theo lịch](schedule-refresh.md). Bạn có thể tùy chỉnh lịch làm mới hoặc tắt đi để chạy nội dung xuất theo cách thủ công.
 
+> [!TIP]
+> Giảm thiểu thời gian xử lý xuất khẩu phân đoạn bằng các phương pháp hay nhất sau:
+> - Phân phối các thực thể phân đoạn trên nhiều lần xuất khẩu.
+> - Tránh lập lịch cho tất cả các lần xuất cùng một lúc. Chừa 30 phút hoặc một giờ giữa thời gian dự kiến của mỗi lần xuất.
+
 Lịch xuất phụ thuộc vào trạng thái môi trường của bạn. Nếu đang tiến hành cập nhật [yếu tố phụ thuộc](system.md#refresh-processes) khi quy trình xuất theo lịch trình chuẩn bị bắt đầu, trước tiên hệ thống sẽ hoàn thành việc cập nhật đó rồi mới chạy quy trình xuất. Các **Làm mới** cột hiển thị khi lần xuất được làm mới lần cuối.
 
 ### <a name="schedule-exports"></a>Lên lịch nội dung xuất
@@ -109,7 +114,7 @@ Khi chỉnh sửa lịch biểu cho một số lần xuất, hãy lựa chọn t
 
 Để xuất dữ liệu mà không cần đợi làm mới theo lịch trình, hãy đi đến **Dữ liệu** > **Nội dung xuất**.
 
-- Để chạy tất cả các nội dung xuất, hãy chọn **Chạy tất cả** trong thanh lệnh. Chỉ các bản xuất có lịch biểu hoạt động mới được chạy. Để chạy một lần xuất không hoạt động, hãy chạy một lần xuất.
+- Để chạy tất cả các nội dung xuất, hãy chọn **Chạy tất cả** trong thanh lệnh. Chỉ các bản xuất có lịch biểu hoạt động mới được chạy. Để chạy một xuất hiện không hoạt động, hãy chạy một xuất duy nhất.
 - Để chạy một nội dung xuất, hãy chọn nội dung xuất đó trong danh sách rồi chọn **Chạy** trên thanh lệnh.
 
 ## <a name="troubleshooting"></a>Gỡ rối
@@ -124,7 +129,7 @@ Khi chỉnh sửa lịch biểu cho một số lần xuất, hãy lựa chọn t
 
 1. Khi phân đoạn liên hệ đó được chạy, hãy chỉnh sửa bản xuất tương ứng và chọn phân đoạn mới.
 
-1. Lựa chọn **Tiết kiệm** để lưu cấu hình hoặc **Lưu và chạy** để kiểm tra việc xuất này ngay lập tức.
+1. Lựa chọn **Tiết kiệm** để lưu cấu hình hoặc **Lưu và chạy** để kiểm tra xuất này ngay lập tức.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
