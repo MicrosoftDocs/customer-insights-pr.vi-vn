@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
-ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
+ms.openlocfilehash: 13e0b22d40d909abdbea8e77c9b4795ee42271c8
+ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "9305630"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "9544335"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Đăng ký bản dùng thử miễn phí Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Customer Insights cung cấp bản dùng thử miễn phí 30 ngày. Sau khi đ�
 
 **Cách đăng ký bản dùng thử**:
 
-1. Đi đến [trang tổng quan về thử nghiệm](https://dynamics.microsoft.com/ai/customer-insights/) và chọn **Dùng thử miễn phí Thông tin chi tiết về khách hàng**.
+1. Đi đến [trang tổng quan về thử nghiệm](https://dynamics.microsoft.com/ai/customer-insights/) và chọn **Dùng thử Thông tin chi tiết về khách hàng miễn phí**.
 1. Làm theo hướng dẫn trên màn hình để nhập [email được liên kết với tài khoản Microsoft của bạn](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) và thông tin liên hệ của bạn.
 1. Lựa chọn trọng tâm cho đến khi bạn chuyển đến trang bắt đầu cho khả năng đã chọn.
 
@@ -40,6 +40,6 @@ Môi trường dùng thử của bạn bao gồm nhiều tính năng tương t�
 
 ## <a name="additional-resources"></a>Tài nguyên bổ sung
 
-- [Khám phá các lộ trình và mô-đun học tập để có Thông tin chi tiết về khách hàng](/learn/browse/?products=dynamics-cust-insights)
+- [Khám phá các lộ trình và mô-đun học tập để có Thông tin chi tiết về khách hàng](/training/browse/?products=dynamics-cust-insights)
 - [Câu hỏi thường gặp về Bản dùng thử](trial-faq.md)
 - [Chi tiết sản phẩm Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)

@@ -7,21 +7,21 @@
 - name: Danh mục học tập
   items:
     - name: Chứng nhận là Chuyên gia nền tảng dữ liệu khách hàng của Microsoft
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Bắt đầu với Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Thu thập dữ liệu
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Tạo hồ sơ khách hàng hợp nhất
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Làm việc với Thông tin chi tiết về khách hàng
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Làm phong phú dữ liệu và đưa ra dự đoán
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Quản lý các kết nối bên ngoài
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Quản trị Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Dùng thử miễn phí
   items:
     - name: Đăng ký dùng thử miễn phí
@@ -100,7 +100,7 @@
       href: enrichment-enhanced-company-data.md
     - name: Nhận dạng với LiveRamp
       href: enrichment-liveramp.md
-    - name: Vị trí từ Azure Maps
+    - name: Vị trí từ Bản đồ Azure
       href: enrichment-azure-maps.md
     - name: Vị trí từ HERE Technologies
       href: enrichment-here.md
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Sử dụng dữ liệu web để cá nhân hóa
       href: unknown-to-known.md
+    - name: Quản lý hồ sơ khách hàng không xác định
+      href: manage-unknown-profiles.md
 - name: Phân khúc
   items:
     - name: Tổng quan về phân khúc

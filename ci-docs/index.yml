@@ -6,12 +6,12 @@ metadata:
   ms.author: mhart
   ms.date: 05/18/2022
   ms.topic: landing-page
-  ms.openlocfilehash: 209d635f8b548559ba035a5803c360d26dea8bab
-  ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+  ms.openlocfilehash: c3781830dbb1ab1bf5d6395e1398c2c3b297abfd
+  ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
   ms.translationtype: MT
   ms.contentlocale: vi-VN
-  ms.lasthandoff: 09/07/2022
-  ms.locfileid: "9411804"
+  ms.lasthandoff: 09/20/2022
+  ms.locfileid: "9544381"
 title: Tài liệu Dynamics 365 Customer Insights
 summary: Tìm các tài nguyên hữu ích để bắt đầu và tìm hiểu về các tính năng và chức năng của Customer Insights.
 landingContent:
@@ -28,7 +28,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Lộ trình học thông tin chi tiết về khách hàng
-      url: /learn/paths/build-customer-insights/
+      url: /training/paths/build-customer-insights/
 - title: Bắt đầu với Customer Insights
   linkLists:
   - linkListType: get-started
@@ -42,7 +42,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Bắt đầu
-      url: /learn/modules/get-started-customer-data-platform/
+      url: /training/modules/get-started-customer-data-platform/
 - title: Thu thập dữ liệu
   linkLists:
   - linkListType: how-to-guide
@@ -56,7 +56,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Nhập dữ liệu vào Thông tin chi tiết về khách hàng
-      url: /learn/modules/ingest-data-customer-insights/
+      url: /training/modules/ingest-data-customer-insights/
 - title: Hợp nhất dữ liệu
   linkLists:
   - linkListType: how-to-guide
@@ -65,12 +65,12 @@ landingContent:
       url: data-unification.md
     - text: Hiểu rõ các thực thể
       url: entities.md
-    - text: Xem xét các cấu hình hợp nhất
+    - text: Xem lại các cấu hình hợp nhất
       url: customer-profiles.md
   - linkListType: learn
     links:
     - text: Tạo một hồ sơ thống nhất
-      url: /learn/modules/unified-customer-profile/
+      url: /training/modules/unified-customer-profile/
 - title: Tải thông tin chuyên sâu
   linkLists:
   - linkListType: how-to-guide
@@ -84,8 +84,8 @@ landingContent:
   - linkListType: learn
     links:
     - text: Làm phong phú và dự đoán dữ liệu
-      url: /learn/modules/enrich-data/
-- title: Xây dựng dựa trên dữ liệu của bạn
+      url: /training/modules/enrich-data/
+- title: Xây dựng trên dữ liệu của bạn
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -98,7 +98,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Làm việc với ứng dụng
-      url: /learn/modules/working-with-customer-insights/
+      url: /training/modules/working-with-customer-insights/
 - title: Xuất dữ liệu
   linkLists:
   - linkListType: how-to-guide
@@ -112,7 +112,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Quản lý các kết nối bên ngoài
-      url: /learn/modules/configure-third-party-connections/
+      url: /training/modules/configure-third-party-connections/
 - title: Quản trị Customer Insights
   linkLists:
   - linkListType: how-to-guide
@@ -126,7 +126,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: Quản trị Customer Insights
-      url: /learn/modules/administer-customer-data-platform/
+      url: /training/modules/administer-customer-data-platform/
 - title: Liên lạc
   linkLists:
   - linkListType: overview
