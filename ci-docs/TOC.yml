@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Sử dụng các mô hình tùy chỉnh của Azure Machine Learning
           href: custom-models.md
+        - name: Tạo phân khúc dựa trên dự đoán
+          href: prediction-based-segment.md
     - name: Hướng dẫn mẫu
       items:
         - name: Hướng dẫn mẫu cho dự đoán CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Thử nghiệm công cụ máy học Azure
           href: azure-machine-learning-experiments.md
-    - name: Quản lý dự đoán
-      href: manage-predictions.md
-    - name: Tạo phân khúc dựa trên dự đoán
-      href: prediction-based-segment.md
 - name: Xuất tùy chọn
   items:
     - name: Nội dung xuất

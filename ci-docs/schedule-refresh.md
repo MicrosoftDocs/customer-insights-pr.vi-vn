@@ -1,7 +1,7 @@
 ---
 title: Lên lịch làm mới hệ thống
 description: Lên lịch thời gian hệ thống sẽ được làm mới
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395982"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610354"
 ---
 # <a name="schedule-system-refresh"></a>Lên lịch làm mới hệ thống
 
 Lên lịch tự động làm mới tất cả [nguồn dữ liệu đã nhập](data-sources.md). Tự động làm mới giúp đảm bảo rằng cập nhật từ các nguồn dữ liệu được phản ánh trong hồ sơ khách hàng hợp nhất.
 
 > [!NOTE]
-> Power Query các nguồn dữ liệu do bạn quản lý làm mới theo lịch trình của riêng chúng. Để lên lịch làm mới những Power Query nguồn dữ liệu, định cấu hình cài đặt làm mới trên nguồn dữ liệu cụ thể đó từ **Nguồn dữ liệu** trang.
+> Power Query các nguồn dữ liệu do bạn quản lý làm mới theo lịch trình của riêng chúng. Để lên lịch làm mới những Power Query nguồn dữ liệu, định cấu hình cài đặt làm mới trên nguồn dữ liệu cụ thể đó từ **Nguồn dữ liệu** trang. Căn chỉnh thời gian với lịch trình làm mới dữ liệu ngược dòng để không xảy ra tất cả các lần làm mới cùng một lúc.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Cài đặt làm mới luồng dữ liệu.":::
 
 ## <a name="set-system-refresh-schedule"></a>Đặt lịch làm mới hệ thống
