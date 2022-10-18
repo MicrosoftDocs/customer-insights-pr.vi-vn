@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609618"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638377"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Nội dung mới trong Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Chúng tôi sẽ triển khai các điểm cập nhật trên cơ sở từng kh
 
 > [!TIP]
 > Để gửi và bình chọn cho các yêu cầu về tính năng cũng như gợi ý về sản phẩm, hãy truy cập vào [Cổng ý tưởng ứng dụng Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Cập nhật tháng 9 năm 2022
+
+Các bản cập nhật vào tháng 9 năm 2022 bao gồm các tính năng mới, nâng cấp hiệu suất và sửa lỗi.
+
+### <a name="export-data-to-hubspot"></a>Xuất dữ liệu sang HubSpot
+
+Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang HubSpot và sử dụng chúng cho tiếp thị qua email.
+
+Để biết thêm thông tin, hãy xem [Xuất phân đoạn sang HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Xóa trường hợp nhất hoặc thực thể khỏi hợp nhất dữ liệu
+
+Bạn có thể xóa các trường và thực thể khỏi quá trình hợp nhất dữ liệu.
+
+Để biết thêm thông tin, hãy xem [Xóa trường hợp nhất](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Quản lý hồ sơ khách hàng không xác định
+
+Cá nhân hóa đáng nhớ phụ thuộc vào sự phong phú và đầy đủ của dữ liệu khách hàng của bạn và Thông tin chi tiết về khách hàng giúp bạn đạt được những mục tiêu này. Bạn có thể quản lý hồ sơ khách hàng cho những người dùng mà bạn không có bất kỳ thông tin nào ngoài ID.
+
+Để biết thêm thông tin, hãy xem [Quản lý hồ sơ không xác định bằng Thông tin chi tiết về khách hàng](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Cập nhật tháng 8 năm 2022
 
@@ -148,11 +170,11 @@ Giờ đây, bạn có thể phân biệt giữa các thước đo cho hồ sơ 
 
 Để biết thêm thông tin, hãy xem [Sử dụng trình tạo thước đo để tạo các thước đo từ đầu](measure-builder.md).
 
-### <a name="consolidation-of-customer-insights-documentation"></a>Hợp nhất tài liệu Thông tin chi tiết về khách hàng
+### <a name="consolidation-of-customer-insights-documentation"></a>Tổng hợp tài liệu Thông tin chi tiết về khách hàng
 
 Chúng tôi đã xem lại các bài viết tài liệu của mình và xóa các đề cập về thông tin chi tiết về mức độ tương tác và khả năng thông tin chi tiết về đối tượng. Trong tương lai, chúng tôi sẽ đề cập nhất quán đến tên sản phẩm Customer Insights khi chúng tôi viết về các tính năng cốt lõi của ứng dụng. Thay đổi này cũng dẫn đến việc tái cấu trúc đáng kể mục lục, cấu trúc URL và đường dẫn tệp trong kho tài liệu cơ bản. Tất cả các dấu trang hoặc các liên kết hiện có của bạn tiếp tục hoạt động và chuyển hướng đến các URL được cập nhật.
 
-Nếu bạn muốn cho chúng tôi biết cách bạn cảm nhận sự thay đổi đó hoặc phát hiện ra điều gì đó không hoạt động như mong đợi, hãy cho chúng tôi biết bằng cách [gửi phản hồi cho trang này](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Nếu bạn muốn cho chúng tôi biết cách bạn nhận thấy sự thay đổi đó hoặc phát hiện ra điều gì đó không hoạt động như mong đợi, hãy cho chúng tôi biết bằng cách [gửi phản hồi cho trang này](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Bản cập nhật tháng 3 năm 2022
 
@@ -196,7 +218,7 @@ Các bản cập nhật vào tháng 2 năm 2022 bao gồm các tính năng mới
 
 ### <a name="general-availability-for-prediction-models"></a>Tính khả dụng chung cho các mẫu dự đoán
 
-Các mẫu dự đoán xuất xưởng, bao gồm **đăng ký churn**, **dịch churn**, và **giá trị lâu dài của khách hàng (CLV)** thường có sẵn như một phần của Thông tin chi tiết về khách hàng. 
+Các mẫu dự đoán xuất xưởng, bao gồm **đăng ký churn**, **dịch churn**, và **giá trị lâu dài của khách hàng (CLV)** nói chung trở nên khả dụng như một phần của Thông tin chi tiết về khách hàng. 
 
 Để biết thêm thông tin, hãy xem [Tổng quan về dự đoán](predictions-overview.md).
 
