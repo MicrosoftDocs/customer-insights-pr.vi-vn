@@ -11,33 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424335"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671277"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Làm việc với dữ liệu Customer Insights trong Microsoft Dataverse
 
 Customer Insights cung cấp tùy chọn để hiển thị các thực thể đầu ra trong [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Sự tích hợp này cho phép chia sẻ dữ liệu dễ dàng và phát triển tùy chỉnh thông qua cách tiếp cận mã thấp / không mã. Các [thực thể đầu ra](#output-entities) có sẵn dưới dạng bảng trong một Dataverse Môi trường. Bạn có thể sử dụng dữ liệu cho bất kỳ ứng dụng nào khác dựa trên Dataverse những cái bàn. Các bảng này cho phép các tình huống như quy trình làm việc tự động thông qua Power Automate hoặc xây dựng ứng dụng với Power Apps.
 
-Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và cổng kết nối](connect-power-query.md#add-data-from-on-premises-data-sources).
+Đang kết nối với của bạn Dataverse môi trường cũng cho phép bạn [nhập dữ liệu từ tại chỗ nguồn dữ liệu bằng cách sử dụng Power Platform luồng dữ liệu và cổng](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
 - Thông tin chi tiết về khách hàng và Dataverse môi trường phải được lưu trữ trong cùng một khu vực.
 - Một vai trò quản trị viên toàn cầu được thiết lập trong Dataverse Môi trường. Xác minh nếu điều này [Dataverse môi trường được liên kết](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) vào các nhóm bảo mật nhất định và đảm bảo rằng bạn đã được thêm vào các nhóm bảo mật đó.
 - Không có môi trường Thông tin chi tiết về khách hàng nào khác đã được liên kết với Dataverse môi trường bạn muốn kết nối. Học cách [loại bỏ một kết nối hiện có với một Dataverse Môi trường](#remove-an-existing-connection-to-a-dataverse-environment).
-- Một Microsoft Dataverse môi trường được kết nối với một tài khoản lưu trữ nếu bạn định cấu hình môi trường để [sử dụng của bạn Azure Data Lake Storage](own-data-lake-storage.md).
+- Một Microsoft Dataverse môi trường được kết nối với một tài khoản lưu trữ duy nhất nếu bạn định cấu hình môi trường để [sử dụng của bạn Azure Data Lake Storage](own-data-lake-storage.md).
 
 ## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse quyền dung lượng lưu trữ
 
-Đăng ký Thông tin chi tiết về khách hàng cho phép bạn tăng thêm dung lượng cho tổ chức của bạn hiện có [Dataverse khả năng lưu trữ](/power-platform/admin/capacity-storage). Dung lượng thêm vào phụ thuộc vào số lượng cấu hình mà thuê bao của bạn sử dụng.
+Đăng ký Thông tin chi tiết về khách hàng cho phép bạn có thêm năng lực cho tổ chức của bạn hiện có [Dataverse khả năng lưu trữ](/power-platform/admin/capacity-storage). Dung lượng thêm vào phụ thuộc vào số lượng cấu hình mà thuê bao của bạn sử dụng.
 
 **Ví dụ:**
 
-Giả sử bạn nhận được 15 GB bộ nhớ cơ sở dữ liệu và 20 GB bộ nhớ tệp cho mỗi 100.000 hồ sơ khách hàng. Nếu đăng ký của bạn bao gồm 300.000 hồ sơ khách hàng, thì tổng dung lượng lưu trữ của bạn là 45 GB (3 x 15 GB) bộ nhớ cơ sở dữ liệu và 60 GB bộ nhớ tệp (3 x 20 GB). Tương tự, nếu bạn có đăng ký B-to-B với 30 nghìn tài khoản, tổng dung lượng lưu trữ của bạn là 45 GB (3 x 15 GB) bộ nhớ cơ sở dữ liệu và 60 GB bộ nhớ tệp (3 x 20 GB).
+Giả sử bạn nhận được 15 GB bộ nhớ cơ sở dữ liệu và 20 GB bộ nhớ tệp cho mỗi 100.000 hồ sơ khách hàng. Nếu đăng ký của bạn bao gồm 300.000 hồ sơ khách hàng, thì tổng dung lượng lưu trữ của bạn là 45 GB (3 x 15 GB) lưu trữ cơ sở dữ liệu và 60 GB lưu trữ tệp (3 x 20 GB). Tương tự, nếu bạn có đăng ký B-to-B với 30 nghìn tài khoản, tổng dung lượng lưu trữ của bạn là 45 GB (3 x 15 GB) bộ nhớ cơ sở dữ liệu và 60 GB bộ nhớ tệp (3 x 20 GB).
 
 Dung lượng nhật ký không gia tăng và cố định cho tổ chức của bạn.
 
@@ -64,10 +64,13 @@ Các **Microsoft Dataverse** bước cho phép bạn kết nối Thông tin chi 
 
 Trong [của riêng bạn Azure Data Lake Storage tài khoản](own-data-lake-storage.md), xác minh rằng người dùng thiết lập môi trường Thông tin chi tiết về khách hàng có ít nhất **Bộ đọc dữ liệu khối lưu trữ** quyền trên`customerinsights` vùng chứa trong tài khoản lưu trữ.
 
+> [!NOTE]
+> Chia sẻ dữ liệu chỉ có thể áp dụng nếu bạn sử dụng dữ liệu của riêng mình Azure Data Lake Storage tài khoản. Cài đặt này không khả dụng nếu môi trường Thông tin chi tiết về khách hàng sử dụng cài đặt mặc định Dataverse kho.
+
 ### <a name="limitations"></a>Giới hạn
 
 - Chỉ ánh xạ 1-1 giữa một Dataverse tổ chức và một Azure Data Lake Storage tài khoản. Một lần Dataverse tổ chức được kết nối với tài khoản lưu trữ, tổ chức không thể kết nối với tài khoản lưu trữ khác. Hạn chế này ngăn cản Dataverse từ việc điền nhiều tài khoản lưu trữ.
-- Chia sẻ dữ liệu sẽ không hoạt động nếu cần thiết lập Azure Private Link để truy cập vào Azure Data Lake Storage vì nó nằm sau tường lửa. Dataverse hiện không hỗ trợ kết nối với điểm cuối riêng tư thông qua Liên kết riêng tư.
+- Chia sẻ dữ liệu sẽ không hoạt động nếu cần thiết lập Azure Private Link để truy cập Azure Data Lake Storage vì nó nằm sau tường lửa. Dataverse hiện không hỗ trợ kết nối với các điểm cuối riêng tư thông qua Liên kết riêng tư.
 
 ### <a name="set-up-security-groups-on-your-own-azure-data-lake-storage"></a>Tự thiết lập các nhóm bảo mật Azure Data Lake Storage
 
@@ -95,7 +98,7 @@ Thiết lập PowerShell để thực thi các tập lệnh PowerShell.
    - `CreateSecurityGroups.ps1`: Yêu cầu quyền quản trị của người thuê.
    - `ByolSetup.ps1`: Yêu cầu quyền của Chủ sở hữu dữ liệu khối lưu trữ ở cấp tài khoản lưu trữ / vùng chứa. Tập lệnh này sẽ tạo ra sự cho phép dành cho bạn. Nhiệm vụ của bạn có thể được xóa theo cách thủ công sau khi chạy thành công tập lệnh.
 
-1. Hành hình`CreateSecurityGroups.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem lại thông tin bổ sung và logic được triển khai.
+1. Hành hình`CreateSecurityGroups.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem xét thông tin bổ sung và logic được triển khai.
 
    Tập lệnh này tạo hai nhóm bảo mật trên đăng ký Azure của bạn: một cho nhóm Người đọc và một nhóm khác cho nhóm Cộng tác viên. Microsoft Dataverse dịch vụ là chủ sở hữu cho cả hai nhóm bảo mật này.
 
@@ -104,24 +107,24 @@ Thiết lập PowerShell để thực thi các tập lệnh PowerShell.
    > [!NOTE]
    > Đối tượng thuê của bạn có thể tắt tính năng tạo nhóm bảo mật. Trong trường hợp đó, cần thiết lập thủ công và Azure AD quản trị viên sẽ phải [cho phép tạo nhóm bảo mật](/azure/active-directory/enterprise-users/groups-self-service-management).
 
-1. Hành hình`ByolSetup.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage, tên tài khoản lưu trữ, tên nhóm tài nguyên và các giá trị ID nhóm bảo mật Reader và Contributor. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem lại thông tin bổ sung và logic được triển khai.
+1. Hành hình`ByolSetup.ps1` trong Windows PowerShell bằng cách cung cấp ID đăng ký Azure chứa Azure Data Lake Storage, tên tài khoản lưu trữ, tên nhóm tài nguyên và các giá trị ID nhóm bảo mật Reader và Contributor. Mở tập lệnh PowerShell trong trình chỉnh sửa để xem xét thông tin bổ sung và logic được triển khai.
 
    Tập lệnh này thêm kiểm soát truy cập dựa trên vai trò bắt buộc cho Microsoft Dataverse dịch vụ và bất kỳ Dataverse ứng dụng kinh doanh dựa trên cơ sở. Nó cũng cập nhật Danh sách kiểm soát truy cập (ACL) trên`customerinsights` vùng chứa cho các nhóm bảo mật được tạo bằng`CreateSecurityGroups.ps1` script. Nhóm Contributor được cung cấp *rwx* quyền và nhóm độc giả được cấp *rx* chỉ sự cho phép.
 
 1. Sao chép chuỗi đầu ra giống như sau:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
-1. Nhập chuỗi đầu ra đã sao chép vào **Mã định danh quyền** trường của bước cấu hình môi trường cho Microsoft Dataverse.
+1. Nhập chuỗi đầu ra đã sao chép vào **Định danh quyền** trường của bước cấu hình môi trường cho Microsoft Dataverse.
 
    :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Tùy chọn cấu hình để cho phép chia sẻ dữ liệu từ của riêng bạn Azure Data Lake Storage với Microsoft Dataverse .":::
 
 ## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Xóa kết nối hiện có với một Dataverse Môi trường
 
-Khi kết nối với một Dataverse môi trường, thông báo lỗi **Tổ chức CDS này đã được gắn với một phiên bản Thông tin chi tiết về khách hàng khác** có nghĩa là Dataverse môi trường đã được sử dụng trong môi trường Thông tin chi tiết về khách hàng. Bạn có thể xóa kết nối hiện có với tư cách là quản trị viên toàn cầu trên Dataverse Môi trường. Có thể mất vài giờ để điền các thay đổi.
+Khi kết nối với một Dataverse môi trường, thông báo lỗi **Tổ chức CDS này đã được đính kèm với một phiên bản Thông tin chi tiết về khách hàng khác** có nghĩa là Dataverse môi trường đã được sử dụng trong môi trường Thông tin chi tiết về khách hàng. Bạn có thể xóa kết nối hiện có với tư cách là quản trị viên toàn cầu trên Dataverse Môi trường. Có thể mất vài giờ để điền các thay đổi.
 
 1. Truy cập [Power Apps](https://make.powerapps.com).
 1. Chọn môi trường từ bộ chọn môi trường.
 1. Đi đến **Các giải pháp**.
-1. Gỡ cài đặt hoặc xóa giải pháp có tên **Dynamics 365 Customer Insights Bổ trợ Thẻ khách hàng (Xem trước)**.
+1. Gỡ cài đặt hoặc xóa giải pháp có tên **Dynamics 365 Customer Insights Bổ trợ Thẻ Khách hàng (Xem trước)**.
 
 HOẶC
 
@@ -146,11 +149,11 @@ Một số thực thể đầu ra từ Thông tin chi tiết về khách hàng c
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Bảng này chứa hồ sơ khách hàng hợp nhất từ Customer Insights. Lược đồ cho hồ sơ khách hàng hợp nhất phụ thuộc vào các thực thể và thuộc tính được sử dụng trong quá trình hợp nhất dữ liệu. Sơ đồ hồ sơ khách hàng thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Common Data Model CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Đối với kịch bản B-to-B, hồ sơ khách hàng chứa các tài khoản hợp nhất và giản đồ thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Mô hình Dữ liệu Chung về Tài khoản](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+Bảng này chứa hồ sơ khách hàng hợp nhất từ Customer Insights. Lược đồ cho hồ sơ khách hàng hợp nhất phụ thuộc vào các thực thể và thuộc tính được sử dụng trong quá trình hợp nhất dữ liệu. Sơ đồ hồ sơ khách hàng thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Common Data Model CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Đối với kịch bản B-to-B, hồ sơ khách hàng chứa các tài khoản hợp nhất và lược đồ thường chứa một tập hợp con các thuộc tính từ [Định nghĩa Mô hình Dữ liệu Chung về Tài khoản](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
 
 ### <a name="contactprofile"></a>Hồ sơ liên hệ
 
-Một ContactProfile chứa thông tin hợp nhất về một số liên lạc. Liên hệ là [các cá nhân được ánh xạ tới một tài khoản](data-unification-contacts.md) trong kịch bản B-to-B.
+Một Hồ sơ Liên hệ chứa thông tin thống nhất về một số liên lạc. Liên hệ là [các cá nhân được ánh xạ tới một tài khoản](data-unification-contacts.md) trong kịch bản B-to-B.
 
 | Column                       | Loại                | Description     |
 | ---------------------------- | ------------------- | --------------- |
@@ -184,7 +187,7 @@ Bảng AlternateKey chứa khóa của các thực thể đã tham gia vào quá
 |AlternateValue    |Văn bản         |ID thay thế được ánh xạ tới ID khách hàng. Ví dụ: `cntid_1078`         |
 |KeyRing           | Văn bản        | Giá trị JSON  </br> Ví dụ: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
 |CustomerId         | Văn bản        | ID của hồ sơ khách hàng hợp nhất.         |
-|AlternateKeyId     | Mã định danh duy nhất        |  HƯỚNG DẪN xác định AlternateKey dựa trên`Identifier`      |
+|AlternateKeyId     | Mã định danh duy nhất        |  HƯỚNG DẪN xác định của AlternateKey dựa trên`Identifier`      |
 |Identifier |   Văn bản      |   `DataSourceName|EntityName|AlternateValue`  </br> Ví dụ: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
