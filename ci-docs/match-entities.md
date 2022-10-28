@@ -2,7 +2,7 @@
 title: Khớp các điều kiện để hợp nhất dữ liệu
 description: So khớp các thực thể để tạo hồ sơ khách hàng hợp nhất.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,16 +14,16 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304683"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721547"
 ---
 # <a name="match-conditions-for-data-unification"></a>Khớp các điều kiện để hợp nhất dữ liệu
 
-Bước hợp nhất này xác định thứ tự đối sánh và các quy tắc cho đối sánh thực thể chéo. Bước này yêu cầu ít nhất hai thực thể.
+Bước hợp nhất này xác định thứ tự đối sánh và các quy tắc để đối sánh nhiều thực thể. Bước này yêu cầu ít nhất hai thực thể.
 
 > [!NOTE]
 > Sau khi bạn tạo điều kiện đối sánh và chọn **Tiếp theo**, bạn không thể xóa một thực thể hoặc thuộc tính đã chọn. Nếu cần, hãy chọn **Mặt sau** để xem xét các thực thể và thuộc tính đã chọn trước khi tiếp tục.
@@ -32,7 +32,7 @@ Bước hợp nhất này xác định thứ tự đối sánh và các quy tắ
 
 ## <a name="include-enriched-entities-preview"></a>Bao gồm các thực thể được bổ sung chi tiết (xem trước)
 
-Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho các nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp**, bạn không cần phải chọn lại chúng.
+Nếu bạn đã làm giàu các thực thể ở cấp nguồn dữ liệu để giúp cải thiện kết quả hợp nhất của mình, hãy chọn chúng. Để biết thêm thông tin, hãy xem [Làm giàu cho nguồn dữ liệu](data-sources-enrichment.md). Nếu bạn đã chọn các thực thể được bổ sung chi tiết trên **Bản ghi trùng lặp** trang, bạn không cần phải chọn lại chúng.
 
 1. Trên **Điều kiện phù hợp** trang, chọn **Sử dụng các thực thể được bổ sung chi tiết** trên đầu của trang.
 
@@ -52,11 +52,11 @@ Mỗi quy tắc hợp nhất hai hoặc nhiều thực thể thành một thực
 > - Chọn pháp nhân có dữ liệu hồ sơ đầy đủ và đáng tin cậy nhất về khách hàng của bạn làm pháp nhân chính.
 > - Chọn đối tượng có một số thuộc tính chung với các đối tượng khác (ví dụ: tên, số điện thoại hoặc địa chỉ email) làm đối tượng chính.
 
-1. Trên **Điều kiện phù hợp**, sử dụng mũi tên di chuyển lên và xuống để di chuyển các thực thể theo thứ tự bạn muốn hoặc kéo và thả chúng. Ví dụ, chọn **Thương mại điện tử** là thực thể chính và **loyCustomers** như thực thể thứ hai.
+1. Trên **Điều kiện phù hợp**, sử dụng mũi tên di chuyển lên và xuống để di chuyển các thực thể theo thứ tự bạn muốn hoặc kéo và thả chúng. Ví dụ: chọn **Thương mại điện tử** là thực thể chính và **loyCustomers** như thực thể thứ hai.
 
-1. Để có mọi bản ghi trong thực thể dưới dạng một khách hàng duy nhất bất kể có tìm thấy kết quả trùng khớp hay không, hãy chọn **Bao gồm tất cả các bản ghi**. Bất kỳ hồ sơ nào trong thực thể này không khớp với hồ sơ trong bất kỳ thực thể nào khác đều được đưa vào hồ sơ hợp nhất. Các bản ghi không có khớp được gọi là đĩa đơn.
+1. Để có mọi bản ghi trong thực thể là một khách hàng duy nhất bất kể có tìm thấy kết quả trùng khớp hay không, hãy chọn **Bao gồm tất cả các bản ghi**. Bất kỳ hồ sơ nào trong thực thể này không khớp với hồ sơ trong bất kỳ thực thể nào khác đều được đưa vào hồ sơ hợp nhất. Các bản ghi không có khớp được gọi là đĩa đơn.
   
-Thực thể chính *Liên hệ: Thương mại điện tử* được đối sánh với thực thể tiếp theo *CustomerLoyalty: Sự trung thành*. Tập dữ liệu là kết quả từ bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
+Thực thể chính *Liên hệ: Thương mại điện tử* được đối sánh với thực thể tiếp theo *CustomerLoyalty: Lòng trung thành*. Tập dữ liệu là kết quả của bước đối sánh đầu tiên được đối sánh với thực thể sau nếu bạn có nhiều hơn hai thực thể.
 
 :::image type="content" source="media/m3_match.png" alt-text="Ảnh chụp màn hình của thứ tự khớp đã chọn cho các thực thể." lightbox="media/m3_match.png":::
 
@@ -130,12 +130,12 @@ Ví dụ: nếu quy tắc đối sánh của bạn kết hợp họ, thành ph�
 
 ### <a name="specify-custom-match-conditions"></a>Chỉ định các điều kiện so khớp tùy chỉnh
 
-Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh mặc định. Có bốn tùy chọn có sẵn:
+Chỉ định các điều kiện ghi đè logic đối sánh mặc định. Có bốn tùy chọn có sẵn:
 
 |Tùy chọn  |Description |Ví dụ:  |
 |---------|---------|---------|
-|Luôn khớp     | Xác định các giá trị luôn được so khớp.         |  Luôn phù hợp *Mike* và *MikeR*.       |
-|Không khớp     | Xác định các giá trị không bao giờ khớp.        | Không bao giờ phù hợp *John* và *Jonathan*.        |
+|Luôn khớp     | Xác định các giá trị cho các khóa chính luôn được khớp.         |  Luôn khớp hàng với khóa chính *12345* vào hàng có khóa chính *54321*.       |
+|Không khớp     | Xác định các giá trị cho các khóa chính không bao giờ khớp.        | Không bao giờ khớp hàng với khóa chính *12345* vào hàng có khóa chính *54321*.        |
 |Bỏ qua            | Xác định các giá trị mà hệ thống luôn phải bỏ qua trong giai đoạn đối sánh. |  Bỏ qua các giá trị *11111* và *không xác định* trong trận đấu.        |
 |Ánh xạ biệt danh    | Xác định các giá trị mà hệ thống nên coi là cùng một giá trị.         | Xem xét *Joe* ngang bằng với *Joseph*.        |
 
@@ -143,17 +143,18 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Nút tùy chỉnh":::
 
-1. Chọn **Loại tùy chỉnh** và chọn **Tải xuống mẫu**. Bạn cần một mẫu riêng cho từng tùy chọn đối sánh.
+1. Chọn **Loại tùy chỉnh** và chọn **Tải xuống mẫu**. Đổi tên mẫu mà không sử dụng dấu cách. Sử dụng một mẫu riêng cho từng tùy chọn đối sánh.
 
-1. Mở tệp mẫu đã tải xuống và điền thông tin chi tiết. Mẫu chứa các trường để chỉ định thực thể và các giá trị khóa chính của thực thể sẽ được sử dụng trong so khớp tùy chỉnh. Ví dụ: nếu bạn muốn khóa chính *12345* từ thực thể *Bán hàng* để luôn so khớp với khóa chính *34567* từ thực thể *Liên hệ*, hãy điền vào mẫu:
-    - Thực thể 1: Bán hàng
-    - Entity1Key: 12345
-    - Thực thể 2: Người liên hệ
-    - Entity2Key: 34567
+1. Mở tệp mẫu đã tải xuống và điền thông tin chi tiết. Mẫu chứa các trường để chỉ định thực thể và các giá trị khóa chính của thực thể sẽ được sử dụng trong so khớp tùy chỉnh. Tên thực thể phân biệt chữ hoa chữ thường. Ví dụ: nếu bạn muốn khóa chính *12345* từ thực thể *Bán hàng* để luôn so khớp với khóa chính *34567* từ thực thể *Liên hệ*, hãy điền vào mẫu:
+   - Thực thể 1: Bán hàng
+   - Entity1Key: 12345
+   - Thực thể 2: Người liên hệ
+   - Entity2Key: 34567
 
    Cùng một tệp mẫu có thể chỉ định các bản ghi khớp tùy chỉnh từ nhiều thực thể.
 
-   Nếu bạn muốn chỉ định quá trình so khớp tùy chỉnh để loại bỏ trùng lặp trên một thực thể, hãy cung cấp cùng một thực thể cho cả Entity1 và Entity2 rồi đặt các giá trị khóa chính khác nhau.
+   > [!NOTE]
+   > Nếu bạn muốn chỉ định quá trình so khớp tùy chỉnh để loại bỏ trùng lặp trên một thực thể, hãy cung cấp cùng một thực thể cho cả Entity1 và Entity2 rồi đặt các giá trị khóa chính khác nhau. Bạn phải xác định ít nhất một quy tắc trùng lặp cho thực thể để sử dụng đối sánh tùy chỉnh.
 
 1. Sau khi thêm tất cả các ghi đè, hãy lưu tệp mẫu.
 
@@ -163,12 +164,14 @@ Bạn có thể chỉ định các điều kiện ghi đè logic đối sánh m�
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Ảnh chụp màn hình hộp thoại để chọn ghi đè cho tình huống so khớp tùy chỉnh.":::
 
-1. Việc áp dụng đối sánh tùy chỉnh tùy thuộc vào tùy chọn đối sánh bạn muốn sử dụng.
+1. Việc áp dụng đối sánh tùy chỉnh phụ thuộc vào tùy chọn đối sánh bạn muốn sử dụng.
 
    - Vì **Luôn phù hợp** hoặc **Không bao giờ phù hợp**, tiến hành bước tiếp theo.
    - Vì **Đường vòng** hoặc **Lập bản đồ bí danh**, lựa chọn **Chỉnh sửa** trên quy tắc đối sánh hiện có hoặc tạo quy tắc mới. Trong menu thả xuống Chuẩn hóa, hãy chọn **Bỏ qua tùy chỉnh** hoặc **Lập bản đồ bí danh** tùy chọn và chọn **Xong**.
 
 1. Lựa chọn **Xong** trên **Phong tục** để áp dụng cấu hình đối sánh tùy chỉnh.
+
+   Mỗi tệp mẫu được nhập là nguồn dữ liệu của chính tệp đó. Nếu các bản ghi được phát hiện cần xử lý đối sánh đặc biệt, hãy cập nhật nguồn dữ liệu thích hợp. Bản cập nhật sẽ được sử dụng trong quá trình thống nhất tiếp theo. Ví dụ: bạn xác định các cặp song sinh có tên gần giống nhau sống tại cùng một địa chỉ đã được hợp nhất thành một người. Cập nhật nguồn dữ liệu để xác định cặp song sinh là bản ghi riêng biệt, duy nhất.
 
 > [!div class="nextstepaction"]
 > [Bước tiếp theo: Hợp nhất các trường](merge-entities.md)
