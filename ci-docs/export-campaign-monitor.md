@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196328"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724710"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Xuất phân khúc sang Campaign Monitor (xem trước)
 
@@ -21,7 +21,7 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Campaign Monitor
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Một [Tài khoản Campaign Monitor](https://www.campaignmonitor.com/) và thông tin đăng nhập quản trị viên tương ứng.
+- Một [Tài khoản Giám sát chiến dịch](https://www.campaignmonitor.com/) và thông tin đăng nhập quản trị viên tương ứng.
 - Một [ID danh sách giám sát chiến dịch](https://www.campaignmonitor.com/api/getting-started/#your-list-id).
 - Một [Khóa API đã tạo](https://www.campaignmonitor.com/api/getting-started/) từ **Cài đặt tài khoản** trong Campaign Monitor để lấy ID danh sách API.
 - [Các phân đoạn đã định cấu hình](segments.md) trong Thông tin chi tiết về khách hàng.
@@ -29,6 +29,7 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Campaign Monitor
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Campaign Monitor, có thể mất tới 20 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Campaign Monitor tùy thuộc vào hợp đồng của bạn với Campaign Monitor.
 - Chỉ phân đoạn.
 

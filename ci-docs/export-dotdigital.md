@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196098"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725012"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Xuất phân khúc sang DotDigital (xem trước)
 
@@ -28,7 +28,8 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang sổ địa ch�
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang DotDigital, có thể mất tới ba giờ để hoàn thành vì những hạn chế từ phía nhà cung cấp. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang DotDigital tùy thuộc vào hợp đồng của bạn với DotDigital.
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang DotDigital, có thể mất đến ba giờ để hoàn thành vì những hạn chế từ phía nhà cung cấp. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang DotDigital tùy thuộc vào hợp đồng của bạn với DotDigital.
 - Chỉ phân đoạn.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Thiết lập kết nối với DotDigital

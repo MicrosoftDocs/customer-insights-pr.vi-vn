@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195362"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724815"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Xuất phân đoạn sang Criteo (xem trước)
 
@@ -27,6 +27,7 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến dị
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Criteo, có thể mất tới 30 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Criteo tùy thuộc vào hợp đồng của bạn với Criteo.
 - Chỉ phân đoạn.
 
@@ -65,8 +66,6 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến dị
 1. Nhập tên cho lần xuất.
 
 1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng.
-
-1. Tùy chọn, xuất **ID nhà quảng cáo** và **Tên**.
 
 1. Chọn phân khúc mà bạn muốn xuất.
 

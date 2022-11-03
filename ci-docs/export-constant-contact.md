@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196512"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724527"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Xuất phân khúc sang Constant Contact (xem trước)
 
@@ -28,7 +28,8 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Constant Contact
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Liên hệ không đổi, có thể mất đến một giờ để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Constant Contact tùy thuộc vào hợp đồng của bạn với Constant Contact.
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
+- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Liên hệ không đổi, có thể mất tới một giờ để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Constant Contact tùy thuộc vào hợp đồng của bạn với Constant Contact.
 - Chỉ phân đoạn.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Thiết lập kết nối với Constant Contact

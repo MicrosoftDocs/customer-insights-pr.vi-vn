@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195595"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725426"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Xuất phân khúc sang ActiveCampaign (bản xem trước)
 
@@ -29,6 +29,7 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang ActiveCampaign và s�
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang ActiveCampaign, có thể mất đến 90 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang ActiveCampaign tùy thuộc vào hợp đồng của bạn với ActiveCampaign.
 - Chỉ phân đoạn.
 

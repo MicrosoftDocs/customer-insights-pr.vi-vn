@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 855e77055eeb24a2c6cff0d45cd23edf93cc0581
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9197018"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724874"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Xuất phân khúc sang SendGrid (bản xem trước)
 
@@ -29,6 +29,7 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất sang danh sách liên h�
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Tổng cộng có tới 100.000 hồ sơ khách hàng trên SendGrid, có thể mất đến vài giờ để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang SendGrid tùy thuộc vào hợp đồng của bạn với SendGrid.
 - Chỉ phân đoạn.
 

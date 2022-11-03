@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195040"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724642"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Xuất phân đoạn sang Facebook Trình quản lý quảng cáo (xem trước)
 
@@ -25,11 +25,13 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang Trình quản lý qu�
 
 - Một [Facebook Tài khoản quảng cáo](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) bao gồm một [Facebook Tài khoản kinh doanh](https://business.facebook.com/).
 - Đặc quyền của quản trị viên trên [Facebook Tài khoản Quảng cáo](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Điều khoản đối tượng tùy chỉnh cần được người dùng thiết lập kết nối trong Thông tin chi tiết về khách hàng chấp nhận.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
 - Lên đến 10 triệu hồ sơ khách hàng cho mỗi lần xuất sang Facebook Trình quản lý quảng cáo, có thể mất đến 90 phút.
 - Chỉ phân đoạn.
+- Facebook Tích hợp quảng cáo không hỗ trợ người dùng có nhiều hơn 25 tài khoản quảng cáo.
 - Facebook *danh sách khách hàng* gõ vào [đối tượng tùy chỉnh](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) chỉ có.
   > [!NOTE]
   > Trong một số trường hợp, bạn có thể thấy các đối tượng tùy chỉnh thuộc các loại khác nhau trong danh sách thả xuống. Nếu bạn chọn một loại khác với *danh sách khách hàng*, quá trình xuất không thành công.

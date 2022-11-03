@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196190"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725196"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Xuất phân khúc sang Omnisend (xem trước)
 
@@ -28,6 +28,7 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang Omnisend để d
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Omnisend, có thể mất đến bốn giờ để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Omnisend tùy thuộc vào hợp đồng của bạn với Omnisend.
 - Chỉ phân đoạn.
 

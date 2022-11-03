@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304729"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725334"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Xuất phân khúc sang LinkedIn Ads (xem trước)
 
@@ -28,6 +28,7 @@ Xuất phân khúc hồ sơ khách hàng hợp nhất sang LinkedIn Ads để t�
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Lên đến 100.000 hồ sơ khách hàng cho mỗi lần xuất sang Quảng cáo LinkedIn, có thể mất tới 10 phút để hoàn thành.
 - Chỉ phân đoạn. Một phân đoạn phải chứa ít nhất 300 cấu hình duy nhất.
 

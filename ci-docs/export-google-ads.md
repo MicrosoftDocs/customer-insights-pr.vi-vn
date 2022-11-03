@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196604"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725104"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Xuất phân khúc sang Google Ads (bản xem trước)
 
@@ -30,6 +30,7 @@ Xuất các phân khúc hồ sơ khách hàng hợp nhất sang danh sách đố
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Xuất tối đa 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Google Ads. Quá trình này có thể mất tới 30 phút để hoàn thành do các giới hạn từ phía nhà cung cấp.
 - Chỉ phân đoạn.
 - Đối sánh trong Google Ads có thể mất đến 48 giờ.

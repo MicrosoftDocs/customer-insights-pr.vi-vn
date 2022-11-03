@@ -1,12 +1,12 @@
 ---
 title: Hoạt động liên hệ với khách hàng hoặc doanh nghiệp
 description: Xác định các hoạt động liên hệ với khách hàng hoặc doanh nghiệp và xem chúng theo dòng thời gian trên hồ sơ khách hàng.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304131"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723807"
 ---
 # <a name="customer-or-business-contact-activities"></a>Hoạt động liên hệ với khách hàng hoặc doanh nghiệp
 
@@ -34,13 +34,16 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
 1. Đi đến **Dữ liệu** > **Các hoạt động**.
 
-1. Lựa chọn **Thêm hoạt động** để bắt đầu trải nghiệm được hướng dẫn.
+1. Lựa chọn **Thêm hoạt động** để bắt đầu trải nghiệm có hướng dẫn.
 
 1. Bên trong **Dữ liệu hoạt động** bước, nhập thông tin sau:
 
    - **Tên hoạt động**: Chọn tên cho hoạt động của bạn.
    - **Thực thể hoạt động** : Chọn một thực thể bao gồm dữ liệu giao dịch hoặc hoạt động.
    - **Khóa chính**: Chọn trường xác định duy nhất một bản ghi. Nó không nên chứa bất kỳ giá trị trùng lặp, giá trị trống hoặc giá trị thiếu nào.
+
+     > [!NOTE]
+     > Khóa chính cho mỗi hàng phải duy trì nhất quán qua các lần làm mới nguồn dữ liệu. Nếu khóa Chính cho một hàng được cập nhật trong lần làm mới nguồn dữ liệu, nó sẽ tạo ra các bản sao trong thực thể Hoạt động đầu ra. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Thiết lập dữ liệu hoạt động với tên, thực thể và khóa chính.":::
 
@@ -50,7 +53,7 @@ Một thực thể phải có ít nhất một thuộc tính loại **Ngày** đ
 
    - **Khóa ngoại** : Trường nước ngoài trong thực thể hoạt động của bạn sẽ được sử dụng để thiết lập mối quan hệ với một thực thể khác.
    - **Tới tên thực thể** : Thực thể khách hàng nguồn tương ứng mà thực thể hoạt động của bạn sẽ có mối quan hệ. Bạn chỉ có thể liên kết với các thực thể khách hàng nguồn được dùng trong quá trình hợp nhất dữ liệu.
-   - **Tên mối quan hệ** : Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn đã chọn đã tồn tại, tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ nào như vậy tồn tại, một mối quan hệ mới sẽ được tạo theo tên mà bạn cung cấp trong hộp này.
+   - **Tên mối quan hệ** : Nếu mối quan hệ giữa thực thể hoạt động này và thực thể khách hàng nguồn được chọn đã tồn tại, thì tên mối quan hệ sẽ ở chế độ chỉ đọc. Nếu không có mối quan hệ nào như vậy tồn tại, một mối quan hệ mới sẽ được tạo theo tên mà bạn cung cấp trong hộp này.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Xác định mối quan hệ của thực thể.":::
 
@@ -119,22 +122,30 @@ Chọn một hoạt động để xem các hành động có sẵn.
 > [!NOTE]
 > Bộ lọc hoạt động bị xóa khi bạn rời khỏi hồ sơ khách hàng. Bạn phải áp dụng chúng mỗi khi mở hồ sơ khách hàng.
 
-## <a name="define-a-contact-activity"></a>Xác định hoạt động liên hệ
+## <a name="define-a-contact-activity"></a>Xác định một hoạt động liên hệ
 
-Đối với tài khoản doanh nghiệp (B-to-B), hãy sử dụng *ContactProfile* thực thể để nắm bắt các hoạt động của các liên hệ. Bạn có thể thấy trong dòng thời gian hoạt động cho tài khoản mà người liên hệ chịu trách nhiệm cho từng hoạt động. Hầu hết các bước tuân theo cấu hình lập bản đồ hoạt động của khách hàng.
+Đối với tài khoản doanh nghiệp (B-to-B), hãy sử dụng *ContactProfile* thực thể để nắm bắt các hoạt động của các liên hệ. Bạn có thể thấy trong dòng thời gian hoạt động cho tài khoản mà người liên hệ chịu trách nhiệm cho từng hoạt động. Hầu hết các bước đều tuân theo cấu hình lập bản đồ hoạt động của khách hàng.
 
    > [!NOTE]
    > Để xác định một hoạt động cấp liên hệ, *ContactProfile* thực thể phải được tạo, dưới dạng [hồ sơ liên hệ thống nhất](data-unification-contacts.md) hoặc thông qua [ánh xạ ngữ nghĩa](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
    >
-   > Bạn phải có cả hai **ID tài khoản** và **ID liên hệ** thuộc tính cho từng bản ghi trong dữ liệu hoạt động của bạn.
+   > Bạn phải có cả hai **ID tài khoản** và **ID liên hệ** thuộc tính cho mỗi bản ghi trong dữ liệu hoạt động của bạn.
   
 1. Đi đến **Dữ liệu** > **Các hoạt động**.
 
 1. Lựa chọn **Thêm hoạt động**.
 
-1. Đặt tên cho hoạt động, chọn thực thể hoạt động nguồn và chọn khóa chính của thực thể hoạt động.
+1. Bên trong **Dữ liệu hoạt động** bước, nhập thông tin sau:
 
-1. Bên trong **Các mối quan hệ**, tạo mối quan hệ gián tiếp giữa dữ liệu nguồn hoạt động của bạn với các tài khoản, sử dụng dữ liệu liên hệ của bạn làm thực thể trung gian. Để biết thêm thông tin, hãy xem [các con đường quan hệ trực tiếp và gián tiếp](relationships.md#relationship-paths).
+   - **Tên hoạt động**: Chọn tên cho hoạt động của bạn.
+   - **Thực thể hoạt động** : Chọn một thực thể bao gồm dữ liệu giao dịch hoặc hoạt động.
+   - **Khóa chính**: Chọn trường xác định duy nhất một bản ghi. Nó không nên chứa bất kỳ giá trị trùng lặp, giá trị trống hoặc giá trị thiếu nào.
+
+     > [!NOTE]
+     > Khóa chính cho mỗi hàng phải duy trì nhất quán qua các lần làm mới nguồn dữ liệu. Nếu khóa Chính cho một hàng được cập nhật trong lần làm mới nguồn dữ liệu, nó sẽ tạo ra các bản sao trong thực thể Hoạt động đầu ra. 
+
+
+1. Bên trong **Các mối quan hệ** bước, tạo mối quan hệ gián tiếp giữa dữ liệu nguồn hoạt động của bạn với các tài khoản, sử dụng dữ liệu liên hệ của bạn làm thực thể trung gian. Để biết thêm thông tin, hãy xem [các con đường quan hệ trực tiếp và gián tiếp](relationships.md#relationship-paths).
    - Mối quan hệ mẫu cho một hoạt động được gọi là *Mua hàng*:
       - **Dữ liệu hoạt động nguồn mua hàng** > **Dữ liệu liên hệ** trên thuộc tính **ID liên hệ**
       - **Dữ liệu liên hệ** > **Dữ liệu tài khoản** trên thuộc tính **ID tài khoản**
@@ -145,7 +156,7 @@ Chọn một hoạt động để xem các hành động có sẵn.
 
 1. Chạy bản đồ hoạt động của bạn.
 
-1. Các hoạt động cấp liên hệ của bạn giờ đây sẽ hiển thị trên dòng thời gian của khách hàng.
+1. Các hoạt động cấp liên hệ của bạn giờ sẽ hiển thị trên dòng thời gian của khách hàng.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Kết quả cuối cùng sau khi định cấu hình các hoạt động liên hệ":::
 

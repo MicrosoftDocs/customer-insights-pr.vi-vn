@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195500"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724714"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Xuất phân đoạn sang Lặp lại (xem trước)
 
-Xuất các phân đoạn của hồ sơ khách hàng hợp nhất sang Lặp lại và sử dụng chúng cho các hoạt động tiếp thị.
+Xuất các phân đoạn hồ sơ khách hàng hợp nhất sang Lặp lại và sử dụng chúng cho các hoạt động tiếp thị.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -28,6 +28,7 @@ Xuất các phân đoạn của hồ sơ khách hàng hợp nhất sang Lặp l�
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
 - Lên đến 1 triệu hồ sơ khách hàng cho Lặp lại, có thể mất tới 30 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Iterable phụ thuộc vào hợp đồng của bạn với Iterable.
 - Chỉ phân đoạn.
 

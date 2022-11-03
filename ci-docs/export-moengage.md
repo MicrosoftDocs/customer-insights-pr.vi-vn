@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199238"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725292"
 ---
 # <a name="export-segments-to-moengage-preview"></a>Xuất phân đoạn sang MoEngage (xem trước)
 
@@ -27,7 +27,8 @@ Xuất các phân đoạn hồ sơ khách hàng thống nhất sang MoEngage và
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Lên đến 100.000 hồ sơ khách hàng cho mỗi lần xuất sang MoEngage, có thể mất đến 15 phút. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang MoEngage tùy thuộc vào hợp đồng của bạn với MoEngage.
+- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
+- Lên đến 100.000 hồ sơ khách hàng cho mỗi lần xuất sang MoEngage, có thể mất tới 15 phút. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang MoEngage tùy thuộc vào hợp đồng của bạn với MoEngage.
 - Chỉ phân đoạn.
 
 ## <a name="set-up-connection-to-moengage"></a>Thiết lập kết nối với MoEngage
