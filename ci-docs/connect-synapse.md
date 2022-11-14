@@ -9,18 +9,18 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259824"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738182"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Kết nối một Azure Synapse Analytics nguồn dữ liệu (xem trước)
 
-Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn. Azure Synapse Analytics tập hợp những công nghệ SQL tốt nhất được sử dụng trong kho dữ liệu doanh nghiệp, công nghệ Spark được sử dụng cho dữ liệu lớn, Data Explorer để phân tích chuỗi thời gian và nhật ký, Đường ống để tích hợp dữ liệu và ETL / ELT, đồng thời tích hợp sâu với các dịch vụ Azure khác như Power BI,Cosmos DB và AzureML.
+Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp tăng tốc thời gian để hiểu rõ hơn về các kho dữ liệu và hệ thống dữ liệu lớn. Azure Synapse Analytics tập hợp những công nghệ SQL tốt nhất được sử dụng trong kho dữ liệu doanh nghiệp, công nghệ Spark được sử dụng cho dữ liệu lớn, Data Explorer để phân tích nhật ký và chuỗi thời gian, Đường ống để tích hợp dữ liệu và ETL / ELT, đồng thời tích hợp sâu với các dịch vụ Azure khác như Power BI ,Cosmos DB và AzureML.
 
-Để biết thêm thông tin, hãy xem [Azure Synapse tổng quát](/azure/synapse-analytics/overview-what-is).
+Để biết thêm thông tin, hãy xem [Azure Synapse tổng quát](/azure/synapse-analytics/overview-what-is) .
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
@@ -29,15 +29,15 @@ Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp t
 > [!IMPORTANT]
 > Đảm bảo bạn đặt tất cả các phép **gán vai trò** giống như mô tả.  
 
-**Trong thông tin chi tiết về khách hàng**:
+**Trong thông tin chi tiết về khách hàng** :
 
-* Bạn có một **Người quản lý** vai trò trong Thông tin chi tiết về khách hàng. Học nhiều hơn về [quyền của người dùng trong Thông tin chi tiết về khách hàng](permissions.md#add-users).
+* Bạn có một **Người quản lý** vai trò trong Thông tin chi tiết về khách hàng. Học nhiều hơn về [quyền của người dùng trong Thông tin chi tiết về khách hàng](permissions.md#add-users) .
 
-**Trong Azure**:
+**Trong Azure** :
 
 - Đăng ký Azure hiện hoạt.
 
-- Nếu sử dụng một Azure Data Lake Storage Tài khoản Gen2, *chính dịch vụ cho Thông tin chi tiết về khách hàng* đó là nhu cầu của "Dynamics 365 AI for Customer Insights"**Người đóng góp dữ liệu khối lưu trữ** quyền. Học nhiều hơn về [kết nối với một Azure Data Lake Storage với một dịch vụ chính cho Thông tin chi tiết về khách hàng](connect-service-principal.md). Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
+- Nếu sử dụng một Azure Data Lake Storage Tài khoản Gen2, *dịch vụ chính cho Thông tin chi tiết về khách hàng* đó là nhu cầu của "Dynamics 365 AI for Customer Insights"**Người đóng góp dữ liệu khối lưu trữ** quyền. Học nhiều hơn về [kết nối với một Azure Data Lake Storage với một dịch vụ chính cho Thông tin chi tiết về khách hàng](connect-service-principal.md) . Bạn **cần bật** [vùng tên phân cấp](/azure/storage/blobs/data-lake-storage-namespace) trên Data Lake Storage Thế hệ 2.
 
 - Trên nhóm tài nguyên,Azure Synapse không gian làm việc được đặt, *dịch vụ chính* đó là "Dynamics 365 AI for Customer Insights" và *người dùng cho Thông tin chi tiết về khách hàng* ít nhất cần được chỉ định **Người đọc** quyền. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -45,9 +45,9 @@ Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp t
 
 - *[Danh tính có quản lý trong không gian làm việc Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* cần được cấp quyền **Người đóng góp dữ liệu Storage Blob** trên tài khoản Azure Data Lake Storage Thế hệ 2, nơi đặt và liên kết dữ liệu với không gian làm việc Azure Synapse. Tìm hiểu thêm về [cách sử dụng cổng thông tin Azure để gắn vai trò Azure nhằm truy cập vào dữ liệu blob và dữ liệu hàng đợi](/azure/storage/common/storage-auth-aad-rbac-portal) cũng như [quyền Người đóng góp dữ liệu Storage Blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Trên Azure Synapse không gian làm việc, *chính dịch vụ cho Thông tin chi tiết về khách hàng* đó là nhu cầu của "Dynamics 365 AI for Customer Insights"**Quản trị viên Synapse** vai trò được giao. Để biết thêm thông tin, hãy xem [Cách thiết lập trạng thái kiểm soát truy cập cho không gian làm việc Synapse của bạn](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Trên Azure Synapse không gian làm việc, *dịch vụ chính cho Thông tin chi tiết về khách hàng* đó là nhu cầu của "Dynamics 365 AI for Customer Insights"**Quản trị viên Synapse** vai trò được giao. Các **người sử dụng** cần ít nhất một **Synapse Contributor** vai trò được chỉ định cho không gian làm việc. Để biết thêm thông tin, hãy xem [Cách thiết lập trạng thái kiểm soát truy cập cho không gian làm việc Synapse của bạn](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-- Nếu môi trường Thông tin chi tiết về khách hàng của bạn lưu trữ dữ liệu trong [riêng Azure Data Lake Storage](own-data-lake-storage.md), người dùng thiết lập kết nối với Azure Synapse Analytics cần ít nhất là cài sẵn **Người đọc** trên tài khoản Data Lake Storage. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
+- Nếu môi trường Thông tin chi tiết về khách hàng của bạn lưu trữ dữ liệu trong [riêng Azure Data Lake Storage](own-data-lake-storage.md) , người dùng thiết lập kết nối với Azure Synapse Analytics cần ít nhất là cài sẵn **Người đọc** vai trò trên tài khoản Data Lake Storage. Để biết thêm thông tin, hãy xem [Vai trò Assign Azure bằng cách sử dụng cổng thông tin Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Kết nối với cơ sở dữ liệu hồ dữ liệu trong Azure Synapse Analytics
 
@@ -59,11 +59,11 @@ Azure Synapse Analytics là một dịch vụ phân tích doanh nghiệp giúp t
 
    :::image type="content" source="media/data_sources_synapse.png" alt-text="Hộp thoại để kết nối với dữ liệu Synapse Analytics":::
   
-1. Nhập **Tên** cho nguồn dữ liệu và một tùy chọn **Sự mô tả**.
+1. Nhập **Tên** cho nguồn dữ liệu và một tùy chọn **Sự mô tả** .
 
-1. Chọn một [kết nối có sẵn](connections.md) đến Azure Synapse Analytics hoặc [tạo một cái mới](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
+1. Chọn một [kết nối có sẵn](connections.md) đến Azure Synapse Analytics hoặc [tạo một cái mới](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse) .
 
-1. Chọn một **Cơ sở dữ liệu** từ không gian làm việc được kết nối trong Azure Synapse Analytics kết nối và chọn **Tiếp theo**. Hiện tại, chúng tôi chỉ hỗ trợ loại cơ sở dữ liệu *Cơ sở dữ liệu hồ*.
+1. Chọn một **Cơ sở dữ liệu** từ không gian làm việc được kết nối trong Azure Synapse Analytics kết nối và chọn **Tiếp theo** . Hiện tại, chúng tôi chỉ hỗ trợ loại cơ sở dữ liệu *Cơ sở dữ liệu hồ* .
 
 1. Chọn các thực thể để nhập từ cơ sở dữ liệu được kết nối và chọn **Tiếp theo**.
 
