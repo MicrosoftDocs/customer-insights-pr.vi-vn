@@ -8,28 +8,27 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: vi-VN
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724815"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760053"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Xuất phân đoạn sang Criteo (xem trước)
 
-Xuất phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến dịch, cung cấp tiếp thị qua email và sử dụng các nhóm khách hàng cụ thể với Criteo.
+Xuất các phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến dịch, cung cấp tiếp thị qua email và sử dụng các nhóm khách hàng cụ thể với Criteo.
 
 ## <a name="prerequisites"></a>Điều kiện tiên quyết
 
-- Một [Tài khoản nhắm mục tiêu lại Criteo Dynamics](https://www.criteo.com/login/) và thông tin đăng nhập quản trị viên tương ứng.
+- Một [Tài khoản nhắm mục tiêu lại Criteo Dynamics](https://www.criteo.com/login/) và thông tin xác thực quản trị viên tương ứng.
 - [Các phân đoạn được định cấu hình](segments.md).
 - Hồ sơ khách hàng hợp nhất trong các phân khúc đã xuất chứa các trường đại diện cho địa chỉ email.
 
 ## <a name="known-limitations"></a>Các hạn chế đã biết
 
-- Liên kết riêng tư kết hợp với Mang theo bộ nhớ của riêng bạn (BYOS) không được hỗ trợ.
-- Lên đến 1 triệu hồ sơ khách hàng cho mỗi lần xuất sang Criteo, có thể mất tới 30 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Criteo tùy thuộc vào hợp đồng của bạn với Criteo.
-- Chỉ phân đoạn.
+- Tối đa 1 triệu hồ sơ khách hàng mỗi lần xuất sang Criteo, có thể mất tới 30 phút để hoàn thành. Số lượng hồ sơ khách hàng mà bạn có thể xuất sang Criteo tùy thuộc vào hợp đồng của bạn với Criteo.
+- Chỉ phân khúc.
 
 ## <a name="set-up-connection-to-criteo"></a>Thiết lập kết nối với Criteo
 
@@ -59,11 +58,11 @@ Xuất phân đoạn hồ sơ khách hàng hợp nhất để tạo chiến dị
 
 1. Đi tới **Dữ liệu** > **Nội dung xuất**.
 
-1. Lựa chọn **Thêm xuất khẩu**.
+1. Lựa chọn **thêm xuất khẩu**.
 
-1. Bên trong **Kết nối để xuất**, chọn một kết nối từ phần Criteo. Liên hệ với quản trị viên nếu không có kết nối.
+1. Bên trong **Kết nối xuất khẩu** trường, hãy chọn một kết nối từ phần Criteo. Liên hệ với quản trị viên nếu không có kết nối.
 
-1. Nhập tên cho lần xuất.
+1. Nhập tên để xuất.
 
 1. Trong phần **Đối sánh dữ liệu**, trong trường **Email**, chọn trường có địa chỉ email của khách hàng.
 
